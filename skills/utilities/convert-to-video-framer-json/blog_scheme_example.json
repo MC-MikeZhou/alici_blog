@@ -1,0 +1,39 @@
+[
+  {
+    "Slug": "the-first-ever-shared-genai-workspace",
+    ":draft": true,
+    "Author": "",
+    "hasTiktokVideo": false,
+    "VideoURL1": "",
+    "IsDrafts": true,
+    "title": "How to Make Your Product Go Viral in 2026 with Sora 2 Trends?",
+    "sub_title": "Discover how Sora 2 Trends on Higgsfield helps brands turn simple product ideas into viral, platform-ready videos in minutes.",
+    "TLNR": "Transform moments into engaging stories for TikTok & Reels—When the pup meets the fall leaves, he knows his friend is there in autumn’s spell.",
+    "TLNR 2": "",
+    "cover": {
+      "url": "https://framerusercontent.com/images/j16d3B0u774wdNW9Zsn6M4ICPQ.png"
+    },
+    "Date": "2025-10-24T00:00:00.000Z",
+    "read_time": "6 min",
+    "main_category": "tutorial",
+    "recommend_category": "tutorial",
+
+    // 一般情况下， 有 article_body_content 即可。 只有在有视频插入需求的情况下，会将完整的正文进行分段，以达到在两段间插入视频的效果
+    "video_link_1": "",// 视频默认在 article_body_content 顶部
+    "article_body_content": "<p>The competition for attention in 2026 is fierce. Products no longer compete just on design or utility - they compete on how fast they can stop a scrolling thumb. In this new digital landscape, visuals speak louder than campaigns, and <strong>Sora 2 Trends</strong> gives creators and brands the ability to make that moment of attention happen on command.</p><h6><strong>2. The Power of Presets: Your Shortcut to Visual Identity</strong></h6><p>Presets are the creative backbone of Sora 2 Trends. Instead of starting from a blank screen</p><p>Here are some of the most popular presets available on <a href=\"alici.ai\" target=\"_blank\">Alici.AI</a>:</p><ul><li data-preset-tag=\"p\"><p><strong>Luxury Ad</strong> – A slow, cinematic presentation with polished lighting, reflections, and premium textures. Perfect for jewelry, fashion, and cosmetics.</p></li><li data-preset-tag=\"p\"><p><strong>Japanese Ad</strong> – Clean composition, natural light, minimalist text overlays, and a peaceful rhythm designed for calm emotional engagement.</p></li></ul><p>Each preset defines tone and pacing - but every detail, from music to text overlay, can be customized. This flexibility lets creators move fast while keeping control over visual personality.</p><img alt=\"alt text format sample\" src=\"https://framerusercontent.com/images/8rWGzmLCLXkmy8auaVe87nxLDF4.jpg\"><h6><strong>3. From Concept to Video: How the Process Works</strong></h6><p>Creating with Sora 2 Trends follows a natural three-step path:</p><ol><li data-preset-tag=\"p\"><p><strong>Upload or Describe Your Product</strong> – Add your image or write a short concept prompt.</p></li><li data-preset-tag=\"p\"><p><strong>Choose Preset &amp; Pacing</strong> – Pick from cinematic, energetic, or minimalist modes. Adjust pacing (Auto, No Cuts, Slow, Fast) to match your platform goal.</p></li><li data-preset-tag=\"p\"><p><strong>Preview and Refine</strong> – Sora 2 Trends generates multiple short clips in optimized aspect ratios (9:16 vertical for social, 1:1 for feeds, 16:9 for YouTube).</p><p><br></p></li></ol><p>📋 <strong>Storyboard Design</strong></p><figure><table><tbody><tr><th><p>Scene Container</p></th><th><p>Duration</p></th><th><p>Core Transition</p></th><th><p>Shot Composition</p></th></tr><tr><td><p><strong>Prologue: Magic Preparation</strong></p></td><td><p>0-8s</p></td><td><p>Mysterious witch entrance → magic tool activation</p></td><td><p>Close-up glowing spellbook → witch walks with graceful steps → tosses magic seed → pumpkin appears in her palm</p></td></tr></tbody></table></figure><h6><strong>4. Ad Formats and Distribution Made Simple</strong></h6><p><a href=\"alici.ai\" target=\"_blank\">Alici.AI’</a>s platform doesn’t just create the videos - it formats and optimizes them for <strong>every major platform automatically</strong>.  Each ad is rendered in multiple aspect ratios and compression standards to fit:</p><ul><li data-preset-tag=\"p\"><p><strong>Instagram Reels &amp; TikTok</strong> (vertical 9:16)</p></li><li data-preset-tag=\"p\"><p><strong>YouTube Shorts</strong> (vertical 9:16 and square 1:1 options)</p></li><li data-preset-tag=\"p\"><p><strong>Facebook &amp; LinkedIn Feeds</strong> (1:1 or 4:5 formats)</p></li><li data-preset-tag=\"p\"><p><strong>Pinterest Video Pins</strong> and <strong>Snap Ads</strong> (vertical short format)</p></li></ul><blockquote><p>This means your Sora 2 Trends campaign doesn’t end in generation - </p></blockquote><p><code>This means your Sora 2 Trends campaign doesn’t end in generation - </code></p><p>it’s ready for instant publishing across all major social channels. The system ensures color grading, motion timing, and text overlays remain consistent across every export, so your campaign maintains its aesthetic identity everywhere it appears.</p><h6><br></h6><p><br></p>",// 必须存在
+    "video_link_2": "",// 视频插入在 article_body_content  和 article_body_content_2  之间 ，不需要传入空字符串
+    "article_body_content_2": "",//  不需要时，传入空字符串
+    "video_link_3": "",// 视频插入在 article_body_content_2  和 article_body_content_3  之间，不需要传入空字符串
+    "article_body_content_3": "",//  不需要时，传入空字符串
+    "video_link_4": "",// 视频插入在 article_body_content_3  和 article_body_content_4  之间，不需要传入空字符串
+    "article_body_content_4": "",//  不需要时，传入空字符串
+    "video_link_5": "",// 视频插入在 article_body_content_4  和 article_body_content_5  之间，不需要传入空字符串
+    "article_body_content_5": "",//  不需要时，传入空字符串
+    
+    "CTA_alici_link": "https://app.alici.ai/",
+    "CTA button": "Try It NOW",
+    "meta_title": "the-night-agent-story-ai-video-template",
+    "meta_description": "Story videos for TikTok & Reels. Nighthawks-inspired nocturne, all lacquered mid-century glow—under neon. Perfect for storytellers. 1280×720, 51s. Try now.",
+    "tag_for_SEO": "Sora, Story, Creative, TikTok, Instagram Reels"
+  }
+]
