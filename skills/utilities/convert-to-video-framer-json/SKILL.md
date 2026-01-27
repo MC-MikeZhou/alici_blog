@@ -35,18 +35,19 @@ metadata:
 ## 执行流程（交互式）
 
 1) 确认是否需要插入视频（若否 → 结束）。
-2) 采集视频资源：
+2）列出视频列表，列出文章列表，询问用户要在文章哪里插入视频
+3) 采集视频资源：
    - 从 `video_resources/video_links.txt` 解析云端链接（分隔符：换行/空格/英文逗号），列出给用户确认
    - 支持手动追加/删减链接
    - 若存在本地视频，请先“手动”使用与图片一致的方式（rsync）上传到 CDN，获得可访问的云端链接；本 Skill 不执行上传
-3) 选择插入位置（询问前将展示两个列表供确认）：
+4) 选择插入位置（询问前将展示两个列表供确认）：
    - 列表 A：当前可用的视频链接（从 `video_links.txt` + 手动粘贴汇总）
    - 列表 B：文章段落预览（按 H2 拆分得到的“段1..段N”，每段给出开头摘要）
    - 然后开始询问：为每个视频选择“插入到第 K 段之前”（或“正文顶部”）
    - 支持 1 个“正文之前”插入点（默认启用）
    - 支持正文内最多 4 个插入点（“在第 K 段之前”或“在匹配到的文本前”）
    - 输出插入计划供用户二次确认（包含 video_link_N 与段间对应关系）
-4) 生成 `*-video.json`（基于输入文件名追加 `-video`）：
+5) 生成 `*-video.json`（基于输入文件名追加 `-video`）：
    - 不注入任何 `<iframe>` / `<video>` 标记，不改写正文 HTML
    - 仅基于“插入点”把正文拆散为多段：第一段写入 `article_body_content`；后续段依次写入 `article_body_content_2`、`article_body_content_3` ...
    - 依序写入视频链接字段：`video_link_1`、`video_link_2`、...
@@ -65,37 +66,6 @@ password:  5A_p@cjpX74H(LJM
 最终获得的链接如下：
 https://ct2.alici.ai/static/image/other/aaa.mp4
 
-
-## 使用方法
-
-```bash
-# 交互式：从标准 JSON 生成视频版 JSON
-python scripts/convert_to_video_json/interactive_convert.py \
-  --input /reports/2026-01-26-sample/06-article-final.json
-
-# 可选参数
-# --resources-dir ./video_resources     # 默认使用仓库根的 /video_resources
-# --output /reports/.../06-article-final-video.json  # 自定义输出路径
-# --max-inline 4                        # 正文内最多4个
-```
-
-
-## 输出文件
-
-位于原 JSON 同目录，命名规则：在输入 JSON 文件名基础上追加 `-video` 后缀。
-
-示例：
-- `06-article-final.json` → `06-article-final-video.json`
-- `06-article-final-v2.3.json` → `06-article-final-v2.3-video.json`
-
-包含字段（STRICT）：
-- `article_body_content`（正文第一段）
-- `article_body_content_2..N`（正文后续段）
-- `video_link_1..N`（对应每个插入点的视频链接，已上传 CDN 或云端链接）
-
-禁止输出（STRICT）：
-- 不输出 `video_embeds`、`article_body_content_parts`、`article_body_content_html_injected` 等任何额外字段
-- 不输出任何 `<iframe>` / `<video>` HTML 片段到正文
 
 ### 字段映射与插入位（必须）
 
@@ -138,8 +108,6 @@ article_body_content_2 表示的就是10-20部分。此为段2.
 2) 列出所有文章段落
 
 
-
-
 生成前的确认单（示例）：
 ```
 📋 Insertion plan (to confirm):
@@ -147,6 +115,38 @@ article_body_content_2 表示的就是10-20部分。此为段2.
   - video #2 → 段2 与 段3 之间 (video_link_3)
   - video #3 → 段3 与 段4 之间 (video_link_4)
 ```
+
+## 使用方法
+
+```bash
+# 交互式：从标准 JSON 生成视频版 JSON
+python scripts/convert_to_video_json/interactive_convert.py \
+  --input /reports/2026-01-26-sample/06-article-final.json
+
+# 可选参数
+# --resources-dir ./video_resources     # 默认使用仓库根的 /video_resources
+# --output /reports/.../06-article-final-video.json  # 自定义输出路径
+# --max-inline 4                        # 正文内最多4个
+```
+
+
+## 输出文件
+
+位于原 JSON 同目录，命名规则：在输入 JSON 文件名基础上追加 `-video` 后缀。
+
+示例：
+- `06-article-final.json` → `06-article-final-video.json`
+- `06-article-final-v2.3.json` → `06-article-final-v2.3-video.json`
+
+包含字段（STRICT）：
+- `article_body_content`（正文第一段）
+- `article_body_content_2..N`（正文后续段）
+- `video_link_1..N`（对应每个插入点的视频链接，已上传 CDN 或云端链接）
+
+禁止输出（STRICT）：
+- 不输出 `video_embeds`、`article_body_content_parts`、`article_body_content_html_injected` 等任何额外字段
+- 不输出任何 `<iframe>` / `<video>` HTML 片段到正文
+
 
 ### 阅读与校验（强制）
 
