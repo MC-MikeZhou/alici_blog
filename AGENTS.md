@@ -49,6 +49,7 @@
 │  ├── 评分/AEO → analyze-aeo                                            │
 │  ├── 改进 → improve-article                                            │
 │  ├── YouTube URL 单独输入 → fetch-transcript                           │
+│  ├── 视频集成嵌入 → 查看/skills/utilities/convert-to-video-framer-json/skill.md                            │
 │  └── 其他工具命令 → 直接执行                                            │
 └─────────────────────────────────────────────────────────────────────────┘
 ```
@@ -104,6 +105,11 @@
 | **blog-cover-generator** 🆕 | **v1.0** | 生成封面, blog cover, 封面图 | 6 种背景类型 + 青绿色品牌规范 + Prompt 模板 |
 
 **调用链 (v2.8.2 Updated)**: `smart-launcher v2.2 (意图前置 + 模式选择) → growth-topic-scout v2.2 → writer路由 → editor gate → aeo-analyzer ⟷ improver → competitive-validator → framer → preview`
+
+---
+
+## 非写作指令：视频集成（convert-to-video-framer-json）
+查看/skills/utilities/convert-to-video-framer-json/skill.md
 
 ---
 

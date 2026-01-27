@@ -26,7 +26,9 @@ from pathlib import Path
 from typing import Dict, List, Tuple, Any
 
 
-HEADING_RE = re.compile(r"<h6><strong>(.*?)</strong></h6>", re.IGNORECASE | re.DOTALL)
+# Support headings in common exports: <h2>..</h2>, <h3>..</h3>, and legacy <h6><strong>..</strong></h6>
+# Group 1: tag name (h2/h3/h6); Group 2: inner HTML/text
+HEADING_RE = re.compile(r"<(h2|h3|h6)\b[^>]*>(.*?)</\\1>", re.IGNORECASE | re.DOTALL)
 
 
 def read_json(path: Path) -> List[Dict[str, Any]]:
@@ -218,9 +220,12 @@ def extract_youtube_id(url: str) -> str:
 
 
 def list_headings(html: str) -> List[Tuple[int, str]]:
-    headings = []
+    headings: List[Tuple[int, str]] = []
     for i, m in enumerate(HEADING_RE.finditer(html), start=1):
-        text = re.sub(r"\s+", " ", m.group(1)).strip()
+        inner = m.group(2) or ""
+        # Strip tags and condense whitespace for display
+        text = re.sub(r"<[^>]+>", " ", inner)
+        text = re.sub(r"\s+", " ", text).strip()
         headings.append((i, text))
     return headings
 
@@ -386,7 +391,7 @@ def main():
 
     # 6) Choose positions
     headings = list_headings(body_html)
-    print("\n🔖 Headings detected (H2 -> <h6><strong>):")
+    print("\n🔖 Headings detected:")
     for idx, text in headings:
         print(f"  {idx}. {text}")
     print("  0. (Before body — default top embed)")
