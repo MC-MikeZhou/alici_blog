@@ -66,6 +66,7 @@ skills/
 |-------|------|--------|------|
 | **youtube-transcript-fetcher** | v1.1 | 抓取字幕 | YouTube 字幕获取 |
 | **markdown-to-framer** | v1.3 | convert to framer | Framer CMS JSON 输出 |
+| **convert-to-video-framer-json** | v0.9 | video framer json | 在现有 JSON 基础上插入视频并生成 *-video.json |
 | **framer-previewer** | v1.1 | preview framer | 本地预览 HTML |
 | **batch-processor** | v1.1 | 批量, batch | 队列执行 + 进度追踪 |
 | **blog-cover-generator** | v1.0 | 生成封面, blog cover | 6 种背景类型 + Prompt 模板 |
