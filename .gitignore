@@ -45,3 +45,6 @@ logs/
 # Backup files
 *.bak
 *.backup
+
+# Local video resources (do not track)
+/video_resources/
