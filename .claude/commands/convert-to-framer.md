@@ -144,6 +144,7 @@ This command is automatically invoked in `/full-workflow` as Phase 6:
 ```
 Phase 1: Scout → Phase 2: Write → Phase 3: Preview →
 Phase 4: Score → Phase 5: Edit → Phase 6: Convert ← This command
+Phase 7 (optional): Video Integration → /convert-to-video-framer-json 06-article-final.json
 ```
 
 ## Related Skills

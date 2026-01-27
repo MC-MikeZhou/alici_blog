@@ -41,7 +41,8 @@
 │         └───────────────┴─────────────────┘           │                 │
 │                         ↓                             │                 │
 │  执行阶段 (三条路线共享):                                                 │
-│  Writer → **Editor Gate** → AEO ⟷ Improver → 竞品验证 → Framer → Preview │
+│  Writer → **Editor Gate** → AEO ⟷ Improver → 竞品验证 →                  │
+│  Preview → Framer JSON → (可选) Video JSON                                 │
 │                                                                         │
 │  非写作意图 (直接执行，不经 SmartLauncher 问卷):                         │
 │  ├── 分析/选题 → scout-topic                                           │
@@ -95,6 +96,7 @@
 | **auto-improver** | **v2.2** ⭐ | 改进文章 | 改进版 + Changelog + **E-E-A-T 保护标记** |
 | chinese-previewer | v1.1 | 中文预览 | 审核摘要 |
 | markdown-to-framer | **v1.3** 🔧 | convert to framer | Framer CMS JSON (**修复**: 图片格式 + 特殊字符) |
+| convert-to-video-framer-json | **v0.9** 🆕 | video framer json | 在现有 JSON 基础上插入视频，输出 *-video.json |
 | framer-previewer | v1.1 | preview framer | 本地预览 HTML |
 | **youtube-transcript-fetcher** | **v1.1** | 抓取字幕, YouTube transcript | YouTube 字幕 + 时间戳 + 保存至 /reports 待发文章/transcripts/ |
 | **competitive-validator** 🆕 | **v1.1** | 竞品验证, competitive validation | Top 5 竞品对比 + 快速 AEO 评分 + PASS/FAIL 判定 |
@@ -762,6 +764,7 @@ Writer → Editor Gate → AEO → Improver → 竞品验证 → Framer → Prev
 ├── 06-cover-image.png        # 封面图片 🆕
 ├── 06-cover-metadata.json    # 封面元数据 🆕
 ├── 07-article-final.json     # Framer CMS JSON (含 cover_image_url)
+├── 07-article-final-video.json  # (可选) 视频集成版本 (输入名 + -video.json)
 └── 08-preview.html           # Framer 可视化预览
 
 # 批量任务输出 (v2.3 NEW)

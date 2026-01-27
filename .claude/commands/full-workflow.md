@@ -42,6 +42,12 @@ ls /Users/H/Documents/AliciBlog/skills/*/SKILL.md /Users/H/Documents/AliciBlog/s
 │ /convert-to-framer → Framer CMS JSON                        │
 │ └─ 自动校验 + 自动修复                                       │
 │ └─ 双路径输出 → 发布就绪 ✅                                   │
+├─────────────────────────────────────────────────────────────┤
+│ Phase 7: 视频集成 (可选)                                     │
+│ 询问是否需要插入视频 → 若是：                               │
+│ /convert-to-video-framer-json 06-article-final.json         │
+│ └─ 解析 /video_resources/video_links.txt → 选择插入位置      │
+│ └─ 输出 *-video.json (非破坏性，仅新增)                      │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -59,6 +65,7 @@ ls /Users/H/Documents/AliciBlog/skills/*/SKILL.md /Users/H/Documents/AliciBlog/s
 ├── 04-editor-report.md       # 编辑报告
 ├── 05-article-improved.md    # 改进版文章 (如需)
 └── 06-article-final.json     # Framer CMS JSON (最终输出)
+    06-article-final-video.json  # (可选) 含视频版本，输入名 + -video.json
 
 /blog_new_sam 11.20.2025/output/
 └── [slug].json               # 交付给同事的 JSON 副本
