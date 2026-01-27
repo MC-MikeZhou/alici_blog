@@ -1,0 +1,23 @@
+[
+  {
+    "prompt": "[Image Type]\nEditorial illustration in minimalist magazine cover style for AI Video Generator comparison\n\n[Content]\n- Central element: Five abstract flowing shapes representing different AI video models, each with subtle distinct character\n- Visual metaphor: Paths converging toward a single platform node (representing Alici)\n- Minimal symbolic elements: Play button icon, film strip fragments floating in negative space\n- Depth layering: Foreground shapes sharp, background elements soft and blurred\n\n[Style]\n- Composition: 55% negative space, focal point center-right (golden ratio)\n- Lighting: Soft ambient glow emanating from central convergence point\n- Texture: Smooth polished surfaces with gentle shadows\n- Format: 16:9 widescreen, horizontal orientation\n- Aesthetic: Modern, minimalist, professional tech magazine\n\n[Brand Layer]\nBrand aesthetic: alici.ai (Stripe-inspired, green-centered)\n\nColor palette:\n- GREEN-CENTERED gradient: deep emerald (#059669) → fresh mint (#10B981) → soft green (#A7F3D0)\n- Soft, sophisticated transitions (similar gradient feel to Stripe, but in green tones)\n- Muted saturation, avoid overly vibrant colors\n\nStyle elements:\n- Generous negative space (40%+ of canvas)\n- Soft 3D elements with subtle shadows and highlights\n- Single clear focal point (convergence point)\n- Clean, breathable composition with implied motion\n- Professional, trustworthy visual language\n\nAvoid:\n- Blue/purple tones (Stripe's brand colors)\n- Saturated, loud colors\n- Cluttered layouts with multiple equal-weight elements\n- Literal screenshots or UI mockups",
+    "role": "hero",
+    "filename": "top5-ai-video-hero.png",
+    "aspect_ratio": "16:9",
+    "resolution": "2K"
+  },
+  {
+    "prompt": "[Image Type]\nMinimalist comparison infographic showing five AI video tools as abstract entities\n\n[Content]\n- Five distinct geometric shapes arranged in balanced composition\n- Each shape has subtle differentiating characteristic (size represents quality, glow represents speed)\n- Central connecting element showing 'unified access' concept\n- Minimal icons: crown for winner, lightning for speed, 4K badge for resolution\n- Clean horizontal arrangement with implied ranking flow\n\n[Style]\n- Composition: 50% negative space, shapes arranged along gentle curve\n- Lighting: Soft gradient glow behind each shape\n- Format: 16:9 widescreen\n- Aesthetic: Clean data visualization, McKinsey presentation style\n\n[Brand Layer]\nBrand aesthetic: alici.ai (Stripe-inspired, green-centered)\n\nColor palette:\n- GREEN gradient: deep emerald → mint → light green\n- Each tool shape uses different shade from green palette\n- Soft transitions, muted saturation\n\nStyle elements:\n- Generous white space (45%+)\n- Soft 3D shapes with subtle depth\n- Single visual narrative (comparison journey)\n- Professional infographic feel\n\nAvoid:\n- Blue/purple tones\n- Cluttered multi-element layouts\n- Literal product screenshots\n- Dense information grids",
+    "role": "comparison",
+    "filename": "top5-ai-video-comparison.png",
+    "aspect_ratio": "16:9",
+    "resolution": "1K"
+  },
+  {
+    "prompt": "[Image Type]\nConceptual diagram showing five-dimensional testing methodology for AI video evaluation\n\n[Content]\n- Pentagon or radar chart shape abstracted as elegant geometric form\n- Five points representing: Prompt Understanding, Visual Quality, Motion Coherence, Audio Integration, Speed\n- Flowing lines connecting points to suggest evaluation framework\n- Central node representing 'comprehensive assessment'\n- Minimal label hints (abstract, not text-heavy)\n\n[Style]\n- Composition: 60% negative space, centered focal point\n- Lighting: Soft inner glow from center\n- Format: 16:9 widescreen\n- Aesthetic: Scientific diagram meets modern design\n\n[Brand Layer]\nBrand aesthetic: alici.ai (Stripe-inspired, green-centered)\n\nColor palette:\n- GREEN gradient for connecting lines: emerald → mint\n- Points as soft green glowing nodes\n- Background: subtle off-white with green tint\n\nStyle elements:\n- Generous negative space (50%+)\n- Geometric precision with organic softness\n- Single clear focal point (center)\n- Clean, analytical feel\n\nAvoid:\n- Blue/purple tones\n- Dense text labels\n- Cluttered data visualization\n- Hard edges without softness",
+    "role": "concept",
+    "filename": "top5-ai-video-methodology.png",
+    "aspect_ratio": "16:9",
+    "resolution": "1K"
+  }
+]

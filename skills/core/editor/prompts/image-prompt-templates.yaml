@@ -1,0 +1,474 @@
+# Image Prompt Templates for Editor Skill v2.6
+# Framework: ICSB (Image type, Content, Style, Brand)
+# Model: Nano Banana Pro
+# Philosophy: Less is more - 3-5 high-quality images per article
+# NEW in v2.6: Asset Pack roles for micro_roundup articles
+
+version: "2.6"
+framework: "ICSB"
+brand_guide_reference: "/skills/_docs/BRAND_VISUAL_GUIDE.md"
+model: "nano-banana-pro"
+max_images_per_article: 5
+recommended_images: 3-4
+asset_pack_mode_min: 7  # For micro_roundup: 1 cover + 3 characters + 3 frames
+
+# =============================================================================
+# BRAND LAYER (ICSB Framework v2.2)
+# =============================================================================
+# All prompts MUST include this brand layer to ensure visual consistency
+
+brand_layer:
+  template: |
+    [Brand Layer]
+    Brand aesthetic: alici.ai (Stripe-inspired, green-centered)
+    Color palette:
+    - GREEN-CENTERED gradient: deep emerald (#059669) → fresh mint (#10B981) → light green (#A7F3D0)
+    - Acceptable secondary: Neutral grays, soft whites
+    - AVOID: Blue/purple tones, saturated colors
+    Style elements:
+    - Generous negative space (40%+ of composition)
+    - Single focal point, clean composition
+    - Modern minimalist, professional editorial
+    Brand rules:
+    - Never use blue or purple as primary colors
+    - Keep compositions uncluttered
+    - Emphasize clarity over complexity
+
+# =============================================================================
+# STRATEGIC IMAGE ROLES
+# =============================================================================
+# Only generate images for these roles. Skip all other placeholders.
+
+image_roles:
+  hero_cover:
+    required: true
+    position: "0% - Article opening"
+    purpose: "Attract clicks, set visual tone"
+    size:
+      width: 1920
+      height: 1080
+    cost: "$0.15"
+
+  concept_diagram:
+    required: false
+    position: "~33% - Key concept explanation"
+    purpose: "Explain abstract ideas visually"
+    size:
+      width: 1200
+      height: 800
+    cost: "$0.15"
+
+  comparison_visual:
+    required: false
+    position: "~66% - Decision point"
+    purpose: "Aid decision-making with visual comparison"
+    size:
+      width: 1200
+      height: 800
+    cost: "$0.15"
+
+  cta_action:
+    required: false
+    position: "100% - Conclusion"
+    purpose: "Drive conversions"
+    size:
+      width: 600
+      height: 400
+    cost: "$0.15"
+
+  # ---------------------------------------------------------------------------
+  # ASSET PACK ROLES (NEW in v2.6) - For micro_roundup articles
+  # ---------------------------------------------------------------------------
+
+  character:
+    required: false
+    position: "Visual Prompt Pack section"
+    purpose: "Character card images for copy-paste prompts (1:1 square)"
+    size:
+      width: 2048
+      height: 2048
+    aspect_ratio: "1:1"
+    resolution: "2K"
+    cost: "$0.15"
+    article_types: ["micro_roundup"]
+    attractiveness_criteria:
+      - "角色记忆点: 轮廓/道具/配色/场景至少占一项"
+      - "缩略图可读: 图片缩小后仍能看清主体"
+      - "系列化潜力: V2/V3 变化清晰但仍像同一个人"
+
+  character_portrait:
+    required: false
+    position: "Visual Prompt Pack section"
+    purpose: "Character portrait for vertical formats (4:5)"
+    size:
+      width: 1638
+      height: 2048
+    aspect_ratio: "4:5"
+    resolution: "2K"
+    cost: "$0.15"
+    article_types: ["micro_roundup"]
+
+  storyboard_frame:
+    required: false
+    position: "Motion Breakdown section"
+    purpose: "Motion breakdown frames (3 frames per article)"
+    size:
+      width: 1920
+      height: 1080
+    aspect_ratio: "16:9"
+    resolution: "1K"
+    cost: "$0.15"
+    article_types: ["micro_roundup"]
+
+  video_poster:
+    required: false
+    position: "Video Integration section"
+    purpose: "Video poster/thumbnail image"
+    size:
+      width: 1920
+      height: 1080
+    aspect_ratio: "16:9"
+    resolution: "2K"
+    cost: "$0.15"
+    article_types: ["micro_roundup"]
+
+# =============================================================================
+# ICSB FRAMEWORK TEMPLATES
+# =============================================================================
+# Structure: Image type → Content → Style → Brand
+# All templates automatically include the Brand Layer defined above
+
+templates:
+  # ---------------------------------------------------------------------------
+  # HERO COVER - Always required
+  # ---------------------------------------------------------------------------
+  hero_cover:
+    framework: "ICSB"
+    template: |
+      Magazine cover style editorial photography for a tech article about {TOPIC}.
+
+      Content:
+      - {VISUAL_ELEMENT_1} representing the core theme
+      - {VISUAL_ELEMENT_2} showing the key benefit or transformation
+      - {VISUAL_ELEMENT_3} adding visual interest and depth
+      - {BACKGROUND_ELEMENTS} setting context and mood
+
+      Style: Cinematic lighting with dramatic rim light, shallow depth of field,
+      modern minimalist composition, rich color palette with {PRIMARY_COLOR} accent,
+      8K resolution, professional editorial aesthetic.
+
+      Brand: alici.ai green-centered palette (deep emerald to fresh mint gradient),
+      generous negative space, clean single focal point. Avoid blue/purple tones.
+
+    examples:
+      ai_video:
+        topic: "AI video generation"
+        prompt: |
+          Magazine cover style editorial photography for a tech article about AI video generation.
+
+          Content:
+          - Multiple floating holographic screens showing video editing timelines
+          - Abstract neural network patterns glowing softly in background
+          - Central focus on stylized AI processor chip with video frame overlay
+          - Subtle film reel and play button elements integrated into composition
+
+          Style: Cinematic lighting with dramatic rim light, shallow depth of field,
+          modern minimalist composition, rich color palette with emerald green and
+          fresh mint accent, 8K resolution, professional editorial aesthetic.
+
+          Brand: alici.ai green-centered palette (#059669 to #10B981 gradient),
+          generous negative space, clean single focal point. Avoid blue/purple tones.
+
+      ai_image:
+        topic: "AI image generation"
+        prompt: |
+          Magazine cover style editorial photography for a tech article about AI image generation.
+
+          Content:
+          - Cascading layers of generated artwork floating in digital space
+          - Central paintbrush transforming into streams of light and pixels
+          - Abstract representations of different art styles merging
+          - Subtle grid patterns suggesting the underlying AI technology
+
+          Style: Cinematic lighting with dramatic rim light, shallow depth of field,
+          modern minimalist composition, rich color palette with deep emerald and
+          light mint accent, 8K resolution, professional editorial aesthetic.
+
+          Brand: alici.ai green-centered palette (#059669 to #A7F3D0 gradient),
+          generous negative space, clean single focal point. Avoid blue/purple tones.
+
+  # ---------------------------------------------------------------------------
+  # CONCEPT DIAGRAM - For complex ideas
+  # ---------------------------------------------------------------------------
+  concept_diagram:
+    framework: "ICSB"
+    template: |
+      Educational infographic diagram explaining {CONCEPT}.
+
+      Content:
+      - Section 1: {ELEMENT_1} with label - showing {WHAT_IT_REPRESENTS_1}
+      - Section 2: {ELEMENT_2} with label - showing {WHAT_IT_REPRESENTS_2}
+      - Section 3: {ELEMENT_3} with label - showing {WHAT_IT_REPRESENTS_3}
+      - Visual flow arrows showing relationships between sections
+      - Key statistics or numbers: {STAT_1}, {STAT_2} embedded in design
+
+      Style: Clean McKinsey presentation aesthetic, soft gradient background
+      ({COLOR_SCHEME}), numbered steps, professional sans-serif typography,
+      maximum legibility at thumbnail size, minimalist geometric icons.
+
+    examples:
+      ai_workflow:
+        concept: "AI video generation workflow"
+        prompt: |
+          Educational infographic diagram explaining AI video generation workflow.
+
+          Content:
+          - Section 1: Text prompt input box with label - showing user's creative brief
+          - Section 2: AI processing core with neural patterns - showing model inference
+          - Section 3: Video output with timeline - showing final generated clip
+          - Visual flow arrows showing the transformation from text to video
+          - Key statistics: "30-90 second generation", "8K output" embedded in design
+
+          Style: Clean McKinsey presentation aesthetic, soft gradient background
+          (deep blue to purple), numbered steps 1-2-3, professional sans-serif typography,
+          maximum legibility at thumbnail size, minimalist geometric icons.
+
+  # ---------------------------------------------------------------------------
+  # COMPARISON VISUAL - For decision-making
+  # ---------------------------------------------------------------------------
+  comparison_visual:
+    framework: "ICSB"
+    template: |
+      Side-by-side comparison infographic for {COMPARISON_TOPIC}.
+
+      Content:
+      - Left panel: {OPTION_A_NAME} with key attributes
+        - {ATTRIBUTE_1}: {VALUE_1}
+        - {ATTRIBUTE_2}: {VALUE_2}
+        - Price: {PRICE_A}
+      - Right panel: {OPTION_B_NAME} with key attributes
+        - {ATTRIBUTE_1}: {VALUE_1}
+        - {ATTRIBUTE_2}: {VALUE_2}
+        - Price: {PRICE_B}
+      - Visual indicators: checkmarks for strengths, star ratings where applicable
+      - Clear highlight showing: "{BEST_FOR_X}" callout
+
+      Style: Professional business presentation, clean layout with ample white space,
+      consistent icon style, subtle drop shadows, {BRAND_COLORS} color scheme.
+
+    examples:
+      quality_vs_value:
+        topic: "Premium quality vs Best value AI video tools"
+        prompt: |
+          Side-by-side comparison infographic for Premium quality vs Best value AI video tools.
+
+          Content:
+          - Left panel: Veo 3 (Premium) with key attributes
+            - Quality: 5 stars
+            - Speed: Medium
+            - Price: $20/mo
+          - Right panel: Kling AI (Value) with key attributes
+            - Quality: 5 stars
+            - Speed: Slower
+            - Price: $5/mo
+          - Visual indicators: checkmarks for quality match, dollar signs for value
+          - Clear highlight showing: "Same quality, 75% less cost" callout
+
+          Style: Professional business presentation, clean layout with ample white space,
+          consistent icon style, subtle drop shadows, emerald green and fresh mint color scheme.
+
+          Brand: alici.ai green-centered palette, generous negative space. Avoid blue/purple tones.
+
+  # ---------------------------------------------------------------------------
+  # CTA/ACTION CARD - For conversions
+  # ---------------------------------------------------------------------------
+  cta_action:
+    framework: "ICSB"
+    template: |
+      Call-to-action visual card for {ACTION_GOAL}.
+
+      Content:
+      - Central text: "{CTA_TEXT}" in large bold typography (3 words max)
+      - Supporting icon: {ICON_DESCRIPTION} representing the value
+      - Directional element: arrow or button shape guiding eye movement
+      - Subtle product indicator: {BRAND_ELEMENT}
+
+      Style: Bold gradient background ({COLOR_1} to {COLOR_2}),
+      large sans-serif typography with high contrast,
+      clean geometric shapes, modern SaaS aesthetic.
+
+    examples:
+      try_free:
+        action: "Free trial signup"
+        prompt: |
+          Call-to-action visual card for free trial signup.
+
+          Content:
+          - Central text: "Try Free" in large bold typography
+          - Supporting icon: Play button with sparkle effect representing instant access
+          - Directional element: Arrow pointing right suggesting next step
+          - Subtle product indicator: alici.ai logo mark in corner
+
+          Style: Bold gradient background (deep emerald to fresh mint),
+          large sans-serif typography with high contrast,
+          clean geometric shapes, modern SaaS aesthetic.
+
+          Brand: alici.ai green-centered palette (#059669 to #10B981 gradient),
+          generous negative space, clean single focal point. Avoid blue/purple tones.
+
+  # ---------------------------------------------------------------------------
+  # CHARACTER (NEW in v2.6) - For Visual Prompt Pack
+  # ---------------------------------------------------------------------------
+  character:
+    framework: "Direct Prompt (from Writer)"
+    note: |
+      Character images use prompts directly from case-roundup-writer's asset_plan.json.
+      Editor DOES NOT create or modify these prompts - only executes generation.
+    template: |
+      [Use prompt from asset_plan.json asset.prompt field]
+
+      Validation:
+      - aspect_ratio: "1:1"
+      - resolution: 2K (2048x2048)
+      - Attractiveness criteria must pass
+
+    examples:
+      neon_street_dancer_v1:
+        prompt: |
+          A young street dancer, full body, neutral standing pose,
+          casual streetwear, clean white background, soft even lighting,
+          front-facing, high resolution, photorealistic
+
+      neon_street_dancer_v2:
+        prompt: |
+          A young street dancer in neon-lit urban alley, cyberpunk outfit
+          with LED strips, dynamic pose ready to dance, purple and blue
+          neon signs behind, cinematic lighting, shallow depth of field,
+          photorealistic, 4K
+
+  # ---------------------------------------------------------------------------
+  # STORYBOARD FRAME (NEW in v2.6) - For Motion Breakdown
+  # ---------------------------------------------------------------------------
+  storyboard_frame:
+    framework: "Generated from Frame Description"
+    template: |
+      [Use description from asset_plan.json to construct prompt]
+
+      Format: Still frame from motion sequence, 16:9 cinematic
+
+      Content:
+      - {FRAME_DESCRIPTION} (from Motion Breakdown table)
+      - Clear composition showing key action/pose
+      - Consistent character appearance across frames
+
+      Style: Cinematic still frame, professional lighting,
+      16:9 aspect ratio, high clarity for motion reference
+
+    examples:
+      motion_frame_01:
+        description: "起始姿势：角色站立，双手自然垂放，镜头正面静止"
+        prompt: |
+          Cinematic still frame: Street dancer in starting pose,
+          standing neutral position, hands relaxed at sides,
+          front-facing camera angle, static composition,
+          neon-lit urban background, professional lighting,
+          16:9 widescreen, photorealistic
+
+      motion_frame_02:
+        description: "动作高潮：角色跳跃旋转，手臂展开，镜头跟随"
+        prompt: |
+          Cinematic still frame: Street dancer mid-jump spin,
+          arms extended wide, dynamic motion blur on edges,
+          camera following action, neon-lit urban background,
+          professional lighting, 16:9 widescreen, photorealistic
+
+# =============================================================================
+# ARTICLE TYPE DEFAULTS
+# =============================================================================
+# Recommended image count and roles by article type
+
+article_defaults:
+  tutorial:
+    recommended_count: 3
+    required_roles:
+      - hero_cover
+    optional_roles:
+      - concept_diagram  # For complex steps
+      - cta_action       # For conclusion
+    skip_suggestion: "Use numbered text steps instead of step images"
+
+  list:
+    recommended_count: 4
+    required_roles:
+      - hero_cover
+    optional_roles:
+      - comparison_visual  # For key comparisons
+      - concept_diagram    # For overview/workflow
+      - cta_action         # For conclusion
+    skip_suggestion: "Use comparison tables instead of individual tool cards"
+
+  news:
+    recommended_count: 2
+    required_roles:
+      - hero_cover
+    optional_roles:
+      - concept_diagram  # If explaining new feature
+    skip_suggestion: "News articles need fewer visuals - let the story speak"
+
+  micro_roundup:
+    recommended_count: 7
+    mode: "asset_pack"
+    required_roles:
+      - hero_cover           # 1 cover
+      - character            # ≥3 characters (char01, char02, char03)
+      - storyboard_frame     # 3 frames (frame01, frame02, frame03)
+    optional_roles:
+      - character_portrait   # Vertical format if needed
+      - video_poster         # If video embed used instead of storyboard
+    input_source: "asset_plan.json from case-roundup-writer"
+    output_files:
+      - "asset_manifest.json"
+      - "prompts_used.md"
+      - "01-article-edited.md"
+    note: |
+      micro_roundup uses Asset Pack Mode (v2.6):
+      - Reads asset_plan.json for prompts
+      - Minimum 7 images (1 cover + 3 chars + 3 frames)
+      - All prompts from Writer, no Editor creativity
+      - Attractiveness validation required for characters
+
+# =============================================================================
+# SAFETY GUIDELINES
+# =============================================================================
+
+safety:
+  avoid:
+    - Real human faces or portraits
+    - Celebrity likenesses
+    - Copyrighted characters or logos
+    - Real product interfaces (misleading)
+    - Photorealistic people
+
+  prefer:
+    - Abstract conceptual visuals
+    - Geometric and minimalist designs
+    - Infographic-style diagrams
+    - Stylized UI mockups (clearly not real)
+    - Symbolic representations
+
+# =============================================================================
+# COST TRACKING
+# =============================================================================
+
+cost:
+  per_image: 0.15
+  currency: "USD"
+  budget_per_article:
+    minimum: 0.30  # 2 images
+    recommended: 0.60  # 4 images
+    maximum: 0.75  # 5 images
+
+  cost_examples:
+    tutorial_3_images: 0.45
+    list_4_images: 0.60
+    news_2_images: 0.30

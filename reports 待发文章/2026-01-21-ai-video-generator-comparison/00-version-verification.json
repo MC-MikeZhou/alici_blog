@@ -1,0 +1,62 @@
+{
+  "verified_tools": [
+    {
+      "name": "Kling",
+      "verified_version": "2.6 + Video O1",
+      "source": "https://www.cometapi.com/kling-2-6-explained-whats-new-this-time/",
+      "key_features": "Native audio-visual generation, English/Chinese support, 60M users",
+      "verification_date": "2026-01-21"
+    },
+    {
+      "name": "Sora",
+      "verified_version": "Sora 2 (App 1.2026.013)",
+      "source": "https://openai.com/index/sora-2/",
+      "key_features": "15-25 second videos, improved physics, social app with Characters",
+      "verification_date": "2026-01-21"
+    },
+    {
+      "name": "Veo",
+      "verified_version": "3.1 (January 2026 update)",
+      "source": "https://blog.google/innovation-and-ai/technology/ai/veo-3-1-ingredients-to-video/",
+      "key_features": "Vertical video support, 4K upscaling, identity consistency",
+      "verification_date": "2026-01-21"
+    },
+    {
+      "name": "Runway",
+      "verified_version": "Gen-4.5 + GWM-1",
+      "source": "https://runwayml.com/news/runway-partners-with-nvidia",
+      "key_features": "NVIDIA Rubin partnership, world's top-rated video model, GWM for interactive worlds",
+      "verification_date": "2026-01-21"
+    }
+  ],
+  "unverified_tools": [],
+  "verification_summary": {
+    "total_tools": 4,
+    "verified": 4,
+    "unverified": 0
+  },
+  "version_changes": {
+    "Kling": {
+      "previous": "O1 mentioned",
+      "current": "2.6 + O1",
+      "change_type": "major_update"
+    },
+    "Sora": {
+      "previous": "Sora 2",
+      "current": "Sora 2 (App 1.2026.013)",
+      "change_type": "minor_update"
+    },
+    "Veo": {
+      "previous": "3.1",
+      "current": "3.1 (Jan 2026 update)",
+      "change_type": "feature_update"
+    },
+    "Runway": {
+      "previous": "Gen-4 implied",
+      "current": "Gen-4.5 + GWM-1",
+      "change_type": "major_update"
+    }
+  },
+  "generated_at": "2026-01-21T00:00:00Z",
+  "template_version": "TOOL_SHOWDOWN_TEMPLATE v1.0"
+}

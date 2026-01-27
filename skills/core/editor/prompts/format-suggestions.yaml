@@ -1,0 +1,228 @@
+# Format Evolution Suggestions for Editor Skill
+# Version: 1.0
+
+# Format version history
+version_history:
+  v1.0:
+    date: "2026-01-01"
+    changes:
+      - Basic Markdown structure
+      - H2/H3 hierarchy
+      - Basic lists and tables
+
+  v1.1:
+    date: "2026-01-10"
+    changes:
+      - Quick Comparison Table at article top
+      - TL;DR opener for scan readers
+      - Standardized FAQ format
+
+  v1.2:
+    date: "2026-01-15"
+    changes:
+      - Decision Framework section
+      - Budget Tiers breakdown
+      - Pro Tips callouts
+
+  v1.3:
+    date: "2026-01-20"  # Planned
+    changes:
+      - Use Case Matrix
+      - Interactive elements placeholders
+      - Video embed suggestions
+
+# Format suggestions by article type
+suggestions:
+  tutorial:
+    required:
+      - step_numbers: "Number each step explicitly (Step 1, Step 2...)"
+      - time_estimates: "Add estimated time for each step"
+      - prerequisites: "List what reader needs before starting"
+      - outcome_preview: "Show what they'll achieve"
+
+    recommended:
+      - progress_indicators: "Show overall progress (Step 3 of 7)"
+      - pro_tips: "Add callout boxes for expert tips"
+      - common_mistakes: "Warn about common pitfalls"
+      - next_steps: "Suggest what to do after completion"
+
+    elements:
+      prerequisites_section:
+        format: |
+          ## Before You Start
+
+          **What you'll need:**
+          - [Requirement 1]
+          - [Requirement 2]
+          - [Requirement 3]
+
+          **Time required:** [X] minutes
+          **Difficulty:** [Beginner/Intermediate/Advanced]
+
+      step_format:
+        format: |
+          ## Step [N]: [Action Verb] [Object]
+
+          **Time:** [X] minutes
+
+          [Brief intro sentence]
+
+          1. [Sub-step 1]
+          2. [Sub-step 2]
+          3. [Sub-step 3]
+
+          > **Pro Tip:** [Expert insight]
+
+          [IMAGE: Step [N] result screenshot]
+
+      completion_section:
+        format: |
+          ## What's Next?
+
+          You've successfully [achieved outcome]. Here are your next steps:
+
+          1. **[Next action 1]** - [Brief description]
+          2. **[Next action 2]** - [Brief description]
+          3. **[Next action 3]** - [Brief description]
+
+  list:
+    required:
+      - comparison_table: "Quick comparison at top"
+      - pros_cons: "Each item needs advantages/limitations"
+      - pricing: "Include pricing for all items"
+      - use_case: "Best For statement for each"
+
+    recommended:
+      - decision_framework: "How to Choose section"
+      - budget_tiers: "Options by price range"
+      - winner_summary: "Clear recommendations at end"
+      - alternatives: "Mention what didn't make the list"
+
+    elements:
+      comparison_table:
+        format: |
+          ## Quick Comparison
+
+          | Tool | Best For | Quality | Price | Free Tier |
+          |------|----------|---------|-------|-----------|
+          | **[Tool 1]** | [Use case] | ★★★★★ | $X/mo | Yes/No |
+          | **[Tool 2]** | [Use case] | ★★★★☆ | $X/mo | Yes/No |
+          ...
+
+      item_format:
+        format: |
+          ## [N]. [Tool Name]
+
+          **Best For:** [Primary use case]
+
+          [IMAGE: [Tool] interface]
+
+          [1-2 paragraph description]
+
+          **Key Advantages:**
+          - [Advantage 1]
+          - [Advantage 2]
+          - [Advantage 3]
+
+          **Limitations:**
+          - [Limitation 1]
+          - [Limitation 2]
+
+          **Pricing:** [Price details]
+
+          **Our Take:** [1-2 sentence recommendation]
+
+      decision_framework:
+        format: |
+          ## How to Choose
+
+          ### By Use Case
+
+          | Use Case | Recommended Tool | Why |
+          |----------|------------------|-----|
+          | [Case 1] | [Tool] | [Reason] |
+          ...
+
+          ### By Budget
+
+          **Free/Low ($0-10/month):**
+          - [Tool A] - [brief note]
+          - [Tool B] - [brief note]
+
+          **Mid-range ($10-30/month):**
+          - [Tool C] - [brief note]
+
+          **Premium ($30+/month):**
+          - [Tool D] - [brief note]
+
+  news:
+    required:
+      - tldr: "TL;DR summary at top"
+      - key_facts: "Bulleted key facts"
+      - source_attribution: "Clear source citations"
+      - date_context: "When this happened"
+
+    recommended:
+      - impact_analysis: "What this means for readers"
+      - timeline: "Related events timeline"
+      - expert_quotes: "Industry reactions"
+      - next_events: "What to watch for"
+
+    elements:
+      tldr_section:
+        format: |
+          > **TL;DR:** [One sentence summary of the news and its impact]
+
+      key_facts:
+        format: |
+          ## Key Facts
+
+          - **What:** [Core announcement]
+          - **When:** [Date/Timeline]
+          - **Who:** [Companies/People involved]
+          - **Impact:** [Why it matters]
+
+# Callout box formats
+callouts:
+  pro_tip:
+    format: |
+      > **Pro Tip:** [Insight]
+    use_for: "Expert insights, shortcuts, best practices"
+
+  warning:
+    format: |
+      > ⚠️ **Warning:** [Caution]
+    use_for: "Common mistakes, potential issues"
+
+  note:
+    format: |
+      > **Note:** [Information]
+    use_for: "Additional context, clarifications"
+
+  quick_access:
+    format: |
+      > **Quick Access:** [Link text](URL) - [Brief description]
+    use_for: "Direct links to tools/resources mentioned"
+
+# AEO enhancement elements
+aeo_elements:
+  standalone_snippets:
+    description: "Paragraphs that work as standalone AI search answers"
+    requirements:
+      - Self-contained (no pronoun references to previous text)
+      - Includes specific data points
+      - Direct answer format
+      - 2-4 sentences ideal
+
+  faq_format:
+    description: "FAQ answers optimized for PAA/AI Overview"
+    format: |
+      ### [Question ending with ?]
+
+      [Direct answer in first sentence]. [Supporting detail 1].
+      [Supporting detail 2]. [Optional: recommendation or next step].
+    requirements:
+      - Answer immediately (no "Great question!")
+      - Include specifics (numbers, names, prices)
+      - Keep under 100 words
+      - End with actionable insight

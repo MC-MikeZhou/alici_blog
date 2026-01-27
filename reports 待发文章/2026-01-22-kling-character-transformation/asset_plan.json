@@ -1,0 +1,45 @@
+{
+  "images": [
+    {
+      "id": "hero-image",
+      "prompt": "Split-screen transformation effect showing a person on the left in plain clothing against a simple background, transforming into a cinematic superhero character on the right, same pose and gesture, dramatic lighting, motion blur effect connecting both sides, 16:9 aspect ratio, professional quality",
+      "role": "hero",
+      "placeholder": "![Hero: Character transformation concept showing before/after effect](placeholder-hero)",
+      "context": "Article hero image - represents the core concept of self-transformation"
+    },
+    {
+      "id": "workflow-diagram",
+      "prompt": "Clean infographic showing 5-step workflow: 1. Record video (camera icon) 2. Export frame (CapCut logo) 3. Transform character (editing icon) 4. Upload to Kling (upload icon) 5. Generate video (play button), connected by arrows, minimal design, teal accent color (#00B4A0), white background, 16:9 aspect ratio",
+      "role": "inline",
+      "placeholder": "![5-Step Workflow Diagram](placeholder-workflow)",
+      "context": "Before Step 1 section - visual overview of the complete process"
+    },
+    {
+      "id": "recording-setup",
+      "prompt": "Overhead view of a simple home recording setup: smartphone on tripod facing a person in green clothing against a plain white wall, natural light from window, clean and minimal composition, instructional style, 4:3 aspect ratio",
+      "role": "inline",
+      "placeholder": "![Recording Setup Example](placeholder-recording)",
+      "context": "Step 1 section - shows proper recording environment"
+    },
+    {
+      "id": "four-modes-grid",
+      "prompt": "2x2 grid showing four creative modes: top-left shows face swap (same body different face), top-right shows full character (completely different person), bottom-left shows semi-scene VFX (character with added effects), bottom-right shows full scene (character in fantasy environment), labeled clearly, clean design, 1:1 aspect ratio",
+      "role": "inline",
+      "placeholder": "![Four Creative Modes Comparison Grid](placeholder-four-modes)",
+      "context": "4 Creative Modes section - visual comparison of all four approaches"
+    },
+    {
+      "id": "prompt-framework",
+      "prompt": "Clean infographic showing 7-element prompt framework in circular arrangement: Style, Subject, Clothing, Action, Environment, Lighting, Camera - each with small icon, connected to center showing 'Your Prompt', professional instructional design, teal accent (#00B4A0), 16:9 aspect ratio",
+      "role": "inline",
+      "placeholder": "![7-Element Prompt Framework](placeholder-prompt-framework)",
+      "context": "Prompt Structure section - visualizes the prompt building system"
+    }
+  ],
+  "metadata": {
+    "total_images": 5,
+    "article_slug": "kling-motion-control-character-transformation-guide",
+    "generated_at": "2026-01-22T00:00:00Z",
+    "brand_color": "#00B4A0"
+  }
+}

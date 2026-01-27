@@ -1,0 +1,373 @@
+{
+  "analysis_date": "2026-01-17",
+  "skill_version": "1.0",
+  "validation_method": "dataforseo",
+  "validation_status": "pending_api_access",
+  "api_cost_usd": 0.156,
+  "competitor_urls": [
+    "https://higgsfield.ai/blog/SORA-2-Prompt-Guide-How-to-Create-Viral-Videos-Like-a-Pro"
+  ],
+  "main_topic": "Sora 2 Prompt Guide for creating viral/cinematic AI videos",
+  "key_concepts": [
+    "Shot framing and camera angles",
+    "Depth of field (DOF) and bokeh effects",
+    "Lighting schemes for cinematic videos",
+    "Short vs. long prompt strategies",
+    "Camera movements (pan, tilt, zoom, dolly)",
+    "Viral video trends and techniques"
+  ],
+  "topics": [
+    {
+      "rank": 1,
+      "primary_keyword": "sora 2 prompts",
+      "search_intent": "informational",
+      "search_volume": {
+        "monthly_avg": null,
+        "trend": null,
+        "cpc": null,
+        "competition_index": null,
+        "data_source": "dataforseo",
+        "validation_status": "pending"
+      },
+      "serp_features": {
+        "ai_overview": null,
+        "featured_snippet": null,
+        "people_also_ask": null,
+        "paa_questions": [],
+        "video": null,
+        "discussions_forums": null
+      },
+      "evidence": {
+        "check_url": "https://www.google.com/search?q=sora+2+prompts",
+        "competitor_ranking": null,
+        "top_competitors": []
+      },
+      "opportunity_score": {
+        "demand_signal": null,
+        "aeo_potential": null,
+        "competition_gap": null,
+        "business_fit": null,
+        "total": null,
+        "validation_status": "pending_api_data"
+      },
+      "recommended_skill": "blog-list-writer",
+      "content_type": "List/Examples",
+      "notes": "Core topic - should rank high if volume is significant"
+    },
+    {
+      "rank": 2,
+      "primary_keyword": "sora 2 prompt guide",
+      "search_intent": "tutorial",
+      "search_volume": {
+        "monthly_avg": null,
+        "trend": null,
+        "cpc": null,
+        "competition_index": null,
+        "data_source": "dataforseo",
+        "validation_status": "pending"
+      },
+      "serp_features": {
+        "ai_overview": null,
+        "featured_snippet": null,
+        "people_also_ask": null,
+        "paa_questions": [],
+        "video": null,
+        "discussions_forums": null
+      },
+      "evidence": {
+        "check_url": "https://www.google.com/search?q=sora+2+prompt+guide"
+      },
+      "opportunity_score": {
+        "validation_status": "pending_api_data"
+      },
+      "recommended_skill": "blog-tutorial-writer",
+      "content_type": "How-to Guide"
+    },
+    {
+      "rank": 3,
+      "primary_keyword": "sora 2 tutorial",
+      "search_intent": "tutorial",
+      "search_volume": {
+        "monthly_avg": null,
+        "trend": null,
+        "cpc": null,
+        "competition_index": null,
+        "data_source": "dataforseo",
+        "validation_status": "pending"
+      },
+      "serp_features": {
+        "ai_overview": null,
+        "featured_snippet": null,
+        "people_also_ask": null,
+        "paa_questions": [],
+        "video": null,
+        "discussions_forums": null
+      },
+      "evidence": {
+        "check_url": "https://www.google.com/search?q=sora+2+tutorial"
+      },
+      "opportunity_score": {
+        "validation_status": "pending_api_data"
+      },
+      "recommended_skill": "blog-tutorial-writer",
+      "content_type": "Step-by-step Tutorial",
+      "serp_analysis_priority": "high"
+    },
+    {
+      "rank": 4,
+      "primary_keyword": "ai video prompts",
+      "search_intent": "informational",
+      "search_volume": {
+        "monthly_avg": null,
+        "trend": null,
+        "cpc": null,
+        "competition_index": null,
+        "data_source": "dataforseo",
+        "validation_status": "pending"
+      },
+      "serp_features": {
+        "ai_overview": null,
+        "featured_snippet": null,
+        "people_also_ask": null,
+        "paa_questions": [],
+        "video": null,
+        "discussions_forums": null
+      },
+      "evidence": {
+        "check_url": "https://www.google.com/search?q=ai+video+prompts"
+      },
+      "opportunity_score": {
+        "validation_status": "pending_api_data"
+      },
+      "recommended_skill": "blog-list-writer",
+      "content_type": "List/Guide",
+      "serp_analysis_priority": "high",
+      "notes": "Broader topic - likely higher volume than Sora-specific"
+    },
+    {
+      "rank": 5,
+      "primary_keyword": "cinematic ai videos",
+      "search_intent": "inspirational",
+      "search_volume": {
+        "monthly_avg": null,
+        "trend": null,
+        "cpc": null,
+        "competition_index": null,
+        "data_source": "dataforseo",
+        "validation_status": "pending"
+      },
+      "serp_features": {
+        "ai_overview": null,
+        "featured_snippet": null,
+        "people_also_ask": null,
+        "paa_questions": [],
+        "video": null,
+        "discussions_forums": null
+      },
+      "evidence": {
+        "check_url": "https://www.google.com/search?q=cinematic+ai+videos"
+      },
+      "opportunity_score": {
+        "validation_status": "pending_api_data"
+      },
+      "recommended_skill": "blog-list-writer",
+      "content_type": "Examples/Gallery"
+    },
+    {
+      "rank": 6,
+      "primary_keyword": "viral video prompts",
+      "search_intent": "commercial",
+      "search_volume": {
+        "monthly_avg": null,
+        "trend": null,
+        "cpc": null,
+        "competition_index": null,
+        "data_source": "dataforseo",
+        "validation_status": "pending"
+      },
+      "serp_features": {
+        "ai_overview": null,
+        "featured_snippet": null,
+        "people_also_ask": null,
+        "paa_questions": [],
+        "video": null,
+        "discussions_forums": null
+      },
+      "evidence": {
+        "check_url": "https://www.google.com/search?q=viral+video+prompts"
+      },
+      "opportunity_score": {
+        "validation_status": "pending_api_data"
+      },
+      "recommended_skill": "blog-list-writer",
+      "content_type": "Tips/Templates",
+      "notes": "High commercial intent expected"
+    },
+    {
+      "rank": 7,
+      "primary_keyword": "sora 2 best practices",
+      "search_intent": "tutorial",
+      "search_volume": {
+        "monthly_avg": null,
+        "trend": null,
+        "cpc": null,
+        "competition_index": null,
+        "data_source": "dataforseo",
+        "validation_status": "pending"
+      },
+      "serp_features": {
+        "ai_overview": null,
+        "featured_snippet": null,
+        "people_also_ask": null,
+        "paa_questions": [],
+        "video": null,
+        "discussions_forums": null
+      },
+      "evidence": {
+        "check_url": "https://www.google.com/search?q=sora+2+best+practices"
+      },
+      "opportunity_score": {
+        "validation_status": "pending_api_data"
+      },
+      "recommended_skill": "blog-tutorial-writer",
+      "content_type": "Best Practices Guide"
+    },
+    {
+      "rank": 8,
+      "primary_keyword": "how to use sora 2",
+      "search_intent": "tutorial",
+      "search_volume": {
+        "monthly_avg": null,
+        "trend": null,
+        "cpc": null,
+        "competition_index": null,
+        "data_source": "dataforseo",
+        "validation_status": "pending"
+      },
+      "serp_features": {
+        "ai_overview": null,
+        "featured_snippet": null,
+        "people_also_ask": null,
+        "paa_questions": [],
+        "video": null,
+        "discussions_forums": null
+      },
+      "evidence": {
+        "check_url": "https://www.google.com/search?q=how+to+use+sora+2"
+      },
+      "opportunity_score": {
+        "validation_status": "pending_api_data"
+      },
+      "recommended_skill": "blog-tutorial-writer",
+      "content_type": "How-to Guide",
+      "serp_analysis_priority": "high",
+      "notes": "Classic 'how to' query - strong tutorial opportunity"
+    },
+    {
+      "rank": 9,
+      "primary_keyword": "sora 2 prompt examples",
+      "search_intent": "informational",
+      "search_volume": {
+        "monthly_avg": null,
+        "trend": null,
+        "cpc": null,
+        "competition_index": null,
+        "data_source": "dataforseo",
+        "validation_status": "pending"
+      },
+      "serp_features": {
+        "ai_overview": null,
+        "featured_snippet": null,
+        "people_also_ask": null,
+        "paa_questions": [],
+        "video": null,
+        "discussions_forums": null
+      },
+      "evidence": {
+        "check_url": "https://www.google.com/search?q=sora+2+prompt+examples"
+      },
+      "opportunity_score": {
+        "validation_status": "pending_api_data"
+      },
+      "recommended_skill": "blog-list-writer",
+      "content_type": "Examples/Templates"
+    },
+    {
+      "rank": 10,
+      "primary_keyword": "ai video generation tutorial",
+      "search_intent": "tutorial",
+      "search_volume": {
+        "monthly_avg": null,
+        "trend": null,
+        "cpc": null,
+        "competition_index": null,
+        "data_source": "dataforseo",
+        "validation_status": "pending"
+      },
+      "serp_features": {
+        "ai_overview": null,
+        "featured_snippet": null,
+        "people_also_ask": null,
+        "paa_questions": [],
+        "video": null,
+        "discussions_forums": null
+      },
+      "evidence": {
+        "check_url": "https://www.google.com/search?q=ai+video+generation+tutorial"
+      },
+      "opportunity_score": {
+        "validation_status": "pending_api_data"
+      },
+      "recommended_skill": "blog-tutorial-writer",
+      "content_type": "Complete Guide",
+      "notes": "Broader topic - tool-agnostic opportunity"
+    }
+  ],
+  "content_gaps": [
+    "Tutorial content for Sora 2 specific features",
+    "Examples-based learning (prompt templates)",
+    "Best practices and optimization guides",
+    "Broader AI video generation content"
+  ],
+  "api_calls": [
+    {
+      "endpoint": "keywords_data/google_ads/search_volume/live",
+      "parameters": {
+        "keywords_count": 10,
+        "location_code": 2840,
+        "language_code": "en"
+      },
+      "cost": 0.15,
+      "status": "pending_network_access"
+    },
+    {
+      "endpoint": "serp/google/organic/live/advanced",
+      "parameters": {
+        "queries": [
+          "ai video prompts",
+          "sora 2 tutorial",
+          "how to use sora 2"
+        ],
+        "queries_count": 3,
+        "location_code": 2840,
+        "language_code": "en"
+      },
+      "cost": 0.006,
+      "status": "pending_network_access"
+    }
+  ],
+  "network_issue": {
+    "error": "Failed to connect to api.dataforseo.com port 443",
+    "timestamp": "2026-01-17",
+    "resolution_required": "Run validation script from environment with full network access",
+    "script_location": "/Users/H/Documents/AliciBlog/scripts/dataforseo_validator.py"
+  },
+  "next_steps": [
+    "Resolve network connectivity to DataForSEO API",
+    "Run dataforseo_validator.py script",
+    "Populate search_volume and serp_features data",
+    "Calculate opportunity scores",
+    "Rank topics by priority",
+    "Generate topic briefs for top 3 opportunities"
+  ]
+}

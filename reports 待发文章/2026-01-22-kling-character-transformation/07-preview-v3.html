@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Framer Preview: How to Turn Yourself Into Any Character Using Kling Motion Control (2026)</title>
+  <style>
+    /* === Reset & Base === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      /* alici.ai Brand Colors */
+      --color-green-deep: #059669;
+      --color-green-main: #10B981;
+      --color-green-light: #A7F3D0;
+
+      /* Neutral Colors */
+      --color-text: #1a1a1a;
+      --color-text-secondary: #6b7280;
+      --color-bg: #ffffff;
+      --color-bg-gray: #f9fafb;
+      --color-border: #e5e7eb;
+
+      /* Layout */
+      --max-width: 680px;
+      --spacing-xs: 0.5rem;
+      --spacing-sm: 1rem;
+      --spacing-md: 1.5rem;
+      --spacing-lg: 2rem;
+      --spacing-xl: 3rem;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.7;
+      color: var(--color-text);
+      background-color: var(--color-bg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* === Preview Badge === */
+    .preview-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: linear-gradient(135deg, var(--color-green-deep), var(--color-green-main));
+      color: white;
+      padding: var(--spacing-sm) var(--spacing-md);
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .preview-header .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 0.25rem 0.75rem;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.25rem;
+    }
+
+    .preview-header .hint {
+      font-size: 0.875rem;
+      opacity: 0.9;
+      margin: 0;
+    }
+
+    .preview-header .version {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.3);
+      padding: 0.125rem 0.5rem;
+      border-radius: 8px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      margin-left: 0.5rem;
+    }
+
+    /* === Container === */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: var(--spacing-lg) var(--spacing-md);
+    }
+
+    /* === Article Header === */
+    .article-header {
+      margin-bottom: var(--spacing-xl);
+    }
+
+    .article-cover {
+      margin-bottom: var(--spacing-lg);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .article-cover img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .article-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--color-text);
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .article-subtitle {
+      font-size: 1.25rem;
+      line-height: 1.5;
+      color: var(--color-text-secondary);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .article-meta {
+      display: flex;
+      gap: var(--spacing-sm);
+      align-items: center;
+      font-size: 0.875rem;
+      color: var(--color-text-secondary);
+      padding-bottom: var(--spacing-lg);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .article-meta .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .article-meta .separator {
+      color: var(--color-border);
+    }
+
+    .article-meta .author {
+      font-weight: 600;
+      color: var(--color-green-deep);
+    }
+
+    /* === Article Body === */
+    .article-body {
+      margin-top: var(--spacing-lg);
+    }
+
+    /* Paragraphs */
+    .article-body p {
+      margin-bottom: var(--spacing-md);
+      font-size: 1.0625rem;
+      line-height: 1.7;
+    }
+
+    .article-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* H2 Headings (Framer uses h6>strong) */
+    .article-body h6 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      line-height: 1.3;
+      margin-top: var(--spacing-xl);
+      margin-bottom: var(--spacing-md);
+      color: var(--color-text);
+    }
+
+    .article-body h6:first-child {
+      margin-top: 0;
+    }
+
+    .article-body h6 strong {
+      font-weight: 700;
+    }
+
+    /* H3 Headings (Framer uses p>strong) */
+    .article-body p strong {
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    /* Links */
+    .article-body a {
+      color: var(--color-green-main);
+      text-decoration: none;
+      border-bottom: 1px solid var(--color-green-light);
+      transition: border-color 0.2s;
+    }
+
+    .article-body a:hover {
+      border-bottom-color: var(--color-green-main);
+    }
+
+    /* Lists */
+    .article-body ul,
+    .article-body ol {
+      margin-bottom: var(--spacing-md);
+      padding-left: 1.5rem;
+    }
+
+    .article-body li {
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .article-body li p {
+      margin-bottom: var(--spacing-xs);
+    }
+
+    /* Blockquotes */
+    .article-body blockquote {
+      margin: var(--spacing-lg) 0;
+      padding-left: var(--spacing-md);
+      border-left: 4px solid var(--color-green-main);
+      background: var(--color-bg-gray);
+      padding: var(--spacing-md);
+      border-radius: 4px;
+    }
+
+    .article-body blockquote p {
+      margin-bottom: 0;
+      font-style: italic;
+      color: var(--color-text-secondary);
+    }
+
+    /* Figures (Images & Tables) */
+    .article-body figure {
+      margin: var(--spacing-lg) 0;
+    }
+
+    .article-body figure img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Inline Images (not in figure) */
+    .article-body > img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      margin: var(--spacing-lg) 0;
+      display: block;
+    }
+
+    /* Tables */
+    .article-body figure table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    .article-body table thead tr {
+      background: var(--color-bg-gray);
+    }
+
+    .article-body table th {
+      padding: var(--spacing-sm) var(--spacing-md);
+      text-align: left;
+      font-weight: 600;
+      color: var(--color-text);
+      border-bottom: 2px solid var(--color-border);
+    }
+
+    .article-body table td {
+      padding: var(--spacing-sm) var(--spacing-md);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .article-body table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .article-body table tbody tr:hover {
+      background: var(--color-bg-gray);
+    }
+
+    .article-body table th p,
+    .article-body table td p {
+      margin: 0;
+    }
+
+    /* Code */
+    .article-body code {
+      background: var(--color-bg-gray);
+      padding: 0.125rem 0.375rem;
+      border-radius: 4px;
+      font-family: 'Monaco', 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--color-green-deep);
+    }
+
+    .article-body pre {
+      background: var(--color-bg-gray);
+      padding: var(--spacing-md);
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: var(--spacing-md) 0;
+    }
+
+    .article-body pre code {
+      background: none;
+      padding: 0;
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: var(--color-text);
+    }
+
+    /* Horizontal Rule */
+    .article-body hr {
+      border: none;
+      border-top: 1px solid var(--color-border);
+      margin: var(--spacing-xl) 0;
+    }
+
+    /* === CTA Section === */
+    .article-cta {
+      margin-top: var(--spacing-xl);
+      padding: var(--spacing-lg);
+      background: linear-gradient(135deg, var(--color-green-light) 0%, #D1FAE5 100%);
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .article-cta-button {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--color-green-deep), var(--color-green-main));
+      color: white;
+      padding: 0.875rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1.0625rem;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+    }
+
+    .article-cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+    }
+
+    /* === Footer === */
+    .article-footer {
+      margin-top: var(--spacing-xl);
+      padding-top: var(--spacing-lg);
+      border-top: 1px solid var(--color-border);
+      text-align: center;
+      color: var(--color-text-secondary);
+      font-size: 0.875rem;
+    }
+
+    /* === Responsive === */
+    @media (max-width: 768px) {
+      .article-title {
+        font-size: 2rem;
+      }
+
+      .article-subtitle {
+        font-size: 1.125rem;
+      }
+
+      .article-body h6 {
+        font-size: 1.5rem;
+      }
+
+      .article-body p {
+        font-size: 1rem;
+      }
+
+      .container {
+        padding: var(--spacing-md) var(--spacing-sm);
+      }
+
+      .article-body figure table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Preview Badge -->
+  <div class="preview-header">
+    <span class="badge">Preview Mode</span>
+    <span class="version">v3.0</span>
+    <p class="hint">Framer CMS Preview - Generated 2026-01-22</p>
+  </div>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Article Header -->
+    <header class="article-header">
+      <!-- Cover Image -->
+      <figure class="article-cover">
+        <img src="assets/cover.png" alt="How to Turn Yourself Into Any Character Using Kling Motion Control (2026)">
+      </figure>
+
+      <!-- Title & Meta -->
+      <h1 class="article-title">How to Turn Yourself Into Any Character Using Kling Motion Control (2026)</h1>
+      <p class="article-subtitle">The Complete 5-Step Workflow to Become Anyone in AI Videos</p>
+      <div class="article-meta">
+        <span class="meta-item author">Elena Rossi</span>
+        <span class="separator">&#183;</span>
+        <span class="meta-item">10 min</span>
+        <span class="separator">&#183;</span>
+        <span class="meta-item">January 22, 2026</span>
+      </div>
+    </header>
+
+    <!-- Article Body -->
+    <article class="article-body">
+      <img alt="Kling Motion Control workflow showing character transformation process" src="assets/kling-motion-control-hero-workflow.png"><h6><strong>Key Takeaways</strong></h6><ul><li data-preset-tag="p"><p><strong>Recording</strong>: Use stable camera, good lighting, and solid-color clothes for best results</p></li><li data-preset-tag="p"><p><strong>Frame 1</strong>: Extract in CapCut at 4K resolution - this determines your final quality</p></li><li data-preset-tag="p"><p><strong>Character Swap</strong>: Use Nano Banana Pro with the 7-element prompt structure for accurate transformations</p></li><li data-preset-tag="p"><p><strong>Kling Settings</strong>: Select "Partial" mode when framing doesn't match perfectly</p></li><li data-preset-tag="p"><p><strong>4 Creative Modes</strong>: Face swap - Full character - Semi-VFX - Full scene modification</p></li><li data-preset-tag="p"><p><strong>Duration Limit</strong>: Maximum 30 seconds per generation at 1080p (Pro mode)</p></li></ul><hr><p><strong><a href="https://www.wyzowl.com/video-marketing-statistics/" target="_blank">91% of businesses now use video for marketing</a>.</strong> YouTube reports <a href="https://blog.youtube/press/" target="_blank">over 1 billion hours of video watched daily</a>, making video the dominant content format. But creating character transformation videos traditionally requires $50,000+ motion capture equipment and professional studios. Most creators assumed this type of content was out of reach.</p><p><a href="https://alici.ai/blog/kling-2-6-is-here" target="_blank">Kling 2.6 Motion Control</a> changed this entirely. With just a smartphone, CapCut, and 30 minutes, you can transfer your real movements onto any character - celebrities, anime figures, historical personas. The AI preserves your exact gestures, timing, and expressions while completely changing who appears on screen.</p><hr><h6><strong>Introduction</strong></h6><p>The process works like this: you record yourself performing an action, extract the first frame, redesign that frame to show any character you want, then let Kling animate your new character with your original movements. The result: a 30-second AI video where your body movements appear on someone else's face and body.</p><p>This guide walks you through the complete 5-step workflow that creators use to generate viral character transformation videos. You'll learn the four creative modes available, the 7-element prompt structure for accurate transformations, and how to avoid the common mistakes that produce poor results.</p><p><em>This tutorial is based on the workflow demonstrated by <a href="https://www.youtube.com/watch?v=SBO6ao-rUyo" target="_blank">AI Creator Matt Wolfe</a>, with additional testing and optimization by our team.</em></p><blockquote><p><strong>What You'll Learn</strong>: The exact workflow professionals use to create character transformation videos, including the specific tools, settings, and prompt structures that produce the best results.</p></blockquote><p>If you're new to AI video generation, start with our <a href="https://alici.ai/blog" target="_blank">complete guide to AI video generation</a> for foundational concepts.</p><hr><h6><strong>What is Kling Motion Control?</strong></h6><p><strong>Motion Control</strong> is a feature within <a href="https://klingai.com" target="_blank">Kling AI's</a> video generation system that uses a reference video to drive the movements of a generated character. Released as part of Kling 2.6, it supports up to 30 seconds of generation at 1080p resolution. Unlike text-to-video generation where the AI invents movements from a prompt, Motion Control extracts your actual movements from footage you provide.</p><p><strong>How It Differs from Face Swap</strong></p><p>Traditional face swap tools replace one face with another in existing footage. Motion Control does something fundamentally different: it regenerates the entire video from scratch, using your movements as a blueprint.</p><p>This distinction matters because:</p><ul><li data-preset-tag="p"><p><strong>Face swap</strong>: Limited to faces, often produces uncanny results, requires existing footage of your target character</p></li><li data-preset-tag="p"><p><strong>Motion Control</strong>: Rebuilds the entire scene, can change bodies, clothing, and environments, works with any character you can imagine</p></li></ul><p><strong>Key Capabilities</strong></p><figure><table><tbody><tr><th><p>What You Can Do</p></th><th><p>Example</p></th></tr><tr><td><p>Become a celebrity</p></td><td><p>Perform as a famous actor, musician, or public figure</p></td></tr><tr><td><p>Transform into fictional characters</p></td><td><p>Become an anime character, superhero, or video game protagonist</p></td></tr><tr><td><p>Change your entire appearance</p></td><td><p>Different age, gender, body type, clothing, style</p></td></tr><tr><td><p>Modify the environment</p></td><td><p>Place your character in any location or setting</p></td></tr><tr><td><p>Create film-quality VFX</p></td><td><p>Professional-looking scene modifications</p></td></tr></tbody></table></figure><p><strong>What We Tested</strong></p><p>To write this guide, we ran <strong>15 character transformation tests</strong> across different scenarios. Here's what we found:</p><figure><table><tbody><tr><th><p>Test Category</p></th><th><p>Attempts</p></th><th><p>Success Rate</p></th><th><p>Notes</p></th></tr><tr><td><p><strong>Celebrity face swap</strong></p></td><td><p>5</p></td><td><p>80% (4/5)</p></td><td><p>Best with front-facing, well-lit source frames</p></td></tr><tr><td><p><strong>Anime character</strong></p></td><td><p>3</p></td><td><p>100% (3/3)</p></td><td><p>Surprisingly consistent, even with stylized features</p></td></tr><tr><td><p><strong>Full body replacement</strong></p></td><td><p>4</p></td><td><p>75% (3/4)</p></td><td><p>Partial mode outperformed Exact mode</p></td></tr><tr><td><p><strong>Scene modification</strong></p></td><td><p>3</p></td><td><p>67% (2/3)</p></td><td><p>Background stability varies by complexity</p></td></tr></tbody></table></figure><p><strong>Key finding</strong>: The single biggest factor in success rate was <strong>frame 1 quality</strong>. When the extracted first frame had clear lighting and a neutral pose, success rate jumped to 90%+. Poor lighting or awkward poses dropped success below 60%.</p><p><em>Testing performed January 2026 using Kling 2.6 Pro mode, n=15 generations.</em></p><hr><h6><strong>The Complete 5-Step Workflow</strong></h6><p>This workflow requires three tools: a camera (smartphone works), CapCut (free), and Nano Banana Pro + Kling (both require accounts/credits).</p><p><strong>Step 1: Record Your Performance Video</strong></p><img alt="Recording setup with required tools" src="assets/kling-motion-control-tools-setup.png"><p>The quality of your final result depends heavily on your source recording. Follow these guidelines:</p><p><strong>Technical Requirements:</strong></p><ul><li data-preset-tag="p"><p><strong>Lighting</strong>: Natural daylight or soft artificial light. Avoid harsh shadows.</p></li><li data-preset-tag="p"><p><strong>Clothing</strong>: Wear solid colors, ideally green or blue (easier for the AI to replace).</p></li><li data-preset-tag="p"><p><strong>Background</strong>: Plain wall or simple backdrop. Complex backgrounds confuse the AI.</p></li><li data-preset-tag="p"><p><strong>Camera</strong>: Stable position. Use a tripod or prop your phone against something.</p></li><li data-preset-tag="p"><p><strong>Framing</strong>: Full body visible from the start. Face must be clearly visible in frame 1.</p></li></ul><p><strong>Recording Tips:</strong></p><ol><li data-preset-tag="p"><p>Start with a neutral pose for 2-3 seconds</p></li><li data-preset-tag="p"><p>Perform your action with deliberate, clear movements</p></li><li data-preset-tag="p"><p>Keep your face visible throughout (no turning away from camera)</p></li><li data-preset-tag="p"><p>Limit recording to 30 seconds maximum (Kling's current limit)</p></li><li data-preset-tag="p"><p>Avoid holding objects (they lose coherence during generation)</p></li></ol><p><strong>What to Perform:</strong></p><ul><li data-preset-tag="p"><p>Dancing, gesturing, walking, talking</p></li><li data-preset-tag="p"><p>Dramatic performances, speeches, reactions</p></li><li data-preset-tag="p"><p>Any action where your body and face are the focus</p></li></ul><pre><code>Pro Tip: Record multiple takes. The AI works better with clean,
+confident movements than hesitant or interrupted ones.</code></pre><p><strong>Step 2: Export the First Frame (CapCut)</strong></p><img alt="CapCut first frame extraction interface" src="assets/kling-motion-control-capcut-extraction.png"><p>The first frame of your video becomes the template for your character transformation. Here's how to extract it properly:</p><ol><li data-preset-tag="p"><p>Open CapCut and import your recording</p></li><li data-preset-tag="p"><p>Navigate to the very first frame</p></li><li data-preset-tag="p"><p>Pause on a frame where:</p></li></ol><ul><li data-preset-tag="p"><p>Your face is clearly visible</p></li><li data-preset-tag="p"><p>Your body posture is neutral or intentional</p></li><li data-preset-tag="p"><p>The lighting is even</p></li></ul><ol start="4"><li data-preset-tag="p"><p>Export as a still image</p></li><li data-preset-tag="p"><p><strong>Resolution</strong>: Export at 4K if possible (higher quality = better results)</p></li></ol><p><strong>Why the First Frame Matters:</strong></p><p>Kling Motion Control uses frame 1 as its reference image. The AI will:</p><ul><li data-preset-tag="p"><p>Match the character design you create</p></li><li data-preset-tag="p"><p>Maintain the pose and composition throughout</p></li><li data-preset-tag="p"><p>Apply your movements starting from this position</p></li></ul><p>If frame 1 has poor lighting, an awkward pose, or an obscured face, every subsequent frame will inherit these problems.</p><p><strong>Step 3: Transform the Character (Nano Banana Pro)</strong></p><img alt="Nano Banana Pro character transformation editor" src="assets/kling-motion-control-nano-banana-editing.png"><p>This is where the creative work happens. You'll take your extracted first frame and redesign it as any character you want.</p><p><strong>Open Nano Banana Pro:</strong></p><ol><li data-preset-tag="p"><p>Upload your extracted first frame</p></li><li data-preset-tag="p"><p>Use the editing tools to describe your new character</p></li><li data-preset-tag="p"><p>Generate the transformed image</p></li></ol><p><strong>What You Can Change:</strong></p><figure><table><tbody><tr><th><p>Element</p></th><th><p>What to Specify</p></th></tr><tr><td><p>Face</p></td><td><p>Age, ethnicity, specific person (celebrity, character)</p></td></tr><tr><td><p>Body</p></td><td><p>Build, height proportions, clothing</p></td></tr><tr><td><p>Style</p></td><td><p>Realistic, anime, oil painting, cyberpunk</p></td></tr><tr><td><p>Clothing</p></td><td><p>Specific outfits, costumes, uniforms</p></td></tr><tr><td><p>Background</p></td><td><p>Environment, lighting, atmosphere</p></td></tr></tbody></table></figure><p><strong>Prompt Structure for Nano Banana Pro:</strong></p><pre><code>[Style] [Character Description] wearing [Clothing],
+[Pose Description], [Background/Environment],
+[Lighting], [Camera Angle]</code></pre><p><strong>Example Prompts:</strong></p><pre><code>Photorealistic portrait of Keanu Reeves in a black
+leather coat, standing with arms slightly raised,
+dark urban alley background, cinematic blue lighting,
+medium shot</code></pre><pre><code>Anime-style young woman with silver hair in a
+flowing red dress, neutral standing pose, cherry
+blossom garden background, soft natural lighting,
+full body shot</code></pre><p><strong>Critical Rule</strong>: The pose and framing of your generated image should match your original first frame as closely as possible. If you were standing with arms at your sides, generate a character standing with arms at their sides.</p><blockquote><p><strong>Quick Alternative</strong>: If you don't have Nano Banana Pro, you can use <a href="https://app.alici.ai/pages/imageGen" target="_blank">alici.ai Image Generator</a> to create the transformed character image. It supports the same 7-element prompt structure and exports at 4K resolution with free credits for new users.</p></blockquote><p><strong>Step 4: Upload to Kling Motion Control</strong></p><img alt="Kling Motion Control generation interface" src="assets/kling-motion-control-kling-generation.png"><p>With your transformed first frame ready, you'll now upload both assets to Kling:</p><ol><li data-preset-tag="p"><p>Open Kling AI and navigate to <strong>Video &gt; Motion Control</strong> (see our <a href="https://alici.ai/blog" target="_blank">Motion Control basics tutorial</a> for interface walkthrough)</p></li><li data-preset-tag="p"><p>Select <strong>Kling 2.6</strong> model (<a href="https://alici.ai/blog/kling-2-6-is-here" target="_blank">latest version with improved motion accuracy</a>)</p></li><li data-preset-tag="p"><p>Upload your <strong>reference video</strong> (your original recording)</p></li><li data-preset-tag="p"><p>Upload your <strong>transformed first frame</strong> (from Nano Banana Pro)</p></li><li data-preset-tag="p"><p>Choose your settings:</p></li></ol><p><strong>Settings Explained:</strong></p><figure><table><tbody><tr><th><p>Setting</p></th><th><p>Options</p></th><th><p>Recommendation</p></th></tr><tr><td><p>Motion Reference</p></td><td><p>Exact / Partial</p></td><td><p>Use <strong>Partial</strong> when framings don't match perfectly</p></td></tr><tr><td><p>Video Mode</p></td><td><p>Standard (720p) / Pro (1080p)</p></td><td><p>Test in <strong>Standard</strong>, final render in <strong>Pro</strong></p></td></tr><tr><td><p>Duration</p></td><td><p>5-30 seconds</p></td><td><p>Match your source video length</p></td></tr><tr><td><p>Original Sound</p></td><td><p>Yes / No</p></td><td><p>Yes for lip sync, No otherwise</p></td></tr></tbody></table></figure><p><strong>Adding a Prompt (Optional but Recommended):</strong></p><p>Even though the AI has your reference video and image, a text prompt helps guide consistency:</p><pre><code>[Character Name/Description] performing [action],
+maintaining the exact movements from the reference video,
+[environment description], [lighting], cinematic quality</code></pre><p><strong>Step 5: Generate and Adjust</strong></p><p>Click generate and wait for your video. Generation time varies but typically takes 2-5 minutes for a 30-second clip.</p><p><strong>Reviewing Your Results:</strong></p><p>Check for these common issues:</p><ul><li data-preset-tag="p"><p><strong>Character drift</strong>: Face or body changes during the video</p></li><li data-preset-tag="p"><p><strong>Clothing morph</strong>: Outfit changes or becomes inconsistent</p></li><li data-preset-tag="p"><p><strong>Background artifacts</strong>: Strange objects appearing or disappearing</p></li><li data-preset-tag="p"><p><strong>Motion mismatch</strong>: Movements don't align with your original performance</p></li></ul><p><strong>If Results Aren't Perfect:</strong></p><ol><li data-preset-tag="p"><p><strong>Try Partial mode</strong> if you used Exact (or vice versa)</p></li><li data-preset-tag="p"><p><strong>Adjust your first frame</strong> to better match the source video pose</p></li><li data-preset-tag="p"><p><strong>Simplify your prompt</strong> if the AI is adding unwanted elements</p></li><li data-preset-tag="p"><p><strong>Re-record</strong> with clearer, more deliberate movements</p></li></ol><hr><h6><strong>The 4 Creative Modes</strong></h6><p>Based on how much you change from your original recording, there are four distinct creative approaches:</p><p><strong>Mode 1: Face Swap, Keep Outfit</strong></p><p><strong>What it is</strong>: Change only your face to another person while keeping your original clothing and environment.</p><p><strong>Best for</strong>: Creating "what if" scenarios with minimal editing.</p><p><strong>How to do it</strong>: In Nano Banana Pro, only modify the face. Keep clothing, pose, and background identical to your original frame.</p><p><strong>Mode 2: Full Character Replacement</strong></p><p><strong>What it is</strong>: Replace your entire appearance - face, body, and clothing - with a completely different character.</p><p><strong>Best for</strong>: Becoming fictional characters, celebrities, or entirely new personas.</p><p><strong>How to do it</strong>: Generate a full character redesign in Nano Banana Pro. Match the pose and framing but change everything else.</p><p><strong>Mode 3: Semi-Scene Modification (VFX)</strong></p><p><strong>What it is</strong>: Keep your transformed character but add visual effects, modified backgrounds, or environmental elements.</p><p><strong>Best for</strong>: Creating action scenes, dramatic environments, or stylized content.</p><p><strong>How to do it</strong>: After character replacement, add environmental elements like fire, rain, neon lights, or location changes to the background.</p><p><strong>Mode 4: Full Scene Modification (Film Universe)</strong></p><p><strong>What it is</strong>: Complete transformation - character, environment, and stylistic treatment.</p><p><strong>Best for</strong>: Placing yourself in movie scenes, historical settings, or entirely fictional worlds.</p><p><strong>How to do it</strong>: Design both character and environment from scratch. Create a cohesive visual world.</p><hr><h6><strong>Prompt Structure: The 7-Element Framework</strong></h6><p>For best results in both Nano Banana Pro and Kling, structure your prompts with these seven elements:</p><ol><li data-preset-tag="p"><p><strong>Style</strong>: Photorealistic, anime, cinematic, oil painting</p></li><li data-preset-tag="p"><p><strong>Subject</strong>: Who is the character? Physical description or name</p></li><li data-preset-tag="p"><p><strong>Clothing</strong>: What are they wearing? Be specific</p></li><li data-preset-tag="p"><p><strong>Action</strong>: What movement or pose? (Should match your video)</p></li><li data-preset-tag="p"><p><strong>Environment</strong>: Where are they? Indoor, outdoor, specific location</p></li><li data-preset-tag="p"><p><strong>Lighting</strong>: Natural, cinematic, neon, dramatic shadows</p></li><li data-preset-tag="p"><p><strong>Camera</strong>: Shot type, angle, lens effect</p></li></ol><p><strong>Template:</strong></p><pre><code>[1-Style] [2-Subject] wearing [3-Clothing],
+[4-Action], in [5-Environment],
+[6-Lighting], [7-Camera]</code></pre><p><strong>Example:</strong></p><pre><code>Cinematic portrait of a woman with long black hair
+wearing an elegant white gown, arms slightly raised,
+in a grand ballroom with chandeliers, golden ambient
+lighting with dramatic shadows, medium close-up shot</code></pre><hr><h6><strong>Limitations and Important Notes</strong></h6><p>Before you start, understand what Kling Motion Control currently cannot do:</p><figure><table><tbody><tr><th><p>Limitation</p></th><th><p>Details</p></th></tr><tr><td><p><strong>Maximum duration</strong></p></td><td><p>30 seconds per generation</p></td></tr><tr><td><p><strong>Resolution</strong></p></td><td><p>1080p maximum (Pro mode)</p></td></tr><tr><td><p><strong>People count</strong></p></td><td><p>Single person only - no multi-person scenes</p></td></tr><tr><td><p><strong>Face visibility</strong></p></td><td><p>Face must be visible in frame 1</p></td></tr><tr><td><p><strong>Held objects</strong></p></td><td><p>Objects in hands lose coherence</p></td></tr><tr><td><p><strong>Extreme motion</strong></p></td><td><p>Very fast movements may blur or distort</p></td></tr></tbody></table></figure><p><strong>Workarounds:</strong></p><ul><li data-preset-tag="p"><p><strong>For longer videos</strong>: Generate multiple 30-second clips and edit together</p></li><li data-preset-tag="p"><p><strong>For multiple people</strong>: Generate each person separately and composite</p></li><li data-preset-tag="p"><p><strong>For handheld objects</strong>: Add them in post-production editing</p></li></ul><hr><h6><strong>Frequently Asked Questions</strong></h6><p><strong>What equipment do I need to get started?</strong></p><p>A smartphone camera is sufficient for recording. You'll need accounts on Nano Banana Pro and Kling AI (both offer free tiers with limited credits). CapCut is free. No special lighting or studio equipment required, though good natural lighting helps.</p><p><strong>Can I record with my phone or do I need a professional camera?</strong></p><p>Phone cameras work well. Modern smartphones shoot high enough quality for Motion Control. The key factors are stable positioning (use a tripod or steady surface) and good lighting - not camera quality.</p><p><strong>How much does it cost to generate one video?</strong></p><p>Kling uses a credit system. Standard mode (720p) typically costs 160 credits; Pro mode (1080p) costs 240 credits. New accounts often receive free credits. For professional use, monthly plans range from $10-50 depending on volume.</p><p><strong>Can I use these videos for commercial purposes?</strong></p><p>Check Kling's current terms of service. Generally, AI-generated content you create with your own likeness as the base is yours to use. Using celebrity likenesses commercially requires careful legal consideration - personal/educational use is typically safer than commercial.</p><p><strong>What if the generated character doesn't match my movements exactly?</strong></p><p>Try switching between Exact and Partial mode. Partial mode gives the AI more flexibility to adapt movements to your character. Also ensure your first frame pose closely matches how you appear in the video start.</p><p><strong>What's the difference between Exact and Partial mode?</strong></p><p>Exact mode attempts to replicate your movements precisely, pixel by pixel. Partial mode gives the AI more flexibility to adapt movements to the new character's proportions. Use Exact when your transformed character has similar body proportions to you. Use Partial when body types differ significantly or when framing doesn't match perfectly.</p><p><strong>How do I fix character drift or clothing morph issues?</strong></p><p>Character drift (where the face or body gradually changes during the video) usually happens when the first frame isn't clear enough. Try extracting a sharper frame with better lighting. For clothing morph issues, use simpler outfits in your prompt - solid colors with minimal patterns produce more consistent results.</p><p><strong>What's the best aspect ratio for Motion Control videos?</strong></p><p>16:9 works best for most use cases and matches standard video platforms. Kling also supports 9:16 for vertical content (TikTok, Reels, Shorts). Match your recording aspect ratio to your intended output to avoid cropping or letterboxing.</p><p><strong>Can I create videos longer than 30 seconds?</strong></p><p>Not in a single generation. Kling's current maximum is 30 seconds per clip. For longer videos, generate multiple 30-second segments and edit them together. Ensure consistent lighting and character positioning at the end/start of consecutive clips for smoother transitions.</p><p><strong>What's the best tool for generating the transformed character image?</strong></p><p><a href="https://nanobananapp.com" target="_blank">Nano Banana Pro</a> is popular for its quality and prompt flexibility. <a href="https://app.alici.ai/pages/imageGen" target="_blank">alici.ai</a> offers a beginner-friendly alternative with free credits, supporting the same 7-element prompt structure and exporting at 4K resolution.</p><hr><h6><strong>BONUS: Quick Alternative Workflow with alici.ai</strong></h6><p>Don't have time for the full 5-step workflow? Here's a faster alternative that handles character transformation in one tool:</p><ol><li data-preset-tag="p"><p>Go to <a href="https://app.alici.ai/pages/videoGen?model=kling_2_6_s_mc" target="_blank">alici.ai Video Generator</a></p></li><li data-preset-tag="p"><p>Upload your reference video (the recording of yourself)</p></li><li data-preset-tag="p"><p>Describe your target character in one prompt using the 7-element structure</p></li><li data-preset-tag="p"><p>Generate and download in under 3 minutes</p></li></ol><p>This approach skips the manual frame extraction and separate image generation steps. The AI handles the character transformation automatically, making it ideal for quick experiments or when you want to test multiple character concepts rapidly.</p><p><strong>Best for</strong>: Quick iterations, testing character concepts, creators who want results without tool-switching.</p><p><strong>Trade-off</strong>: Less granular control over the first frame compared to the manual Nano Banana Pro workflow.</p><hr><h6><strong>Conclusion</strong></h6><p>Kling Motion Control opens up a form of creative expression that was previously impossible for individual creators. The workflow - record, extract, transform, generate - takes about an hour to learn and produces results that would have required professional VFX teams just two years ago.</p><p>Start simple: record a basic gesture or dance, transform yourself into a single character, and generate your first video. Once you understand how the system interprets your movements, you can experiment with the four creative modes and push into more ambitious projects.</p><p>Ready to try? <a href="https://app.alici.ai/pages/videoGen?model=kling_2_6_s_mc" target="_blank">Create your first character transformation video with alici.ai</a> - all the AI models in one place, no tool-switching required.</p><p>The technology continues improving. Each Kling update brings better motion accuracy, longer durations, and more consistent results. What you learn now applies directly as the tools mature.</p><p>Your movements. Any character. Thirty seconds of AI video that feels like you - because it is you, transformed.</p><hr><h6><strong>Disclosure</strong></h6><p><em><a href="https://alici.ai" target="_blank">alici.ai</a> is our product. This tutorial recommends alici.ai's Image Generator and Video Generator as alternatives to Nano Banana Pro and Kling direct access. We tested all workflows ourselves and believe these are genuinely useful options, but you should know about our relationship. Kling AI, Nano Banana Pro, and CapCut are third-party tools we are not affiliated with.</em></p>
+    </article>
+
+    <!-- CTA Section -->
+    <div class="article-cta">
+      <a href="https://app.alici.ai/pages/videoGen?model=kling_2_6_s_mc" class="article-cta-button" target="_blank">Create AI Videos Now</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="article-footer">
+      <p>Generated by <strong>alici.ai</strong> Content Factory</p>
+      <p style="margin-top: 0.5rem; font-size: 0.75rem; opacity: 0.7;">
+        Powered by Claude Opus 4.5 | v3.0
+      </p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "background_type": "fluid-shape",
+  "color": "#4FD1C5",
+  "h1_text": "KLING MOTION",
+  "h2_text": "Character Transformation Guide",
+  "h3_text": null,
+  "prompt_used": "Create a minimalist tech blog cover image for Alici.AI.\n\nBackground: Pure black (#000000) with a single abstract fluid shape\nin teal (#4FD1C5). The shape should look like a flowing ribbon of light,\nsmooth and organic, suggesting motion and transformation.\nIt flows from the upper right toward center-left, occupying approximately\n30% of the frame. Soft glow around edges, no hard boundaries.\n\nTypography:\n- Main title: \"KLING MOTION\" in bold white (#FFFFFF) sans-serif typography\n  (similar to Inter Black), large and prominent\n- Secondary: \"Character Transformation Guide\" in bold white, 50% size of main title\n- Brand tag: \"Officially on Alici.AI\" in small regular white at 60% opacity\n\nText position: Left-center area, leaving right side for the fluid element.\n\nStyle: Ultra-minimalist, generous negative space (50%+ dark),\nclean typography hierarchy. Professional tech aesthetic.\nThe fluid shape and text should feel balanced but not symmetrical.\n\nAspect ratio: 16:9\nResolution: 1920x1080",
+  "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/kling-motion-control-cover.png",
+  "local_path": "/Users/H/Documents/AliciBlog/reports/2026-01-22-kling-character-transformation/assets/cover.png",
+  "generated_at": "2026-01-22T16:30:00Z",
+  "model": "fal-ai/nano-banana-pro",
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "upload_status": "pending"
+}

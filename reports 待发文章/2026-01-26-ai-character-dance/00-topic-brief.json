@@ -1,0 +1,341 @@
+{
+  "metadata": {
+    "seed_keyword": "AI character dance",
+    "mode": "seed",
+    "version": "v2.2",
+    "created_at": "2026-01-26",
+    "total_directions_evaluated": 10,
+    "locked_directions": 2,
+    "validation_status": "⛔ REJECTED - Real data validation failed",
+    "last_updated": "2026-01-26T18:32:48Z"
+  },
+  "critical_warning": {
+    "status": "⛔ TOPIC REJECTED",
+    "reason": "DataForSEO real data shows 99.2% overestimation in simulated volumes",
+    "data_comparison": {
+      "simulated_total_volume": 19040,
+      "real_total_volume": 160,
+      "keywords_with_volume": "2/25 (8%)",
+      "overestimation_factor": "119x"
+    },
+    "gate_failure": "Gate 1: Demand Validation FAILED (only 8% keywords have volume)",
+    "recommendation": "Pivot to broader seed 'AI video animation' or abandon topic",
+    "see_analysis": "CRITICAL-ANALYSIS-real-vs-simulated.md"
+  },
+  "directions": [
+    {
+      "direction_id": "D1",
+      "locked_title": "How to Make AI Character Dance Videos in 2026 (Step-by-Step Tutorial)",
+      "direction_name": "AI Character Animation Tutorial & How-to Guides",
+      "pattern": "Tool/Feature Tutorial",
+      "recommended_skill": "blog-tutorial-writer",
+      "evidence_chain": {
+        "data_source": "dataforseo_real_data",
+        "validation_warning": "⚠️ Real data shows severe demand gap vs simulation",
+        "search_demand": {
+          "primary_keyword": "how to make AI character dance videos",
+          "search_volume_simulated": 2100,
+          "search_volume_real": 0,
+          "trend": "N/A - no measurable volume",
+          "keyword_difficulty": 20,
+          "opportunity_score": 0,
+          "status": "❌ ZERO VOLUME"
+        },
+        "cluster_keywords": [
+          {"keyword": "AI character animation", "volume_simulated": 4200, "volume_real": 140, "delta": "-96.7%"},
+          {"keyword": "AI character animation tutorial", "volume_simulated": 1100, "volume_real": 0, "delta": "-100%"},
+          {"keyword": "create animated character videos", "volume_simulated": 850, "volume_real": 0, "delta": "-100%"},
+          {"keyword": "animate characters with AI", "volume_simulated": 280, "volume_real": 20, "delta": "-92.9%"}
+        ],
+        "total_cluster_volume_simulated": 8530,
+        "total_cluster_volume_real": 160,
+        "cluster_delta": "-98.1%",
+        "serp_analysis": {
+          "top_3_format": "How-to Tutorial (67%)",
+          "avg_word_count": 2200,
+          "common_sections": [
+            "Step-by-step instructions",
+            "Tool comparisons",
+            "Example prompts",
+            "Troubleshooting tips",
+            "FAQ section"
+          ],
+          "year_presence": {
+            "2026": "33%",
+            "2025": "50%",
+            "no_year": "17%"
+          }
+        },
+        "competitor_gap": {
+          "invideo_blog": "有相关内容，但未专注于角色舞蹈",
+          "higgsfield_blog": "有 AI 视频教程，但缺少角色舞蹈细分",
+          "freepik_blog": "有工具介绍，但缺少完整教程",
+          "gap_opportunity": "完整的角色舞蹈制作教程，从零到发布"
+        },
+        "intent_match": {
+          "user_intent": "informational + transactional",
+          "serp_intent": "tutorial",
+          "match_score": 95,
+          "reasoning": "用户寻求完整教程，SERP 主要是 how-to 内容"
+        }
+      },
+      "alici_mapping": {
+        "core_features": ["角色动画生成", "文本到视频", "舞蹈动作库"],
+        "use_cases": ["社交媒体内容", "营销视频", "创意表达"],
+        "target_audience": "初学者、内容创作者、社媒运营",
+        "competitive_advantage": "One-prompt 简易性 + 多模型一站式"
+      },
+      "outline": {
+        "h1": "How to Make AI Character Dance Videos in 2026 (Step-by-Step Tutorial)",
+        "sections": [
+          {
+            "h2": "What Are AI Character Dance Videos?",
+            "purpose": "定义和用例介绍"
+          },
+          {
+            "h2": "Why AI Character Dance Videos Are Trending in 2026",
+            "purpose": "趋势背景和商业价值"
+          },
+          {
+            "h2": "Tools You Need to Create AI Character Dance Videos",
+            "purpose": "工具对比（alici.ai 作为推荐选项）"
+          },
+          {
+            "h2": "Step-by-Step Tutorial: Creating Your First Character Dance Video",
+            "subsections": [
+              "Step 1: Choose Your Character Design",
+              "Step 2: Select a Dance Style",
+              "Step 3: Write Your Prompt",
+              "Step 4: Generate and Refine",
+              "Step 5: Export and Optimize"
+            ]
+          },
+          {
+            "h2": "5 Example Prompts for AI Character Dance Videos",
+            "purpose": "可复用的 Prompt 模板"
+          },
+          {
+            "h2": "Best Practices for Professional-Quality Character Animations",
+            "purpose": "质量提升技巧"
+          },
+          {
+            "h2": "Common Mistakes to Avoid",
+            "purpose": "陷阱和解决方案"
+          },
+          {
+            "h2": "FAQ: AI Character Dance Videos",
+            "purpose": "AEO 优化"
+          }
+        ],
+        "target_word_count": "1800-2500",
+        "cta_positions": [
+          "After Step 3 (Try alici.ai prompt builder)",
+          "After Example Prompts (Start creating)",
+          "End of article (Full platform access)"
+        ]
+      },
+      "kpis": {
+        "traffic_potential": "high (8500+ monthly searches)",
+        "conversion_potential": "high (tutorial readers → trial users)",
+        "brand_awareness": "medium",
+        "difficulty": "medium (KD 45)",
+        "estimated_ranking_time": "3-4 months"
+      },
+      "validation_status": {
+        "keyword_hit_check": "✅ PASS (主关键词在 Top 3 SERP)",
+        "intent_match": "✅ PASS (95% 匹配度)",
+        "serp_alignment": "✅ PASS (How-to 格式主导)",
+        "year_validation": "✅ PASS (2026 年份验证)",
+        "overall": "✅ LOCKED - 可立即开写"
+      }
+    },
+    {
+      "direction_id": "D2",
+      "locked_title": "How to Use AI Character Animation for Brand Marketing in 2026",
+      "direction_name": "Brand Marketing & Mascot Animation for Businesses",
+      "pattern": "Industry-Specific Use Case",
+      "recommended_skill": "blog-tutorial-writer",
+      "evidence_chain": {
+        "data_source": "dataforseo_real_data",
+        "validation_warning": "⚠️ Real data shows severe demand gap vs simulation",
+        "search_demand": {
+          "primary_keyword": "AI character animation for marketing",
+          "search_volume_simulated": 1500,
+          "search_volume_real": 0,
+          "trend": "N/A - no measurable volume",
+          "keyword_difficulty": 20,
+          "opportunity_score": 0,
+          "status": "❌ ZERO VOLUME"
+        },
+        "cluster_keywords": [
+          {"keyword": "animated mascot videos for brands", "volume_simulated": 1200, "volume_real": 0, "delta": "-100%"},
+          {"keyword": "character animation for product demos", "volume_simulated": 680, "volume_real": 0, "delta": "-100%"},
+          {"keyword": "AI dance videos for social media marketing", "volume_simulated": 650, "volume_real": 0, "delta": "-100%"}
+        ],
+        "total_cluster_volume_simulated": 4530,
+        "total_cluster_volume_real": 0,
+        "cluster_delta": "-100%",
+        "serp_analysis": {
+          "top_3_format": "Use Case / Industry Guide (60%)",
+          "avg_word_count": 2400,
+          "common_sections": [
+            "Industry pain points",
+            "Case studies / Examples",
+            "Implementation strategies",
+            "ROI metrics",
+            "Tool recommendations"
+          ],
+          "year_presence": {
+            "2026": "40%",
+            "2025": "40%",
+            "no_year": "20%"
+          }
+        },
+        "competitor_gap": {
+          "invideo_blog": "有广告制作内容，但未专注于品牌吉祥物",
+          "higgsfield_blog": "缺少品牌营销角度",
+          "freepik_blog": "有设计资源，但缺少营销策略",
+          "gap_opportunity": "品牌吉祥物 + AI 角色舞蹈的营销应用完整指南"
+        },
+        "intent_match": {
+          "user_intent": "commercial + informational",
+          "serp_intent": "use_case",
+          "match_score": 92,
+          "reasoning": "营销人员寻求实际应用案例和ROI证明"
+        }
+      },
+      "alici_mapping": {
+        "core_features": ["品牌吉祥物制作", "营销视频生成", "批量内容生产"],
+        "use_cases": ["品牌营销", "社交媒体", "产品推广", "企业宣传"],
+        "target_audience": "营销人员、品牌经理、社媒运营、企业主",
+        "competitive_advantage": "快速生成 + 品牌一致性 + 多平台适配"
+      },
+      "outline": {
+        "h1": "How to Use AI Character Animation for Brand Marketing in 2026",
+        "sections": [
+          {
+            "h2": "Why AI Character Animation Is Transforming Brand Marketing",
+            "purpose": "趋势和商业价值"
+          },
+          {
+            "h2": "5 Ways Brands Are Using AI Character Dance Videos",
+            "subsections": [
+              "1. Mascot Activation Campaigns",
+              "2. Product Launch Announcements",
+              "3. Social Media Engagement",
+              "4. Event Marketing",
+              "5. Employee Communication"
+            ]
+          },
+          {
+            "h2": "Real Brand Examples: Character Animation Success Stories",
+            "purpose": "案例研究（2-3个真实案例）"
+          },
+          {
+            "h2": "How to Create Your Brand's AI Character (Step-by-Step)",
+            "subsections": [
+              "Step 1: Define Your Brand Character",
+              "Step 2: Design Character Guidelines",
+              "Step 3: Create Dance Variations",
+              "Step 4: Optimize for Platforms",
+              "Step 5: Measure Performance"
+            ]
+          },
+          {
+            "h2": "Best AI Tools for Brand Character Animation",
+            "purpose": "工具对比（alici.ai 突出优势）"
+          },
+          {
+            "h2": "Measuring ROI: Key Metrics for Character Animation Campaigns",
+            "purpose": "数据驱动的价值证明"
+          },
+          {
+            "h2": "Common Challenges and Solutions",
+            "purpose": "实战问题处理"
+          },
+          {
+            "h2": "FAQ: AI Character Animation for Marketing",
+            "purpose": "AEO 优化"
+          }
+        ],
+        "target_word_count": "2200-2800",
+        "cta_positions": [
+          "After Real Examples (Try alici.ai for your brand)",
+          "After Step-by-Step (Start your campaign)",
+          "End of article (Enterprise demo)"
+        ]
+      },
+      "kpis": {
+        "traffic_potential": "medium-high (4500+ monthly searches)",
+        "conversion_potential": "very high (B2B decision makers)",
+        "brand_awareness": "high (enterprise positioning)",
+        "difficulty": "medium (KD 48)",
+        "estimated_ranking_time": "3-5 months"
+      },
+      "validation_status": {
+        "keyword_hit_check": "✅ PASS (主关键词在 Top 5 SERP)",
+        "intent_match": "✅ PASS (92% 匹配度)",
+        "serp_alignment": "✅ PASS (Use Case 格式主导)",
+        "year_validation": "✅ PASS (2026 年份验证)",
+        "overall": "✅ LOCKED - 可立即开写"
+      }
+    }
+  ],
+  "selection_reasoning_simulated": {
+    "note": "⚠️ This reasoning was based on SIMULATED data and is INVALID after real data validation",
+    "why_d1_locked_simulated": [
+      "最高搜索量聚合 (8530) - ❌ Real: 160 (-98.1%)",
+      "最高 Direction Score (87) - ❌ Real: 10 (主关键词 0 volume)",
+      "教程类内容是流量入口 - ⚠️ 只有 'AI character animation' 有 140 volume",
+      "初学者受众广泛 - ❌ 无法验证（无搜索数据）",
+      "产品教育机会最佳 - ⚠️ 市场未成熟，用户未主动搜索"
+    ],
+    "why_d2_locked_simulated": [
+      "高商业价值 (B2B 受众) - ⚠️ 理论正确，但无搜索需求",
+      "第二高 Direction Score (85) - ❌ Real: 0 (所有关键词 0 volume)",
+      "精准受众（营销人员）- ❌ 营销人员不搜索这些词",
+      "高转化潜力 - ❌ 无流量 = 无转化",
+      "企业客户定位 - ⚠️ 需求可能存在但不通过 Google 搜索"
+    ],
+    "status": "⛔ BOTH DIRECTIONS REJECTED after real data validation"
+  },
+  "selection_reasoning_real_data": {
+    "verdict": "⛔ REJECT BOTH DIRECTIONS",
+    "reason": "Insufficient search demand (160/month total, 99.2% below simulation)",
+    "d1_rejection_reasons": [
+      "主关键词 'how to make AI character dance videos' = 0 volume",
+      "聚合搜索量从 8,530 降至 160 (-98.1%)",
+      "只有 1 个关键词有 volume ('AI character animation' = 140)",
+      "教程内容无法获得流量（用户不搜索此类查询）"
+    ],
+    "d2_rejection_reasons": [
+      "所有 4 个关键词搜索量都是 0",
+      "聚合搜索量从 4,530 降至 0 (-100%)",
+      "营销人员不通过 Google 搜索品牌吉祥物/角色动画",
+      "B2B 需求可能存在，但不体现在搜索数据中"
+    ],
+    "why_others_not_locked": {
+      "D3_D10": "平台特定内容已包含在 D1 和 D2 的章节中",
+      "D4": "工具对比内容可作为 D1/D2 的子章节",
+      "D5_D6": "质量和效率主题可融入 D1/D2",
+      "D7_D8": "趋势和变现内容搜索量较低，优先级低"
+    }
+  },
+  "next_steps_simulated": [
+    "❌ INVALID: 将 Direction D1 提交给 blog-tutorial-writer (基于错误的模拟数据)",
+    "❌ INVALID: 将 Direction D2 提交给 blog-tutorial-writer (基于错误的模拟数据)"
+  ],
+  "next_steps_real_data": [
+    "⛔ STOP: Do NOT proceed with current directions",
+    "📊 DECISION REQUIRED: Choose pivot strategy",
+    "Option A (Recommended): Pivot to broader seed 'AI video animation' and re-validate",
+    "Option B: Pivot to adjacent seed 'AI mascot generator' and re-validate",
+    "Option C: Abandon topic cluster entirely (market too nascent)",
+    "See detailed analysis: CRITICAL-ANALYSIS-real-vs-simulated.md"
+  ],
+  "api_cost": {
+    "dataforseo_keywords_data": "$0.375",
+    "total": "$0.375",
+    "roi": "POSITIVE - Saved ~3 hours of work on dead-end topic"
+  }
+}

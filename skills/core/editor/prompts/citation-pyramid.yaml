@@ -1,0 +1,338 @@
+# Citation Authority Pyramid for Editor Skill v2.9
+# Source: Invideo.io blog competitive research (02-citation-techniques.md)
+# Version: 1.0
+# Purpose: Score and improve citation authority in articles
+
+# ============================================================
+# Citation Authority Pyramid (5 Levels)
+# ============================================================
+authority_pyramid:
+  description: |
+    Higher levels = more authoritative sources.
+    Target: 50%+ citations from Level 1-3.
+
+  Level_1:
+    name: "Official Platform Data"
+    authority: "Highest"
+    weight: 5
+    description: "Direct data from major platforms"
+    sources:
+      - YouTube Press (blog.youtube/press)
+      - LinkedIn Data (business.linkedin.com/marketing-solutions)
+      - Meta for Business (about.fb.com/news)
+      - TikTok Newsroom (newsroom.tiktok.com)
+      - Google/Alphabet official announcements
+      - OpenAI official blog
+      - Anthropic official announcements
+    detection_patterns:
+      - "blog.youtube"
+      - "linkedin.com/business"
+      - "about.fb.com"
+      - "newsroom.tiktok"
+      - "openai.com/blog"
+      - "anthropic.com"
+
+  Level_2:
+    name: "Research Institution Reports"
+    authority: "Very High"
+    weight: 4
+    description: "Market research and industry analysis firms"
+    sources:
+      - Statista
+      - eMarketer
+      - Forrester
+      - Gartner
+      - HubSpot Research
+      - Wyzowl
+      - Demand Metric
+      - Pew Research
+      - DataReportal
+    detection_patterns:
+      - "statista.com"
+      - "emarketer.com"
+      - "forrester.com"
+      - "gartner.com"
+      - "hubspot.com/research"
+      - "wyzowl.com"
+      - "pewresearch.org"
+      - "datareportal.com"
+
+  Level_3:
+    name: "Industry Media & Associations"
+    authority: "High"
+    weight: 3
+    description: "Respected industry publications and organizations"
+    sources:
+      - TechCrunch
+      - AdWeek
+      - Search Engine Journal
+      - CNBC
+      - The Verge
+      - Wired
+      - IAB (Interactive Advertising Bureau)
+      - VentureBeat
+    detection_patterns:
+      - "techcrunch.com"
+      - "adweek.com"
+      - "searchenginejournal.com"
+      - "cnbc.com"
+      - "theverge.com"
+      - "wired.com"
+      - "iab.com"
+      - "venturebeat.com"
+
+  Level_4:
+    name: "Tool Vendor Self-Research"
+    authority: "Medium"
+    weight: 2
+    description: "Data published by software/tool vendors"
+    sources:
+      - Wistia (State of Video)
+      - VidYard
+      - Proposify
+      - Ahrefs Blog
+      - SEMrush
+      - Backlinko
+      - TubeBuddy
+      - VidIQ
+    detection_patterns:
+      - "wistia.com"
+      - "vidyard.com"
+      - "ahrefs.com/blog"
+      - "semrush.com"
+      - "backlinko.com"
+      - "tubebuddy.com"
+      - "vidiq.com"
+
+  Level_5:
+    name: "User Review Platforms"
+    authority: "Supplementary"
+    weight: 1
+    description: "User-generated ratings and reviews"
+    sources:
+      - G2
+      - Capterra
+      - TrustPilot
+      - Product Hunt
+    detection_patterns:
+      - "g2.com"
+      - "capterra.com"
+      - "trustpilot.com"
+      - "producthunt.com"
+
+# ============================================================
+# Citation Formats (3 Types)
+# ============================================================
+citation_formats:
+
+  inline_hyperlink:
+    name: "Inline Hyperlink Citation"
+    usage: "Most common - for specific reports"
+    example: 'According to [Wyzowl](https://www.wyzowl.com/video-marketing-statistics/), 91% of businesses use video.'
+    pattern: "\\[.+\\]\\(.+\\)"
+
+  parenthetical:
+    name: "Parenthetical Attribution"
+    usage: "For dense data sections"
+    example: "Video content generates 1200% more shares (**Brightcove, 2024**)."
+    pattern: "\\*\\*[A-Za-z]+,\\s*\\d{4}\\*\\*"
+
+  hybrid:
+    name: "Hybrid Citation"
+    usage: "For key data points requiring maximum credibility"
+    example: "YouTube reports 1 billion hours watched daily ([YouTube Press](url), 2024)."
+    pattern: "\\[.+\\]\\(.+\\),\\s*\\d{4}"
+
+# ============================================================
+# Density Standards by Article Type
+# ============================================================
+density_standards:
+
+  statistics_article:
+    total_citations: "135+"
+    unique_sources: "25-30"
+    level_1_3_ratio: "50%+"
+    freshness: "2 years max"
+    example: "135 Video Marketing Statistics"
+
+  listicle_article:
+    opening_citations: "1-2 market data"
+    per_tool: "official link + review platform"
+    pricing_link: "direct to pricing page"
+    level_1_3_ratio: "40%+"
+
+  comparison_article:
+    case_study_citations: "brand + quantified data"
+    rating_sources: "G2/Capterra scores"
+    feature_sources: "official documentation"
+    level_1_3_ratio: "40%+"
+
+  howto_tutorial:
+    opening_citations: "1-2 impact statistics"
+    creator_references: "YouTube creators as authority"
+    tool_data: "Ahrefs, TubeBuddy, etc."
+    level_1_3_ratio: "30%+"
+
+  guide_article:
+    opening_citations: "1-2 opportunity data"
+    platform_data: "user counts, growth rates"
+    case_citations: "brand + specific metrics"
+    level_1_3_ratio: "40%+"
+
+  vertical_industry:
+    external_citations: "minimal (0-3)"
+    tool_stack: "internal + third-party names"
+    cost_data: "self-researched estimates"
+    level_1_3_ratio: "N/A (primarily internal)"
+
+  philosophy_craft:
+    case_videos: "YouTube embeds as evidence"
+    brand_cases: "self-produced examples"
+    external_citations: "zero (opinion-driven)"
+    level_1_3_ratio: "N/A"
+
+# ============================================================
+# Scoring & Grading
+# ============================================================
+scoring:
+
+  calculation:
+    formula: |
+      weighted_score = sum(citation_count[level] * weight[level]) / total_citations
+      Level 1: weight 5
+      Level 2: weight 4
+      Level 3: weight 3
+      Level 4: weight 2
+      Level 5: weight 1
+
+  level_1_3_ratio:
+    target: "50%+"
+    calculation: "(Level1 + Level2 + Level3) / Total Citations"
+
+  grading:
+    A:
+      score_range: "4.0+"
+      level_1_3_ratio: "60%+"
+      description: "Excellent authority distribution"
+
+    B:
+      score_range: "3.0-3.9"
+      level_1_3_ratio: "50-59%"
+      description: "Good authority, minor improvements possible"
+
+    C:
+      score_range: "2.0-2.9"
+      level_1_3_ratio: "30-49%"
+      description: "Moderate authority, upgrade recommended"
+
+    D:
+      score_range: "<2.0"
+      level_1_3_ratio: "<30%"
+      description: "Low authority, citations need upgrading"
+
+# ============================================================
+# Common Citation Errors
+# ============================================================
+common_errors:
+
+  no_source_statistic:
+    error: "Statistic without any source"
+    bad: "Video marketing increases conversions by 80%."
+    good: "Video marketing increases conversions by 80% ([Wyzowl, 2024](url))."
+    severity: "high"
+
+  outdated_data:
+    error: "Data older than 2 years"
+    bad: "According to a 2019 study..."
+    good: "According to the latest 2024 data from Statista..."
+    severity: "high"
+
+  dead_link:
+    error: "Broken or inaccessible source link"
+    detection: "HTTP 404/403/timeout"
+    severity: "high"
+
+  secondary_citation:
+    error: "Citing someone citing the original source"
+    bad: "According to HubSpot citing Wyzowl..."
+    good: "According to Wyzowl's 2024 Video Marketing Statistics report..."
+    severity: "medium"
+
+  vague_attribution:
+    error: "Non-specific source reference"
+    bad: "Studies show that..."
+    good: "A Gartner study found that..."
+    severity: "medium"
+
+# ============================================================
+# Auto-Fix Recommendations
+# ============================================================
+auto_fix:
+
+  trigger: "Level 1-3 ratio < 50%"
+
+  actions:
+    - identify: "Level 4-5 citations that could be upgraded"
+    - suggest: "Equivalent Level 1-3 sources"
+    - note: "Auto-replacement NOT performed (requires fact-checking)"
+
+  upgrade_paths:
+    from_g2_rating:
+      to: "Official product announcement with same data"
+      example: "G2 rating → Product Hunt launch metrics"
+
+    from_blog_quote:
+      to: "Original research report"
+      example: "Marketing blog → Wyzowl annual report"
+
+    from_vendor_claim:
+      to: "Independent verification"
+      example: "Tool vendor claim → TechCrunch review"
+
+  warning: |
+    Citation replacements are SUGGESTIONS ONLY.
+    All upgrades require fact-checking before implementation.
+    Editor generates recommendation list, does NOT auto-replace.
+
+# ============================================================
+# Report Output Format
+# ============================================================
+report_format:
+  section_title: "### Citation Authority Analysis"
+  template: |
+    ### Citation Authority Analysis
+
+    **Total Citations**: [N]
+    **Unique Sources**: [N]
+    **Authority Score**: [X.X]/5.0 (Grade: [A/B/C/D])
+
+    #### Level Distribution
+
+    | Level | Count | Percentage | Weight |
+    |-------|-------|------------|--------|
+    | L1 Official | [N] | [X]% | 5 |
+    | L2 Research | [N] | [X]% | 4 |
+    | L3 Industry | [N] | [X]% | 3 |
+    | L4 Vendor | [N] | [X]% | 2 |
+    | L5 Review | [N] | [X]% | 1 |
+
+    **Level 1-3 Ratio**: [X]% (Target: 50%+)
+
+    #### Citations Needing Upgrade
+
+    | Current Citation | Level | Suggested Upgrade | New Level |
+    |------------------|-------|-------------------|-----------|
+    | [citation] | L5 | [suggestion] | L2 |
+
+    **Note**: Upgrades require manual fact-checking before implementation.
+
+# ============================================================
+# Deep Check Trigger
+# ============================================================
+deep_check:
+  trigger_condition: "Level 1-3 ratio < 30%"
+  action: "Read /competitive-research/invideo-blog/02-citation-techniques.md"
+  output:
+    - "Detailed upgrade recommendations"
+    - "Source discovery tips"
+    - "Citation format templates"

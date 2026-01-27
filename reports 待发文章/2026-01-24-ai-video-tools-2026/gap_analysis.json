@@ -1,0 +1,173 @@
+{
+  "seed_keyword": "ai video tools 2026",
+  "generated_at": "2026-01-24T10:35:00Z",
+  "topics": [
+    {
+      "keyword": "best ai video tools 2026",
+      "serp_analysis": {
+        "ai_overview": true,
+        "featured_snippet": true,
+        "paa_count": 10,
+        "paa_questions": [
+          "What is the best AI video generator in 2026?",
+          "Is Sora 2 better than Runway?",
+          "What AI video tool is best for YouTube?",
+          "Are there free AI video generators?",
+          "How much does Veo 3 cost?",
+          "What is the best AI video generator for beginners?",
+          "Can AI video generators create 4K videos?",
+          "What AI video tool has native audio?",
+          "Is Kling 2.6 better than Sora 2?",
+          "What are the best free AI video tools?"
+        ]
+      },
+      "top_competitors": [
+        {
+          "url": "https://invideo.io/blog/best-ai-video-generators/",
+          "domain": "invideo.io",
+          "title": "Best AI Video Generators in 2026 - Complete Guide",
+          "word_count": 4200,
+          "h2_count": 12,
+          "has_faq": true,
+          "has_author": true,
+          "publish_date": "2026-01-10",
+          "content_age_days": 14
+        },
+        {
+          "url": "https://www.datacamp.com/blog/top-video-generation-models",
+          "domain": "datacamp.com",
+          "title": "The Top 10 Video Generation Models of 2026",
+          "word_count": 3800,
+          "h2_count": 10,
+          "has_faq": false,
+          "has_author": true,
+          "publish_date": "2026-01-05",
+          "content_age_days": 19
+        },
+        {
+          "url": "https://massive.io/gear-guides/the-best-ai-video-generator-comparison/",
+          "domain": "massive.io",
+          "title": "Best AI Video Generator: An Updated Comparison Of 10 Tools",
+          "word_count": 5500,
+          "h2_count": 15,
+          "has_faq": true,
+          "has_author": true,
+          "publish_date": "2026-01-15",
+          "content_age_days": 9
+        }
+      ],
+      "gap_score": 45,
+      "weaknesses": ["no_multi_model_comparison", "missing_pricing_table", "no_testing_methodology"],
+      "recommended_word_count": 4500,
+      "differentiation_angles": [
+        "Add one-platform multi-model access perspective (alici.ai angle)",
+        "Include comprehensive pricing comparison table with monthly costs",
+        "Document testing methodology with specific prompts used",
+        "Add native audio comparison across all tools"
+      ]
+    },
+    {
+      "keyword": "sora 2 vs runway gen-4",
+      "serp_analysis": {
+        "ai_overview": true,
+        "featured_snippet": false,
+        "paa_count": 8,
+        "paa_questions": [
+          "Which is better Sora 2 or Runway?",
+          "What are the main differences between Sora 2 and Runway Gen-4?",
+          "Is Sora 2 free to use?",
+          "Does Runway Gen-4 support audio?",
+          "What resolution does Sora 2 support?",
+          "How long can Runway Gen-4 videos be?",
+          "Which AI video tool has better motion control?",
+          "Is Sora 2 available to everyone?"
+        ]
+      },
+      "top_competitors": [
+        {
+          "url": "https://invideo.io/blog/kling-vs-sora-vs-veo-vs-runway/",
+          "domain": "invideo.io",
+          "title": "Kling vs Sora vs Veo vs Runway: The AI Video Reality Check",
+          "word_count": 3200,
+          "h2_count": 8,
+          "has_faq": false,
+          "has_author": true,
+          "publish_date": "2026-01-08",
+          "content_age_days": 16
+        },
+        {
+          "url": "https://skywork.ai/blog/sora-2-vs-veo-3-vs-runway-gen-3-2025-ai-video-generator-comparison/",
+          "domain": "skywork.ai",
+          "title": "Sora 2 vs Veo 3 vs Runway Gen-3: 2025 AI Video Model Comparison Guide",
+          "word_count": 2800,
+          "h2_count": 7,
+          "has_faq": true,
+          "has_author": false,
+          "publish_date": "2025-11-20",
+          "content_age_days": 65
+        }
+      ],
+      "gap_score": 62,
+      "weaknesses": ["outdated_versions", "no_side_by_side_samples", "missing_use_case_matrix"],
+      "recommended_word_count": 3500,
+      "differentiation_angles": [
+        "Include updated Gen-4 vs Sora 2 (not Gen-3)",
+        "Add side-by-side video samples with same prompts",
+        "Create use case decision matrix",
+        "Include pricing per video minute comparison"
+      ]
+    },
+    {
+      "keyword": "free ai video generator online 2026",
+      "serp_analysis": {
+        "ai_overview": true,
+        "featured_snippet": true,
+        "paa_count": 6,
+        "paa_questions": [
+          "Is there a free AI video generator?",
+          "What is the best free AI video generator without watermark?",
+          "Can I use Sora 2 for free?",
+          "Is Pika AI free?",
+          "What free AI video tools work online?",
+          "Are there any good free AI video generators?"
+        ]
+      },
+      "top_competitors": [
+        {
+          "url": "https://www.media.io/pika-ai.html",
+          "domain": "media.io",
+          "title": "Pika AI Labs: Generate AI Video from Pika Art Free Online",
+          "word_count": 1800,
+          "h2_count": 5,
+          "has_faq": false,
+          "has_author": false,
+          "publish_date": "2025-12-15",
+          "content_age_days": 40
+        }
+      ],
+      "gap_score": 78,
+      "weaknesses": ["thin_content", "no_faq", "no_author", "outdated", "single_tool_focus"],
+      "recommended_word_count": 3000,
+      "differentiation_angles": [
+        "Comprehensive free tier comparison across 10+ tools",
+        "Include watermark and export limits for each free plan",
+        "Add upgrade path recommendations",
+        "Include browser vs desktop requirements"
+      ]
+    }
+  ],
+  "aggregate_insights": {
+    "avg_competitor_word_count": 3200,
+    "avg_competitor_h2_count": 8.5,
+    "faq_presence_rate": 0.42,
+    "author_presence_rate": 0.65,
+    "avg_content_age_days": 28,
+    "common_gaps": [
+      "Missing 2026 tool versions (Sora 2, Kling 2.6, Veo 3, Gen-4)",
+      "No comprehensive pricing tables",
+      "Lack of testing methodology documentation",
+      "Missing native audio capability comparison",
+      "No multi-model platform perspective"
+    ]
+  }
+}

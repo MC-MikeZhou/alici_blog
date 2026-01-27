@@ -1,0 +1,230 @@
+{
+  "metadata": {
+    "seed_keyword": "AI character dance",
+    "total_keywords": 68,
+    "expansion_date": "2026-01-26",
+    "phase": "1-keyword-expansion"
+  },
+  "tier_1_keywords": {
+    "description": "高商业价值 + 高搜索量潜力",
+    "patterns": [
+      {
+        "pattern_id": 1,
+        "pattern_name": "Industry-Specific Use Case",
+        "keywords": [
+          "AI character animation for marketing",
+          "animated mascot videos for brands",
+          "AI dance videos for social media marketing",
+          "character animation for product demos",
+          "AI animated characters for ads",
+          "dancing mascot for brand campaigns",
+          "AI character videos for e-commerce",
+          "animated brand character creation",
+          "character dance videos for advertising",
+          "AI mascot animation services"
+        ],
+        "alici_mapping": {
+          "core_feature": "角色动画生成",
+          "use_cases": ["品牌营销", "产品演示", "社交媒体内容"],
+          "target_audience": "营销人员、品牌经理"
+        }
+      },
+      {
+        "pattern_id": 2,
+        "pattern_name": "Tool/Feature Tutorial",
+        "keywords": [
+          "how to make AI character dance videos",
+          "create animated character videos",
+          "AI character animation tutorial",
+          "make dancing mascot videos",
+          "animate characters with AI",
+          "AI character lip sync and dance",
+          "character animation software guide",
+          "create character dance animations",
+          "AI video character animation tools",
+          "step by step character animation AI"
+        ],
+        "alici_mapping": {
+          "core_feature": "文本到视频 + 角色动画",
+          "use_cases": ["教程内容", "功能展示", "用户教育"],
+          "target_audience": "内容创作者、初学者"
+        }
+      },
+      {
+        "pattern_id": 8,
+        "pattern_name": "Platform-Specific Content",
+        "keywords": [
+          "AI character dance videos for TikTok",
+          "Instagram character animation ideas",
+          "YouTube animated character intros",
+          "TikTok mascot dance trends",
+          "social media character videos",
+          "viral character dance content",
+          "short form character animations",
+          "platform optimized character videos",
+          "Instagram Reels character animation",
+          "LinkedIn animated explainer characters"
+        ],
+        "alici_mapping": {
+          "core_feature": "多平台格式导出",
+          "use_cases": ["社交媒体分发", "病毒营销", "平台适配"],
+          "target_audience": "社媒运营、内容策略师"
+        }
+      }
+    ]
+  },
+  "tier_2_keywords": {
+    "description": "中等商业价值 - 效率与质量诉求",
+    "patterns": [
+      {
+        "pattern_id": 3,
+        "pattern_name": "Workflow Optimization",
+        "keywords": [
+          "bulk create character animations",
+          "automate character video production",
+          "fast AI character animation",
+          "scale character content creation",
+          "batch generate dance videos",
+          "efficient mascot animation workflow",
+          "quick character video maker",
+          "AI character automation tools"
+        ],
+        "alici_mapping": {
+          "core_feature": "批量生成 + 模板系统",
+          "use_cases": ["营销自动化", "大规模内容生产"],
+          "target_audience": "企业营销团队、代理商"
+        }
+      },
+      {
+        "pattern_id": 4,
+        "pattern_name": "Quality/Best Practices",
+        "keywords": [
+          "professional AI character animation",
+          "realistic character dance movements",
+          "high quality AI mascot videos",
+          "natural character motion AI",
+          "smooth character animation techniques",
+          "professional grade character videos",
+          "AI animation quality standards",
+          "realistic dancing character AI"
+        ],
+        "alici_mapping": {
+          "core_feature": "高清渲染 + 动作平滑",
+          "use_cases": ["专业制作", "质量保证"],
+          "target_audience": "设计师、视频制作人"
+        }
+      }
+    ]
+  },
+  "tier_3_keywords": {
+    "description": "品牌建设 + 长尾流量",
+    "patterns": [
+      {
+        "pattern_id": 7,
+        "pattern_name": "Platform/Tool Comparison",
+        "keywords": [
+          "best AI character animation tools",
+          "AI mascot creator comparison",
+          "character dance video maker reviews",
+          "top character animation platforms",
+          "AI character video generator alternatives",
+          "compare character animation software"
+        ],
+        "alici_mapping": {
+          "core_feature": "产品定位 + 竞品优势",
+          "use_cases": ["品牌认知", "决策支持"],
+          "target_audience": "潜在客户、评估期用户"
+        }
+      },
+      {
+        "pattern_id": 6,
+        "pattern_name": "Trend Analysis/Predictions",
+        "keywords": [
+          "AI character animation trends 2026",
+          "future of animated marketing content",
+          "character video marketing trends",
+          "AI dance video innovations",
+          "next generation character animation",
+          "emerging AI mascot technologies"
+        ],
+        "alici_mapping": {
+          "core_feature": "行业洞察 + 技术领先",
+          "use_cases": ["思想领导力", "行业教育"],
+          "target_audience": "决策者、行业观察者"
+        }
+      },
+      {
+        "pattern_id": 5,
+        "pattern_name": "Business Opportunity/ROI",
+        "keywords": [
+          "make money with AI character videos",
+          "monetize character animation content",
+          "AI character video business model",
+          "sell animated mascot services",
+          "character animation client work",
+          "AI video production business"
+        ],
+        "alici_mapping": {
+          "core_feature": "商业应用场景",
+          "use_cases": ["服务变现", "业务拓展"],
+          "target_audience": "自由职业者、创业者"
+        }
+      }
+    ]
+  },
+  "phase_2_preparation": {
+    "dataforseo_calls": {
+      "keywords_data": {
+        "representative_keywords": [
+          "AI character animation for marketing",
+          "how to make AI character dance videos",
+          "AI character dance videos for TikTok",
+          "bulk create character animations",
+          "professional AI character animation",
+          "best AI character animation tools",
+          "AI character animation trends 2026",
+          "make money with AI character videos",
+          "animated mascot videos for brands",
+          "create animated character videos",
+          "Instagram character animation ideas",
+          "automate character video production",
+          "realistic character dance movements",
+          "AI mascot creator comparison",
+          "character video marketing trends",
+          "AI dance videos for social media marketing",
+          "animate characters with AI",
+          "TikTok mascot dance trends",
+          "fast AI character animation",
+          "high quality AI mascot videos",
+          "character dance video maker reviews",
+          "future of animated marketing content",
+          "monetize character animation content",
+          "character animation for product demos",
+          "AI character animation tutorial"
+        ],
+        "estimated_cost": "$0.45 (25 keywords × ~$0.018)"
+      },
+      "ai_optimization": {
+        "llm_keywords": [
+          "AI character animation",
+          "character dance videos",
+          "animated mascot creation",
+          "AI video character animation",
+          "character animation tools"
+        ],
+        "estimated_cost": "$0.30 (5 keywords × ~$0.06)",
+        "optional": true
+      },
+      "serp_analysis": {
+        "target_queries": [
+          "AI character animation for marketing",
+          "how to make AI character dance videos",
+          "best AI character animation tools",
+          "AI character animation tutorial"
+        ],
+        "estimated_cost": "$0.08 (4 queries × ~$0.02)"
+      }
+    },
+    "total_estimated_cost": "$0.53 (standard mode)"
+  }
+}

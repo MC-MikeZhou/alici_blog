@@ -1,0 +1,319 @@
+{
+  "phase": "2_dataforseo_validation",
+  "analysis_date": "2026-01-26",
+  "validation_method": "dataforseo_rest_api",
+  "seed": "The ONLY 7 Prompts You Need to Create Any AI Video",
+  "total_keywords_validated": 25,
+  "keywords": [
+    {
+      "keyword": "AI video prompts",
+      "search_volume": 590,
+      "cpc": 2.84,
+      "competition_index": "MEDIUM",
+      "tier": 2,
+      "serp_features": {
+        "ai_overview": false,
+        "featured_snippet": false,
+        "people_also_ask": true,
+        "paa_questions": [
+          "How to write AI prompts for videos?",
+          "What are some good AI video prompts?",
+          "What are some good AI prompts?",
+          "What is a good AI for making videos?"
+        ],
+        "video": true,
+        "discussions_forums": false
+      },
+      "top_competitors": [
+        {
+          "rank": 1,
+          "domain": "www.reddit.com",
+          "title": "Here is a cheat sheet for AI Video prompts : r/generativeAI",
+          "url": "https://www.reddit.com/r/generativeAI/comments/1meh53o/here_is_a_cheat_sheet_for_ai_video_prompts/"
+        },
+        {
+          "rank": 2,
+          "domain": "help.flexclip.com",
+          "title": "How to write effective text prompts to generate AI videos?",
+          "url": "https://help.flexclip.com/en/articles/10326783-how-to-write-effective-text-prompts-to-generate-ai-videos"
+        },
+        {
+          "rank": 3,
+          "domain": "travisnicholson.medium.com",
+          "title": "Best Sora Prompts for Viral Videos | by Travis Nicholson",
+          "url": "https://travisnicholson.medium.com/best-sora-prompts-for-viral-videos-074eedb80ddf"
+        },
+        {
+          "rank": 4,
+          "domain": "ltx.studio",
+          "title": "AI Video Prompt Guide: How To Write AI Video Prompts",
+          "url": "https://ltx.studio/blog/ai-video-prompt-guide"
+        },
+        {
+          "rank": 5,
+          "domain": "app.klingai.com",
+          "title": "Kling AI Text to Video | AI Video Generation from Prompts",
+          "url": "https://app.klingai.com/global/text-to-video/new"
+        }
+      ]
+    },
+    {
+      "keyword": "best AI video prompts 2026",
+      "search_volume": 0,
+      "cpc": 0,
+      "competition_index": null,
+      "tier": 4
+    },
+    {
+      "keyword": "AI video prompt engineering",
+      "search_volume": 10,
+      "cpc": 12.16,
+      "competition_index": "HIGH",
+      "tier": 4
+    },
+    {
+      "keyword": "Sora AI prompts",
+      "search_volume": 390,
+      "cpc": 4.24,
+      "competition_index": "LOW",
+      "tier": 3,
+      "serp_features": {
+        "ai_overview": false,
+        "featured_snippet": false,
+        "people_also_ask": true,
+        "paa_questions": [
+          "What are some really good AI prompts?",
+          "Can Sora AI generate anything?",
+          "Can you try Sora AI for free?",
+          "Is Sora AI restricted?"
+        ],
+        "video": true,
+        "discussions_forums": false
+      },
+      "top_competitors": [
+        {
+          "rank": 1,
+          "domain": "travisnicholson.medium.com",
+          "title": "Best Sora Prompts for Viral Videos | by Travis Nicholson",
+          "url": "https://travisnicholson.medium.com/best-sora-prompts-for-viral-videos-074eedb80ddf"
+        },
+        {
+          "rank": 2,
+          "domain": "www.reddit.com",
+          "title": "Sora Analysis - 32 Experiments. What works, what doesn't ...",
+          "url": "https://www.reddit.com/r/OpenAI/comments/1hbed8s/sora_analysis_32_experiments_what_works_what/"
+        },
+        {
+          "rank": 3,
+          "domain": "www.soraprompting.com",
+          "title": "The Best Sora AI Prompts for Video Content Creators",
+          "url": "https://www.soraprompting.com/"
+        },
+        {
+          "rank": 4,
+          "domain": "developers.openai.com",
+          "title": "Sora 2 Prompting Guide",
+          "url": "https://developers.openai.com/cookbook/examples/sora/sora2_prompting_guide/"
+        },
+        {
+          "rank": 5,
+          "domain": "community.openai.com",
+          "title": "For Sora, I made a surprisingly useful \u201dPrompt Expert\u201c in ...",
+          "url": "https://community.openai.com/t/for-sora-i-made-a-surprisingly-useful-prompt-expert-in-customgpt/1051028"
+        }
+      ]
+    },
+    {
+      "keyword": "ChatGPT prompts for video creation",
+      "search_volume": 0,
+      "cpc": 0,
+      "competition_index": null,
+      "tier": 4
+    },
+    {
+      "keyword": "text to video AI prompts",
+      "search_volume": 10,
+      "cpc": 1.4,
+      "competition_index": "LOW",
+      "tier": 4
+    },
+    {
+      "keyword": "how to write prompts for AI videos",
+      "search_volume": 0,
+      "cpc": 0,
+      "competition_index": null,
+      "tier": 4
+    },
+    {
+      "keyword": "AI video prompt examples",
+      "search_volume": 110,
+      "cpc": 3.64,
+      "competition_index": "LOW",
+      "tier": 3,
+      "serp_features": {
+        "ai_overview": true,
+        "featured_snippet": false,
+        "people_also_ask": true,
+        "paa_questions": [
+          "How to write a video AI prompt?",
+          "What are some good AI prompts?",
+          "How to get AI prompt from video?",
+          "How to write a good Veo 3 prompt?"
+        ],
+        "video": true,
+        "discussions_forums": true
+      },
+      "top_competitors": [
+        {
+          "rank": 1,
+          "domain": "www.reddit.com",
+          "title": "AI Video Prompt Writing: Structured Templates and ...",
+          "url": "https://www.reddit.com/r/StableDiffusion/comments/1j4yhlb/ai_video_prompt_writing_structured_templates_and/"
+        },
+        {
+          "rank": 2,
+          "domain": "help.flexclip.com",
+          "title": "How to write effective text prompts to generate AI videos?",
+          "url": "https://help.flexclip.com/en/articles/10326783-how-to-write-effective-text-prompts-to-generate-ai-videos"
+        },
+        {
+          "rank": 3,
+          "domain": "ltx.studio",
+          "title": "AI Video Prompt Guide: How To Write AI Video Prompts",
+          "url": "https://ltx.studio/blog/ai-video-prompt-guide"
+        },
+        {
+          "rank": 4,
+          "domain": "www.powtoon.com",
+          "title": "Veo 3 Video Prompt Examples and Best Practices",
+          "url": "https://www.powtoon.com/blog/veo-3-video-prompt-examples/"
+        },
+        {
+          "rank": 5,
+          "domain": "www.cyberlink.com",
+          "title": "20 Ready-to-Use AI Video Prompts to Create Stunning ...",
+          "url": "https://www.cyberlink.com/blog/trending-topics/5062/best-ai-video-prompts?srsltid=AfmBOoryG5DZ6NlOc3GNWOiv_rfmO6rLBPDr8BkaW4dBztUNzPmM5QWk"
+        }
+      ]
+    },
+    {
+      "keyword": "AI video prompt templates",
+      "search_volume": 0,
+      "cpc": 0,
+      "competition_index": null,
+      "tier": 4
+    },
+    {
+      "keyword": "AI video generation prompts",
+      "search_volume": 30,
+      "cpc": 0,
+      "competition_index": "LOW",
+      "tier": 4
+    },
+    {
+      "keyword": "AI video prompts for social media",
+      "search_volume": 0,
+      "cpc": 0,
+      "competition_index": null,
+      "tier": 4
+    },
+    {
+      "keyword": "AI video prompts for YouTube",
+      "search_volume": 0,
+      "cpc": 0,
+      "competition_index": null,
+      "tier": 4
+    },
+    {
+      "keyword": "AI video prompts for TikTok",
+      "search_volume": 0,
+      "cpc": 0,
+      "competition_index": null,
+      "tier": 4
+    },
+    {
+      "keyword": "AI video prompts for Instagram",
+      "search_volume": 0,
+      "cpc": 0,
+      "competition_index": null,
+      "tier": 4
+    },
+    {
+      "keyword": "AI video prompts for ads",
+      "search_volume": 0,
+      "cpc": 0,
+      "competition_index": null,
+      "tier": 4
+    },
+    {
+      "keyword": "AI animation prompts",
+      "search_volume": 20,
+      "cpc": 1.95,
+      "competition_index": "LOW",
+      "tier": 4
+    },
+    {
+      "keyword": "image to video AI prompts",
+      "search_volume": 110,
+      "cpc": 2.21,
+      "competition_index": "MEDIUM",
+      "tier": 3
+    },
+    {
+      "keyword": "Runway Gen-3 prompts",
+      "search_volume": 10,
+      "cpc": 2.21,
+      "competition_index": "HIGH",
+      "tier": 4
+    },
+    {
+      "keyword": "AI video prompts 2026",
+      "search_volume": 0,
+      "cpc": 0,
+      "competition_index": null,
+      "tier": 4
+    },
+    {
+      "keyword": "best prompts for AI video generators",
+      "search_volume": 0,
+      "cpc": 0,
+      "competition_index": null,
+      "tier": 4
+    },
+    {
+      "keyword": "AI video prompt guide",
+      "search_volume": 10,
+      "cpc": 4.42,
+      "competition_index": "LOW",
+      "tier": 4
+    },
+    {
+      "keyword": "free AI video prompts",
+      "search_volume": 30,
+      "cpc": 1.72,
+      "competition_index": "MEDIUM",
+      "tier": 4
+    },
+    {
+      "keyword": "AI video prompts for beginners",
+      "search_volume": 0,
+      "cpc": 0,
+      "competition_index": null,
+      "tier": 4
+    },
+    {
+      "keyword": "AI video marketing prompts",
+      "search_volume": 0,
+      "cpc": 0,
+      "competition_index": null,
+      "tier": 4
+    },
+    {
+      "keyword": "AI product video prompts",
+      "search_volume": 0,
+      "cpc": 0,
+      "competition_index": null,
+      "tier": 4
+    }
+  ]
+}

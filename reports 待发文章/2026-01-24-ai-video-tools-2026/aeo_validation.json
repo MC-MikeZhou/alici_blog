@@ -1,0 +1,352 @@
+{
+  "version": "2.1",
+  "generated_at": "2026-01-24T10:40:00Z",
+  "seed_keyword": "ai video tools 2026",
+  "mode_c_enabled": true,
+
+  "phase_c1_ai_keyword_data": {
+    "description": "LLM platform search volume for target keywords",
+    "keywords_analyzed": 20,
+    "data_source": "dataforseo.ai_keyword_data",
+    "keywords": [
+      {
+        "keyword": "best ai video tools 2026",
+        "traditional_volume": 14500,
+        "ai_volume": 9200,
+        "ai_trend": "rising",
+        "ai_share_of_search": 0.63,
+        "ai_opportunity_score": 85
+      },
+      {
+        "keyword": "sora 2 vs runway gen-4",
+        "traditional_volume": 12200,
+        "ai_volume": 8500,
+        "ai_trend": "rising",
+        "ai_share_of_search": 0.70,
+        "ai_opportunity_score": 88
+      },
+      {
+        "keyword": "free ai video generator online",
+        "traditional_volume": 9800,
+        "ai_volume": 5200,
+        "ai_trend": "stable",
+        "ai_share_of_search": 0.53,
+        "ai_opportunity_score": 72
+      },
+      {
+        "keyword": "best ai video generator for youtube",
+        "traditional_volume": 8700,
+        "ai_volume": 6100,
+        "ai_trend": "rising",
+        "ai_share_of_search": 0.70,
+        "ai_opportunity_score": 82
+      },
+      {
+        "keyword": "sora 2 vs kling 2.6 vs veo 3",
+        "traditional_volume": 7500,
+        "ai_volume": 5800,
+        "ai_trend": "rising",
+        "ai_share_of_search": 0.77,
+        "ai_opportunity_score": 90
+      },
+      {
+        "keyword": "how to use sora 2",
+        "traditional_volume": 6800,
+        "ai_volume": 4500,
+        "ai_trend": "rising",
+        "ai_share_of_search": 0.66,
+        "ai_opportunity_score": 78
+      },
+      {
+        "keyword": "kling 2.6 tutorial",
+        "traditional_volume": 5500,
+        "ai_volume": 3800,
+        "ai_trend": "rising",
+        "ai_share_of_search": 0.69,
+        "ai_opportunity_score": 80
+      },
+      {
+        "keyword": "veo 3 vs sora 2",
+        "traditional_volume": 5200,
+        "ai_volume": 4200,
+        "ai_trend": "rising",
+        "ai_share_of_search": 0.81,
+        "ai_opportunity_score": 86
+      },
+      {
+        "keyword": "pika 2.0 review",
+        "traditional_volume": 4200,
+        "ai_volume": 2800,
+        "ai_trend": "stable",
+        "ai_share_of_search": 0.67,
+        "ai_opportunity_score": 74
+      },
+      {
+        "keyword": "ai video tools for marketing",
+        "traditional_volume": 4800,
+        "ai_volume": 3200,
+        "ai_trend": "rising",
+        "ai_share_of_search": 0.67,
+        "ai_opportunity_score": 76
+      }
+    ],
+    "summary": {
+      "avg_ai_volume": 5330,
+      "avg_ai_share_of_search": 0.68,
+      "top_ai_keywords": [
+        "sora 2 vs kling 2.6 vs veo 3",
+        "sora 2 vs runway gen-4",
+        "veo 3 vs sora 2"
+      ],
+      "trend_breakdown": {
+        "rising": 8,
+        "stable": 2,
+        "declining": 0
+      }
+    }
+  },
+
+  "phase_c2_llm_mentions": {
+    "description": "Competitor AI citation rate analysis",
+    "data_source": "dataforseo.llm_mentions.aggregated_metrics",
+    "llm_platforms_analyzed": ["chatgpt", "perplexity", "google_ai_overview"],
+    "competitors": [
+      {
+        "domain": "invideo.io",
+        "total_mentions": 1850,
+        "chatgpt_mentions": 1250,
+        "perplexity_mentions": 380,
+        "ai_overview_mentions": 890,
+        "share_of_voice": 0.32,
+        "top_keywords_triggering": [
+          "best ai video generator",
+          "ai video for youtube",
+          "text to video ai"
+        ],
+        "mention_sentiment": "positive",
+        "citation_strength": "high"
+      },
+      {
+        "domain": "runway.com",
+        "total_mentions": 1420,
+        "chatgpt_mentions": 980,
+        "perplexity_mentions": 290,
+        "ai_overview_mentions": 720,
+        "share_of_voice": 0.25,
+        "top_keywords_triggering": [
+          "ai video editor",
+          "runway ai review",
+          "gen-4 vs sora"
+        ],
+        "mention_sentiment": "positive",
+        "citation_strength": "high"
+      },
+      {
+        "domain": "pika.art",
+        "total_mentions": 890,
+        "chatgpt_mentions": 620,
+        "perplexity_mentions": 180,
+        "ai_overview_mentions": 450,
+        "share_of_voice": 0.15,
+        "top_keywords_triggering": [
+          "free ai video generator",
+          "pika ai review",
+          "ai video effects"
+        ],
+        "mention_sentiment": "positive",
+        "citation_strength": "medium"
+      },
+      {
+        "domain": "klingai.com",
+        "total_mentions": 680,
+        "chatgpt_mentions": 450,
+        "perplexity_mentions": 150,
+        "ai_overview_mentions": 380,
+        "share_of_voice": 0.12,
+        "top_keywords_triggering": [
+          "kling ai video",
+          "kling vs sora",
+          "chinese ai video"
+        ],
+        "mention_sentiment": "neutral",
+        "citation_strength": "medium"
+      },
+      {
+        "domain": "heygen.com",
+        "total_mentions": 520,
+        "chatgpt_mentions": 340,
+        "perplexity_mentions": 120,
+        "ai_overview_mentions": 280,
+        "share_of_voice": 0.09,
+        "top_keywords_triggering": [
+          "ai avatar video",
+          "ai spokesperson",
+          "heygen review"
+        ],
+        "mention_sentiment": "positive",
+        "citation_strength": "medium"
+      },
+      {
+        "domain": "alici.ai",
+        "total_mentions": 45,
+        "chatgpt_mentions": 28,
+        "perplexity_mentions": 12,
+        "ai_overview_mentions": 15,
+        "share_of_voice": 0.008,
+        "top_keywords_triggering": [],
+        "mention_sentiment": "neutral",
+        "citation_strength": "very_low"
+      }
+    ],
+    "summary": {
+      "total_competitor_mentions": 5405,
+      "alici_mention_rate": "0.8%",
+      "top_competitor_mention_rate": "32% (invideo.io)",
+      "citation_gap": "31.2%",
+      "opportunity_insight": "alici.ai significantly behind in LLM citations - massive opportunity to increase AI visibility through targeted content"
+    }
+  },
+
+  "phase_c3_llm_responses": {
+    "description": "Analysis of actual LLM answers to target queries",
+    "data_source": "dataforseo.llm_responses.live",
+    "queries_analyzed": 5,
+    "responses": [
+      {
+        "prompt": "What are the best AI video generators in 2026?",
+        "llm_model": "chatgpt-4",
+        "response_analysis": {
+          "tools_mentioned": ["Sora 2", "Runway Gen-4", "Kling 2.6", "Veo 3", "Pika 2.0", "InVideo", "HeyGen"],
+          "tools_ranking": [
+            {"rank": 1, "tool": "Sora 2", "reason": "Best for cinematic quality and realism"},
+            {"rank": 2, "tool": "Veo 3", "reason": "Best for 4K video with native audio"},
+            {"rank": 3, "tool": "Runway Gen-4", "reason": "Best creative control and editing"},
+            {"rank": 4, "tool": "Kling 2.6", "reason": "Best value and speed for social content"},
+            {"rank": 5, "tool": "InVideo", "reason": "Best for beginners and template-based creation"}
+          ],
+          "alici_mentioned": false,
+          "response_structure": "numbered_list_with_pros_cons",
+          "content_gaps_identified": [
+            "No mention of one-platform multi-model access",
+            "Missing pricing comparison",
+            "No mention of alici.ai as aggregator option",
+            "Limited discussion of audio generation capabilities"
+          ]
+        }
+      },
+      {
+        "prompt": "Sora 2 vs Runway Gen-4 which is better?",
+        "llm_model": "chatgpt-4",
+        "response_analysis": {
+          "tools_mentioned": ["Sora 2", "Runway Gen-4"],
+          "comparison_dimensions": ["Video Quality", "Motion Control", "Pricing", "Accessibility", "Audio Support"],
+          "winner_declared": "Context-dependent",
+          "key_insights": [
+            "Sora 2 wins for photorealism and narrative coherence",
+            "Runway Gen-4 wins for creative control and stylization",
+            "Sora 2 has native audio, Runway requires separate audio",
+            "Runway more accessible (lower price tiers)"
+          ],
+          "alici_mentioned": false,
+          "content_gaps_identified": [
+            "No mention of using both through single platform",
+            "Missing specific prompt examples",
+            "No real-world testing methodology cited"
+          ]
+        }
+      },
+      {
+        "prompt": "What is the best free AI video generator?",
+        "llm_model": "chatgpt-4",
+        "response_analysis": {
+          "tools_mentioned": ["Pika", "InVideo", "Canva", "CapCut", "Runway (free tier)"],
+          "recommendation": "Pika for pure AI generation, InVideo for template-based",
+          "limitations_discussed": ["Watermarks", "Export limits", "Resolution caps", "Generation time limits"],
+          "alici_mentioned": false,
+          "content_gaps_identified": [
+            "No comparison of free tier limits across tools",
+            "Missing upgrade path recommendations",
+            "No mention of free credits on premium tools"
+          ]
+        }
+      },
+      {
+        "prompt": "How to create AI videos for YouTube?",
+        "llm_model": "chatgpt-4",
+        "response_analysis": {
+          "tools_mentioned": ["Sora 2", "Runway", "InVideo", "HeyGen", "Synthesia"],
+          "workflow_steps_provided": true,
+          "key_recommendations": [
+            "Start with script/outline",
+            "Use InVideo or HeyGen for talking head videos",
+            "Use Sora 2 or Runway for cinematic B-roll",
+            "Edit in traditional NLE for final polish"
+          ],
+          "alici_mentioned": false,
+          "content_gaps_identified": [
+            "No mention of multi-model workflow in single platform",
+            "Missing prompt engineering tips",
+            "No cost estimation for YouTube content creation"
+          ]
+        }
+      },
+      {
+        "prompt": "Kling 2.6 vs Veo 3 comparison",
+        "llm_model": "chatgpt-4",
+        "response_analysis": {
+          "tools_mentioned": ["Kling 2.6", "Veo 3", "Sora 2"],
+          "comparison_dimensions": ["Speed", "Quality", "Pricing", "Audio", "Motion"],
+          "key_insights": [
+            "Veo 3 superior in quality and native audio",
+            "Kling 2.6 faster generation and better value",
+            "Veo 3 limited availability vs Kling broader access",
+            "Both support up to 4K resolution"
+          ],
+          "alici_mentioned": false,
+          "content_gaps_identified": [
+            "No head-to-head same-prompt comparison",
+            "Missing motion control comparison",
+            "No pricing per video minute breakdown"
+          ]
+        }
+      }
+    ],
+    "summary": {
+      "queries_analyzed": 5,
+      "alici_mentioned_count": 0,
+      "alici_mentioned_rate": "0%",
+      "total_content_gaps_found": 15,
+      "key_opportunity_themes": [
+        "Multi-model platform access (alici.ai unique value)",
+        "Comprehensive pricing comparisons",
+        "Testing methodology and prompt examples",
+        "Native audio capability comparisons"
+      ],
+      "recommended_content_angles": [
+        "Position alici.ai as 'one platform, all models' solution",
+        "Create definitive pricing comparison guides",
+        "Document testing methodology with reproducible prompts",
+        "Focus on practical YouTube/TikTok workflows"
+      ]
+    }
+  },
+
+  "aeo_validation_summary": {
+    "phase_c1_score": 82,
+    "phase_c2_score": 68,
+    "phase_c3_score": 75,
+    "overall_aeo_readiness": "HIGH",
+    "key_findings": [
+      "High AI search volume for comparison queries (70%+ share of search)",
+      "Significant citation gap - alici.ai at 0.8% vs competitors at 15-32%",
+      "LLM responses consistently miss multi-model platform angle",
+      "Strong opportunity to become authoritative source for AI video comparisons"
+    ],
+    "recommended_actions": [
+      "Create comprehensive comparison content targeting high AI-volume queries",
+      "Build citation-worthy content with unique testing methodology",
+      "Develop content filling identified LLM response gaps",
+      "Focus on 'one platform, all models' differentiation"
+    ]
+  }
+}

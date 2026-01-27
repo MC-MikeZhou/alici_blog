@@ -1,0 +1,77 @@
+{
+  "mission": {
+    "seed": "The ONLY 7 Prompts You Need to Create Any AI Video",
+    "seed_type": "keyword_concept",
+    "seed_source": "title_inspiration",
+    "created_at": "2026-01-26",
+    "mode": "seed_mode_v2.2"
+  },
+  "core_keywords": [
+    "AI video prompts",
+    "create AI video",
+    "AI video generation",
+    "prompt engineering video"
+  ],
+  "target_audience": {
+    "primary": "content_creators",
+    "secondary": ["marketers", "small_business_owners", "video_producers"],
+    "skill_level": "beginner_to_intermediate"
+  },
+  "content_goal": {
+    "type": "tutorial_guide",
+    "value_proposition": "simplify_complex_process",
+    "outcome": "actionable_prompts_for_immediate_use"
+  },
+  "competitors": [
+    {
+      "name": "invideo.io",
+      "url": "https://invideo.io/blog",
+      "positioning": "AI-powered video creation platform",
+      "content_strategy": "how-to_focused_with_efficiency_narrative",
+      "articles_analyzed": 20
+    },
+    {
+      "name": "higgsfield.ai",
+      "url": "https://higgsfield.ai/blog",
+      "positioning": "multi-model AI video aggregator",
+      "content_strategy": "monetization_enablement_and_trends",
+      "articles_analyzed": 20
+    },
+    {
+      "name": "freepik.com",
+      "url": "https://freepik.com/blog",
+      "positioning": "multi-model creative platform",
+      "content_strategy": "rapid_feature_announcements_and_tutorials",
+      "articles_analyzed": 25
+    },
+    {
+      "name": "runway.com",
+      "url": "https://runwayml.com/blog",
+      "positioning": "enterprise-grade AI video for Hollywood",
+      "content_strategy": "partnership_announcements_and_prestige",
+      "articles_analyzed": 30
+    }
+  ],
+  "validation_config": {
+    "api_provider": "dataforseo",
+    "depth": "deep_mode",
+    "aeo_validation": true,
+    "tier_1_threshold": {
+      "volume": 1000,
+      "cpc": 3.0
+    },
+    "tier_2_threshold": {
+      "volume": 500,
+      "cpc": 2.0
+    },
+    "tier_3_threshold": {
+      "volume": 100,
+      "cpc": 0
+    }
+  },
+  "output_target": {
+    "final_directions": 2,
+    "intermediate_directions": 10,
+    "keyword_pool": 60
+  }
+}

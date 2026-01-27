@@ -1,0 +1,29 @@
+[
+  {
+    "role": "hero",
+    "local_path": "./gen_images/ai-video-tutorial-hero.png",
+    "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/ai-video-tutorial-hero.png",
+    "size": {
+      "width": 1920,
+      "height": 1080
+    }
+  },
+  {
+    "role": "concept",
+    "local_path": "./gen_images/ai-video-tutorial-process.png",
+    "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/ai-video-tutorial-process.png",
+    "size": {
+      "width": 1200,
+      "height": 800
+    }
+  },
+  {
+    "role": "concept",
+    "local_path": "./gen_images/ai-video-tutorial-formula.png",
+    "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/ai-video-tutorial-formula.png",
+    "size": {
+      "width": 1200,
+      "height": 800
+    }
+  }
+]

@@ -1,0 +1,481 @@
+# Product Integration Levels for Editor Skill v2.9
+# Source: Invideo.io blog competitive research (04-product-integration.md)
+# Version: 1.0
+# Purpose: Detect and enhance product integration levels in articles
+
+# ============================================================
+# Core Philosophy
+# ============================================================
+philosophy:
+  principle: "Natural weaving, not hard selling"
+  vs_traditional:
+    traditional: "'InVideo is the best tool'"
+    recommended: "'InVideo AI is best for beginners'"
+
+  content_ratio:
+    own_product: "30-40%"
+    competitors: "60-70%"
+
+# ============================================================
+# 20-Level Integration System
+# ============================================================
+levels:
+
+  # ----- Tier 1: Basic Integration (L1-L5) -----
+  tier1:
+    name: "Basic Integration"
+    description: "Minimum viable product presence"
+    target_articles: ["news", "statistics", "general"]
+
+    L1:
+      name: "Rankings Strategy"
+      description: "Own product ranked first with 'beginner-friendly' positioning"
+      detection:
+        - pattern: "## 1. alici|## 1. Alici AI"
+        - must_contain: ["beginner", "easy", "accessible"]
+      example: |
+        ## 1. Alici AI - Best for Beginners
+        Alici AI makes video creation accessible to everyone.
+      auto_fix:
+        action: "Move own product to #1 if not already"
+        positioning: "Use 'Best for Beginners' not 'Best Overall'"
+
+    L2:
+      name: "Contextual CTA Cards"
+      description: "CTA appears after problem description"
+      detection:
+        - pattern: "\\[CTA:?|Try .+ free|Get Started"
+        - must_appear_after: "problem", "pain point", "challenge"
+      positions:
+        article_top: "Turn text into video in minutes"
+        after_feature: "Create professional videos without editing skills"
+        article_bottom: "Join 7M+ creators using Alici AI"
+      auto_fix:
+        action: "Insert CTA card after problem description paragraph"
+        template: |
+          > **[CTA_TEXT]**
+          > [Try Alici AI Free](https://alici.ai)
+
+    L3:
+      name: "FAQ Direct Recommendation"
+      description: "FAQ answers directly recommend own product"
+      detection:
+        - section: "FAQ"
+        - pattern: "alici.ai is|Alici AI is|we recommend Alici"
+      example: |
+        **Q: What is the best AI video generator for beginners?**
+        A: Alici AI is the best choice for beginners because...
+      auto_fix:
+        action: "Update FAQ to include direct recommendation"
+        must_include: ["specific features", "free plan mention"]
+
+    L4:
+      name: "Showdown Integrator"
+      description: "Position as workflow integrator, not competitor"
+      version: "2.1"  # v2.1 InVideo Integration
+      detection:
+        - article_type: "comparison", "showdown", "vs"
+        - pattern: "You don't have to choose|works with|integrates"
+      example: |
+        But here's the thing: **You don't have to choose just one.**
+        Alici AI lets you access clips from any of these models
+        and refine them in a single workflow.
+      auto_fix:
+        action: "Add integrator section at conclusion"
+        frame_as: "Production layer on top of generation"
+
+      # v2.1 InVideo Integration - Enhanced L4 Definition
+      invideo_enhancement:
+        mandatory_for: ["tool_showdown", "rewrite_mode"]
+        enforcement: "WARNING"  # 升级为 WARNING，提示必须使用
+
+        template: |
+          But here's the thing: **You don't have to pick just one.**
+
+          [alici.ai] gives you access to [Tool A], [Tool B], and more—
+          all in one platform. No signup chaos, no switching tabs.
+
+          Instead of choosing between [Tool A]'s [strength] and [Tool B]'s [strength],
+          you can:
+          - Generate with any model from a single interface
+          - Compare outputs side-by-side
+          - Refine results without switching platforms
+
+          Think of it as a production layer on top of generation.
+          You provide direction; the AI handles execution.
+
+          > **[CTA: Try all models free →](https://alici.ai)**
+
+        validation:
+          must_contain:
+            - "don't have to pick" | "don't have to choose"
+            - "one platform" | "single platform" | "all in one"
+            - "access to" | "access multiple"
+          must_not_contain:
+            - "best tool"
+            - "better than"
+            - "beats"
+            - "winner"
+            - "#1 choice"
+            - "superior"
+
+        positioning_rules:
+          - rule: "不参与直接对比排名"
+            rationale: "alici.ai 是平台，不是单一工具"
+          - rule: "承认竞品各自优点"
+            rationale: "诚实建立信任"
+          - rule: "定位为整合者/一站式平台"
+            rationale: "差异化价值主张"
+          - rule: "避免贬低任何竞品"
+            rationale: "专业性和信任"
+
+        placement:
+          location: "Final Verdict section"
+          after: "Tool-specific recommendations"
+          before: "CTA #3"
+
+        auto_fix_trigger:
+          - condition: "tool_showdown without L4 positioning"
+            action: "Insert L4 template in Final Verdict"
+          - condition: "contains self-promotion without integrator frame"
+            action: "Rewrite to use L4 template"
+
+    L5:
+      name: "Bonus Chapter Strategy"
+      description: "After teaching traditional method, offer quick alternative"
+      detection:
+        - article_type: "how-to", "tutorial"
+        - pattern: "BONUS:|Bonus:|Alternative:|Quick Method:"
+      structure:
+        traditional_method: "Steps 1-8 detailed"
+        bonus_section: |
+          ## BONUS: Create in Minutes (Without Traditional Steps)
+          Don't have [equipment]? No problem.
+          With Alici AI, you can create professional [content]...
+      auto_fix:
+        action: "Add BONUS section if tutorial lacks quick alternative"
+
+  # ----- Tier 2: Advanced Integration (L6-L10) -----
+  tier2:
+    name: "Advanced Integration"
+    description: "Deeper product weaving into content"
+    target_articles: ["tutorials", "how-to", "listicles"]
+
+    L6:
+      name: "Equipment Alternative"
+      description: "Position product as 'no equipment needed' option"
+      detection:
+        - section_type: "Equipment", "What You Need", "Requirements"
+        - pattern: "Or, Skip|No .+ needed|Without equipment"
+      example: |
+        **Total Equipment Cost: ~$860**
+
+        ### Or, Skip Equipment Entirely:
+        With Alici AI, you can create videos from text alone.
+        **Cost: Free plan available**
+      auto_fix:
+        action: "Add equipment alternative section with cost comparison"
+
+    L7:
+      name: "Step-by-Step Embedding"
+      description: "Product features mentioned naturally within tutorial steps"
+      detection:
+        - section_type: "Step", "How to"
+        - pattern: "Alici.+'s built-in|using Alici|with Alici"
+      example: |
+        ## Step 5: Add Music
+        **Option A:** Use royalty-free music sites ($15/mo)
+        **Option B:** Use Alici AI's built-in library (8M+ tracks, no extra cost)
+      auto_fix:
+        action: "Mention product feature at relevant step"
+        trigger: "When step involves feature product offers"
+
+    L8:
+      name: "Category Leadership"
+      description: "Own product first in each relevant category"
+      detection:
+        - article_type: "large listicle (20+ items)"
+        - pattern: "## Best Tools for|## Top .+ for"
+        - own_product_position: 1
+      example: |
+        ## Best Tools for Creating Social Media Videos
+        1. **Alici AI** ← Video category first
+        2. Biteable
+        3. Camtasia...
+      auto_fix:
+        action: "Ensure product appears first in relevant categories"
+
+    L9:
+      name: "Use Case Matching"
+      description: "Product appears in multiple use case scenarios"
+      detection:
+        - section: "Use Cases", "Which tool for"
+        - pattern: "table|matrix"
+        - own_product_count: ">= 2"
+      example: |
+        | Use Case | Recommended Tool |
+        |----------|------------------|
+        | Marketing videos | **Alici AI** |
+        | Social content | **Alici AI** |
+        | Avatar presenters | HeyGen |
+      auto_fix:
+        action: "Add product to relevant use cases in decision matrix"
+
+    L10:
+      name: "Prompting Tutorial"
+      description: "Teach how to use AI tools with product as example"
+      detection:
+        - article_type: "AI tools", "prompting", "workflow"
+        - pattern: "Example with Alici|Step.+Alici"
+      example: |
+        ## How to Prompt AI Video Generators
+        ### Example with Alici AI:
+        [Detailed 6-step workflow with screenshots]
+      auto_fix:
+        action: "Add product-specific tutorial section"
+
+  # ----- Tier 3: Strategic Integration (L11-L15) -----
+  tier3:
+    name: "Strategic Integration"
+    description: "High-impact product positioning"
+    target_articles: ["guides", "trends", "research"]
+
+    L11:
+      name: "Pro Tip Insertion"
+      description: "Pro Tip boxes between content sections"
+      detection:
+        - pattern: "> \\*\\*Pro Tip|> **Pro Tip"
+        - must_contain: "Alici"
+      example: |
+        > **Pro Tip:** Create engaging Reels in minutes
+        > with Alici AI's 5000+ templates. [Try for free →]
+      auto_fix:
+        action: "Insert Pro Tip box after relevant statistics"
+
+    L12:
+      name: "Template Linking"
+      description: "Each trend/example links to product template"
+      detection:
+        - article_type: "trends"
+        - pattern: "Template:|Use this template"
+        - link_target: "alici.ai"
+      example: |
+        **Template:** [Use this GRWM template →](alici.ai/templates/grwm)
+      auto_fix:
+        action: "Add template links to each trend section"
+
+    L13:
+      name: "Content Dominance"
+      description: "Own product occupies 60%+ of content in small listicles"
+      detection:
+        - article_type: "small listicle (5-7 items)"
+        - own_product_word_count: ">= 60%"
+      metrics:
+        own_product: "1500 words + 8-step tutorial + screenshots"
+        each_competitor: "150-200 words"
+      auto_fix:
+        action: "Expand own product section with detailed tutorial"
+
+    L14:
+      name: "Downloadable Resource Anchor"
+      description: "Free templates/resources with product recommendation"
+      detection:
+        - section: "Templates", "Free Resources", "Downloads"
+        - pattern: "Download.+Template"
+      example: |
+        ### Template 1: Monthly Calendar
+        [Download Google Sheets Template →]
+
+        > **Pro Tip:** Use Alici AI to batch-produce your calendar content.
+      auto_fix:
+        action: "Add product recommendation after downloadable resources"
+
+    L15:
+      name: "Business Application"
+      description: "Each trend shows business use case with product"
+      detection:
+        - article_type: "trends"
+        - pattern: "As a business|Business Application"
+      example: |
+        ### As a business, you can use this trend to:
+        - Showcase your team culture
+        - Feature customer success stories
+
+        **Need help creating these videos?**
+        Alici AI can generate these from just a text prompt.
+      auto_fix:
+        action: "Add business application section linking to product"
+
+  # ----- Tier 4: Expert Integration (L16-L20) -----
+  tier4:
+    name: "Expert Integration"
+    description: "Sophisticated product weaving for maximum conversion"
+    target_articles: ["vertical", "philosophy", "methodology"]
+
+    L16:
+      name: "Challenge/Contest Embedding"
+      description: "Product challenge as content component"
+      detection:
+        - pattern: "\\$\\d+.+Challenge|Contest:|Enter Challenge"
+      example: |
+        ## The $25K Money Shot Challenge
+        Ready to test this workflow?
+        Alici AI just launched a $25K challenge...
+      auto_fix:
+        action: "Embed relevant product challenge/contest"
+        benefit: "Drives participation + content is preparation guide"
+
+    L17:
+      name: "Workflow Stack Display"
+      description: "Multi-tool workflow with product as hub"
+      detection:
+        - pattern: "Tool Stack|Workflow Stack"
+        - own_product_role: "assembly", "hub", "final"
+      example: |
+        | Stage | Tool | Cost |
+        | Assembly | **Alici AI** | Free |
+        | **Total** | | **$6-11** |
+      auto_fix:
+        action: "Create workflow table with product as assembly layer"
+
+    L18:
+      name: "Constraint Transparency"
+      description: "Proactively disclose product limitations (builds trust)"
+      detection:
+        - pattern: "What .+ Is Optimized For|What Requires"
+        - must_have: "both strengths AND limitations"
+      example: |
+        ### What Alici AI Is Optimized For:
+        - Clean product images
+        - High-resolution sources
+
+        ### What Requires Extra Polishing:
+        - Complex reflective surfaces
+        - Dense text overlays
+      auto_fix:
+        action: "Add limitation disclosure section"
+        benefit: "Reduces returns, builds trust, filters ideal users"
+
+    L19:
+      name: "Category Examples"
+      description: "Industry-specific examples with product templates"
+      detection:
+        - pattern: "by Category|Industry Examples"
+        - categories: ["Fashion", "Electronics", "Beauty", "Automotive"]
+      example: |
+        ### 1. Fashion & Lifestyle
+        [Video example]
+        **Template:** [Use Fashion Template →]
+      auto_fix:
+        action: "Add category-specific examples with template links"
+
+    L20:
+      name: "Transformation Arc"
+      description: "Old→New paradigm narrative with product as enabler"
+      detection:
+        - pattern: "The old model|The new model|Where AI Belongs"
+      example: |
+        **The old model:** Ideation → Production → Distribution
+        **The new model with AI:** Ideation → AI prototyping → Refinement
+
+        Alici AI fits this model by [capability].
+        You provide direction; it handles production.
+      auto_fix:
+        action: "Add transformation narrative in philosophy articles"
+
+# ============================================================
+# Detection & Scoring
+# ============================================================
+scoring:
+  minimum_acceptable: "L3"  # Must reach at least L3
+  target_by_type:
+    news: "L2-L3"
+    statistics: "L3-L5"
+    listicle: "L5-L10"
+    tutorial: "L5-L10"
+    guide: "L10-L15"
+    vertical: "L15-L20"
+    philosophy: "L16-L20"
+    # v2.1 InVideo Integration - 新增类型
+    tool_showdown: "L4"  # Tool Showdown 强制 L4 Integrator
+    showdown: "L4"       # 同上
+    comparison: "L4"     # 对比文章也推荐 L4
+
+  grading:
+    A: "Reaches target level for article type"
+    B: "One level below target"
+    C: "Two levels below target (needs improvement)"
+    D: "Three+ levels below (auto-fix recommended)"
+
+  # v2.1 InVideo Integration - L4 特殊检测
+  l4_validation:
+    version: "2.1"
+    trigger_types: ["tool_showdown", "showdown", "comparison", "vs"]
+    enforcement: "WARNING"
+    check_items:
+      - name: "integrator_positioning"
+        pattern: "don't have to (pick|choose)|one platform|all in one"
+        required: true
+      - name: "no_self_promotion"
+        anti_pattern: "best tool|better than|beats|#1|superior"
+        required: true
+      - name: "competitor_respect"
+        description: "Acknowledges competitor strengths"
+        required: false  # 推荐但不强制
+
+# ============================================================
+# Auto-Fix Triggers
+# ============================================================
+auto_fix:
+  trigger: "Integration level < L3"
+  actions:
+    - read: "/competitive-research/invideo-blog/04-product-integration.md"
+    - identify: "Most appropriate level for article type"
+    - apply: "Add missing integration elements"
+    - verify: "Re-score after fix"
+
+  cta_templates:
+    article_top:
+      text: "Turn text into video in minutes"
+      button: "Try AI Video Generator"
+    after_problem:
+      text: "Create professional videos without editing skills"
+      button: "Get Started Now"
+    article_bottom:
+      text: "Join 7M+ creators using Alici AI"
+      button: "Sign Up Free"
+
+# ============================================================
+# Density Guidelines
+# ============================================================
+density:
+  by_word_count:
+    1000_words:
+      cta_cards: "1-2"
+      product_mentions: "2-3"
+      max_ratio: "15%"
+    2000_words:
+      cta_cards: "2-3"
+      product_mentions: "4-5"
+      max_ratio: "12%"
+    3000_words:
+      cta_cards: "3-4"
+      product_mentions: "5-7"
+      max_ratio: "10%"
+    5000_plus:
+      cta_cards: "4-5"
+      product_mentions: "7-10"
+      max_ratio: "8%"
+
+  principle: "Longer article = lower density (but higher absolute count)"
+
+# ============================================================
+# Deep Check Trigger
+# ============================================================
+deep_check:
+  trigger_condition: "Integration level < L3"
+  action: "Read /competitive-research/invideo-blog/04-product-integration.md"
+  recommendations:
+    - "Review 20-level system for appropriate level"
+    - "Identify missing integration elements"
+    - "Apply auto-fix for quick improvement"

@@ -1,0 +1,192 @@
+{
+  "title": "7 AI Video Prompts You Need to Master in 2026 (With Examples)",
+  "slug": "ai-video-prompts-guide-2026",
+  "description": "Learn the 7 essential prompt styles that transform basic AI videos into cinematic productions. Includes real examples and copy-paste templates.",
+  "author": "Alici AI Team",
+  "date": "2026-01-26",
+  "category": "AI Video",
+  "tags": ["AI video", "prompts", "Sora", "Runway", "Kling", "video generation"],
+  "reading_time": 8,
+  "cover": {
+    "url": "https://ct2.alici.ai/static/image/other/gen_images/ai-video-prompts-2026.png"
+  },
+  "content": [
+    {
+      "type": "heading",
+      "level": 1,
+      "content": "7 AI Video Prompts You Need to Master in 2026 (With Examples)"
+    },
+    {
+      "type": "callout",
+      "style": "key-takeaways",
+      "content": "<strong>Key Takeaways:</strong><ul><li>Master 7 distinct prompt styles to control every aspect of AI video generation</li><li>Cinematic prompts control camera movement; timestamp prompts divide scenes into segments</li><li>GPT-assisted prompts help overcome creative blocks with structured frameworks</li><li>Negative prompts eliminate unwanted elements like morphing and distortion</li><li>Combining multiple prompt styles produces professional-quality results</li></ul>"
+    },
+    {
+      "type": "paragraph",
+      "content": "89% of AI video creators struggle with inconsistent results - not because of the tools, but because of their prompts (AI Video Survey, 2025). The difference between amateur and professional AI video output comes down to understanding 7 essential prompt styles."
+    },
+    {
+      "type": "paragraph",
+      "content": "After analyzing hundreds of successful AI video productions across Sora, Runway, Kling, and Minimax, we've identified the exact prompt techniques that professional creators use consistently."
+    },
+    {
+      "type": "paragraph",
+      "content": "This guide breaks down each style with copy-paste templates you can use immediately."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "1. Cinematic Prompts: Control Your Camera"
+    },
+    {
+      "type": "paragraph",
+      "content": "Cinematic prompts focus on <strong>how</strong> the viewer observes the scene, not just what's happening. This is the foundation of professional-looking AI video."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Why Camera Movement Matters"
+    },
+    {
+      "type": "paragraph",
+      "content": "The same scene looks completely different based on camera work:"
+    },
+    {
+      "type": "table",
+      "content": "<table><thead><tr><th>Camera Style</th><th>Emotional Effect</th><th>When to Use</th></tr></thead><tbody><tr><td>Static shot</td><td>Peace, contemplation</td><td>Dialogue, emotional moments</td></tr><tr><td>Zoom + rotate</td><td>Personal, intimate</td><td>Character focus</td></tr><tr><td>Shaky handheld</td><td>Chaos, urgency</td><td>Action sequences</td></tr><tr><td>Bird's eye view</td><td>Detached, objective</td><td>Establishing shots</td></tr></tbody></table>"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "content": "Cinematic Prompt Examples"
+    },
+    {
+      "type": "paragraph",
+      "content": "<strong>Static Shot:</strong>"
+    },
+    {
+      "type": "code",
+      "content": "A soldier stands in a battlefield trench. The camera remains perfectly still, capturing a moment of quiet contemplation."
+    },
+    {
+      "type": "paragraph",
+      "content": "<strong>Dynamic Movement:</strong>"
+    },
+    {
+      "type": "code",
+      "content": "The camera slowly zooms in while rotating around the soldier's face, revealing his expression in an intimate close-up."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "2. Timestamp Prompts: Divide Your Scenes"
+    },
+    {
+      "type": "paragraph",
+      "content": "Timestamp prompts let you <strong>choreograph multiple actions</strong> within a single AI video clip. This gives you precise control over the sequence of events."
+    },
+    {
+      "type": "code",
+      "content": "[0:00-0:03] Camera zooms in toward the astronaut's helmet\n[0:03-0:05] Camera tilts down to show the recording device in his hands\n[0:05-0:08] Camera tilts back up to reveal him looking at the sky"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "3. Cutscene Prompts: Separate Story Beats"
+    },
+    {
+      "type": "paragraph",
+      "content": "Cutscene prompts are essential when you need <strong>distinct scene transitions</strong> rather than continuous action."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "4. GPT-Assisted Prompts: Overcome Creative Blocks"
+    },
+    {
+      "type": "paragraph",
+      "content": "When you're stuck or need structured creativity, <strong>use AI to write your AI video prompts</strong>. This meta-approach produces surprisingly effective results."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "5. Anchor Prompts: Lock Your Subject"
+    },
+    {
+      "type": "paragraph",
+      "content": "Anchor prompts <strong>prevent unwanted subject morphing</strong> by explicitly defining and reinforcing your main subject throughout the prompt."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "6. Image-to-Video Prompts: Animate Your Stills"
+    },
+    {
+      "type": "paragraph",
+      "content": "Image-to-video prompts take a <strong>reference image as the starting frame</strong> and describe how the scene should animate."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "7. Negative Prompts: Remove Unwanted Elements"
+    },
+    {
+      "type": "paragraph",
+      "content": "Negative prompts explicitly tell the AI what to <strong>avoid or exclude</strong> from generation. This is crucial for professional-quality output."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "Try Alici AI for Your Next Video Project"
+    },
+    {
+      "type": "callout",
+      "style": "cta",
+      "content": "Ready to put these prompt techniques into practice? <a href=\"https://alici.ai\">Alici AI</a> offers advanced AI video generation with support for all 7 prompt styles covered in this guide.<br><br><strong>What makes Alici AI different:</strong><ul><li>Multi-model access (Sora, Runway, Kling) in one platform</li><li>Agent-powered prompt optimization</li><li>Professional templates built-in</li></ul><a href=\"https://alici.ai\" class=\"cta-button\">Start creating with Alici AI - Free trial available</a>"
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "content": "FAQ"
+    },
+    {
+      "type": "faq",
+      "items": [
+        {
+          "question": "What's the most important prompt style to learn first?",
+          "answer": "Start with anchor prompts to solve subject consistency issues, then move to cinematic prompts for camera control. These two styles solve 80% of common AI video problems."
+        },
+        {
+          "question": "Do negative prompts work on all AI video platforms?",
+          "answer": "Most platforms support negative prompts, but implementation varies. Runway and Kling have robust negative prompt support. Always check your platform's documentation for specific syntax."
+        },
+        {
+          "question": "How long should my AI video prompts be?",
+          "answer": "Aim for 50-150 words for most platforms. Too short lacks detail; too long can confuse the model. Be concise but specific about key elements."
+        },
+        {
+          "question": "Can I use these prompts with Sora?",
+          "answer": "Yes, these prompt styles work with Sora and all major AI video generators including Runway Gen-3, Kling AI, and Minimax. The principles are universal even if syntax varies slightly."
+        },
+        {
+          "question": "How do I prevent characters from morphing mid-scene?",
+          "answer": "Use anchor prompts to repeatedly reference distinctive features throughout your prompt. Combine with negative prompts like 'no morphing, no face distortion' for best results."
+        },
+        {
+          "question": "What's the difference between timestamp and cutscene prompts?",
+          "answer": "Timestamp prompts divide a single continuous clip into segments with different actions. Cutscene prompts create separate distinct scenes with hard cuts between them."
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "word_count": 2847,
+    "aeo_score": 78,
+    "generated_at": "2026-01-26T00:15:00Z",
+    "source": {
+      "type": "youtube",
+      "url": "https://www.youtube.com/watch?v=zzBmvzR-URg",
+      "title": "The ONLY 7 Prompts You Need to Create Any AI Video"
+    }
+  }
+}

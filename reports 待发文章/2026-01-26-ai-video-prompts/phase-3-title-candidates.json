@@ -1,0 +1,284 @@
+{
+  "phase": "3_title_lock",
+  "created_at": "2026-01-26",
+  "seed": "The ONLY 7 Prompts You Need to Create Any AI Video",
+  "input_directions": 2,
+  "title_formulas_used": [
+    "howto_complete",
+    "guide_template",
+    "listicle_prompt"
+  ],
+  "directions": [
+    {
+      "direction_id": 1,
+      "direction_name": "cross_tool_prompt_guide",
+      "primary_keyword": "AI video prompts",
+      "search_volume": 700,
+      "title_candidates": [
+        {
+          "title": "AI Video Prompts: Complete Guide + 20 Copy-Paste Templates [2026]",
+          "formula_match": "guide_template",
+          "validation": {
+            "has_year": true,
+            "has_number": true,
+            "includes_primary_keyword": true,
+            "keyword_position": "front",
+            "unique_vs_competitors": true,
+            "estimated_ctr": "high"
+          },
+          "strengths": [
+            "Matches 'Complete Guide + N Templates' formula",
+            "'Copy-Paste' emphasizes actionability",
+            "Year 2026 included for freshness signal",
+            "Primary keyword at front for SEO",
+            "20 templates = concrete value proposition"
+          ],
+          "weaknesses": [
+            "Slightly long (59 characters)"
+          ],
+          "recommended": true,
+          "recommendation_reason": "Best balance of SEO (keyword placement), actionability (copy-paste), and concrete value (20 templates)"
+        },
+        {
+          "title": "How to Write AI Video Prompts That Actually Work (Sora, Kling, Runway)",
+          "formula_match": "howto_complete",
+          "validation": {
+            "has_year": false,
+            "has_number": false,
+            "includes_primary_keyword": true,
+            "keyword_position": "middle",
+            "unique_vs_competitors": true,
+            "estimated_ctr": "medium-high"
+          },
+          "strengths": [
+            "'That Actually Work' creates curiosity",
+            "Tool names increase specificity",
+            "How-to format appeals to learners"
+          ],
+          "weaknesses": [
+            "Missing year (SEO freshness signal)",
+            "Missing concrete number",
+            "61 characters (slightly long)"
+          ],
+          "recommended": false
+        },
+        {
+          "title": "20 AI Video Prompts for Beginners: Free Templates + Examples",
+          "formula_match": "listicle_prompt",
+          "validation": {
+            "has_year": false,
+            "has_number": true,
+            "includes_primary_keyword": true,
+            "keyword_position": "middle",
+            "unique_vs_competitors": true,
+            "estimated_ctr": "medium"
+          },
+          "strengths": [
+            "20 = concrete number",
+            "'Beginner' clear audience",
+            "'Free' reduces friction"
+          ],
+          "weaknesses": [
+            "Missing year",
+            "Keyword position suboptimal",
+            "'Beginner' limits perceived value for advanced users"
+          ],
+          "recommended": false
+        },
+        {
+          "title": "AI Video Prompts Guide: 7 Elements Every Prompt Needs [2026]",
+          "formula_match": "guide_az",
+          "validation": {
+            "has_year": true,
+            "has_number": true,
+            "includes_primary_keyword": true,
+            "keyword_position": "front",
+            "unique_vs_competitors": true,
+            "estimated_ctr": "medium-high"
+          },
+          "strengths": [
+            "Framework-oriented (7 elements)",
+            "Year included",
+            "Keyword at front"
+          ],
+          "weaknesses": [
+            "Less actionable than 'Copy-Paste Templates'",
+            "Framework may seem theoretical vs. practical"
+          ],
+          "recommended": false
+        },
+        {
+          "title": "The Ultimate AI Video Prompt Cheat Sheet (20+ Templates)",
+          "formula_match": "howto_ultimate",
+          "validation": {
+            "has_year": false,
+            "has_number": true,
+            "includes_primary_keyword": true,
+            "keyword_position": "middle",
+            "unique_vs_competitors": true,
+            "estimated_ctr": "high"
+          },
+          "strengths": [
+            "'Cheat Sheet' highly actionable",
+            "20+ templates concrete value",
+            "'Ultimate' = comprehensive signal"
+          ],
+          "weaknesses": [
+            "Missing year",
+            "'Ultimate' may seem hyperbolic"
+          ],
+          "recommended": false
+        }
+      ],
+      "locked_title": "AI Video Prompts: Complete Guide + 20 Copy-Paste Templates [2026]",
+      "lock_rationale": "Highest validation score (4/4 criteria met), best SEO positioning (keyword at front), most actionable phrasing (Copy-Paste), concrete value (20 templates), and includes freshness signal (2026)",
+      "competitor_differentiation": {
+        "top_1_reddit": "Reddit lacks structure and authority - we provide organized guide",
+        "product_platforms": "They focus on single-tool prompts - we cover 4 tools",
+        "individual_creators": "Medium posts lack actionable templates - we provide 20 copy-paste ready"
+      }
+    },
+    {
+      "direction_id": 2,
+      "direction_name": "sora_specific_prompt_workflow",
+      "primary_keyword": "Sora AI prompts",
+      "search_volume": 500,
+      "title_candidates": [
+        {
+          "title": "Sora 2 Prompts: Complete Guide + Image-to-Video Workflow [2026]",
+          "formula_match": "guide_template",
+          "validation": {
+            "has_year": true,
+            "has_number": true,
+            "includes_primary_keyword": true,
+            "keyword_position": "front",
+            "unique_vs_competitors": true,
+            "estimated_ctr": "high"
+          },
+          "strengths": [
+            "Sora 2 = latest version signal",
+            "'Image-to-Video Workflow' = unique differentiation",
+            "Year 2026 included",
+            "Primary keyword coverage (Sora + prompts)",
+            "Workflow = actionable system vs. just examples"
+          ],
+          "weaknesses": [
+            "Slightly long (60 characters)"
+          ],
+          "recommended": true,
+          "recommendation_reason": "Unique angle (image-to-video) addresses gap in official OpenAI docs, version specificity (Sora 2), actionable system (workflow)"
+        },
+        {
+          "title": "How to Write Sora AI Prompts: 15 Templates That Work",
+          "formula_match": "howto_complete",
+          "validation": {
+            "has_year": false,
+            "has_number": true,
+            "includes_primary_keyword": true,
+            "keyword_position": "middle",
+            "unique_vs_competitors": true,
+            "estimated_ctr": "medium-high"
+          },
+          "strengths": [
+            "'That Work' = results-oriented",
+            "15 templates concrete value",
+            "How-to format"
+          ],
+          "weaknesses": [
+            "Missing year",
+            "Missing Sora 2 version signal",
+            "Less differentiated (similar to existing guides)"
+          ],
+          "recommended": false
+        },
+        {
+          "title": "Sora 2 Prompt Engineering: From Image to Video in 5 Steps",
+          "formula_match": "guide_strategy",
+          "validation": {
+            "has_year": false,
+            "has_number": true,
+            "includes_primary_keyword": true,
+            "keyword_position": "front",
+            "unique_vs_competitors": true,
+            "estimated_ctr": "medium"
+          },
+          "strengths": [
+            "Sora 2 version specificity",
+            "5 steps = actionable system",
+            "Image-to-video focus"
+          ],
+          "weaknesses": [
+            "Missing year",
+            "'Prompt Engineering' may seem technical/intimidating"
+          ],
+          "recommended": false
+        },
+        {
+          "title": "15 Sora AI Prompts for Viral Videos (Tested + Results)",
+          "formula_match": "listicle_tested",
+          "validation": {
+            "has_year": false,
+            "has_number": true,
+            "includes_primary_keyword": true,
+            "keyword_position": "middle",
+            "unique_vs_competitors": true,
+            "estimated_ctr": "high"
+          },
+          "strengths": [
+            "'Tested + Results' = authority",
+            "'Viral Videos' = outcome-focused",
+            "15 = concrete number"
+          ],
+          "weaknesses": [
+            "Missing year",
+            "Missing Sora 2 version signal",
+            "'Viral' may seem clickbait-y"
+          ],
+          "recommended": false
+        },
+        {
+          "title": "Sora 2 Guide: Master Text-to-Video + Image-to-Video [2026]",
+          "formula_match": "guide_template",
+          "validation": {
+            "has_year": true,
+            "has_number": false,
+            "includes_primary_keyword": true,
+            "keyword_position": "front",
+            "unique_vs_competitors": true,
+            "estimated_ctr": "medium-high"
+          },
+          "strengths": [
+            "Covers both modalities",
+            "Sora 2 version signal",
+            "Year included"
+          ],
+          "weaknesses": [
+            "Missing concrete number",
+            "Less focused than image-to-video only",
+            "'Master' may seem aspirational vs. practical"
+          ],
+          "recommended": false
+        }
+      ],
+      "locked_title": "Sora 2 Prompts: Complete Guide + Image-to-Video Workflow [2026]",
+      "lock_rationale": "Unique differentiation (image-to-video workflow missing from official docs), version specificity (Sora 2), actionable system (workflow), includes freshness signal (2026), addresses competitor weakness (OpenAI guide lacks practical workflow)",
+      "competitor_differentiation": {
+        "openai_official": "Official guide is technical reference - we provide practical workflow",
+        "soraprompting_com": "Focused on text-to-video only - we emphasize image-to-video",
+        "medium_creators": "Individual examples - we provide systematic workflow"
+      }
+    }
+  ],
+  "quality_checks": {
+    "title_formula_validation": "PASS (all titles match at least 1 formula)",
+    "keyword_coverage": "PASS (all titles include primary keyword)",
+    "year_stamp": "PASS (locked titles include 2026)",
+    "number_presence": "PASS (locked titles include concrete numbers)",
+    "competitor_uniqueness": "PASS (locked titles differentiated from Top 5)",
+    "estimated_ctr": {
+      "direction_1": "high",
+      "direction_2": "high"
+    }
+  },
+  "next_phase": "Phase 4: Execute blog-tutorial-writer for Direction 1 + Direction 2"
+}

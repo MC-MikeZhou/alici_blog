@@ -1,0 +1,58 @@
+{
+  "article_title": "Why Nano Banana Pro + Motion Control Changes Video Creation 2026",
+  "article_slug": "nano-banana-motion-control-2026",
+  "generated_at": "2026-01-21",
+  "assets": [
+    {
+      "id": "hero-image",
+      "type": "hero",
+      "filename": "nano-banana-motion-control-hero.jpg",
+      "description": "Hero image showing the workflow concept - character image transforming into animated video",
+      "prompt": "Split-screen digital artwork showing transformation process: left side shows a static high-quality character portrait, right side shows the same character mid-dance with motion blur trails. Futuristic interface elements, holographic UI overlays, clean dark background with cyan and magenta accent lighting, professional tech visualization style, 16:9 aspect ratio",
+      "style": "tech-visualization",
+      "dimensions": "1920x1080",
+      "priority": "high"
+    },
+    {
+      "id": "comparison-diagram",
+      "type": "infographic",
+      "filename": "match-image-vs-match-video.jpg",
+      "description": "Visual comparison of Match Image vs Match Video modes",
+      "prompt": "Clean infographic comparing two AI video modes side by side. Left panel labeled 'Match Image' with icon of person staying consistent, clock showing 10s, keywords: character fidelity, texture preservation. Right panel labeled 'Match Video' with icon of skeleton/motion lines, clock showing 30s, keywords: motion accuracy, longer duration. Minimal design, dark background, cyan and white color scheme, professional diagram style",
+      "style": "infographic",
+      "dimensions": "1200x800",
+      "priority": "high"
+    },
+    {
+      "id": "workflow-diagram",
+      "type": "infographic",
+      "filename": "nano-banana-workflow.jpg",
+      "description": "Step-by-step workflow diagram showing the complete process",
+      "prompt": "Horizontal workflow diagram with 4 connected steps: 1) Upload photo icon with arrow to 2) Nano Banana Pro logo generating character image with arrow to 3) Motion reference video icon with arrow to 4) Final animated video output. Clean tech style, numbered steps, connecting arrows, dark background with gradient, professional UI design aesthetic",
+      "style": "workflow-diagram",
+      "dimensions": "1600x400",
+      "priority": "medium"
+    },
+    {
+      "id": "gymnast-example",
+      "type": "example",
+      "filename": "gymnast-balance-beam.jpg",
+      "description": "Example character for the Visual Prompt Pack - gymnast on balance beam",
+      "prompt": "A female gymnast standing on a balance beam in a professional athletic facility. She wears a competition leotard, arms relaxed by her sides, neutral standing pose, confident expression. Soft studio lighting, clean gymnasium background with minimal distractions, full body shot, high quality portrait photography style, photorealistic",
+      "style": "photorealistic",
+      "dimensions": "1024x1536",
+      "priority": "medium"
+    }
+  ],
+  "video_embeds": [
+    {
+      "id": "source-video",
+      "platform": "youtube",
+      "video_id": "f0C6lj61p30",
+      "title": "Create Custom Viral Videos with Nano Banana Pro and Kling 2.6 Motion Control",
+      "embed_url": "https://www.youtube.com/embed/f0C6lj61p30",
+      "position": "after-why-it-works"
+    }
+  ],
+  "notes": "Hero image and comparison diagram are highest priority. Workflow diagram helps visual learners. Gymnast example demonstrates the Visual Prompt Pack concept."
+}

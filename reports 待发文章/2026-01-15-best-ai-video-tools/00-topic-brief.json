@@ -1,0 +1,92 @@
+{
+  "analysis_date": "2026-01-15",
+  "schema_version": "1.1",
+  "data_source": "websearch",
+  "competitor_urls": [
+    "https://learn.g2.com/best-ai-video-generators",
+    "https://massive.io/gear-guides/the-best-ai-video-generator-comparison/"
+  ],
+  "selected_topic": {
+    "rank": 1,
+    "primary_keyword": "best ai video generators",
+    "search_intent": "best-list",
+    "recommended_titles": [
+      "10 Best AI Video Generators in 2025: Tested & Compared",
+      "Best AI Video Generators 2025: Complete Comparison Guide",
+      "Top 10 AI Video Tools Ranked: Features, Pricing & Quality"
+    ],
+    "content_type": "list",
+    "outline": {
+      "h2_sections": [
+        "Quick Comparison Table",
+        "How We Tested",
+        "Best Overall: [Tool]",
+        "Best for Beginners: [Tool]",
+        "Best Value: [Tool]",
+        "Best for Business: [Tool]",
+        "Best for Creators: [Tool]",
+        "Pricing Comparison",
+        "How to Choose",
+        "FAQ"
+      ],
+      "key_questions": [
+        "What is the best AI video generator?",
+        "Which AI video tool is free?",
+        "Is Runway better than Kling?",
+        "How much do AI video generators cost?",
+        "Can I use AI videos commercially?"
+      ]
+    },
+    "aeo_block": {
+      "target_question": "What is the best AI video generator?",
+      "direct_answer_draft": "The best AI video generator depends on your needs. For overall quality, Google Veo 3 leads with cinematic output and native audio. For value, Kling AI offers comparable quality at lower cost. For business use, Synthesia excels at professional presenter videos. For beginners, alici.ai provides access to multiple top models in one platform."
+    },
+    "seo_metrics": {
+      "source": "estimated",
+      "search_volume": 22000,
+      "search_volume_trend": "rising",
+      "competition_level": "high"
+    },
+    "serp_features": {
+      "ai_overview": true,
+      "featured_snippet": true,
+      "people_also_ask": true,
+      "paa_questions": [
+        "What is the best free AI video generator?",
+        "Is there a completely free AI video generator?",
+        "Which AI video generator is best for YouTube?",
+        "How much does AI video generation cost?"
+      ]
+    },
+    "evidence": {
+      "competitor_coverage": "full",
+      "top_3_competitors": ["g2.com", "zapier.com", "synthesia.io"],
+      "content_gap_score": 60
+    },
+    "alici_angle": "Multi-model platform advantage - access Kling, Runway, Veo, Pika in one place without multiple subscriptions",
+    "product_mapping": {
+      "primary_product": {
+        "id": "video_studio",
+        "name": "AI Video Studio",
+        "url": "https://app.alici.ai/pages/videoGen",
+        "cta_text": "Try All Models Free",
+        "features": ["Kling 2.0", "Runway Gen-4", "Veo 3", "Pika 2.1"]
+      },
+      "secondary_products": [
+        {
+          "id": "video_prompt",
+          "name": "Video Prompt Assistant",
+          "url": "https://app.alici.ai/chat?agent_id=alici_video_prompt",
+          "use_case": "Optimize prompts for better results"
+        }
+      ]
+    },
+    "opportunity_score": {
+      "total": 83,
+      "demand_signal": 30,
+      "aeo_potential": 18,
+      "competition_gap": 15,
+      "business_fit": 20
+    }
+  }
+}

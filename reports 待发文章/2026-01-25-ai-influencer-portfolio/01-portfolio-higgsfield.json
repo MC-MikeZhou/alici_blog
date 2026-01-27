@@ -1,0 +1,1783 @@
+{
+  "generated_at": "2026-01-25T18:47:26",
+  "idea": "AI Influencer",
+  "location_code": 2840,
+  "language_code": "en",
+  "scoring_model": {
+    "ai_demand": 40,
+    "seo_demand": 20,
+    "business_value_cpc": 10,
+    "serp_aeo_opportunity": 15,
+    "competitor_proof": 10,
+    "trend_bonus": 5
+  },
+  "notes": [
+    "AEO-first: AI demand is weighted highest (40/100).",
+    "Some low-volume keywords may return null volumes in batch responses; treated as 0 for scoring.",
+    "Added D11 after reviewing Higgsfield Earn monetization angle: focus on Instagram monetization intent queries (higher AI volume) and bridge to AI influencer/AI UGC workflows."
+  ],
+  "directions": [
+    {
+      "id": "D11",
+      "name": "Instagram Monetization (Reels) + AI Influencer/AI UGC (Earn angle)",
+      "head_keyword": "instagram monetization",
+      "keywords": [
+        "instagram monetization",
+        "monetize instagram reels",
+        "get paid for instagram reels",
+        "ugc creator",
+        "ai influencer",
+        "ai ugc"
+      ],
+      "metrics": [
+        {
+          "keyword": "instagram monetization",
+          "seo_search_volume": 2400,
+          "seo_cpc": 2.18,
+          "seo_competition_level": null,
+          "seo_trend": "declining",
+          "ai_search_volume": 714,
+          "ai_trend": "declining"
+        },
+        {
+          "keyword": "monetize instagram reels",
+          "seo_search_volume": 170,
+          "seo_cpc": 1.66,
+          "seo_competition_level": null,
+          "seo_trend": "declining",
+          "ai_search_volume": 108,
+          "ai_trend": "declining"
+        },
+        {
+          "keyword": "get paid for instagram reels",
+          "seo_search_volume": 30,
+          "seo_cpc": 3.46,
+          "seo_competition_level": null,
+          "seo_trend": "declining",
+          "ai_search_volume": 176,
+          "ai_trend": "declining"
+        },
+        {
+          "keyword": "ugc creator",
+          "seo_search_volume": 22200,
+          "seo_cpc": 3.86,
+          "seo_competition_level": null,
+          "seo_trend": "rising",
+          "ai_search_volume": 951,
+          "ai_trend": "declining"
+        },
+        {
+          "keyword": "ai influencer",
+          "seo_search_volume": 3600,
+          "seo_cpc": 4.07,
+          "seo_competition_level": null,
+          "seo_trend": "stable",
+          "ai_search_volume": 748,
+          "ai_trend": "rising"
+        },
+        {
+          "keyword": "ai ugc",
+          "seo_search_volume": 1000,
+          "seo_cpc": 10.44,
+          "seo_competition_level": null,
+          "seo_trend": "rising",
+          "ai_search_volume": 42,
+          "ai_trend": "rising"
+        }
+      ],
+      "aggregates": {
+        "top3_ai_sum": 2413,
+        "top3_seo_sum": 28200,
+        "avg_cpc_top3_seo": 3.3699999999999997,
+        "top_ai_trend": "declining"
+      },
+      "serp": {
+        "ai_overview": true,
+        "paa_present": true,
+        "featured_snippet": false,
+        "unique_domains_top10": 7,
+        "top_organic": [
+          {
+            "rank": 1,
+            "domain": "creators.instagram.com",
+            "title": "Learn How To Monetize Your Content as a Creator",
+            "url": "https://creators.instagram.com/lab/content-monetization?locale=en_US"
+          },
+          {
+            "rank": 2,
+            "domain": "www.reddit.com",
+            "title": "How to Monetize my content on Instagram?",
+            "url": "https://www.reddit.com/r/SocialMediaMarketing/comments/1oaay5p/how_to_monetize_my_content_on_instagram/"
+          },
+          {
+            "rank": 3,
+            "domain": "help.instagram.com",
+            "title": "Request monetization support for creators",
+            "url": "https://help.instagram.com/167414052020731"
+          },
+          {
+            "rank": 4,
+            "domain": "foursixty.com",
+            "title": "How Does Instagram Monetization Work in 2026 ...",
+            "url": "https://foursixty.com/blog/instagram-monetization/"
+          },
+          {
+            "rank": 5,
+            "domain": "help.instagram.com",
+            "title": "Instagram Content Monetization Policies",
+            "url": "https://help.instagram.com/2635536099905516"
+          },
+          {
+            "rank": 6,
+            "domain": "www.instagram.com",
+            "title": "Content Creator Tips on Instagram: \"Want to monetize with ...",
+            "url": "https://www.instagram.com/reel/DLm5QMJOzMy/?hl=en"
+          },
+          {
+            "rank": 7,
+            "domain": "help.instagram.com",
+            "title": "How to check the monetization status of your account",
+            "url": "https://help.instagram.com/561796329332844"
+          },
+          {
+            "rank": 8,
+            "domain": "maven.com",
+            "title": "How to Monetize Instagram: Boost Your Income and ...",
+            "url": "https://maven.com/articles/how-to-monetize-instagram"
+          },
+          {
+            "rank": 9,
+            "domain": "maven.com",
+            "title": "How to Monetize Instagram: Boost Your Income and ...",
+            "url": "https://maven.com/articles/how-to-monetize-instagram"
+          },
+          {
+            "rank": 10,
+            "domain": "www.facebook.com",
+            "title": "How to earn money on Facebook and Instagram",
+            "url": "https://www.facebook.com/business/learn/lessons/how-make-money-facebook"
+          }
+        ]
+      },
+      "score_breakdown": {
+        "ai_demand": 40,
+        "seo_demand": 17,
+        "business_value_cpc": 6,
+        "serp_aeo_opportunity": 12,
+        "competitor_proof": 8,
+        "trend_bonus": 1
+      },
+      "total_score": 84
+    },
+    {
+      "id": "D2",
+      "name": "UGC Creator + AI UGC Ads (AEO-first marketing angle)",
+      "head_keyword": "ugc creator",
+      "keywords": [
+        "ugc creator",
+        "ugc video",
+        "ugc ads",
+        "ugc ad",
+        "ugc video ads",
+        "ai ugc",
+        "ai ugc ads",
+        "ai ugc video",
+        "ai ugc generator"
+      ],
+      "metrics": [
+        {
+          "keyword": "ugc creator",
+          "seo_search_volume": 22200,
+          "seo_cpc": 3.86,
+          "seo_competition_level": null,
+          "seo_trend": "rising",
+          "ai_search_volume": 951,
+          "ai_trend": "declining"
+        },
+        {
+          "keyword": "ugc video",
+          "seo_search_volume": 1900,
+          "seo_cpc": 12.78,
+          "seo_competition_level": null,
+          "seo_trend": "rising",
+          "ai_search_volume": 128,
+          "ai_trend": "stable"
+        },
+        {
+          "keyword": "ugc ads",
+          "seo_search_volume": 1300,
+          "seo_cpc": 12.7,
+          "seo_competition_level": null,
+          "seo_trend": "stable",
+          "ai_search_volume": 75,
+          "ai_trend": "rising"
+        },
+        {
+          "keyword": "ugc ad",
+          "seo_search_volume": 1300,
+          "seo_cpc": 12.7,
+          "seo_competition_level": null,
+          "seo_trend": "stable",
+          "ai_search_volume": 75,
+          "ai_trend": "rising"
+        },
+        {
+          "keyword": "ugc video ads",
+          "seo_search_volume": 70,
+          "seo_cpc": 26.01,
+          "seo_competition_level": null,
+          "seo_trend": "declining",
+          "ai_search_volume": 4,
+          "ai_trend": "rising"
+        },
+        {
+          "keyword": "ai ugc",
+          "seo_search_volume": 1000,
+          "seo_cpc": 10.44,
+          "seo_competition_level": null,
+          "seo_trend": "rising",
+          "ai_search_volume": 42,
+          "ai_trend": "rising"
+        },
+        {
+          "keyword": "ai ugc ads",
+          "seo_search_volume": 170,
+          "seo_cpc": 16.87,
+          "seo_competition_level": null,
+          "seo_trend": "rising",
+          "ai_search_volume": 6,
+          "ai_trend": "rising"
+        },
+        {
+          "keyword": "ai ugc video",
+          "seo_search_volume": 110,
+          "seo_cpc": 13.16,
+          "seo_competition_level": null,
+          "seo_trend": "stable",
+          "ai_search_volume": 6,
+          "ai_trend": "rising"
+        },
+        {
+          "keyword": "ai ugc generator",
+          "seo_search_volume": 40,
+          "seo_cpc": 8.02,
+          "seo_competition_level": null,
+          "seo_trend": "stable",
+          "ai_search_volume": 3,
+          "ai_trend": "stable"
+        }
+      ],
+      "aggregates": {
+        "top3_ai_sum": 1154,
+        "top3_seo_sum": 25400,
+        "avg_cpc_top3_seo": 9.78,
+        "top_ai_trend": "declining"
+      },
+      "serp": {
+        "ai_overview": true,
+        "paa_present": true,
+        "featured_snippet": false,
+        "unique_domains_top10": 10,
+        "top_organic": [
+          {
+            "rank": 1,
+            "domain": "www.reddit.com",
+            "title": "UGC Creators this is how you get rich making UGC",
+            "url": "https://www.reddit.com/r/UGCcreators/comments/1hwu0i9/ugc_creators_this_is_how_you_get_rich_making_ugc/"
+          },
+          {
+            "rank": 2,
+            "domain": "ugc-shop.com",
+            "title": "Content Creators",
+            "url": "https://ugc-shop.com/pages/content-creators?srsltid=AfmBOoqEyMc4tOJG2WwcohPyghyeb4O5rLrOkUSzqdvyPJ0DRVxeU5Rt"
+          },
+          {
+            "rank": 3,
+            "domain": "www.forbes.com",
+            "title": "Start Making Money As A UGC Creator In 7 Easy Steps",
+            "url": "https://www.forbes.com/sites/small-business/article/how-to-become-a-ugc-creator/"
+          },
+          {
+            "rank": 4,
+            "domain": "www.youtube.com",
+            "title": "UGC Content Creators",
+            "url": "https://www.youtube.com/playlist?list=PLLPB_9Q3Ht1K55KpRjAXTf5rYabcWdMsp"
+          },
+          {
+            "rank": 5,
+            "domain": "getflowbox.com",
+            "title": "What is a UGC Creator & Top 10 UGC Creator Platforms to ...",
+            "url": "https://getflowbox.com/blog/user-generated-content-creator/"
+          },
+          {
+            "rank": 6,
+            "domain": "www.usetwirl.com",
+            "title": "Twirl - Become a UGC Creator",
+            "url": "https://www.usetwirl.com/for-creators"
+          },
+          {
+            "rank": 7,
+            "domain": "streamyard.com",
+            "title": "What is a UGC Creator, and How Do You Become One?",
+            "url": "https://streamyard.com/blog/ugc-creator"
+          },
+          {
+            "rank": 8,
+            "domain": "www.instagram.com",
+            "title": "Comparing UGC Creators That Create Content *Oh, and I ...",
+            "url": "https://www.instagram.com/reel/DTlLKA7CvCo/?hl=en"
+          },
+          {
+            "rank": 9,
+            "domain": "influee.co",
+            "title": "The leading UGC platform in the world",
+            "url": "https://influee.co/"
+          },
+          {
+            "rank": 10,
+            "domain": "collabstr.com",
+            "title": "Find & Hire UGC Creators on Collabstr",
+            "url": "https://collabstr.com/find-influencers/user-generated-content"
+          }
+        ]
+      },
+      "score_breakdown": {
+        "ai_demand": 35,
+        "seo_demand": 17,
+        "business_value_cpc": 8,
+        "serp_aeo_opportunity": 12,
+        "competitor_proof": 10,
+        "trend_bonus": 1
+      },
+      "total_score": 83
+    },
+    {
+      "id": "D1",
+      "name": "AI Influencer (definition + how-to)",
+      "head_keyword": "ai influencer",
+      "keywords": [
+        "ai influencer",
+        "ai influencers",
+        "virtual influencer",
+        "virtual influencers",
+        "how to create an ai influencer",
+        "create a virtual influencer",
+        "ai influencer marketing",
+        "virtual influencer marketing"
+      ],
+      "metrics": [
+        {
+          "keyword": "ai influencer",
+          "seo_search_volume": 3600,
+          "seo_cpc": 4.07,
+          "seo_competition_level": null,
+          "seo_trend": "stable",
+          "ai_search_volume": 748,
+          "ai_trend": "rising"
+        },
+        {
+          "keyword": "ai influencers",
+          "seo_search_volume": 1900,
+          "seo_cpc": 6.73,
+          "seo_competition_level": null,
+          "seo_trend": "stable",
+          "ai_search_volume": 748,
+          "ai_trend": "rising"
+        },
+        {
+          "keyword": "virtual influencer",
+          "seo_search_volume": 720,
+          "seo_cpc": 5.49,
+          "seo_competition_level": null,
+          "seo_trend": "declining",
+          "ai_search_volume": 84,
+          "ai_trend": "declining"
+        },
+        {
+          "keyword": "virtual influencers",
+          "seo_search_volume": 720,
+          "seo_cpc": 5.49,
+          "seo_competition_level": null,
+          "seo_trend": "declining",
+          "ai_search_volume": 84,
+          "ai_trend": "declining"
+        },
+        {
+          "keyword": "how to create an ai influencer",
+          "seo_search_volume": 320,
+          "seo_cpc": 5.71,
+          "seo_competition_level": null,
+          "seo_trend": "rising",
+          "ai_search_volume": 36,
+          "ai_trend": "rising"
+        },
+        {
+          "keyword": "create a virtual influencer",
+          "seo_search_volume": 10,
+          "seo_cpc": null,
+          "seo_competition_level": null,
+          "seo_trend": "stable",
+          "ai_search_volume": 2,
+          "ai_trend": "declining"
+        },
+        {
+          "keyword": "ai influencer marketing",
+          "seo_search_volume": 320,
+          "seo_cpc": 10.38,
+          "seo_competition_level": null,
+          "seo_trend": "stable",
+          "ai_search_volume": 4,
+          "ai_trend": "declining"
+        },
+        {
+          "keyword": "virtual influencer marketing",
+          "seo_search_volume": 50,
+          "seo_cpc": null,
+          "seo_competition_level": null,
+          "seo_trend": "declining",
+          "ai_search_volume": 3,
+          "ai_trend": "declining"
+        }
+      ],
+      "aggregates": {
+        "top3_ai_sum": 1580,
+        "top3_seo_sum": 6220,
+        "avg_cpc_top3_seo": 5.43,
+        "top_ai_trend": "rising"
+      },
+      "serp": {
+        "ai_overview": false,
+        "paa_present": true,
+        "featured_snippet": false,
+        "unique_domains_top10": 8,
+        "top_organic": [
+          {
+            "rank": 1,
+            "domain": "higgsfield.ai",
+            "title": "AI Influencer Generator: \u0421reate Your Own Character",
+            "url": "https://higgsfield.ai/ai-influencer"
+          },
+          {
+            "rank": 2,
+            "domain": "www.instagram.com",
+            "title": "Aitana Lopez\u2728| Virtual Soul (@fit_aitana)",
+            "url": "https://www.instagram.com/fit_aitana/?hl=en"
+          },
+          {
+            "rank": 3,
+            "domain": "creatify.ai",
+            "title": "AI Influencer Generator - Create Online Persona ...",
+            "url": "https://creatify.ai/features/ai-influencer-generator"
+          },
+          {
+            "rank": 4,
+            "domain": "www.theinfluencer.ai",
+            "title": "The Leading AI Influencer Generator",
+            "url": "https://www.theinfluencer.ai/"
+          },
+          {
+            "rank": 5,
+            "domain": "www.youtube.com",
+            "title": "AI Influencers Are Making $10K+ Month While You Sleep ...",
+            "url": "https://www.youtube.com/watch?v=ARRbBmXK7AA"
+          },
+          {
+            "rank": 6,
+            "domain": "www.instagram.com",
+            "title": "Emily Pellegrini | AI Influencer (@emilypellegrini)",
+            "url": "https://www.instagram.com/emilypellegrini/?hl=en"
+          },
+          {
+            "rank": 7,
+            "domain": "www.reddit.com",
+            "title": "How are people making these AI influencers??",
+            "url": "https://www.reddit.com/r/ArtificialInteligence/comments/1g0nv04/how_are_people_making_these_ai_influencers/"
+          },
+          {
+            "rank": 8,
+            "domain": "www.bbc.com",
+            "title": "Both of these influencers are successful - BBC",
+            "url": "https://www.bbc.com/news/articles/ce3wyplnev1o"
+          },
+          {
+            "rank": 9,
+            "domain": "www.argil.ai",
+            "title": "Ai Influencers",
+            "url": "https://www.argil.ai/ai-influencers"
+          },
+          {
+            "rank": 10,
+            "domain": "www.youtube.com",
+            "title": "Exactly How AI Influencers Like Aitana Lopez Make Crazy ...",
+            "url": "https://www.youtube.com/watch?v=fxiDS2C9XYA"
+          }
+        ]
+      },
+      "score_breakdown": {
+        "ai_demand": 35,
+        "seo_demand": 14,
+        "business_value_cpc": 6,
+        "serp_aeo_opportunity": 5,
+        "competitor_proof": 8,
+        "trend_bonus": 5
+      },
+      "total_score": 73
+    },
+    {
+      "id": "D5",
+      "name": "Live Avatar / Interactive AI Avatar (real-time)",
+      "head_keyword": "live avatar",
+      "keywords": [
+        "live avatar",
+        "interactive avatar",
+        "interactive ai avatar",
+        "ai interactive avatar",
+        "real time ai avatar",
+        "heygen interactive avatar",
+        "heygen liveavatar"
+      ],
+      "metrics": [
+        {
+          "keyword": "live avatar",
+          "seo_search_volume": 590,
+          "seo_cpc": 3.54,
+          "seo_competition_level": null,
+          "seo_trend": "rising",
+          "ai_search_volume": 1747,
+          "ai_trend": "declining"
+        },
+        {
+          "keyword": "interactive avatar",
+          "seo_search_volume": 1600,
+          "seo_cpc": 3.36,
+          "seo_competition_level": null,
+          "seo_trend": "rising",
+          "ai_search_volume": 37,
+          "ai_trend": "stable"
+        },
+        {
+          "keyword": "interactive ai avatar",
+          "seo_search_volume": 140,
+          "seo_cpc": 4.1,
+          "seo_competition_level": null,
+          "seo_trend": "stable",
+          "ai_search_volume": 4,
+          "ai_trend": "rising"
+        },
+        {
+          "keyword": "ai interactive avatar",
+          "seo_search_volume": 50,
+          "seo_cpc": 4,
+          "seo_competition_level": null,
+          "seo_trend": "declining",
+          "ai_search_volume": 4,
+          "ai_trend": "rising"
+        },
+        {
+          "keyword": "real time ai avatar",
+          "seo_search_volume": 70,
+          "seo_cpc": 3.43,
+          "seo_competition_level": null,
+          "seo_trend": "stable",
+          "ai_search_volume": 0,
+          "ai_trend": "unknown"
+        },
+        {
+          "keyword": "heygen interactive avatar",
+          "seo_search_volume": 390,
+          "seo_cpc": 2.46,
+          "seo_competition_level": null,
+          "seo_trend": "stable",
+          "ai_search_volume": 5,
+          "ai_trend": "rising"
+        },
+        {
+          "keyword": "heygen liveavatar",
+          "seo_search_volume": 10,
+          "seo_cpc": 3.85,
+          "seo_competition_level": null,
+          "seo_trend": "unknown",
+          "ai_search_volume": 0,
+          "ai_trend": "unknown"
+        }
+      ],
+      "aggregates": {
+        "top3_ai_sum": 1789,
+        "top3_seo_sum": 2580,
+        "avg_cpc_top3_seo": 3.1199999999999997,
+        "top_ai_trend": "declining"
+      },
+      "serp": {
+        "ai_overview": false,
+        "paa_present": true,
+        "featured_snippet": false,
+        "unique_domains_top10": 10,
+        "top_organic": [
+          {
+            "rank": 1,
+            "domain": "www.liveavatar.com",
+            "title": "LiveAvatar: Lifelike realtime avatar API for conversational AI ...",
+            "url": "https://www.liveavatar.com/"
+          },
+          {
+            "rank": 2,
+            "domain": "liveavatar.github.io",
+            "title": "Live Avatar Project Page",
+            "url": "https://liveavatar.github.io/"
+          },
+          {
+            "rank": 3,
+            "domain": "github.com",
+            "title": "Implementation of \"Live Avatar: Streaming Real-time Audio ...",
+            "url": "https://github.com/Alibaba-Quark/LiveAvatar"
+          },
+          {
+            "rank": 4,
+            "domain": "www.heygen.com",
+            "title": "AI Interactive Avatars",
+            "url": "https://www.heygen.com/interactive-avatar"
+          },
+          {
+            "rank": 5,
+            "domain": "arxiv.org",
+            "title": "Streaming Real-time Audio-Driven Avatar Generation with ...",
+            "url": "https://arxiv.org/abs/2512.04677"
+          },
+          {
+            "rank": 6,
+            "domain": "fal.ai",
+            "title": "Live Avatar | Image to Video",
+            "url": "https://fal.ai/models/fal-ai/live-avatar"
+          },
+          {
+            "rank": 7,
+            "domain": "help.heygen.com",
+            "title": "What is a LiveAvatar?",
+            "url": "https://help.heygen.com/en/articles/9182113-what-is-a-liveavatar"
+          },
+          {
+            "rank": 8,
+            "domain": "www.reddit.com",
+            "title": "Live Avatar: Streaming Real-time Audio-Driven Avatar ...",
+            "url": "https://www.reddit.com/r/LocalLLaMA/comments/1pfyrwm/live_avatar_streaming_realtime_audiodriven_avatar/"
+          },
+          {
+            "rank": 9,
+            "domain": "www.youtube.com",
+            "title": "Go Live on YouTube with ANY Avatar: OBS Setup Guide",
+            "url": "https://www.youtube.com/watch?v=nl-nxfBwCZQ"
+          },
+          {
+            "rank": 10,
+            "domain": "play.google.com",
+            "title": "REALITY-Become an Anime Avatar - Apps on Google Play",
+            "url": "https://play.google.com/store/apps/details?id=net.wrightflyer.le.reality&hl=en_US"
+          }
+        ]
+      },
+      "score_breakdown": {
+        "ai_demand": 35,
+        "seo_demand": 10,
+        "business_value_cpc": 6,
+        "serp_aeo_opportunity": 5,
+        "competitor_proof": 10,
+        "trend_bonus": 1
+      },
+      "total_score": 67
+    },
+    {
+      "id": "D4",
+      "name": "AI Avatar Generator (talking avatar / spokesperson)",
+      "head_keyword": "ai avatar generator",
+      "keywords": [
+        "ai avatar generator",
+        "ai avatar creator",
+        "ai avatar app",
+        "ai talking avatar",
+        "talking avatar",
+        "ai avatar video",
+        "ai spokesperson",
+        "ai talking head"
+      ],
+      "metrics": [
+        {
+          "keyword": "ai avatar generator",
+          "seo_search_volume": 5400,
+          "seo_cpc": 3.97,
+          "seo_competition_level": null,
+          "seo_trend": "rising",
+          "ai_search_volume": 426,
+          "ai_trend": "declining"
+        },
+        {
+          "keyword": "ai avatar creator",
+          "seo_search_volume": 390,
+          "seo_cpc": 4.17,
+          "seo_competition_level": null,
+          "seo_trend": "declining",
+          "ai_search_volume": 20,
+          "ai_trend": "declining"
+        },
+        {
+          "keyword": "ai avatar app",
+          "seo_search_volume": 110,
+          "seo_cpc": 3.25,
+          "seo_competition_level": null,
+          "seo_trend": "declining",
+          "ai_search_volume": 62,
+          "ai_trend": "declining"
+        },
+        {
+          "keyword": "ai talking avatar",
+          "seo_search_volume": 260,
+          "seo_cpc": 4.94,
+          "seo_competition_level": null,
+          "seo_trend": "rising",
+          "ai_search_volume": 57,
+          "ai_trend": "stable"
+        },
+        {
+          "keyword": "talking avatar",
+          "seo_search_volume": 880,
+          "seo_cpc": 4.17,
+          "seo_competition_level": null,
+          "seo_trend": "rising",
+          "ai_search_volume": 169,
+          "ai_trend": "stable"
+        },
+        {
+          "keyword": "ai avatar video",
+          "seo_search_volume": 210,
+          "seo_cpc": 6.34,
+          "seo_competition_level": null,
+          "seo_trend": "declining",
+          "ai_search_volume": 85,
+          "ai_trend": "declining"
+        },
+        {
+          "keyword": "ai spokesperson",
+          "seo_search_volume": 260,
+          "seo_cpc": 9.39,
+          "seo_competition_level": null,
+          "seo_trend": "declining",
+          "ai_search_volume": 13,
+          "ai_trend": "rising"
+        },
+        {
+          "keyword": "ai talking head",
+          "seo_search_volume": 210,
+          "seo_cpc": 5.04,
+          "seo_competition_level": null,
+          "seo_trend": "stable",
+          "ai_search_volume": 2,
+          "ai_trend": "declining"
+        }
+      ],
+      "aggregates": {
+        "top3_ai_sum": 680,
+        "top3_seo_sum": 6670,
+        "avg_cpc_top3_seo": 4.1033333333333335,
+        "top_ai_trend": "declining"
+      },
+      "serp": {
+        "ai_overview": true,
+        "paa_present": false,
+        "featured_snippet": false,
+        "unique_domains_top10": 9,
+        "top_organic": [
+          {
+            "rank": 1,
+            "domain": "www.canva.com",
+            "title": "Free AI Avatar Generator and Online AI Maker",
+            "url": "https://www.canva.com/create/avatars/"
+          },
+          {
+            "rank": 2,
+            "domain": "www.veed.io",
+            "title": "AI Avatar Generator - Make Realistic Avatars",
+            "url": "https://www.veed.io/tools/ai-avatar"
+          },
+          {
+            "rank": 3,
+            "domain": "www.heygen.com",
+            "title": "Free AI Avatar Generator - 1100+ Realistic Avatars Available",
+            "url": "https://www.heygen.com/avatars"
+          },
+          {
+            "rank": 4,
+            "domain": "monica.im",
+            "title": "AI Avatar Generator Online Free",
+            "url": "https://monica.im/en/image-tools/ai-avatar-generator"
+          },
+          {
+            "rank": 5,
+            "domain": "www.youtube.com",
+            "title": "FREE AI Avatar Generator - Achieved Most Expressive And ...",
+            "url": "https://www.youtube.com/watch?v=yj3Pf7CS5OQ"
+          },
+          {
+            "rank": 6,
+            "domain": "www.adobe.com",
+            "title": "AI avatar generator - Create lifelike avatars",
+            "url": "https://www.adobe.com/products/firefly/features/ai-avatar-generator.html"
+          },
+          {
+            "rank": 7,
+            "domain": "www.powtoon.com",
+            "title": "AI Avatar Generator Made Simple",
+            "url": "https://www.powtoon.com/ai/avatars"
+          },
+          {
+            "rank": 8,
+            "domain": "toki.ai",
+            "title": "AI Avatar Generator: Create Video Avatars from Photos Free ...",
+            "url": "https://toki.ai/"
+          },
+          {
+            "rank": 9,
+            "domain": "toki.ai",
+            "title": "AI Avatar Generator: Create Video Avatars from Photos Free ...",
+            "url": "https://toki.ai/"
+          },
+          {
+            "rank": 10,
+            "domain": "www.gan.ai",
+            "title": "Best Realistic AI Avatar Creator Online",
+            "url": "https://www.gan.ai/create-your-free-realistic-ai-avatar-generator-maker-online"
+          }
+        ]
+      },
+      "score_breakdown": {
+        "ai_demand": 28,
+        "seo_demand": 14,
+        "business_value_cpc": 6,
+        "serp_aeo_opportunity": 7,
+        "competitor_proof": 10,
+        "trend_bonus": 1
+      },
+      "total_score": 66
+    },
+    {
+      "id": "D6",
+      "name": "Create a Digital Twin (creator clone)",
+      "head_keyword": "create a digital twin",
+      "keywords": [
+        "create a digital twin",
+        "ai digital twin",
+        "digital twin ai",
+        "clone yourself ai",
+        "digital twin avatar",
+        "ai avatar clone"
+      ],
+      "metrics": [
+        {
+          "keyword": "create a digital twin",
+          "seo_search_volume": 70,
+          "seo_cpc": 8.66,
+          "seo_competition_level": null,
+          "seo_trend": "rising",
+          "ai_search_volume": 119,
+          "ai_trend": "rising"
+        },
+        {
+          "keyword": "ai digital twin",
+          "seo_search_volume": 720,
+          "seo_cpc": 8.81,
+          "seo_competition_level": null,
+          "seo_trend": "rising",
+          "ai_search_volume": 44,
+          "ai_trend": "rising"
+        },
+        {
+          "keyword": "digital twin ai",
+          "seo_search_volume": 720,
+          "seo_cpc": 8.81,
+          "seo_competition_level": null,
+          "seo_trend": "rising",
+          "ai_search_volume": 44,
+          "ai_trend": "rising"
+        },
+        {
+          "keyword": "clone yourself ai",
+          "seo_search_volume": 90,
+          "seo_cpc": 8.55,
+          "seo_competition_level": null,
+          "seo_trend": "stable",
+          "ai_search_volume": 10,
+          "ai_trend": "rising"
+        },
+        {
+          "keyword": "digital twin avatar",
+          "seo_search_volume": 10,
+          "seo_cpc": 2.06,
+          "seo_competition_level": null,
+          "seo_trend": "stable",
+          "ai_search_volume": 0,
+          "ai_trend": "unknown"
+        },
+        {
+          "keyword": "ai avatar clone",
+          "seo_search_volume": 30,
+          "seo_cpc": 8.21,
+          "seo_competition_level": null,
+          "seo_trend": "rising",
+          "ai_search_volume": 0,
+          "ai_trend": "declining"
+        }
+      ],
+      "aggregates": {
+        "top3_ai_sum": 207,
+        "top3_seo_sum": 1530,
+        "avg_cpc_top3_seo": 8.723333333333334,
+        "top_ai_trend": "rising"
+      },
+      "serp": {
+        "ai_overview": true,
+        "paa_present": true,
+        "featured_snippet": false,
+        "unique_domains_top10": 10,
+        "top_organic": [
+          {
+            "rank": 1,
+            "domain": "hopara.io",
+            "title": "How to Build a Digital Twin: A Step-by-Step Guide",
+            "url": "https://hopara.io/digital-twins/how-to-build-a-digital-twin/"
+          },
+          {
+            "rank": 2,
+            "domain": "www.mckinsey.com",
+            "title": "Digital twins: How to build the first twin",
+            "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/digital-twins-how-to-build-the-first-twin"
+          },
+          {
+            "rank": 3,
+            "domain": "www.linkedin.com",
+            "title": "How I created a digital twin of myself using Claude",
+            "url": "https://www.linkedin.com/posts/timoneill_ive-been-experimenting-with-creating-a-digital-activity-7302121566425792512-1oOb"
+          },
+          {
+            "rank": 4,
+            "domain": "www.reddit.com",
+            "title": "How I created a digital twin of myself that can attend my ...",
+            "url": "https://www.reddit.com/r/AI_Agents/comments/1m6330a/how_i_created_a_digital_twin_of_myself_that_can/"
+          },
+          {
+            "rank": 5,
+            "domain": "akselos.com",
+            "title": "Digital Twins: A Comprehensive Guide",
+            "url": "https://akselos.com/digital-twins-a-comprehensive-guide/"
+          },
+          {
+            "rank": 6,
+            "domain": "learn.microsoft.com",
+            "title": "Quickstart - Get started with Azure Digital Twins Explorer",
+            "url": "https://learn.microsoft.com/en-us/azure/digital-twins/quickstart-azure-digital-twins-explorer"
+          },
+          {
+            "rank": 7,
+            "domain": "matterport.com",
+            "title": "How to Build a Digital Twin: Benefits & Process Explained",
+            "url": "https://matterport.com/learn/digital-twin/building?srsltid=AfmBOopbCujaffK_98KFyEfVg122odbWZqv6-cbr1onH-ZnTl9M52Cev"
+          },
+          {
+            "rank": 8,
+            "domain": "www.youtube.com",
+            "title": "How We Build Digital Twins",
+            "url": "https://www.youtube.com/watch?v=NGiNydrE8xU"
+          },
+          {
+            "rank": 9,
+            "domain": "cloud.google.com",
+            "title": "How to build a digital twin to boost resilience",
+            "url": "https://cloud.google.com/blog/products/identity-security/how-to-build-a-digital-twin-to-boost-resilience"
+          },
+          {
+            "rank": 10,
+            "domain": "forums.developer.nvidia.com",
+            "title": "Workflow to create a digital twin - Samples & Examples",
+            "url": "https://forums.developer.nvidia.com/t/workflow-to-create-a-digital-twin/280285"
+          }
+        ]
+      },
+      "score_breakdown": {
+        "ai_demand": 20,
+        "seo_demand": 10,
+        "business_value_cpc": 8,
+        "serp_aeo_opportunity": 12,
+        "competitor_proof": 10,
+        "trend_bonus": 5
+      },
+      "total_score": 65
+    },
+    {
+      "id": "D3",
+      "name": "AI Dance Influencer (high-motion realism)",
+      "head_keyword": "ai dance",
+      "keywords": [
+        "ai dance",
+        "ai dance generator",
+        "ai dance video",
+        "ai motion capture",
+        "motion capture ai",
+        "ai mocap",
+        "full body avatar",
+        "ai dance avatar"
+      ],
+      "metrics": [
+        {
+          "keyword": "ai dance",
+          "seo_search_volume": 1900,
+          "seo_cpc": 1.21,
+          "seo_competition_level": null,
+          "seo_trend": "stable",
+          "ai_search_volume": 545,
+          "ai_trend": "rising"
+        },
+        {
+          "keyword": "ai dance generator",
+          "seo_search_volume": 2400,
+          "seo_cpc": 1.62,
+          "seo_competition_level": null,
+          "seo_trend": "stable",
+          "ai_search_volume": 88,
+          "ai_trend": "rising"
+        },
+        {
+          "keyword": "ai dance video",
+          "seo_search_volume": 480,
+          "seo_cpc": 1.63,
+          "seo_competition_level": null,
+          "seo_trend": "stable",
+          "ai_search_volume": 58,
+          "ai_trend": "rising"
+        },
+        {
+          "keyword": "ai motion capture",
+          "seo_search_volume": 320,
+          "seo_cpc": 4.04,
+          "seo_competition_level": null,
+          "seo_trend": "declining",
+          "ai_search_volume": 21,
+          "ai_trend": "rising"
+        },
+        {
+          "keyword": "motion capture ai",
+          "seo_search_volume": 110,
+          "seo_cpc": 3.85,
+          "seo_competition_level": null,
+          "seo_trend": "declining",
+          "ai_search_volume": 21,
+          "ai_trend": "rising"
+        },
+        {
+          "keyword": "ai mocap",
+          "seo_search_volume": 170,
+          "seo_cpc": 6.11,
+          "seo_competition_level": null,
+          "seo_trend": "declining",
+          "ai_search_volume": 15,
+          "ai_trend": "rising"
+        },
+        {
+          "keyword": "full body avatar",
+          "seo_search_volume": 590,
+          "seo_cpc": null,
+          "seo_competition_level": null,
+          "seo_trend": "rising",
+          "ai_search_volume": 55,
+          "ai_trend": "rising"
+        },
+        {
+          "keyword": "ai dance avatar",
+          "seo_search_volume": null,
+          "seo_cpc": null,
+          "seo_competition_level": null,
+          "seo_trend": "unknown",
+          "ai_search_volume": 0,
+          "ai_trend": "declining"
+        }
+      ],
+      "aggregates": {
+        "top3_ai_sum": 691,
+        "top3_seo_sum": 4890,
+        "avg_cpc_top3_seo": 1.415,
+        "top_ai_trend": "rising"
+      },
+      "serp": {
+        "ai_overview": false,
+        "paa_present": false,
+        "featured_snippet": false,
+        "unique_domains_top10": 9,
+        "top_organic": [
+          {
+            "rank": 1,
+            "domain": "viggle.ai",
+            "title": "Free AI Dance Video Generator",
+            "url": "https://viggle.ai/tools/ai-dance"
+          },
+          {
+            "rank": 2,
+            "domain": "www.instagram.com",
+            "title": "Girl got some dance moves\u2026 some will say it's AI",
+            "url": "https://www.instagram.com/reel/DTNfJ0ODiyo/"
+          },
+          {
+            "rank": 3,
+            "domain": "apps.apple.com",
+            "title": "Photo Dance: AI Baby Dance - App Store - Apple",
+            "url": "https://apps.apple.com/us/app/photo-dance-ai-baby-dance/id6474650062"
+          },
+          {
+            "rank": 4,
+            "domain": "www.tiktok.com",
+            "title": "How do we compare to the Ai babies? \ud83d\udc76\ud83d\udd7a | ai dance",
+            "url": "https://www.tiktok.com/@thewilliamsfam_/video/7593576912857861406"
+          },
+          {
+            "rank": 5,
+            "domain": "www.youtube.com",
+            "title": "AI Dance Video - I'm Living In Color",
+            "url": "https://www.youtube.com/watch?v=gbvzq5xHzcM"
+          },
+          {
+            "rank": 6,
+            "domain": "www.reddit.com",
+            "title": "Which is the best model for AI dance videos?",
+            "url": "https://www.reddit.com/r/StableDiffusion/comments/1q45413/which_is_the_best_model_for_ai_dance_videos/"
+          },
+          {
+            "rank": 7,
+            "domain": "mangoanimate.com",
+            "title": "AI Dance Video Generator from Photos Online",
+            "url": "https://mangoanimate.com/ai/ai-dance-generator"
+          },
+          {
+            "rank": 8,
+            "domain": "freebeat.ai",
+            "title": "freebeat AI Music Video Generator | Dance Video | Lyrics Video",
+            "url": "https://freebeat.ai/"
+          },
+          {
+            "rank": 9,
+            "domain": "play.google.com",
+            "title": "AI Dance Video - Photo Dance - Apps on ...",
+            "url": "https://play.google.com/store/apps/details?id=com.cupertinotech.aidancevideo&hl=en_US"
+          },
+          {
+            "rank": 10,
+            "domain": "www.youtube.com",
+            "title": "How To Create AI Dancing Baby Videos for Tiktok music ...",
+            "url": "https://www.youtube.com/watch?v=cw-XIuojmQA"
+          }
+        ]
+      },
+      "score_breakdown": {
+        "ai_demand": 28,
+        "seo_demand": 10,
+        "business_value_cpc": 4,
+        "serp_aeo_opportunity": 0,
+        "competitor_proof": 10,
+        "trend_bonus": 5
+      },
+      "total_score": 57
+    },
+    {
+      "id": "D8",
+      "name": "AI Motion Capture Toolchain (mocap for creators)",
+      "head_keyword": "motion capture software",
+      "keywords": [
+        "ai motion capture",
+        "motion capture ai",
+        "ai mocap",
+        "motion capture software",
+        "mocap software",
+        "ai motion capture software"
+      ],
+      "metrics": [
+        {
+          "keyword": "ai motion capture",
+          "seo_search_volume": 320,
+          "seo_cpc": 4.04,
+          "seo_competition_level": null,
+          "seo_trend": "declining",
+          "ai_search_volume": 21,
+          "ai_trend": "rising"
+        },
+        {
+          "keyword": "motion capture ai",
+          "seo_search_volume": 110,
+          "seo_cpc": 3.85,
+          "seo_competition_level": null,
+          "seo_trend": "declining",
+          "ai_search_volume": 21,
+          "ai_trend": "rising"
+        },
+        {
+          "keyword": "ai mocap",
+          "seo_search_volume": 170,
+          "seo_cpc": 6.11,
+          "seo_competition_level": null,
+          "seo_trend": "declining",
+          "ai_search_volume": 15,
+          "ai_trend": "rising"
+        },
+        {
+          "keyword": "motion capture software",
+          "seo_search_volume": 720,
+          "seo_cpc": 3.68,
+          "seo_competition_level": null,
+          "seo_trend": "stable",
+          "ai_search_volume": 38,
+          "ai_trend": "rising"
+        },
+        {
+          "keyword": "mocap software",
+          "seo_search_volume": 720,
+          "seo_cpc": 3.68,
+          "seo_competition_level": null,
+          "seo_trend": "stable",
+          "ai_search_volume": 6,
+          "ai_trend": "declining"
+        },
+        {
+          "keyword": "ai motion capture software",
+          "seo_search_volume": 70,
+          "seo_cpc": null,
+          "seo_competition_level": null,
+          "seo_trend": "rising",
+          "ai_search_volume": 0,
+          "ai_trend": "unknown"
+        }
+      ],
+      "aggregates": {
+        "top3_ai_sum": 80,
+        "top3_seo_sum": 1760,
+        "avg_cpc_top3_seo": 3.8000000000000003,
+        "top_ai_trend": "rising"
+      },
+      "serp": {
+        "ai_overview": true,
+        "paa_present": true,
+        "featured_snippet": false,
+        "unique_domains_top10": 9,
+        "top_organic": [
+          {
+            "rank": 1,
+            "domain": "www.rokoko.com",
+            "title": "Rokoko Studio: one software for all your mocap & animations",
+            "url": "https://www.rokoko.com/products/studio"
+          },
+          {
+            "rank": 2,
+            "domain": "www.autodesk.com",
+            "title": "Motion Capture Software | Mocap",
+            "url": "https://www.autodesk.com/solutions/motion-capture"
+          },
+          {
+            "rank": 3,
+            "domain": "optitrack.com",
+            "title": "OptiTrack - Motion Capture Systems",
+            "url": "https://optitrack.com/index.html"
+          },
+          {
+            "rank": 4,
+            "domain": "www.ipisoft.com",
+            "title": "iPi Soft- Markerless Motion Capture",
+            "url": "https://www.ipisoft.com/"
+          },
+          {
+            "rank": 5,
+            "domain": "www.reddit.com",
+            "title": "Recommend a good MoCap System for Indie Film-making.",
+            "url": "https://www.reddit.com/r/vfx/comments/1e2phw0/recommend_a_good_mocap_system_for_indie_filmmaking/"
+          },
+          {
+            "rank": 6,
+            "domain": "www.move.ai",
+            "title": "Move AI - Markerless Motion Capture & 3D Animation",
+            "url": "https://www.move.ai/"
+          },
+          {
+            "rank": 7,
+            "domain": "www.reddit.com",
+            "title": "FreeMoCap - A free open source markerless motion capture ...",
+            "url": "https://www.reddit.com/r/blender/comments/tbvdki/freemocap_a_free_open_source_markerless_motion/"
+          },
+          {
+            "rank": 8,
+            "domain": "www.deepmotion.com",
+            "title": "DeepMotion - AI Motion Capture & Body Tracking",
+            "url": "https://www.deepmotion.com/"
+          },
+          {
+            "rank": 9,
+            "domain": "remocapp.com",
+            "title": "Remocapp: Experience Free Motion Capture Studio with AI ...",
+            "url": "https://remocapp.com/"
+          },
+          {
+            "rank": 10,
+            "domain": "github.com",
+            "title": "freemocap/freemocap: Free Motion Capture for Everyone",
+            "url": "https://github.com/freemocap/freemocap"
+          }
+        ]
+      },
+      "score_breakdown": {
+        "ai_demand": 10,
+        "seo_demand": 10,
+        "business_value_cpc": 6,
+        "serp_aeo_opportunity": 12,
+        "competitor_proof": 10,
+        "trend_bonus": 5
+      },
+      "total_score": 53
+    },
+    {
+      "id": "D10",
+      "name": "AI Influencer on Instagram (distribution playbook)",
+      "head_keyword": "ai influencer instagram",
+      "keywords": [
+        "ai influencer instagram",
+        "ai influencer for instagram",
+        "virtual influencer instagram",
+        "ai influencer marketing"
+      ],
+      "metrics": [
+        {
+          "keyword": "ai influencer instagram",
+          "seo_search_volume": 170,
+          "seo_cpc": null,
+          "seo_competition_level": null,
+          "seo_trend": "stable",
+          "ai_search_volume": 53,
+          "ai_trend": "stable"
+        },
+        {
+          "keyword": "ai influencer for instagram",
+          "seo_search_volume": 10,
+          "seo_cpc": 1.97,
+          "seo_competition_level": null,
+          "seo_trend": "unknown",
+          "ai_search_volume": 53,
+          "ai_trend": "stable"
+        },
+        {
+          "keyword": "virtual influencer instagram",
+          "seo_search_volume": 20,
+          "seo_cpc": null,
+          "seo_competition_level": null,
+          "seo_trend": "rising",
+          "ai_search_volume": 0,
+          "ai_trend": "declining"
+        },
+        {
+          "keyword": "ai influencer marketing",
+          "seo_search_volume": 320,
+          "seo_cpc": 10.38,
+          "seo_competition_level": null,
+          "seo_trend": "stable",
+          "ai_search_volume": 4,
+          "ai_trend": "declining"
+        }
+      ],
+      "aggregates": {
+        "top3_ai_sum": 110,
+        "top3_seo_sum": 510,
+        "avg_cpc_top3_seo": 10.38,
+        "top_ai_trend": "stable"
+      },
+      "serp": {
+        "ai_overview": true,
+        "paa_present": true,
+        "featured_snippet": false,
+        "unique_domains_top10": 4,
+        "top_organic": [
+          {
+            "rank": 1,
+            "domain": "www.instagram.com",
+            "title": "Emily Pellegrini | AI Influencer (@emilypellegrini)",
+            "url": "https://www.instagram.com/emilypellegrini/?hl=en"
+          },
+          {
+            "rank": 2,
+            "domain": "www.instagram.com",
+            "title": "Miquela (@lilmiquela) \u2022 Instagram photos and videos",
+            "url": "https://www.instagram.com/lilmiquela/?hl=en"
+          },
+          {
+            "rank": 3,
+            "domain": "www.instagram.com",
+            "title": "Aitana Lopez\u2728| Virtual Soul (@fit_aitana)",
+            "url": "https://www.instagram.com/fit_aitana/?hl=en"
+          },
+          {
+            "rank": 4,
+            "domain": "www.instagram.com",
+            "title": "\ud835\udc40\ud835\udc56\ud835\udc4e \ud835\udc4d\ud835\udc52\ud835\udc59\ud835\udc62 \u2661 (@miazelu) \u2022 Instagram photos and videos",
+            "url": "https://www.instagram.com/miazelu/?hl=en"
+          },
+          {
+            "rank": 5,
+            "domain": "influencers.feedspot.com",
+            "title": "Top 40 AI Models Influencers in 2026",
+            "url": "https://influencers.feedspot.com/ai_models_instagram_influencers/"
+          },
+          {
+            "rank": 6,
+            "domain": "www.instagram.com",
+            "title": "Milla Sofia (@millasofiafin) \u2022 Instagram photos and videos",
+            "url": "https://www.instagram.com/millasofiafin/?hl=en"
+          },
+          {
+            "rank": 7,
+            "domain": "www.influencer-hero.com",
+            "title": "Top 20 US Artificial Intelligence Instagram Influencers",
+            "url": "https://www.influencer-hero.com/blogs/top-us-artificial-intelligence-instagram-influencers-find-influencers-in-the-united-states"
+          },
+          {
+            "rank": 8,
+            "domain": "www.reddit.com",
+            "title": "AI Instagram models/ influencer? How are they doing this?",
+            "url": "https://www.reddit.com/r/comfyui/comments/1qkjqc0/ai_instagram_models_influencer_how_are_they_doing/"
+          },
+          {
+            "rank": 9,
+            "domain": "www.instagram.com",
+            "title": "N A I N A \u2764\ufe0f India's First AI Superstar! (@naina_avtr)",
+            "url": "https://www.instagram.com/naina_avtr/?hl=en"
+          },
+          {
+            "rank": 10,
+            "domain": "influencers.feedspot.com",
+            "title": "Top 40 AI Models Influencers in 2026",
+            "url": "https://influencers.feedspot.com/ai_models_instagram_influencers/"
+          }
+        ]
+      },
+      "score_breakdown": {
+        "ai_demand": 15,
+        "seo_demand": 6,
+        "business_value_cpc": 10,
+        "serp_aeo_opportunity": 12,
+        "competitor_proof": 4,
+        "trend_bonus": 3
+      },
+      "total_score": 50
+    },
+    {
+      "id": "D7",
+      "name": "Virtual Model / AI Model for Clothing (digital model)",
+      "head_keyword": "ai model for clothing",
+      "keywords": [
+        "virtual model",
+        "virtual models",
+        "ai fashion model",
+        "ai fashion models",
+        "ai model for clothing",
+        "ai model photos",
+        "virtual fashion model"
+      ],
+      "metrics": [
+        {
+          "keyword": "virtual model",
+          "seo_search_volume": 480,
+          "seo_cpc": 2.06,
+          "seo_competition_level": null,
+          "seo_trend": "stable",
+          "ai_search_volume": 125,
+          "ai_trend": "declining"
+        },
+        {
+          "keyword": "virtual models",
+          "seo_search_volume": 480,
+          "seo_cpc": 2.06,
+          "seo_competition_level": null,
+          "seo_trend": "stable",
+          "ai_search_volume": 125,
+          "ai_trend": "declining"
+        },
+        {
+          "keyword": "ai fashion model",
+          "seo_search_volume": 590,
+          "seo_cpc": 4.94,
+          "seo_competition_level": null,
+          "seo_trend": "stable",
+          "ai_search_volume": 28,
+          "ai_trend": "declining"
+        },
+        {
+          "keyword": "ai fashion models",
+          "seo_search_volume": 590,
+          "seo_cpc": 4.94,
+          "seo_competition_level": null,
+          "seo_trend": "stable",
+          "ai_search_volume": 28,
+          "ai_trend": "declining"
+        },
+        {
+          "keyword": "ai model for clothing",
+          "seo_search_volume": 260,
+          "seo_cpc": 4.65,
+          "seo_competition_level": null,
+          "seo_trend": "declining",
+          "ai_search_volume": 109,
+          "ai_trend": "rising"
+        },
+        {
+          "keyword": "ai model photos",
+          "seo_search_volume": 110,
+          "seo_cpc": 2.51,
+          "seo_competition_level": null,
+          "seo_trend": "rising",
+          "ai_search_volume": 9,
+          "ai_trend": "declining"
+        },
+        {
+          "keyword": "virtual fashion model",
+          "seo_search_volume": 20,
+          "seo_cpc": null,
+          "seo_competition_level": null,
+          "seo_trend": "declining",
+          "ai_search_volume": 1,
+          "ai_trend": "declining"
+        }
+      ],
+      "aggregates": {
+        "top3_ai_sum": 359,
+        "top3_seo_sum": 1660,
+        "avg_cpc_top3_seo": 3.9800000000000004,
+        "top_ai_trend": "declining"
+      },
+      "serp": {
+        "ai_overview": false,
+        "paa_present": false,
+        "featured_snippet": false,
+        "unique_domains_top10": 10,
+        "top_organic": [
+          {
+            "rank": 1,
+            "domain": "botika.io",
+            "title": "Botika - AI generated models for fashion",
+            "url": "https://botika.io/"
+          },
+          {
+            "rank": 2,
+            "domain": "fashn.ai",
+            "title": "FASHN | AI Fashion Studio for Brands & Creatives",
+            "url": "https://fashn.ai/"
+          },
+          {
+            "rank": 3,
+            "domain": "www.weshop.ai",
+            "title": "AI Generated Models for Fashion E-Commerce",
+            "url": "https://www.weshop.ai/tools/aimodel"
+          },
+          {
+            "rank": 4,
+            "domain": "www.reddit.com",
+            "title": "App recommendations for AI Generated Human Models ...",
+            "url": "https://www.reddit.com/r/eBaySellerAdvice/comments/1k7pn7n/app_recommendations_for_ai_generated_human_models/"
+          },
+          {
+            "rank": 5,
+            "domain": "modelia.ai",
+            "title": "Best AI Fashion Model Generator for Images & Video with ...",
+            "url": "https://modelia.ai/"
+          },
+          {
+            "rank": 6,
+            "domain": "www.piccopilot.com",
+            "title": "AI Fashion Models \u2013 Effortlessly create studio-quality ...",
+            "url": "https://www.piccopilot.com/tools/ai-model"
+          },
+          {
+            "rank": 7,
+            "domain": "thenewblack.ai",
+            "title": "AI Fashion Model Generator",
+            "url": "https://thenewblack.ai/ai-generated-models"
+          },
+          {
+            "rank": 8,
+            "domain": "uwear.ai",
+            "title": "Uwear.ai - AI Fashion Photography Platform | Free AI ...",
+            "url": "https://uwear.ai/"
+          },
+          {
+            "rank": 9,
+            "domain": "www.fiverr.com",
+            "title": "24 Best Ai Fashion Model Services To Buy Online",
+            "url": "https://www.fiverr.com/gigs/ai-fashion-model"
+          },
+          {
+            "rank": 10,
+            "domain": "www.photoroom.com",
+            "title": "AI-Generated Fashion Models For Product Photography",
+            "url": "https://www.photoroom.com/tools/virtual-model"
+          }
+        ]
+      },
+      "score_breakdown": {
+        "ai_demand": 20,
+        "seo_demand": 10,
+        "business_value_cpc": 6,
+        "serp_aeo_opportunity": 0,
+        "competitor_proof": 10,
+        "trend_bonus": 1
+      },
+      "total_score": 47
+    },
+    {
+      "id": "D9",
+      "name": "HeyGen-specific: Avatar IV + Interactive Avatars",
+      "head_keyword": "heygen avatar iv",
+      "keywords": [
+        "heygen ai avatar",
+        "heygen interactive avatar",
+        "heygen avatar iv",
+        "heygen avatar 4",
+        "heygen liveavatar",
+        "heygen ugc"
+      ],
+      "metrics": [
+        {
+          "keyword": "heygen ai avatar",
+          "seo_search_volume": 1000,
+          "seo_cpc": 2.37,
+          "seo_competition_level": null,
+          "seo_trend": "rising",
+          "ai_search_volume": 5,
+          "ai_trend": "rising"
+        },
+        {
+          "keyword": "heygen interactive avatar",
+          "seo_search_volume": 390,
+          "seo_cpc": 2.46,
+          "seo_competition_level": null,
+          "seo_trend": "stable",
+          "ai_search_volume": 5,
+          "ai_trend": "rising"
+        },
+        {
+          "keyword": "heygen avatar iv",
+          "seo_search_volume": 210,
+          "seo_cpc": 3.65,
+          "seo_competition_level": null,
+          "seo_trend": "unknown",
+          "ai_search_volume": 4,
+          "ai_trend": "unknown"
+        },
+        {
+          "keyword": "heygen avatar 4",
+          "seo_search_volume": 110,
+          "seo_cpc": 1.28,
+          "seo_competition_level": null,
+          "seo_trend": "unknown",
+          "ai_search_volume": 2,
+          "ai_trend": "unknown"
+        },
+        {
+          "keyword": "heygen liveavatar",
+          "seo_search_volume": 10,
+          "seo_cpc": 3.85,
+          "seo_competition_level": null,
+          "seo_trend": "unknown",
+          "ai_search_volume": 0,
+          "ai_trend": "unknown"
+        },
+        {
+          "keyword": "heygen ugc",
+          "seo_search_volume": 40,
+          "seo_cpc": 4.01,
+          "seo_competition_level": null,
+          "seo_trend": "declining",
+          "ai_search_volume": 0,
+          "ai_trend": "unknown"
+        }
+      ],
+      "aggregates": {
+        "top3_ai_sum": 14,
+        "top3_seo_sum": 1600,
+        "avg_cpc_top3_seo": 2.8266666666666667,
+        "top_ai_trend": "rising"
+      },
+      "serp": {
+        "ai_overview": false,
+        "paa_present": true,
+        "featured_snippet": false,
+        "unique_domains_top10": 5,
+        "top_organic": [
+          {
+            "rank": 1,
+            "domain": "www.heygen.com",
+            "title": "Introducing Avatar IV, the most realistic AI Avatar model ever",
+            "url": "https://www.heygen.com/avatars/avatar-iv"
+          },
+          {
+            "rank": 2,
+            "domain": "help.heygen.com",
+            "title": "HeyGen Avatar IV Complete Guide!",
+            "url": "https://help.heygen.com/en/articles/11269603-heygen-avatar-iv-complete-guide"
+          },
+          {
+            "rank": 3,
+            "domain": "www.heygen.com",
+            "title": "Introducing Voice Director & Avatar IV | HeyGen AI Video",
+            "url": "https://www.heygen.com/blog/introducing-voice-director-and-avatar-iv"
+          },
+          {
+            "rank": 4,
+            "domain": "www.heygen.com",
+            "title": "Free AI Avatar Generator - 1100+ Realistic Avatars Available",
+            "url": "https://www.heygen.com/avatars"
+          },
+          {
+            "rank": 5,
+            "domain": "www.heygen.com",
+            "title": "HeyGen",
+            "url": "https://www.heygen.com/"
+          },
+          {
+            "rank": 6,
+            "domain": "www.heygen.com",
+            "title": "Announcing Avatar IV API",
+            "url": "https://www.heygen.com/blog/announcing-the-avatar-iv-api"
+          },
+          {
+            "rank": 7,
+            "domain": "community.heygen.com",
+            "title": "Avatar IV is here!!! | HeyGen Hub",
+            "url": "https://community.heygen.com/public/forum/boards/heygen-updates-qxp/posts/avatar-iv-is-here-9iohj9xczk"
+          },
+          {
+            "rank": 8,
+            "domain": "www.reddit.com",
+            "title": "I tried HeyGen's new Avatar IV to create my AI Digital Twin ...",
+            "url": "https://www.reddit.com/r/AI_UGC_Marketing/comments/1ojsjuz/i_tried_heygens_new_avatar_iv_to_create_my_ai/"
+          },
+          {
+            "rank": 9,
+            "domain": "www.youtube.com",
+            "title": "5 Tips you NEED for INSANE results on HeyGen Avatar IV",
+            "url": "https://www.youtube.com/watch?v=UdhrewW0EV8"
+          },
+          {
+            "rank": 10,
+            "domain": "www.reddit.com",
+            "title": "I tried HeyGen's new Avatar IV to create my AI Digital Twin ...",
+            "url": "https://www.reddit.com/r/heygen/comments/1ojsion/i_tried_heygens_new_avatar_iv_to_create_my_ai/"
+          }
+        ]
+      },
+      "score_breakdown": {
+        "ai_demand": 5,
+        "seo_demand": 10,
+        "business_value_cpc": 4,
+        "serp_aeo_opportunity": 5,
+        "competitor_proof": 6,
+        "trend_bonus": 5
+      },
+      "total_score": 35
+    }
+  ]
+}

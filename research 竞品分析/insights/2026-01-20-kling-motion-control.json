@@ -1,0 +1,26 @@
+{
+  "topic_slug": "kling-motion-control",
+  "date": "2026-01-20",
+  "thesis": "Motion Control 将动作生成的确定性从 prompt 猜测变成 reference 迁移，让创作者通过参考视频精确控制动作",
+  "why_now": "AI 视频进入精确控制阶段，Kling 2.6 Motion Control 功能发布后案例爆发",
+  "key_takeaways": [
+    "Reference video 是动作蓝图，AI 直接复制轨迹而非猜测意图",
+    "Prompt 主要用于场景/风格描述，不要重复描述动作本身",
+    "选对模式/朝向影响成功率和生成质量",
+    "参考视频的清晰度和动作明显度直接影响最终结果"
+  ],
+  "do_not_say": [
+    "不确定的版本号信息",
+    "未经证实的成功率数字",
+    "其他模型的对比评价"
+  ],
+  "product_lens": "多模型一站式",
+  "product_lens_detail": "alici.ai 支持 Kling、Runway、Veo 等多模型切换，无需学习多个工具",
+  "audience": "视频营销新手、独立创作者",
+  "audience_detail": "需要快速上手工具，关注实用效果和可复用规律",
+  "metadata": {
+    "collected_via": "interactive_qa",
+    "collection_date": "2026-01-20",
+    "version": "1.0"
+  }
+}

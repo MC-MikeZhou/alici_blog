@@ -1,0 +1,34 @@
+# macOS filesystem noise
+.DS_Store
+
+# Python caches / virtual environments
+__pycache__/
+*.py[cod]
+*.pyo
+venv/
+.env
+.env.*
+
+# Node / frontend dependencies
+node_modules/
+.npm/
+build/
+dist/
+
+# Project-specific generated assets
+# Temporary working files and scraped materials live in tmp/
+tmp/
+tmp_*/
+tmp_image.json
+
+# Generated content and raw inputs
+input/
+output/
+
+# AI-generated image artifacts are uploaded separately, no need to version
+gen_images/
+
+# Miscellaneous run artifacts
+*.log
+*.lock
+*.tmp

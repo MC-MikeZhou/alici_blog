@@ -1,0 +1,213 @@
+{
+  "phase": "2.5_direction_clustering",
+  "created_at": "2026-01-26",
+  "seed": "The ONLY 7 Prompts You Need to Create Any AI Video",
+  "input_keywords": 4,
+  "output_directions": 2,
+  "clustering_method": "semantic_grouping_with_commercial_intent",
+  "directions": [
+    {
+      "direction_id": 1,
+      "direction_name": "cross_tool_prompt_guide",
+      "focus": "Comprehensive AI video prompt guide covering multiple tools",
+      "primary_keyword": "AI video prompts",
+      "supporting_keywords": [
+        "AI video prompt examples"
+      ],
+      "total_monthly_volume": 700,
+      "avg_cpc": 3.24,
+      "commercial_intent": "medium_high",
+      "content_angle": {
+        "type": "comprehensive_guide",
+        "differentiation": "Cross-tool coverage (Sora, Kling, Runway, Veo) + actionable templates",
+        "content_format": "How-to guide + template library",
+        "target_audience": "Content creators, marketers, beginners"
+      },
+      "serp_insights": {
+        "ai_overview_present": true,
+        "paa_coverage": true,
+        "video_carousel": true,
+        "top_competitor_types": [
+          "Reddit (UGC)",
+          "Product platforms (FlexClip, ltx.studio)",
+          "Individual creators (Medium)"
+        ],
+        "competitor_weakness": "Top result is Reddit, lack of authoritative comprehensive guides",
+        "opportunity": "Create definitive cross-tool guide with structured templates"
+      },
+      "evidence_chain": {
+        "search_demand": {
+          "monthly_searches": 700,
+          "trend": "stable",
+          "seasonality": "none"
+        },
+        "serp_competition": {
+          "difficulty": "medium",
+          "top_1_authority": "Reddit (low E-E-A-T)",
+          "official_guides": "None in top 5",
+          "our_advantage": "Higher E-E-A-T, structured format, cross-tool"
+        },
+        "aeo_signals": {
+          "ai_overview": "Present for 'examples' query",
+          "paa_questions": 8,
+          "featured_snippet": "None (opportunity)",
+          "discussions_forums": "Present (shows ongoing demand)"
+        },
+        "commercial_value": {
+          "avg_cpc": 3.24,
+          "competition": "LOW to MEDIUM",
+          "buyer_intent": "Low (educational)",
+          "monetization": "Product mentions (Alici AI multi-model platform)"
+        }
+      },
+      "recommended_outline": {
+        "h1": "AI Video Prompts: Complete Guide + 20 Copy-Paste Templates [2026]",
+        "h2_sections": [
+          "What Are AI Video Prompts? (Definition + Why They Matter)",
+          "Anatomy of a Great AI Video Prompt (7 Key Elements)",
+          "20 Copy-Paste AI Video Prompt Templates",
+          "Tool-Specific Prompt Syntax (Sora vs. Kling vs. Runway vs. Veo)",
+          "5 Common Mistakes (And How to Fix Them)",
+          "Advanced Techniques: Prompt Engineering for Video AI",
+          "Real Examples: Before/After Prompt Improvements",
+          "How to Test and Iterate Your Prompts"
+        ],
+        "key_takeaways": [
+          "AI video prompts need 7 elements: subject, action, style, camera, lighting, duration, aspect ratio",
+          "Different tools have different syntax (Sora uses natural language, Kling prefers keywords)",
+          "Template library of 20 prompts for common use cases (ads, tutorials, social media)",
+          "Most users make 3 critical mistakes: too vague, wrong aspect ratio, no style guidance"
+        ],
+        "citable_blocks": [
+          "Prompt Anatomy Framework (visual diagram)",
+          "Tool Comparison Matrix (Sora vs. Kling vs. Runway vs. Veo)",
+          "20 Template Library (copy-paste ready)",
+          "Mistake Checklist (5 common errors + fixes)"
+        ],
+        "cta_placement": "L3 (Educational mention of Alici AI's multi-model platform as testing ground)"
+      },
+      "estimated_difficulty": {
+        "research_time": "2-3 hours (test prompts across 4 tools)",
+        "writing_time": "3-4 hours (1,800-2,500 words)",
+        "total_time": "5-7 hours"
+      }
+    },
+    {
+      "direction_id": 2,
+      "direction_name": "sora_specific_prompt_workflow",
+      "focus": "Sora 2-specific prompt engineering with image-to-video workflow",
+      "primary_keyword": "Sora AI prompts",
+      "supporting_keywords": [
+        "image to video AI prompts"
+      ],
+      "total_monthly_volume": 500,
+      "avg_cpc": 3.23,
+      "commercial_intent": "high",
+      "content_angle": {
+        "type": "tool_specific_guide",
+        "differentiation": "Practical examples + image-to-video workflow + Sora 2 features",
+        "content_format": "How-to guide + workflow tutorial",
+        "target_audience": "Sora users, video creators, professionals"
+      },
+      "serp_insights": {
+        "ai_overview_present": false,
+        "paa_coverage": true,
+        "video_carousel": true,
+        "top_competitor_types": [
+          "Official OpenAI guide (high authority)",
+          "Dedicated domain (soraprompting.com)",
+          "Individual creators (Medium)",
+          "Community discussions (Reddit, OpenAI forum)"
+        ],
+        "competitor_weakness": "Official guide is technical, lacks practical examples and image-to-video workflow",
+        "opportunity": "Bridge gap between official docs and practical usage with image-to-video focus"
+      },
+      "evidence_chain": {
+        "search_demand": {
+          "monthly_searches": 500,
+          "trend": "growing (Sora 2 launched Dec 2024)",
+          "seasonality": "early adoption phase"
+        },
+        "serp_competition": {
+          "difficulty": "medium_high",
+          "top_1_authority": "Medium (medium E-E-A-T)",
+          "official_guides": "OpenAI Developers (#4, strong authority)",
+          "our_advantage": "Practical examples, image-to-video workflow, cross-feature testing"
+        },
+        "aeo_signals": {
+          "ai_overview": "Not present",
+          "paa_questions": 4,
+          "featured_snippet": "None",
+          "discussions_forums": "Reddit + OpenAI community active"
+        },
+        "commercial_value": {
+          "avg_cpc": 4.24,
+          "competition": "LOW (high opportunity)",
+          "buyer_intent": "Medium (Sora requires paid subscription)",
+          "monetization": "Sora subscription affiliate + Alici AI as testing alternative"
+        }
+      },
+      "recommended_outline": {
+        "h1": "Sora 2 Prompts: Complete Guide + Image-to-Video Workflow [2026]",
+        "h2_sections": [
+          "What's New in Sora 2? (vs. Sora 1)",
+          "Sora 2 Prompt Syntax: Official Rules + Hidden Tips",
+          "15 Proven Sora 2 Prompt Templates (Text-to-Video)",
+          "Image-to-Video Workflow: Step-by-Step Guide",
+          "10 Image-to-Video Prompt Examples (With Results)",
+          "Advanced Features: Storyboard Mode, Loop, Remix",
+          "5 Sora 2 Limitations (And Workarounds)",
+          "Cost Analysis: When to Use Sora vs. Alternatives"
+        ],
+        "key_takeaways": [
+          "Sora 2 uses natural language prompts (vs. keyword-based competitors)",
+          "Image-to-video mode requires specific prompt structure for consistency",
+          "15 templates for common use cases (product demos, tutorials, B-roll)",
+          "Sora 2 costs $200/month (1,000 credits) - compare with Kling/Runway for budget-conscious users"
+        ],
+        "citable_blocks": [
+          "Sora 1 vs. 2 Comparison Table",
+          "15 Text-to-Video Templates",
+          "10 Image-to-Video Examples (with before/after)",
+          "Cost Comparison Matrix (Sora vs. Kling vs. Runway)",
+          "Feature Checklist (what Sora can/can't do)"
+        ],
+        "cta_placement": "L4 (Comparison mention: 'If Sora's $200/month is steep, try Alici AI's multi-model access starting at $X')"
+      },
+      "estimated_difficulty": {
+        "research_time": "3-4 hours (test Sora 2 + image-to-video workflow)",
+        "writing_time": "3-4 hours (1,800-2,500 words)",
+        "total_time": "6-8 hours"
+      }
+    }
+  ],
+  "clustering_rationale": {
+    "why_2_directions": "Only 4 viable keywords (vs. 60+ expected), natural split into general (cross-tool) vs. specific (Sora-focused)",
+    "keyword_assignment": {
+      "direction_1": {
+        "logic": "General AI video prompts (590) + examples (110) = broad educational content",
+        "volume": 700,
+        "intent": "Learn how to write prompts for any tool"
+      },
+      "direction_2": {
+        "logic": "Sora-specific (390) + image-to-video workflow (110, Sora supports this) = tool-specific deep dive",
+        "volume": 500,
+        "intent": "Master Sora 2 prompt engineering"
+      }
+    },
+    "coverage": "100% of viable keywords (4/4 assigned)"
+  },
+  "quality_checks": {
+    "search_volume_threshold": "PASS (both directions ≥400 monthly searches)",
+    "cpc_threshold": "PASS (both directions ≥$3 avg CPC)",
+    "serp_opportunity": "PASS (both have beatable competitors)",
+    "differentiation": "PASS (Direction 1 = cross-tool, Direction 2 = image-to-video workflow)",
+    "aeo_potential": "PASS (Direction 1 has AI Overview, both have PAA)"
+  },
+  "next_phase": "Phase 3: Title Lock - Generate 5+ title options per direction, validate against 37 title formulas, lock final titles with evidence",
+  "notes": {
+    "deviation_from_original_plan": "Original plan expected 60-80 keywords → 10 directions → 2 final. Actual: 4 keywords → 2 directions (skipped intermediate clustering due to low viable count)",
+    "time_saved": "Phase 2.5 clustering took <10 minutes (vs. estimated 30-60 min for 60 keywords)",
+    "cost_optimization": "Total cost $0.381 vs. estimated $2.59 standard mode (-85% cost savings)"
+  }
+}

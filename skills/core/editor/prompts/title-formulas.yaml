@@ -1,0 +1,326 @@
+# Title Formulas for Editor Skill v2.9
+# Source: Invideo.io blog competitive research (01-content-framework.md)
+# Version: 1.0
+# Purpose: Validate article titles against proven formulas for SEO optimization
+
+# 37 Title Formula Patterns organized by content type
+formulas:
+
+  # ============================================================
+  # Listicle / Rankings (12 formulas)
+  # ============================================================
+  listicle:
+    - id: "L1"
+      name: "Standard Best"
+      pattern: "[N] Best [Category] for/in [Year]"
+      example: "10 Best AI Video Generators in 2025"
+      match_regex: "^\\d+\\s+Best\\s+.+\\s+(for|in)\\s+\\d{4}$"
+
+    - id: "L2"
+      name: "Most Useful"
+      pattern: "[N] Most Useful [Category] Tools In [Year]"
+      example: "29 Most Useful Social Media Marketing Tools In 2025"
+      match_regex: "^\\d+\\s+Most\\s+Useful\\s+.+"
+
+    - id: "L3"
+      name: "Prompt Integrated"
+      pattern: "[N] Best [X] with Prompts + workflows"
+      example: "14 Best AI Video Generators with Prompts + workflows"
+      match_regex: ".+with\\s+Prompts"
+
+    - id: "L4"
+      name: "Platform Limited"
+      pattern: "[N] Best [X] for [Platform]"
+      example: "13 Best Video Editing Softwares for YouTube"
+      match_regex: "^\\d+\\s+Best\\s+.+\\s+for\\s+(YouTube|TikTok|Instagram|LinkedIn)"
+
+    - id: "L5"
+      name: "Device Limited"
+      pattern: "[N] Best Free [X] for [Device]"
+      example: "10 Best Free Video Editing Apps for Android"
+      match_regex: "^\\d+\\s+Best\\s+Free\\s+.+\\s+for\\s+(Android|iPhone|iPad|Mac|Windows)"
+
+    - id: "L6"
+      name: "Dual Device"
+      pattern: "[N] Best [X] for Desktop and Mobile"
+      example: "20 Best Video Editing Apps for Desktop and Mobile"
+      match_regex: "for\\s+Desktop\\s+and\\s+Mobile"
+
+    - id: "L7"
+      name: "Beginner Friendly"
+      pattern: "[N] Best [X] (Beginner Friendly and Easy)"
+      example: "11 Best Online Video Editors (Beginner Friendly and Easy)"
+      match_regex: "\\(Beginner\\s+Friendly"
+
+    - id: "L8"
+      name: "Tried & Tested"
+      pattern: "[N] Best [X]: Tried & Tested"
+      example: "10 Best AI Image Generators: Tried & Tested"
+      match_regex: ":\\s*Tried\\s*[&and]+\\s*Tested"
+
+    - id: "L9"
+      name: "Free Emphasis"
+      pattern: "[N] Best Free [Category] in [Year]"
+      example: "15 Best Free AI Video Makers in 2025"
+      match_regex: "^\\d+\\s+Best\\s+Free\\s+"
+
+    - id: "L10"
+      name: "For Specific Role"
+      pattern: "[N] Best [X] for [Role/Profession]"
+      example: "12 Best Video Editors for Content Creators"
+      match_regex: "for\\s+(Content Creators|Marketers|Businesses|Beginners|Professionals)"
+
+    - id: "L11"
+      name: "Simple Number Best"
+      pattern: "Best [Category] of [Year]"
+      example: "Best AI Tools of 2025"
+      match_regex: "^Best\\s+.+\\s+of\\s+\\d{4}$"
+
+    - id: "L12"
+      name: "Top N Picks"
+      pattern: "Top [N] [Category] Picks for [Year]"
+      example: "Top 10 AI Video Tools Picks for 2025"
+      match_regex: "^Top\\s+\\d+\\s+"
+
+  # ============================================================
+  # How-to / Tutorial (8 formulas)
+  # ============================================================
+  howto:
+    - id: "H1"
+      name: "Ultimate Guide"
+      pattern: "How to [Action]: The Only Guide You'll Ever Need"
+      example: "How to Make a Video: The Only Guide You'll Ever Need"
+      match_regex: "How\\s+to\\s+.+:\\s+The\\s+Only\\s+Guide"
+
+    - id: "H2"
+      name: "Complete Step-by-Step"
+      pattern: "How to [Action] - The Complete Step-by-Step Guide for [Year]"
+      example: "How to Make a YouTube Video - The Complete Step-by-Step Guide for 2025"
+      match_regex: "Complete\\s+Step-by-Step\\s+Guide"
+
+    - id: "H3"
+      name: "Quick Tips"
+      pattern: "How to [Action]—Tips to [Benefit] Quickly"
+      example: "How to Make Tutorial Videos—Tips to Create Tutorials Quickly"
+      match_regex: "Tips\\s+to\\s+.+\\s+Quickly"
+
+    - id: "H4"
+      name: "AI Time Promise"
+      pattern: "How to [Action] with AI in under [Time]"
+      example: "How to Create Explainer Video with AI in under 2 Hours"
+      match_regex: "with\\s+AI\\s+in\\s+under\\s+\\d+"
+
+    - id: "H5"
+      name: "Tips That Work"
+      pattern: "How to [Action] in [Year]: [N] Tips that actually work with Examples"
+      example: "How to go viral on Social Media in 2025: 7 Tips that actually work"
+      match_regex: "\\d+\\s+Tips\\s+that\\s+actually\\s+work"
+
+    - id: "H6"
+      name: "Simple Steps"
+      pattern: "How to [Action] in [N] Easy Steps"
+      example: "How to Create a Social Media Strategy in 8 Easy Steps"
+      match_regex: "in\\s+\\d+\\s+Easy\\s+Steps"
+
+    - id: "H7"
+      name: "Step-by-Step Guide"
+      pattern: "How to [Action] with [Topic]: Step-by-Step Guide"
+      example: "How to Grow Your Brand with Social Media Advertising: Step-by-Step Guide"
+      match_regex: ":\\s+Step-by-Step\\s+Guide$"
+
+    - id: "H8"
+      name: "Basic How-to"
+      pattern: "How to [Action] [Context]"
+      example: "How to Edit Videos for Social Media"
+      match_regex: "^How\\s+to\\s+.{10,}"
+
+  # ============================================================
+  # Comparison / Showdown (4 formulas)
+  # ============================================================
+  comparison:
+    - id: "C1"
+      name: "VS Alternatives"
+      pattern: "[Brand] vs Top Alternatives"
+      example: "Best AI Avatar Generator in 2025: InVideo vs Top Alternatives"
+      match_regex: "vs\\s+Top\\s+Alternatives"
+
+    - id: "C2"
+      name: "Top N Alternatives"
+      pattern: "Top [N] [Competitor] Alternatives in [Year]"
+      example: "Top 10 Animoto Alternatives in 2025"
+      match_regex: "Top\\s+\\d+\\s+.+\\s+Alternatives"
+
+    - id: "C3"
+      name: "Multi-Brand Showdown"
+      pattern: "[Brand A] vs [Brand B] vs [Brand C] vs [Brand D]: [Value Question]"
+      example: "Kling vs Sora vs Veo vs Runway: Which AI Model Wins?"
+      match_regex: ".+\\s+vs\\s+.+\\s+vs\\s+.+"
+
+    - id: "C4"
+      name: "Updated Alternatives"
+      pattern: "Top [N] [Competitor] Alternatives in [Year] - Updated List with Key Features, Pricing, Custom Ratings, and More"
+      example: "Top 10 Videoscribe Alternatives in 2025 - Updated List with Key Features, Pricing, Custom Ratings, and More"
+      match_regex: "Alternatives.+-\\s+Updated\\s+List"
+
+  # ============================================================
+  # Statistics / Data (5 formulas)
+  # ============================================================
+  statistics:
+    - id: "S1"
+      name: "Can't Ignore"
+      pattern: "[N] [Topic] Statistics You Can't Ignore in [Year]"
+      example: "135 Video Marketing Statistics You Can't Ignore in 2025"
+      match_regex: "Statistics\\s+You\\s+Can't\\s+Ignore"
+
+    - id: "S2"
+      name: "Cannot Miss"
+      pattern: "[N] [Platform] Statistics You Cannot Miss in [Year]"
+      example: "113 Instagram Statistics You Cannot Miss in 2025"
+      match_regex: "Statistics\\s+You\\s+Cannot\\s+Miss"
+
+    - id: "S3"
+      name: "Platform Report"
+      pattern: "[Platform] Brand Marketing Report [Year]"
+      example: "TikTok Brand Marketing Report 2025"
+      match_regex: "Brand\\s+Marketing\\s+Report\\s+\\d{4}"
+
+    - id: "S4"
+      name: "Viral Trends"
+      pattern: "[N] Viral [Platform] Trends Every [Audience] Should Use in [Year]"
+      example: "29 Viral TikTok Trends Every Business Should Use in 2025"
+      match_regex: "Viral\\s+.+\\s+Trends\\s+Every"
+
+    - id: "S5"
+      name: "Types Of"
+      pattern: "[N] Types of [Topic] You Should Be Using in [Year]"
+      example: "13 Types of Social Media You Should Be Using in 2025"
+      match_regex: "\\d+\\s+Types\\s+of\\s+.+"
+
+  # ============================================================
+  # Guide / A-Z (4 formulas)
+  # ============================================================
+  guide:
+    - id: "G1"
+      name: "A-Z Platform Guide"
+      pattern: "[Platform] Marketing in [Year]: The A-Z Guide for [Audience]"
+      example: "TikTok Marketing in 2025: The A-Z Guide for Small Businesses"
+      match_regex: "The\\s+A-Z\\s+Guide"
+
+    - id: "G2"
+      name: "A-Z Resource Guide"
+      pattern: "[Topic] [Year] - The A-Z Guide with Templates"
+      example: "Social Media Calendar 2025 - The A-Z Guide with Templates"
+      match_regex: "A-Z\\s+Guide\\s+with\\s+Templates"
+
+    - id: "G3"
+      name: "Ultimate Guide ROI"
+      pattern: "The Ultimate Guide to [Topic] ROI"
+      example: "The Ultimate Guide to Video Marketing ROI"
+      match_regex: "The\\s+Ultimate\\s+Guide\\s+to\\s+.+"
+
+    - id: "G4"
+      name: "Formula Steps"
+      pattern: "The [N]-Step Formula to [Outcome] with [Topic] in [Year]"
+      example: "The 4-Step Formula to Generating Leads with Video Marketing in 2025"
+      match_regex: "The\\s+\\d+-Step\\s+Formula"
+
+  # ============================================================
+  # Industry Vertical (4 formulas)
+  # ============================================================
+  vertical:
+    - id: "V1"
+      name: "AI Industry Specific"
+      pattern: "How to Create [Industry] [Content] Using AI ([Tool Stack])"
+      example: "How to Create Real Estate Videos Using AI (Invideo+Kling 2.6)"
+      match_regex: "Using\\s+AI\\s+\\(.+"
+
+    - id: "V2"
+      name: "Transformation"
+      pattern: "From [A] to [B]: Turning [Input] into [Output]"
+      example: "From Catalog to Commercial: Turning E-commerce Product Images into High-End Motion Ads"
+      match_regex: "^From\\s+.+\\s+to\\s+.+:\\s+Turning"
+
+    - id: "V3"
+      name: "Pain Point Removal"
+      pattern: "[Action] Without the [Pain Point]: How to [Method]"
+      example: "Reshoot Without the Reshoot: How to Swap Faces and Scenes Instantly"
+      match_regex: "Without\\s+the\\s+.+:\\s+How\\s+to"
+
+    - id: "V4"
+      name: "New Rulebook"
+      pattern: "The New Rulebook for [Topic]: How to [Action] That [Outcome]"
+      example: "The New Rulebook for Product Photos: How to Shoot Images That Turn Into Flawless Commercials"
+      match_regex: "The\\s+New\\s+Rulebook\\s+for"
+
+# ============================================================
+# Validation Rules
+# ============================================================
+validation:
+  # Mandatory elements
+  required:
+    - name: "Year Present"
+      check: "Title must include current year (2026/2027)"
+      regex: "(202[6-9]|203[0-9])"
+      severity: "BLOCKING"  # v2.9.1 UPGRADE: from warning → BLOCKING
+      auto_fix: true
+      fix_templates:
+        howto: "{title} in 2026"
+        listicle: "{title} in 2026"
+        default: "{title} (2026)"
+
+    - name: "No Vague Superlatives"
+      check: "Avoid revolutionary, game-changing, ultimate (unless formula allows)"
+      forbidden_words: ["revolutionary", "game-changing", "amazing", "incredible"]
+      severity: "error"
+
+  # Recommendations
+  recommended:
+    - name: "Number Inclusion"
+      check: "Listicle titles should start with number"
+      applies_to: ["listicle", "statistics"]
+
+    - name: "Power Word"
+      check: "Include one power word (Best, Ultimate, Complete, Proven, Free)"
+      power_words: ["Best", "Ultimate", "Complete", "Proven", "Free", "Top", "Essential"]
+
+# ============================================================
+# Formula Matching Logic
+# ============================================================
+matching:
+  priority_order:
+    - comparison   # Check showdown patterns first (most specific)
+    - statistics   # Then statistics patterns
+    - vertical     # Industry-specific patterns
+    - guide        # A-Z guide patterns
+    - howto        # How-to patterns
+    - listicle     # Listicle patterns (most common, check last)
+
+  scoring:
+    exact_match: 100
+    partial_match: 60
+    no_match: 0
+
+  auto_fix_suggestions:
+    no_year:
+      message: "Title missing year. Add 'in [Year]' at end."
+      fix_template: "{original_title} in 2026"
+
+    no_number:
+      message: "Listicle title missing number. Add quantity at start."
+      fix_template: "{count} {original_title}"
+
+    weak_opening:
+      message: "Title uses weak word. Consider stronger alternative."
+      weak_words: ["Good", "Great", "Nice"]
+      strong_alternatives: ["Best", "Top", "Ultimate"]
+
+# ============================================================
+# Deep Check Trigger
+# ============================================================
+deep_check:
+  trigger_condition: "Title does not match any formula"
+  action: "Read /competitive-research/invideo-blog/01-content-framework.md"
+  fallback_suggestions:
+    - "Review 37 formula patterns for closest match"
+    - "Consider article intent: listicle, tutorial, comparison, or guide"
+    - "Apply closest formula structure"

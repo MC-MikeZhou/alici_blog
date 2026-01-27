@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nano Banana + Motion Control：病毒视频创作新范式 - Alici AI Preview</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #059669 0%, #10B981 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            font-size: 0.9rem;
+            opacity: 0.9;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .content {
+            padding: 2rem;
+        }
+
+        .direct-answer {
+            background: #F0FDF4;
+            border-left: 4px solid #10B981;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 4px;
+        }
+
+        .direct-answer p {
+            margin-bottom: 0.8rem;
+        }
+
+        .direct-answer p:last-child {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            color: #059669;
+            font-weight: 600;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            margin: 1.5rem 0 0.8rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+
+        ul li:before {
+            content: "•";
+            color: #10B981;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        strong {
+            color: #059669;
+        }
+
+        .section-divider {
+            border: none;
+            border-top: 2px solid #E5E7EB;
+            margin: 2rem 0;
+        }
+
+        .prompt-block {
+            background: #F9FAFB;
+            border: 1px solid #E5E7EB;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+
+        .prompt-block code {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .how-to-steps {
+            counter-reset: step-counter;
+        }
+
+        .how-to-steps ol {
+            list-style: none;
+            padding: 0;
+        }
+
+        .how-to-steps li {
+            counter-increment: step-counter;
+            padding-left: 3rem;
+            position: relative;
+            margin-bottom: 1rem;
+        }
+
+        .how-to-steps li:before {
+            content: counter(step-counter);
+            background: #10B981;
+            color: white;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: bold;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-left: 3px solid #10B981;
+            padding-left: 1rem;
+        }
+
+        .faq-item h4 {
+            color: #059669;
+            margin-bottom: 0.5rem;
+        }
+
+        .source-note {
+            background: #FEF3C7;
+            border-left: 4px solid #F59E0B;
+            padding: 1rem;
+            margin: 2rem 0;
+            font-size: 0.9rem;
+        }
+
+        .cta-box {
+            background: linear-gradient(135deg, #F0FDF4 0%, #ECFDF5 100%);
+            border: 2px solid #10B981;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .footer {
+            background: #F9FAFB;
+            padding: 2rem;
+            text-align: center;
+            color: #6B7280;
+            font-size: 0.9rem;
+        }
+
+        .aeo-score {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            padding: 1rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            min-width: 120px;
+        }
+
+        .aeo-score-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #10B981;
+        }
+
+        .aeo-score-label {
+            font-size: 0.8rem;
+            color: #6B7280;
+            margin-top: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .aeo-score {
+                position: static;
+                margin: 1rem;
+            }
+
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .content {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="aeo-score">
+        <div class="aeo-score-number">84</div>
+        <div class="aeo-score-label">AEO Score</div>
+        <div style="margin-top: 0.5rem; font-size: 0.8rem; color: #10B981;">✓ PASS</div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1>Nano Banana + Motion Control：病毒视频创作新范式</h1>
+            <div class="meta">
+                <span class="badge">📅 2026-01-20</span>
+                <span class="badge">⏱️ 3 min read</span>
+                <span class="badge">📊 micro_roundup</span>
+                <span class="badge">✅ AEO: 84/100</span>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="direct-answer">
+                <strong>Direct Answer:</strong>
+                <p>Kling 2.6 Motion Control 结合 Nano Banana Pro 创建了一种新的视频创作范式：先用 Nano Banana Pro 生成高质量角色图片，再用 Motion Control 将参考视频的动作精确迁移到角色上。关键突破在于将动作生成从"用文字猜测"变成"用视觉参考"，并且整个流程（包括生成参考动作视频）都可以在 Alici AI 平台内完成，无需外部素材。</p>
+                <p>随着 Kling 2.6 Motion Control 的发布，这种工作流已经产生了大量病毒视频案例。</p>
+            </div>
+
+            <h2>Key Takeaways</h2>
+            <ul>
+                <li><strong>Match Image (10s)</strong> 保持角色细节和纹理，但可能发明镜头运动；<strong>Match Video (30s)</strong> 精确复制动作轨迹，但角色可能变形</li>
+                <li>Text prompt 控制背景和光线，<strong>不控制动作</strong> — 动作完全由参考视频决定</li>
+                <li>可以在平台内生成参考动作视频：创建中性姿势起始帧 → prompt 动作 → 作为 Motion Control 参考</li>
+                <li>角色初始姿势过于受限（如坐姿、交叉双臂）会限制动作范围和质量</li>
+            </ul>
+
+            <h2>多维度解析：从工作流到陷阱规避</h2>
+
+            <h3>维度 1: 完整创作流程</h3>
+            <p><strong>核心工作流</strong>: 创作者首先使用 Nano Banana Pro 生成角色图片（上传参考图 + 描述场景/服装/风格），然后使用 Motion Control 上传参考动作视频，系统将动作精确迁移到生成的角色上。</p>
+            <p><strong>关键创新</strong>: 如果没有现成的参考视频，可以直接在平台内生成：创建中性姿势的起始帧，然后 prompt 具体动作，生成的视频即可作为后续的动作参考。</p>
+            <p><strong>可复用规律</strong>:</p>
+            <ul>
+                <li>先用 Nano Banana Pro 生成角色图片（2K 分辨率），确保角色质量</li>
+                <li>参考视频可在平台内生成，无需外部素材</li>
+                <li>使用中性姿势（arms by side）作为动作生成的起始帧</li>
+            </ul>
+
+            <hr class="section-divider">
+
+            <h3>维度 2: Match Image vs Match Video — 选错会浪费 Credits</h3>
+            <p><strong>模式差异</strong>: Match Image 模式最长生成 10 秒视频，优先保持角色的纹理、面部特征等细节。Match Video 模式最长生成 30 秒，精确复制参考视频的骨骼运动和镜头轨迹。</p>
+            <p><strong>可复用规律</strong>:</p>
+            <ul>
+                <li>需要保持角色细节（如面部特征） → 选 Match Image（10s 上限）</li>
+                <li>需要精确复制复杂动作（如空间移动、深度运动） → 选 Match Video（30s 上限）</li>
+                <li>如果参考视频是静态的，Match Video 往往输出静态画面，Match Image 反而会添加运动</li>
+            </ul>
+
+            <hr class="section-divider">
+
+            <h3>维度 3: Prompt 策略与质量优化</h3>
+            <p><strong>关键发现</strong>: 在使用 Motion Control 时，text prompt 是<strong>可选的</strong>。即使添加 prompt，它主要控制背景环境和光线效果，而不是动作本身。实际测试显示，添加或不添加 prompt 对最终动作效果几乎没有影响。</p>
+
+            <hr class="section-divider">
+
+            <h3>维度 4: 常见陷阱</h3>
+            <p><strong>姿势限制问题</strong>: 如果角色的初始姿势过于受限（如坐姿、交叉双臂），AI 很难在保持角色一致性的同时实现大幅度动作，导致动作范围被限制或失真。</p>
+            <p><strong>规避方法</strong>:</p>
+            <ul>
+                <li>为角色图片选择中性、开放的姿势（如站立、双臂自然下垂）</li>
+                <li>根据优先级选择模式：保细节 → Match Image，保动作 → Match Video</li>
+                <li>测试时先生成 4 个输出，选择最佳结果，避免盲目重复生成</li>
+            </ul>
+
+            <h2>Prompts to Try</h2>
+
+            <h3>1. 角色图片生成 (Nano Banana Pro)</h3>
+            <div class="prompt-block">
+A [character description] standing in [pose],
+[clothing/outfit details], [lighting],
+clean background, centered composition, 2K resolution,
+highly detailed, professional quality
+            </div>
+
+            <h3>2. 参考动作生成 (Kling 2.6)</h3>
+            <div class="prompt-block">
+示例动作:
+- "do a little tango dance"
+- "slowly walk backwards"
+- "do a ballet pirouette"
+- "hopping up and down on one leg with arms in the air"
+- "wave hands enthusiastically"
+            </div>
+
+            <h3>3. Motion Control 工作流组合技巧</h3>
+            <ul>
+                <li><strong>Match Image</strong> → 需要保持角色细节（max 10s），可接受发明的镜头运动</li>
+                <li><strong>Match Video</strong> → 需要精确动作复制（max 30s），可接受角色变形</li>
+                <li>Text prompts: <strong>可选</strong> - 仅描述背景/光线/场景，不描述动作</li>
+            </ul>
+
+            <h2>How to Try It</h2>
+            <div class="how-to-steps">
+                <ol>
+                    <li><strong>生成角色图片</strong>: 在 Alici AI 使用 Nano Banana Pro，上传参考图或描述角色，选择 2K 分辨率</li>
+                    <li><strong>准备或生成参考视频</strong>: 如果有现成动作视频可直接使用；如果没有，创建中性姿势起始帧</li>
+                    <li><strong>应用 Motion Control</strong>: 切换到 Kling 2.6 Motion Control，上传角色图片和参考视频</li>
+                    <li><strong>优化和迭代</strong>: 根据结果调整模式选择或角色姿势，重新生成直到满意</li>
+                </ol>
+            </div>
+
+            <h2>FAQ</h2>
+
+            <div class="faq-item">
+                <h4>Match Image 和 Match Video 可以混合使用吗？</h4>
+                <p>不可以，每次生成只能选择一种模式。但你可以对同一组素材分别用两种模式生成，然后选择效果更好的结果。建议先测试两种模式的输出差异，再决定后续批量生成用哪种。</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>为什么我的角色动作看起来很僵硬？</h4>
+                <p>最常见的原因是角色初始姿势过于受限（如坐姿、紧贴身体的手臂）。建议重新生成角色图片，使用更开放的姿势（如站立、手臂自然下垂）。另外，确保参考视频的动作清晰且单一主体，避免多人或快速剪辑的片段。</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Prompt 应该详细描述动作吗？</h4>
+                <p>不需要。Motion Control 的动作完全由参考视频决定，prompt 主要控制背景和光线。实际测试显示，详细描述动作对结果几乎没有影响，反而可能引入冲突。建议 prompt 留空，或仅描述场景风格。</p>
+            </div>
+
+            <div class="source-note">
+                <strong>Source Note</strong>: 本文基于 1 个视频教程的多维度分析（工作流、模式选择、质量优化、陷阱规避）。
+            </div>
+
+            <div class="cta-box">
+                <p><em>使用 <strong><a href="https://alici.ai" style="color: #059669; text-decoration: none;">Alici AI</a></strong> 可以在一个平台上无缝使用 Nano Banana Pro、Kling 2.6 Motion Control 以及其他顶尖 AI 视频模型，无需在多个工具间切换，真正实现多模型一站式创作。</em></p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Content Profile</strong>: micro_roundup | <strong>Word Count</strong>: ~650 | <strong>AEO Score</strong>: 84/100</p>
+            <p style="margin-top: 1rem;">Generated by AliciBlog Workflow | case-roundup-writer v1.1 | 2026-01-20</p>
+            <p style="margin-top: 0.5rem; font-size: 0.8rem;">✅ Material Gate | ✅ Multi-dimensional Analysis | ✅ Reusable Prompts | ✅ Title Confirmation</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+{
+  "source_type": "single_material_multi_dimensional",
+  "source_url": "https://www.youtube.com/watch?v=f0C6lj61p30",
+  "source_title": "Create Custom Viral Videos with Nano Banana Pro and Kling 2.6 Motion Control",
+  "dimensions": [
+    {
+      "dimension": "workflow",
+      "title": "完整创作流程：从角色到动作",
+      "what_happens": "创作者首先使用 Nano Banana Pro 生成角色图片（上传参考图 + 描述场景/服装/风格），然后使用 Motion Control 上传参考动作视频，系统将动作精确迁移到生成的角色上。如果没有现成的参考视频，可以直接在平台内生成：创建中性姿势的起始帧，然后 prompt 具体动作（如 'do a little tango dance' 或 'ballet pirouette'），生成的视频即可作为后续的动作参考。",
+      "why_it_works": "这种'角色生成 → 动作生成 → 组合'的工作流将复杂的视频创作拆解为两个独立步骤，每一步都有专门的模型优化，避免了传统 text-to-video 的模糊性和不可控性。",
+      "what_to_copy": [
+        "先用 Nano Banana Pro 生成角色图片（2K 分辨率），确保角色质量",
+        "参考视频可在平台内生成，无需外部素材",
+        "使用中性姿势（arms by side）作为动作生成的起始帧"
+      ],
+      "tags": ["workflow", "nanombanana-pro", "motion-control", "process"]
+    },
+    {
+      "dimension": "mode_selection",
+      "title": "Match Image vs Match Video：选错会浪费 Credits",
+      "what_happens": "Motion Control 提供两种模式。Match Image 模式最长生成 10 秒视频，优先保持角色的纹理、面部特征等细节，但可能会'发明'镜头运动（如推拉摇移），动作范围受姿势限制。Match Video 模式最长生成 30 秒，精确复制参考视频的骨骼运动和镜头轨迹，但角色可能会被拉伸或变形以匹配参考视频的身体几何和位置。",
+      "why_it_works": "两种模式的底层逻辑不同：Match Image 试图在保持图像像素一致性的前提下'变形'静态图像，而 Match Video 则优先匹配运动轨迹，即使牺牲角色原始比例。理解这个差异可以避免浪费 credits 在错误的模式上。",
+      "what_to_copy": [
+        "需要保持角色细节（如面部特征） → 选 Match Image（10s 上限）",
+        "需要精确复制复杂动作（如空间移动、深度运动） → 选 Match Video（30s 上限）",
+        "如果参考视频是静态的，Match Video 往往输出静态画面，Match Image 反而会添加运动"
+      ],
+      "tags": ["mode-selection", "match-image", "match-video", "optimization"]
+    },
+    {
+      "dimension": "quality_tips",
+      "title": "Prompt 策略与质量优化",
+      "what_happens": "在使用 Motion Control 时，text prompt 是**可选的**。即使添加 prompt，它主要控制背景环境和光线效果，而不是动作本身。动作完全由参考视频决定。视频中的测试显示，添加或不添加 prompt 对最终动作效果几乎没有影响。另外，使用 2K 分辨率生成角色图片可以显著提升最终视频质量。",
+      "why_it_works": "Motion Control 的核心是'动作迁移'而非'文字理解'。参考视频已经提供了完整的运动信息，text prompt 会被模型解释为场景描述。这种分离让创作者无需纠结如何用文字精确描述动作细节。",
+      "what_to_copy": [
+        "Prompt 留空或仅描述场景/光线，不描述动作",
+        "生成角色图片时使用 2K 分辨率",
+        "参考视频选择清晰、单一主体、动作明显的片段"
+      ],
+      "tags": ["prompt-strategy", "quality", "optimization", "best-practices"]
+    },
+    {
+      "dimension": "pitfalls",
+      "title": "常见陷阱：姿势限制与模式误用",
+      "what_happens": "如果角色的初始姿势过于受限（如坐姿、交叉双臂），AI 很难在保持角色一致性的同时实现大幅度动作，导致动作范围被限制或失真。另一个常见问题是模式选择错误：使用 Match Image 时期待精确动作复制，或使用 Match Video 时期待完美保持角色细节，都会导致不满意的结果。",
+      "why_it_works": "这些陷阱源于对技术原理的误解。Match Image 需要'拉伸'静态图像像素来模拟运动，姿势越复杂拉伸越困难。Match Video 则需要让目标角色的骨骼匹配参考视频，身体比例差异会导致变形。",
+      "what_to_copy": [
+        "为角色图片选择中性、开放的姿势（如站立、双臂自然下垂）",
+        "根据优先级选择模式：保细节 → Match Image，保动作 → Match Video",
+        "测试时先生成 4 个输出，选择最佳结果，避免盲目重复生成"
+      ],
+      "tags": ["pitfalls", "common-mistakes", "troubleshooting"]
+    }
+  ]
+}

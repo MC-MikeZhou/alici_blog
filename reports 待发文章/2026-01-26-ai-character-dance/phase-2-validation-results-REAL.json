@@ -1,0 +1,177 @@
+{
+  "metadata": {
+    "validation_date": "2026-01-26",
+    "total_keywords_validated": 25,
+    "data_source": "dataforseo_keywords_data_api",
+    "api_call_cost": "$0.375",
+    "critical_finding": "⚠️ SEVERE DEMAND GAP: 23/25 keywords have ZERO search volume. Total real volume: 160/month vs simulated 19,040/month (99.2% overestimation)"
+  },
+  "tier_1_high_volume": {
+    "criteria": {
+      "search_volume": "≥ 1000",
+      "keyword_difficulty": "≤ 60",
+      "competition": "≤ 0.7"
+    },
+    "keywords": [],
+    "count": 0,
+    "aggregate_score": 0,
+    "avg_search_volume": 0,
+    "note": "❌ NO KEYWORDS meet Tier 1 criteria"
+  },
+  "tier_2_mid_tail": {
+    "criteria": {
+      "search_volume": "500-999",
+      "keyword_difficulty": "≤ 70"
+    },
+    "keywords": [],
+    "count": 0,
+    "aggregate_score": 0,
+    "avg_search_volume": 0,
+    "note": "❌ NO KEYWORDS meet Tier 2 criteria"
+  },
+  "tier_3_long_tail": {
+    "criteria": {
+      "search_volume": "100-499",
+      "keyword_difficulty": "≤ 50",
+      "competition": "≤ 0.5"
+    },
+    "keywords": [
+      {
+        "keyword": "AI character animation",
+        "search_volume": 140,
+        "keyword_difficulty": 20,
+        "competition": 0.0,
+        "cpc": 6.09,
+        "direction_score": 35,
+        "pattern": "Tool/Feature Tutorial",
+        "alici_mapping": "角色动画生成",
+        "note": "✅ ONLY keyword with meaningful volume"
+      }
+    ],
+    "count": 1,
+    "aggregate_score": 35,
+    "avg_search_volume": 140
+  },
+  "tier_4_micro_tail": {
+    "criteria": {
+      "search_volume": "10-99",
+      "keyword_difficulty": "ANY",
+      "competition": "ANY"
+    },
+    "keywords": [
+      {
+        "keyword": "animate characters with AI",
+        "search_volume": 20,
+        "keyword_difficulty": 20,
+        "competition": 0.0,
+        "cpc": 5.50,
+        "direction_score": 15,
+        "pattern": "Tool/Feature Tutorial",
+        "alici_mapping": "AI 动画制作 + 工具使用"
+      }
+    ],
+    "count": 1,
+    "aggregate_score": 15,
+    "avg_search_volume": 20
+  },
+  "tier_5_zero_volume": {
+    "criteria": {
+      "search_volume": "0",
+      "note": "❌ No detectable search demand in Google Ads data"
+    },
+    "keywords": [
+      "how to make AI character dance videos",
+      "AI character dance videos for TikTok",
+      "animated mascot videos for brands",
+      "AI character animation for marketing",
+      "create animated character videos",
+      "Instagram character animation ideas",
+      "best AI character animation tools",
+      "character animation for product demos",
+      "AI character animation tutorial",
+      "professional AI character animation",
+      "bulk create character animations",
+      "automate character video production",
+      "realistic character dance movements",
+      "TikTok mascot dance trends",
+      "AI character animation trends 2026",
+      "fast AI character animation",
+      "high quality AI mascot videos",
+      "AI mascot creator comparison",
+      "make money with AI character videos",
+      "character video marketing trends",
+      "monetize character animation content",
+      "AI dance videos for social media marketing",
+      "character dance video maker reviews"
+    ],
+    "count": 23,
+    "aggregate_score": 0,
+    "avg_search_volume": 0
+  },
+  "validation_summary": {
+    "total_validated": 25,
+    "tier_1_count": 0,
+    "tier_2_count": 0,
+    "tier_3_count": 1,
+    "tier_4_count": 1,
+    "tier_5_zero_count": 23,
+    "total_search_volume": 160,
+    "avg_search_volume": 6,
+    "total_direction_score": 50,
+    "pass_rate": "8% (2/25 keywords have volume)",
+    "top_patterns": [
+      {
+        "pattern": "Tool/Feature Tutorial",
+        "count": 2,
+        "avg_score": 25,
+        "total_volume": 160
+      }
+    ]
+  },
+  "critical_insights": {
+    "demand_reality_check": {
+      "simulated_total_volume": 19040,
+      "real_total_volume": 160,
+      "overestimation_factor": "119x",
+      "overestimation_percentage": "99.2%",
+      "verdict": "⚠️ CRITICAL: Seed keyword 'AI character dance' has almost NO measurable search demand"
+    },
+    "keyword_specificity_issue": {
+      "problem": "Long-tail keywords too specific for Google Ads data",
+      "zero_volume_keywords": 23,
+      "possible_reasons": [
+        "Keywords are invented/speculative phrases",
+        "Real users search with different terms",
+        "Demand exists but too fragmented to measure",
+        "Market is nascent/emerging (no historical data)"
+      ]
+    },
+    "gate_failure": {
+      "gate_1_demand_validation": "❌ FAIL - Only 2/25 keywords have volume (8% pass rate)",
+      "gate_2_business_alignment": "⚠️ MARGINAL - Products can address need, but demand unclear",
+      "gate_3_cluster_deduplication": "⏸️ SKIPPED - Insufficient data for clustering",
+      "recommendation": "⛔ STOP - Topic does NOT meet Phase 2 validation threshold"
+    }
+  },
+  "next_phase": {
+    "phase": "⛔ STOP - Topic Rejected",
+    "reason": "Insufficient search demand (160/month total, 99.2% below simulation)",
+    "alternatives": [
+      {
+        "option": "A: Pivot to broader seed",
+        "seed": "AI video animation",
+        "rationale": "Remove 'character dance' specificity, test broader market"
+      },
+      {
+        "option": "B: Pivot to related seed",
+        "seed": "AI mascot generator",
+        "rationale": "Focus on 'mascot' which may have more brand demand"
+      },
+      {
+        "option": "C: Abandon topic cluster",
+        "rationale": "Market too nascent, revisit in 6-12 months"
+      }
+    ],
+    "recommended_action": "Option A - Test broader seed 'AI video animation' before abandoning"
+  }
+}

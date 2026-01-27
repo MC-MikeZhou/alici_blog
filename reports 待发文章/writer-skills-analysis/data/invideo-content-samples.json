@@ -1,0 +1,185 @@
+{
+  "analysis_date": "2026-01-21",
+  "source": "invideo.io/blog",
+  "total_articles": "375+",
+  "categories": {
+    "how_to_guides": {
+      "count": 80,
+      "percentage": 21
+    },
+    "video_marketing": {
+      "count": 72,
+      "percentage": 19
+    },
+    "social_media_marketing": {
+      "count": 68,
+      "percentage": 18
+    },
+    "marketing_guides": {
+      "count": 57,
+      "percentage": 15
+    },
+    "best_marketing_tools": {
+      "count": 54,
+      "percentage": 14
+    },
+    "new_video_ideas": {
+      "count": 44,
+      "percentage": 12
+    }
+  },
+  "platforms_covered": [
+    "YouTube",
+    "Instagram",
+    "TikTok",
+    "Facebook",
+    "LinkedIn"
+  ],
+  "audience_segments": [
+    "Marketers",
+    "Businesses",
+    "Creators",
+    "Filmmakers",
+    "Educators",
+    "Real Estate",
+    "Fitness",
+    "Healthcare",
+    "Fashion",
+    "Ecommerce"
+  ],
+  "sample_articles": [
+    {
+      "title": "10 Best AI Video Generators For 2025",
+      "url": "invideo.io/blog/best-ai-video-generators/",
+      "type": "listicle",
+      "word_count_estimate": "6500-7000",
+      "tools_listed": 10,
+      "invideo_position": 1,
+      "evaluation_structure": {
+        "best_for": true,
+        "top_features": true,
+        "pros": true,
+        "cons": true,
+        "pricing": true
+      },
+      "comparison_table": false,
+      "citations": "5-8",
+      "schema_markup": ["BlogPosting", "FAQPage"],
+      "author": "Aastha Kochar",
+      "eeat_signals": {
+        "experience": "Medium",
+        "expertise": "High",
+        "authority": "Medium",
+        "trust": "Medium-High"
+      }
+    },
+    {
+      "title": "135 Video Marketing Statistics You Can't Ignore in 2025",
+      "url": "invideo.io/blog/video-marketing-statistics/",
+      "type": "statistics",
+      "word_count_estimate": "8000-10000",
+      "statistics_count": 135,
+      "citations": "30+",
+      "citation_sources": [
+        "Cisco",
+        "Statista",
+        "HubSpot",
+        "Wyzowl",
+        "WordStream",
+        "Limelight",
+        "Zenith Media",
+        "eMarketer"
+      ],
+      "structure": "5 major sections, platform subsections",
+      "cta_count": 3,
+      "author": "Sarika from InVideo",
+      "eeat_signals": {
+        "experience": "Medium",
+        "expertise": "High",
+        "authority": "High",
+        "trust": "High"
+      }
+    },
+    {
+      "title": "How to Make a YouTube Video",
+      "url": "invideo.io/blog/how-to-make-a-youtube-video/",
+      "type": "tutorial",
+      "word_count_estimate": "12000-15000",
+      "sections": 9,
+      "subsections_per_section": "A-D",
+      "table_of_contents": true,
+      "citations": "10-15",
+      "external_references": [
+        "YouTube Creator Academy",
+        "TubeBuddy",
+        "VidiQ",
+        "Ahrefs"
+      ],
+      "cta_placement": ["early", "mid-content", "embedded", "conclusion"],
+      "product_mentions": "Heavy - 'InVideo is your best bet' repeated",
+      "pricing_mentioned": "$20/month or $120/year",
+      "eeat_signals": {
+        "experience": "High",
+        "expertise": "High",
+        "authority": "High",
+        "trust": "Medium (promotional bias)"
+      }
+    }
+  ],
+  "trending_content": [
+    "How to Create a Real Estate Video Using AI (Invideo+Kling 2.6/Kling O1/Veo 3.1)",
+    "From Catalog to Commercial: Turning E-commerce Product Images into High-End Motion Ads",
+    "How to Build 'Soul' Into AI-Generated Ads",
+    "Reshoot Without the Reshoot: How to Swap Faces and Scenes in Your Videos Instantly",
+    "How to Create a Commercial Product Video?",
+    "How to A/B Test Dozens of Product Ad Variations in a Single Afternoon",
+    "The New Rulebook for Product Photos",
+    "Kling O1 Preview: How Kling O1 Pushes Motion, Control, and Consistency",
+    "How Can You Create Scroll-Stopping Ads from Simple Product Pages with Kling?"
+  ],
+  "content_strategy_analysis": {
+    "strengths": [
+      "Ultra-long comprehensive content (10,000+ words)",
+      "Extensive external citations (30+ in statistics articles)",
+      "Platform-specific content clusters",
+      "Clear H1/H2/H3 hierarchy with anchor navigation",
+      "Schema markup implementation",
+      "Named author bylines"
+    ],
+    "weaknesses": [
+      "No Citable Block optimization for AI extraction",
+      "No standardized evaluation methodology",
+      "Heavy promotional bias ('InVideo is the best')",
+      "No Answer-First/AIDA structured opening",
+      "No micro-content format (case roundup equivalent)",
+      "Homepage missing dates/freshness signals"
+    ],
+    "title_patterns": {
+      "how_to": "How to [Action] + [Platform/Tool]",
+      "listicle": "[Number] Best [Category] For [Year]",
+      "statistics": "[Number] [Topic] Statistics [Year]"
+    },
+    "cta_strategy": {
+      "positions": ["early", "mid-content", "conclusion"],
+      "language": ["Try for free", "Get started for free", "Create effective videos"],
+      "frequency": "3 per article average"
+    },
+    "product_integration": {
+      "position_in_listicles": "#1",
+      "messaging": "InVideo is your best bet",
+      "competitor_mentions": true,
+      "honest_limitations": true
+    }
+  },
+  "comparison_metrics": {
+    "vs_aliciblog": {
+      "word_count": "invideo higher (6,000-15,000 vs 300-3,500)",
+      "citations": "invideo higher (10-30+ vs 3-8)",
+      "aeo_optimization": "AliciBlog higher (Citable Blocks, AIDA)",
+      "automation": "AliciBlog higher (70%+ vs manual)",
+      "production_time": "AliciBlog faster (15-60 min vs 5-10 hours)",
+      "cost_efficiency": "AliciBlog higher (340-570x better)",
+      "content_diversity": "Similar (3 types each)"
+    }
+  }
+}

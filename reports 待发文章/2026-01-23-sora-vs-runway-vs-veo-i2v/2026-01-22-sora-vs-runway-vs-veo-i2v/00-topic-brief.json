@@ -1,0 +1,208 @@
+{
+  "metadata": {
+    "topic_slug": "sora-vs-runway-vs-veo-i2v",
+    "title": "Sora 2 vs Runway Gen-4.5 vs Veo 3.1: Which Image-to-Video AI Wins for Professional Creators? (2026)",
+    "description": "Deep evaluation of three leading image-to-video AI tools tested on professional workflows. Compare motion quality, prompt control, and production value.",
+    "category": "AI Tools",
+    "tags": ["AI video", "image-to-video", "Sora 2", "Runway Gen-4.5", "Veo 3.1", "tool showdown"],
+    "word_count_target": [4000, 5000],
+    "aeo_target": 75,
+    "content_type": "tool_showdown_extended",
+    "creation_date": "2026-01-22",
+    "author": "alici.ai Content Team"
+  },
+
+  "structure": {
+    "total_headings": 12,
+    "template_base": "TOOL_SHOWDOWN_TEMPLATE.md",
+    "extensions": [
+      {
+        "heading_number": 5,
+        "heading_title": "Prompt Techniques",
+        "word_count": 600,
+        "description": "Comparison of prompting strategies across three tools"
+      },
+      {
+        "heading_number": 8,
+        "heading_title": "Professional Workflow Integration",
+        "word_count": 400,
+        "description": "How each tool fits into professional video production pipelines"
+      }
+    ],
+    "opening_pattern": "Pattern 4: Reframe",
+    "opening_hook": "Demos make every AI video model look magical. Production reveals the truth."
+  },
+
+  "tools_tested": {
+    "verified_tools": [
+      {
+        "name": "Sora 2",
+        "verified_version": "App 1.2026.013",
+        "verification_source": "openai.com",
+        "verification_date": "2026-01-21",
+        "focus_capability": "Image-to-Video"
+      },
+      {
+        "name": "Runway Gen-4.5",
+        "verified_version": "Gen-4.5",
+        "verification_source": "runwayml.com",
+        "verification_date": "2026-01-21",
+        "focus_capability": "Image-to-Video"
+      },
+      {
+        "name": "Google Veo 3.1",
+        "verified_version": "3.1 (January 2026 update)",
+        "verification_source": "blog.google",
+        "verification_date": "2026-01-21",
+        "focus_capability": "Image-to-Video"
+      }
+    ],
+    "verification_date": "2026-01-21",
+    "unverified_tools": []
+  },
+
+  "testing_framework": {
+    "methodology": "5-dimension evaluation (100-point scale)",
+    "dimensions": [
+      {
+        "name": "Image Fidelity",
+        "weight": 25,
+        "description": "Consistency with original photo"
+      },
+      {
+        "name": "Motion Quality",
+        "weight": 25,
+        "description": "Natural movement, physics accuracy"
+      },
+      {
+        "name": "Prompt Control",
+        "weight": 20,
+        "description": "Predictability, iteration efficiency"
+      },
+      {
+        "name": "Production Speed",
+        "weight": 15,
+        "description": "Generation time, batch capability"
+      },
+      {
+        "name": "Value & Integration",
+        "weight": 15,
+        "description": "Cost-effectiveness, API, workflow fit"
+      }
+    ],
+    "test_period": "January 2026",
+    "sample_size": "30+ image-to-video generations per tool",
+    "testing_team": "alici.ai Content Team"
+  },
+
+  "category_winners": [
+    {
+      "category": "Portrait Animation",
+      "winner": "Sora 2",
+      "reason": "Physics simulation, facial consistency"
+    },
+    {
+      "category": "Product Photography",
+      "winner": "Veo 3.1",
+      "reason": "Ingredients 3-image reference system"
+    },
+    {
+      "category": "Cinematic Camera",
+      "winner": "Sora 2",
+      "reason": "World state persistence"
+    },
+    {
+      "category": "Production Speed",
+      "winner": "Runway Gen-4.5",
+      "reason": "45-90 second generation time"
+    },
+    {
+      "category": "Audio Integration",
+      "winner": "Veo 3.1",
+      "reason": "Native audio sync capability"
+    },
+    {
+      "category": "Creative Control",
+      "winner": "Runway Gen-4.5",
+      "reason": "Motion Brush, masking tools"
+    },
+    {
+      "category": "Vertical Video",
+      "winner": "Veo 3.1",
+      "reason": "Native 9:16 aspect ratio support"
+    },
+    {
+      "category": "Overall Value",
+      "winner": "Runway / alici.ai",
+      "reason": "Cost-performance / multi-model access"
+    }
+  ],
+
+  "prompt_techniques": {
+    "sora_2": {
+      "structure": "Segmented format",
+      "zones": ["Visual", "Motion", "Audio"],
+      "principle": "World state persistence"
+    },
+    "runway_gen45": {
+      "structure": "Action-focused template",
+      "format": "[Camera] shot of [subject] [action] in [environment]",
+      "principle": "Describe motion, not image content"
+    },
+    "veo_31": {
+      "structure": "5-component chain",
+      "format": "[Cinematography] + [Subject] + [Action] + [Context] + [Style]",
+      "principle": "3-image reference ordering affects results"
+    }
+  },
+
+  "product_mapping": {
+    "primary_product": {
+      "id": "video_studio",
+      "name": "AI Video Studio",
+      "url": "https://app.alici.ai/pages/videoGen",
+      "cta_text": "Create AI Videos Now",
+      "features": ["Sora 2 access", "Runway Gen-4.5", "Veo 3.1", "Multi-model comparison"]
+    },
+    "secondary_products": [
+      {
+        "id": "video_prompt",
+        "name": "Video Prompt Assistant",
+        "url": "https://app.alici.ai/chat?agent_id=alici_video_prompt",
+        "use_case": "Optimize prompts for better image-to-video results"
+      },
+      {
+        "id": "image_to_video",
+        "name": "Image to AI Video",
+        "url": "https://app.alici.ai/chat?agent_id=alici_video_prompt",
+        "use_case": "Animate static images with professional results"
+      }
+    ],
+    "cta_templates": {
+      "opening": "💡 **Quick Start**: Test all three image-to-video models without juggling subscriptions. [Try AI Video Studio →](https://app.alici.ai/pages/videoGen)",
+      "mid": "**[Compare Sora 2, Runway, and Veo side-by-side →](https://app.alici.ai/pages/videoGen)**",
+      "closing": "Ready to animate your images with professional AI video tools? **[Start creating with AI Video Studio →](https://app.alici.ai/pages/videoGen)**"
+    }
+  },
+
+  "checklist": {
+    "structure": [
+      "Title includes year (2026)",
+      "Quick Answer within first 60 words",
+      "2 tables (Snapshot + Scorecard)",
+      "8 Category Winners with Choose/Avoid format",
+      "3 CTAs at correct positions",
+      "Prompt Techniques section (600 words)",
+      "Professional Workflow Integration section (400 words)",
+      "10 FAQs",
+      "If/Then Decision Tree"
+    ],
+    "quality": [
+      "Word count: 4,000-5,000",
+      "AEO score target: ≥ 75",
+      "External citations: 3+",
+      "Author information complete",
+      "Date + last_updated fields"
+    ]
+  }
+}

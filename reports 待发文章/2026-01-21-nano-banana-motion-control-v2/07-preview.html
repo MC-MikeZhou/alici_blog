@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Nano Banana Pro + Motion Control Changes Video Creation 2026</title>
+    <meta name="description" content="Learn how to combine Nano Banana Pro with Kling 2.6 Motion Control to create custom animated videos. Discover Match Image vs Match Video modes and create your own reference videos.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #ffffff;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+        }
+
+        header {
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+
+        .metadata {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: #666;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: #4CAF50;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .aeo-score {
+            background: #2196F3;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #000;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .author-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .author-details {
+            flex: 1;
+        }
+
+        .author-name {
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .author-bio {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .tldr-section {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px 25px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .tldr-section strong {
+            color: #856404;
+        }
+
+        .video-embed {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+
+        .video-embed iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 40px 0 20px 0;
+            color: #000;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 30px 0 15px 0;
+            color: #1a1a1a;
+        }
+
+        h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 20px 0 10px 0;
+            color: #1a1a1a;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+        }
+
+        ul, ol {
+            margin: 20px 0 20px 30px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+        }
+
+        strong {
+            font-weight: 600;
+            color: #000;
+        }
+
+        code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #d63384;
+        }
+
+        pre {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        pre code {
+            background: none;
+            padding: 0;
+            color: #d4d4d4;
+        }
+
+        blockquote {
+            background: #e7f3ff;
+            border-left: 4px solid #2196F3;
+            padding: 20px 25px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #dee2e6;
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .prompt-template {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .prompt-template h4 {
+            margin-top: 0;
+            color: #495057;
+        }
+
+        .key-takeaway {
+            background: #e8f5e9;
+            border-left: 4px solid #4CAF50;
+            padding: 15px 20px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .key-takeaway strong {
+            color: #2e7d32;
+        }
+
+        .dimension-section {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .dimension-section h3 {
+            margin-top: 0;
+            color: #667eea;
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .faq-item h4 {
+            color: #667eea;
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .faq-item p {
+            margin-bottom: 0;
+        }
+
+        .how-to-step {
+            display: flex;
+            gap: 15px;
+            margin: 15px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .step-number {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .why-it-works {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 40px 0;
+        }
+
+        .why-it-works h2 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .why-it-works p {
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid #f0f0f0;
+            margin: 40px 0;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid #f0f0f0;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .tag {
+            background: #e9ecef;
+            padding: 6px 14px;
+            border-radius: 16px;
+            font-size: 0.85rem;
+            color: #495057;
+        }
+
+        .source-boundary {
+            background: #fff3e0;
+            border-left: 4px solid #ff9800;
+            padding: 20px 25px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .metadata {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            th, td {
+                padding: 8px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="metadata">
+                <span class="badge">Case Roundup v1.0</span>
+                <span class="aeo-score">AEO Score: 78/100</span>
+                <span>January 21, 2026</span>
+                <span>4 min read</span>
+            </div>
+
+            <h1>Why Nano Banana Pro + Motion Control Changes Video Creation 2026</h1>
+
+            <p class="subtitle">Stop Guessing Movements — Start Showing Them</p>
+
+            <div class="tags">
+                <span class="tag">Nano Banana Pro</span>
+                <span class="tag">Kling AI</span>
+                <span class="tag">Motion Control</span>
+                <span class="tag">AI Video</span>
+                <span class="tag">11 Labs</span>
+                <span class="tag">Video Generation</span>
+            </div>
+
+            <div class="author-info">
+                <div class="author-avatar">A</div>
+                <div class="author-details">
+                    <div class="author-name">Alici AI Team</div>
+                    <div class="author-bio">AI video specialists exploring the latest in generative video technology</div>
+                </div>
+            </div>
+        </header>
+
+        <article>
+            <!-- Opening Hook -->
+            <p>Most AI video tools force you to describe movement in words. "Make her dance gracefully" becomes a guessing game between you and the model. Motion Control flips this: you <em>show</em> the AI what you want by uploading a reference video. Combined with Nano Banana Pro's image quality, you get precise control over both appearance and movement.</p>
+
+            <p>The counterintuitive insight? <strong>Success isn't about finding the perfect action clip — it's about choosing the right mode.</strong></p>
+
+            <div class="tldr-section">
+                <strong>TL;DR:</strong> Nano Banana Pro generates high-quality character images while Kling 2.6 Motion Control adds movement from reference videos. Match Image mode (10s max) preserves character details; Match Video mode (30s max) copies exact skeletal motion. You can generate your own reference videos within 11 Labs.
+            </div>
+
+            <hr>
+
+            <!-- Direct Answer -->
+            <h2>Direct Answer</h2>
+
+            <p>Nano Banana Pro creates high-quality character images inside 11 Labs. Kling 2.6 Motion Control then transfers movements from any reference video onto that image. The key decision is choosing between Match Image mode (preserves character details, max 10 seconds) or Match Video mode (copies exact motion, max 30 seconds). Text prompts are optional — they control background and lighting, not the actual movement.</p>
+
+            <hr>
+
+            <!-- Key Takeaways -->
+            <h2>Key Takeaways</h2>
+
+            <div class="key-takeaway">
+                <strong>Match Image (10s)</strong> — prioritizes character consistency. Textures and facial features stay true to your original image, but the AI may invent camera movements.
+            </div>
+
+            <div class="key-takeaway">
+                <strong>Match Video (30s)</strong> — prioritizes motion accuracy. Exact skeletal movement is copied, but character proportions may stretch to fit.
+            </div>
+
+            <div class="key-takeaway">
+                <strong>Text prompts are optional</strong> — the reference video dictates all action; prompts only affect background and lighting.
+            </div>
+
+            <div class="key-takeaway">
+                <strong>Generate reference videos internally</strong> — create a neutral-pose character in Nano Banana Pro, then animate it with Kling 2.6 to build your own motion library.
+            </div>
+
+            <hr>
+
+            <!-- Deep Dive: Four Dimensions -->
+            <h2>Deep Dive: Four Dimensions</h2>
+
+            <div class="dimension-section">
+                <h3>1. The Complete Workflow</h3>
+                <p>Start by creating your character in Nano Banana Pro at 2K resolution. Upload a reference photo, describe the scene (outfit, setting, pose), and generate multiple options. Pick your favorite, then switch to video mode. Select Kling 2.6 Motion Control, drag your image in, upload a motion reference video, and generate.</p>
+            </div>
+
+            <div class="dimension-section">
+                <h3>2. Match Image vs Match Video — How to Choose</h3>
+                <table>
+                    <tr>
+                        <th>Factor</th>
+                        <th>Match Image</th>
+                        <th>Match Video</th>
+                    </tr>
+                    <tr>
+                        <td>Max Duration</td>
+                        <td>10 seconds</td>
+                        <td>30 seconds</td>
+                    </tr>
+                    <tr>
+                        <td>Priority</td>
+                        <td>Character appearance</td>
+                        <td>Motion accuracy</td>
+                    </tr>
+                    <tr>
+                        <td>Risk</td>
+                        <td>May invent camera moves</td>
+                        <td>Character may stretch</td>
+                    </tr>
+                    <tr>
+                        <td>Best For</td>
+                        <td>Short clips, identity-critical</td>
+                        <td>Longer sequences, precise choreography</td>
+                    </tr>
+                </table>
+                <p>Use Match Image when the character's look matters more than perfect motion replication. Use Match Video when you need exact movements and can tolerate minor character distortion.</p>
+            </div>
+
+            <div class="dimension-section">
+                <h3>3. Prompt Strategy</h3>
+                <p>Here's what surprises most users: prompts don't control movement. When you add text to Motion Control, it affects scene elements — background details, lighting atmosphere, environmental context. The reference video handles <em>all</em> motion. Many creators leave prompts blank and see no difference in output quality.</p>
+            </div>
+
+            <div class="dimension-section">
+                <h3>4. Common Pitfalls to Avoid</h3>
+                <p><strong>Restrictive starting poses:</strong> If your character image has arms crossed or an unusual stance, the AI struggles to map different movements onto it. Start with a neutral pose — arms by sides, centered framing.</p>
+                <p><strong>No reference video?</strong> Create one. Generate a simple figure in Nano Banana Pro with neutral pose, switch to Kling 2.6, and prompt movements like "do a little tango dance" or "slowly walk backwards." Use these generated videos as motion references for your actual character images.</p>
+            </div>
+
+            <hr>
+
+            <!-- Why It Works -->
+            <div class="why-it-works">
+                <h2>Why It Works</h2>
+                <p>Motion Control separates two problems that text-to-video muddles together: <em>what something looks like</em> and <em>how it moves</em>. Nano Banana Pro handles appearance with high-fidelity image generation. The reference video handles motion through direct visual specification. This division of labor means less guessing, fewer wasted generations, and results that match your creative intent.</p>
+            </div>
+
+            <hr>
+
+            <!-- Visual Prompt Pack -->
+            <h2>Visual Prompt Pack</h2>
+
+            <h3>Character: Balance Beam Gymnast</h3>
+
+            <div class="prompt-template">
+                <h4>Image Prompt (Nano Banana Pro):</h4>
+                <pre><code>A gymnast on a balance beam, professional leotard, arms by her side, neutral standing pose, athletic facility background, soft studio lighting, full body shot, 2K resolution</code></pre>
+            </div>
+
+            <div class="prompt-template">
+                <h4>Motion Reference Prompt (Kling 2.6):</h4>
+                <pre><code>hopping up and down on one leg with arms in the air</code></pre>
+            </div>
+
+            <hr>
+
+            <!-- Video Integration -->
+            <h2>Video Integration</h2>
+
+            <div class="video-embed">
+                <iframe src="https://www.youtube.com/embed/f0C6lj61p30" allowfullscreen></iframe>
+            </div>
+            <p style="text-align: center; color: #666; font-style: italic;">Source: "Create Custom Viral Videos with Nano Banana Pro and Kling 2.6 Motion Control"</p>
+
+            <hr>
+
+            <!-- How to Try It -->
+            <h2>How to Try It</h2>
+
+            <div class="how-to-step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <strong>Generate your character</strong> in 11 Labs using Nano Banana Pro (select 2K, generate 4 options)
+                </div>
+            </div>
+
+            <div class="how-to-step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <strong>Find or create a reference video</strong> — either record yourself or generate one with Kling 2.6 from a neutral-pose image
+                </div>
+            </div>
+
+            <div class="how-to-step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <strong>Switch to Kling 2.6 Motion Control</strong> — drag in your character image and motion video
+                </div>
+            </div>
+
+            <div class="how-to-step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <strong>Choose your mode</strong> — Match Image for appearance priority, Match Video for motion priority — then generate
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Mini FAQ -->
+            <h2>Mini FAQ</h2>
+
+            <div class="faq-item">
+                <h4>Do I need a text prompt for Motion Control?</h4>
+                <p>No. Prompts are optional and only affect background/lighting. The reference video controls all movement. Many users leave prompts blank.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Can I create my own reference videos without filming?</h4>
+                <p>Yes. Generate a neutral-pose character in Nano Banana Pro, then use Kling 2.6 (not Motion Control) to animate it with a text prompt describing the movement you want. Save that video as your motion reference.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Which mode should I use if I'm unsure?</h4>
+                <p>Start with Match Image for shorter clips where character consistency matters. Switch to Match Video if you need longer duration or precise motion matching and can accept some character distortion.</p>
+            </div>
+
+            <hr>
+
+            <!-- Source & Boundary -->
+            <div class="source-boundary">
+                <h3 style="margin-top: 0; color: #e65100;">Source & Boundary</h3>
+                <p style="margin-bottom: 0;">This guide synthesizes the official 11 Labs workflow demonstrated in the referenced video. Results may vary based on image quality, reference video clarity, and the specific movements being transferred. Motion Control works best with single-character scenes and clear, unobstructed movements.</p>
+            </div>
+        </article>
+
+        <footer>
+            <p><strong>About:</strong> This guide was created by the Alici AI Team to help creators master the latest AI video generation tools.</p>
+
+            <p style="margin-top: 20px;">
+                <strong>Published:</strong> January 21, 2026<br>
+                <strong>Version:</strong> 1.0 (case-roundup-writer)<br>
+                <strong>AEO Score:</strong> 78/100<br>
+                <strong>Word Count:</strong> ~850 words
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

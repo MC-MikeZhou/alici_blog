@@ -1,0 +1,219 @@
+{
+  "title": "Sora vs Runway vs Kling vs Luma vs Veo: Which AI Video Generator Is Best for Beginners in 2026?",
+  "slug": "ai-video-generator-comparison-beginners-2026",
+  "content_type": "comparison_listicle",
+  "target_word_count": {
+    "min": 2500,
+    "max": 3500
+  },
+  "target_audience": {
+    "level": "beginner",
+    "description": "New creators wanting to use AI video tools, 0-6 months experience",
+    "pain_points": [
+      "Too many tools, don't know which to choose",
+      "Fear of wasting money on wrong subscription",
+      "Information overload",
+      "Don't know where to start"
+    ],
+    "goals": [
+      "Create first AI video",
+      "Find the right tool for their use case",
+      "Minimize learning curve",
+      "Stay within budget"
+    ]
+  },
+  "seo": {
+    "primary_keyword": "best AI video generator for beginners 2026",
+    "secondary_keywords": [
+      "Sora vs Runway vs Kling comparison",
+      "AI video generator comparison 2026",
+      "Kling vs Luma Dream Machine",
+      "Google Veo 3 vs Sora 2",
+      "free AI video generator"
+    ],
+    "search_intent": "comparison_decision"
+  },
+  "tools_to_cover": [
+    {
+      "name": "Kling 2.0",
+      "company": "ByteDance",
+      "positioning": "Best for Speed & Social Content",
+      "alici_supported": true,
+      "key_strengths": ["2-minute videos", "lip-sync", "fast generation", "affordable"],
+      "key_weaknesses": ["not 4K", "less cinematic"],
+      "beginner_score": 9
+    },
+    {
+      "name": "Runway Gen-4",
+      "company": "Runway",
+      "positioning": "Best for Creative Control",
+      "alici_supported": true,
+      "key_strengths": ["VFX tools", "style control", "4K upscale", "editing workflow"],
+      "key_weaknesses": ["learning curve", "credit burns fast"],
+      "beginner_score": 8
+    },
+    {
+      "name": "Google Veo 3",
+      "company": "Google",
+      "positioning": "Best for Cinematic Quality",
+      "alici_supported": true,
+      "key_strengths": ["4K output", "cinematic motion", "native audio", "free tier"],
+      "key_weaknesses": ["8-second limit on free", "slower"],
+      "beginner_score": 8
+    },
+    {
+      "name": "Luma Dream Machine",
+      "company": "Luma AI",
+      "positioning": "Best for Fast Cinematic Ads",
+      "alici_supported": false,
+      "key_strengths": ["smooth motion", "camera work", "fast", "Ray3 HDR"],
+      "key_weaknesses": ["less effective for stylized content"],
+      "beginner_score": 7
+    },
+    {
+      "name": "OpenAI Sora 2",
+      "company": "OpenAI",
+      "positioning": "Best for Storytelling (Limited Access)",
+      "alici_supported": false,
+      "key_strengths": ["physics realism", "narrative coherence", "ChatGPT integration"],
+      "key_weaknesses": ["$200/month Pro", "limited availability", "no API"],
+      "beginner_score": 6
+    }
+  ],
+  "evaluation_framework": {
+    "dimensions": [
+      {"name": "Ease of Use", "weight": 5, "beginner_focus": true},
+      {"name": "Output Quality", "weight": 4, "beginner_focus": false},
+      {"name": "Speed", "weight": 4, "beginner_focus": true},
+      {"name": "Cost", "weight": 5, "beginner_focus": true},
+      {"name": "Beginner Friendliness", "weight": 5, "beginner_focus": true}
+    ],
+    "scoring": "1-10 scale with beginner weighting"
+  },
+  "content_structure": {
+    "sections": [
+      {
+        "id": "quick-answer",
+        "title": "Quick Answer",
+        "purpose": "AEO optimization - direct answer for AI citation",
+        "word_count": 150
+      },
+      {
+        "id": "landscape",
+        "title": "The 2026 AI Video Landscape",
+        "purpose": "Context setting",
+        "word_count": 200
+      },
+      {
+        "id": "comparison-table",
+        "title": "Quick Comparison Table",
+        "purpose": "Scannable overview",
+        "word_count": 100
+      },
+      {
+        "id": "detailed-reviews",
+        "title": "Detailed Reviews",
+        "purpose": "Deep dive on each tool",
+        "word_count": 1500,
+        "subsections": ["Kling", "Runway", "Veo", "Luma", "Sora"]
+      },
+      {
+        "id": "common-mistakes",
+        "title": "4 Common Mistakes Beginners Make",
+        "purpose": "Differentiation + practical value",
+        "word_count": 400
+      },
+      {
+        "id": "which-tool",
+        "title": "Which Tool Should YOU Choose?",
+        "purpose": "Decision framework by use case",
+        "word_count": 300
+      },
+      {
+        "id": "quick-start",
+        "title": "Your 30-Minute Quick Start Guide",
+        "purpose": "Actionable next steps",
+        "word_count": 250
+      },
+      {
+        "id": "multi-model",
+        "title": "The Multi-Model Solution",
+        "purpose": "CTA section",
+        "word_count": 150
+      },
+      {
+        "id": "faq",
+        "title": "FAQ",
+        "purpose": "AEO + long-tail keywords",
+        "word_count": 350
+      }
+    ]
+  },
+  "product_mapping": {
+    "primary_product": {
+      "id": "video_studio",
+      "name": "AI Video Studio",
+      "url": "https://app.alici.ai/pages/videoGen",
+      "cta_text": "Try AI Video Studio Free",
+      "features": ["Kling 2.0", "Runway Gen-4", "Veo 3"],
+      "value_proposition": "One platform, multiple models, no subscription juggling"
+    },
+    "secondary_products": [
+      {
+        "id": "video_prompt",
+        "name": "Video Prompt Assistant",
+        "url": "https://app.alici.ai/chat?agent_id=alici_video_prompt",
+        "use_case": "Optimize prompts for better results"
+      }
+    ],
+    "cta_placements": [
+      {
+        "location": "after_quick_answer",
+        "type": "opening",
+        "template": "💡 **Quick Start**: AI Video Studio lets you test Kling, Runway, and Veo without managing separate subscriptions. [Try free →]({{url}})"
+      },
+      {
+        "location": "after_comparison_table",
+        "type": "mid",
+        "template": "> **Pro Tip**: Switch between models in one workspace at alici.ai—no account juggling needed."
+      },
+      {
+        "location": "which_tool_section",
+        "type": "contextual",
+        "template": "Or skip the choice entirely—alici.ai lets you access Kling, Runway, and Veo from one dashboard."
+      },
+      {
+        "location": "end_of_article",
+        "type": "closing",
+        "template": "## Start Creating Today\n\nalici.ai brings together Kling 2.0, Runway Gen-4, and Google Veo 3 in one platform—no subscription juggling, no tool-switching.\n\n**[Create Your First AI Video →]({{url}})** | Free tier available"
+      }
+    ]
+  },
+  "competitor_reference": {
+    "url": "https://invideo.io/blog/kling-vs-sora-vs-veo-vs-runway/",
+    "title": "Kling vs Sora vs Veo vs Runway: The AI Video Reality Check",
+    "borrowed_elements": [
+      "5-dimension evaluation framework",
+      "Common mistakes section",
+      "Scenario-based recommendations"
+    ],
+    "differentiation": [
+      "Beginner-first perspective",
+      "Copyable prompt templates",
+      "30-minute quick start guide",
+      "Multi-model platform CTA (genuine)"
+    ]
+  },
+  "quality_targets": {
+    "aeo_score": 80,
+    "readability": "8th grade",
+    "cta_density": "4 CTAs total",
+    "external_sources": 5
+  },
+  "metadata": {
+    "created_at": "2026-01-21T15:00:00Z",
+    "author": "alici.ai Content Team",
+    "category": "AI Tools",
+    "tags": ["AI video", "Sora", "Runway", "Kling", "Luma", "Veo", "comparison", "beginner guide"]
+  }
+}

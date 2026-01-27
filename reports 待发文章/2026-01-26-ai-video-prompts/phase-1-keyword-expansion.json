@@ -1,0 +1,647 @@
+{
+  "phase": "1_intent_pattern_expansion",
+  "seed": "The ONLY 7 Prompts You Need to Create Any AI Video",
+  "intent_patterns": 8,
+  "total_keywords": 75,
+  "created_at": "2026-01-26",
+  "expansion_strategy": "cross_multiply_intent_patterns_with_angles",
+  "keywords": [
+    {
+      "id": 1,
+      "keyword": "AI video prompts",
+      "intent_pattern": "how_to_specific_result",
+      "primary": true,
+      "estimated_volume": "high",
+      "reason": "direct_seed_match"
+    },
+    {
+      "id": 2,
+      "keyword": "best AI video prompts 2026",
+      "intent_pattern": "comparison_year",
+      "primary": true,
+      "estimated_volume": "high",
+      "reason": "year_stamped_comparison"
+    },
+    {
+      "id": 3,
+      "keyword": "AI video prompt engineering",
+      "intent_pattern": "how_to_specific_result",
+      "primary": true,
+      "estimated_volume": "medium",
+      "reason": "professional_terminology"
+    },
+    {
+      "id": 4,
+      "keyword": "how to write prompts for AI videos",
+      "intent_pattern": "how_to_specific_result",
+      "primary": false,
+      "estimated_volume": "medium",
+      "reason": "question_based_query"
+    },
+    {
+      "id": 5,
+      "keyword": "ChatGPT prompts for video creation",
+      "intent_pattern": "tool_benefit",
+      "primary": false,
+      "estimated_volume": "high",
+      "reason": "chatgpt_high_volume_tool"
+    },
+    {
+      "id": 6,
+      "keyword": "Sora AI prompts",
+      "intent_pattern": "tool_benefit",
+      "primary": false,
+      "estimated_volume": "very_high",
+      "reason": "sora_high_interest_model"
+    },
+    {
+      "id": 7,
+      "keyword": "Runway Gen-3 prompts",
+      "intent_pattern": "tool_benefit",
+      "primary": false,
+      "estimated_volume": "medium",
+      "reason": "runway_professional_tool"
+    },
+    {
+      "id": 8,
+      "keyword": "best prompts for AI video generators",
+      "intent_pattern": "comparison_year",
+      "primary": false,
+      "estimated_volume": "medium",
+      "reason": "tool_agnostic_comparison"
+    },
+    {
+      "id": 9,
+      "keyword": "AI video prompt examples",
+      "intent_pattern": "how_to_specific_result",
+      "primary": false,
+      "estimated_volume": "medium",
+      "reason": "practical_example_seeking"
+    },
+    {
+      "id": 10,
+      "keyword": "AI video prompt templates",
+      "intent_pattern": "ultimate_guide",
+      "primary": false,
+      "estimated_volume": "medium",
+      "reason": "template_library_intent"
+    },
+    {
+      "id": 11,
+      "keyword": "how to create AI videos with prompts",
+      "intent_pattern": "how_to_specific_result",
+      "primary": false,
+      "estimated_volume": "medium",
+      "reason": "complete_workflow_query"
+    },
+    {
+      "id": 12,
+      "keyword": "AI video marketing prompts",
+      "intent_pattern": "industry_specific",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "marketing_vertical"
+    },
+    {
+      "id": 13,
+      "keyword": "AI video prompts for ads",
+      "intent_pattern": "industry_specific",
+      "primary": false,
+      "estimated_volume": "medium",
+      "reason": "advertising_vertical"
+    },
+    {
+      "id": 14,
+      "keyword": "make money with AI video prompts",
+      "intent_pattern": "monetization",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "roi_focused_query"
+    },
+    {
+      "id": 15,
+      "keyword": "AI video prompt guide",
+      "intent_pattern": "ultimate_guide",
+      "primary": false,
+      "estimated_volume": "medium",
+      "reason": "comprehensive_resource"
+    },
+    {
+      "id": 16,
+      "keyword": "effective AI video prompts",
+      "intent_pattern": "how_to_specific_result",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "quality_focused"
+    },
+    {
+      "id": 17,
+      "keyword": "AI video generation prompts",
+      "intent_pattern": "how_to_specific_result",
+      "primary": false,
+      "estimated_volume": "medium",
+      "reason": "technical_terminology"
+    },
+    {
+      "id": 18,
+      "keyword": "quick AI video prompts",
+      "intent_pattern": "time_saving",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "efficiency_angle"
+    },
+    {
+      "id": 19,
+      "keyword": "AI video prompts for beginners",
+      "intent_pattern": "how_to_specific_result",
+      "primary": false,
+      "estimated_volume": "medium",
+      "reason": "skill_level_targeting"
+    },
+    {
+      "id": 20,
+      "keyword": "professional AI video prompts",
+      "intent_pattern": "how_to_specific_result",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "quality_positioning"
+    },
+    {
+      "id": 21,
+      "keyword": "AI video prompts for social media",
+      "intent_pattern": "industry_specific",
+      "primary": false,
+      "estimated_volume": "medium",
+      "reason": "platform_targeting"
+    },
+    {
+      "id": 22,
+      "keyword": "viral AI video prompts",
+      "intent_pattern": "how_to_specific_result",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "outcome_focused"
+    },
+    {
+      "id": 23,
+      "keyword": "AI video prompts for YouTube",
+      "intent_pattern": "industry_specific",
+      "primary": false,
+      "estimated_volume": "medium",
+      "reason": "youtube_platform"
+    },
+    {
+      "id": 24,
+      "keyword": "AI video prompts for TikTok",
+      "intent_pattern": "industry_specific",
+      "primary": false,
+      "estimated_volume": "medium",
+      "reason": "tiktok_platform"
+    },
+    {
+      "id": 25,
+      "keyword": "AI video prompts for Instagram",
+      "intent_pattern": "industry_specific",
+      "primary": false,
+      "estimated_volume": "medium",
+      "reason": "instagram_platform"
+    },
+    {
+      "id": 26,
+      "keyword": "free AI video prompts",
+      "intent_pattern": "comparison_year",
+      "primary": false,
+      "estimated_volume": "medium",
+      "reason": "free_resource_seeking"
+    },
+    {
+      "id": 27,
+      "keyword": "AI video script prompts",
+      "intent_pattern": "how_to_specific_result",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "script_writing_angle"
+    },
+    {
+      "id": 28,
+      "keyword": "AI product video prompts",
+      "intent_pattern": "industry_specific",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "ecommerce_vertical"
+    },
+    {
+      "id": 29,
+      "keyword": "AI explainer video prompts",
+      "intent_pattern": "industry_specific",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "saas_vertical"
+    },
+    {
+      "id": 30,
+      "keyword": "7 best AI video prompts",
+      "intent_pattern": "number_list",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "exact_seed_match"
+    },
+    {
+      "id": 31,
+      "keyword": "10 AI video prompts",
+      "intent_pattern": "number_list",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "listicle_format"
+    },
+    {
+      "id": 32,
+      "keyword": "ultimate AI video prompt guide",
+      "intent_pattern": "ultimate_guide",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "authority_positioning"
+    },
+    {
+      "id": 33,
+      "keyword": "AI video prompt cheat sheet",
+      "intent_pattern": "ultimate_guide",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "quick_reference_resource"
+    },
+    {
+      "id": 34,
+      "keyword": "AI video prompt tips",
+      "intent_pattern": "how_to_specific_result",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "tactical_advice"
+    },
+    {
+      "id": 35,
+      "keyword": "AI video prompt mistakes",
+      "intent_pattern": "number_list",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "negative_angle"
+    },
+    {
+      "id": 36,
+      "keyword": "AI animation prompts",
+      "intent_pattern": "how_to_specific_result",
+      "primary": false,
+      "estimated_volume": "medium",
+      "reason": "animation_subcategory"
+    },
+    {
+      "id": 37,
+      "keyword": "text to video AI prompts",
+      "intent_pattern": "how_to_specific_result",
+      "primary": false,
+      "estimated_volume": "high",
+      "reason": "text_to_video_popular"
+    },
+    {
+      "id": 38,
+      "keyword": "image to video AI prompts",
+      "intent_pattern": "how_to_specific_result",
+      "primary": false,
+      "estimated_volume": "medium",
+      "reason": "image_to_video_workflow"
+    },
+    {
+      "id": 39,
+      "keyword": "AI video editing prompts",
+      "intent_pattern": "how_to_specific_result",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "editing_workflow"
+    },
+    {
+      "id": 40,
+      "keyword": "cinematic AI video prompts",
+      "intent_pattern": "how_to_specific_result",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "quality_descriptor"
+    },
+    {
+      "id": 41,
+      "keyword": "realistic AI video prompts",
+      "intent_pattern": "how_to_specific_result",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "realism_quality"
+    },
+    {
+      "id": 42,
+      "keyword": "AI video prompts for business",
+      "intent_pattern": "industry_specific",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "b2b_vertical"
+    },
+    {
+      "id": 43,
+      "keyword": "AI video prompts for education",
+      "intent_pattern": "industry_specific",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "education_vertical"
+    },
+    {
+      "id": 44,
+      "keyword": "AI video prompts for real estate",
+      "intent_pattern": "industry_specific",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "real_estate_vertical"
+    },
+    {
+      "id": 45,
+      "keyword": "prompt engineering for video AI",
+      "intent_pattern": "how_to_specific_result",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "professional_angle"
+    },
+    {
+      "id": 46,
+      "keyword": "AI video generator prompt tips",
+      "intent_pattern": "how_to_specific_result",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "tactical_guidance"
+    },
+    {
+      "id": 47,
+      "keyword": "how to improve AI video prompts",
+      "intent_pattern": "how_to_specific_result",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "optimization_query"
+    },
+    {
+      "id": 48,
+      "keyword": "AI video prompts that work",
+      "intent_pattern": "comparison_year",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "effectiveness_validation"
+    },
+    {
+      "id": 49,
+      "keyword": "AI video prompts library",
+      "intent_pattern": "ultimate_guide",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "resource_collection"
+    },
+    {
+      "id": 50,
+      "keyword": "copy paste AI video prompts",
+      "intent_pattern": "time_saving",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "convenience_angle"
+    },
+    {
+      "id": 51,
+      "keyword": "AI video prompts without experience",
+      "intent_pattern": "how_to_specific_result",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "beginner_targeting"
+    },
+    {
+      "id": 52,
+      "keyword": "AI video prompts 2026",
+      "intent_pattern": "comparison_year",
+      "primary": false,
+      "estimated_volume": "medium",
+      "reason": "freshness_signal"
+    },
+    {
+      "id": 53,
+      "keyword": "trending AI video prompts",
+      "intent_pattern": "comparison_year",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "trend_following"
+    },
+    {
+      "id": 54,
+      "keyword": "AI video prompts for content creators",
+      "intent_pattern": "industry_specific",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "creator_economy"
+    },
+    {
+      "id": 55,
+      "keyword": "AI video prompts for marketers",
+      "intent_pattern": "industry_specific",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "marketing_professionals"
+    },
+    {
+      "id": 56,
+      "keyword": "simple AI video prompts",
+      "intent_pattern": "time_saving",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "simplicity_angle"
+    },
+    {
+      "id": 57,
+      "keyword": "advanced AI video prompts",
+      "intent_pattern": "how_to_specific_result",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "advanced_skill_level"
+    },
+    {
+      "id": 58,
+      "keyword": "AI video prompts vs manual creation",
+      "intent_pattern": "comparison_year",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "traditional_comparison"
+    },
+    {
+      "id": 59,
+      "keyword": "convert ideas to AI video prompts",
+      "intent_pattern": "how_to_specific_result",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "ideation_workflow"
+    },
+    {
+      "id": 60,
+      "keyword": "AI video prompts for storytelling",
+      "intent_pattern": "industry_specific",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "narrative_focus"
+    },
+    {
+      "id": 61,
+      "keyword": "AI music video prompts",
+      "intent_pattern": "industry_specific",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "music_video_niche"
+    },
+    {
+      "id": 62,
+      "keyword": "AI promotional video prompts",
+      "intent_pattern": "industry_specific",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "promotional_content"
+    },
+    {
+      "id": 63,
+      "keyword": "AI video prompts for brands",
+      "intent_pattern": "industry_specific",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "brand_marketing"
+    },
+    {
+      "id": 64,
+      "keyword": "AI video prompts case studies",
+      "intent_pattern": "comparison_year",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "proof_seeking"
+    },
+    {
+      "id": 65,
+      "keyword": "monetize AI video prompts",
+      "intent_pattern": "monetization",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "income_generation"
+    },
+    {
+      "id": 66,
+      "keyword": "sell AI video prompts",
+      "intent_pattern": "monetization",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "prompt_marketplace"
+    },
+    {
+      "id": 67,
+      "keyword": "AI video prompts for freelancers",
+      "intent_pattern": "monetization",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "freelance_economy"
+    },
+    {
+      "id": 68,
+      "keyword": "AI video prompts course",
+      "intent_pattern": "ultimate_guide",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "educational_product"
+    },
+    {
+      "id": 69,
+      "keyword": "learn AI video prompting",
+      "intent_pattern": "ultimate_guide",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "learning_intent"
+    },
+    {
+      "id": 70,
+      "keyword": "AI video prompt structure",
+      "intent_pattern": "how_to_specific_result",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "technical_understanding"
+    },
+    {
+      "id": 71,
+      "keyword": "AI video prompt syntax",
+      "intent_pattern": "how_to_specific_result",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "technical_format"
+    },
+    {
+      "id": 72,
+      "keyword": "AI video prompt modifiers",
+      "intent_pattern": "how_to_specific_result",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "advanced_technique"
+    },
+    {
+      "id": 73,
+      "keyword": "AI video prompt best practices",
+      "intent_pattern": "how_to_specific_result",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "quality_standards"
+    },
+    {
+      "id": 74,
+      "keyword": "AI video prompt framework",
+      "intent_pattern": "ultimate_guide",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "systematic_approach"
+    },
+    {
+      "id": 75,
+      "keyword": "AI video prompt workflow",
+      "intent_pattern": "how_to_specific_result",
+      "primary": false,
+      "estimated_volume": "low",
+      "reason": "process_optimization"
+    }
+  ],
+  "priority_keywords_for_phase2": [
+    "AI video prompts",
+    "best AI video prompts 2026",
+    "AI video prompt engineering",
+    "Sora AI prompts",
+    "ChatGPT prompts for video creation",
+    "text to video AI prompts",
+    "how to write prompts for AI videos",
+    "AI video prompt examples",
+    "AI video prompt templates",
+    "AI video generation prompts",
+    "AI video prompts for social media",
+    "AI video prompts for YouTube",
+    "AI video prompts for TikTok",
+    "AI video prompts for Instagram",
+    "AI video prompts for ads",
+    "AI animation prompts",
+    "image to video AI prompts",
+    "Runway Gen-3 prompts",
+    "AI video prompts 2026",
+    "best prompts for AI video generators",
+    "AI video prompt guide",
+    "free AI video prompts",
+    "AI video prompts for beginners",
+    "AI video marketing prompts",
+    "AI product video prompts"
+  ],
+  "notes": {
+    "expansion_logic": "Cross-multiplied 8 intent patterns with tool names, industries, platforms, skill levels, and outcomes",
+    "tier_distribution": {
+      "primary_keywords": 3,
+      "high_potential": 22,
+      "medium_potential": 30,
+      "long_tail": 20
+    },
+    "next_phase": "Phase 2 will validate 25-30 representative keywords via DataForSEO API"
+  }
+}

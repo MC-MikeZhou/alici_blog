@@ -1,0 +1,280 @@
+{
+  "metadata": {
+    "clustering_date": "2026-01-26",
+    "input_keywords": 25,
+    "output_directions": 10,
+    "gates_applied": ["demand_validation", "business_alignment", "cluster_deduplication"]
+  },
+  "gate_results": {
+    "gate_1_demand_validation": {
+      "threshold": "search_volume ≥ 100",
+      "passed": 25,
+      "failed": 0,
+      "status": "✅ ALL PASS"
+    },
+    "gate_2_business_alignment": {
+      "criteria": "明确映射到 alici.ai 产品功能",
+      "passed": 25,
+      "failed": 0,
+      "status": "✅ ALL PASS",
+      "note": "所有关键词都与角色动画、视频生成核心功能相关"
+    },
+    "gate_3_cluster_deduplication": {
+      "method": "基于意图模式 + 语义相似度聚合",
+      "original_patterns": 8,
+      "clustered_directions": 10,
+      "status": "✅ COMPLETED"
+    }
+  },
+  "top_10_directions": [
+    {
+      "direction_id": "D1",
+      "direction_name": "AI Character Animation Tutorial & How-to Guides",
+      "pattern": "Tool/Feature Tutorial",
+      "core_keywords": [
+        "AI character animation",
+        "how to make AI character dance videos",
+        "AI character animation tutorial",
+        "create animated character videos",
+        "animate characters with AI"
+      ],
+      "aggregate_search_volume": 8530,
+      "direction_score": 87,
+      "keyword_difficulty_avg": 42,
+      "business_value": 10,
+      "alici_mapping": {
+        "core_features": ["角色动画生成", "文本到视频", "教程内容创作"],
+        "use_cases": ["功能展示", "用户教育", "入门教程"],
+        "target_audience": "初学者、内容创作者"
+      },
+      "reasoning": "最高搜索量聚合，教程类内容是流量入口，适合 alici.ai 产品教育"
+    },
+    {
+      "direction_id": "D2",
+      "direction_name": "Brand Marketing & Mascot Animation for Businesses",
+      "pattern": "Industry-Specific Use Case",
+      "core_keywords": [
+        "AI character animation for marketing",
+        "animated mascot videos for brands",
+        "character animation for product demos",
+        "AI dance videos for social media marketing"
+      ],
+      "aggregate_search_volume": 4530,
+      "direction_score": 85,
+      "keyword_difficulty_avg": 47,
+      "business_value": 10,
+      "alici_mapping": {
+        "core_features": ["品牌吉祥物制作", "营销视频生成", "产品演示动画"],
+        "use_cases": ["品牌营销", "产品推广", "企业宣传"],
+        "target_audience": "营销人员、品牌经理、企业主"
+      },
+      "reasoning": "高商业价值，精准受众，转化潜力大"
+    },
+    {
+      "direction_id": "D3",
+      "direction_name": "Platform-Specific Character Animation (TikTok/Instagram)",
+      "pattern": "Platform-Specific Content",
+      "core_keywords": [
+        "AI character dance videos for TikTok",
+        "Instagram character animation ideas",
+        "TikTok mascot dance trends"
+      ],
+      "aggregate_search_volume": 2020,
+      "direction_score": 78,
+      "keyword_difficulty_avg": 46,
+      "business_value": 10,
+      "alici_mapping": {
+        "core_features": ["多平台格式导出", "社交媒体优化", "病毒内容创作"],
+        "use_cases": ["TikTok 内容", "Instagram Reels", "短视频营销"],
+        "target_audience": "社媒运营、KOL、内容创作者"
+      },
+      "reasoning": "平台特定需求，流量分发场景明确"
+    },
+    {
+      "direction_id": "D4",
+      "direction_name": "AI Character Animation Tools Comparison & Reviews",
+      "pattern": "Platform/Tool Comparison",
+      "core_keywords": [
+        "best AI character animation tools",
+        "character dance video maker reviews",
+        "AI mascot creator comparison"
+      ],
+      "aggregate_search_volume": 2240,
+      "direction_score": 68,
+      "keyword_difficulty_avg": 52,
+      "business_value": 4,
+      "alici_mapping": {
+        "core_features": ["产品定位", "竞品优势", "工具评测"],
+        "use_cases": ["品牌认知", "决策支持", "工具选择"],
+        "target_audience": "潜在客户、评估期用户"
+      },
+      "reasoning": "竞品流量，品牌建设，可获取评估期用户"
+    },
+    {
+      "direction_id": "D5",
+      "direction_name": "Professional Quality & Best Practices for Character Animation",
+      "pattern": "Quality/Best Practices",
+      "core_keywords": [
+        "professional AI character animation",
+        "realistic character dance movements",
+        "high quality AI mascot videos"
+      ],
+      "aggregate_search_volume": 1350,
+      "direction_score": 64,
+      "keyword_difficulty_avg": 49,
+      "business_value": 7,
+      "alici_mapping": {
+        "core_features": ["高清渲染", "动作平滑", "专业级输出"],
+        "use_cases": ["质量保证", "专业制作", "高端客户"],
+        "target_audience": "设计师、视频制作人、专业用户"
+      },
+      "reasoning": "质量诉求，高端用户，客单价潜力高"
+    },
+    {
+      "direction_id": "D6",
+      "direction_name": "Automated & Bulk Character Animation Production",
+      "pattern": "Workflow Optimization",
+      "core_keywords": [
+        "automate character video production",
+        "bulk create character animations",
+        "fast AI character animation"
+      ],
+      "aggregate_search_volume": 1290,
+      "direction_score": 62,
+      "keyword_difficulty_avg": 43,
+      "business_value": 7,
+      "alici_mapping": {
+        "core_features": ["批量生成", "自动化生产", "模板系统"],
+        "use_cases": ["营销自动化", "大规模内容生产", "效率提升"],
+        "target_audience": "企业营销团队、代理商、效率用户"
+      },
+      "reasoning": "效率需求，企业客户，规模化应用"
+    },
+    {
+      "direction_id": "D7",
+      "direction_name": "AI Character Animation Trends & Industry Insights 2026",
+      "pattern": "Trend Analysis/Predictions",
+      "core_keywords": [
+        "AI character animation trends 2026",
+        "character video marketing trends"
+      ],
+      "aggregate_search_volume": 480,
+      "direction_score": 48,
+      "keyword_difficulty_avg": 45,
+      "business_value": 4,
+      "alici_mapping": {
+        "core_features": ["行业洞察", "技术趋势", "思想领导力"],
+        "use_cases": ["行业教育", "品牌定位", "专家形象"],
+        "target_audience": "决策者、行业观察者、早期采用者"
+      },
+      "reasoning": "思想领导力内容，品牌建设，长尾流量"
+    },
+    {
+      "direction_id": "D8",
+      "direction_name": "Monetize AI Character Animation - Business Models",
+      "pattern": "Business Opportunity/ROI",
+      "core_keywords": [
+        "make money with AI character videos",
+        "monetize character animation content"
+      ],
+      "aggregate_search_volume": 320,
+      "direction_score": 44,
+      "keyword_difficulty_avg": 42,
+      "business_value": 4,
+      "alici_mapping": {
+        "core_features": ["商业应用场景", "变现模式", "服务拓展"],
+        "use_cases": ["自由职业者", "创业者", "服务商"],
+        "target_audience": "创业者、自由职业者、服务提供商"
+      },
+      "reasoning": "商业机会吸引力，创业者受众，服务生态"
+    },
+    {
+      "direction_id": "D9",
+      "direction_name": "AI Character Animation for E-commerce & Product Marketing",
+      "pattern": "Industry-Specific Use Case",
+      "core_keywords": [
+        "character animation for product demos",
+        "AI dance videos for social media marketing"
+      ],
+      "aggregate_search_volume": 1330,
+      "direction_score": 70,
+      "keyword_difficulty_avg": 49,
+      "business_value": 10,
+      "alici_mapping": {
+        "core_features": ["产品演示", "电商视频", "营销动画"],
+        "use_cases": ["电商营销", "产品推广", "转化提升"],
+        "target_audience": "电商运营、产品经理、营销人员"
+      },
+      "reasoning": "垂直行业，明确痛点，转化路径清晰"
+    },
+    {
+      "direction_id": "D10",
+      "direction_name": "Character Animation for Social Media Content Creators",
+      "pattern": "Platform-Specific Content",
+      "core_keywords": [
+        "AI character dance videos for TikTok",
+        "Instagram character animation ideas"
+      ],
+      "aggregate_search_volume": 1640,
+      "direction_score": 72,
+      "keyword_difficulty_avg": 50,
+      "business_value": 10,
+      "alici_mapping": {
+        "core_features": ["社交内容创作", "病毒传播", "创意灵感"],
+        "use_cases": ["内容创作者工具", "KOL 赋能", "粉丝增长"],
+        "target_audience": "内容创作者、KOL、博主"
+      },
+      "reasoning": "创作者经济，高活跃用户，口碑传播"
+    }
+  ],
+  "direction_ranking": {
+    "by_search_volume": [
+      {"direction_id": "D1", "volume": 8530},
+      {"direction_id": "D2", "volume": 4530},
+      {"direction_id": "D4", "volume": 2240},
+      {"direction_id": "D3", "volume": 2020},
+      {"direction_id": "D10", "volume": 1640},
+      {"direction_id": "D5", "volume": 1350},
+      {"direction_id": "D9", "volume": 1330},
+      {"direction_id": "D6", "volume": 1290},
+      {"direction_id": "D7", "volume": 480},
+      {"direction_id": "D8", "volume": 320}
+    ],
+    "by_direction_score": [
+      {"direction_id": "D1", "score": 87},
+      {"direction_id": "D2", "score": 85},
+      {"direction_id": "D3", "score": 78},
+      {"direction_id": "D10", "score": 72},
+      {"direction_id": "D9", "score": 70},
+      {"direction_id": "D4", "score": 68},
+      {"direction_id": "D5", "score": 64},
+      {"direction_id": "D6", "score": 62},
+      {"direction_id": "D7", "score": 48},
+      {"direction_id": "D8", "score": 44}
+    ],
+    "by_business_value": [
+      {"direction_id": "D1", "value": 10},
+      {"direction_id": "D2", "value": 10},
+      {"direction_id": "D3", "value": 10},
+      {"direction_id": "D9", "value": 10},
+      {"direction_id": "D10", "value": 10},
+      {"direction_id": "D5", "value": 7},
+      {"direction_id": "D6", "value": 7},
+      {"direction_id": "D4", "value": 4},
+      {"direction_id": "D7", "value": 4},
+      {"direction_id": "D8", "value": 4}
+    ]
+  },
+  "next_phase": {
+    "phase": "3 - Title Lock",
+    "input": "10 个方向",
+    "output": "2 个锁定选题",
+    "selection_criteria": [
+      "主关键词命中检查 (SERP 数据)",
+      "意图匹配验证 (竞品内容类型)",
+      "SERP 范式对齐 (标题格式)",
+      "年份验证 (2026 vs 2025)",
+      "综合评分 Top 2"
+    ]
+  }
+}

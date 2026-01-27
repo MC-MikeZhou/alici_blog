@@ -1,0 +1,91 @@
+{
+  "version": "1.2",
+  "generated_date": "2026-01-18",
+  "topic_info": {
+    "primary_keyword": "sora 2 prompt guide",
+    "secondary_keywords": [
+      "sora 2 prompts",
+      "ai video prompts",
+      "sora 2 tutorial",
+      "cinematic ai videos",
+      "sora 2 examples"
+    ],
+    "topic_category": "AI Video Generation Tutorial",
+    "search_intent": "how-to",
+    "target_audience": "Content creators, video producers, AI enthusiasts learning Sora 2"
+  },
+  "recommended_titles": {
+    "how_to_formula": {
+      "title": "How to Create Cinematic AI Videos with Sora 2 in 2026",
+      "format": "How to [action] with [tool] in [year]",
+      "how_to_prefix": true,
+      "year_included": true,
+      "tool_included": "Sora 2",
+      "benefit_promise": "Cinematic AI Videos",
+      "ctr_prediction": 4.2,
+      "rationale": "Direct how-to format with clear outcome, includes year for freshness, mentions tool explicitly"
+    },
+    "guide_formula": {
+      "title": "Sora 2 Prompt Guide: Mastering AI Video Generation in 2026",
+      "format": "[Tool] [Content Type]: [Benefit] in [Year]",
+      "how_to_prefix": false,
+      "year_included": true,
+      "tool_included": "Sora 2",
+      "benefit_promise": "Mastering AI Video Generation",
+      "ctr_prediction": 3.8,
+      "rationale": "Guide format, establishes authority, clear value proposition"
+    },
+    "listicle_formula": {
+      "title": "7 Essential Sora 2 Prompt Elements for Professional AI Videos (2026)",
+      "format": "[Number] [Adjective] [Tool] [Elements] for [Outcome] ([Year])",
+      "how_to_prefix": false,
+      "year_included": true,
+      "tool_included": "Sora 2",
+      "benefit_promise": "Professional AI Videos",
+      "ctr_prediction": 4.0,
+      "rationale": "Number-driven, specific elements, professional outcome, year in parentheses"
+    }
+  },
+  "selected_title": "How to Create Cinematic AI Videos with Sora 2 in 2026",
+  "selected_title_type": "how_to_formula",
+  "title_validation": {
+    "has_how_to_prefix": true,
+    "includes_tool_name": true,
+    "includes_year": true,
+    "includes_benefit": true,
+    "estimated_ctr": 4.2
+  },
+  "content_requirements": {
+    "article_type": "tutorial",
+    "required_sections": [
+      "AIDA opening (80-120 words)",
+      "Understanding Prompt Structure for Sora 2 (NEW in v2.1)",
+      "7-element prompt framework",
+      "Descriptive vs Directive strategies",
+      "Complete prompt examples (short and long)",
+      "Prompt checklist",
+      "Practical examples with step-by-step instructions",
+      "3-5 citable blocks for authority",
+      "Actionable takeaways"
+    ],
+    "must_include_prompt_structure_chapter": true,
+    "target_word_count": "2500-3500",
+    "skill_version": "blog-tutorial-writer v2.1"
+  },
+  "seo_metrics": {
+    "estimated_traffic_potential": "High",
+    "competition_level": "Medium",
+    "topic_score": 78,
+    "freshness_factor": "High (2026 year included, recent Sora 2 release)"
+  },
+  "aeo_targets": {
+    "initial_score_target": 80,
+    "final_score_target": 85,
+    "key_improvements": [
+      "Add 7-element prompt structure framework (v2.1)",
+      "Include E-E-A-T authority signals",
+      "Provide actionable checklists",
+      "Demonstrate hands-on experience with Sora 2"
+    ]
+  }
+}

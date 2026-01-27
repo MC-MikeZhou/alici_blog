@@ -1,0 +1,17 @@
+[
+  {
+    "prompt": "Magazine cover style editorial photography for a tech article about AI video generation.\n\nContent:\n- Central focus: A glowing text prompt floating in mid-air transforming into a dynamic video screen\n- Left side: Floating text that reads \"A puppy playing in grass\" in clean typography\n- Right side: A burst of light revealing a video frame showing the described scene coming to life\n- Background: Abstract neural network patterns and flowing data streams connecting text to video\n- Visual metaphor: Magic transformation from words to moving images\n- Subtle UI elements suggesting video playback controls\n\nStyle: Cinematic lighting with dramatic rim light and lens flares, shallow depth of field creating bokeh effect, modern minimalist composition with purple and electric blue gradient background, floating elements with subtle motion blur, 8K resolution, professional editorial aesthetic with tech magazine quality.",
+    "role": "hero",
+    "filename": "ai-video-tutorial-hero.png"
+  },
+  {
+    "prompt": "Educational infographic diagram explaining the 3-step AI video creation process.\n\nContent:\n- Section 1 (left): Platform selection icon - smartphone/laptop with checkmark, labeled \"1. Choose Platform\" with \"1 min\" time indicator\n- Section 2 (center): Text prompt input - document icon with pencil, labeled \"2. Write Prompt\" with \"2 min\" time indicator, showing sample text \"A dog running\"\n- Section 3 (right): Video output - play button with video frame, labeled \"3. Generate\" with \"2 min\" time indicator\n- Flow arrows connecting each section from left to right, showing progression\n- Total time callout: \"= 5 minutes\" in highlighted badge\n- Clean geometric icons in consistent style for each step\n- Subtle background showing faded video frames\n\nStyle: Clean McKinsey presentation aesthetic with soft gradient background (light blue to purple), numbered circular badges for each step, professional sans-serif typography (Helvetica or similar), maximum legibility at thumbnail size, minimalist geometric line-art icons, modern SaaS interface aesthetic, pastel color palette with purple accents.",
+    "role": "concept",
+    "filename": "ai-video-tutorial-process.png"
+  },
+  {
+    "prompt": "Educational infographic showing the AI video prompt formula structure.\n\nContent:\n- Title at top: \"The Perfect Prompt Formula\" in bold typography\n- Four colored blocks arranged horizontally, each with icon and label:\n  Block 1 (blue): Icon of a person/object, labeled \"SUBJECT\" with example \"A golden retriever\"\n  Block 2 (green): Icon of running figure, labeled \"ACTION\" with example \"running through\"\n  Block 3 (orange): Icon of landscape, labeled \"SETTING\" with example \"a sunny meadow\"\n  Block 4 (purple): Icon of paintbrush, labeled \"STYLE\" with example \"cinematic, 4K\"\n- Plus signs (+) between each block\n- Bottom section: Full example sentence combining all elements in a text box\n- Visual hierarchy with color-coded sections for easy memorization\n\nStyle: Modern educational infographic design with flat colors and clean lines, bright saturated color palette (blue #4A90E2, green #7ED321, orange #F5A623, purple #BD10E0), rounded corners on all blocks, drop shadows for depth, professional sans-serif typography with clear hierarchy, white background with subtle grid pattern, suitable for social media sharing and presentations.",
+    "role": "concept",
+    "filename": "ai-video-tutorial-formula.png"
+  }
+]

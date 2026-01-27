@@ -1,0 +1,153 @@
+{
+  "analysis_date": "2026-01-21",
+  "source": "AliciBlog /reports directory",
+  "writers": {
+    "blog-tutorial-writer": {
+      "version": "2.3",
+      "word_count": {
+        "min": 1800,
+        "max": 2500,
+        "target": "2000-2500"
+      },
+      "content_type": "tutorial",
+      "triggers": ["write tutorial", "create how-to", "generate guide", "tutorial article"],
+      "key_features": [
+        "AIDA Opening Framework (80-120 words)",
+        "Citable Blocks (3-5 per article)",
+        "Version Inheritance (E-E-A-T protection)",
+        "7-Element Prompt Structure (AI tutorials)",
+        "Dependency validation"
+      ],
+      "aeo_target": 80,
+      "production_time_minutes": {
+        "min": 15,
+        "max": 25
+      }
+    },
+    "blog-list-writer": {
+      "version": "2.2",
+      "word_count": {
+        "min": 2500,
+        "max": 3500,
+        "target": "2500-3500"
+      },
+      "content_type": "list",
+      "triggers": ["write list", "best tools", "top alternatives", "comparison article", "listicle", "vs", "showdown"],
+      "key_features": [
+        "Title Formula Enforcement (Year + Number)",
+        "5-Dimension Evaluation Framework",
+        "Core Positioning Column",
+        "Tool Showdown Mode (v2.2)",
+        "Version verification integration"
+      ],
+      "aeo_target": 75,
+      "production_time_minutes": {
+        "min": 20,
+        "max": 35
+      }
+    },
+    "case-roundup-writer": {
+      "version": "1.3",
+      "word_count": {
+        "min": 300,
+        "max": 600,
+        "target": "300-600"
+      },
+      "content_type": "micro_roundup",
+      "triggers": ["写小博文", "case roundup", "案例汇总", "micro blog", "write roundup"],
+      "key_features": [
+        "Material Gate (MANDATORY)",
+        "Multi-dimensional expansion (single source)",
+        "Visual Prompt Pack (V1/V2/V3 evolution)",
+        "Video Integration Slot",
+        "Hook Module",
+        "Source & Boundary transparency"
+      ],
+      "aeo_target": 70,
+      "production_time_minutes": {
+        "min": 10,
+        "max": 20
+      }
+    }
+  },
+  "shared_dependencies": [
+    {
+      "file": "BLOG_WRITING_PRINCIPLES_v2.md",
+      "version": "2.1",
+      "purpose": "Title formulas, evaluation framework, writing standards"
+    },
+    {
+      "file": "PRODUCT_CATALOG.md",
+      "purpose": "CTA URL mapping and product specifications"
+    },
+    {
+      "file": "TOOL_SHOWDOWN_TEMPLATE.md",
+      "purpose": "High-contrast showdown structure (tool_showdown mode)"
+    }
+  ],
+  "existing_reports": [
+    {
+      "path": "2025-01-15-viral-ai-videos",
+      "type": "tutorial"
+    },
+    {
+      "path": "2026-01-15-ai-video-generators",
+      "type": "list"
+    },
+    {
+      "path": "2026-01-15-ai-video-tutorial",
+      "type": "tutorial"
+    },
+    {
+      "path": "2026-01-15-best-ai-video-tools",
+      "type": "list"
+    },
+    {
+      "path": "2026-01-17-best-ai-marketing-tools",
+      "type": "list"
+    },
+    {
+      "path": "2026-01-17-sora-prompt-guide",
+      "type": "tutorial"
+    },
+    {
+      "path": "2026-01-18-kling-motion-control",
+      "type": "case_roundup"
+    },
+    {
+      "path": "2026-01-20-kling-motion-control",
+      "type": "case_roundup"
+    },
+    {
+      "path": "2026-01-20-kling-motion-control-guide",
+      "type": "tutorial"
+    },
+    {
+      "path": "2026-01-20-nano-banana-motion-control",
+      "type": "case_roundup"
+    },
+    {
+      "path": "2026-01-21-ai-baby-dance",
+      "type": "case_roundup"
+    },
+    {
+      "path": "2026-01-21-ai-video-generator-comparison",
+      "type": "list"
+    },
+    {
+      "path": "2026-01-21-nano-banana-motion-control-v2",
+      "type": "case_roundup"
+    }
+  ],
+  "content_distribution": {
+    "tutorials": 4,
+    "lists": 4,
+    "case_roundups": 5,
+    "total": 13
+  },
+  "automation_metrics": {
+    "auto_pass_rate": "85%",
+    "avg_iteration_rounds": "0.5",
+    "human_review_rate": "15%"
+  }
+}

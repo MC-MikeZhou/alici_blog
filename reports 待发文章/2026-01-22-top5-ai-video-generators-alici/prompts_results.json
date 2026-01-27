@@ -1,0 +1,29 @@
+[
+  {
+    "role": "hero",
+    "local_path": "/Users/H/Documents/AliciBlog/reports/2026-01-22-top5-ai-video-generators-alici/assets/top5-ai-video-hero.png",
+    "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/top5-ai-video-hero.png",
+    "config": {
+      "aspect_ratio": "16:9",
+      "resolution": "2K"
+    }
+  },
+  {
+    "role": "comparison",
+    "local_path": "/Users/H/Documents/AliciBlog/reports/2026-01-22-top5-ai-video-generators-alici/assets/top5-ai-video-comparison.png",
+    "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/top5-ai-video-comparison.png",
+    "config": {
+      "aspect_ratio": "16:9",
+      "resolution": "1K"
+    }
+  },
+  {
+    "role": "concept",
+    "local_path": "/Users/H/Documents/AliciBlog/reports/2026-01-22-top5-ai-video-generators-alici/assets/top5-ai-video-methodology.png",
+    "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/top5-ai-video-methodology.png",
+    "config": {
+      "aspect_ratio": "16:9",
+      "resolution": "1K"
+    }
+  }
+]

@@ -1,0 +1,267 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Case Roundup Writer Input Schema",
+  "description": "Input schema for case-roundup-writer skill",
+  "type": "object",
+  "properties": {
+    "insight_pack": {
+      "type": "object",
+      "description": "核心观点和洞察包（可通过交互式收集）",
+      "properties": {
+        "thesis": {
+          "type": "string",
+          "description": "核心观点（一句话）",
+          "example": "Motion Control 的价值不在'更炫'，而在'把动作确定性从 prompt 猜测变成 reference 迁移'"
+        },
+        "why_now": {
+          "type": "string",
+          "description": "为什么现在值得写这个话题",
+          "example": "Kling 2.6 Motion Control 发布，案例爆发"
+        },
+        "key_takeaways": {
+          "type": "array",
+          "description": "读者应该带走的关键要点（3-5个）",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 3,
+          "maxItems": 5,
+          "example": [
+            "Reference video 是动作蓝图",
+            "Prompt 主要用于场景/风格，不重复描述动作",
+            "选对模式/朝向影响成功率和时长"
+          ]
+        },
+        "do_not_say": {
+          "type": "array",
+          "description": "需要避免的不确定信息（可选）",
+          "items": {
+            "type": "string"
+          },
+          "example": [
+            "不确定的版本号信息",
+            "未经证实的成功率数字"
+          ]
+        },
+        "product_lens": {
+          "type": "string",
+          "description": "突出的产品理念",
+          "enum": [
+            "One-prompt / 新手可用",
+            "AI-driven / 多版本生成→选择迭代",
+            "多模型一站式",
+            "其他"
+          ],
+          "example": "One-prompt / 新手可用 / 多模型一站式"
+        },
+        "audience": {
+          "type": "string",
+          "description": "目标读者",
+          "example": "视频营销新手、独立创作者"
+        }
+      },
+      "required": ["thesis", "why_now", "key_takeaways", "product_lens", "audience"]
+    },
+    "case_pack": {
+      "type": "object",
+      "description": "案例包（2-5个案例）",
+      "properties": {
+        "cases": {
+          "type": "array",
+          "description": "案例列表",
+          "items": {
+            "type": "object",
+            "properties": {
+              "case_title": {
+                "type": "string",
+                "description": "案例标题",
+                "example": "舞蹈动作迁移到虚拟角色"
+              },
+              "video_url": {
+                "type": "string",
+                "format": "uri",
+                "description": "视频链接（可选）",
+                "example": "https://youtube.com/watch?v=xxx"
+              },
+              "video_metadata": {
+                "type": "object",
+                "description": "视频元数据（可选）",
+                "properties": {
+                  "title": {
+                    "type": "string",
+                    "description": "视频标题"
+                  },
+                  "channel": {
+                    "type": "string",
+                    "description": "频道名"
+                  },
+                  "duration": {
+                    "type": "string",
+                    "description": "视频时长",
+                    "example": "3:45"
+                  }
+                }
+              },
+              "what_happens": {
+                "type": "string",
+                "description": "发生了什么（80-100词描述）",
+                "example": "创作者使用真人舞蹈视频作为动作参考，将动作迁移到 AI 生成的虚拟角色上..."
+              },
+              "why_it_works": {
+                "type": "string",
+                "description": "为什么有效（30-40词分析）",
+                "example": "Motion Control 将动作确定性从 prompt 猜测变成 reference 迁移..."
+              },
+              "what_to_copy": {
+                "type": "array",
+                "description": "可复用的规律（2-3条）",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 2,
+                "maxItems": 3,
+                "example": [
+                  "使用清晰的全身舞蹈视频作为参考源",
+                  "Prompt 聚焦场景和风格，不重复描述动作"
+                ]
+              },
+              "tags": {
+                "type": "array",
+                "description": "案例标签",
+                "items": {
+                  "type": "string"
+                },
+                "example": ["motion-control", "dance", "character-animation"]
+              }
+            },
+            "required": ["case_title", "what_happens", "why_it_works", "what_to_copy"]
+          },
+          "minItems": 2,
+          "maxItems": 5
+        }
+      },
+      "required": ["cases"]
+    },
+    "video_urls": {
+      "type": "array",
+      "description": "视频链接列表（可选，用于自动生成 Case Pack）",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "example": [
+        "https://www.youtube.com/watch?v=xxx",
+        "https://www.youtube.com/watch?v=yyy"
+      ]
+    },
+    "character_pack": {
+      "type": "object",
+      "description": "角色定义包（可选，用于自定义角色）- NEW in v1.3",
+      "properties": {
+        "characters": {
+          "type": "array",
+          "description": "角色列表（1-3个）",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "角色名称",
+                "example": "Neon Street Dancer"
+              },
+              "positioning": {
+                "type": "string",
+                "description": "适合什么内容",
+                "example": "短视频营销、舞蹈教学、节奏感内容"
+              },
+              "v1_prompt": {
+                "type": "string",
+                "description": "V1 Neutral Starter prompt（中性姿势、全身、清晰光线、干净背景）",
+                "example": "A young street dancer, full body, neutral standing pose, casual streetwear, clean white background, soft even lighting, front-facing, high resolution, photorealistic"
+              },
+              "v2_prompt": {
+                "type": "string",
+                "description": "V2 Style Boost prompt（服装/道具/场景/灯光/镜头语言）",
+                "example": "A young street dancer in neon-lit urban alley, cyberpunk outfit with LED strips, dynamic pose ready to dance, purple and blue neon signs behind, cinematic lighting, shallow depth of field, photorealistic, 4K"
+              },
+              "v3_prompt": {
+                "type": "string",
+                "description": "V3 Viral/Series Look prompt（更强识别度、缩略图友好、可系列化）",
+                "example": "A young street dancer with glowing LED jacket, iconic pose against bright neon backdrop, bold color contrast (cyan + magenta), recognizable silhouette, YouTube thumbnail style, high saturation, photorealistic, 4K"
+              }
+            },
+            "required": ["name", "positioning", "v1_prompt", "v2_prompt", "v3_prompt"]
+          },
+          "minItems": 1,
+          "maxItems": 3
+        }
+      },
+      "required": ["characters"]
+    }
+  },
+  "anyOf": [
+    {
+      "required": ["insight_pack", "case_pack"]
+    },
+    {
+      "required": ["video_urls"]
+    }
+  ],
+  "examples": [
+    {
+      "insight_pack": {
+        "thesis": "Motion Control 的价值不在'更炫'，而在'把动作确定性从 prompt 猜测变成 reference 迁移'",
+        "why_now": "Kling 2.6 Motion Control 发布，案例爆发",
+        "key_takeaways": [
+          "Reference video 是动作蓝图",
+          "Prompt 主要用于场景/风格，不重复描述动作",
+          "选对模式/朝向影响成功率和时长"
+        ],
+        "do_not_say": [
+          "不确定的版本号信息",
+          "未经证实的成功率数字"
+        ],
+        "product_lens": "One-prompt / 新手可用 / 多模型一站式",
+        "audience": "视频营销新手、独立创作者"
+      },
+      "case_pack": {
+        "cases": [
+          {
+            "case_title": "舞蹈动作迁移到虚拟角色",
+            "video_url": "https://youtube.com/watch?v=xxx",
+            "video_metadata": {
+              "title": "原视频标题",
+              "channel": "频道名",
+              "duration": "3:45"
+            },
+            "what_happens": "创作者使用真人舞蹈视频作为动作参考，通过 Kling 2.6 的 Motion Control 功能，将舞蹈动作精确迁移到 AI 生成的虚拟角色上。最终视频中，虚拟角色完美复现了参考视频中的舞步节奏和肢体动作，但场景和角色风格完全不同。",
+            "why_it_works": "Motion Control 将动作确定性从 prompt 文字描述（AI 需要'猜测'你想要什么动作）变成了 reference 迁移（AI 直接复制参考视频的动作轨迹）。这避免了文字描述的歧义性。",
+            "what_to_copy": [
+              "使用清晰、全身入镜的舞蹈视频作为参考源",
+              "Prompt 聚焦于场景和风格描述，不要重复描述动作本身",
+              "选择'Camera Motion: Static'模式以提高动作迁移准确度"
+            ],
+            "tags": ["motion-control", "dance", "character-animation"]
+          },
+          {
+            "case_title": "产品演示视频的手势控制",
+            "video_url": "https://youtube.com/watch?v=yyy",
+            "video_metadata": {
+              "title": "产品演示案例",
+              "channel": "创作者B",
+              "duration": "2:30"
+            },
+            "what_happens": "创作者需要生成一个产品演示视频，展示虚拟主播介绍产品时的手势动作。他先录制了自己介绍产品的视频作为参考，然后使用 Motion Control 将手势和表情迁移到 AI 生成的虚拟主播上。",
+            "why_it_works": "对于需要精确控制手势节奏的场景（如产品演示、教学视频），Motion Control 比纯文字 prompt 更可靠，因为手势的时序和幅度很难用文字准确描述。",
+            "what_to_copy": [
+              "先自己演示一遍，录制参考视频",
+              "确保手势清晰、节奏明确",
+              "Prompt 描述虚拟主播的外观和场景，不描述动作细节"
+            ],
+            "tags": ["motion-control", "product-demo", "gesture"]
+          }
+        ]
+      }
+    }
+  ]
+}

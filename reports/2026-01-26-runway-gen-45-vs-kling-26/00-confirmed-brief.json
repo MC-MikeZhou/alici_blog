@@ -1,0 +1,83 @@
+{
+  "confirmed_at": "2026-01-26T12:00:00Z",
+  "schema_version": "4.0",
+  "mode": "full_auto",
+  "intent": "洗稿",
+  "goal": "帮人选择工具",
+  "writer": "blog-list-writer",
+  "writer_mode": "tool_showdown",
+  "source": {
+    "url": "https://youtu.be/Rj_o3vXZmZU",
+    "type": "youtube",
+    "title": "Runway 4.5 vs Kling 2.6: Who Wins? (AI Video Review)",
+    "channel": "Curious Refuge",
+    "duration": "12:18",
+    "blog_url": "https://curiousrefuge.com/blog/how-to-use-runway-gen-45"
+  },
+  "topic": {
+    "keyword": "Runway Gen 4.5 vs Kling 2.6",
+    "search_intent": "comparison",
+    "content_type": "tool_showdown"
+  },
+  "title": {
+    "selected": "Runway Gen 4.5 vs Kling 2.6: Which AI Video Model Wins in 2026?",
+    "type": "showdown"
+  },
+  "rewrite_constraints": {
+    "preserve_structure": true,
+    "no_new_tools": true,
+    "no_new_scenarios": true,
+    "brand_swap": "Alici AI",
+    "word_count_ratio": [0.8, 1.2],
+    "strict_validation": true
+  },
+  "source_tools": [
+    "Runway Gen 4.5",
+    "Kling 2.6",
+    "Google Veo 3.1"
+  ],
+  "source_scenarios": [
+    {
+      "id": "action_water",
+      "name": "Action and Water Test",
+      "winner": "Kling 2.6"
+    },
+    {
+      "id": "vfx",
+      "name": "VFX Test (Particles and Smoke)",
+      "winner": "Kling 2.6"
+    },
+    {
+      "id": "fire",
+      "name": "Fire Test",
+      "winner": "Kling 2.6"
+    },
+    {
+      "id": "dialogue",
+      "name": "Dialogue Test",
+      "winner": "Google Veo 3.1"
+    },
+    {
+      "id": "2d_animation",
+      "name": "2D Animation Test",
+      "winner": "Kling 2.6"
+    },
+    {
+      "id": "3d_animation",
+      "name": "3D Animation Test",
+      "winner": "Kling 2.6"
+    }
+  ],
+  "key_conclusions": [
+    "Runway Gen-4.5 is not the best AI video model on the market right now",
+    "Runway Gen-4.5 ranks approximately 8th place",
+    "Kling 2.6 wins in 5 out of 6 test categories",
+    "Google Veo 3.1 wins in Dialogue test",
+    "Runway struggles with water physics, temporal consistency, and character morphing"
+  ],
+  "execution_config": {
+    "auto_mode": true,
+    "aeo_target": 75,
+    "max_improvement_rounds": 3
+  }
+}

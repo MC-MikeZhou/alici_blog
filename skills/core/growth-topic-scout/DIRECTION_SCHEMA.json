@@ -1,0 +1,318 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://alici.ai/schemas/direction-v2.2.json",
+  "title": "Direction",
+  "description": "Direction object for Growth Topic Scout v2.2 Seed Mode output",
+  "type": "object",
+  "required": [
+    "rank",
+    "direction_id",
+    "theme",
+    "locked_title",
+    "seo_score",
+    "aeo_score",
+    "combined_priority",
+    "evidence_chain",
+    "recommended_skill"
+  ],
+  "properties": {
+    "rank": {
+      "type": "integer",
+      "description": "Priority ranking (1 = highest)",
+      "minimum": 1,
+      "maximum": 10
+    },
+    "direction_id": {
+      "type": "string",
+      "description": "Unique direction identifier",
+      "pattern": "^D[0-9]{2}$",
+      "examples": ["D01", "D02"]
+    },
+    "theme": {
+      "type": "string",
+      "description": "High-level theme/category of this direction",
+      "examples": ["AI Video Tool Comparisons", "Tutorial: AI Video Creation"]
+    },
+    "pattern_id": {
+      "type": "string",
+      "description": "Reference to source intent pattern from Phase 0.5",
+      "pattern": "^P[0-9]+$"
+    },
+    "locked_title": {
+      "type": "object",
+      "description": "Verified, ready-to-use title with validation evidence",
+      "required": ["title", "primary_keyword", "intent_matched", "serp_aligned", "year_validated"],
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The locked title (ready to use)",
+          "minLength": 20,
+          "maxLength": 70
+        },
+        "primary_keyword": {
+          "type": "string",
+          "description": "Primary target keyword embedded in title"
+        },
+        "intent_matched": {
+          "type": "boolean",
+          "description": "Whether title format matches intent type"
+        },
+        "serp_aligned": {
+          "type": "boolean",
+          "description": "Whether title structure aligns with SERP Top 3"
+        },
+        "year_validated": {
+          "type": "boolean",
+          "description": "Whether year inclusion has data support"
+        },
+        "formula_id": {
+          "type": "string",
+          "description": "Reference to TITLE_FORMULAS.md formula",
+          "examples": ["showdown-1", "listicle-1", "howto-1"]
+        },
+        "evidence": {
+          "type": "object",
+          "description": "Supporting evidence for title decisions",
+          "properties": {
+            "serp_titles": {
+              "type": "array",
+              "description": "Top 3 competitor titles from SERP",
+              "items": { "type": "string" }
+            },
+            "search_volume": {
+              "type": "integer",
+              "description": "Primary keyword search volume"
+            },
+            "trend": {
+              "type": "string",
+              "enum": ["rising", "stable", "declining"]
+            }
+          }
+        }
+      }
+    },
+    "backup_title": {
+      "type": "object",
+      "description": "Alternative title option",
+      "properties": {
+        "title": { "type": "string" },
+        "reasoning": { "type": "string" }
+      }
+    },
+    "seo_score": {
+      "type": "integer",
+      "description": "SEO opportunity score (0-100)",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "aeo_score": {
+      "type": "integer",
+      "description": "AEO opportunity score (0-100)",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "combined_priority": {
+      "type": "string",
+      "description": "Combined priority rating",
+      "enum": ["excellent", "high_seo_first", "high_aeo_first", "good", "low"]
+    },
+    "evidence_chain": {
+      "type": "object",
+      "description": "Complete evidence supporting this direction",
+      "required": ["volume", "trend"],
+      "properties": {
+        "volume": {
+          "type": "integer",
+          "description": "Total search volume for keywords in this direction"
+        },
+        "trend": {
+          "type": "string",
+          "enum": ["rising", "stable", "declining"]
+        },
+        "cpc_avg": {
+          "type": "number",
+          "description": "Average CPC for keywords"
+        },
+        "competition_avg": {
+          "type": "number",
+          "description": "Average competition level (0-1)"
+        },
+        "ai_share": {
+          "type": "string",
+          "description": "Percentage of queries going through AI/LLM platforms",
+          "pattern": "^[0-9]+%$"
+        },
+        "serp_gap": {
+          "type": "string",
+          "description": "SERP gap opportunity level",
+          "enum": ["high", "medium", "low"]
+        },
+        "competitor_weakness": {
+          "type": "array",
+          "description": "Identified weaknesses in competitor content",
+          "items": {
+            "type": "string",
+            "enum": [
+              "outdated",
+              "no_testing_methodology",
+              "no_author",
+              "thin_content",
+              "no_faq",
+              "poor_structure",
+              "no_data"
+            ]
+          }
+        },
+        "freshness_signal": {
+          "type": "string",
+          "description": "QDF/freshness opportunity",
+          "enum": ["high", "medium", "low", "none"]
+        }
+      }
+    },
+    "outline": {
+      "type": "object",
+      "description": "Suggested article outline",
+      "properties": {
+        "h2_sections": {
+          "type": "array",
+          "description": "Recommended H2 headings",
+          "items": { "type": "string" }
+        },
+        "aeo_answer_block": {
+          "type": "string",
+          "description": "40-60 word direct answer for AEO optimization"
+        },
+        "estimated_word_count": {
+          "type": "integer",
+          "description": "Recommended article length"
+        }
+      }
+    },
+    "recommended_skill": {
+      "type": "string",
+      "description": "Recommended writer skill to use",
+      "enum": [
+        "blog-list-writer",
+        "blog-tutorial-writer",
+        "case-roundup-writer"
+      ]
+    },
+    "recommended_mode": {
+      "type": "string",
+      "description": "Recommended mode for the writer skill",
+      "enum": ["tool_showdown", "standard", null]
+    },
+    "product_mapping": {
+      "type": "object",
+      "description": "alici.ai product alignment",
+      "properties": {
+        "primary": {
+          "type": "string",
+          "description": "Primary product to promote"
+        },
+        "secondary": {
+          "type": "string",
+          "description": "Secondary product for cross-sell"
+        },
+        "product_angle": {
+          "type": "string",
+          "description": "Suggested product integration angle"
+        }
+      }
+    },
+    "keywords": {
+      "type": "array",
+      "description": "Keywords associated with this direction",
+      "items": {
+        "type": "object",
+        "properties": {
+          "keyword": { "type": "string" },
+          "volume": { "type": "integer" },
+          "cpc": { "type": "number" },
+          "competition": { "type": "number" },
+          "priority": { "type": "string", "enum": ["high", "medium", "long_tail"] }
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "rank": 1,
+      "direction_id": "D01",
+      "theme": "AI Video Tool Comparisons",
+      "pattern_id": "P3",
+      "locked_title": {
+        "title": "Sora 2 vs Runway Gen-4 vs Kling 2.6: Best AI Video Tool in 2026",
+        "primary_keyword": "sora 2 vs runway gen-4",
+        "intent_matched": true,
+        "serp_aligned": true,
+        "year_validated": true,
+        "formula_id": "showdown-1",
+        "evidence": {
+          "serp_titles": [
+            "Sora vs Runway: Complete Comparison 2026",
+            "Best AI Video Generators Compared",
+            "Sora 2 Review: Is It Worth It?"
+          ],
+          "search_volume": 12200,
+          "trend": "rising"
+        }
+      },
+      "backup_title": {
+        "title": "Sora 2 vs Runway Gen-4: Which AI Video Generator Wins?",
+        "reasoning": "Simpler format, better for social sharing"
+      },
+      "seo_score": 89,
+      "aeo_score": 90,
+      "combined_priority": "excellent",
+      "evidence_chain": {
+        "volume": 12200,
+        "trend": "rising",
+        "cpc_avg": 4.5,
+        "competition_avg": 0.65,
+        "ai_share": "77%",
+        "serp_gap": "high",
+        "competitor_weakness": ["outdated", "no_testing_methodology"],
+        "freshness_signal": "high"
+      },
+      "outline": {
+        "h2_sections": [
+          "Quick Comparison Table",
+          "Testing Methodology",
+          "Sora 2 Deep Dive",
+          "Runway Gen-4 Deep Dive",
+          "Kling 2.6 Deep Dive",
+          "Category Winners",
+          "Decision Tree",
+          "FAQ"
+        ],
+        "aeo_answer_block": "For most creators, Sora 2 offers the best balance of quality and ease of use. Choose Runway Gen-4 for maximum control over motion, or Kling 2.6 for the best value.",
+        "estimated_word_count": 3000
+      },
+      "recommended_skill": "blog-list-writer",
+      "recommended_mode": "tool_showdown",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "video_prompt",
+        "product_angle": "One platform to access all three models"
+      },
+      "keywords": [
+        {
+          "keyword": "sora vs runway",
+          "volume": 4800,
+          "cpc": 4.2,
+          "competition": 0.65,
+          "priority": "high"
+        },
+        {
+          "keyword": "kling vs sora",
+          "volume": 2100,
+          "cpc": 3.8,
+          "competition": 0.60,
+          "priority": "high"
+        }
+      ]
+    }
+  ]
+}

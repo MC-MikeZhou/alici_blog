@@ -1,0 +1,10 @@
+# AliciBlog Scripts Dependencies
+# Python 3.8+
+
+# Note: All scripts use only Python standard library (urllib, json, subprocess)
+# No external dependencies required!
+
+# Optional: for future enhancements
+# requests>=2.31.0  # Alternative to urllib (more user-friendly)
+# Pillow>=10.0.0    # For image manipulation/compression
+# click>=8.1.0      # Enhanced CLI framework

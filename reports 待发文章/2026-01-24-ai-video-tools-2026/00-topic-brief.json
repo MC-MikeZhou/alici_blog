@@ -1,0 +1,281 @@
+{
+  "version": "2.1",
+  "mode": "keyword_matrix",
+  "seed_keyword": "ai video tools 2026",
+  "analysis_date": "2026-01-24",
+  "dual_scoring_enabled": true,
+
+  "priority_topics": [
+    {
+      "rank": 1,
+      "primary_keyword": "sora 2 vs runway gen-4",
+      "search_volume": 12200,
+      "ai_volume": 8500,
+      "trend": "rising",
+      "content_type": "comparison",
+      "seo_score": 92,
+      "aeo_score": 88,
+      "combined_priority": "Excellent",
+      "recommended_skill": "blog-list-writer",
+      "recommended_mode": "tool_showdown",
+      "recommended_titles": [
+        {
+          "type": "comparison",
+          "title": "Sora 2 vs Runway Gen-4 in 2026: Ultimate AI Video Showdown",
+          "ctr_prediction": "high",
+          "year_included": true
+        },
+        {
+          "type": "listicle",
+          "title": "Sora 2 vs Runway Gen-4: 10 Key Differences You Need to Know (2026)",
+          "ctr_prediction": "high",
+          "year_included": true
+        },
+        {
+          "type": "how-to",
+          "title": "How to Choose Between Sora 2 and Runway Gen-4 for Your Project",
+          "ctr_prediction": "medium-high",
+          "year_included": false
+        }
+      ],
+      "outline": {
+        "h2_sections": [
+          "Quick Verdict: Which One Wins?",
+          "Head-to-Head Comparison Table",
+          "Video Quality and Realism",
+          "Motion Control and Cinematography",
+          "Audio Capabilities",
+          "Pricing Breakdown",
+          "Best Use Cases",
+          "Category Winners",
+          "FAQ"
+        ]
+      },
+      "gap_insights": {
+        "competitors_missing": ["same-prompt comparison", "native audio comparison", "one-platform angle"],
+        "recommended_word_count": 3500,
+        "differentiation_angle": "Include side-by-side same-prompt samples + alici.ai multi-model access"
+      }
+    },
+    {
+      "rank": 2,
+      "primary_keyword": "best ai video tools 2026",
+      "search_volume": 14500,
+      "ai_volume": 9200,
+      "trend": "rising",
+      "content_type": "listicle",
+      "seo_score": 88,
+      "aeo_score": 85,
+      "combined_priority": "Excellent",
+      "recommended_skill": "blog-list-writer",
+      "recommended_mode": "listicle",
+      "recommended_titles": [
+        {
+          "type": "listicle",
+          "title": "Best AI Video Tools in 2026: Top 12 Tested and Ranked",
+          "ctr_prediction": "high",
+          "year_included": true
+        },
+        {
+          "type": "listicle",
+          "title": "12 Best AI Video Generators in 2026 (We Tested Them All)",
+          "ctr_prediction": "high",
+          "year_included": true
+        },
+        {
+          "type": "insights",
+          "title": "The Complete Guide to AI Video Tools in 2026: From Sora 2 to Veo 3",
+          "ctr_prediction": "medium-high",
+          "year_included": true
+        }
+      ],
+      "outline": {
+        "h2_sections": [
+          "Quick Picks: Our Top 3 Recommendations",
+          "Testing Methodology",
+          "Complete Rankings",
+          "Best for YouTube Creators",
+          "Best for TikTok/Shorts",
+          "Best for Business/Marketing",
+          "Pricing Comparison Table",
+          "Category Winners",
+          "FAQ"
+        ]
+      },
+      "gap_insights": {
+        "competitors_missing": ["testing methodology", "pricing per minute", "multi-model platforms"],
+        "recommended_word_count": 4500,
+        "differentiation_angle": "Include testing methodology + comprehensive pricing table + alici.ai as aggregator"
+      }
+    },
+    {
+      "rank": 3,
+      "primary_keyword": "sora 2 vs kling 2.6 vs veo 3",
+      "search_volume": 7500,
+      "ai_volume": 5800,
+      "trend": "rising",
+      "content_type": "comparison",
+      "seo_score": 89,
+      "aeo_score": 90,
+      "combined_priority": "Excellent",
+      "recommended_skill": "blog-list-writer",
+      "recommended_mode": "tool_showdown",
+      "recommended_titles": [
+        {
+          "type": "comparison",
+          "title": "Sora 2 vs Kling 2.6 vs Veo 3: The 2026 AI Video Battle Royale",
+          "ctr_prediction": "high",
+          "year_included": true
+        },
+        {
+          "type": "listicle",
+          "title": "Sora 2, Kling 2.6, or Veo 3? We Tested All 3 to Find the Winner (2026)",
+          "ctr_prediction": "high",
+          "year_included": true
+        }
+      ],
+      "outline": {
+        "h2_sections": [
+          "Quick Verdict",
+          "Same-Prompt Comparison",
+          "Video Quality Showdown",
+          "Motion and Physics",
+          "Audio Capabilities",
+          "Speed and Availability",
+          "Pricing Comparison",
+          "Decision Matrix",
+          "FAQ"
+        ]
+      },
+      "gap_insights": {
+        "competitors_missing": ["three-way comparison", "same-prompt samples", "availability info"],
+        "recommended_word_count": 3500,
+        "differentiation_angle": "First comprehensive 3-way comparison with identical prompts"
+      }
+    },
+    {
+      "rank": 4,
+      "primary_keyword": "free ai video generator online 2026",
+      "search_volume": 9800,
+      "ai_volume": 5200,
+      "trend": "rising",
+      "content_type": "listicle",
+      "seo_score": 85,
+      "aeo_score": 72,
+      "combined_priority": "High (SEO-first)",
+      "recommended_skill": "blog-list-writer",
+      "recommended_mode": "listicle",
+      "recommended_titles": [
+        {
+          "type": "listicle",
+          "title": "10 Best Free AI Video Generators Online in 2026 (No Watermark)",
+          "ctr_prediction": "high",
+          "year_included": true
+        },
+        {
+          "type": "how-to",
+          "title": "How to Create AI Videos for Free in 2026: Complete Guide",
+          "ctr_prediction": "medium-high",
+          "year_included": true
+        }
+      ],
+      "outline": {
+        "h2_sections": [
+          "Best Free Options at a Glance",
+          "Free Tier Comparison Table",
+          "Best Free AI Video Generator Overall",
+          "Best for YouTube Shorts",
+          "Best for TikTok",
+          "Free Tier Limitations Explained",
+          "When to Upgrade",
+          "FAQ"
+        ]
+      },
+      "gap_insights": {
+        "competitors_missing": ["comprehensive free tier comparison", "watermark info", "export limits"],
+        "recommended_word_count": 3000,
+        "differentiation_angle": "Detailed free tier limits comparison + upgrade recommendations"
+      }
+    },
+    {
+      "rank": 5,
+      "primary_keyword": "kling 2.6 tutorial",
+      "search_volume": 5500,
+      "ai_volume": 3800,
+      "trend": "rising",
+      "content_type": "tutorial",
+      "seo_score": 84,
+      "aeo_score": 80,
+      "combined_priority": "High",
+      "recommended_skill": "blog-tutorial-writer",
+      "recommended_titles": [
+        {
+          "type": "how-to",
+          "title": "How to Use Kling 2.6 in 2026: Complete Tutorial for Beginners",
+          "ctr_prediction": "high",
+          "year_included": true
+        },
+        {
+          "type": "how-to",
+          "title": "Kling 2.6 Tutorial: From First Prompt to Viral Video (2026 Guide)",
+          "ctr_prediction": "medium-high",
+          "year_included": true
+        }
+      ],
+      "outline": {
+        "h2_sections": [
+          "What is Kling 2.6?",
+          "Getting Started",
+          "Basic Text-to-Video",
+          "Image-to-Video Techniques",
+          "Advanced Motion Control",
+          "Best Prompt Templates",
+          "Exporting and Publishing",
+          "FAQ"
+        ]
+      },
+      "gap_insights": {
+        "competitors_missing": ["2.6 specific features", "motion control guide", "prompt templates"],
+        "recommended_word_count": 2500,
+        "differentiation_angle": "Focus on 2.6 specific features + copyable prompt templates"
+      }
+    }
+  ],
+
+  "scoring_summary": {
+    "seo_score_breakdown": {
+      "demand_signal_weight": "30%",
+      "aeo_potential_weight": "25%",
+      "competition_gap_weight": "25%",
+      "business_fit_weight": "20%"
+    },
+    "aeo_score_breakdown": {
+      "ai_search_heat_weight": "35%",
+      "llm_citation_potential_weight": "35%",
+      "ai_answer_coverage_weight": "30%"
+    },
+    "priority_distribution": {
+      "excellent": 3,
+      "high": 2,
+      "good": 0,
+      "low": 0
+    }
+  },
+
+  "batch_execution_ready": true,
+  "recommended_execution_order": [
+    "sora 2 vs runway gen-4",
+    "best ai video tools 2026",
+    "sora 2 vs kling 2.6 vs veo 3",
+    "free ai video generator online 2026",
+    "kling 2.6 tutorial"
+  ],
+
+  "cost_estimation": {
+    "analysis_cost": "$2.59",
+    "breakdown": {
+      "seo_analysis": "$1.54",
+      "aeo_validation": "$1.05"
+    }
+  }
+}

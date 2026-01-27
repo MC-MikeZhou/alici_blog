@@ -1,0 +1,22 @@
+[
+  {
+    "prompt": "Magazine cover style infographic, 'AI Video Wars 2026', futuristic holographic display showing multiple AI video generation tools competing in a dark tech environment, central podium with gold silver bronze medals, Google Veo logo on top, Kling and Luma Ray below, Runway falling down stairs in background, dramatic cinematic lighting, deep blue and purple color palette with gold accents, high contrast, professional tech magazine aesthetic, 16:9 aspect ratio",
+    "role": "hero",
+    "filename": "ai-video-generators-2026-hero.png"
+  },
+  {
+    "prompt": "Clean professional comparison infographic showing AI video generation quality spectrum, left side labeled 'Marketing Claims' with inflated speech bubbles, right side labeled 'Real Performance' with honest metrics, central dividing line with magnifying glass revealing truth, icons representing temporal consistency and visual fidelity, minimalist corporate style, blue and white color scheme with red warning accents, modern tech aesthetic, 16:9 aspect ratio",
+    "role": "concept",
+    "filename": "ai-video-generators-2026-concept.png"
+  },
+  {
+    "prompt": "Split screen visual comparison showing same video frame rendered by different AI tools, left panel crisp and stable labeled 'Kling/Veo', right panel with visible artifacts and stuttering effect labeled 'Runway 4.5', red circles highlighting problem areas on right side, technical analysis overlay with metrics, dark background with high contrast panels, scientific visualization style, 16:9 aspect ratio",
+    "role": "comparison",
+    "filename": "ai-video-generators-2026-comparison.png"
+  },
+  {
+    "prompt": "Professional decision flowchart infographic for choosing AI video generator, tree diagram with questions at decision nodes 'Need lip-sync?' 'Budget priority?' 'Cinematic quality?', branching paths leading to tool recommendations at bottom (Veo, Kling, Luma, Runway), clean corporate presentation style, icons for each tool, gradient blue to teal background, modern flat design, gold highlights on recommended paths, 16:9 aspect ratio",
+    "role": "cta",
+    "filename": "ai-video-generators-2026-decision.png"
+  }
+]

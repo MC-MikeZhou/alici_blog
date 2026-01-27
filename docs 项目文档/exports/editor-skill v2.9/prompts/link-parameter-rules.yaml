@@ -1,0 +1,83 @@
+# Product Link Parameter Rules for Editor Skill v2.9.3
+# Purpose: 定义产品链接的上下文参数规则
+# Created: 2026-01-22
+
+---
+
+# 基础 URL 映射
+base_urls:
+  videoGen: "https://app.alici.ai/pages/videoGen"
+  imageGen: "https://app.alici.ai/pages/imageGen"
+  home: "https://alici.ai"
+
+# 上下文参数规则
+context_parameters:
+  videoGen:
+    # 基于文章关键词/标签匹配
+    - match_keywords: ["kling", "kling 2.6", "kling 2.5", "motion control", "kling motion"]
+      add_params: "?model=kling_2_6_s_mc"
+      description: "Kling 2.6 with Motion Control support"
+
+    - match_keywords: ["sora", "sora 2", "openai sora"]
+      add_params: "?model=sora_2"
+      description: "Sora 2 model preset"
+
+    - match_keywords: ["runway", "runway gen-3", "gen-3", "gen3", "runway gen-4"]
+      add_params: "?model=runway_gen3"
+      description: "Runway Gen-3/Gen-4 model preset"
+
+    - match_keywords: ["veo", "veo 2", "veo 3", "google veo"]
+      add_params: "?model=veo_2"
+      description: "Google Veo model preset"
+
+    - match_keywords: ["pika", "pika labs", "pika 2"]
+      add_params: "?model=pika_2"
+      description: "Pika Labs model preset"
+
+    - match_keywords: ["minimax", "hailuo", "hailuo ai"]
+      add_params: "?model=minimax"
+      description: "MiniMax/Hailuo model preset"
+
+    # 默认（无匹配时）
+    - default: true
+      add_params: ""
+      description: "No model preset (user chooses)"
+
+  imageGen:
+    # imageGen 当前无上下文参数
+    - default: true
+      add_params: ""
+      description: "No preset for image generation"
+
+# 验证规则
+validation:
+  - rule: "URL 必须以 https://app.alici.ai 开头"
+    pattern: "^https://app\\.alici\\.ai"
+  - rule: "参数格式必须是 ?key=value"
+    pattern: "\\?[a-zA-Z_]+=[a-zA-Z0-9_]+"
+  - rule: "不允许重复参数"
+    check: "unique_params"
+
+# 应用位置
+apply_to:
+  - location: "CTA 卡片链接"
+    selector: "blockquote a[href*='alici.ai']"
+  - location: "正文产品链接"
+    selector: "p a[href*='alici.ai']"
+  - location: "Quick Start 链接"
+    selector: "div.quick-start a[href*='alici.ai']"
+
+# 匹配优先级说明
+matching_priority: |
+  1. 从 YAML frontmatter 的 tags 字段提取关键词
+  2. 从文章标题 (title) 提取关键词
+  3. 从正文 H1/H2 标题提取关键词
+  4. 匹配第一个命中的 match_keywords 规则
+  5. 如果无匹配，使用 default 规则
+
+# 日志输出格式
+log_format:
+  match_found: "✅ Matched keyword '{keyword}' → applied {add_params}"
+  default_used: "ℹ️ No keyword match → using default (no params)"
+  validation_pass: "✅ URL validation passed: {url}"
+  validation_fail: "❌ URL validation failed: {url} - {reason}"

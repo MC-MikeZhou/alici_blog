@@ -1,0 +1,36 @@
+{
+  "topic": "AI Video Generators Comparison 2026",
+  "content_type": "list",
+  "target_keyword": "best AI video generators 2026",
+  "secondary_keywords": [
+    "Runway Gen 4.5 review",
+    "Kling vs Runway comparison",
+    "AI image to video tools",
+    "Google Veo 3.1 comparison"
+  ],
+  "source": {
+    "type": "youtube",
+    "url": "https://www.youtube.com/watch?v=Rj_o3vXZmZU",
+    "channel": "Curious Refuge",
+    "title": "How to Generate AI Videos Using Runway Gen 4.5"
+  },
+  "key_insights": [
+    "Runway 4.5 image-to-video is newly released",
+    "Professional AI filmmakers prefer image-to-video over text-to-video",
+    "Runway 4.5 ranked 8th in Curious Refuge Labs testing",
+    "Temporal consistency and visual fidelity are key weaknesses",
+    "Kling outperforms Runway in most test scenarios",
+    "Google Veo 3.1 offers lip-sync capabilities Runway lacks"
+  ],
+  "tools_compared": [
+    {"name": "Runway Gen 4.5", "ranking": 8},
+    {"name": "Kling", "ranking": "better than Runway"},
+    {"name": "Google Veo 3.1", "ranking": "better than Runway"},
+    {"name": "Luma Ray 3", "ranking": "better than Runway"},
+    {"name": "LTX2", "ranking": 9}
+  ],
+  "article_angle": "Honest comparison of AI video generators with real-world testing results",
+  "target_audience": "AI content creators, filmmakers, video editors",
+  "word_count_target": "2500-3500",
+  "created_at": "2026-01-26"
+}

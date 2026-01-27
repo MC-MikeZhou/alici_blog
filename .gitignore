@@ -1,0 +1,47 @@
+# API Configuration (contains sensitive keys)
+.mcp.json
+.env
+.env.local
+.env.*.local
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Node modules (if using any npm packages)
+node_modules/
+npm-debug.log*
+
+# Python (if using Python scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Reports (optional - uncomment if you don't want to commit reports)
+# reports/
+
+# Backup files
+*.bak
+*.backup

@@ -1,0 +1,112 @@
+{
+  "analysis_date": "2026-01-17",
+  "schema_version": "1.1",
+  "data_source": "websearch",
+  "competitor_urls": [
+    "https://www.perfectcorp.com/consumer/blog/generative-AI/best-ai-marketing-tools"
+  ],
+  "selected_topic": {
+    "rank": 1,
+    "primary_keyword": "best ai marketing tools",
+    "search_intent": "best-list",
+    "recommended_titles": [
+      "15 Best AI Marketing Tools in 2026: Tested & Compared by Category",
+      "Best AI Marketing Tools 2026: The Complete Tested Guide (Free & Paid)",
+      "AI Marketing Tools That Actually Work: 15 Tested Picks for 2026"
+    ],
+    "content_type": "list",
+    "outline": {
+      "h2_sections": [
+        "Quick Answer: Top 3 AI Marketing Tools",
+        "How We Tested and Evaluated These Tools",
+        "Quick Comparison Table: Top 15 Tools at a Glance",
+        "Best AI Marketing Tools by Category",
+        "1. Jasper - Best for AI Copywriting & Content",
+        "2. HubSpot AI - Best All-in-One Marketing Platform",
+        "3. alici.ai Image Studio - Best for Visual Content Creation",
+        "4. Semrush - Best for SEO & Content Optimization",
+        "5. AdCreative.ai - Best for Ad Design Generation",
+        "6. Buffer AI - Best for Social Media Management",
+        "7. alici.ai Video Studio - Best for AI Video Marketing",
+        "8. ChatGPT - Best Free AI Marketing Assistant",
+        "9. Canva AI - Best for Visual Design Flexibility",
+        "10. Surfer SEO - Best for Content Optimization",
+        "11. Copy.ai - Best for Quick Copywriting",
+        "12. alici.ai Thumbnail Expert - Best for YouTube Marketing",
+        "13. Seventh Sense - Best for Email Timing Optimization",
+        "14. Zapier AI - Best for Marketing Automation",
+        "15. Grammarly - Best for Content Quality Control",
+        "Free AI Marketing Tools Worth Trying",
+        "How to Choose the Right AI Marketing Tool for Your Business",
+        "Frequently Asked Questions",
+        "Conclusion: Start Improving Your Marketing with AI Today"
+      ],
+      "key_questions": [
+        "What is the best AI tool for marketing?",
+        "What AI marketing tools do professionals use?",
+        "Are there free AI marketing tools?",
+        "How do I choose an AI marketing tool?",
+        "Can AI replace my marketing team?",
+        "What's the ROI of AI marketing tools?"
+      ]
+    },
+    "seo_metrics": {
+      "search_volume": "high",
+      "competition": "high",
+      "cpc": "high",
+      "trend": "growing"
+    },
+    "serp_features": {
+      "ai_overview": true,
+      "featured_snippet": true,
+      "people_also_ask": true,
+      "knowledge_graph": false
+    },
+    "differentiation_angle": "More tools (15 vs 10), better categorization, balanced evaluation without heavy self-promotion, comprehensive comparison table, dedicated free tools section, alici.ai products positioned as quality brand improvement solutions",
+    "aeo_answer_block": "The best AI marketing tools in 2026 include Jasper for content creation ($39/mo), HubSpot AI for all-in-one marketing automation ($18/mo), and alici.ai Image Studio for professional visual content creation with AI Agent workflows. For specific needs, Semrush excels at SEO ($139.95/mo), AdCreative.ai handles ad design ($39/mo), and ChatGPT offers versatile free assistance for brainstorming and strategy.",
+    "product_mapping": {
+      "primary_products": [
+        {
+          "product_id": "image_studio",
+          "product_name": "AI Image Studio",
+          "relevance": "high",
+          "positioning": "Premium visual content creation for brand improvement with AI Agent workflows",
+          "placement": "Position #3 in main list",
+          "cta_text": "Create Brand Visuals with alici.ai"
+        },
+        {
+          "product_id": "video_studio",
+          "product_name": "AI Video Studio",
+          "relevance": "high",
+          "positioning": "Professional video marketing content with quality model access",
+          "placement": "Position #7 in main list",
+          "cta_text": "Generate Marketing Videos"
+        },
+        {
+          "product_id": "thumbnail_pro",
+          "product_name": "Thumbnail Expert Pro",
+          "relevance": "medium",
+          "positioning": "YouTube marketing optimization with high-CTR AI workflows",
+          "placement": "Position #12 in main list",
+          "cta_text": "Boost YouTube CTR"
+        }
+      ],
+      "cta_strategy": "Position alici.ai products as quality solutions for brand improvement, emphasizing AI Agent mechanism advantage and prompt engineering capabilities. Integrate naturally without heavy self-promotion (max 3 products out of 15 total)."
+    },
+    "opportunity_score": {
+      "total": 78,
+      "breakdown": {
+        "demand_signal": 24,
+        "aeo_potential": 22,
+        "competition_gap": 18,
+        "business_fit": 14
+      }
+    },
+    "estimated_metrics": {
+      "target_word_count": 3000,
+      "target_aeo_score": 80,
+      "number_of_tools": 15,
+      "citable_blocks_target": 5
+    }
+  }
+}

@@ -1,0 +1,761 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Growth Topic Scout Output v2.1",
+  "description": "Machine-readable output from growth-topic-scout skill for downstream content production. Supports Mode A (URL Analysis), Mode B (Keyword Matrix), and Mode C (AEO Validation).",
+  "type": "object",
+  "required": ["analysis_date", "mode", "schema_version"],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "2.1",
+      "description": "Schema version for compatibility checking"
+    },
+    "analysis_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of analysis in YYYY-MM-DD format"
+    },
+    "mode": {
+      "type": "string",
+      "enum": ["url_analysis", "keyword_matrix", "aeo_validation", "url_analysis_with_aeo", "keyword_matrix_with_aeo"],
+      "description": "Analysis mode: url_analysis (Mode A), keyword_matrix (Mode B), aeo_validation (Mode C only), or combined modes"
+    },
+    "data_source": {
+      "type": "string",
+      "enum": ["dataforseo", "websearch", "mixed"],
+      "description": "Primary data source used for validation"
+    },
+    "competitor_urls": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "description": "List of competitor URLs analyzed (Mode A only)"
+    },
+    "seed_keyword": {
+      "type": "string",
+      "description": "Seed keyword for matrix expansion (Mode B only)"
+    },
+    "total_keywords": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Total keywords in matrix after deduplication (Mode B only)"
+    },
+    "keywords": {
+      "type": "array",
+      "description": "Full keyword matrix with metrics (Mode B only)",
+      "items": {
+        "$ref": "#/definitions/keyword_entry"
+      }
+    },
+    "topics": {
+      "type": "array",
+      "description": "Ranked list of topic opportunities (both modes)",
+      "items": {
+        "$ref": "#/definitions/topic_entry"
+      }
+    },
+    "gap_analysis": {
+      "type": "object",
+      "description": "Gap analysis data (Mode B only)",
+      "$ref": "#/definitions/gap_analysis"
+    },
+    "expansion_metadata": {
+      "type": "object",
+      "description": "Matrix expansion metadata (Mode B only)",
+      "properties": {
+        "strategies_used": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["modifiers", "intent_words", "use_cases", "time_markers", "tool_names", "dataforseo_expansion"]
+          }
+        },
+        "keywords_before_dedup": {
+          "type": "integer"
+        },
+        "keywords_after_dedup": {
+          "type": "integer"
+        }
+      }
+    },
+    "content_gaps": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Topics competitors cover that AliciBlog doesn't"
+    },
+    "quick_wins": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "topic": { "type": "string" },
+          "reason": { "type": "string" }
+        }
+      },
+      "description": "Low-effort, high-potential topics"
+    },
+    "batch_execution_ready": {
+      "type": "boolean",
+      "description": "Whether the output is ready for batch-processor execution"
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Analysis metadata",
+      "properties": {
+        "total_query_seeds": {
+          "type": "integer",
+          "description": "Total query seeds extracted before filtering"
+        },
+        "validation_method": {
+          "type": "string",
+          "enum": ["websearch", "dataforseo", "manual"],
+          "description": "How opportunities were validated"
+        },
+        "language": {
+          "type": "string",
+          "description": "Primary language of analyzed content"
+        }
+      }
+    },
+    "aeo_validation": {
+      "type": "object",
+      "description": "AEO validation layer data (Mode C) - NEW in v2.1",
+      "$ref": "#/definitions/aeo_validation"
+    },
+    "aeo_score": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Overall AEO score (0-100) - NEW in v2.1"
+    },
+    "combined_priority": {
+      "type": "string",
+      "enum": ["excellent", "high_seo_first", "high_aeo_first", "good", "low"],
+      "description": "Combined priority based on SEO + AEO scores - NEW in v2.1"
+    },
+    "priority_reason": {
+      "type": "string",
+      "description": "Explanation of the priority assignment"
+    },
+    "api_usage": {
+      "type": "object",
+      "description": "API usage and cost tracking",
+      "properties": {
+        "dataforseo_keyword_calls": {
+          "type": "integer"
+        },
+        "dataforseo_serp_calls": {
+          "type": "integer"
+        },
+        "dataforseo_ai_keyword_calls": {
+          "type": "integer",
+          "description": "AI Keyword Data API calls - NEW in v2.1"
+        },
+        "dataforseo_llm_mentions_calls": {
+          "type": "integer",
+          "description": "LLM Mentions API calls - NEW in v2.1"
+        },
+        "dataforseo_llm_responses_calls": {
+          "type": "integer",
+          "description": "LLM Responses API calls - NEW in v2.1"
+        },
+        "websearch_calls": {
+          "type": "integer"
+        },
+        "webfetch_calls": {
+          "type": "integer"
+        },
+        "estimated_cost": {
+          "type": "string",
+          "description": "Estimated cost in USD format like '$2.59'"
+        },
+        "estimated_cost_breakdown": {
+          "type": "object",
+          "description": "Cost breakdown by category - NEW in v2.1",
+          "properties": {
+            "seo_cost": { "type": "string" },
+            "aeo_cost": { "type": "string" }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "keyword_entry": {
+      "type": "object",
+      "description": "Individual keyword in the matrix (Mode B)",
+      "required": ["keyword", "search_volume", "opportunity_score"],
+      "properties": {
+        "keyword": {
+          "type": "string"
+        },
+        "search_volume": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "trend": {
+          "type": "string",
+          "enum": ["rising", "stable", "declining"]
+        },
+        "monthly_searches": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "month": { "type": "string", "pattern": "^\\d{4}-\\d{2}$" },
+              "volume": { "type": "integer" }
+            }
+          }
+        },
+        "cpc": {
+          "type": "number",
+          "minimum": 0
+        },
+        "competition": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "competition_level": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        },
+        "opportunity_score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "content_type": {
+          "type": "string",
+          "enum": ["tutorial", "list", "listicle", "showdown", "news", "comparison", "guide", "how-to"]
+        },
+        "priority": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        },
+        "ai_volume": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "AI/LLM platform search volume - NEW in v2.1"
+        },
+        "ai_trend": {
+          "type": "string",
+          "enum": ["rising", "stable", "declining"],
+          "description": "AI search volume trend - NEW in v2.1"
+        },
+        "aeo_score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "AEO opportunity score - NEW in v2.1"
+        },
+        "combined_priority": {
+          "type": "string",
+          "enum": ["excellent", "high_seo_first", "high_aeo_first", "good", "low"],
+          "description": "Priority based on dual scoring - NEW in v2.1"
+        }
+      }
+    },
+    "topic_entry": {
+      "type": "object",
+      "description": "Individual topic opportunity",
+      "required": ["rank", "primary_keyword", "search_intent", "content_type", "opportunity_score"],
+      "properties": {
+        "rank": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Ranking position (1 = highest opportunity)"
+        },
+        "primary_keyword": {
+          "type": "string",
+          "description": "Target search query / keyword"
+        },
+        "search_volume": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Monthly search volume from DataForSEO"
+        },
+        "trend": {
+          "type": "string",
+          "enum": ["rising", "stable", "declining"]
+        },
+        "search_intent": {
+          "type": "string",
+          "enum": ["how-to", "what-is", "best-list", "comparison", "problem-solving", "news"],
+          "description": "Primary search intent category"
+        },
+        "recommended_titles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": {
+                "type": "string",
+                "enum": ["listicle", "how-to", "insights", "showdown", "tutorial", "news"]
+              },
+              "title": { "type": "string" },
+              "year_included": { "type": "boolean" },
+              "number_included": { "type": "boolean" },
+              "how_to_prefix": { "type": "boolean" },
+              "ctr_prediction": {
+                "type": "string",
+                "enum": ["high", "medium-high", "medium", "low"]
+              },
+              "reasoning": { "type": "string" }
+            },
+            "required": ["type", "title", "ctr_prediction"]
+          },
+          "minItems": 1,
+          "maxItems": 3,
+          "description": "2-3 title options for the article"
+        },
+        "content_type": {
+          "type": "string",
+          "enum": ["tutorial", "list", "news", "comparison", "guide", "showdown"],
+          "description": "Recommended content format"
+        },
+        "recommended_skill": {
+          "type": "string",
+          "enum": ["blog-tutorial-writer", "blog-list-writer", "blog-news-writer"],
+          "description": "Which writer skill should produce this content"
+        },
+        "outline": {
+          "type": "object",
+          "properties": {
+            "h2_sections": {
+              "type": "array",
+              "items": { "type": "string" },
+              "description": "Main H2 section headings"
+            },
+            "key_questions": {
+              "type": "array",
+              "items": { "type": "string" },
+              "description": "Key questions the content should answer"
+            }
+          }
+        },
+        "aeo_block": {
+          "type": "object",
+          "description": "Pre-drafted AEO answer block",
+          "properties": {
+            "target_question": {
+              "type": "string",
+              "description": "The question this content should answer"
+            },
+            "direct_answer_draft": {
+              "type": "string",
+              "description": "40-60 word direct answer draft"
+            }
+          }
+        },
+        "seo_metrics": {
+          "type": "object",
+          "description": "SEO metrics from DataForSEO",
+          "properties": {
+            "source": {
+              "type": "string",
+              "enum": ["dataforseo", "estimated"]
+            },
+            "search_volume": { "type": "integer" },
+            "search_volume_trend": {
+              "type": "string",
+              "enum": ["rising", "stable", "declining"]
+            },
+            "monthly_searches": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "month": { "type": "string" },
+                  "volume": { "type": "integer" }
+                }
+              }
+            },
+            "cpc": { "type": "number" },
+            "competition": { "type": "number" },
+            "competition_level": {
+              "type": "string",
+              "enum": ["high", "medium", "low"]
+            }
+          }
+        },
+        "serp_features": {
+          "type": "object",
+          "description": "SERP features detected",
+          "properties": {
+            "ai_overview": { "type": "boolean" },
+            "featured_snippet": { "type": "boolean" },
+            "people_also_ask": { "type": "boolean" },
+            "knowledge_panel": { "type": "boolean" },
+            "paa_questions": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        },
+        "evidence": {
+          "type": "object",
+          "description": "Supporting evidence for this opportunity",
+          "properties": {
+            "competitor_coverage": {
+              "type": "string",
+              "enum": ["full", "partial", "none"],
+              "description": "How well competitor covers this topic"
+            },
+            "serp_features": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": ["paa", "featured_snippet", "ai_overview", "knowledge_panel", "video", "images"]
+              },
+              "description": "SERP features observed for this query"
+            },
+            "competition_level": {
+              "type": "string",
+              "enum": ["high", "medium", "low"],
+              "description": "Estimated competition difficulty"
+            },
+            "top_3_competitors": {
+              "type": "array",
+              "items": { "type": "string" },
+              "description": "Top 3 ranking domains"
+            },
+            "content_gap_score": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            }
+          }
+        },
+        "gap_insights": {
+          "type": "object",
+          "description": "Gap analysis insights (Mode B)",
+          "properties": {
+            "competitors_missing": {
+              "type": "array",
+              "items": { "type": "string" }
+            },
+            "recommended_word_count": {
+              "type": "integer"
+            },
+            "differentiation_angle": {
+              "type": "string"
+            }
+          }
+        },
+        "opportunity_score": {
+          "type": "object",
+          "description": "Breakdown of opportunity scoring (SEO)",
+          "properties": {
+            "demand_signal": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 30
+            },
+            "aeo_potential": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 25
+            },
+            "competition_gap": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 25
+            },
+            "business_fit": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 20
+            },
+            "total": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            }
+          }
+        },
+        "aeo_score": {
+          "type": "object",
+          "description": "Breakdown of AEO scoring - NEW in v2.1",
+          "properties": {
+            "ai_search_heat": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 35,
+              "description": "AI search volume score (ai_volume >= 5K = 35, >= 1K = 25, >= 100 = 15)"
+            },
+            "llm_citation_potential": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 35,
+              "description": "LLM citation opportunity (high competitor + low alici = opportunity)"
+            },
+            "ai_answer_coverage": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 30,
+              "description": "AI answer content gap score"
+            },
+            "total": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            }
+          }
+        },
+        "combined_priority": {
+          "type": "string",
+          "enum": ["excellent", "high_seo_first", "high_aeo_first", "good", "low"],
+          "description": "Combined priority based on dual scoring - NEW in v2.1"
+        },
+        "priority_reason": {
+          "type": "string",
+          "description": "Explanation of the priority assignment"
+        },
+        "alici_angle": {
+          "type": "string",
+          "description": "How AliciBlog should differentiate from competitor"
+        },
+        "product_mapping": {
+          "oneOf": [
+            { "type": "null" },
+            {
+              "type": "object",
+              "properties": {
+                "primary_product": {
+                  "type": "object",
+                  "properties": {
+                    "id": { "type": "string" },
+                    "name": { "type": "string" },
+                    "url": { "type": "string", "format": "uri" },
+                    "cta_text": { "type": "string" },
+                    "features": {
+                      "type": "array",
+                      "items": { "type": "string" }
+                    }
+                  }
+                },
+                "secondary_products": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": { "type": "string" },
+                      "name": { "type": "string" },
+                      "url": { "type": "string", "format": "uri" },
+                      "use_case": { "type": "string" }
+                    }
+                  }
+                }
+              }
+            }
+          ],
+          "description": "Product mapping for CTA generation, null if no match"
+        }
+      }
+    },
+    "gap_analysis": {
+      "type": "object",
+      "description": "Aggregate gap analysis (Mode B)",
+      "properties": {
+        "aggregate_insights": {
+          "type": "object",
+          "properties": {
+            "avg_competitor_word_count": { "type": "integer" },
+            "avg_competitor_h2_count": { "type": "number" },
+            "faq_presence_rate": { "type": "number", "minimum": 0, "maximum": 1 },
+            "author_presence_rate": { "type": "number", "minimum": 0, "maximum": 1 },
+            "avg_content_age_months": { "type": "number" }
+          }
+        },
+        "common_weaknesses": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "weakness": {
+                "type": "string",
+                "enum": ["outdated", "no_faq", "no_author", "short_content", "poor_structure", "no_data"]
+              },
+              "occurrence_rate": { "type": "number", "minimum": 0, "maximum": 1 },
+              "score_impact": { "type": "integer" }
+            }
+          }
+        },
+        "differentiation_strategies": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "per_topic_analysis": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "keyword": { "type": "string" },
+              "top_competitors": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "url": { "type": "string", "format": "uri" },
+                    "domain": { "type": "string" },
+                    "title": { "type": "string" },
+                    "word_count": { "type": "integer" },
+                    "h2_count": { "type": "integer" },
+                    "has_faq": { "type": "boolean" },
+                    "has_author": { "type": "boolean" },
+                    "publish_date": { "type": "string", "format": "date" },
+                    "content_age_months": { "type": "number" }
+                  }
+                }
+              },
+              "serp_analysis": {
+                "type": "object",
+                "properties": {
+                  "ai_overview": { "type": "boolean" },
+                  "featured_snippet": { "type": "boolean" },
+                  "paa_count": { "type": "integer" },
+                  "paa_questions": {
+                    "type": "array",
+                    "items": { "type": "string" }
+                  }
+                }
+              },
+              "gap_score": { "type": "integer", "minimum": 0, "maximum": 100 },
+              "weaknesses": {
+                "type": "array",
+                "items": { "type": "string" }
+              },
+              "recommended_word_count": { "type": "integer" },
+              "differentiation_angles": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "aeo_validation": {
+      "type": "object",
+      "description": "AEO validation layer data - NEW in v2.1",
+      "properties": {
+        "ai_keyword_data": {
+          "type": "object",
+          "description": "AI Keyword Data results (Phase C1)",
+          "properties": {
+            "keywords_analyzed": { "type": "integer" },
+            "avg_ai_volume": { "type": "integer" },
+            "ai_volume_trend": {
+              "type": "string",
+              "enum": ["rising", "stable", "declining"]
+            },
+            "top_ai_keywords": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "keyword": { "type": "string" },
+                  "traditional_volume": { "type": "integer" },
+                  "ai_volume": { "type": "integer" },
+                  "ai_trend": { "type": "string", "enum": ["rising", "stable", "declining"] },
+                  "ai_opportunity_score": { "type": "integer", "minimum": 0, "maximum": 100 }
+                }
+              }
+            }
+          }
+        },
+        "llm_mentions": {
+          "type": "object",
+          "description": "LLM Mentions results (Phase C2)",
+          "properties": {
+            "competitors_analyzed": { "type": "integer" },
+            "alici_mention_rate": { "type": "string" },
+            "top_competitor_mention_rate": { "type": "string" },
+            "citation_gap": { "type": "string" },
+            "competitor_breakdown": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "domain": { "type": "string" },
+                  "chatgpt_mentions": { "type": "integer" },
+                  "ai_overview_mentions": { "type": "integer" },
+                  "total_mentions": { "type": "integer" },
+                  "mention_share": { "type": "string" },
+                  "top_triggering_keywords": {
+                    "type": "array",
+                    "items": { "type": "string" }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "llm_responses": {
+          "type": "object",
+          "description": "LLM Responses results (Phase C3)",
+          "properties": {
+            "queries_analyzed": { "type": "integer" },
+            "alici_mentioned_rate": { "type": "string" },
+            "content_gaps_found": { "type": "integer" },
+            "response_analysis": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "query": { "type": "string" },
+                  "tools_mentioned": {
+                    "type": "array",
+                    "items": { "type": "string" }
+                  },
+                  "top_recommendation": { "type": "string" },
+                  "alici_mentioned": { "type": "boolean" },
+                  "content_gaps": {
+                    "type": "array",
+                    "items": { "type": "string" }
+                  },
+                  "opportunity_type": {
+                    "type": "string",
+                    "enum": ["high", "medium", "low"]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "aeo_score_breakdown": {
+      "type": "object",
+      "description": "AEO score breakdown by dimension - NEW in v2.1",
+      "properties": {
+        "ai_search_heat": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 35,
+          "description": "AI search volume score (0-35)"
+        },
+        "llm_citation_potential": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 35,
+          "description": "LLM citation opportunity score (0-35)"
+        },
+        "ai_answer_coverage": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 30,
+          "description": "AI answer content gap score (0-30)"
+        },
+        "total": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        }
+      }
+    }
+  }
+}

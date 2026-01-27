@@ -1,0 +1,38 @@
+[
+  {
+    "role": "hero",
+    "local_path": "./assets/ai-video-generators-2026-hero.png",
+    "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/ai-video-generators-2026-hero.png",
+    "config": {
+      "aspect_ratio": "16:9",
+      "resolution": "2K"
+    }
+  },
+  {
+    "role": "concept",
+    "local_path": "./assets/ai-video-generators-2026-concept.png",
+    "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/ai-video-generators-2026-concept.png",
+    "config": {
+      "aspect_ratio": "16:9",
+      "resolution": "1K"
+    }
+  },
+  {
+    "role": "comparison",
+    "local_path": "./assets/ai-video-generators-2026-comparison.png",
+    "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/ai-video-generators-2026-comparison.png",
+    "config": {
+      "aspect_ratio": "16:9",
+      "resolution": "1K"
+    }
+  },
+  {
+    "role": "cta",
+    "local_path": "./assets/ai-video-generators-2026-decision.png",
+    "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/ai-video-generators-2026-decision.png",
+    "config": {
+      "aspect_ratio": "16:9",
+      "resolution": "1K"
+    }
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "role": "hero",
+    "local_path": "./gen_images_v2.2/best-ai-video-hero-v2.2.png",
+    "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/best-ai-video-hero-v2.2.png",
+    "config": {
+      "aspect_ratio": "16:9",
+      "resolution": "2K"
+    }
+  },
+  {
+    "role": "comparison",
+    "local_path": "./gen_images_v2.2/best-ai-video-compare-v2.2.png",
+    "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/best-ai-video-compare-v2.2.png",
+    "config": {
+      "aspect_ratio": "16:9",
+      "resolution": "1K"
+    }
+  },
+  {
+    "role": "concept",
+    "local_path": "./gen_images_v2.2/best-ai-video-guide-v2.2.png",
+    "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/best-ai-video-guide-v2.2.png",
+    "config": {
+      "aspect_ratio": "16:9",
+      "resolution": "1K"
+    }
+  }
+]

@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Framer Preview: 如何用 Nano Banana + Motion Control 制作病毒视频</title>
+  <style>
+    /* === Reset & Base === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      /* alici.ai Brand Colors */
+      --color-green-deep: #059669;
+      --color-green-main: #10B981;
+      --color-green-light: #A7F3D0;
+
+      /* Neutral Colors */
+      --color-text: #1a1a1a;
+      --color-text-secondary: #6b7280;
+      --color-bg: #ffffff;
+      --color-bg-gray: #f9fafb;
+      --color-border: #e5e7eb;
+
+      /* Layout */
+      --max-width: 680px;
+      --spacing-xs: 0.5rem;
+      --spacing-sm: 1rem;
+      --spacing-md: 1.5rem;
+      --spacing-lg: 2rem;
+      --spacing-xl: 3rem;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.7;
+      color: var(--color-text);
+      background-color: var(--color-bg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* === Preview Badge === */
+    .preview-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: linear-gradient(135deg, var(--color-green-deep), var(--color-green-main));
+      color: white;
+      padding: var(--spacing-sm) var(--spacing-md);
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .preview-header .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 0.25rem 0.75rem;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.25rem;
+    }
+
+    .preview-header .hint {
+      font-size: 0.875rem;
+      opacity: 0.9;
+      margin: 0;
+    }
+
+    /* === Container === */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: var(--spacing-lg) var(--spacing-md);
+    }
+
+    /* === Article Header === */
+    .article-header {
+      margin-bottom: var(--spacing-xl);
+    }
+
+    .article-cover {
+      margin-bottom: var(--spacing-lg);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      background: var(--color-bg-gray);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 400px;
+    }
+
+    .article-cover.placeholder {
+      color: var(--color-text-secondary);
+      font-size: 0.875rem;
+    }
+
+    .article-cover img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .article-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--color-text);
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .article-subtitle {
+      font-size: 1.25rem;
+      line-height: 1.5;
+      color: var(--color-text-secondary);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .article-meta {
+      display: flex;
+      gap: var(--spacing-sm);
+      align-items: center;
+      font-size: 0.875rem;
+      color: var(--color-text-secondary);
+      padding-bottom: var(--spacing-lg);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .article-meta .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .article-meta .separator {
+      color: var(--color-border);
+    }
+
+    /* === Article Body === */
+    .article-body {
+      margin-top: var(--spacing-lg);
+    }
+
+    /* Paragraphs */
+    .article-body p {
+      margin-bottom: var(--spacing-md);
+      font-size: 1.0625rem;
+      line-height: 1.7;
+    }
+
+    .article-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* H2 Headings (Framer uses h6>strong) */
+    .article-body h6 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      line-height: 1.3;
+      margin-top: var(--spacing-xl);
+      margin-bottom: var(--spacing-md);
+      color: var(--color-text);
+    }
+
+    .article-body h6:first-child {
+      margin-top: 0;
+    }
+
+    .article-body h6 strong {
+      font-weight: 700;
+    }
+
+    /* H3 Headings (Framer uses p>strong) */
+    .article-body p strong {
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    /* Links */
+    .article-body a {
+      color: var(--color-green-main);
+      text-decoration: none;
+      border-bottom: 1px solid var(--color-green-light);
+      transition: border-color 0.2s;
+    }
+
+    .article-body a:hover {
+      border-bottom-color: var(--color-green-main);
+    }
+
+    /* Lists */
+    .article-body ul,
+    .article-body ol {
+      margin-bottom: var(--spacing-md);
+      padding-left: 1.5rem;
+    }
+
+    .article-body li {
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .article-body li p {
+      margin-bottom: var(--spacing-xs);
+    }
+
+    /* Blockquotes */
+    .article-body blockquote {
+      margin: var(--spacing-lg) 0;
+      padding-left: var(--spacing-md);
+      border-left: 4px solid var(--color-green-main);
+      background: var(--color-bg-gray);
+      padding: var(--spacing-md);
+      border-radius: 4px;
+    }
+
+    .article-body blockquote p {
+      margin-bottom: 0;
+      font-style: italic;
+      color: var(--color-text-secondary);
+    }
+
+    /* Figures (Images & Tables) */
+    .article-body figure {
+      margin: var(--spacing-lg) 0;
+    }
+
+    .article-body figure img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Tables */
+    .article-body figure table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    .article-body table thead tr {
+      background: var(--color-bg-gray);
+    }
+
+    .article-body table th {
+      padding: var(--spacing-sm) var(--spacing-md);
+      text-align: left;
+      font-weight: 600;
+      color: var(--color-text);
+      border-bottom: 2px solid var(--color-border);
+    }
+
+    .article-body table td {
+      padding: var(--spacing-sm) var(--spacing-md);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .article-body table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .article-body table tbody tr:hover {
+      background: var(--color-bg-gray);
+    }
+
+    .article-body table th p,
+    .article-body table td p {
+      margin: 0;
+    }
+
+    /* Code */
+    .article-body code {
+      background: var(--color-bg-gray);
+      padding: 0.125rem 0.375rem;
+      border-radius: 4px;
+      font-family: 'Monaco', 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--color-green-deep);
+    }
+
+    .article-body pre {
+      background: var(--color-bg-gray);
+      padding: var(--spacing-md);
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: var(--spacing-md) 0;
+    }
+
+    .article-body pre code {
+      background: none;
+      padding: 0;
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: var(--color-text);
+    }
+
+    /* Horizontal Rule */
+    .article-body hr {
+      border: none;
+      border-top: 1px solid var(--color-border);
+      margin: var(--spacing-xl) 0;
+    }
+
+    /* === CTA Section === */
+    .article-cta {
+      margin-top: var(--spacing-xl);
+      padding: var(--spacing-lg);
+      background: linear-gradient(135deg, var(--color-green-light) 0%, #D1FAE5 100%);
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .article-cta-button {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--color-green-deep), var(--color-green-main));
+      color: white;
+      padding: 0.875rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1.0625rem;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+    }
+
+    .article-cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+    }
+
+    /* === Footer === */
+    .article-footer {
+      margin-top: var(--spacing-xl);
+      padding-top: var(--spacing-lg);
+      border-top: 1px solid var(--color-border);
+      text-align: center;
+      color: var(--color-text-secondary);
+      font-size: 0.875rem;
+    }
+
+    /* === Responsive === */
+    @media (max-width: 768px) {
+      .article-title {
+        font-size: 2rem;
+      }
+
+      .article-subtitle {
+        font-size: 1.125rem;
+      }
+
+      .article-body h6 {
+        font-size: 1.5rem;
+      }
+
+      .article-body p {
+        font-size: 1rem;
+      }
+
+      .container {
+        padding: var(--spacing-md) var(--spacing-sm);
+      }
+
+      .article-body figure table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Preview Badge -->
+  <div class="preview-header">
+    <span class="badge">Preview Mode</span>
+    <p class="hint">这是 Framer CMS 导入后的预览效果</p>
+  </div>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Article Header -->
+    <header class="article-header">
+      <!-- Cover Image -->
+      <figure class="article-cover placeholder">
+        <p>[Placeholder for Cover Image]</p>
+      </figure>
+
+      <!-- Title & Meta -->
+      <h1 class="article-title">如何用 Nano Banana + Motion Control 制作病毒视频</h1>
+      <p class="article-subtitle">关键不在"用不用 Motion Control"，而在"Match Image 还是 Match Video"——选错了，细节和动作只能保一个。</p>
+      <div class="article-meta">
+        <span class="meta-item">3 min</span>
+        <span class="separator">·</span>
+        <span class="meta-item">2026-01-20</span>
+      </div>
+    </header>
+
+    <!-- Article Body -->
+    <article class="article-body">
+      <p>Kling 2.6 Motion Control 刚发布，案例爆发——但很多人用错了模式，浪费了 credits。关键不在"用不用 Motion Control"，而在"Match Image 还是 Match Video"（选错了，细节和动作只能保一个）。</p><p>Kling 2.6 Motion Control 结合 Nano Banana Pro 创建了一种新的视频创作范式：先用 Nano Banana Pro 生成高质量角色图片，再用 Motion Control 将参考视频的动作精确迁移到角色上。关键突破在于将动作生成从"用文字猜测"变成"用视觉参考"，并且整个流程（包括生成参考动作视频）都可以在 Alici AI 平台内完成，无需外部素材。</p><h6><strong>Key Takeaways</strong></h6><ul><li data-preset-tag="p"><p><strong>Match Image (10s)</strong> 保持角色细节和纹理，但可能发明镜头运动；<strong>Match Video (30s)</strong> 精确复制动作轨迹，但角色可能变形</p></li><li data-preset-tag="p"><p>Text prompt 控制背景和光线，<strong>不控制动作</strong>——动作完全由参考视频决定</p></li><li data-preset-tag="p"><p>可以在平台内生成参考动作视频：创建中性姿势起始帧 → prompt 动作 → 作为 Motion Control 参考</p></li><li data-preset-tag="p"><p>角色初始姿势过于受限（如坐姿、交叉双臂）会限制动作范围和质量</p></li><li data-preset-tag="p"><p>使用 2K 分辨率生成角色图片可显著提升最终视频质量</p></li></ul><h6><strong>Case Studies</strong></h6><p><strong>维度 1: 完整创作流程——从角色到动作</strong></p><p><strong>What happens</strong>: 创作者首先使用 Nano Banana Pro 生成角色图片（上传参考图 + 描述场景/服装/风格），然后使用 Motion Control 上传参考动作视频，系统将动作精确迁移到生成的角色上。如果没有现成的参考视频，可以直接在平台内生成：创建中性姿势的起始帧，然后 prompt 具体动作（如 "do a little tango dance" 或 "ballet pirouette"），生成的视频即可作为后续的动作参考。</p><p><strong>What to copy</strong>:</p><ul><li data-preset-tag="p"><p>先用 Nano Banana Pro 生成角色图片（2K 分辨率），确保角色质量</p></li><li data-preset-tag="p"><p>参考视频可在平台内生成，无需外部素材</p></li><li data-preset-tag="p"><p>使用中性姿势（arms by side）作为动作生成的起始帧</p></li></ul><hr><p><strong>维度 2: Match Image vs Match Video——选错会浪费 Credits</strong></p><p><strong>What happens</strong>: Motion Control 提供两种模式。Match Image 模式最长生成 10 秒视频，优先保持角色的纹理、面部特征等细节，但可能会"发明"镜头运动（如推拉摇移），动作范围受姿势限制。Match Video 模式最长生成 30 秒，精确复制参考视频的骨骼运动和镜头轨迹，但角色可能会被拉伸或变形以匹配参考视频的身体几何和位置。</p><p><strong>What to copy</strong>:</p><ul><li data-preset-tag="p"><p>需要保持角色细节（如面部特征）→ 选 Match Image（10s 上限）</p></li><li data-preset-tag="p"><p>需要精确复制复杂动作（如空间移动、深度运动）→ 选 Match Video（30s 上限）</p></li><li data-preset-tag="p"><p>如果参考视频是静态的，Match Video 往往输出静态画面，Match Image 反而会添加运动</p></li></ul><hr><p><strong>维度 3: Prompt 策略与质量优化</strong></p><p><strong>What happens</strong>: 在使用 Motion Control 时，text prompt 是<strong>可选的</strong>。即使添加 prompt，它主要控制背景环境和光线效果，而不是动作本身。动作完全由参考视频决定。视频中的测试显示，添加或不添加 prompt 对最终动作效果几乎没有影响。另外，使用 2K 分辨率生成角色图片可以显著提升最终视频质量。</p><p><strong>What to copy</strong>:</p><ul><li data-preset-tag="p"><p>Prompt 留空或仅描述场景/光线，不描述动作</p></li><li data-preset-tag="p"><p>生成角色图片时使用 2K 分辨率</p></li><li data-preset-tag="p"><p>参考视频选择清晰、单一主体、动作明显的片段</p></li></ul><hr><p><strong>维度 4: 常见陷阱——姿势限制与模式误用</strong></p><p><strong>What happens</strong>: 如果角色的初始姿势过于受限（如坐姿、交叉双臂），AI 很难在保持角色一致性的同时实现大幅度动作，导致动作范围被限制或失真。另一个常见问题是模式选择错误：使用 Match Image 时期待精确动作复制，或使用 Match Video 时期待完美保持角色细节，都会导致不满意的结果。</p><p><strong>What to copy</strong>:</p><ul><li data-preset-tag="p"><p>为角色图片选择中性、开放的姿势（如站立、双臂自然下垂）</p></li><li data-preset-tag="p"><p>根据优先级选择模式：保细节 → Match Image，保动作 → Match Video</p></li><li data-preset-tag="p"><p>测试时先生成 4 个输出，选择最佳结果，避免盲目重复生成</p></li></ul><hr><p><strong>为什么这种组合有效</strong>: 这种"角色生成 → 动作生成 → 组合"的工作流将复杂的视频创作拆解为两个独立步骤，每一步都有专门的模型优化。Match Image 试图在保持图像像素一致性的前提下"变形"静态图像，而 Match Video 则优先匹配运动轨迹，即使牺牲角色原始比例。Motion Control 的核心是"动作迁移"而非"文字理解"——这不是"功能更多"，而是"控制范式转变"，从"希望 AI 理解我"变成"告诉 AI 照着做"。</p><h6><strong>Prompts to Try</strong></h6><p><strong>1. 角色图片生成 (Nano Banana Pro)</strong></p><pre><code>A [character description] standing with arms by their side,
+[clothing/outfit details], [lighting],
+clean background, centered composition, 2K resolution,
+highly detailed, professional quality</code></pre><p><strong>示例</strong>:</p><pre><code>A person standing with arms by their side,
+wearing casual clothes, soft natural lighting,
+clean background, centered composition, 2K resolution,
+highly detailed, professional quality</code></pre><p><strong>2. 参考动作生成 (Kling 2.6)</strong></p><pre><code>[Action verb + details]
+
+示例动作:
+- "do a little tango dance"
+- "slowly walk backwards"
+- "do a ballet pirouette"
+- "hopping up and down on one leg with arms in the air"
+- "wave hands enthusiastically"</code></pre><p><strong>3. Motion Control 工作流组合技巧</strong></p><ul><li data-preset-tag="p"><p>Character image: Front-facing, clear, clean background</p></li><li data-preset-tag="p"><p>Reference video: 5-8s, clear motion, single subject</p></li><li data-preset-tag="p"><p>Don't describe motion in prompt (Motion Control handles it)</p></li><li data-preset-tag="p"><p>Match Image 保细节，Match Video 保动作——根据优先级选择</p></li></ul><h6><strong>How to Try It</strong></h6><ol><li data-preset-tag="p"><p><strong>生成角色图片</strong> → 在 Alici AI 使用 Nano Banana Pro → 获得 2K 分辨率角色图</p><ul><li data-preset-tag="p"><p>要求：上传参考图或描述角色，选择中性姿势（站立、双臂自然下垂）</p></li><li data-preset-tag="p"><p>避免：受限姿势（坐姿、交叉双臂、紧贴身体的手臂）</p></li></ul></li><li data-preset-tag="p"><p><strong>准备或生成参考视频</strong> → 如有现成动作视频可直接使用 → 如没有，创建中性姿势起始帧并 prompt 动作</p><ul><li data-preset-tag="p"><p>要求：清晰、全身入镜、5-10 秒、单一主体</p></li><li data-preset-tag="p"><p>避免：模糊画质、快速剪辑、多人同框</p></li></ul></li><li data-preset-tag="p"><p><strong>应用 Motion Control</strong> → 上传角色图片和参考视频 → 选择模式（Match Image 或 Match Video）</p><ul><li data-preset-tag="p"><p>Match Image：保持角色细节（max 10s），可接受发明的镜头运动</p></li><li data-preset-tag="p"><p>Match Video：精确动作复制（max 30s），可接受角色变形</p></li><li data-preset-tag="p"><p>Text prompt 可选，仅描述背景/光线/场景，不描述动作</p></li></ul></li><li data-preset-tag="p"><p><strong>优化和迭代</strong> → 根据结果调整模式选择或角色姿势 → 先生成 4 个输出，选择最佳</p><ul><li data-preset-tag="p"><p>常见问题：角色姿势与动作冲突、画面比例不匹配</p></li><li data-preset-tag="p"><p>解决方法：重新生成角色图片（更开放姿势）或调整参考视频</p></li></ul></li></ol><h6><strong>FAQ</strong></h6><p><strong>Match Image 和 Match Video 可以混合使用吗？</strong></p><p>不可以，每次生成只能选择一种模式。但你可以对同一组素材分别用两种模式生成，然后选择效果更好的结果。建议先测试两种模式的输出差异，再决定后续批量生成用哪种。</p><p><strong>为什么我的角色动作看起来很僵硬？</strong></p><p>最常见的原因是角色初始姿势过于受限（如坐姿、紧贴身体的手臂）。建议重新生成角色图片，使用更开放的姿势（如站立、手臂自然下垂）。另外，确保参考视频的动作清晰且单一主体，避免多人或快速剪辑的片段。</p><p><strong>Prompt 应该详细描述动作吗？</strong></p><p>不需要。Motion Control 的动作完全由参考视频决定，prompt 主要控制背景和光线。实际测试显示，详细描述动作对结果几乎没有影响，反而可能引入冲突。建议 prompt 留空，或仅描述场景风格（如 "in a colorful party room with balloons"）。</p><hr><p><strong>Source &amp; Boundary</strong></p><ul><li data-preset-tag="p"><p>📹 素材：1 个 YouTube 教程（transcript 已保存，多维度分析）</p></li><li data-preset-tag="p"><p>⚠️ 边界：Match Image/Match Video 差异和姿势影响基于视频演示，未进行大规模测试</p></li><li data-preset-tag="p"><p>🔗 工具版本：Kling 2.6, Nano Banana Pro（2026-01）</p></li></ul><hr><p><strong>That's it.</strong> 掌握 Match Image/Match Video 的差异 + 中性姿势起始帧，你就具备了用 Motion Control 制作病毒视频的核心能力。</p><p><em><a href="https://alici.ai" target="_blank">Alici AI</a> 提供 Nano Banana Pro、Kling 2.6 Motion Control 以及其他顶尖 AI 视频模型的一站式访问，无需在多个平台间切换。</em></p>
+    </article>
+
+    <!-- CTA Section -->
+    <div class="article-cta">
+      <a href="https://app.alici.ai/pages/videoGen" class="article-cta-button" target="_blank">Create AI Videos Now</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="article-footer">
+      <p>生成自 <strong>alici.ai</strong> 内容工厂</p>
+      <p style="margin-top: 0.5rem; font-size: 0.75rem; opacity: 0.7;">
+        Powered by Claude Sonnet 4.5 · v1.2 Workflow Test
+      </p>
+    </footer>
+  </div>
+</body>
+</html>

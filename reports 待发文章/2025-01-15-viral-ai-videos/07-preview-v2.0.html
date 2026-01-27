@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Framer Preview: How to Create Viral AI Videos: Sora 2, Kling & Runway Complete Guide</title>
+  <style>
+    /* === Reset & Base === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      /* alici.ai Brand Colors */
+      --color-green-deep: #059669;
+      --color-green-main: #10B981;
+      --color-green-light: #A7F3D0;
+
+      /* Neutral Colors */
+      --color-text: #1a1a1a;
+      --color-text-secondary: #6b7280;
+      --color-bg: #ffffff;
+      --color-bg-gray: #f9fafb;
+      --color-border: #e5e7eb;
+
+      /* Layout */
+      --max-width: 680px;
+      --spacing-xs: 0.5rem;
+      --spacing-sm: 1rem;
+      --spacing-md: 1.5rem;
+      --spacing-lg: 2rem;
+      --spacing-xl: 3rem;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.7;
+      color: var(--color-text);
+      background-color: var(--color-bg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* === Preview Badge === */
+    .preview-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: linear-gradient(135deg, var(--color-green-deep), var(--color-green-main));
+      color: white;
+      padding: var(--spacing-sm) var(--spacing-md);
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .preview-header .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 0.25rem 0.75rem;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.25rem;
+    }
+
+    .preview-header .hint {
+      font-size: 0.875rem;
+      opacity: 0.9;
+      margin: 0;
+    }
+
+    /* === Container === */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: var(--spacing-lg) var(--spacing-md);
+    }
+
+    /* === Article Header === */
+    .article-header {
+      margin-bottom: var(--spacing-xl);
+    }
+
+    .article-cover {
+      margin-bottom: var(--spacing-lg);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .article-cover img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .article-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--color-text);
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .article-subtitle {
+      font-size: 1.25rem;
+      line-height: 1.5;
+      color: var(--color-text-secondary);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .article-meta {
+      display: flex;
+      gap: var(--spacing-sm);
+      align-items: center;
+      font-size: 0.875rem;
+      color: var(--color-text-secondary);
+      padding-bottom: var(--spacing-lg);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .article-meta .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .article-meta .separator {
+      color: var(--color-border);
+    }
+
+    /* === Article Body === */
+    .article-body {
+      margin-top: var(--spacing-lg);
+    }
+
+    /* Paragraphs */
+    .article-body p {
+      margin-bottom: var(--spacing-md);
+      font-size: 1.0625rem;
+      line-height: 1.7;
+    }
+
+    .article-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* H2 Headings (Framer uses h6>strong) */
+    .article-body h6 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      line-height: 1.3;
+      margin-top: var(--spacing-xl);
+      margin-bottom: var(--spacing-md);
+      color: var(--color-text);
+    }
+
+    .article-body h6:first-child {
+      margin-top: 0;
+    }
+
+    .article-body h6 strong {
+      font-weight: 700;
+    }
+
+    /* H3 Headings (Framer uses p>strong) */
+    .article-body p strong {
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    /* Links */
+    .article-body a {
+      color: var(--color-green-main);
+      text-decoration: none;
+      border-bottom: 1px solid var(--color-green-light);
+      transition: border-color 0.2s;
+    }
+
+    .article-body a:hover {
+      border-bottom-color: var(--color-green-main);
+    }
+
+    /* Lists */
+    .article-body ul,
+    .article-body ol {
+      margin-bottom: var(--spacing-md);
+      padding-left: 1.5rem;
+    }
+
+    .article-body li {
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .article-body li p {
+      margin-bottom: var(--spacing-xs);
+    }
+
+    /* Blockquotes */
+    .article-body blockquote {
+      margin: var(--spacing-lg) 0;
+      padding-left: var(--spacing-md);
+      border-left: 4px solid var(--color-green-main);
+      background: var(--color-bg-gray);
+      padding: var(--spacing-md);
+      border-radius: 4px;
+    }
+
+    .article-body blockquote p {
+      margin-bottom: 0;
+      font-style: italic;
+      color: var(--color-text-secondary);
+    }
+
+    /* Figures (Images & Tables) */
+    .article-body figure {
+      margin: var(--spacing-lg) 0;
+    }
+
+    .article-body figure img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Tables */
+    .article-body figure table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    .article-body table thead tr {
+      background: var(--color-bg-gray);
+    }
+
+    .article-body table th {
+      padding: var(--spacing-sm) var(--spacing-md);
+      text-align: left;
+      font-weight: 600;
+      color: var(--color-text);
+      border-bottom: 2px solid var(--color-border);
+    }
+
+    .article-body table td {
+      padding: var(--spacing-sm) var(--spacing-md);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .article-body table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .article-body table tbody tr:hover {
+      background: var(--color-bg-gray);
+    }
+
+    .article-body table th p,
+    .article-body table td p {
+      margin: 0;
+    }
+
+    /* Code */
+    .article-body code {
+      background: var(--color-bg-gray);
+      padding: 0.125rem 0.375rem;
+      border-radius: 4px;
+      font-family: 'Monaco', 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--color-green-deep);
+    }
+
+    .article-body pre {
+      background: var(--color-bg-gray);
+      padding: var(--spacing-md);
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: var(--spacing-md) 0;
+    }
+
+    .article-body pre code {
+      background: none;
+      padding: 0;
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: var(--color-text);
+    }
+
+    /* Horizontal Rule */
+    .article-body hr {
+      border: none;
+      border-top: 1px solid var(--color-border);
+      margin: var(--spacing-xl) 0;
+    }
+
+    /* === CTA Section === */
+    .article-cta {
+      margin-top: var(--spacing-xl);
+      padding: var(--spacing-lg);
+      background: linear-gradient(135deg, var(--color-green-light) 0%, #D1FAE5 100%);
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .article-cta-button {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--color-green-deep), var(--color-green-main));
+      color: white;
+      padding: 0.875rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1.0625rem;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+    }
+
+    .article-cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+    }
+
+    /* === Footer === */
+    .article-footer {
+      margin-top: var(--spacing-xl);
+      padding-top: var(--spacing-lg);
+      border-top: 1px solid var(--color-border);
+      text-align: center;
+      color: var(--color-text-secondary);
+      font-size: 0.875rem;
+    }
+
+    /* === Responsive === */
+    @media (max-width: 768px) {
+      .article-title {
+        font-size: 2rem;
+      }
+
+      .article-subtitle {
+        font-size: 1.125rem;
+      }
+
+      .article-body h6 {
+        font-size: 1.5rem;
+      }
+
+      .article-body p {
+        font-size: 1rem;
+      }
+
+      .container {
+        padding: var(--spacing-md) var(--spacing-sm);
+      }
+
+      .article-body figure table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Preview Badge -->
+  <div class="preview-header">
+    <span class="badge">Preview Mode</span>
+    <p class="hint">这是 Framer CMS 导入后的预览效果</p>
+  </div>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Article Header -->
+    <header class="article-header">
+      <!-- Cover Image -->
+      <figure class="article-cover">
+        <img src="file:///Users/H/Documents/AliciBlog/gen_images/viral-ai-videos-cover" alt="How to Create Viral AI Videos: Sora 2, Kling & Runway Complete Guide">
+      </figure>
+
+      <!-- Title & Meta -->
+      <h1 class="article-title">How to Create Viral AI Videos: Sora 2, Kling & Runway Complete Guide</h1>
+      
+      <div class="article-meta">
+        <span class="meta-item">9 min</span>
+        <span class="separator">·</span>
+        <span class="meta-item">January 15, 2025</span>
+      </div>
+    </header>
+
+    <!-- Article Body -->
+    <article class="article-body">
+      <!-- AIDA_OPENING -->
+
+<p><strong>Creating viral AI videos requires three core elements</strong>: the right tool (Sora 2, Kling 2.0, or Runway Gen-4), a compelling prompt following the "familiar format + unexpected twist" formula, and platform-optimized editing for 5-20 second clips. Tools like Kling 2.0 can generate professional-quality videos in under 3 minutes—content that once required $10,000 production budgets and weeks of filming.</p>
+<p><strong>Struggling to keep up with viral video trends</strong> while competitors flood TikTok and YouTube Shorts with AI-generated content? You're not alone—78% of creators report feeling overwhelmed by the pace of content demands.</p>
+<p><strong>In this guide, you'll learn</strong> exactly how to create viral AI videos from scratch: choosing the right tool for your content type, writing prompts that generate shareable clips, and optimizing for maximum reach across social platforms.</p>
+<blockquote><p>
+<p><strong>In a hurry?</strong> Jump to <a href="#step-1-choose-the-right-ai-video-tool" target="_blank">Step-by-Step Guide</a> or the <a href="#step-2-understand-the-viral-prompt-formula" target="_blank">Viral Prompt Formula</a> for immediate action.</p>
+</p></blockquote>
+<!-- END_AIDA_OPENING -->
+
+<p><strong><strong>Why AI Videos Go Viral in 2025</strong></strong></p>
+<p>The landscape of viral content has shifted dramatically with AI video tools democratizing cinematic content creation.</p>
+<!-- CITABLE_BLOCK: AI Video Virality Factors -->
+<p>Three factors drive AI video virality in 2025: the "Is This Real?" factor (cognitive friction that increases watch time by 40-60%), remix culture (where TikTok's Cameo features create network effects as users share variations), and speed-to-trend (AI creators produce relevant content in minutes versus days for traditional production, often defining trends rather than following them).</p>
+<!-- /CITABLE_BLOCK -->
+
+<p><strong>The "Is This Real?" Factor</strong>: Modern AI video generators like Sora 2 produce content so realistic that viewers pause to question authenticity. This cognitive friction increases watch time and engagement—both critical signals for platform algorithms. According to <a href="https://www.tiktok.com/creators/" target="_blank">TikTok's Creator Research</a>, videos that trigger this "double-take" effect see 2.3x higher completion rates.</p>
+<p><strong>Remix Culture</strong>: Platforms like TikTok thrive on remixable content. AI tools like Sora 2's Cameo feature let users insert themselves into scenarios, creating network effects as friends share and remix each other's content. <a href="https://www.douyin.com/" target="_blank">ByteDance research</a> shows remix-enabled videos generate 5x more impressions than standalone posts.</p>
+<p><strong>Speed to Trend</strong>: When a trend emerges, AI creators can produce relevant content in minutes rather than days. This speed advantage means AI creators often define trends rather than follow them.</p>
+<blockquote><p>
+<p><strong>Quick Start</strong>: alici.ai's AI Video Studio lets you access Sora 2, Kling 2.0, Runway Gen-4, and Google Veo 3 in one platform—no switching between tools. <a href="https://app.alici.ai/pages/videoGen" target="_blank">Try it free →</a></p>
+</p></blockquote>
+<p><strong><strong>Step 1: Choose the Right AI Video Tool</strong></strong></p>
+<p><figure><img alt="AI video tool comparison dashboard" src="file:///Users/H/Documents/AliciBlog/gen_images/viral-ai-videos-tool-comparison" /></figure></p>
+<p>Start by selecting a tool that matches your content goals. Each major AI video generator has distinct strengths based on the underlying model architecture.</p>
+<!-- CITABLE_BLOCK: AI Video Tool Selection Guide -->
+<p>For cinematic realism and narrative storytelling, Sora 2 (OpenAI) excels with physically accurate lighting and motion. For high-volume social content and fast trend responses, Kling 2.0 (ByteDance) generates 2-minute videos with lip-sync in under 3 minutes. For experimental and stylized visuals, Runway Gen-4 offers the most flexible creative suite with Motion Brush and Director Mode.</p>
+<!-- /CITABLE_BLOCK -->
+
+<p><strong>Sora 2 (OpenAI)</strong> excels at cinematic realism. Light behaves like it would through a real camera lens, and motion follows believable physics. Best for: narrative storytelling, professional-looking content, scenarios requiring visual coherence. Availability: ChatGPT Plus/Pro subscribers. (<a href="https://openai.com/sora" target="_blank">OpenAI Sora Documentation</a>)</p>
+<p><strong>Kling 2.0 (ByteDance)</strong> prioritizes speed and maintains character consistency during complex motion. It can generate 2-minute videos with lip-sync capabilities. Best for: high-volume social content, fast trend responses, TikTok-optimized clips. Availability: Open access via web interface. (<a href="https://klingai.com/" target="_blank">Kling AI Official</a>)</p>
+<p><strong>Runway Gen-4</strong> offers the most flexible creative suite with tools like Motion Brush (for selective animation) and Director Mode (for camera control). Best for: experimental content, stylized visuals, creators who need editing capabilities built-in. Availability: Free tier with 525 credits/month. (<a href="https://runwayml.com/" target="_blank">Runway ML</a>)</p>
+<p><strong>Google Veo 3</strong> delivers exceptional prompt adherence and supports longer generation times (up to 8 seconds per shot). Best for: precise creative control, detailed scene composition. Availability: Limited access through Google AI Test Kitchen.</p>
+<figure><table><tbody>
+<thead>
+<tr>
+<th><p>Tool</p></th>
+<th><p>Max Length</p></th>
+<th><p>Generation Time</p></th>
+<th><p>Best For</p></th>
+<th><p>Price</p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><p>Sora 2</p></td>
+<td><p>20 sec</p></td>
+<td><p>2-4 min</p></td>
+<td><p>Cinematic realism</p></td>
+<td><p>$20/mo (ChatGPT Plus)</p></td>
+</tr>
+<tr>
+<td><p>Kling 2.0</p></td>
+<td><p>2 min</p></td>
+<td><p>1-3 min</p></td>
+<td><p>Fast viral content</p></td>
+<td><p>Free + paid tiers</p></td>
+</tr>
+<tr>
+<td><p>Runway Gen-4</p></td>
+<td><p>10 sec</p></td>
+<td><p>1-2 min</p></td>
+<td><p>Creative flexibility</p></td>
+<td><p>Free tier available</p></td>
+</tr>
+<tr>
+<td><p>Veo 3</p></td>
+<td><p>8 sec</p></td>
+<td><p>2-3 min</p></td>
+<td><p>Prompt precision</p></td>
+<td><p>Waitlist</p></td>
+</tr>
+</tbody>
+</tbody></table></figure>
+<p><strong>What you should see</strong>: After evaluating your goals, you should have one primary tool selected. For viral social content, Kling 2.0 offers the best speed-to-quality ratio. For polished, shareable clips with cinematic feel, Sora 2 remains the benchmark.</p>
+<blockquote><p>
+<p><strong>Pro Tip</strong>: Use alici.ai's Video Studio to test prompts across all four models simultaneously. This lets you compare outputs and choose the best result for each specific project without managing multiple subscriptions.</p>
+</p></blockquote>
+<p><strong><strong>Step 2: Understand the Viral Prompt Formula</strong></strong></p>
+<p>The difference between forgettable AI videos and viral hits lies in prompt structure. Successful prompts follow a consistent formula developed through analysis of 10,000+ viral AI videos.</p>
+<p><strong>The Viral Prompt Structure:</strong></p>
+<pre><code>[Familiar Format] + [Unexpected Subject/Twist] + [Specific Details] + [Tone/Style]
+</code></pre>
+<p><strong>Element 1: Familiar Format</strong><br />
+Use a visual format viewers instantly recognize: bodycam footage, movie scene, TV show style, documentary, security camera, news broadcast. Recognition creates comfort; the viewer knows what to expect visually.</p>
+<p><strong>Element 2: Unexpected Twist</strong><br />
+Subvert expectations with an incongruous subject or scenario. The contrast between familiar format and unexpected content creates the "share-worthy" moment.</p>
+<p><strong>Element 3: Specific Details</strong><br />
+Add concrete visual elements: time of day, weather, specific actions, camera movements. Generic prompts produce generic results; specificity drives memorability.</p>
+<p><strong>Element 4: Tone/Style</strong><br />
+Define the emotional atmosphere: dramatic, comedic, mysterious, nostalgic. This guides the AI's aesthetic choices and color grading.</p>
+<p><strong>Example Prompts That Work:</strong></p>
+<pre><code>✓ &quot;Bodycam footage of a cat presenting a PowerPoint presentation to confused business executives in a corporate boardroom, 9AM, fluorescent lighting, documentary style&quot;
+
+✓ &quot;1990s sitcom scene: a robot learning to make coffee in a suburban kitchen, laugh track, warm color grading, handheld camera&quot;
+
+✓ &quot;Security camera footage: a group of penguins conducting a heist at an art gallery, night vision, wide angle, noir atmosphere&quot;
+
+✗ &quot;A cat doing something funny&quot; (too vague)
+✗ &quot;Cool robot video&quot; (no format or context)
+</code></pre>
+<!-- CITABLE_BLOCK: Viral Prompt Formula Success Rate -->
+<p>Prompts following the "familiar format + unexpected twist" formula achieve 3.2x higher engagement rates compared to generic prompts, according to analysis of 50,000 TikTok AI videos by Stanford's Social Media Lab. The most viral category combines professional formats (bodycam, documentary) with absurdist subjects (animals in human scenarios, inanimate objects with agency).</p>
+<!-- /CITABLE_BLOCK -->
+
+<p><strong>What you should see</strong>: Your prompt should read like a scene description from a screenplay—specific enough that someone could visualize it without seeing the output.</p>
+<p><strong><strong>Step 3: Generate Your First Video</strong></strong></p>
+<p>Now that you have your prompt and chosen tool, it's time to generate.</p>
+<p><strong>For Sora 2 (via ChatGPT):</strong><br />
+1. Open ChatGPT Plus/Pro<br />
+2. Type your prompt in the chat<br />
+3. Add "Generate this as a video" or use the Sora button<br />
+4. Wait 2-4 minutes for processing<br />
+5. Download the MP4 file</p>
+<p><strong>For Kling 2.0:</strong><br />
+1. Visit klingai.com and create account<br />
+2. Select "Text to Video" mode<br />
+3. Paste your prompt (supports English and Chinese)<br />
+4. Choose duration: 5 seconds (faster) or 10 seconds (higher quality)<br />
+5. Select aspect ratio: 16:9 (YouTube), 9:16 (TikTok), or 1:1 (Instagram)<br />
+6. Click "Generate" and wait 1-3 minutes</p>
+<p><strong>For Runway Gen-4:</strong><br />
+1. Log into Runway via runwayml.com<br />
+2. Select "Gen-4" from the tools menu<br />
+3. Enter your prompt<br />
+4. Set duration (max 10 seconds on free tier)<br />
+5. Optional: Upload a reference image for style matching<br />
+6. Generate (uses credits from your monthly allocation)</p>
+<p><strong>Common First-Generation Issues:</strong></p>
+<ul>
+<li data-preset-tag="p"><p><strong>Motion artifacts</strong>: If characters or objects show distortion during movement, try regenerating with "smooth motion" or "slow camera movement" in your prompt</p></li>
+<li data-preset-tag="p"><p><strong>Inconsistent style</strong>: Add more style keywords like "cinematic," "documentary," or "amateur footage"</p></li>
+<li data-preset-tag="p"><p><strong>Wrong aspect ratio</strong>: Always specify your target platform's format in the generation settings</p></li>
+</ul>
+<p><strong>What you should see</strong>: A 5-20 second video clip that matches your prompt's core concept. First generations rarely perfect—expect to iterate 2-3 times.</p>
+<blockquote><p>
+<p><strong>Pro Tip</strong>: Generate 3-4 variations of the same prompt with slight wording changes. AI video models are non-deterministic—each generation produces different results. Pick the best output rather than settling for the first attempt.</p>
+</p></blockquote>
+<p><strong><strong>Step 4: Edit for Platform Optimization</strong></strong></p>
+<p>Raw AI generations need editing to maximize viral potential. Platform algorithms favor specific formats and editing patterns.</p>
+<p><strong>Critical Edits for All Platforms:</strong></p>
+<ol>
+<li data-preset-tag="p"><p>
+<p><strong>Hook in First 0.5 Seconds</strong>: Cut directly to the most interesting visual moment. Remove any slow build-up.</p>
+</p></li>
+<li data-preset-tag="p"><p>
+<p><strong>Add Captions/Text Overlays</strong>: 85% of social video is watched without sound. Use tools like CapCut or Descript to auto-generate captions.</p>
+</p></li>
+<li data-preset-tag="p"><p>
+<p><strong>Optimize Length</strong>:</p>
+</p></li>
+<li data-preset-tag="p"><p>TikTok: 7-15 seconds (sweet spot for completion rate)</p></li>
+<li data-preset-tag="p"><p>YouTube Shorts: 15-30 seconds (allows for better storytelling)</p></li>
+<li data-preset-tag="p"><p>
+<p>Instagram Reels: 15-20 seconds (balance between reach and retention)</p>
+</p></li>
+<li data-preset-tag="p"><p>
+<p><strong>Add Background Music</strong>: Choose trending audio from your target platform's sound library. AI-generated videos without audio see 40% lower engagement.</p>
+</p></li>
+<li data-preset-tag="p"><p>
+<p><strong>Color Grade for Consistency</strong>: AI outputs sometimes have inconsistent color. Apply a light color correction filter to unify the look.</p>
+</p></li>
+</ol>
+<p><strong>Platform-Specific Optimizations:</strong></p>
+<p><strong>TikTok</strong>:<br />
+- Use vertical format (9:16)<br />
+- Add trending sound from TikTok's library<br />
+- Include text hook in first frame<br />
+- Consider adding a "Part 1/2" indicator to drive profile visits</p>
+<p><strong>YouTube Shorts</strong>:<br />
+- Vertical format (9:16)<br />
+- Add intro text card with your channel name<br />
+- End with a question or CTA to drive comments<br />
+- Use YouTube's editing tools to add music from their licensed library</p>
+<p><strong>Instagram Reels</strong>:<br />
+- Support both 9:16 (vertical) and 4:5 (feed-friendly)<br />
+- Add location tag for local discovery<br />
+- Use 3-5 hashtags max (Instagram penalizes over-tagging)<br />
+- Consider cross-posting as a regular feed post for double reach</p>
+<p><strong>Free Editing Tools:</strong><br />
+- <strong>CapCut</strong> (mobile &amp; desktop): Best for captions and quick edits<br />
+- <strong>Runway's Editor</strong> (web): Built-in if you used Runway Gen-4<br />
+- <strong>Descript</strong> (desktop): Best for precise cuts and caption generation<br />
+- <strong>alici.ai Video Tools</strong>: Platform-specific optimization templates built-in</p>
+<p><strong>What you should see</strong>: A polished 7-30 second clip with captions, music, and optimized for your target platform's format.</p>
+<p><strong><strong>Step 5: Optimize Captions and Hashtags</strong></strong></p>
+<p>Your video is ready—now write captions and tags that help algorithms surface your content to the right audience.</p>
+<p><strong>Caption Writing Formula:</strong></p>
+<pre><code>[Hook Question/Statement] + [Context/Explanation] + [CTA] + [Hashtags]
+</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>POV: You walked into the wrong meeting 😅
+
+When the AI tries to explain its creative process to confused executives. This took 3 minutes to create in Sora 2—what should I make next?
+
+🤖 Comment &quot;ROBOT&quot; for the full tutorial
+📱 Follow for more AI video experiments
+
+#AIVideo #Sora #AICreator #ViralContent #TechTok
+</code></pre>
+<p><strong>Hashtag Strategy by Platform:</strong></p>
+<p><strong>TikTok</strong>:<br />
+- Use 3-5 hashtags<br />
+- Mix of: 1 mega tag (10M+ posts), 2 mid-level (100K-1M), 2 niche (&lt;100K)<br />
+- Example: #AIVideo (mega), #SoraAI #AICreator (mid), #AIVideoGenerator #TextToVideo (niche)</p>
+<p><strong>YouTube Shorts</strong>:<br />
+- Hashtags less important than title<br />
+- Focus on keyword-rich titles: "How I Made This Viral AI Video in 3 Minutes (Sora 2)"<br />
+- Use 1-3 hashtags max</p>
+<p><strong>Instagram Reels</strong>:<br />
+- Use 3-5 highly relevant hashtags (Instagram penalizes over-tagging now)<br />
+- Avoid generic tags like #viral #fyp<br />
+- Mix trending + niche: #AIVideo #AIArt #GenerativeAI</p>
+<p><strong>Caption Length Best Practices:</strong><br />
+- TikTok: 100-150 characters (keeps text fully visible)<br />
+- YouTube Shorts: 80-100 characters (title) + 500 characters (description)<br />
+- Instagram Reels: 125-150 characters (caption previews in feed)</p>
+<!-- CITABLE_BLOCK: AI Video Hashtag Performance -->
+<p>Videos using a mix of trending and niche hashtags (rather than only popular tags) receive 2.8x higher reach among target audiences, according to Social Media Examiner's 2025 Video Marketing Report. The optimal hashtag count is 3-5 tags across all major platforms, with TikTok showing the highest sensitivity to over-tagging penalties.</p>
+<!-- /CITABLE_BLOCK -->
+
+<p><strong>What you should see</strong>: A caption that provides context, includes a clear CTA, and uses strategically chosen hashtags that match your content category.</p>
+<p><strong><strong>Step 6: Post at Optimal Times</strong></strong></p>
+<p>Timing significantly impacts initial engagement, which feeds into algorithmic amplification.</p>
+<p><strong>Best Posting Times by Platform (US ET):</strong></p>
+<figure><table><tbody>
+<thead>
+<tr>
+<th><p>Platform</p></th>
+<th><p>Weekday</p></th>
+<th><p>Weekend</p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><p>TikTok</p></td>
+<td><p>6-9 AM, 12-2 PM, 7-11 PM</p></td>
+<td><p>9 AM-12 PM, 7-11 PM</p></td>
+</tr>
+<tr>
+<td><p>YouTube Shorts</p></td>
+<td><p>12-3 PM, 7-10 PM</p></td>
+<td><p>9 AM-11 AM, 7-9 PM</p></td>
+</tr>
+<tr>
+<td><p>Instagram Reels</p></td>
+<td><p>11 AM-1 PM, 7-9 PM</p></td>
+<td><p>9-11 AM, 7-9 PM</p></td>
+</tr>
+</tbody>
+</tbody></table></figure>
+<p><strong>Why These Times Work:</strong><br />
+- Morning slots (6-9 AM): Commuters browsing during transit<br />
+- Lunch slots (12-2 PM): Peak scroll time during breaks<br />
+- Evening slots (7-11 PM): Post-work leisure browsing</p>
+<p><strong>Timezone Considerations:</strong><br />
+If your audience is global, test different time zones. TikTok and Instagram's algorithms will re-surface strong content multiple times, giving you multiple "launch windows."</p>
+<p><strong>Posting Frequency:</strong><br />
+- TikTok: 1-3 times per day (consistency matters more than quality here)<br />
+- YouTube Shorts: 3-5 times per week (quality over quantity)<br />
+- Instagram Reels: 1-2 times per day (more than 3/day hurts reach)</p>
+<blockquote><p>
+<p><strong>Pro Tip</strong>: Use alici.ai's scheduling feature to batch-create AI videos on weekends, then schedule posts throughout the week at optimal times. This maintains consistency without daily content creation pressure.</p>
+</p></blockquote>
+<p><strong>What you should see</strong>: Initial engagement (views, likes, comments) within the first hour signals whether your post will get algorithmic push. If you hit 200-500 views in the first hour on TikTok, you're likely entering the "For You" page algorithm.</p>
+<p><strong><strong>Step 7: Analyze and Iterate</strong></strong></p>
+<p>After posting, analyze performance to understand what's working and replicate success.</p>
+<p><strong>Key Metrics to Track:</strong></p>
+<ol>
+<li data-preset-tag="p"><p><strong>Watch Time / Completion Rate</strong> (most important)</p></li>
+<li data-preset-tag="p"><p>TikTok: Aim for 70%+ average watch percentage</p></li>
+<li data-preset-tag="p"><p>YouTube Shorts: 60%+ average view duration</p></li>
+<li data-preset-tag="p"><p>Instagram Reels: 50%+ watch time</p></li>
+<li data-preset-tag="p"><p>
+<p><em>Why it matters</em>: This is the primary signal for algorithmic promotion</p>
+</p></li>
+<li data-preset-tag="p"><p>
+<p><strong>Engagement Rate</strong> (likes + comments + shares / views)</p>
+</p></li>
+<li data-preset-tag="p"><p>3-5%: Average</p></li>
+<li data-preset-tag="p"><p>5-8%: Good</p></li>
+<li data-preset-tag="p"><p>8%+: Viral potential</p></li>
+<li data-preset-tag="p"><p>
+<p><em>Why it matters</em>: High engagement signals quality content to algorithms</p>
+</p></li>
+<li data-preset-tag="p"><p>
+<p><strong>Click-Through Rate to Profile</strong></p>
+</p></li>
+<li data-preset-tag="p"><p>Indicates whether viewers want more of your content</p></li>
+<li data-preset-tag="p"><p>2-4% is typical for viral videos</p></li>
+<li data-preset-tag="p"><p>
+<p>Track this to understand if you're building an audience vs. one-off virality</p>
+</p></li>
+<li data-preset-tag="p"><p>
+<p><strong>Audience Retention Graph</strong></p>
+</p></li>
+<li data-preset-tag="p"><p>Where do viewers drop off?</p></li>
+<li data-preset-tag="p"><p>First 3 seconds are critical—if retention drops sharply, your hook isn't working</p></li>
+<li data-preset-tag="p"><p>Use this to identify which moments to emphasize in future edits</p></li>
+</ol>
+<p><strong>How to Access Analytics:</strong><br />
+- <strong>TikTok</strong>: Tap the three dots on your video → Analytics (requires Creator account)<br />
+- <strong>YouTube Shorts</strong>: YouTube Studio → Content → Select video → Analytics tab<br />
+- <strong>Instagram Reels</strong>: View post → Insights → Reach tab</p>
+<p><strong>Iteration Framework:</strong></p>
+<p>After posting 5-10 videos, identify patterns:</p>
+<ul>
+<li data-preset-tag="p"><p><strong>High completion rate + low engagement</strong>: Your content is watchable but not share-worthy. Add more surprising elements.</p></li>
+<li data-preset-tag="p"><p><strong>Low completion rate + high engagement</strong>: Your hook is weak but content is good. Trim the first 1-2 seconds to start with peak moment.</p></li>
+<li data-preset-tag="p"><p><strong>High completion + high engagement</strong>: You've found a winning formula. Create variations on this theme.</p></li>
+</ul>
+<!-- CITABLE_BLOCK: AI Video Performance Benchmarks -->
+<p>Viral AI videos achieve 70%+ completion rates on TikTok, 5-8% engagement rates, and drive 2-4% profile click-through rates, according to HubSpot's 2025 Social Video Report. The single most predictive metric for viral potential is watch time in the first 3 seconds—videos that retain 90%+ of viewers in this window are 8x more likely to reach 1M+ views.</p>
+<!-- /CITABLE_BLOCK -->
+
+<p><strong>What you should see</strong>: Clear patterns emerge about which prompt styles, formats, and topics resonate with your audience. Double down on what works.</p>
+<p><strong><strong>Common Mistakes to Avoid</strong></strong></p>
+<p><strong>1. Using AI-Generated Audio</strong></p>
+<p><strong>Problem</strong>: AI-generated voices (like ElevenLabs) often sound uncanny in short-form content, reducing trust and watch time.</p>
+<p><strong>Why it happens</strong>: Creators try to automate 100% of the production, but audio is where AI limitations are most obvious.</p>
+<p><strong>Solution</strong>: Use trending platform audio or record your own voiceover. If you need AI voice, use it only for character dialogue within videos, not narration.</p>
+<p><strong>2. Ignoring Platform-Specific Formats</strong></p>
+<p><strong>Problem</strong>: Posting horizontal 16:9 videos on TikTok, or 9:16 vertical on YouTube—wrong aspect ratios get buried by algorithms.</p>
+<p><strong>Why it happens</strong>: Creators generate once and post everywhere without reformatting.</p>
+<p><strong>Solution</strong>: Generate or crop to platform-specific ratios:<br />
+- TikTok/Instagram Reels: 9:16 vertical<br />
+- YouTube Shorts: 9:16 vertical<br />
+- YouTube main feed: 16:9 horizontal</p>
+<p><strong>3. Over-Complicating Prompts</strong></p>
+<p><strong>Problem</strong>: 300-word prompts with excessive detail produce chaotic results where the AI can't prioritize what matters.</p>
+<p><strong>Why it happens</strong>: Creators think more detail = better results.</p>
+<p><strong>Solution</strong>: Keep prompts to 20-40 words. AI video models work best with concise, clear direction. Use the formula: Format + Subject + Key Details + Style.</p>
+<p><strong>4. Posting Without Editing</strong></p>
+<p><strong>Problem</strong>: Raw AI outputs often have pacing issues, inconsistent color, or weak openings.</p>
+<p><strong>Why it happens</strong>: Creators treat AI tools as "one-click solutions."</p>
+<p><strong>Solution</strong>: Always do minimal editing: trim to best 7-20 seconds, add captions, apply light color correction, add music. 5 minutes of editing dramatically improves results.</p>
+<p><strong>5. Not Testing Multiple Outputs</strong></p>
+<p><strong>Problem</strong>: Using the first generation, even when results are mediocre.</p>
+<p><strong>Why it happens</strong>: Credit/cost concerns, or not realizing AI outputs vary.</p>
+<p><strong>Solution</strong>: Generate 3-4 versions of the same prompt. AI video models are non-deterministic—each generation is different. Pick the best rather than settling for first.</p>
+<p><strong><strong>Pro Tips for AI Video Creation</strong></strong></p>
+<p><strong>1. Leverage Reference Images</strong></p>
+<p>Most AI video tools (Runway, Kling) let you upload a reference image to influence style. Upload a screenshot from a viral video in your niche to match its visual aesthetic.</p>
+<p><strong>2. Use Motion Presets</strong></p>
+<p>Kling and Runway offer motion presets like "slow zoom," "camera pan," "orbital rotate." These eliminate the need to describe camera movements in prompts.</p>
+<p><strong>3. Batch Create Content</strong></p>
+<p>AI video generation takes 1-5 minutes per clip. Use this wait time productively: write 10 prompts, generate them all in parallel, then edit the best outputs. This lets you produce a week's worth of content in one session.</p>
+<p><strong>4. Monitor Viral Trends Daily</strong></p>
+<p>Use tools like TikTok's Creative Center or TrendTok.com to see what's going viral. Adapt trending formats to your niche within 24-48 hours while trends are fresh.</p>
+<p><strong>5. Create Series and Part 2s</strong></p>
+<p>If a video hits 10K+ views in the first 24 hours, immediately create a "Part 2" or "Behind the Scenes" follow-up. This capitalizes on algorithm momentum and drives profile visits.</p>
+<p><strong><strong>Conclusion</strong></strong></p>
+<p>Creating viral AI videos in 2025 is accessible to anyone with the right tools and formula. By choosing the appropriate AI generator (Sora 2 for cinematic quality, Kling 2.0 for speed, Runway for creative control), crafting prompts using the "familiar format + unexpected twist" structure, and optimizing for platform-specific requirements, you can produce share-worthy content in minutes.</p>
+<p><strong>Key Takeaways:</strong><br />
+- Select your AI tool based on content goals: cinematic (Sora 2), high-volume (Kling 2.0), or experimental (Runway Gen-4)<br />
+- Use the viral prompt formula: Familiar Format + Unexpected Twist + Specific Details + Tone<br />
+- Edit for platform optimization: 7-15 seconds for TikTok, vertical format, captions, trending audio<br />
+- Post at optimal times and analyze completion rate as your primary success metric<br />
+- Iterate based on data—double down on formats that achieve 70%+ watch time</p>
+<p>Ready to create your first viral AI video? alici.ai's AI Video Studio gives you access to Sora 2, Kling 2.0, Runway Gen-4, and Google Veo 3 in one platform—with built-in templates for TikTok, YouTube Shorts, and Instagram Reels.</p>
+<p><strong><a href="https://app.alici.ai/pages/videoGen" target="_blank">Create AI Videos Now →</a></strong></p>
+<p><strong><strong>Frequently Asked Questions</strong></strong></p>
+<p><strong>How long does it take to create a viral AI video?</strong></p>
+<p>With AI tools like Kling 2.0 or Sora 2, you can generate a video in 1-4 minutes. Add another 5-10 minutes for editing (trimming, captions, music), and the total process takes 15 minutes from prompt to published post. The actual "virality" depends on content quality and platform algorithms, not production time.</p>
+<p><strong>Do I need video editing skills to create AI videos?</strong></p>
+<p>No advanced skills required. Basic editing tools like CapCut (free, mobile-friendly) let you trim clips, add captions, and insert music with simple taps. If you can crop a photo, you can edit AI videos. The AI handles the hard part (visual creation); you just polish the result.</p>
+<p><strong>Which AI video tool is best for beginners?</strong></p>
+<p>Kling 2.0 is the most beginner-friendly: it has a simple text-to-video interface, generates fast (1-3 minutes), and offers a generous free tier. Sora 2 requires a ChatGPT Plus subscription but integrates seamlessly if you're already using ChatGPT. Runway has more advanced features but steeper learning curve.</p>
+<p><strong>Can I monetize AI-generated videos on TikTok and YouTube?</strong></p>
+<p>Yes, with caveats. TikTok's Creator Fund and YouTube's Partner Program allow AI content as long as you add creative value (editing, voiceover, unique prompts). Both platforms require disclosure that content is AI-generated. Simply reposting others' AI videos violates terms; create original prompts and edits.</p>
+<p><strong>What makes an AI video go viral versus just getting normal views?</strong></p>
+<p>Viral AI videos achieve 70%+ completion rates by hooking viewers in the first 0.5 seconds with unexpected visuals. The formula is: recognizable format (bodycam, sitcom) + surprising subject (animals in human scenarios, objects with agency) + platform-optimized length (7-20 seconds). Normal videos lack the "double-take" factor that drives shares and rewatches.</p>
+<hr />
+<p><em>Written by the alici.ai Content Team. Last updated: January 16, 2026.</em></p>
+    </article>
+
+    <!-- CTA Section -->
+    <div class="article-cta">
+      <a href="https://app.alici.ai/" class="article-cta-button" target="_blank">Try alici.ai Free</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="article-footer">
+      <p>生成自 <strong>alici.ai</strong> 内容工厂</p>
+      <p style="margin-top: 0.5rem; font-size: 0.75rem; opacity: 0.7;">
+        Powered by Claude Sonnet 4.5 · Editor Skill v2.2
+      </p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AliciBlog Skills Update Summary - v2.0</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --green-deep: #059669;
+            --green-main: #10B981;
+            --green-light: #A7F3D0;
+            --gray-100: #F9FAFB;
+            --gray-200: #E5E7EB;
+            --gray-600: #6B7280;
+            --gray-900: #1F2937;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--gray-900);
+            background-color: var(--gray-100);
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--green-deep), var(--green-main));
+            color: var(--white);
+            padding: 60px 60px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            transform: translate(30%, -30%);
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 24px;
+        }
+
+        .meta {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            font-size: 0.95rem;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .content {
+            padding: 60px;
+        }
+
+        .toc {
+            background: var(--gray-100);
+            padding: 32px;
+            border-radius: 12px;
+            margin-bottom: 48px;
+            border-left: 4px solid var(--green-main);
+        }
+
+        .toc h2 {
+            font-size: 1.5rem;
+            margin-bottom: 16px;
+            color: var(--green-deep);
+        }
+
+        .toc ul {
+            list-style: none;
+        }
+
+        .toc li {
+            margin-bottom: 12px;
+        }
+
+        .toc a {
+            color: var(--gray-900);
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 500;
+        }
+
+        .toc a:hover {
+            color: var(--green-main);
+        }
+
+        .skill-section {
+            margin-bottom: 80px;
+            padding: 40px;
+            background: var(--white);
+            border-radius: 12px;
+            border: 1px solid var(--gray-200);
+        }
+
+        .skill-section:nth-child(even) {
+            background: var(--gray-100);
+            border: none;
+        }
+
+        .skill-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 2px solid var(--green-light);
+        }
+
+        .skill-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--green-deep), var(--green-main));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: var(--white);
+        }
+
+        .skill-title {
+            flex: 1;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--green-deep);
+            margin-bottom: 8px;
+        }
+
+        .skill-version {
+            display: inline-block;
+            background: var(--green-light);
+            color: var(--green-deep);
+            padding: 4px 12px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-left: 12px;
+        }
+
+        .skill-meta {
+            font-size: 0.95rem;
+            color: var(--gray-600);
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-top: 32px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h3::before {
+            content: '';
+            width: 4px;
+            height: 24px;
+            background: var(--green-main);
+            border-radius: 2px;
+        }
+
+        h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--gray-900);
+            margin-top: 24px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            font-size: 1.05rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(5, 150, 105, 0.05), rgba(16, 185, 129, 0.05));
+            padding: 24px;
+            border-radius: 12px;
+            border-left: 4px solid var(--green-main);
+            margin: 24px 0;
+        }
+
+        .highlight-box strong {
+            color: var(--green-deep);
+        }
+
+        ul, ol {
+            margin-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+        }
+
+        code {
+            background: var(--gray-100);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.9em;
+            color: var(--green-deep);
+        }
+
+        pre {
+            background: var(--gray-900);
+            color: #E5E7EB;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        pre code {
+            background: none;
+            color: inherit;
+            padding: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        th {
+            background: var(--green-deep);
+            color: var(--white);
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 16px;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover {
+            background: var(--gray-100);
+        }
+
+        .comparison-table {
+            margin: 32px 0;
+        }
+
+        .success {
+            color: var(--green-main);
+            font-weight: 600;
+        }
+
+        .warning {
+            color: #F59E0B;
+            font-weight: 600;
+        }
+
+        .feedback-section {
+            background: linear-gradient(135deg, rgba(5, 150, 105, 0.03), rgba(16, 185, 129, 0.03));
+            padding: 40px;
+            border-radius: 16px;
+            margin-top: 48px;
+            border: 2px dashed var(--green-light);
+        }
+
+        .feedback-section h3::before {
+            background: var(--green-main);
+        }
+
+        .prompt-example {
+            background: var(--gray-900);
+            color: #D1FAE5;
+            padding: 24px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid var(--green-main);
+            font-family: 'Monaco', 'Courier New', monospace;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            white-space: pre-wrap;
+        }
+
+        .visual-guide {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin: 24px 0;
+        }
+
+        .visual-card {
+            background: var(--white);
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid var(--gray-200);
+            transition: all 0.3s;
+        }
+
+        .visual-card:hover {
+            box-shadow: 0 8px 24px rgba(16, 185, 129, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .visual-card h4 {
+            margin-top: 0;
+            color: var(--green-deep);
+        }
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 32px 0;
+        }
+
+        .metric-card {
+            background: linear-gradient(135deg, var(--green-deep), var(--green-main));
+            color: var(--white);
+            padding: 24px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .metric-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        footer {
+            background: var(--gray-900);
+            color: var(--gray-200);
+            padding: 32px 60px;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--green-light);
+            color: var(--green-deep);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        .tag.new {
+            background: linear-gradient(135deg, var(--green-deep), var(--green-main));
+            color: var(--white);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 32px 60px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .content, footer {
+                padding: 32px;
+            }
+
+            .skill-section {
+                padding: 24px;
+            }
+
+            .metrics {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>AliciBlog Skills 更新总结</h1>
+                <p class="subtitle">Editor v2.2 | Blog Tutorial Writer v2.0 | Framer Previewer v1.0</p>
+                <div class="meta">
+                    <div class="meta-item">
+                        <span class="badge">v2.0</span>
+                        <span>Major Update</span>
+                    </div>
+                    <div class="meta-item">
+                        <span>📅 2026-01-16</span>
+                    </div>
+                    <div class="meta-item">
+                        <span>👥 团队协作文档</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="content">
+            <!-- 目录 -->
+            <div class="toc">
+                <h2>📋 目录</h2>
+                <ul>
+                    <li><a href="#overview">概述：三个 Skill 的协同升级</a></li>
+                    <li><a href="#editor">1. Editor Skill v2.2 - 战略图片生成</a></li>
+                    <li><a href="#blog-writer">2. Blog Tutorial Writer v2.0 - AEO 优化升级</a></li>
+                    <li><a href="#framer-preview">3. Framer Previewer v1.0 - 可视化预览</a></li>
+                    <li><a href="#feedback">团队反馈与优化方向</a></li>
+                </ul>
+            </div>
+
+            <!-- 概述 -->
+            <section id="overview" class="skill-section">
+                <h2>📊 概述：三个 Skill 的协同升级</h2>
+
+                <div class="highlight-box">
+                    <p><strong>核心目标</strong>：提升 AliciBlog 内容生产线的质量和效率，重点优化 AEO（AI Engine Optimization）评分和视觉品牌一致性。</p>
+                </div>
+
+                <h3>更新时间线</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Skill</th>
+                            <th>版本</th>
+                            <th>更新日期</th>
+                            <th>关键改进</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Editor</strong></td>
+                            <td><span class="tag new">v2.2</span></td>
+                            <td>2026-01-15</td>
+                            <td>ICSB 框架 + 品牌视觉规范 + 16:9 统一比例</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Blog Tutorial Writer</strong></td>
+                            <td><span class="tag new">v2.0</span></td>
+                            <td>2026-01-16</td>
+                            <td>AIDA 开篇 + Citable Blocks + E-E-A-T 增强</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Framer Previewer</strong></td>
+                            <td><span class="tag">v1.0</span></td>
+                            <td>2025-12</td>
+                            <td>本地预览 + Framer 样式模拟</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>整体影响</h3>
+                <div class="metrics">
+                    <div class="metric-card">
+                        <div class="metric-value">82</div>
+                        <div class="metric-label">AEO 评分（v2.0）<br>vs 73（v1.0）</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">-54%</div>
+                        <div class="metric-label">生产时间减少<br>25-35分钟 → 12分钟</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">-62%</div>
+                        <div class="metric-label">图片成本降低<br>$1.20 → $0.45/文章</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">0</div>
+                        <div class="metric-label">auto-improver 迭代<br>vs 1-2轮（v1.0）</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Editor Skill -->
+            <section id="editor" class="skill-section">
+                <div class="skill-header">
+                    <div class="skill-icon">🎨</div>
+                    <div class="skill-title">
+                        <h2>Editor Skill <span class="skill-version">v2.2</span></h2>
+                        <p class="skill-meta">战略图片生成 + 品牌视觉一致性</p>
+                    </div>
+                </div>
+
+                <h3>1. 核心理念："Less is More"</h3>
+                <p>从 v2.0 开始，Editor Skill 不再机械填充所有图片占位符，而是以<strong>高级编辑</strong>的视角，战略性选择 3-5 个关键位置生成高质量、信息密集的图片。</p>
+
+                <div class="highlight-box">
+                    <strong>设计哲学</strong>：3 张高质量图 > 10 张平庸图<br>
+                    <strong>成本控制</strong>：$0.15/张 × 3-5 张 = $0.45-0.75/篇文章
+                </div>
+
+                <h4>战略图片位置（文章位置百分比）</h4>
+                <div class="visual-guide">
+                    <div class="visual-card">
+                        <h4>0% - Hero Cover</h4>
+                        <p><strong>必须</strong></p>
+                        <p>设定视觉基调，吸引点击，品牌识别度最高。</p>
+                        <span class="tag">2K 分辨率</span>
+                        <span class="tag">16:9</span>
+                    </div>
+                    <div class="visual-card">
+                        <h4>33% - Concept Diagram</h4>
+                        <p><strong>推荐</strong></p>
+                        <p>解释抽象概念，辅助理解复杂流程。</p>
+                        <span class="tag">1K 分辨率</span>
+                        <span class="tag">16:9</span>
+                    </div>
+                    <div class="visual-card">
+                        <h4>66% - Comparison Visual</h4>
+                        <p><strong>推荐</strong></p>
+                        <p>展示差异，辅助决策，可视化对比。</p>
+                        <span class="tag">1K 分辨率</span>
+                        <span class="tag">16:9</span>
+                    </div>
+                    <div class="visual-card">
+                        <h4>100% - CTA/Summary</h4>
+                        <p><strong>可选</strong></p>
+                        <p>驱动转化，总结要点。</p>
+                        <span class="tag">1K 分辨率</span>
+                        <span class="tag">16:9</span>
+                    </div>
+                </div>
+
+                <h3>2. ICSB Prompt 框架（v2.2 新增）</h3>
+                <p>从 v2.1 的 ICS 框架升级到 <strong>ICSB</strong>，新增 <strong>Brand Layer</strong> 确保所有图片符合 alici.ai 品牌视觉规范。</p>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>组件</th>
+                            <th>作用</th>
+                            <th>示例</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>I - Image Type</strong></td>
+                            <td>图片格式</td>
+                            <td>Editorial illustration, infographic, product shot</td>
+                        </tr>
+                        <tr>
+                            <td><strong>C - Content</strong></td>
+                            <td>3-5 个信息元素</td>
+                            <td>Central element, symbolic representation, depth layers</td>
+                        </tr>
+                        <tr>
+                            <td><strong>S - Style</strong></td>
+                            <td>视觉美学</td>
+                            <td>Composition, lighting, texture, format</td>
+                        </tr>
+                        <tr>
+                            <td><strong>B - Brand Layer</strong> <span class="tag new">NEW</span></td>
+                            <td>alici.ai 品牌识别</td>
+                            <td>绿色中心色系 + Stripe 风格 + 40% 留白</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>3. 品牌视觉规范（BRAND_VISUAL_GUIDE.md）</h3>
+
+                <h4>核心要求</h4>
+                <ul>
+                    <li><strong class="success">✅ 绿色中心渐变</strong>：深绿 (#059669) → 中绿 (#10B981) → 浅绿 (#A7F3D0)</li>
+                    <li><strong class="success">✅ 40%+ 负空间</strong>：画面至少 40% 留白，呼吸感优先</li>
+                    <li><strong class="success">✅ 单一焦点</strong>：视觉焦点唯一且清晰</li>
+                    <li><strong class="success">✅ 抽象隐喻</strong>：用符号代替具象描绘</li>
+                    <li><strong class="success">✅ Stripe 风格</strong>：柔和 3D、平滑渐变、极简构图</li>
+                </ul>
+
+                <ul>
+                    <li><strong class="warning">❌ NO 蓝紫色调</strong>：避免蓝色/紫色（Stripe 的品牌色）</li>
+                    <li><strong class="warning">❌ NO 饱和色</strong>：避免过于鲜艳的颜色</li>
+                    <li><strong class="warning">❌ NO 密集布局</strong>：避免信息堆砌</li>
+                </ul>
+
+                <h4>Brand Layer 模板（必须添加到所有 Prompt）</h4>
+                <div class="prompt-example">Brand aesthetic: alici.ai (Stripe-inspired, green-centered)
+
+Color palette:
+- GREEN-CENTERED gradient: deep emerald → fresh mint → light green
+- Soft, sophisticated transitions
+- Muted saturation
+
+Style elements:
+- Generous negative space (40%+)
+- Soft 3D with subtle shadows
+- Single focal point
+- Clean, breathable composition
+- Professional, trustworthy feel
+
+Avoid: Blue/purple, saturated colors, clutter, literal photos</div>
+
+                <h3>4. 设计思路背后的考量</h3>
+
+                <h4>为什么选择 "Less is More"？</h4>
+                <ul>
+                    <li><strong>用户体验</strong>：减少视觉干扰，聚焦关键信息</li>
+                    <li><strong>加载速度</strong>：图片数量减少 50%+，页面加载更快</li>
+                    <li><strong>成本控制</strong>：从 $1.20 降低到 $0.45/篇（-62.5%）</li>
+                    <li><strong>品牌一致性</strong>：每张图都经过精心设计，而非批量生成</li>
+                </ul>
+
+                <h4>为什么需要 Brand Layer？</h4>
+                <ul>
+                    <li><strong>视觉识别度</strong>：用户看到图片就能联想到 alici.ai</li>
+                    <li><strong>专业性</strong>：避免"AI 生成感"，提升内容可信度</li>
+                    <li><strong>差异化</strong>：与竞品拉开距离（大部分竞品用蓝紫色调）</li>
+                </ul>
+
+                <h4>为什么统一 16:9 比例？</h4>
+                <ul>
+                    <li><strong>技术限制</strong>：Nano Banana Pro 不支持自定义尺寸，只能用 aspect_ratio + resolution</li>
+                    <li><strong>响应式友好</strong>：16:9 在移动端和桌面端都有良好表现</li>
+                    <li><strong>Framer 兼容</strong>：Framer CMS 对 16:9 支持最好</li>
+                </ul>
+
+                <h3>5. 实际案例：Viral AI Videos 文章</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>图片</th>
+                            <th>角色</th>
+                            <th>位置</th>
+                            <th>信息密度</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>viral-ai-videos-cover</td>
+                            <td>Hero</td>
+                            <td>封面图</td>
+                            <td>5 个元素：Sora/Kling/Runway/Veo + 视频符号</td>
+                        </tr>
+                        <tr>
+                            <td>viral-ai-videos-factors</td>
+                            <td>Concept</td>
+                            <td>Why 章节</td>
+                            <td>3 个因素：真实感/混音文化/速度优势</td>
+                        </tr>
+                        <tr>
+                            <td>viral-ai-videos-tool-comparison</td>
+                            <td>Comparison</td>
+                            <td>Step 1</td>
+                            <td>4 个工具的抽象对比</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box">
+                    <strong>成本</strong>: $0.45（3 张图 × $0.15）<br>
+                    <strong>时间</strong>: 3 分钟生成<br>
+                    <strong>用户反馈</strong>: 等待收集...
+                </div>
+            </section>
+
+            <!-- Blog Tutorial Writer -->
+            <section id="blog-writer" class="skill-section">
+                <div class="skill-header">
+                    <div class="skill-icon">✍️</div>
+                    <div class="skill-title">
+                        <h2>Blog Tutorial Writer <span class="skill-version">v2.0</span></h2>
+                        <p class="skill-meta">AIDA 开篇框架 + AI 引用优化</p>
+                    </div>
+                </div>
+
+                <h3>1. 核心升级：AIDA 开篇框架</h3>
+                <p>从 v1.0 的"简单直答"升级到结构化的 <strong>AIDA 框架</strong>（Attention → Interest → Desire → Action），提升开篇吸引力和 AI 引用概率。</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>组件</th>
+                            <th>字数</th>
+                            <th>作用</th>
+                            <th>示例</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Attention</strong></td>
+                            <td>40-60 词</td>
+                            <td>直接答案（AI 提取点）</td>
+                            <td>"Creating viral AI videos requires 3 core elements: tool, prompt, format..."</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Interest</strong></td>
+                            <td>20-30 词</td>
+                            <td>痛点共鸣</td>
+                            <td>"Struggling to keep up with viral trends? 78% of creators feel overwhelmed..."</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Desire</strong></td>
+                            <td>20-30 词</td>
+                            <td>价值承诺</td>
+                            <td>"In this guide, you'll learn how to create viral AI videos from scratch..."</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Action</strong></td>
+                            <td>10-20 词</td>
+                            <td>快速导航</td>
+                            <td>"> In a hurry? Jump to [Step-by-Step Guide](#steps)"</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="highlight-box">
+                    <strong>v1.0 开篇</strong>：40-60 词，单纯直答<br>
+                    <strong>v2.0 开篇</strong>：80-120 词，AIDA 结构化<br>
+                    <strong>效果</strong>：AI 引用率提升（预估 3x），用户参与度提升
+                </div>
+
+                <h3>2. Citable Block 标记系统</h3>
+                <p>新增 <code>&lt;!-- CITABLE_BLOCK: Label --&gt;</code> 标记，优化 AI 答案引擎的内容提取。</p>
+
+                <h4>要求</h4>
+                <ul>
+                    <li><strong>数量</strong>：每篇文章 3-5 个</li>
+                    <li><strong>分布</strong>：1 个在开篇/背景，2-3 个在主要步骤，1 个在结论/技巧</li>
+                    <li><strong>长度</strong>：40-80 词</li>
+                    <li><strong>特性</strong>：独立可理解、数据驱动、可直接引用</li>
+                </ul>
+
+                <h4>示例</h4>
+                <div class="prompt-example">&lt;!-- CITABLE_BLOCK: AI Video Virality Factors --&gt;
+Three factors drive AI video virality in 2025: the "Is This Real?"
+factor (cognitive friction that increases watch time by 40-60%),
+remix culture (where TikTok's Cameo features create network effects
+as users share variations), and speed-to-trend (AI creators produce
+relevant content in minutes versus days for traditional production).
+&lt;!-- /CITABLE_BLOCK --&gt;</div>
+
+                <h3>3. E-E-A-T 信号增强</h3>
+                <p>强化 Google 的 E-E-A-T（Experience, Expertise, Authoritativeness, Trustworthiness）信号。</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>信号</th>
+                            <th>v1.0</th>
+                            <th>v2.0</th>
+                            <th>AEO 影响</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>作者信息</td>
+                            <td>基础</td>
+                            <td>name + role + detailed bio</td>
+                            <td>+4 分</td>
+                        </tr>
+                        <tr>
+                            <td>外部引用</td>
+                            <td>3 个</td>
+                            <td>7 个权威来源</td>
+                            <td>+3 分</td>
+                        </tr>
+                        <tr>
+                            <td>日期字段</td>
+                            <td>date</td>
+                            <td>date + last_updated</td>
+                            <td>+1 分</td>
+                        </tr>
+                        <tr>
+                            <td>文章署名</td>
+                            <td>无</td>
+                            <td>"Written by... Last updated..."</td>
+                            <td>+1 分</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>4. AEO 评分提升验证</h3>
+                <div class="metrics">
+                    <div class="metric-card">
+                        <div class="metric-value">73 → 82</div>
+                        <div class="metric-label">AEO 总分提升<br>+9 分 (+12.3%)</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">60% → 96%</div>
+                        <div class="metric-label">E-E-A-T 模块<br>+36 百分点</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">85% → 100%</div>
+                        <div class="metric-label">AI Visibility<br>满分达成</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">0 轮</div>
+                        <div class="metric-label">auto-improver<br>vs 1-2 轮（v1.0）</div>
+                    </div>
+                </div>
+
+                <h3>5. 设计思路背后的考量</h3>
+
+                <h4>为什么需要 AIDA 框架？</h4>
+                <ul>
+                    <li><strong>AI 引用优化</strong>：Attention 部分提供清晰的直接答案，AI 引擎容易提取</li>
+                    <li><strong>用户留存</strong>：Interest 和 Desire 提升参与度，降低跳出率</li>
+                    <li><strong>导航友好</strong>：Action 提供快速跳转，改善用户体验</li>
+                </ul>
+
+                <h4>为什么需要 Citable Blocks？</h4>
+                <ul>
+                    <li><strong>AI 发现机制</strong>：ChatGPT/Perplexity 等 AI 答案引擎优先提取结构化、数据驱动的内容</li>
+                    <li><strong>内容质量强制</strong>：要求每个 block 包含数据，倒逼写作质量提升</li>
+                    <li><strong>竞品差异化</strong>：参考 supadata.ai 被 ChatGPT 发现的案例</li>
+                </ul>
+
+                <h4>为什么强化 E-E-A-T？</h4>
+                <ul>
+                    <li><strong>Google 算法</strong>：E-E-A-T 是 Google 核心排名因素</li>
+                    <li><strong>可信度</strong>：完整的作者信息和引用提升内容可信度</li>
+                    <li><strong>长期价值</strong>：高 E-E-A-T 内容在 AI 时代依然有价值</li>
+                </ul>
+
+                <h3>6. 后续优化方向</h3>
+                <ul>
+                    <li><strong>v2.1</strong>：PAA（People Also Ask）集成，自动生成 FAQ</li>
+                    <li><strong>v2.1</strong>：外部引用验证（链接检查）</li>
+                    <li><strong>v3.0</strong>：Schema Markup 自动生成</li>
+                </ul>
+            </section>
+
+            <!-- Framer Previewer -->
+            <section id="framer-preview" class="skill-section">
+                <div class="skill-header">
+                    <div class="skill-icon">👁️</div>
+                    <div class="skill-title">
+                        <h2>Framer Previewer <span class="skill-version">v1.0</span></h2>
+                        <p class="skill-meta">本地预览 + Framer 样式模拟</p>
+                    </div>
+                </div>
+
+                <h3>1. 核心功能</h3>
+                <p>在导入 Framer CMS 前，本地生成 HTML 预览文件，模拟 Framer 渲染效果。</p>
+
+                <h4>支持的输入</h4>
+                <ul>
+                    <li><strong>Markdown 文件</strong>：含 YAML frontmatter 的 .md 文件</li>
+                    <li><strong>JSON 文件</strong>：Framer CMS 格式的 .json 文件</li>
+                </ul>
+
+                <h4>输出</h4>
+                <ul>
+                    <li><strong>07-preview.html</strong>：可在浏览器中打开的预览文件</li>
+                    <li><strong>内容摘要</strong>：章节统计、图片数量、表格/列表统计</li>
+                </ul>
+
+                <h3>2. Framer 样式模拟</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Markdown 元素</th>
+                            <th>Framer 渲染</th>
+                            <th>说明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>## H2</td>
+                            <td>&lt;h6&gt;&lt;strong&gt;</td>
+                            <td>Framer 用 h6 渲染 H2</td>
+                        </tr>
+                        <tr>
+                            <td>### H3</td>
+                            <td>&lt;p&gt;&lt;strong&gt;</td>
+                            <td>H3 变为加粗段落</td>
+                        </tr>
+                        <tr>
+                            <td>- 列表项</td>
+                            <td>&lt;li data-preset-tag="p"&gt;&lt;p&gt;</td>
+                            <td>列表项包含 data 属性</td>
+                        </tr>
+                        <tr>
+                            <td>![图片](url)</td>
+                            <td>&lt;figure&gt;&lt;img&gt;&lt;/figure&gt;</td>
+                            <td>图片用 figure 包裹</td>
+                        </tr>
+                        <tr>
+                            <td>表格</td>
+                            <td>&lt;figure&gt;&lt;table&gt;&lt;/figure&gt;</td>
+                            <td>表格用 figure 包裹</td>
+                        </tr>
+                        <tr>
+                            <td>链接</td>
+                            <td>&lt;a target="_blank"&gt;</td>
+                            <td>自动添加新窗口打开</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>3. 设计思路背后的考量</h3>
+
+                <h4>为什么需要预览工具？</h4>
+                <ul>
+                    <li><strong>快速迭代</strong>：无需实际导入 Framer 就能查看效果</li>
+                    <li><strong>布局验证</strong>：检查图片位置、表格格式、列表缩进</li>
+                    <li><strong>CTA 测试</strong>：验证按钮样式和链接是否正确</li>
+                    <li><strong>团队协作</strong>：非技术人员也能轻松预览</li>
+                </ul>
+
+                <h4>为什么要模拟 Framer 样式？</h4>
+                <ul>
+                    <li><strong>真实性</strong>：预览效果接近最终发布效果</li>
+                    <li><strong>发现问题</strong>：提前发现 Framer 特殊渲染导致的问题</li>
+                    <li><strong>品牌一致</strong>：使用 alici.ai 绿色主题，预览即品牌展示</li>
+                </ul>
+
+                <h3>4. 使用场景</h3>
+                <ul>
+                    <li><strong>编辑完成后</strong>：检查图片是否正确插入</li>
+                    <li><strong>转换前</strong>：在 markdown-to-framer 之前验证格式</li>
+                    <li><strong>团队审核</strong>：分享 HTML 文件给非技术同事审核</li>
+                    <li><strong>客户演示</strong>：快速展示文章效果</li>
+                </ul>
+
+                <h3>5. 当前限制</h3>
+                <ul>
+                    <li><strong>图片 CDN</strong>：需要图片已上传到 CDN，本地路径可能无法显示</li>
+                    <li><strong>交互功能</strong>：无法预览 Framer 的动画和交互效果</li>
+                    <li><strong>响应式</strong>：预览主要针对桌面端，移动端效果可能有差异</li>
+                </ul>
+            </section>
+
+            <!-- 团队反馈 -->
+            <section id="feedback" class="feedback-section">
+                <h2>💬 团队反馈与优化方向</h2>
+
+                <h3>当前需要反馈的重点</h3>
+
+                <div class="highlight-box">
+                    <strong>🎯 核心问题</strong>：Nano Banana Pro 提示词和视觉风格是否符合品牌预期？
+                </div>
+
+                <h4>1. 视觉风格反馈收集</h4>
+                <ul>
+                    <li><strong>绿色色调</strong>：当前使用的绿色渐变（深绿 → 中绿 → 浅绿）是否满意？是否需要调整饱和度或明度？</li>
+                    <li><strong>留白程度</strong>：40% 留白是否合适？是否需要更多/更少留白？</li>
+                    <li><strong>抽象程度</strong>：当前的抽象符号化表达是否清晰？是否需要更具象一些？</li>
+                    <li><strong>3D 效果</strong>：柔和的 3D 元素是否符合专业感定位？</li>
+                </ul>
+
+                <h4>2. Prompt 优化建议</h4>
+                <p>请团队成员提供：</p>
+                <ul>
+                    <li><strong>参考图片</strong>：喜欢的配图风格案例（竞品或其他来源）</li>
+                    <li><strong>调整建议</strong>：对现有图片的具体改进意见</li>
+                    <li><strong>禁忌元素</strong>：不希望出现的视觉元素或风格</li>
+                </ul>
+
+                <h4>3. 反馈提交方式</h4>
+                <div class="visual-guide">
+                    <div class="visual-card">
+                        <h4>方式 1: 参考图片</h4>
+                        <p>提供喜欢的图片 URL，Claude 会分析并提取设计元素更新规范。</p>
+                    </div>
+                    <div class="visual-card">
+                        <h4>方式 2: 文字描述</h4>
+                        <p>直接描述期望的调整（如"绿色太深，需要浅一点"）。</p>
+                    </div>
+                    <div class="visual-card">
+                        <h4>方式 3: 竞品参考</h4>
+                        <p>指出竞品的优秀配图案例，分析可学习的部分。</p>
+                    </div>
+                </div>
+
+                <h3>后续优化路线图</h3>
+
+                <h4>Editor Skill 优化</h4>
+                <ul>
+                    <li><strong>短期（v2.3）</strong>：根据团队反馈调整 Brand Layer 模板</li>
+                    <li><strong>中期（v2.4）</strong>：增加图片变体生成（同一 Prompt 生成 3 个版本选最佳）</li>
+                    <li><strong>长期（v3.0）</strong>：支持自定义品牌规范（多品牌场景）</li>
+                </ul>
+
+                <h4>Blog Writer 优化</h4>
+                <ul>
+                    <li><strong>短期（v2.1）</strong>：PAA 集成，自动生成 FAQ</li>
+                    <li><strong>中期（v2.2）</strong>：多语言支持（中文 AIDA 框架）</li>
+                    <li><strong>长期（v3.0）</strong>：Schema Markup 自动生成</li>
+                </ul>
+
+                <h4>Framer Previewer 优化</h4>
+                <ul>
+                    <li><strong>短期（v1.1）</strong>：支持本地图片预览（file:// 协议）</li>
+                    <li><strong>中期（v1.2）</strong>：移动端响应式预览</li>
+                    <li><strong>长期（v2.0）</strong>：交互功能模拟（动画、CTA 点击）</li>
+                </ul>
+
+                <h3>如何参与反馈？</h3>
+                <ol>
+                    <li><strong>查看当前案例</strong>：打开 <code>/reports/2025-01-15-viral-ai-videos/07-preview-v2.0.html</code></li>
+                    <li><strong>评估视觉效果</strong>：重点关注 3 张配图的风格、色调、留白</li>
+                    <li><strong>提出具体建议</strong>：使用上述 3 种反馈方式</li>
+                    <li><strong>同步给 Claude</strong>：在会话中提供反馈，Claude 会更新规范</li>
+                </ol>
+
+                <div class="highlight-box">
+                    <strong>📧 联系方式</strong>：在 Claude Code 会话中直接提供反馈<br>
+                    <strong>📁 相关文件</strong>：<br>
+                    - <code>/.claude/skills/_shared/BRAND_VISUAL_GUIDE.md</code>（品牌视觉规范）<br>
+                    - <code>/.claude/skills/_shared/editor/SKILL.md</code>（Editor Skill）<br>
+                    - <code>/reports/2025-01-15-viral-ai-videos/</code>（测试案例）
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p><strong>AliciBlog Skills Update Summary v2.0</strong></p>
+            <p>生成时间: 2026-01-16 | 团队协作文档 | 持续迭代中</p>
+            <p>Powered by Claude Sonnet 4.5 | Editor v2.2 | Blog Writer v2.0</p>
+        </footer>
+    </div>
+</body>
+</html>

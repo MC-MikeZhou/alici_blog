@@ -1,0 +1,189 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://alici.ai/schemas/mission-config-v2.2.json",
+  "title": "Mission Config",
+  "description": "Mission Architecture configuration for Growth Topic Scout v2.2 Seed Mode",
+  "type": "object",
+  "required": ["seed", "anchors", "scope", "growth"],
+  "properties": {
+    "seed": {
+      "type": "string",
+      "description": "The seed keyword to expand from",
+      "minLength": 2,
+      "maxLength": 100,
+      "examples": ["ai video tools 2026", "best sora alternatives"]
+    },
+    "anchors": {
+      "type": "object",
+      "description": "Competitor anchoring configuration",
+      "required": ["competitors"],
+      "properties": {
+        "competitors": {
+          "type": "array",
+          "description": "List of competitor blog URLs (3 recommended)",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          },
+          "minItems": 1,
+          "maxItems": 5,
+          "default": [
+            "https://invideo.io/blog",
+            "https://higgsfield.ai/blog",
+            "https://freepik.com/blog"
+          ]
+        },
+        "competitor_strategy": {
+          "type": "object",
+          "description": "Discovered competitor strategies (populated in Phase 0.5)",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "article_count": { "type": "integer" },
+              "primary_type": { "type": "string" },
+              "core_strategy": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "scope": {
+      "type": "object",
+      "description": "Scope constraints for the mission",
+      "required": ["language", "geo"],
+      "properties": {
+        "language": {
+          "type": "string",
+          "description": "Target language",
+          "enum": ["en", "zh", "es", "fr", "de", "ja", "ko"],
+          "default": "en"
+        },
+        "geo": {
+          "type": "string",
+          "description": "Target geography (ISO 3166-1 alpha-2)",
+          "pattern": "^[A-Z]{2}$",
+          "default": "US"
+        },
+        "audience": {
+          "type": "string",
+          "description": "Target audience segment",
+          "enum": [
+            "content_creators",
+            "marketers",
+            "developers",
+            "enterprise",
+            "general"
+          ],
+          "default": "content_creators"
+        },
+        "forbidden_zones": {
+          "type": "array",
+          "description": "Content categories to avoid",
+          "items": {
+            "type": "string",
+            "enum": ["gambling", "adult", "politics", "medical", "financial_advice"]
+          },
+          "default": ["gambling", "adult"]
+        },
+        "validation_depth": {
+          "type": "string",
+          "description": "Depth of data validation (affects cost)",
+          "enum": ["quick", "standard", "deep"],
+          "default": "standard"
+        }
+      }
+    },
+    "growth": {
+      "type": "object",
+      "description": "Growth and business alignment configuration",
+      "required": ["goal"],
+      "properties": {
+        "goal": {
+          "type": "string",
+          "description": "Primary content goal",
+          "enum": [
+            "traffic_only",
+            "authority_building",
+            "traffic_and_conversion"
+          ],
+          "default": "traffic_and_conversion"
+        },
+        "product_relevance": {
+          "type": "string",
+          "description": "Primary alici.ai product to promote",
+          "enum": [
+            "video_studio",
+            "image_studio",
+            "viral_cloner",
+            "thumbnail_pro",
+            "script_to_video",
+            "image_to_video",
+            "upscaler",
+            "swap_face",
+            "resizer",
+            "smart_editor",
+            "video_prompt",
+            "image_prompt",
+            "any"
+          ],
+          "default": "video_studio"
+        },
+        "conversion_priority": {
+          "type": "string",
+          "description": "How aggressively to pursue conversion",
+          "enum": ["subtle", "balanced", "aggressive"],
+          "default": "balanced"
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Mission metadata",
+      "properties": {
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "created_by": {
+          "type": "string"
+        },
+        "session_id": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string",
+          "const": "2.2"
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "seed": "ai video tools 2026",
+      "anchors": {
+        "competitors": [
+          "https://invideo.io/blog",
+          "https://higgsfield.ai/blog",
+          "https://freepik.com/blog"
+        ],
+        "competitor_strategy": {}
+      },
+      "scope": {
+        "language": "en",
+        "geo": "US",
+        "audience": "content_creators",
+        "forbidden_zones": ["gambling", "adult"],
+        "validation_depth": "standard"
+      },
+      "growth": {
+        "goal": "traffic_and_conversion",
+        "product_relevance": "video_studio",
+        "conversion_priority": "balanced"
+      },
+      "metadata": {
+        "created_at": "2026-01-25T10:00:00Z",
+        "version": "2.2"
+      }
+    }
+  ]
+}

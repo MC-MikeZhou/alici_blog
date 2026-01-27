@@ -1,0 +1,89 @@
+{
+  "analysis_date": "2026-01-15",
+  "schema_version": "1.1",
+  "data_source": "websearch",
+  "competitor_urls": [
+    "https://www.argil.ai/blog/7-best-ai-video-generators-for-content-creators-in-2025-free-paid",
+    "https://www.synthesia.io/post/how-to-make-ai-videos"
+  ],
+  "selected_topic": {
+    "rank": 1,
+    "primary_keyword": "how to make ai videos",
+    "search_intent": "how-to",
+    "recommended_titles": [
+      "How to Make AI Videos in 5 Minutes: A Complete Beginner's Guide",
+      "AI Video Creation: Step-by-Step Tutorial for 2025",
+      "How to Create AI Videos: The Ultimate Guide for Beginners"
+    ],
+    "content_type": "tutorial",
+    "outline": {
+      "h2_sections": [
+        "What Are AI Videos?",
+        "How AI Video Generation Works",
+        "Step-by-Step: How to Make Your First AI Video",
+        "Best AI Video Tools for Beginners",
+        "Tips for Better AI Video Prompts",
+        "Common Mistakes to Avoid",
+        "FAQ"
+      ],
+      "key_questions": [
+        "How do I make an AI video?",
+        "What is the best AI video generator for beginners?",
+        "How long does it take to generate an AI video?",
+        "Are AI videos free to create?",
+        "Can I use AI videos for commercial purposes?"
+      ]
+    },
+    "aeo_block": {
+      "target_question": "How do I make an AI video?",
+      "direct_answer_draft": "To make an AI video, choose a platform like Runway, Kling, or alici.ai Video Studio, enter a text prompt describing your scene, select style preferences, and click generate. Most tools produce 5-10 second clips in under a minute. For longer videos, generate multiple clips and edit them together."
+    },
+    "seo_metrics": {
+      "source": "estimated",
+      "search_volume": 12000,
+      "search_volume_trend": "rising",
+      "competition_level": "medium"
+    },
+    "serp_features": {
+      "ai_overview": true,
+      "featured_snippet": true,
+      "people_also_ask": true,
+      "paa_questions": [
+        "How to create AI videos for free?",
+        "What is the best AI to make videos?",
+        "Can I use AI to make YouTube videos?",
+        "How do AI video generators work?"
+      ]
+    },
+    "evidence": {
+      "competitor_coverage": "partial",
+      "top_3_competitors": ["synthesia.io", "invideo.io", "runway.ml"],
+      "content_gap_score": 75
+    },
+    "alici_angle": "Emphasize multi-model access (Runway, Kling, Pika in one platform) and beginner-friendly interface",
+    "product_mapping": {
+      "primary_product": {
+        "id": "video_studio",
+        "name": "AI Video Studio",
+        "url": "https://app.alici.ai/pages/videoGen",
+        "cta_text": "Create AI Videos Now",
+        "features": ["Kling 2.0", "Runway Gen-4", "Veo 3", "Pika 2.1"]
+      },
+      "secondary_products": [
+        {
+          "id": "video_prompt",
+          "name": "Video Prompt Assistant",
+          "url": "https://app.alici.ai/chat?agent_id=alici_video_prompt",
+          "use_case": "Get help writing better video prompts"
+        }
+      ]
+    },
+    "opportunity_score": {
+      "total": 89,
+      "demand_signal": 28,
+      "aeo_potential": 23,
+      "competition_gap": 20,
+      "business_fit": 18
+    }
+  }
+}

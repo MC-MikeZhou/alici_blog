@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "dataforseo": {
+      "command": "npx",
+      "args": ["-y", "dataforseo-mcp-server"],
+      "env": {
+        "DATAFORSEO_USERNAME": "YOUR_DATAFORSEO_USERNAME",
+        "DATAFORSEO_PASSWORD": "YOUR_DATAFORSEO_PASSWORD",
+        "ENABLED_MODULES": "SERP,KEYWORDS_DATA"
+      }
+    },
+    "fal": {
+      "command": "echo",
+      "args": ["FAL.ai config - API key stored for image generation"],
+      "env": {
+        "FAL_API_KEY": "YOUR_FAL_API_KEY:YOUR_FAL_SECRET"
+      }
+    }
+  }
+}

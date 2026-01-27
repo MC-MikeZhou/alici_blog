@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Bash(tree:*)",
+      "Bash(echo:*)",
+      "Bash(python3:*)",
+      "Bash(zip:*)",
+      "Bash(cat:*)",
+      "Bash(claude mcp list:*)",
+      "Bash(curl:*)",
+      "Bash(rsync:*)",
+      "Bash(ls:*)",
+      "Bash(xargs cat:*)"
+    ],
+    "deny": [],
+    "ask": []
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if [[ \"$TOOL_FILE_PATH\" == *\"/reports/\"*\"-article\"*\".md\" ]]; then echo '📊 提示: 文章已更新，建议运行 /analyze-aeo 检查质量分数'; fi",
+            "statusMessage": "检查文章类型..."
+          }
+        ]
+      }
+    ]
+  }
+}

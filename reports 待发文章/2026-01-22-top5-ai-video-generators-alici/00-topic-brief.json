@@ -1,0 +1,110 @@
+{
+  "title": "Top 5 AI Video Generator Tools on Alici: A Complete Guide (2026)",
+  "slug": "top-5-ai-video-generators-alici-2026",
+  "content_type": "list",
+  "word_count_target": "2,500-3,500",
+  "actual_word_count": 2847,
+  "target_audience": "Beginners wanting to try AI video generation on alici.ai",
+  "core_angle": "One-stop platform advantage - try all top models without 5 subscriptions",
+
+  "tools_compared": [
+    {
+      "name": "Sora 2",
+      "company": "OpenAI",
+      "version": "2",
+      "release_date": "September 2025",
+      "persona": "The Perfectionist",
+      "key_strength": "Cinema-grade quality, physics accuracy"
+    },
+    {
+      "name": "Runway Gen 4.5",
+      "company": "Runway",
+      "version": "4.5",
+      "release_date": "December 2025",
+      "persona": "The Editor's Choice",
+      "key_strength": "Professional control, micro-expressions"
+    },
+    {
+      "name": "Veo 3.1",
+      "company": "Google DeepMind",
+      "version": "3.1",
+      "release_date": "January 13, 2026",
+      "persona": "The Resolution King",
+      "key_strength": "4K output, environmental realism"
+    },
+    {
+      "name": "Kling 2.6",
+      "company": "Kuaishou",
+      "version": "2.6",
+      "release_date": "December 3, 2025",
+      "persona": "The Speed Demon",
+      "key_strength": "Fast iteration, best lip-sync"
+    },
+    {
+      "name": "Wan 2.6",
+      "company": "Alibaba (Tongyi Wanxiang)",
+      "version": "2.6",
+      "release_date": "December 16, 2025",
+      "persona": "The Value Pick",
+      "key_strength": "Multi-shot storytelling, cost-effective"
+    }
+  ],
+
+  "article_structure": {
+    "sections": [
+      "Quick Answer (Direct answer)",
+      "Introduction + Why Alici",
+      "Testing Methodology (5 dimensions)",
+      "Tool Reviews (5 tools x ~200 words each)",
+      "Comparison Table",
+      "How to Choose (Use-case recommendations)",
+      "Why Use Alici Instead of 5 Platforms",
+      "Conclusion + CTA",
+      "FAQ (8 questions)"
+    ]
+  },
+
+  "cta_placements": [
+    {
+      "location": "After Introduction",
+      "text": "Not sure which one to pick? Try them all on Alici — your first generation is free.",
+      "type": "soft_cta"
+    },
+    {
+      "location": "After Comparison Table",
+      "text": "Ready to see these in action? Generate your first video on Alici in under 5 minutes.",
+      "type": "action_cta"
+    },
+    {
+      "location": "Conclusion",
+      "text": "Skip the platform juggling — try all 5 models on Alici now",
+      "type": "closing_cta"
+    }
+  ],
+
+  "strategic_principles_applied": {
+    "beginner_first": {
+      "persona_nicknames": true,
+      "no_numerical_scores": true,
+      "empathy_opening": "five platforms, five accounts, five learning curves"
+    },
+    "conversion_oriented": {
+      "cta_count": 3,
+      "why_not_5_platforms_section": true,
+      "value_proposition": "unified credits, one interface, side-by-side testing"
+    }
+  },
+
+  "sources": [
+    "https://openai.com/index/sora-2/",
+    "https://runwayml.com/research/introducing-runway-gen-4.5",
+    "https://deepmind.google/models/veo/",
+    "https://ir.kuaishou.com/news-releases/news-release-details/kling-ai-launches-video-26-model-simultaneous-audio-visual",
+    "https://www.alibabacloud.com/blog/alibaba-unveils-wan2-6-series-enabling-everyone-to-star-in-videos_602742"
+  ],
+
+  "reference_used": "Higgsfield Prompt Team testing methodology",
+
+  "created_date": "2026-01-22",
+  "status": "draft_complete"
+}

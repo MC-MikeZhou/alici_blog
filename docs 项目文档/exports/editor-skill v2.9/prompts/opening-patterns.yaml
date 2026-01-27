@@ -1,0 +1,789 @@
+# Opening Enhancement Patterns for Editor Skill v2.9
+# Version: 2.0 (Enhanced with 24 Invideo AEO patterns)
+# Source: Invideo.io blog competitive research (03-aeo-opening-patterns.md)
+# Purpose: Validate and optimize article openings for AEO (Answer Engine Optimization)
+
+# ============================================================
+# Weak Opening Patterns to Detect and Fix
+# ============================================================
+weak_patterns:
+  regex:
+    - "^In this article"
+    - "^This article"
+    - "^Today we"
+    - "^Let's explore"
+    - "^Let's dive"
+    - "^Welcome to"
+    - "^Have you ever"
+    - "^Are you looking"
+    - "^If you're like"
+    - "^Many people"
+    - "^It's no secret"
+    - "^In today's world"
+    - "^As technology evolves"
+    - "^In this guide"
+    - "^In this post"
+
+  reasons:
+    "In this article": "Delays the value - reader wants answer, not meta-commentary"
+    "Let's explore": "Passive voice, no immediate value"
+    "Have you ever": "Rhetorical questions waste the crucial first 50 words"
+    "Many people": "Vague generalization, no specific value"
+    "In today's world": "Cliche opener, no differentiation"
+
+# ============================================================
+# 24 AEO Opening Patterns (from Invideo Research)
+# ============================================================
+aeo_patterns:
+
+  # ----- Classic Patterns (1-4) -----
+  P1:
+    name: "Problem-Solution"
+    id: 1
+    structure: "Pain point → Traditional solution limits → New solution → Article promise"
+    article_types: ["listicle", "comparison", "tutorial"]
+    template: |
+      [Target audience] traditionally face [pain point].
+      [Old solution] costs [money/time] and requires [skill/resource].
+
+      But [new technology/approach] is changing everything.
+      [Specific benefit] + [proof point].
+
+      In this guide, we'll [article promise].
+    example: |
+      Creating a professional-looking video traditionally requires expensive equipment,
+      technical expertise, and significant time investment. Most businesses spend
+      $1,000-$10,000 per video with agencies.
+
+      But AI video generators are changing this. You can now create studio-quality
+      videos in minutes for a fraction of the cost.
+
+      In this guide, we review the 10 best AI video generators for 2025.
+
+  P2:
+    name: "Data Hook"
+    id: 2
+    structure: "Shocking statistic → Trend interpretation → Opportunity/Threat → Call to action"
+    article_types: ["statistics", "trends", "persuasion"]
+    template: |
+      [Shocking statistic] ([Source, Year]).
+      [Market size/growth data].
+
+      [Implication for reader].
+      [Consequence of inaction OR opportunity for action].
+
+      [Article promise with specific number].
+    example: |
+      91% of businesses now use video as a marketing tool (Wyzowl, 2024).
+      The global AI video generator market is projected to reach $1.5 billion by 2028.
+
+      If you're not leveraging video, you're leaving money on the table.
+
+      Here are 135 statistics that explain why video marketing is essential.
+
+  P3:
+    name: "Pain Point Question"
+    id: 3
+    structure: "Empathetic question → Reader validation → Problem amplification → Solution preview"
+    article_types: ["listicle", "tutorial", "personal content"]
+    template: |
+      [Relatable question about reader's struggle]?
+      [Validation data: "X% of [audience] face this" or "You're not alone"].
+
+      [Problem amplification: consequences, scale, emotional impact].
+
+      [Solution preview: "That's where [solution category] comes in..."]
+    example: |
+      Ever felt like coming up with an idea to post online is super hard?
+      You're not alone—digital creators spend 1-5 hours weekly just on content ideation.
+
+      The pressure to stay consistent across multiple platforms while maintaining quality
+      is overwhelming most marketers.
+
+      That's where AI tools come in...
+
+  P4:
+    name: "Reframe"
+    id: 4
+    structure: "Common belief → Reality check → Redefine the question → New perspective promise"
+    article_types: ["showdown", "myth-busting", "expert content"]
+    template: |
+      [Commonly held belief/expectation].
+
+      [Reality check: what actually happens].
+
+      The real question isn't '[old question].'
+      It's '[reframed question].'
+
+      [Promise to answer the new question].
+    example: |
+      Demos make every AI model look magical. Production reveals the truth.
+
+      You've probably seen stunning AI video demos—Sora's cinematic clips,
+      Runway's smooth transitions, Kling's realistic motion.
+      But here's what those demos don't show: actual production challenges.
+
+      The real question isn't 'which AI looks best in demos?'
+      It's 'which one delivers in real workflows?'
+
+      Let's find out...
+
+  # ----- How-to Patterns (5-8) -----
+  P5:
+    name: "Retention Contrast"
+    id: 5
+    structure: "Contrast statistic → Democratization narrative → Tool promise → Article value"
+    article_types: ["ultimate guide", "tutorial", "tool promotion"]
+    template: |
+      [Shocking comparison statistic: X% vs Y%].
+
+      [Historical barrier: equipment/skills/cost].
+      [Democratization statement: "Today, tools like..." or "But now..."].
+
+      [Article promise with scope].
+    example: |
+      Viewers retain 95% of a message when watching video,
+      compared to only 10% when reading text.
+
+      Video creation used to require expensive equipment and expertise.
+      Today, tools like InVideo enable anyone to create professional videos
+      in less than 5 minutes.
+
+      This guide covers everything from planning to publishing...
+
+  P6:
+    name: "Time Pain Point"
+    id: 6
+    structure: "Time consumption data → Traditional barriers → AI solution → Time promise"
+    article_types: ["AI tutorial", "efficiency content", "quick start guide"]
+    template: |
+      [Time investment data: "It takes X hours to..."].
+
+      [Traditional barriers list: equipment, skills, costs].
+      [Emotional consequence: "Most people give up..."].
+
+      But [new solution] can [achieve same result] in [time frame].
+      [Article promise].
+    example: |
+      It takes 7 hours to create a 1 to 5-minute YouTube video.
+
+      Traditional production requires cameras, actors, lighting, editing skills...
+      Most creators give up before finishing their first video.
+
+      But AI video generators can produce the same content within minutes.
+      Let's show you how...
+
+  P7:
+    name: "Search Volume Hook"
+    id: 7
+    structure: "Search volume data → Problem universality → Guide positioning → Value promise"
+    article_types: ["basic tutorial", "high-volume keyword", "beginner content"]
+    template: |
+      [Search volume data: "X,000 searches per month for..."].
+
+      [Problem acknowledgment: "can feel overwhelming/difficult"].
+      [Solution preview: "But with the right approach..."].
+
+      [Comprehensive guide promise].
+    example: |
+      Every month, over 10,000 online searches are made
+      for the term 'how to edit a video'.
+
+      Video editing can feel overwhelming, especially for beginners.
+      But with the right tools and approach, it doesn't have to be.
+
+      This guide walks you through everything...
+
+  P8:
+    name: "Platform Competition"
+    id: 8
+    structure: "Competition data → Performance gap → Core question → Comprehensive solution"
+    article_types: ["platform tutorial", "YouTube/TikTok guide", "competitive market"]
+    template: |
+      [Platform competition statistic: "X hours/posts uploaded per minute"].
+      [Performance gap: "Only X% of content gets Y% of engagement"].
+
+      [Central question: "So how do you ensure...?"]
+
+      [Comprehensive promise + Table of Contents].
+    example: |
+      More than 500 hours of video are uploaded to YouTube every minute.
+      However, it's just 10% of the most viewed YouTube videos
+      that draw in 79% of all views.
+
+      So how do you ensure your videos don't get lost?
+
+      This guide covers everything—from strategy to SEO to promotion.
+
+  # ----- Listicle Patterns (9-11) -----
+  P9:
+    name: "Market Size Hook"
+    id: 9
+    structure: "Market size data → Growth prediction → Decision pain point → Article positioning"
+    article_types: ["AI tool listicle", "B2B software list", "market authority"]
+    template: |
+      [Market size statistic with year].
+      [Growth projection (CAGR, forecast)].
+
+      [Decision pain point: "With so many options..." / "Choosing can be overwhelming"].
+
+      [Article promise: "This guide reviews..."].
+    example: |
+      The market size of AI image generators was valued at
+      USD 336.3 million in 2023 and is likely to grow with
+      a CAGR of over 17.5% by 2032.
+
+      With so many options, choosing the right tool can be overwhelming.
+
+      This guide reviews the 10 best options...
+
+  P10:
+    name: "Productivity Stat Hook"
+    id: 10
+    structure: "User efficiency data → Problem statement → Solution positioning → Article promise"
+    article_types: ["productivity tool list", "AI tool list", "automation content"]
+    template: |
+      [Productivity statistic: "X% of users save Y hours..."].
+
+      [Problem: "But most people still..."].
+      [Solution preview: "The right tools can..."].
+
+      [Article promise with number].
+    example: |
+      Approximately 37% of daily AI users save 5-10 hours weekly.
+
+      But most people still juggle multiple tools and repetitive tasks.
+      The right AI tools can automate this.
+
+      Here are 12 must-have generative AI tools for 2025...
+
+  P11:
+    name: "Methodology Authority"
+    id: 11
+    structure: "Testing declaration → Evaluation dimensions → Selection result → Article value"
+    article_types: ["tested listicle", "AI tool comparison", "tried & tested"]
+    template: |
+      We tested [N+] tools to find the [final N] best.
+
+      Our evaluation criteria:
+      - [Criterion 1]
+      - [Criterion 2]
+      - [Criterion 3]
+      ...
+
+      Here's what made the cut.
+    example: |
+      We tested 50+ AI video generators to find the 14 best.
+
+      Our evaluation criteria: output quality, prompting efficiency,
+      speed, usability, export options, pricing, reliability, privacy.
+
+      Here's what made the cut...
+
+  # ----- Statistics/Research Patterns (12-13) -----
+  P12:
+    name: "Relatable Stat Hook"
+    id: 12
+    structure: "Personal relevance statistic → Behavior validation → Brand application → Comprehensive guide promise"
+    article_types: ["platform statistics", "marketer content", "personal relevance"]
+    template: |
+      [Personal relevance stat: "1 in X users..." or "X% of your audience..."].
+
+      [Validation: "If you're [action], these insights will help you..."].
+
+      [Article promise with specific number].
+    example: |
+      One out of two users discover brands on Instagram.
+
+      If you're using Instagram for your business (or planning to),
+      these statistics will help you optimize your strategy.
+
+      Here are 113 updated Instagram statistics for 2025...
+
+  P13:
+    name: "Research Authority"
+    id: 13
+    structure: "Research sample declaration → Insight preview → Methodology hint → Report value"
+    article_types: ["original research", "data-driven content", "first-hand authority"]
+    template: |
+      We studied [N]+ [subjects] and [N]+ [data points]
+      to bring you these insights.
+
+      [Key finding preview].
+      [Value proposition: "what you can learn..."].
+
+      [Transition to content].
+    example: |
+      We studied over 300 brands and more than 650 videos
+      to bring you these insights.
+
+      This report reveals what top-performing brands are doing differently,
+      and what you can learn from them.
+
+      Let's dive into the data...
+
+  # ----- Guide Patterns (14-18) -----
+  P14:
+    name: "Opportunity Gap"
+    id: 14
+    structure: "Opportunity data → Competition gap → Question raised → Comprehensive guide promise"
+    article_types: ["platform marketing guide", "emerging channel", "urgency creation"]
+    template: |
+      [Opportunity statistic: "X% of [competitors] don't have..."].
+
+      [Opportunity framing: "This represents a massive opportunity..."].
+
+      [Question: "But where do you start?"]
+      [Comprehensive guide promise].
+    example: |
+      50% of top brands have no presence on TikTok.
+
+      This represents a massive opportunity for businesses
+      willing to get in early.
+
+      But where do you start? This A-Z guide covers everything...
+
+  P15:
+    name: "Triple Question"
+    id: 15
+    structure: "Question 1 (budget) → Question 2 (choice) → Question 3 (strategy) → Solution promise"
+    article_types: ["classification content", "decision guidance", "confused reader"]
+    template: |
+      [Budget question]?
+      [Selection/Choice question]?
+      [Strategy/Execution question]?
+
+      This guide [promise] and helps you [outcome].
+    example: |
+      Not sure where to allocate your marketing budget?
+      Confused about which channels to prioritize?
+      Wondering how to reach your target audience effectively?
+
+      This guide breaks down the 13 types of social media
+      and how to use each one for your business...
+
+  P16:
+    name: "Ideal Solution Criteria"
+    id: 16
+    structure: "Competitor strengths → Competitor limitations → Ideal standard definition → Evaluation promise"
+    article_types: ["alternatives", "competitor replacement", "evaluation criteria"]
+    template: |
+      [Competitor] is great for [strength 1] and [strength 2].
+
+      But it might fall short if you need [pain point 1],
+      [pain point 2], or [pain point 3].
+
+      The perfect alternative should [criteria list].
+
+      We've evaluated [N] options. Here's what we found.
+    example: |
+      Videoscribe is great for whiteboard animations with its
+      large stock library and offline functionality.
+
+      But it might fall short if you need MP4 imports,
+      longer videos, or advanced customization.
+
+      The perfect alternative should allow users to create longer videos,
+      import various formats, and offer more templates.
+
+      We've evaluated 10 options. Here's what we found...
+
+  P17:
+    name: "Barrier Removal"
+    id: 17
+    structure: "Barrier negation → Democratization statement → Tool introduction → Article promise"
+    article_types: ["beginner content", "tool recommendation", "accessibility"]
+    template: |
+      You don't have to be [expert/professional] to [achieve goal].
+
+      With the right [tools/approach], anyone can [outcome] in [time].
+
+      Here are the [N] best [solutions]...
+    example: |
+      You don't have to be a professional editor
+      to make super cool compilation videos.
+
+      With the right tools, anyone can create
+      viral-worthy compilations in minutes.
+
+      Here are the 5 best video compilation makers...
+
+  P18:
+    name: "Outcome Promise"
+    id: 18
+    structure: "Problem definition → Three outcome promises → Navigation roadmap → Reading invitation"
+    article_types: ["resource guide", "template-driven content", "clear expectations"]
+    template: |
+      [Problem statement: "can be overwhelming/challenging"].
+
+      After reading this guide, you will:
+      1. [Outcome 1]
+      2. [Outcome 2]
+      3. [Outcome 3]
+
+      Here's what we'll cover: [Navigation roadmap].
+    example: |
+      Managing social media content can be overwhelming.
+
+      After reading this guide, you will:
+      1. Understand the social media calendar process
+      2. Know which tools to use
+      3. Have a working calendar for your brand
+
+      Here's what we'll cover: [8 sections with links]
+
+  # ----- Advanced Patterns (19-24) -----
+  P19:
+    name: "Cost Barrier Hook"
+    id: 19
+    structure: "High cost problem title → Traditional method limits → DIY trap → Scale problem → Solution introduction"
+    article_types: ["high-value B2B", "e-commerce", "quantified pain point"]
+    template: |
+      **The $[X]K Problem Most [Audience] Can't Solve**
+
+      For most [audience], [output] is not the problem—
+      the process around creating it is.
+
+      1. **The Cost Barrier**: Traditional [method] costs $[X]-$[Y]
+      2. **The DIY Trap**: [Learning curve pain point]
+      3. **The Scaling Problem**: [Scale multiplier challenge]
+
+      That's where [solution] comes in.
+    example: |
+      **The $10K Problem Most Brands Can't Solve**
+
+      For most e-commerce brands, product videos are not the problem—
+      the process around creating them is.
+
+      1. **The Cost Barrier**: Traditional production runs $5K-$15K per video
+      2. **The DIY Trap**: Learning Premiere takes months; results still look amateur
+      3. **The Scaling Problem**: You have 200 SKUs, each needs 3-5 variations
+
+      That's where Money Shot comes in...
+
+  P20:
+    name: "False Binary Challenge"
+    id: 20
+    structure: "Opposing statement → Challenge either/or → Redefine standard → New perspective promise"
+    article_types: ["thought leadership", "philosophy", "advanced reader"]
+    template: |
+      [Surface-level observation about two approaches].
+
+      But here's what most people miss:
+      [Challenge the binary framing].
+
+      The real difference isn't [obvious factor].
+      It's [deeper factors: intention, craft, discipline].
+
+      Let's explore what actually matters.
+    example: |
+      Demos make every AI model look magical. Production reveals the truth.
+
+      But here's what most people miss: labeling one approach 'good'
+      and another 'bad' oversimplifies the creative process.
+
+      The real difference isn't tools. It's intention, taste, and emotional clarity.
+
+      Let's explore what actually makes ads resonate...
+
+  P21:
+    name: "Production Pain Scenario"
+    id: 21
+    structure: "Scenario description → Common 'surprise request' → Traditional solution cost → New solution introduction"
+    article_types: ["feature deep dive", "production optimization", "B2B productivity"]
+    template: |
+      [Satisfying completion moment: "The [work] finally lands..."].
+      [The surprise request: "Then someone says..."].
+
+      Traditional solution: [logistics, costs, time].
+      The real issue: [it's not about quality, it's about variables].
+
+      That's what [solution] solves.
+    example: |
+      The performance finally lands. Everyone relaxes for a moment.
+      Then someone says, 'What if we changed the person?'
+      Or 'This would be better in a different setting.'
+
+      Traditional reshoots mean scheduling, logistics, and costs.
+      Most of the time, it's not about fixing a bad idea—
+      it's about shifting variables unrelated to acting quality.
+
+      That's what Performances solves...
+
+  P22:
+    name: "Statistics Authority Opening"
+    id: 22
+    structure: "Pain point statistic → Analysis importance → Solution → Article promise"
+    article_types: ["ROI content", "educational marketing guide", "urgency building"]
+    template: |
+      [Struggle statistic: "X% of [audience] struggle with..."].
+
+      [Consequence of not solving: "Without proper [X], you can't..."].
+      [Advantage explanation: "[Topic] provides better [benefit]..."].
+
+      This guide shows you how to [solve problem].
+    example: |
+      44% of SMBs struggle measuring video marketing ROI.
+
+      Without proper analytics, you can't know what's working.
+      Video data provides richer insights than emails or blogs—
+      viewing patterns, rewatch rates, engagement drop-offs.
+
+      This guide shows you how to calculate and optimize video ROI...
+
+  P23:
+    name: "Market Growth Hook"
+    id: 23
+    structure: "Market size + CAGR → Trend shift → Brand opportunity → Article value"
+    article_types: ["emerging trend list", "AI/tech personality content", "market background"]
+    template: |
+      The [market] was estimated at $[X] billion in [year]
+      and is projected to grow at a CAGR of [X]% from [year] to [year].
+
+      [Trend shift: "Brands are moving from... to..."].
+
+      This guide [profile/review/show] the top [N] [subjects]
+      and [secondary value proposition].
+    example: |
+      The AI influencer market was estimated at $6.06 billion in 2024
+      and is projected to grow at a CAGR of 40.8% from 2025 to 2030.
+
+      Brands are shifting from traditional promotions
+      to technology-driven campaigns.
+
+      This guide profiles the top 12 AI influencers
+      and shows you how to create your own...
+
+  P24:
+    name: "Content Gap Hook"
+    id: 24
+    structure: "Current state problem → Video as solution → Value list → Practical tips preview"
+    article_types: ["benefits list", "educational content", "solution value building"]
+    template: |
+      [Content gap observation: "You're [doing X] but not seeing [Y]"].
+
+      Here's the truth: [Compelling statistic about solution].
+
+      In this guide, we cover [N] reasons why [solution] is essential—
+      plus [M] pro tips to get started.
+    example: |
+      You're publishing quality content but not seeing engagement.
+
+      Here's the truth: 80% of video marketers say video
+      has helped them increase direct sales.
+
+      In this guide, we cover 11 reasons why video marketing
+      is essential for your business—plus 6 pro tips to get started.
+
+# ============================================================
+# Pattern Selection Matrix by Article Type
+# ============================================================
+pattern_selection:
+
+  listicle:
+    optimal: [P1, P3, P9, P10, P11]
+    acceptable: [P17, P2]
+    reason: "Readers bring problems, need empathy and authority"
+
+  tutorial:
+    optimal: [P5, P6, P7, P8]
+    acceptable: [P1, P3]
+    reason: "Start from reader's struggle, promise time savings"
+
+  comparison:
+    optimal: [P4, P16]
+    acceptable: [P1]
+    reason: "Challenge assumptions, establish evaluation criteria"
+
+  showdown:
+    optimal: [P4, P20]
+    acceptable: [P11]
+    reason: "Reframe the debate, build unique perspective"
+
+  statistics:
+    optimal: [P2, P12, P13]
+    acceptable: [P9]
+    reason: "Lead with data, establish research authority"
+
+  guide:
+    optimal: [P14, P15, P18]
+    acceptable: [P5, P8]
+    reason: "Identify opportunity/challenge, promise comprehensive coverage"
+
+  vertical_industry:
+    optimal: [P19, P6, P21]
+    acceptable: [P1]
+    reason: "Quantify pain points, show ROI potential"
+
+  philosophy:
+    optimal: [P20, P4]
+    acceptable: [P21]
+    reason: "Challenge binary thinking, establish thought leadership"
+
+  news:
+    optimal: [P2, P23]
+    acceptable: [P9]
+    reason: "Lead with impact data, market context"
+
+# ============================================================
+# Key Takeaways Requirements
+# ============================================================
+key_takeaways:
+  position: "After title, before main content"
+  format: |
+    ## Key Takeaways
+
+    - **For [use case A]**: [Tool/approach A] [one-line benefit]
+    - **For [use case B]**: [Tool/approach B] [one-line benefit]
+    - **For [use case C]**: [Tool/approach C] [one-line benefit]
+
+  rules:
+    - One sentence per item
+    - Include searchable feature keywords
+    - Brand name first for easy scanning
+    - 5-10 items max (fit in one screen)
+
+  aeo_value:
+    - AI summary extraction friendly
+    - Featured Snippet format match
+    - Value without reading full article
+
+# ============================================================
+# Direct Answer Requirements
+# ============================================================
+direct_answer_requirements:
+  word_limit: 50  # Must answer within first 50 words
+  first_100_words: "Must contain core answer to title question"
+
+  must_include:
+    - Specific recommendation or answer
+    - Relevant data point or number
+    - Clear benefit statement
+
+  must_avoid:
+    - Rhetorical questions
+    - Meta-commentary about the article
+    - Vague generalizations
+    - Marketing superlatives without substance
+
+# ============================================================
+# Scoring Rubric
+# ============================================================
+opening_quality_score:
+  A:
+    score: "90-100%"
+    criteria:
+      - Direct answer in first sentence
+      - Matches optimal pattern for article type
+      - Includes specific data/number
+      - Key Takeaways properly positioned
+      - AEO-extractable as standalone answer
+
+  B:
+    score: "70-89%"
+    criteria:
+      - Direct answer in first paragraph
+      - Matches an acceptable pattern
+      - Some specificity
+      - Key Takeaways present
+
+  C:
+    score: "50-69%"
+    criteria:
+      - Answer delayed to second paragraph
+      - Weak pattern detected
+      - Lacks specificity
+      - Key Takeaways missing or mispositioned
+
+  D:
+    score: "<50%"
+    criteria:
+      - Uses weak opening pattern
+      - No clear answer in first 100 words
+      - No recognizable pattern
+      - Reader must scroll to find value
+
+# ============================================================
+# Auto-Fix Logic
+# ============================================================
+auto_fix:
+  trigger: "Score C or D"
+
+  workflow:
+    1: "Identify article type from title/content"
+    2: "Select optimal pattern from pattern_selection matrix"
+    3: "Rewrite opening using pattern template"
+    4: "Preserve original credibility statements"
+    5: "Add Key Takeaways section if missing"
+    6: "Validate first 100 words contains core answer"
+
+  deep_check_trigger: "No pattern match after standard patterns"
+  deep_check_action: "Read /competitive-research/invideo-blog/03-aeo-opening-patterns.md"
+
+# ============================================================
+# Hook Enhancement Strategies
+# ============================================================
+hook_strategies:
+  add_number:
+    description: "Insert specific statistic or data point"
+    before: "AI tools are becoming more powerful"
+    after: "AI video tools have improved 300% in quality since 2024"
+
+  add_comparison:
+    description: "Add contrast or comparison"
+    before: "This tool is good for video creation"
+    after: "This tool produces Hollywood-quality video at 1/100th the traditional cost"
+
+  add_timeframe:
+    description: "Include time-to-value"
+    before: "You can create videos easily"
+    after: "You can create your first video in under 5 minutes"
+
+  add_outcome:
+    description: "State specific end result"
+    before: "Learn how to make AI videos"
+    after: "Create professional AI videos that get 3x more engagement"
+
+  add_contrast:
+    description: "Use surprising comparison"
+    before: "Video performs well"
+    after: "Viewers retain 95% from video vs 10% from text"
+
+# ============================================================
+# Data Hook Priority Setting (v2.9.1)
+# ============================================================
+data_hook_priority:
+  enabled: true
+  version: "2.9.1"
+  description: |
+    Data Hook (P2) is the preferred opening pattern for all article types.
+    Data increases reader confidence and improves AEO extractability.
+
+  preferred_patterns:
+    - P2   # Data Hook - Primary choice
+    - P1   # Problem-Solution - Secondary
+    - P9   # Market Size Hook - Tertiary
+
+  enforcement:
+    severity: "WARNING"
+    auto_fix: true
+    fix_action: "Rewrite opening with data point from article context"
+
+  data_point_detection:
+    regex: "\\d+%|\\$[\\d,]+|[\\d,]+x|\\d+\\s*(hours?|minutes?|days?|weeks?)"
+    min_required: 1
+    location: "first 150 words"
+
+  data_point_types:
+    - name: "Statistics"
+      example: "91% of businesses..."
+      regex: "\\d+%"
+    - name: "Cost comparison"
+      example: "$50,000+ vs free"
+      regex: "\\$[\\d,]+"
+    - name: "Time comparison"
+      example: "from 2 weeks down to 30 minutes"
+      regex: "\\d+\\s*(hours?|minutes?|days?|weeks?)"
+    - name: "Growth data"
+      example: "increased 300%"
+      regex: "[\\d,]+x|\\d+%\\s*(growth|increase)"

@@ -1,0 +1,141 @@
+{
+  "meta": {
+    "created_at": "2026-01-22",
+    "version": "1.0",
+    "content_type": "tutorial",
+    "target_word_count": {
+      "min": 1800,
+      "max": 2500
+    }
+  },
+  "topic": {
+    "title": "How to Animate a Photo to Video with AI in 2026",
+    "subtitle": "From Static Images to Cinematic Videos: A Complete Guide",
+    "slug": "animate-photo-to-video-ai-2026"
+  },
+  "seo": {
+    "primary_keyword": "How to animate photo to video with AI 2026",
+    "secondary_keywords": [
+      "photo to video AI generator free",
+      "best AI tools for photo animation 2026",
+      "Wan 2.6 image to video tutorial",
+      "AI photo animation step by step",
+      "image to video AI",
+      "animate still image AI"
+    ],
+    "title_formula": "How to [Verb] [Object] with [Tool/Method] in [Year]"
+  },
+  "audience": {
+    "primary": "新手用户 - 想快速上手 AI 视频生成",
+    "secondary": "专业用户 - 想深入使用 Wan 2.1 能力",
+    "pain_points": [
+      "不知道从哪里开始",
+      "工具太多难以选择",
+      "Prompt 写不好效果差",
+      "不了解参数如何调整"
+    ]
+  },
+  "intent": {
+    "type": "教人做事 (Tutorial)",
+    "goal": "效果导向 - 将照片变成电影感短视频",
+    "outcome": "读者能够独立完成照片转视频操作"
+  },
+  "structure": {
+    "opening_pattern": "Data Hook + Problem Statement",
+    "main_sections": [
+      {
+        "h2": "Key Takeaways",
+        "purpose": "前置核心要点供快速扫描",
+        "word_count": 150
+      },
+      {
+        "h2": "Introduction",
+        "purpose": "Data Hook 开篇 + 问题陈述",
+        "word_count": 200
+      },
+      {
+        "h2": "Quick Start: 3 Steps for Beginners",
+        "purpose": "新手快速上手指南",
+        "word_count": 400
+      },
+      {
+        "h2": "Understanding Photo-to-Video AI",
+        "purpose": "工作原理 + 主流模型对比",
+        "word_count": 300
+      },
+      {
+        "h2": "Advanced: Mastering Wan 2.1 Prompts",
+        "purpose": "Prompt 结构 + 相机运动 + 风格词典",
+        "word_count": 500
+      },
+      {
+        "h2": "Best Practices & Tips",
+        "purpose": "照片选择 + 分辨率 + 常见失败原因",
+        "word_count": 300
+      },
+      {
+        "h2": "Tool Comparison Table",
+        "purpose": "功能/价格/效果对比表",
+        "word_count": 200
+      },
+      {
+        "h2": "FAQ",
+        "purpose": "5 个常见问题直接回答",
+        "word_count": 250
+      },
+      {
+        "h2": "Conclusion",
+        "purpose": "总结 + CTA",
+        "word_count": 100
+      }
+    ]
+  },
+  "competitive_analysis": {
+    "references": [
+      {
+        "source": "WaveSpeedAI",
+        "url": "https://wavespeed.ai/blog/posts/introducing-alibaba-wan-2-6-image-to-video-flash-on-wavespeedai/",
+        "positioning": "产品发布/功能介绍",
+        "strengths": ["功能清单", "步骤", "表格+价格", "Wan 2.6 版本"],
+        "gaps": ["缺少 FAQ"]
+      },
+      {
+        "source": "LetsEnhance",
+        "url": "https://letsenhance.io/blog/all/how-to-turn-photo-into-ai-video/",
+        "positioning": "初学者教程",
+        "strengths": ["3步快速开始", "预设分类表", "2025年份", "场景化分组"],
+        "gaps": ["FAQ 部分不完整"]
+      },
+      {
+        "source": "fal.ai",
+        "url": "https://fal.ai/learn/devs/wan-2-6-prompt-guide-mastering-all-three-generation-modes",
+        "positioning": "开发者/进阶指南",
+        "strengths": ["提示词结构公式", "参数规格表", "last updated", "模式拆解", "常见问题表"],
+        "gaps": ["面向开发者, 新手门槛高"]
+      }
+    ],
+    "our_differentiation": [
+      "多工具全景对比 - 中立视角而非单一产品推广",
+      "Wan 2.1 独特能力整合 - Prompt Guide 技巧融入教程",
+      "新手+专业双轨道 - Quick Start + Advanced 双路径",
+      "效果导向 - 强调电影感最终效果"
+    ]
+  },
+  "cta": {
+    "primary": {
+      "text": "Start Creating AI Videos Now",
+      "url": "https://alici.ai",
+      "position": "after_conclusion"
+    },
+    "secondary": {
+      "text": "Try Alici AI Free",
+      "context": "within_quick_start_section"
+    }
+  },
+  "e_e_a_t": {
+    "experience": "Step-by-step tutorial with real examples",
+    "expertise": "Technical explanation of AI video generation",
+    "authority": "Comparison of major tools with specifications",
+    "trust": "Transparent feature comparison, disclosure of limitations"
+  }
+}
