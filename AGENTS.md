@@ -393,6 +393,13 @@ Step-by-step flowchart showing the AI workflow...
 
 ---
 
+**v2.8.3 视频集成后处理（2026-01-27）** ⭐:
+- 🆕 `convert-to-video-framer-json v0.9` 上线：在现有 Framer JSON 基础上插入视频，输出 `*-video.json`（非破坏性）。
+- 🔒 严格对齐 `blog_scheme_example.json`/`FIELD_SCHEMA.md`：仅新增 `video_link_1..5` 与 `article_body_content_2..5`，其余字段值全部来自源 JSON（缺失即中止）。
+- 🧭 交互增强：展示“视频列表 + 段落预览（段1..段N）”，按“第 K 段之前/正文顶部”映射到 `video_link_N`（如第三段之前→`video_link_3`）。
+- 🧰 上传改为手动：移除上传脚本依赖；文档改为 rsync 示例，要求先上传后粘贴 CDN 链接。
+- 📚 文档与路由更新：`SKILL.md/AGENTS.md/CLAUDE.md` 增加非写作指令与反馈模板；`FIELD_SCHEMA.md` 补齐 example 中的字段说明。
+
 **v2.8.2 InVideo 原则系统化集成（2026-01-26）** ⭐:
 - ✅ **AUTO_ROUTE.md v2.3**: 新增 rewrite_constraints (source_attribution, no_fabricated_data, validate_claim_accuracy)
 - ✅ **TOOL_SHOWDOWN_TEMPLATE.md v1.2**: Source Attribution 章节 + Reframe 开篇强制 + L4 模板
