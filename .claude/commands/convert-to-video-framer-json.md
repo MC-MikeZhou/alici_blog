@@ -29,13 +29,17 @@ Phase 7: (可选) /convert-to-video-framer-json 06-article-final.json
    - 默认支持 1 个“正文之前”视频
    - 正文内最多 4 个“在第 N 个 H2 前”插入点（H2 为 `<h6><strong>`）
    - 输出插入计划供用户确认
-5. 生成输出（非破坏）：
-   - 合并正文：`article_body_content`（注入 `<div class="video-embed">…</div>`）
-   - 分段数组：`article_body_content_parts`（html / video 块）
-   - 元数据：`video_embeds`（url/type/position/start）
+5. 生成输出（非破坏，STRICT 不注入 HTML）：
+   - 正文拆分：`article_body_content`（第一段）、`article_body_content_2..N`（后续段）
+   - 视频链接：`video_link_1..N`（按插入顺序；若选择“正文前”，`video_link_1` 表示 Before Body）
    - 输出文件名：在输入 JSON 文件名基础上追加 `-video` 后缀，例如：
      - `06-article-final.json` → `06-article-final-video.json`
      - `06-article-final-v2.3.json` → `06-article-final-v2.3-video.json`
+
+6. 字段校验（STRICT）：
+   - 输出字段 = 源 JSON 字段 ∪ example.json 字段（仅用于字段清单校验）
+   - example 中的每个字段，必须从源 JSON 获取对应值（大小写/分隔差异允许映射）
+   - 禁止用 example 的默认值或任意填充值；如缺字段则阻断并提示
 
 ## Non-Destructive Guarantee
 
@@ -49,4 +53,3 @@ Phase 7: (可选) /convert-to-video-framer-json 06-article-final.json
 - Scripts:
   - `scripts/convert_to_video_json/interactive_convert.py`
   - `scripts/convert_to_video_json/upload_videos.py`
-

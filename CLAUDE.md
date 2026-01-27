@@ -662,6 +662,7 @@ Writer → Editor Gate → AEO → Improver → 竞品验证 → Framer → Prev
 | `/improve-article FILE` | 自动改进 |
 | `/preview-chinese FILE` | 中文预览 |
 | `/convert-to-framer FILE` | 输出 CMS JSON |
+| `/convert-to-video-framer-json FILE` | (可选) 在现有 JSON 基础上插入视频，输出 `*-video.json` |
 | `/preview-framer FILE` | Framer 可视化预览 |
 | `/fetch-transcript URL` | 获取 YouTube 字幕 |
 | `/generate-cover FILE` | **生成封面图 (6 种背景类型)** 🆕 |

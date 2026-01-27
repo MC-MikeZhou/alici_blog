@@ -100,6 +100,15 @@ triggers:
   - "帮我找选题"
   - "expand from seed"
   - "从种子词扩展"
+  # Video embedding (new utility)
+  - "嵌入视频"
+  - "插入视频"
+  - "视频 json"
+  - "视频集成"
+  - "video embed"
+  - "embed video"
+  - "insert video"
+  - "framer video"
 ```
 
 ---
@@ -126,6 +135,7 @@ triggers:
 │  │ - 改进 → improve-article                                             │    │
 │  │ - 字幕 / YouTube URL (单独输入) → fetch-transcript                   │    │
 │  │ - 导出 → convert-to-framer                                           │    │
+│  │ - 嵌入视频 / video embed → convert-to-video-framer-json              │    │
 │  │ - 预览 → preview-chinese                                             │    │
 │  │ - Seed模式触发词 → 直接进入 Seed Mode                                 │    │
 │  │ - 否 → 进入写作流程                                                   │    │

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Interactive converter to generate a video-enhanced Framer JSON.
+Interactive converter to generate a video-split JSON (no HTML injection).
 
 Steps:
  1) Load existing Framer JSON (array with one article object)
@@ -8,10 +8,10 @@ Steps:
     - Parse ./video_resources/video_links.txt using separators: newline/space/comma
     - Optionally upload local videos in ./video_resources to CDN (rsync)
  3) Map each video to an insertion position (before body, or before a heading)
- 4) Produce 06-article-final-video.json with:
-    - article_body_content (combined HTML with embedded videos)
-    - article_body_content_parts (array of html/video blocks)
-    - video_embeds (metadata)
+ 4) Produce *-video.json with ONLY:
+    - article_body_content (first segment of original HTML)
+    - article_body_content_2..N (subsequent segments)
+    - video_link_1..N (ordered by insertion request; video_link_1 is BEFORE BODY if chosen)
 
 Note: video_links.txt parsing is delimiter-based (newline/space/comma). Non-HTTP(S)
       tokens are ignored. You may still add extra URLs interactively.
@@ -41,6 +41,60 @@ def read_json(path: Path) -> List[Dict[str, Any]]:
 def write_json(path: Path, data: List[Dict[str, Any]]) -> None:
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+def load_schema_example() -> Dict[str, Any]:
+    """Load blog_scheme_example.json (with // comments) and return the first object.
+    Falls back to empty dict if not found or parse error.
+    """
+    try:
+        repo_root = Path(__file__).resolve().parents[2]
+        schema_path = repo_root / "skills" / "utilities" / "convert-to-video-framer-json" / "blog_scheme_example.json"
+        raw = schema_path.read_text(encoding="utf-8")
+        # Strip // comments outside strings
+        out = []
+        in_str = False
+        esc = False
+        i = 0
+        while i < len(raw):
+            ch = raw[i]
+            if in_str:
+                out.append(ch)
+                if esc:
+                    esc = False
+                elif ch == "\\":
+                    esc = True
+                elif ch == '"':
+                    in_str = False
+                i += 1
+                continue
+            # not in string
+            if ch == '"':
+                in_str = True
+                out.append(ch)
+                i += 1
+                continue
+            if ch == '/' and i + 1 < len(raw) and raw[i + 1] == '/':
+                # skip until newline
+                while i < len(raw) and raw[i] not in ('\n', '\r'):
+                    i += 1
+                continue
+            out.append(ch)
+            i += 1
+
+        cleaned = ''.join(out)
+        obj = json.loads(cleaned)
+        if isinstance(obj, list) and obj:
+            return obj[0]
+        if isinstance(obj, dict):
+            return obj
+    except Exception:
+        pass
+    return {}
+
+
+def unify_key(name: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", name.lower())
 
 
 def read_text_file(path: Path) -> str:
@@ -163,29 +217,6 @@ def extract_youtube_id(url: str) -> str:
     return ""
 
 
-def build_embed_block(url: str, start_seconds: int = 0) -> Tuple[str, Dict[str, Any]]:
-    if is_youtube(url):
-        vid = extract_youtube_id(url)
-        start_q = f"?start={start_seconds}" if start_seconds > 0 else ""
-        html = (
-            f'<div class="video-embed">\n'
-            f'  <iframe src="https://www.youtube-nocookie.com/embed/{vid}{start_q}"'
-            f'          title="Video Walkthrough" frameborder="0"'
-            f'          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"'
-            f'          allowfullscreen></iframe>\n'
-            f'</div>'
-        )
-        meta = {"type": "youtube", "url": url, "video_id": vid, "start": start_seconds}
-        return html, meta
-    else:
-        html = (
-            f'<div class="video-embed">\n'
-            f'  <video controls src="{url}" playsinline></video>\n'
-            f'</div>'
-        )
-        meta = {"type": "file", "url": url, "start": start_seconds}
-        return html, meta
-
 
 def list_headings(html: str) -> List[Tuple[int, str]]:
     headings = []
@@ -195,14 +226,7 @@ def list_headings(html: str) -> List[Tuple[int, str]]:
     return headings
 
 
-def insert_before_heading(html: str, embed_html: str, heading_index: int) -> str:
-    # Find the Nth heading and insert before it
-    matches = list(HEADING_RE.finditer(html))
-    if 1 <= heading_index <= len(matches):
-        m = matches[heading_index - 1]
-        start = m.start()
-        return html[:start] + embed_html + "\n" + html[start:]
-    return html + "\n" + embed_html  # fallback to end
+# (No HTML injection helpers by design)
 
 
 def build_parts_with_embeds(html: str, plan: List[Dict[str, Any]]) -> Tuple[str, List[Any]]:
@@ -216,24 +240,20 @@ def build_parts_with_embeds(html: str, plan: List[Dict[str, Any]]) -> Tuple[str,
     embeds_meta: List[Dict[str, Any]] = []
 
     for item in plan:
-        embed_html, meta = build_embed_block(item["url"], item.get("start", 0))
         pos = item.get("position", {}) or {}
         if pos.get("type") == "before_body":
-            insert_points.append((0, embed_html))
-            meta.update({"position": {"type": "before_body"}})
+            # Do NOT split content at 0 for before_body; only record a video link later
+            continue
         elif pos.get("type") == "before_heading":
             idx = pos.get("index", 1)
             if 1 <= idx <= len(headings):
                 char_index = headings[idx - 1].start()
             else:
                 char_index = len(html)
-            insert_points.append((char_index, embed_html))
-            meta.update({"position": {"type": "before_heading", "index": idx}})
+            insert_points.append((char_index, ""))
         else:
             # default to append at end
-            insert_points.append((len(html), embed_html))
-            meta.update({"position": {"type": "append_end"}})
-        embeds_meta.append(meta)
+            insert_points.append((len(html), ""))
 
     # Sort by index so that earlier insertions don't disturb later index
     insert_points.sort(key=lambda x: x[0])
@@ -246,8 +266,7 @@ def build_parts_with_embeds(html: str, plan: List[Dict[str, Any]]) -> Tuple[str,
             chunk = html[cursor:char_index]
             parts.append({"type": "html", "content": chunk})
             combined += chunk
-        parts.append({"type": "video", "content": embed_html})
-        combined += embed_html
+        # we are not injecting any video HTML; splitting only
         cursor = char_index
     # tail
     if cursor < len(html):
@@ -267,10 +286,12 @@ def prompt_yes_no(msg: str, default_no: bool = True) -> bool:
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Generate framer video JSON interactively")
+parser = argparse.ArgumentParser(description="Generate blog-scheme video JSON interactively (non-destructive)")
     parser.add_argument("--input", required=True, help="Path to existing Framer JSON (array)")
     parser.add_argument("--resources-dir", default="./video_resources", help="Directory with video_links.txt and local videos")
     parser.add_argument("--output", help="Output JSON path (default: alongside input with -video suffix)")
+    # Schema is no longer required; we follow fixed field naming:
+    # article_body_content, article_body_content_2..N and video_link_1..N
     parser.add_argument("--max-inline", type=int, default=4, help="Max videos inside body (excludes before-body)")
 
     args = parser.parse_args()
@@ -330,7 +351,7 @@ def main():
         if more:
             cloud_items.extend(more)
 
-    # 5) Offer uploading local videos
+    # 5) Offer uploading local videos (construct CDN URLs for files under resources dir)
     local_videos = []
     if resources_dir.exists():
         for p in resources_dir.iterdir():
@@ -354,7 +375,8 @@ def main():
         except subprocess.CalledProcessError:
             print("❌ Upload failed — you can retry later.")
         print("\nIf upload printed CDN URLs above, paste them here (one per line, empty line to end).\n"
-              "You may add start hints like 'start=1:23' on the same line.")
+              "You may add start hints like 'start=1:23' on the same line.\n"
+              "If you prefer, just press Enter and I will construct URLs from file names using CDN_VIDEO_URL_PREFIX.")
         while True:
             u = input().strip()
             if not u:
@@ -362,6 +384,12 @@ def main():
             up_more = parse_links_with_meta(u)
             if up_more:
                 uploaded_items.extend(up_more)
+
+        # Construct CDN URLs automatically if none were pasted
+        if not uploaded_items:
+            url_prefix = os.environ.get("CDN_VIDEO_URL_PREFIX", "https://ct2.alici.ai/static/video/other/gen_videos/")
+            for v in local_videos:
+                uploaded_items.append({"url": url_prefix + v.name, "start": 0})
 
     # Merge URLs (cloud + uploaded)
     all_items: List[Dict[str, Any]] = []
@@ -437,14 +465,68 @@ def main():
         print("➡️  Cancelled.")
         return 0
 
-    # 8) Build combined HTML and parts
-    combined_html, parts = build_parts_with_embeds(body_html, plan)
+    # 8) Build content parts WITHOUT injecting any iframe/video markup.
+    # Compute insertion character indices
+    matches = list(HEADING_RE.finditer(body_html))
+    split_positions: List[int] = []
+    for item in plan:
+        pos = item.get("position", {}) or {}
+        if pos.get("type") == "before_heading":
+            idx = pos.get("index", 1)
+            if 1 <= idx <= len(matches):
+                split_positions.append(matches[idx - 1].start())
+            else:
+                split_positions.append(len(body_html))
+        # Skip before_body for split; it does not create a new part before content
+    split_positions = sorted([i for i in split_positions if 0 <= i <= len(body_html)])
 
-    # Build output article object —
-    out_article = dict(article)  # shallow copy
-    out_article["article_body_content"] = combined_html
-    out_article["article_body_content_parts"] = parts
-    out_article["video_embeds"] = plan
+    # Split into parts around indices (m internal videos → m+1 parts)
+    parts_html: List[str] = []
+    last = 0
+    for posi in split_positions:
+        parts_html.append(body_html[last:posi])
+        last = posi
+    parts_html.append(body_html[last:])
+
+    # 9) Build output JSON (retain all source fields; ensure example fields present with source values only)
+    schema_item = load_schema_example()  # only used for field names
+    out_article: Dict[str, Any] = dict(article)
+
+    # Build case-insensitive map of source keys
+    src_lc = {unify_key(k): k for k in article.keys()}
+
+    # Ensure example fields exist; values MUST come from source JSON only.
+    missing: List[str] = []
+    if isinstance(schema_item, dict) and schema_item:
+        for k in schema_item.keys():
+            uk = unify_key(k)
+            if uk in src_lc:
+                # If the canonical example key casing differs, ensure that key also exists in output
+                if k not in out_article:
+                    out_article[k] = article[src_lc[uk]]
+            else:
+                missing.append(k)
+
+    if missing:
+        print("❌ Aborted: required fields (from blog_scheme_example.json) missing in source JSON.")
+        print("   Missing (by canonical names):")
+        for m in missing:
+            print("   -", m)
+        print("\n请先在源 JSON 中补齐这些字段的值（或通过编辑环节补齐），再重新运行本命令。")
+        return 1
+    # Set primary content and numbered parts
+    # Determine source content key
+    source_body = article.get("article_body_content") or article.get("content") or body_html
+
+    if parts_html:
+        out_article["article_body_content"] = parts_html[0] if parts_html[0] else source_body
+        for i in range(1, len(parts_html)):
+            out_article[f"article_body_content_{i+1}"] = parts_html[i]
+    else:
+        out_article["article_body_content"] = source_body
+    # Video links (ordered by plan): first could be BEFORE BODY
+    for i, it in enumerate(all_items, start=1):
+        out_article[f"video_link_{i}"] = it["url"]
 
     # 9) Decide output path
     if args.output:
@@ -470,6 +552,7 @@ def main():
     except Exception:
         pass
 
+    # Output as array (consistent with Framer export style)
     write_json(out_path, [out_article])
 
     print("\n" + "=" * 70)
@@ -477,11 +560,10 @@ def main():
     print("=" * 70)
     print(f"Output: {out_path}")
     print("Summary:")
-    print(f" - Parts: {len(parts)} (html/video blocks)")
+    print(f" - Parts: {len(parts_html)} (content segments)")
     print(f" - Videos: {len(plan)}")
     print("Next:")
-    print(" - Preview using your usual preview method")
-    print(" - Validate rendering of <div class=\"video-embed\"> blocks")
+    print(" - Validate article_body_content splits and video_link_1..N fields")
     return 0
 
 

@@ -123,6 +123,7 @@ AliciBlog 是一个 AI 驱动的内容工厂，采用分层架构：
 |------|------|
 | `/convert-to-framer FILE` | 转换为 Framer CMS JSON |
 | `/preview-framer FILE` | 本地预览 |
+| `/convert-to-video-framer-json FILE` | 在现有 JSON 基础上插入视频，输出 `*-video.json` |
 
 ---
 
