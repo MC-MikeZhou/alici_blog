@@ -2,27 +2,6 @@
 
 > AliciBlog: alici.ai AI 内容工厂，70%+ 自动化博客生产
 
-## Agent Routing: Video Integration (NEW)
-
-- 生成 Framer JSON（如 `06-article-final.json`）后，必须询问："是否需要插入视频？" 如需：
-  - 运行 `/convert-to-video-framer-json <path/to/article-final.json>`
-
-- 自然语言触发词（直接路由此能力）：
-  - “嵌入视频”, “插入视频”, “视频 json”, “视频集成”, "video embed", "insert video", "framer video"
-
-- 输入来源：
-  - 从 `/video_resources/video_links.txt` 解析链接（分隔符：换行/空格/英文逗号/中文逗号），并可识别 URL 参数或同行时间提示（t/start）
-  - `/video_resources` 下的本地视频（`.mp4/.webm/.mov/.mkv`）先用 `scripts/convert_to_video_json/upload_videos.py --dir ./video_resources` 上传 CDN，再用生成的 CDN 链接
-
-- 插入规则：
-  - 默认 1 个“正文之前”视频 + 正文内最多 4 个（在第 N 个 H2 前，H2 为 `<h6><strong>`）
-  - 生成前向用户展示插入计划，确认无误再输出
-
-- 输出规则（非破坏性，STRICT）：
-  - 只在同目录新增“输入名 + `-video.json`”，不改动原 JSON
-  - 不注入 `<iframe>`/`<video>`，不新增 `video_embeds` 等额外数组
-  - 仅输出：`article_body_content`（第一段）+ `article_body_content_2..N`（后续段），以及 `video_link_1..N`
-
 ## 核心架构
 
 ```

@@ -377,3 +377,88 @@ INFO (3):
 
 Status: ✅ VALID (ready for output)
 ```
+
+---
+
+## 追加字段（与 blog_scheme_example.json 对齐）
+
+> 说明：以下为在 `blog_scheme_example.json` 中出现、但本文件原先未明确定义的字段。为保持兼容与完整性，这些字段的规则在此补充。遵循项目约定：除“视频插入阶段新增字段”外，任何 example 中存在而源 JSON 缺失的字段都不可使用示例默认值或空值填充，必须来自源 JSON；否则应中止并提示。
+
+### 元数据补充字段
+
+| 字段 | 必需 | 类型 | 约束 | 值来源 |
+|------|------|------|------|--------|
+| `:draft` | ❌ | boolean | 草稿标记 | 仅可来自源 JSON（不可默认） |
+| `Author` | ❌ | string | 作者名（可为空字符串，但值需来自源） | 仅可来自源 JSON（不可默认） |
+| `hasTiktokVideo` | ❌ | boolean | 是否含 TikTok 视频 | 仅可来自源 JSON（不可默认） |
+| `VideoURL1` | ❌ | string | 视频 URL（HTTPS 建议） | 仅可来自源 JSON（不可默认） |
+| `IsDrafts` | ❌ | boolean | 备用草稿标记（与 `:draft` 并存时按来源保持） | 仅可来自源 JSON（不可默认） |
+| `TLNR 2` | ❌ | string | TLNR 补充文案 | 仅可来自源 JSON（不可默认） |
+
+补充说明：
+- 上述字段若 example 中存在而源 JSON 缺失，不得以示例值或空值补齐，应“阻断并提示”。
+- 字段名区分大小写，输出应与 example 的命名形式一致（值取自源 JSON 的等义字段）。
+
+### 视频插入阶段新增字段（仅由本 Skill 生成）
+
+> 这些字段不要求出现在输入的源 JSON 中，由“视频插入”流程根据用户确认的插入点生成；当未使用某一插入点时，可按 example 约定输出空字符串以占位。
+
+| 字段 | 必需 | 类型 | 约束 | 说明 |
+|------|------|------|------|------|
+| `video_link_1` | ❌ | string | 建议 HTTPS URL | 表示“正文之前”的视频链接（若用户选择该插入点） |
+| `article_body_content_2` | ❌ | string | HTML | 拆分后正文的第二段；未使用可为空字符串 |
+| `video_link_2` | ❌ | string | 建议 HTTPS URL | 插入在 `article_body_content` 与 `_2` 之间；未使用可为空字符串 |
+| `article_body_content_3` | ❌ | string | HTML | 拆分后第三段；未使用可为空字符串 |
+| `video_link_3` | ❌ | string | 建议 HTTPS URL | 插入在 `_2` 与 `_3` 之间；未使用可为空字符串 |
+| `article_body_content_4` | ❌ | string | HTML | 拆分后第四段；未使用可为空字符串 |
+| `video_link_4` | ❌ | string | 建议 HTTPS URL | 插入在 `_3` 与 `_4` 之间；未使用可为空字符串 |
+| `article_body_content_5` | ❌ | string | HTML | 拆分后第五段；未使用可为空字符串 |
+| `video_link_5` | ❌ | string | 建议 HTTPS URL | 插入在 `_4` 与 `_5` 之间；未使用可为空字符串 |
+
+严格要求（视频阶段）：
+- 不注入任何 `<iframe>`/`<video>` HTML 到正文；正文仅拆分为多段。
+- `article_body_content` 作为第一段，后续段依次为 `article_body_content_2`、`_3`、`_4`、`_5`。
+- 有多少插入点，就输出对应数量的 `video_link_N`；未使用的段/链接可用空字符串占位（与 example 一致）。
+- 其余所有字段必须逐字复制自源 JSON，值不得改动。
+
+---
+
+## 完整字段清单（以 example 为准）
+
+> 输出字段集 = 源 JSON 字段 ∪ example 字段。对于 example 中出现的“元数据字段”，值必须来自源 JSON；对于“视频插入阶段新增字段”，值来源于用户提供的视频链接与正文拆分结果。
+
+按示例包含（示例顺序）：
+- `Slug`
+- `:draft`
+- `Author`
+- `hasTiktokVideo`
+- `VideoURL1`
+- `IsDrafts`
+- `title`
+- `sub_title`
+- `TLNR`
+- `TLNR 2`
+- `cover`（对象，需包含 `url`）
+- `Date`
+- `read_time`
+- `main_category`
+- `recommend_category`
+- `video_link_1`
+- `article_body_content`
+- `video_link_2`
+- `article_body_content_2`
+- `video_link_3`
+- `article_body_content_3`
+- `video_link_4`
+- `article_body_content_4`
+- `video_link_5`
+- `article_body_content_5`
+- `CTA_alici_link`
+- `CTA button`
+- `meta_title`
+- `meta_description`
+- `tag_for_SEO`
+
+校验与失败策略：
+- 若上述“元数据补充字段”在 example 中存在而源 JSON 缺失 → 直接报错并中止（禁止使用示例默认值）。
+- “视频插入阶段新增字段”由本 Skill 生成；未使用的插入点允许输出空字符串以占位。

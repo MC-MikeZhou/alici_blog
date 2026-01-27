@@ -21,7 +21,6 @@ import argparse
 import json
 import os
 import re
-import subprocess
 import urllib.parse
 from pathlib import Path
 from typing import Dict, List, Tuple, Any
@@ -286,7 +285,7 @@ def prompt_yes_no(msg: str, default_no: bool = True) -> bool:
 
 
 def main():
-parser = argparse.ArgumentParser(description="Generate blog-scheme video JSON interactively (non-destructive)")
+    parser = argparse.ArgumentParser(description="Generate blog-scheme video JSON interactively (non-destructive)")
     parser.add_argument("--input", required=True, help="Path to existing Framer JSON (array)")
     parser.add_argument("--resources-dir", default="./video_resources", help="Directory with video_links.txt and local videos")
     parser.add_argument("--output", help="Output JSON path (default: alongside input with -video suffix)")
@@ -358,43 +357,23 @@ parser = argparse.ArgumentParser(description="Generate blog-scheme video JSON in
             if p.is_file() and p.suffix.lower() in (".mp4", ".webm", ".mov", ".mkv"):
                 local_videos.append(p)
 
-    upload_chosen = False
     if local_videos:
-        print("\n📹 Local videos found:")
+        print("\n📹 Local videos detected (this skill does NOT upload):")
         for v in local_videos:
             print("  -", v.name)
-        upload_chosen = prompt_yes_no("Upload these to CDN now?", default_no=False)
-
-    uploaded_items: List[Dict[str, Any]] = []
-    if upload_chosen:
-        upl = Path(__file__).parent / "upload_videos.py"
-        cmd = ["python", str(upl), "--dir", str(resources_dir)]
-        print("\nRunning:", " ".join(cmd))
-        try:
-            subprocess.run(cmd, check=True)
-        except subprocess.CalledProcessError:
-            print("❌ Upload failed — you can retry later.")
-        print("\nIf upload printed CDN URLs above, paste them here (one per line, empty line to end).\n"
-              "You may add start hints like 'start=1:23' on the same line.\n"
-              "If you prefer, just press Enter and I will construct URLs from file names using CDN_VIDEO_URL_PREFIX.")
+        print("Please upload these to your CDN (same method as images, e.g. rsync), then paste the CDN URLs here (one per line). Press Enter on an empty line to finish.")
         while True:
             u = input().strip()
             if not u:
                 break
-            up_more = parse_links_with_meta(u)
-            if up_more:
-                uploaded_items.extend(up_more)
-
-        # Construct CDN URLs automatically if none were pasted
-        if not uploaded_items:
-            url_prefix = os.environ.get("CDN_VIDEO_URL_PREFIX", "https://ct2.alici.ai/static/video/other/gen_videos/")
-            for v in local_videos:
-                uploaded_items.append({"url": url_prefix + v.name, "start": 0})
+            more = parse_links_with_meta(u)
+            if more:
+                cloud_items.extend(more)
 
     # Merge URLs (cloud + uploaded)
     all_items: List[Dict[str, Any]] = []
     by_url = set()
-    for it in cloud_items + uploaded_items:
+    for it in cloud_items:
         url = it.get("url")
         if not url or url in by_url:
             continue
@@ -468,17 +447,21 @@ parser = argparse.ArgumentParser(description="Generate blog-scheme video JSON in
     # 8) Build content parts WITHOUT injecting any iframe/video markup.
     # Compute insertion character indices
     matches = list(HEADING_RE.finditer(body_html))
-    split_positions: List[int] = []
+    # Collect internal insertions paired with their absolute char positions
+    internal_insertions: List[Tuple[int, Dict[str, Any]]] = []  # (char_index, plan_item)
     for item in plan:
         pos = item.get("position", {}) or {}
         if pos.get("type") == "before_heading":
             idx = pos.get("index", 1)
             if 1 <= idx <= len(matches):
-                split_positions.append(matches[idx - 1].start())
+                char_index = matches[idx - 1].start()
             else:
-                split_positions.append(len(body_html))
+                char_index = len(body_html)
+            internal_insertions.append((char_index, item))
         # Skip before_body for split; it does not create a new part before content
-    split_positions = sorted([i for i in split_positions if 0 <= i <= len(body_html)])
+    # Sort by char index (stable for equal indices)
+    internal_insertions.sort(key=lambda x: x[0])
+    split_positions: List[int] = [pos for pos, _ in internal_insertions]
 
     # Split into parts around indices (m internal videos → m+1 parts)
     parts_html: List[str] = []
@@ -496,10 +479,25 @@ parser = argparse.ArgumentParser(description="Generate blog-scheme video JSON in
     src_lc = {unify_key(k): k for k in article.keys()}
 
     # Ensure example fields exist; values MUST come from source JSON only.
+    # Some example fields are optional metadata (allowed to be absent in source):
+    OPTIONAL_EXAMPLE_FIELDS = {
+        unify_key(":draft"),
+        unify_key("Author"),
+        unify_key("hasTiktokVideo"),
+        unify_key("VideoURL1"),
+        unify_key("IsDrafts"),
+        unify_key("TLNR 2"),
+    }
     missing: List[str] = []
     if isinstance(schema_item, dict) and schema_item:
         for k in schema_item.keys():
+            # Video-phase fields are generated by this skill; do not require presence in source
+            if is_video_phase_field(k):
+                continue
             uk = unify_key(k)
+            if uk in OPTIONAL_EXAMPLE_FIELDS:
+                # Optional metadata present in example but not required if absent in source
+                continue
             if uk in src_lc:
                 # If the canonical example key casing differs, ensure that key also exists in output
                 if k not in out_article:
@@ -508,12 +506,10 @@ parser = argparse.ArgumentParser(description="Generate blog-scheme video JSON in
                 missing.append(k)
 
     if missing:
-        print("❌ Aborted: required fields (from blog_scheme_example.json) missing in source JSON.")
-        print("   Missing (by canonical names):")
+        # Soft warning only: proceed without aborting, but warn the operator
+        print("⚠️  Warning: some example fields are missing in source JSON (skipped):")
         for m in missing:
             print("   -", m)
-        print("\n请先在源 JSON 中补齐这些字段的值（或通过编辑环节补齐），再重新运行本命令。")
-        return 1
     # Set primary content and numbered parts
     # Determine source content key
     source_body = article.get("article_body_content") or article.get("content") or body_html
@@ -524,9 +520,25 @@ parser = argparse.ArgumentParser(description="Generate blog-scheme video JSON in
             out_article[f"article_body_content_{i+1}"] = parts_html[i]
     else:
         out_article["article_body_content"] = source_body
-    # Video links (ordered by plan): first could be BEFORE BODY
-    for i, it in enumerate(all_items, start=1):
-        out_article[f"video_link_{i}"] = it["url"]
+    # Video links
+    # - video_link_1: BEFORE BODY (if chosen), else empty string
+    # - Internal videos map to split positions in content order:
+    #   split #1 → video_link_2, split #2 → video_link_3, ...
+
+    # Prepare max slots (up to 5 like example): initialize empty
+    for n in range(1, 6):
+        out_article[f"video_link_{n}"] = ""
+
+    # Assign before-body if present
+    pre_body = next((it for it in plan if it.get("position", {}).get("type") == "before_body"), None)
+    if pre_body:
+        out_article["video_link_1"] = pre_body.get("url", "")
+
+    # Assign internal by content order
+    for idx, (_pos, item) in enumerate(internal_insertions, start=1):
+        slot = idx + 1  # split #1 -> video_link_2
+        if 2 <= slot <= 5:
+            out_article[f"video_link_{slot}"] = item.get("url", "")
 
     # 9) Decide output path
     if args.output:
@@ -552,6 +564,12 @@ parser = argparse.ArgumentParser(description="Generate blog-scheme video JSON in
     except Exception:
         pass
 
+    # Ensure numbered body parts keys exist up to 5 (fill empty if not used) to match example structure
+    for n in range(2, 6):
+        key = f"article_body_content_{n}"
+        if key not in out_article:
+            out_article[key] = ""
+
     # Output as array (consistent with Framer export style)
     write_json(out_path, [out_article])
 
@@ -565,6 +583,20 @@ parser = argparse.ArgumentParser(description="Generate blog-scheme video JSON in
     print("Next:")
     print(" - Validate article_body_content splits and video_link_1..N fields")
     return 0
+
+def is_video_phase_field(name: str) -> bool:
+    """Return True for fields that are allowed to be newly created by this skill.
+    These include:
+      - video_link_1..N
+      - article_body_content_2..N
+    """
+    uk = unify_key(name)
+    if uk.startswith("videolink"):
+        return True
+    if uk.startswith("articlebodycontent") and uk != "articlebodycontent":
+        # numbered article_body_content_N (N>=2)
+        return True
+    return False
 
 
 if __name__ == "__main__":
