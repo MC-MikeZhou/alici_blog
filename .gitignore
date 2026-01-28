@@ -48,3 +48,38 @@ logs/
 
 # Local video resources (do not track)
 /video_resources/
+
+# Video files (ignore all common formats)
+# This prevents committing large/binary video assets to the repo.
+# Case-insensitive patterns for major types + broad lowercase coverage.
+*.[Mm][Pp]4
+*.[Mm][Oo][Vv]
+*.[Aa][Vv][Ii]
+*.[Mm][Kk][Vv]
+*.[Mm]4[Vv]
+*.[Ww][Ee][Bb][Mm]
+*.[Ww][Mm][Vv]
+*.flv
+*.f4v
+*.webm
+*.mkv
+*.mov
+*.mp4
+*.m4v
+*.avi
+*.wmv
+*.mpeg
+*.mpg
+*.mpe
+*.3gp
+*.3g2
+*.ogv
+*.ts
+*.m2ts
+*.mts
+*.vob
+*.mxf
+*.rm
+*.rmvb
+*.qt
+*.dat
