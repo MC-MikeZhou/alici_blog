@@ -1,6 +1,6 @@
 # Convert to Video Framer JSON (v0.9)
 
-> 在既有 Framer JSON 基础上，按用户需求插入视频（最多 5 个：正文前 1 个 + 正文内最多 4 个），生成输入名 + `-video.json`，不改动原文件。
+> 在既有 Framer JSON 基础上，按用户需求插入视频（最多 10 个：正文前 1 个 + 正文内最多 9 个），生成输入名 + `-video.json`，不改动原文件。
 
 ## Usage
 
@@ -32,11 +32,11 @@ Phase 7: (可选) /convert-to-video-framer-json 06-article-final.json
    - 段落预览：按 H2 拆分为“段1..段N”，展示每段开头摘要
    - 必须经用户确认具体“使用哪个视频、插在第几段之前”；未确认不得默认插到正文顶部、也不得直接生成 JSON
    - 默认支持 1 个“正文之前”视频
-   - 正文内最多 4 个“在第 N 个 H2 前”插入点（H2 为 `<h6><strong>`）
+   - 正文内最多 9 个“在第 N 个 H2 前”插入点（H2 为 `<h6><strong>`）
    - 输出插入计划供用户确认
 5. 生成输出（非破坏，STRICT 不注入 HTML）：
-   - 正文拆分：`article_body_content`（第一段）、`article_body_content_2..N`（后续段）
-   - 视频链接：`video_link_1..N`（按插入顺序；若选择“正文前”，`video_link_1` 表示 Before Body）
+   - 正文拆分：`article_body_content`（第一段）、`article_body_content_2..10`（后续段）
+   - 视频链接：`video_link_1..10`（按插入顺序；若选择“正文前”，`video_link_1` 表示 Before Body）
    - 输出文件名：在输入 JSON 文件名基础上追加 `-video` 后缀，例如：
      - `06-article-final.json` → `06-article-final-video.json`
      - `06-article-final-v2.3.json` → `06-article-final-v2.3-video.json`
@@ -48,7 +48,7 @@ Phase 7: (可选) /convert-to-video-framer-json 06-article-final.json
 
 ## Resource Location（重要变更）
 
-- 资源定位，与输入 Framer JSON 同目录”。
+- 资源定位：与输入 Framer JSON 同目录。
 - 将 `video_links.txt` 和待上传的本地视频文件放在与 `06-article-final.json` 相同的目录。
 - 可选参数：`--resources-dir` 指向输入 JSON 同目录（如未显式提供，交互流程会默认以输入 JSON 所在目录为资源目录）。
 

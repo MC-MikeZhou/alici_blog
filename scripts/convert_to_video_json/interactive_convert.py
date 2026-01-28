@@ -10,8 +10,8 @@ Steps:
  3) Map each confirmed video to an insertion position (before body, or before a heading)
  4) Produce *-video.json with ONLY:
     - article_body_content (first segment of original HTML)
-    - article_body_content_2..N (subsequent segments)
-    - video_link_1..N (ordered by insertion request; video_link_1 is BEFORE BODY if chosen)
+    - article_body_content_2..10 (subsequent segments, up to _10)
+    - video_link_1..10 (ordered by insertion request; video_link_1 is BEFORE BODY if chosen)
 
 Note: video_links.txt parsing is delimiter-based (newline/space/comma). Non-HTTP(S)
       tokens are ignored. You may still add extra URLs interactively.
@@ -295,8 +295,8 @@ def main():
     parser.add_argument("--resources-dir", default=None, help="Directory with video_links.txt and local videos (default: same directory as --input)")
     parser.add_argument("--output", help="Output JSON path (default: alongside input with -video suffix)")
     # Schema is no longer required; we follow fixed field naming:
-    # article_body_content, article_body_content_2..N and video_link_1..N
-    parser.add_argument("--max-inline", type=int, default=4, help="Max videos inside body (excludes before-body; up to 9)")
+    # article_body_content, article_body_content_2..10 and video_link_1..10
+    parser.add_argument("--max-inline", type=int, default=9, help="Max videos inside body (excludes before-body; up to 9)")
 
     args = parser.parse_args()
 
@@ -616,14 +616,14 @@ def main():
     print(f" - Parts: {len(parts_html)} (content segments)")
     print(f" - Videos: {len(plan)}")
     print("Next:")
-    print(" - Validate article_body_content splits and video_link_1..N fields")
+    print(" - Validate article_body_content splits and video_link_1..10 fields")
     return 0
 
 def is_video_phase_field(name: str) -> bool:
     """Return True for fields that are allowed to be newly created by this skill.
     These include:
-      - video_link_1..N
-      - article_body_content_2..N
+      - video_link_1..10
+      - article_body_content_2..10
     """
     uk = unify_key(name)
     if uk.startswith("videolink"):

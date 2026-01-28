@@ -146,7 +146,7 @@ python scripts/convert_to_video_json/interactive_convert.py \
 # 可选参数
 # --resources-dir    /framer.json所在目录
 # --output /reports/.../06-article-final-video.json  # 自定义输出路径
-# --max-inline 4                        # 交互脚本当前默认最多 4 个正文内视频（Schema 支持至 9）
+# --max-inline 9                        # 正文内最多 9 个（总计 10：顶部 1 + 内部 9）
 ```
 
 
