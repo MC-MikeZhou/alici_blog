@@ -28,9 +28,9 @@ metadata:
 - 必读：`skills/utilities/convert-to-video-framer-json/FIELD_SCHEMA.md`
 - 必读：`skills/utilities/convert-to-video-framer-json/CONVERSION_RULES.md`
 - 已完成标准导出：`/convert-to-framer`（即已存在 `framer.json`，常见名如 `06-article-final.json`）
-- 项目根目录存在 `/video_resources/` 目录：
-  - `video_links.txt`（可能包含云端视频链接，原始文本，不保证可自动解析）
-  - 本地视频文件（如 `.mp4`, `.webm`, `.mov` 等）
+- 上述json文件所在目录下，存在可使用的视频。 
+  - 以链接形式存在的视频，在`video_links.txt`中， 看看该目录下有没有这个文件。
+  - 以本地文件形式（如 `.mp4`, `.webm`, `.mov` 等）放在该目录下
 
 ## 执行流程（交互式）
 
@@ -45,20 +45,20 @@ metadata:
 此时暂停，没有询问清楚什么视频，插入什么文章位置前，不能继续。不能擅自将没有确认的视频插入文章顶部，不能未经允许擅自生成json，本地视频视频也要列出，不要只列出云端链接。
 此时暂停，没有询问清楚什么视频，插入什么文章位置前，不能继续。不能擅自将没有确认的视频插入文章顶部，不能未经允许擅自生成json，本地视频视频也要列出，不要只列出云端链接。
 
-   - 视频列表 A：当前可用的视频链接（从 `video_links.txt` + /video_resources/本地视频 + 手动粘贴汇总）
+   - 视频列表 A：当前可用的视频链接（从 `framer.json的目录/video_links.txt` + 该framer.json的目录下的本地视频 + 手动粘贴汇总）
    - 列表 B：文章段落预览（按 H2 拆分得到的“段1..段N”，每段给出开头摘要）
 
-   - 从 `video_resources/video_links.txt` 解析云端链接（分隔符：换行/空格/英文逗号），列出给用户确认
+   - 从 `该framer.json的目录/video_links.txt` 解析云端链接（分隔符：换行/空格/英文逗号），列出给用户确认
    - 支持手动追加/删减链接
  
 
-3) 上传视频，如果用户要使用本地的视频，请通过以下方式上传获得云端链接。
+1) 上传视频，如果用户要使用本地的视频，请通过以下方式上传获得云端链接。
 视频如何上传和获得链接，可以模仿下面的方式上传获得链接
-本地视频会在 /video_resources/ 中
-比如 ： /video_resources/${name}.mp4
+本地视频会在 该framer.json的目录 中
+比如 ：该framer.json的目录/${name}.mp4
 上传使用ssh命令：
 ssh命令：
-rsync -a -r -v -p -e 'ssh -p 22'  --exclude='.DS_Store'  --progress ${项目绝对路径}/video_resources/${name}.mp4 root@45.76.70.215:/var/www/static/static/image/other/
+rsync -a -r -v -p -e 'ssh -p 22'  --exclude='.DS_Store'  --progress ${完整前置路径}/${name}.mp4 root@45.76.70.215:/var/www/static/static/image/other/
 password:  5A_p@cjpX74H(LJM
 
 最终获得的链接如下：
@@ -66,7 +66,7 @@ https://ct2.alici.ai/static/image/other/${name}.mp4
 
 
 
-4) 生成 `*-video.json`（基于输入文件名追加 `-video`）：
+1) 生成 `*-video.json`（基于输入文件名追加 `-video`）：
    - 不注入任何 `<iframe>` / `<video>` 标记，不改写正文 HTML
    - 仅基于“插入点”把正文拆散为多段：第一段写入 `article_body_content`；后续段依次写入 `article_body_content_2`、`article_body_content_3` ...
    - 依序写入视频链接字段：`video_link_1`、`video_link_2`、...
@@ -134,7 +134,7 @@ python scripts/convert_to_video_json/interactive_convert.py \
   --input /reports/2026-01-26-sample/06-article-final.json
 
 # 可选参数
-# --resources-dir ./video_resources     # 默认使用仓库根的 /video_resources
+# --resources-dir    /framer.json所在目录     
 # --output /reports/.../06-article-final-video.json  # 自定义输出路径
 # --max-inline 4                        # 正文内最多4个
 ```
