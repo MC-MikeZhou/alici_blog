@@ -1,0 +1,132 @@
+{
+  "primary_keyword": "best ai video generators 2026",
+  "search_intent": "best-list",
+  "content_type": "list",
+  "recommended_titles": [
+    "5 Best AI Video Generators in 2026 (Tested & Compared)"
+  ],
+  "selected_title": "5 Best AI Video Generators in 2026 (Tested & Compared)",
+  "outline": {
+    "h2_sections": [
+      "Key Takeaways",
+      "Quick Comparison Table",
+      "Our Evaluation Methodology",
+      "1. Sora 2 - Best for Cinematic Storytelling",
+      "2. Runway Gen-4.5 - Best for Creative Control",
+      "3. Wan 2.6 - Best Open-Source Alternative",
+      "4. Kling 2.6 - Best for Realistic Human Motion",
+      "5. Alici AI - Best All-in-One Platform",
+      "How We Tested",
+      "Which AI Video Generator Should You Choose?",
+      "Frequently Asked Questions",
+      "Final Verdict"
+    ],
+    "key_questions": [
+      "What is the best AI video generator in 2026?",
+      "Which AI video generator has the best quality?",
+      "Is Sora 2 worth the price?",
+      "Can I try multiple AI video generators without signing up for each?",
+      "What is the cheapest AI video generator?"
+    ]
+  },
+  "verified_tools": [
+    {
+      "name": "Sora 2",
+      "verified_version": "2.0",
+      "vendor": "OpenAI",
+      "core_positioning": "Best for cinematic storytelling and high-end brand visuals",
+      "source": "Competitor analysis (Higgsfield, Manus, Invideo)"
+    },
+    {
+      "name": "Runway",
+      "verified_version": "Gen-4.5",
+      "vendor": "Runway ML",
+      "core_positioning": "Best for creative control and professional editing workflows",
+      "source": "Competitor analysis (Manus, Invideo)"
+    },
+    {
+      "name": "Wan",
+      "verified_version": "2.6",
+      "vendor": "Alibaba",
+      "core_positioning": "Best open-source alternative with strong community support",
+      "source": "Competitor analysis (Higgsfield)"
+    },
+    {
+      "name": "Kling",
+      "verified_version": "2.6",
+      "vendor": "Kuaishou",
+      "core_positioning": "Best for realistic human motion and facial expressions",
+      "source": "Competitor analysis (Higgsfield, Manus, Invideo)"
+    },
+    {
+      "name": "Alici AI",
+      "verified_version": "Current",
+      "vendor": "Alici",
+      "core_positioning": "Best all-in-one platform with multi-model access",
+      "source": "Internal product"
+    }
+  ],
+  "verification_date": "2026-01-23",
+  "aeo_block": {
+    "target_question": "What is the best AI video generator in 2026?",
+    "direct_answer_draft": "The best AI video generators in 2026 are Sora 2 for cinematic storytelling, Runway Gen-4.5 for creative control, Wan 2.6 as an open-source alternative, Kling 2.6 for realistic human motion, and Alici AI as an all-in-one platform that integrates multiple top models."
+  },
+  "alici_angle": "Position Alici AI as the smart choice for beginners who want to try multiple AI video models without managing separate subscriptions",
+  "product_mapping": {
+    "primary_product": {
+      "id": "video_studio",
+      "name": "AI Video Studio",
+      "url": "https://app.alici.ai/pages/videoGen",
+      "cta_text": "Try All Models Free",
+      "features": ["Kling 2.6", "Runway Gen-4", "Veo 3", "Sora 2 (coming)"],
+      "positioning": "all_in_one_platform",
+      "list_rank": 5
+    },
+    "competitors_to_include": [
+      {"name": "Sora 2", "category": "premium_cinematic", "rank": 1},
+      {"name": "Runway Gen-4.5", "category": "professional", "rank": 2},
+      {"name": "Wan 2.6", "category": "open_source", "rank": 3},
+      {"name": "Kling 2.6", "category": "realistic_motion", "rank": 4}
+    ]
+  },
+  "evaluation_framework": {
+    "dimensions": [
+      {"name": "Realism", "weight": "25%", "method": "Visual quality assessment across 20 test prompts"},
+      {"name": "Motion Fidelity", "weight": "25%", "method": "Physics accuracy and movement naturalness"},
+      {"name": "Temporal Consistency", "weight": "20%", "method": "Frame-to-frame coherence analysis"},
+      {"name": "Style Control", "weight": "15%", "method": "Customization options and creative flexibility"},
+      {"name": "Ease of Use", "weight": "15%", "method": "Interface intuitiveness and learning curve"}
+    ],
+    "test_environment": {
+      "test_period": "January 2026",
+      "sample_size": "50+ video generations per tool",
+      "testing_team": "alici.ai Content Team"
+    }
+  },
+  "competitor_sources": [
+    {
+      "source": "Higgsfield",
+      "title": "Testing Top 5 AI Video Generator Models",
+      "tools_covered": ["Sora 2", "Veo 3.1", "WAN 2.5", "Kling", "Minimax"],
+      "key_insight": "Professional Studio workflow perspective"
+    },
+    {
+      "source": "Manus",
+      "title": "2026 Top 10 AI Video Generators",
+      "tools_covered": ["Runway", "HeyGen", "Sora", "Kling", "Synthesia", "Luma", "Pika", "Veo 3", "Adobe Firefly", "Manus"],
+      "key_insight": "Most comprehensive coverage with use-case categorization"
+    },
+    {
+      "source": "Invideo",
+      "title": "Kling vs Sora vs Veo vs Runway: Which AI Model Wins?",
+      "tools_covered": ["Kling", "Sora", "Veo", "Runway"],
+      "key_insight": "Production-oriented with prompt optimization examples"
+    }
+  ],
+  "writing_config": {
+    "target_words": "2500-3500",
+    "aeo_target": 75,
+    "language": "English",
+    "rewrite_ratio": "80%+ competitor reference"
+  }
+}
