@@ -30,6 +30,19 @@
     "video_link_5": "",// 视频插入在 article_body_content_4  和 article_body_content_5  之间，不需要传入空字符串
     "article_body_content_5": "",//  不需要时，传入空字符串
     
+    // 下面以此类推
+    "video_link_6": "",
+    "article_body_content_6": "",
+    "video_link_7": "",
+    "article_body_content_7": "",
+    "video_link_8": "",
+    "article_body_content_8": "",
+    "video_link_9": "",
+    "article_body_content_9": "",
+    "video_link_10": "",
+    "article_body_content_10": "",
+
+
     "CTA_alici_link": "https://app.alici.ai/",
     "CTA button": "Try It NOW",
     "meta_title": "the-night-agent-story-ai-video-template",

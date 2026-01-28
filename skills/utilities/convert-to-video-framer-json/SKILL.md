@@ -19,7 +19,7 @@ metadata:
 
 # Convert-to-Video Framer JSON Skill (v0.9)
 
-> 在既有 `framer.json` 基础上，按用户需求插入视频（最多 5 个：正文前 1 个 + 正文内最多 4 个），生成“输入名 + `-video.json`”。
+> 在既有 `framer.json` 基础上，按用户需求插入视频（Schema 支持最多 10 个：正文前 1 个 + 正文内最多 9 个），生成“输入名 + `-video.json`”。
 
 > 非破坏性（Non-Destructive）保证：本 Skill 绝不会修改或覆盖任何已有输出（如 `06-article-final.json`）。只会新增一个以输入文件名为基础、追加 `-video` 后缀的 JSON 文件。
 
@@ -72,7 +72,7 @@ https://ct2.alici.ai/static/image/other/${name}.mp4
    - 依序写入视频链接字段：`video_link_1`、`video_link_2`、...
    - 其余字段保持与输入 JSON 一致，不做改动
 
-严格要求：输出字段与结构必须与 `blog_scheme_example.json` 对齐，除 `video_link_N` 与 `article_body_content_2..N` 外，不得新增任何额外字段。
+严格要求：输出字段与结构必须与 `blog_scheme_example.json` 对齐，除 `video_link_N` 与 `article_body_content_2..10` 外，不得新增任何额外字段。
 
 
 
@@ -83,19 +83,29 @@ https://ct2.alici.ai/static/image/other/${name}.mp4
   - 段1 → `article_body_content`
   - 段2 → `article_body_content_2`
   - 段3 → `article_body_content_3`
-  - 以此类推（最多至 `_5`）
+  - 以此类推（最多至 `_10`）
 - 视频插入字段（按“段间”定义）：
   - `video_link_1` → 正文顶部（在 `article_body_content` 之前）
   - `video_link_2` → 段1 与 段2 之间（`article_body_content` 与 `_2` 之间）
   - `video_link_3` → 段2 与 段3 之间（`_2` 与 `_3` 之间）
   - `video_link_4` → 段3 与 段4 之间（`_3` 与 `_4` 之间）
   - `video_link_5` → 段4 与 段5 之间（`_4` 与 `_5` 之间）
+  - `video_link_6` → 段5 与 段6 之间（`_5` 与 `_6` 之间）
+  - `video_link_7` → 段6 与 段7 之间（`_6` 与 `_7` 之间）
+  - `video_link_8` → 段7 与 段8 之间（`_7` 与 `_8` 之间）
+  - `video_link_9` → 段8 与 段9 之间（`_8` 与 `_9` 之间）
+  - `video_link_10` → 段9 与 段10 之间（`_9` 与 `_10` 之间）
 
 article_body_content
 article_body_content_2
 article_body_content_3
 article_body_content_4
-article_body_content_5 
+article_body_content_5
+article_body_content_6
+article_body_content_7
+article_body_content_8
+article_body_content_9
+article_body_content_10 
 不是文章的段落，而是被视频分割开的html。
 
 一篇文章有20个段落，被一个视频分成了两段，视频在第9-10之间插入，那么
@@ -134,9 +144,9 @@ python scripts/convert_to_video_json/interactive_convert.py \
   --input /reports/2026-01-26-sample/06-article-final.json
 
 # 可选参数
-# --resources-dir    /framer.json所在目录     
+# --resources-dir    /framer.json所在目录
 # --output /reports/.../06-article-final-video.json  # 自定义输出路径
-# --max-inline 4                        # 正文内最多4个
+# --max-inline 4                        # 交互脚本当前默认最多 4 个正文内视频（Schema 支持至 9）
 ```
 
 
@@ -150,8 +160,8 @@ python scripts/convert_to_video_json/interactive_convert.py \
 
 包含字段（STRICT）：
 - `article_body_content`（正文第一段）
-- `article_body_content_2..N`（正文后续段）
-- `video_link_1..N`（对应每个插入点的视频链接，已上传 CDN 或云端链接）
+- `article_body_content_2..10`（正文后续段，最多到 `_10`）
+- `video_link_1..10`（对应每个插入点的视频链接，已上传 CDN 或云端链接）
 
 禁止输出（STRICT）：
 - 不输出 `video_embeds`、`article_body_content_parts`、`article_body_content_html_injected` 等任何额外字段
@@ -167,7 +177,7 @@ python scripts/convert_to_video_json/interactive_convert.py \
 - 加载 example 的字段清单并对源 JSON 做映射校验：
   - 所有 example 中的“元数据字段”必须能在源 JSON 中找到值（大小写/分隔差异可映射），否则中止。
   - 值只能来自源 JSON，严禁用 example 示例值或自拟默认值代替。
-  - 仅在视频插入阶段新增 `video_link_N` 与 `article_body_content_2..N` 字段；未使用的插入点允许空字符串占位。
+  - 仅在视频插入阶段新增 `video_link_N` 与 `article_body_content_2..10` 字段；未使用的插入点允许空字符串占位（最多到 `_10`）。
 
 ## 注意事项
 

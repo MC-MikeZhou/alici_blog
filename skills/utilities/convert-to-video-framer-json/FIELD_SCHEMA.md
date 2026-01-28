@@ -414,10 +414,20 @@ Status: ✅ VALID (ready for output)
 | `video_link_4` | ❌ | string | 建议 HTTPS URL | 插入在 `_3` 与 `_4` 之间；未使用可为空字符串 |
 | `article_body_content_5` | ❌ | string | HTML | 拆分后第五段；未使用可为空字符串 |
 | `video_link_5` | ❌ | string | 建议 HTTPS URL | 插入在 `_4` 与 `_5` 之间；未使用可为空字符串 |
+| `article_body_content_6` | ❌ | string | HTML | 拆分后第六段；未使用可为空字符串 |
+| `video_link_6` | ❌ | string | 建议 HTTPS URL | 插入在 `_5` 与 `_6` 之间；未使用可为空字符串 |
+| `article_body_content_7` | ❌ | string | HTML | 拆分后第七段；未使用可为空字符串 |
+| `video_link_7` | ❌ | string | 建议 HTTPS URL | 插入在 `_6` 与 `_7` 之间；未使用可为空字符串 |
+| `article_body_content_8` | ❌ | string | HTML | 拆分后第八段；未使用可为空字符串 |
+| `video_link_8` | ❌ | string | 建议 HTTPS URL | 插入在 `_7` 与 `_8` 之间；未使用可为空字符串 |
+| `article_body_content_9` | ❌ | string | HTML | 拆分后第九段；未使用可为空字符串 |
+| `video_link_9` | ❌ | string | 建议 HTTPS URL | 插入在 `_8` 与 `_9` 之间；未使用可为空字符串 |
+| `article_body_content_10` | ❌ | string | HTML | 拆分后第十段；未使用可为空字符串 |
+| `video_link_10` | ❌ | string | 建议 HTTPS URL | 插入在 `_9` 与 `_10` 之间；未使用可为空字符串 |
 
 严格要求（视频阶段）：
 - 不注入任何 `<iframe>`/`<video>` HTML 到正文；正文仅拆分为多段。
-- `article_body_content` 作为第一段，后续段依次为 `article_body_content_2`、`_3`、`_4`、`_5`。
+- `article_body_content` 作为第一段，后续段依次为 `article_body_content_2..10`（最多支持到 `_10`）。
 - 有多少插入点，就输出对应数量的 `video_link_N`；未使用的段/链接可用空字符串占位（与 example 一致）。
 - 其余所有字段必须逐字复制自源 JSON，值不得改动。
 
@@ -453,6 +463,16 @@ Status: ✅ VALID (ready for output)
 - `article_body_content_4`
 - `video_link_5`
 - `article_body_content_5`
+- `video_link_6`
+- `article_body_content_6`
+- `video_link_7`
+- `article_body_content_7`
+- `video_link_8`
+- `article_body_content_8`
+- `video_link_9`
+- `article_body_content_9`
+- `video_link_10`
+- `article_body_content_10`
 - `CTA_alici_link`
 - `CTA button`
 - `meta_title`

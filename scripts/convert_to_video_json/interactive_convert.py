@@ -5,9 +5,9 @@ Interactive converter to generate a video-split JSON (no HTML injection).
 Steps:
  1) Load existing Framer JSON (array with one article object)
  2) Collect cloud video URLs:
-    - Parse ./video_resources/video_links.txt using separators: newline/space/comma
-    - Optionally upload local videos in ./video_resources to CDN (rsync)
- 3) Map each video to an insertion position (before body, or before a heading)
+    - Parse video_links.txt in the same directory as the input JSON (or --resources-dir) using separators: newline/space/comma
+    - Optionally upload local videos from the same directory to CDN (rsync)
+ 3) Map each confirmed video to an insertion position (before body, or before a heading)
  4) Produce *-video.json with ONLY:
     - article_body_content (first segment of original HTML)
     - article_body_content_2..N (subsequent segments)
@@ -292,11 +292,11 @@ def prompt_yes_no(msg: str, default_no: bool = True) -> bool:
 def main():
     parser = argparse.ArgumentParser(description="Generate blog-scheme video JSON interactively (non-destructive)")
     parser.add_argument("--input", required=True, help="Path to existing Framer JSON (array)")
-    parser.add_argument("--resources-dir", default="./video_resources", help="Directory with video_links.txt and local videos")
+    parser.add_argument("--resources-dir", default=None, help="Directory with video_links.txt and local videos (default: same directory as --input)")
     parser.add_argument("--output", help="Output JSON path (default: alongside input with -video suffix)")
     # Schema is no longer required; we follow fixed field naming:
     # article_body_content, article_body_content_2..N and video_link_1..N
-    parser.add_argument("--max-inline", type=int, default=4, help="Max videos inside body (excludes before-body)")
+    parser.add_argument("--max-inline", type=int, default=4, help="Max videos inside body (excludes before-body; up to 9)")
 
     args = parser.parse_args()
 
@@ -305,7 +305,7 @@ def main():
         print(f"❌ Input not found: {input_path}")
         return 1
 
-    resources_dir = Path(args.resources_dir)
+    resources_dir = Path(args.resources_dir) if args.resources_dir else input_path.parent
     links_file = resources_dir / "video_links.txt"
 
     # 1) Load JSON
@@ -394,43 +394,73 @@ def main():
     print("\n🔖 Headings detected:")
     for idx, text in headings:
         print(f"  {idx}. {text}")
-    print("  0. (Before body — default top embed)")
+    print("  0. (Before body)")
+
+    # Show consolidated video list
+    print("\n🎞️  Available videos:")
+    for i, it in enumerate(all_items, 1):
+        s = f" (start={it['start']}s)" if it.get("start") else ""
+        print(f"  {i}. {it['url']}{s}")
 
     plan: List[Dict[str, Any]] = []
-    # First: allow optional pre-body default
-    # Default per requirement: one video is placed before body by default
-    use_pre_body = prompt_yes_no("Insert a video BEFORE BODY (top)?", default_no=False)
-    if use_pre_body:
-        first = all_items[0]
-        url = first["url"]
-        start = int(first.get("start") or 0)
+    # Optional: choose a specific video for BEFORE BODY (no default)
+    raw_pre = input("\nSelect a video INDEX to insert BEFORE BODY (Enter to skip): ").strip()
+    remaining_items = list(all_items)
+    if raw_pre:
+        try:
+            pre_idx = int(raw_pre)
+            if 1 <= pre_idx <= len(remaining_items):
+                chosen = remaining_items.pop(pre_idx - 1)
+                url = chosen["url"]
+                start = int(chosen.get("start") or 0)
+                if is_youtube(url) and start == 0:
+                    s = input("Optional start time in seconds (Enter to skip): ").strip()
+                    if s.isdigit():
+                        start = int(s)
+                plan.append({"url": url, "start": start, "position": {"type": "before_body"}})
+            else:
+                print("  ⚠️  Invalid index for BEFORE BODY. Skipped.")
+        except ValueError:
+            print("  ⚠️  Invalid input for BEFORE BODY. Skipped.")
+
+    # For remaining videos, allow up to max-inline. Explicitly choose video and heading for each.
+    count_allowed = min(args.max_inline, len(remaining_items), 9)
+    for i in range(count_allowed):
+        if not remaining_items:
+            break
+        print(f"\nSelect insertion for inline video #{i+1} (of {count_allowed})")
+        # Show remaining list
+        for j, it in enumerate(remaining_items, 1):
+            s = f" (start={it['start']}s)" if it.get("start") else ""
+            print(f"  {j}. {it['url']}{s}")
+        raw_vid = input("Enter VIDEO index to use (blank to finish): ").strip()
+        if not raw_vid:
+            break
+        try:
+            v_idx = int(raw_vid)
+        except ValueError:
+            print("  Invalid number, skipping.")
+            continue
+        if not (1 <= v_idx <= len(remaining_items)):
+            print("  Index out of range, skipping.")
+            continue
+        chosen = remaining_items.pop(v_idx - 1)
+        url = chosen["url"]
+        start = int(chosen.get("start") or 0)
         if is_youtube(url) and start == 0:
             s = input("Optional start time in seconds (Enter to skip): ").strip()
             if s.isdigit():
                 start = int(s)
-        plan.append({"url": url, "start": start, "position": {"type": "before_body"}})
-
-    # For remaining videos, allow up to max-inline
-    remaining_items = all_items[1:] if use_pre_body else all_items
-    count_allowed = min(args.max_inline, len(remaining_items))
-    for i in range(count_allowed):
-        print(f"\nSelect insertion for video #{i+1} (of {count_allowed})")
-        print("Enter heading index (1..N) or blank to skip:")
-        raw = input().strip()
-        if not raw:
+        print("Enter HEADING index (1..N) before which to insert (blank to skip):")
+        raw_head = input().strip()
+        if not raw_head:
+            print("  Skipped this insertion.")
             continue
         try:
-            idx = int(raw)
+            idx = int(raw_head)
         except ValueError:
-            print("  Invalid number, skipping this video.")
+            print("  Invalid number, skipping.")
             continue
-        it = remaining_items[i]
-        url = it["url"]
-        start = int(it.get("start") or 0)
-        if is_youtube(url) and start == 0:
-            s = input("Optional start time in seconds (Enter to skip): ").strip()
-            if s.isdigit():
-                start = int(s)
         plan.append({"url": url, "start": start, "position": {"type": "before_heading", "index": idx}})
 
     # 7) Confirm plan
@@ -530,8 +560,8 @@ def main():
     # - Internal videos map to split positions in content order:
     #   split #1 → video_link_2, split #2 → video_link_3, ...
 
-    # Prepare max slots (up to 5 like example): initialize empty
-    for n in range(1, 6):
+    # Prepare max slots (up to 10 as per schema): initialize empty
+    for n in range(1, 11):
         out_article[f"video_link_{n}"] = ""
 
     # Assign before-body if present
@@ -542,7 +572,7 @@ def main():
     # Assign internal by content order
     for idx, (_pos, item) in enumerate(internal_insertions, start=1):
         slot = idx + 1  # split #1 -> video_link_2
-        if 2 <= slot <= 5:
+        if 2 <= slot <= 10:
             out_article[f"video_link_{slot}"] = item.get("url", "")
 
     # 9) Decide output path
@@ -569,8 +599,8 @@ def main():
     except Exception:
         pass
 
-    # Ensure numbered body parts keys exist up to 5 (fill empty if not used) to match example structure
-    for n in range(2, 6):
+    # Ensure numbered body parts keys exist up to 10 (fill empty if not used) to match example structure
+    for n in range(2, 11):
         key = f"article_body_content_{n}"
         if key not in out_article:
             out_article[key] = ""

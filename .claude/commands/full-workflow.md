@@ -46,7 +46,7 @@ ls /Users/H/Documents/AliciBlog/skills/*/SKILL.md /Users/H/Documents/AliciBlog/s
 │ Phase 7: 视频集成 (可选)                                     │
 │ 询问是否需要插入视频 → 若是：                               │
 │ /convert-to-video-framer-json 06-article-final.json         │
-│ └─ 解析 /video_resources/video_links.txt → 选择插入位置      │
+│ └─ 解析 <输入 JSON 同目录>/video_links.txt + 列出同目录本地视频 → 选择插入位置 │
 │ └─ 输出 *-video.json (非破坏性，仅新增)                      │
 └─────────────────────────────────────────────────────────────┘
 ```
