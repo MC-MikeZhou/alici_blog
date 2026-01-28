@@ -52,7 +52,7 @@ metadata:
    - 支持手动追加/删减链接
  
 
-1) 上传视频，如果用户要使用本地的视频，请通过以下方式上传获得云端链接。
+3) 上传视频，如果用户使用本地的视频，请通过以下方式上传获得云端链接。
 视频如何上传和获得链接，可以模仿下面的方式上传获得链接
 本地视频会在 该framer.json的目录 中
 比如 ：该framer.json的目录/${name}.mp4
@@ -64,6 +64,9 @@ password:  5A_p@cjpX74H(LJM
 最终获得的链接如下：
 https://ct2.alici.ai/static/image/other/${name}.mp4
 
+请使用命令上传视频，不要让用户自己上传。
+请使用命令上传视频，不要让用户自己上传。
+请使用命令上传视频，不要让用户自己上传。
 
 
 1) 生成 `*-video.json`（基于输入文件名追加 `-video`）：
@@ -77,7 +80,7 @@ https://ct2.alici.ai/static/image/other/${name}.mp4
 
 
 
-### 字段映射与插入位（必须）
+### 字段映射与插入位（必须，重要）
 
 - 段落字段：
   - 段1 → `article_body_content`
@@ -86,33 +89,33 @@ https://ct2.alici.ai/static/image/other/${name}.mp4
   - 以此类推（最多至 `_10`）
 - 视频插入字段（按“段间”定义）：
   - `video_link_1` → 正文顶部（在 `article_body_content` 之前）
-  - `video_link_2` → 段1 与 段2 之间（`article_body_content` 与 `_2` 之间）
-  - `video_link_3` → 段2 与 段3 之间（`_2` 与 `_3` 之间）
-  - `video_link_4` → 段3 与 段4 之间（`_3` 与 `_4` 之间）
-  - `video_link_5` → 段4 与 段5 之间（`_4` 与 `_5` 之间）
-  - `video_link_6` → 段5 与 段6 之间（`_5` 与 `_6` 之间）
-  - `video_link_7` → 段6 与 段7 之间（`_6` 与 `_7` 之间）
-  - `video_link_8` → 段7 与 段8 之间（`_7` 与 `_8` 之间）
-  - `video_link_9` → 段8 与 段9 之间（`_8` 与 `_9` 之间）
-  - `video_link_10` → 段9 与 段10 之间（`_9` 与 `_10` 之间）
+  - `video_link_2` → 分割html部分1 与 分割html部分2 之间（`article_body_content` 与 `_2` 之间）
+  - `video_link_3` → 分割html部分2 与 分割html部分3 之间（`_2` 与 `_3` 之间）
+  - `video_link_4` → 分割html部分3 与 分割html部分4 之间（`_3` 与 `_4` 之间）
+  - `video_link_5` → 分割html部分4 与 分割html部分5 之间（`_4` 与 `_5` 之间）
+  - `video_link_6` → 分割html部分5 与 分割html部分6 之间（`_5` 与 `_6` 之间）
+  - `video_link_7` → 分割html部分6 与 分割html部分7 之间（`_6` 与 `_7` 之间）
+  - `video_link_8` → 分割html部分7 与 分割html部分8 之间（`_7` 与 `_8` 之间）
+  - `video_link_9` → 分割html部分8 与 分割html部分9 之间（`_8` 与 `_9` 之间）
+  - `video_link_10` → 分割html部分9 与 分割html部分10 之间（`_9` 与 `_10` 之间）
 
-article_body_content
-article_body_content_2
-article_body_content_3
-article_body_content_4
-article_body_content_5
-article_body_content_6
-article_body_content_7
-article_body_content_8
-article_body_content_9
-article_body_content_10 
-不是文章的段落，而是被视频分割开的html。
+这里的段落不是文章的段落，而是被视频分割开的html。
+所以如果不是video_link_1的置顶视频
+嵌入正文中肯定是从video_link_2开始依次往下使用。
+这里的段落不是文章的段落，而是被视频分割开的html。
+所以如果不是video_link_1的置顶视频
+嵌入正文中肯定是从video_link_2开始依次往下使用。
+这里的段落不是文章的段落，而是被视频分割开的html。
+所以如果不是video_link_1的置顶视频
+嵌入正文中肯定是从video_link_2开始依次往下使用。
+
+
 
 一篇文章有20个段落，被一个视频分成了两段，视频在第9-10之间插入，那么
 article_body_content 表示的就是1-9部分， 此为段1
 article_body_content_2 表示的就是10-20部分。此为段2.
 因此，
-  - `video_link_3` → 段2 与 段3 之间（`_2` 与 `_3` 之间）不是说在真实文章段落的2-3段之间。段2、段3时被视频分割的，不是真实的段落。
+  - `video_link_2` → 段1 与 段2 之间（`article_body_content` 与 `article_body_content_2` 之间）不是说在真实文章段落的1-2段之间。段1、段2时被视频分割的，不是真实的段落。
 
 
 

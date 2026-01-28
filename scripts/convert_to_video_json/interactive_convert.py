@@ -27,8 +27,9 @@ from typing import Dict, List, Tuple, Any
 
 
 # Support headings in common exports: <h2>..</h2>, <h3>..</h3>, and legacy <h6><strong>..</strong></h6>
-# Group 1: tag name (h2/h3/h6); Group 2: inner HTML/text
-HEADING_RE = re.compile(r"<(h2|h3|h6)\b[^>]*>(.*?)</\\1>", re.IGNORECASE | re.DOTALL)
+# Note: Avoid backreference with IGNORECASE due to case-sensitivity of backrefs in Python regex.
+# We match entire heading blocks and extract inner text separately.
+HEADING_RE = re.compile(r"(<h2\b[^>]*>.*?</h2>|<h3\b[^>]*>.*?</h3>|<h6\b[^>]*>.*?</h6>)", re.IGNORECASE | re.DOTALL)
 
 
 def read_json(path: Path) -> List[Dict[str, Any]]:
@@ -222,8 +223,10 @@ def extract_youtube_id(url: str) -> str:
 def list_headings(html: str) -> List[Tuple[int, str]]:
     headings: List[Tuple[int, str]] = []
     for i, m in enumerate(HEADING_RE.finditer(html), start=1):
-        inner = m.group(2) or ""
-        # Strip tags and condense whitespace for display
+        snippet = m.group(0) or ""
+        # Remove outer heading tags (<h2/h3/h6 ...> and </h2/h3/h6>)
+        inner = re.sub(r"^<h[236]\b[^>]*>|</h[236]>\s*$", "", snippet, flags=re.IGNORECASE | re.DOTALL)
+        # Strip any inner tags and condense whitespace for display
         text = re.sub(r"<[^>]+>", " ", inner)
         text = re.sub(r"\s+", " ", text).strip()
         headings.append((i, text))
