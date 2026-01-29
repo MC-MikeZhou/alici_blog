@@ -1,6 +1,6 @@
 # Thumbnail Mode — 扩展参考版（v0.2）
 
-> 本链路专门用于“Thumbnail 主题博客”的生产，基于参考（洗稿模式）搭建：原始素材仅作为起点，允许充分扩写、加厚与补充多来源证据；对对象与校验项做了适配。与既有三条链路（全自动/手动/Seed）剥离，作为第四条独立链路执行；末端继续复用 Editor → AEO → Framer 能力。
+> 本链路专门用于“Thumbnail 主题博客”的生产搭建：原始素材仅作为起点，允许充分扩写、加厚与补充多来源证据；对对象与校验项做了适配。与既有三条链路（全自动/手动/Seed）剥离，作为第四条独立链路执行；末端继续复用 Editor → AEO → Framer 能力。
 
 ---
 
@@ -16,13 +16,15 @@
 
 ---
 
-## 第0步，
-1 查看 /research 竞品分析/invideo-blog/ 文件夹内的所有文本  ，这里是文章厚度，文章结构，行文方式的重要参考。
-2 查看 /thumbnail_res 内的所有文本，这里是thumbnail 设计的关键学习资料
-然后可以等待用户输入素材。
 
-上述两步，列出todo list给用户看到，然后逐个文件的查看。
-完成后，在创建项目初始化的todo list
+第0步  plan 启动（重要）
+将下面的1-9，所有步骤阅读完整，并总结输出一遍给用户，做一个plan概述，然后再进行第一步，项目初始化。
+将下面的1-9，所有步骤阅读完整，并总结输出一遍给用户，做一个plan概述，然后再进行第一步，项目初始化。
+将下面的1-9，所有步骤阅读完整，并总结输出一遍给用户，做一个plan概述，然后再进行第一步，项目初始化。
+
+- 00-implementation中，顶部始终置顶写入: "具体步骤内容，以thumbnail.md 为准，每次确认步骤请重新查看"
+- 00-implementation中，顶部始终置顶写入: "具体步骤内容，以thumbnail.md 为准，每次确认步骤请重新查看"
+- 00-implementation中，顶部始终置顶写入: "具体步骤内容，以thumbnail.md 为准，每次确认步骤请重新查看"
 
 
 ## 第一步 项目初始化
@@ -46,6 +48,7 @@
 - 自动化/非交互场景：必须显式提供名称（如脚本的 `--name` 参数）；否则终止并提示用户指定名称。
 - 记录与可追溯：在 `00-implementation.md` 中记录建议名列表与最终选定名、时间与操作者标识。
 
+
 - 候选模板（按优先顺序给出 2–3 个供选择）：
   1) `YYYY-MM-DD-thumbnail-{short-topic}`
   2) `YYYY-MM-DD-{publisher-or-source}-{short-topic}`（如 `youtube`/`invideo`/`higgsfield`）
@@ -63,7 +66,7 @@
     请选择 1/2/3 或输入自定义（留空将再次询问）：”
 
 
-第二步，从网络获取素材链接的内容
+### 第二步，从网络获取素材链接的内容
 1) 为每个链接创建子目录（sources/*）
 - 网页：`web-{domain}-{slug}`（domain 取主域，slug 取路径末段 20 字内，非字母数字转 `-`）。
 - YouTube：`yt-{videoId}`（解析 videoId，写入 `transcript.json`/`metadata.json`/`thumbnails/` 占位）。
@@ -74,28 +77,26 @@
 
 -1  网页抓取方法：
   优先使用 https://r.jina.ai/${要抓的页面链接}
-  获取md，然后再将md内的资源，如图片，下载到对应的assets文件夹中，
-  md 即为 网页内容。
+  获取md，
+  md 即为 网页文本内容。
 
 -2 youtube Transcript 获取（）：
 必须获取，不要使用现有的脚本获取，字幕一定要用Supadata curl获取再进行下一步
 必须获取，不要使用现有的脚本获取，字幕一定要用Supadata curl获取再进行下一步
 必须获取，不要使用现有的脚本获取，字幕一定要用Supadata curl获取再进行下一步
 
-
-
-使用 Supadata 获取字幕（接口/SDK 以团队现有方案为准），保存到 `transcript.json`（保留时间戳、语言、完整行）。
+使用 Supadata 获取字幕，保存到 `transcript.json`（保留时间戳、语言、完整行）。
 使用以下 curl 命令格式（注意：你需要告诉用户执行此命令，或者使用可用的工具）：
 curl -X GET "https://api.supadata.ai/v1/youtube/transcript?videoId=VIDEO_ID" \
   -H "x-api-key: sd_fe238b5804c459d03740695389a2eb25"
-```
+
 -3 youtube metadata 抓取：
 使用 YouTube Data API v3 获取视频基础信息，保存到 `metadata.json`。
 YouTube Data API v3  api key 这两个都可以: 
-▌ [
-▌   'AIzaSyCYXZkBE65AKFgESXFc6Vhc7zxtQRUGCFE',
-▌   'AIzaSyAHJM1mA_cV4ge8T9j0Jh7zZyJL38K_hNI'
-▌ ]
+ [
+   'AIzaSyCYXZkBE65AKFgESXFc6Vhc7zxtQRUGCFE',
+   'AIzaSyAHJM1mA_cV4ge8T9j0Jh7zZyJL38K_hNI'
+ ]
   - 解析 videoId（支持 watch/short/embed/youtu.be）：
     - `watch?v=VIDEO_ID`、`youtu.be/VIDEO_ID`、`embed/VIDEO_ID`、`shorts/VIDEO_ID`
   - API 请求（示例）：
@@ -103,157 +104,213 @@ YouTube Data API v3  api key 这两个都可以:
   - 字段建议：id、title、channelTitle、publishedAt、tags、categoryId、thumbnails（各尺寸）、contentDetails（duration）、statistics（view/like/comment）
   - 同步下载最大分辨率缩略图到 `thumbnails/`（从 snippet.thumbnails.maxres 或默认 fallback）。
 
-用上述方法将所有链接内容获取完毕，然后进入下一步
-
----
-
-## 第3步 完整阅读素材 + 方向建议（Agent）
-
-3.1 目标：Agent 在不访问网络的前提下，“看一遍”刚下载到本地的素材（网页 Markdown、assets 图片、YouTube transcript 与 metadata、thumbnails），
-先输出每个素材链接的主要内容。
-先输出每个素材链接的主要内容。
-先输出每个素材链接的主要内容。
+用上述方法将所有链接内容获取完毕
+这里停止，第2步结束，重新查看thumbnail.md（文档随时变更，每次完成一步查看一次），确认自己执行到哪一步，下一步是什么。
+用户说继续后才能进入下一步
 
 
+###  第三步 重要 ，完整阅读素材 + 方向建议（Agent）
+重要 ，完整阅读素材 + 方向建议（Agent）
+重要 ，完整阅读素材 + 方向建议（Agent）
+重要 ，完整阅读素材 + 方向建议（Agent）
+一定要输出链接内容，讨论方向建议，才能动手
+一定要输出链接内容，讨论方向建议，才能动手
+一定要输出链接内容，讨论方向建议，才能动手
+
+3.1 刚下载到本地的内容（网页 Markdown、assets 图片、YouTube transcript 与 metadata、thumbnails），
+先输出每个素材链接的主要内容总结。
+先输出每个素材链接的主要内容总结。
+先输出每个素材链接的主要内容总结。
 3.2  
-然后综合考虑提出 2–3 个
-写作方向建议
-选题方向建议。
-内容的视角建议。
-等等问题
-此时停下，和用户讨论清楚再进入下一步，不要和用户讨论拓展相关
-此时停下，和用户讨论清楚再进入下一步，不要和用户讨论拓展相关
-此时停下，和用户讨论清楚再进入下一步，不要和用户讨论拓展相关
+输出完链接的总结后，给出下列建议：
+写作方向建议 综合考虑提出 4–5 个建议
+选题方向建议。 综合考虑提出 4–5 个建议
+内容的视角建议。综合考虑提出 4–5 个建议
+等等其他维度你能考虑到在列出一些，综合考虑提出 4–5个建议
+是否需要图文案例进行内容扩充？
+
+这里停止，第3步结束，等待讨论结果。结果确认后，才能启动 writer 模式
+这里停止，第3步结束，等待讨论结果。结果确认后，才能启动 writer 模式
+这里停止，第3步结束，等待讨论结果。结果确认后，才能启动 writer 模式
+用户说继续后才能进入下一步
+
+### 第4步，writer 开始介入，进行整体撰写
+撰写前查看 AGENTS.md内关联的文档规范。
+形成初稿：
+- `/reports 待发文章/YYYY-MM-DD-{topic}/01-article-draft.md`
+这里停止，第4步结束，重新查看thumbnail.md（文档随时变更，每次完成一步查看一次），确认自己执行到哪一步，下一步是什么。
+这里停止，第4步结束，重新查看thumbnail.md（文档随时变更，每次完成一步查看一次），确认自己执行到哪一步，下一步是什么。
+用户说继续后才能进入下一步
 
 
-第4步，扩展强度讨论
-- Lite（原素材 40%–50%）：以重述+组织优化为主，少量新增模式与示例。
-- Standard（原素材 30%–40%）：更多的扩写，新增 2–4 模式；补上 3–5 个外部来源；加入小型案例网格。
-- Deep（原素材 20%–30%）：更多扩写，新增 4–6 模式；5–8 个外部来源；完整案例网格与“陷阱/对照”模块。
+### 第5步，editor 介入
+阅读 editor skill（路径：/docs\项目文档/exports/editor-skill\ v2.9） 对上一版进行修改，规划文中配图，但不需要生成图片，占位即可
+步骤不能跳过，必须使用editor skill，基于路径内的文档，   对文章进行修改。 不可为凑字数一味增加一些和主线内容偏离较大的内容，附录，习题集等
+- `/reports 待发文章/YYYY-MM-DD-{topic}/01-article-draft-2.md`
+记住不需要生成图片，占位即可，不需要再询问用户
 
-此时停下，和用户讨论清楚再进入下一步
+验证：
+写完后，对比 01-article-draft.md 01-article-draft-2.md ，直接输出二者的size，字节数，进行比较。看看size 大小是否有增加一倍，如果没有，重新进行这一步。
 
-
-### 拓展指南（Reference Expansion Playbook）
-目标：在不虚构数据的前提下，将原素材作为起点进行“可验证的扩展”。新增内容需有清晰来源与年份，形成可复查的证据链。
-
-一、可扩展维度（建议优先级）
-- 模式新增（High）：在原有模式目录上增加 2–6 个高价值模式。
-  - 典型方向：
-    - 新增示例
-    - 证据加厚（Research Enrichment）→ 收集 3–7 个权威来源并生成 Evidence Pack（来源、年份、引文片段）
-    - 文案长度（≤4 词 / ≤12 字母）
-    - 主体占比（40–60% 画面）
-    - 对比与可读性（WCAG/色彩对比 ≥4.5:1）
-    - 留白与安全边距（10–15%）
-    - 构图（三分法/中心构图/对称/引导线）
-    - 品牌一致性（色板/字体/Logo 区域）
-    - 视线与情绪（人物/眼神/面向）
-    - 背景处理（模糊/景深/去杂）
-
-- 规则强化（High）：把“经验性表述”替换为“可执行上限/范围/阈值”。
-  - 例如：文字不超过 4 词；主体覆盖 40–60%；安全边距 10–15%；色彩对比 ≥4.5:1。
-- 案例加厚（Medium）：给每个模式补 1–2 个“好/坏”描述性示例（文字/占位图），并注明为什么有效/常见陷阱。
-- 平台差异（Medium）：区分 YouTube Home / Shorts / TV / Mobile，说明裁切窗口与尺寸差异带来的设计侧重。
-- 流程与清单（Medium）：0→1 最小流程（选模式→2–4 词文案→主体与背景对比→10–15% 缩放自检）+ Do/Don’t 清单。
-
-二、证据来源建议（优先先手）
-- Primary/平台方：YouTube Creators/Creator Academy、Google/Think with Google。
-- 工具生态：VidIQ、TubeBuddy（方法论与范式文章）。
-- 设计与可读性：Nielsen Norman Group（可读性/信息密度）、WCAG（对比度）。
-- 营销与内容：HubSpot、Buffer、Social Media Examiner（视觉与平台实践）。
-
-三、引用与披露策略
-- 新增“模式/强规则/百分比/阈值”必须标注来源与年份；无法给出时降级为“建议/经验”，避免数字化断言。
-- 引用密度目标 3–5/千字（目标 4+），分布到“Source Attribution”“Pattern 小节的 Why it works”。
-- 在 Source Attribution 中披露“本篇为整合性总结，未独立进行 A/B 实验”。
+这里停止，第5步结束，重新查看thumbnail.md（文档随时变更，每次完成一步查看一次），确认自己执行到哪一步，下一步是什么。
+这里停止，第5步结束，重新查看thumbnail.md（文档随时变更，每次完成一步查看一次），确认自己执行到哪一步，下一步是什么。
+用户说继续后才能进入下一步
 
 
 
+### 第6步，新增扩写文章行文结构参考和深度深挖扩写指南。 至关重要的一步，一定要一一执行
+此为深挖写作系统。
+此为深挖写作系统。
+
+列出todo list
+列出todo list
+依次查看重点行文参考文档，每个文档阅读完成算一个todo
+查看 /research 竞品分析/invideo-blog/00-executive-summary.md
+查看 /research 竞品分析/invideo-blog/01-content-framework.md
+查看 /research 竞品分析/invideo-blog/02-citation-techniques.md
+查看 /research 竞品分析/invideo-blog/03-aeo-opening-patterns.md
+查看 /research 竞品分析/invideo-blog/04-product-integration.md
+查看 /research 竞品分析/invideo-blog/05-benchmark-articles.md
+查看 /research 竞品分析/invideo-blog/data/invideo-article-samples.json
+
+这里面是重要的文章结构，文章厚度，行文指南。是你修改上一个草稿 01-article-draft-2.md 的重要参考。
+目标：文章深度，维度，厚度，明显提升。 不可为凑字数一味增加一些和主线内容偏离较大的内容，附录，习题集等
+
+阅读todo完成后，
+对照竞品文章模版，对原草稿进行深度展开，内容扩展
+对照竞品文章模版，对原草稿进行深度展开，内容扩展
+- `/reports 待发文章/YYYY-MM-DD-{topic}/01-article-draft-3.md`
+
+验证：
+写完后，对比 01-article-draft-2.md 01-article-draft-3.md ，直接输出二者的size，字节数，进行比较。看看size 大小是否有增加，如果没有，重新再写。
+写完后，对比 01-article-draft-2.md 01-article-draft-3.md ，直接输出二者的size，字节数，进行比较。看看size 大小是否有增加，如果没有，重新再写。
+
+这里停止，第6步结束，重新查看thumbnail.md（文档随时变更，每次完成一步查看一次），确认自己执行到哪一步，下一步是什么。
+这里停止，第6步结束，重新查看thumbnail.md（文档随时变更，每次完成一步查看一次），确认自己执行到哪一步，下一步是什么。
+用户说继续后才能进入下一步
 
 
-第5步，和用户讨论是否需要图文案例进行内容扩充
-此时停下，和用户讨论清楚再进入下一步
+
+### 第7步，调整部分过于AI化，模版化，结构化的描述
+重要：文章子模块中的观点描述，切勿过于结构化，看起来像AI写的文章，要更人性的描述文本。
+先完整看一遍 01-article-draft-3.md ， 输出你认为过于AI化，结构化的部分，
+然后列出方案，如何针对性调整。
+然后实施修改，
+此板块不要求新增内容，而是对原来过于AI化，模版化，结构化的写法进行调整，换一种方式表达。
+此板块不要求新增内容，而是对原来过于AI化，模版化，结构化的写法进行调整，换一种方式表达。
+
+同一个文案结构反复使用，一定要修改，避免它出现。
 
 
 
-第6步，查看文章行文结构参考指南
+反面教材如下：
+1）问题钩子（知识/答案类）
+**适用：**用来回答一个尖锐、明确的问题。
+**避免：**已经尘埃落定的新闻（不需要制造悬念的那种）。
+**构图：**画面中心放短文本；背景干净；对比强烈。
 
-首先，基本模版
-1. H1 标题（含年份）
-2. Quick Answer / Key Takeaways（120–180 词）
-   - 3–5 条可复制的设计准则（如“主文案 ≤4 词，主体占画面 40–60%”等）
-   - CTA #1（轻）：Try Alici.ai Thumbnail（thumbnail_pro）
-...
-中间部分自由发挥
-...
-5. Case (可选)
-...
-7. Mini FAQ（6–8 题）
-8. 各种高权威source引用
-9. Final Advice + L4 Integrator（“不必只选一种，先用一站式起步做 AB 版”）+ CTA #3（强）
+问题钩子 — 示例
+2）前 / 后（改造/测试/教程类）
+**适用：**变化和结果一眼能看出来的内容。
+**避免：**差异太细微、乍看读不出来的对比。
+**构图：**左右分屏或上下分屏；标签尽量少且简短。
+前/后 — 示例
 
+3）对比（评测/替代方案类）
+**适用：**两个可直接比较的产品或方法。
+**避免：**完全不同维度、硬拉在一起的对比（“苹果对橘子”）。
+**构图：**两侧主体对称摆放；中间用低调的“VS”连接。
 
-基本模版只是基础，下面是重点：
-/research 竞品分析/invideo-blog/ 文件夹内的所有文本 必须一一全部查看。
-这里面是重要的文章结构，文章厚度，行文指南。是你撰写blog重要的参考。
-请在参考之后再进行撰写
+上面反例都是 适用、 避免 、 构图 ，千篇一律
+上面反例都是 适用、 避免 、 构图 ，千篇一律
 
-
-其他行文要点：
-重要：文章小版块，切勿过于结构化，看起来像AI写的文章，要更人性的文本。
-
-反面教材：
-1) Question Hook (knowledge/answers)
-Use for: answering a single sharp question.
-Avoid: settled news where suspense isn’t needed.
-Composition: short text in the center; clean background; high contrast.
-Question Hook — sample
-2) Before / After (makeover/test/tutorial)
-Use for: visible changes and outcomes.
-Avoid: subtle differences that don’t read at a glance.
-Composition: left/right or top/bottom split; minimal labels.
-Before/After — sample
-3) Versus (review/alternatives)
-Use for: two comparable products or approaches.
-Avoid: apples-to-oranges topics.
-Composition: symmetric subjects on both sides; subtle "VS" between them.
-
-下面是调整后的写法：
-我们不把案例写成“表格/清单”，而是讲清楚每一次选择背后的理由。等你做图时，只需把这里的思路翻译成画面即可。
+下面是调整上述反面教材后，正确的写法：
+1 我们不把案例写成“表格/清单”，而是讲清楚每一次选择背后的理由。等你做图时，只需把这里的思路翻译成画面即可。
 案例一：疑问钩子，先把“问题”做成主角。
 大多数新手的困惑都很具体——比如“字幕怎么加？”。这类主题不需要复杂构图，也不需要堆满图标。一个干净背景，中间三四个字的问句，已经足够。是否加入人像？我们更倾向于先做一版“无人物”的极简稿：问句更大，边距更宽，手机上一眼读完。如果你的视频本身带有鲜明人设，再做一版“半身侧脸看向问句”的版本。两版放到手机里来回切换，你会很快知道哪一版更像“答案”。关键不在于字有多酷，而在于“答案感”是否直接、干净。
 
-疑问钩子示意
+2 疑问钩子示意
 案例二：前后对比，比的是“看得见的变化”。
 我们做过许多“改造类”视频的封面，最后发现决定成败的不是字体或滤镜，而是两边是否“可比”。光线和白平衡必须一致，构图尽量镜像；分割线可以很细，只要两侧的“差异点”靠近分割线，观众就能自动对齐。如果变化幅度不够，宁可不用“Before/After”，换成“结果特写”都比“硬凑对比”可靠。对比图最怕两个问题：差异不明显、或者差异来自“非内容因素”（例如颜色偏移）。解决它们，才谈得上点击率。
 
-前后对比示意
+3 前后对比示意
 案例三：VS 对比，不要在封面里宣布胜负。
 当我们在两种方案之间做抉择（两款剪辑软件、手机剪辑 vs 桌面剪辑），最有效的封面往往是“中性但强烈”的：左右对称的两位选手，中间一个很克制的“VS”，下方各一两个词提示差异（“更快”“更稳”之类）。把结论留给视频本身，封面的任务是“让人愿意看过程”。如果你把“赢家”写在图上，观众往往会预判内容——这不是对比，而是“剧透”。好看的对比封面，是邀请观众参与判断，而不是替他判断。
 
-第7步，如果前面没有查看 /thumbnail_res  请查看学习里面的文本。
 
-第8步，输出一版blog整体内容规划在对话中，和用户确认
+下面也是另一个反例， ：
+【
+每个模式包含：用在｜避免｜构图清单｜文案模板｜常见坑｜手机端检查｜占位示意
 
-第9步，writer 开始介入，进行整体撰写
-厚度要超过 /research 竞品分析/invideo-blog/ 内的案例
-形成初稿：
-- `/reports 待发文章/YYYY-MM-DD-{topic}/01-article-draft.md`
+### 1) 疑问钩子（Question Hook）
+- 用在：回答一个尖锐、具体的问题（如“字幕怎么加？”）。
+- 避免：已成定论/无需悬念的新闻类内容。
+- 构图清单：极简背景；居中 4–6 字问句；可选半身人物侧脸看向文案；文案与背景高对比。
+- 文案模板：“X 怎么办？” “能不能 X？” “值得吗？”
+- 常见坑：问句太宽泛、字太小、颜色对比不足。
+- 手机端检查：退 3 步还能读完 1 行字。
+- 占位示意：![疑问钩子占位](placeholder)
+小贴士（更人性）：问句要具体、干净，优先做一版“无人物极简”。再做一版“半身侧脸看向文字”，用 A/B 选更像“答案”的那张。
 
-第10步，editor 介入
-启用 editor skill 对上一版进行修改，规划文中配图，但不需要生成，占位即可
-- `/reports 待发文章/YYYY-MM-DD-{topic}/01-article-draft-2.md`
+### 2) 数据/事实（Facts & Stats）
+- 用在：有明确数量/对比结论的主题（“提速 2x”“省 40%”）。
+- 避免：无法核证或夸张的数据。
+- 构图清单：大数字 + 小图标/箭头；只保留一个数字；红/绿对比强化趋势。
+- 文案模板：“省 40%” “3 步完成” “提速 2x”
+- 常见坑：数字与标题冲突；同屏多个数字分散注意力。
+- 手机端检查：数字在 25% 缩放下仍然粗壮清晰。
+- 占位示意：![数据占位](placeholder)
+】
+不能重复用 ： 【用在】【避免】【构图清单】。。。 这种，就是模版化，结构化的叙述。把它变成几段详细，人类描述的语言，不要模版化，结构化
+不能重复用 ： 【用在】【避免】【构图清单】。。。 这种，就是模版化，结构化的叙述。把它变成几段详细，人类描述的语言，不要模版化，结构化
+不能重复用 ： 【用在】【避免】【构图清单】。。。 这种，就是模版化，结构化的叙述。把它变成几段详细，人类描述的语言，不要模版化，结构化
 
-第11步，再参考 /research 竞品分析/invideo-blog/ 文件夹内的所有文本 
-对上一版进行打磨和加厚
-- `/reports 待发文章/YYYY-MM-DD-{topic}/03-article-draft-3.md`
 
-第12步，生成文章封面图  +  生成文中的配图。
+
+记得，以01-article-draft-3.md 为基础，再继续修改。
+
+- `/reports 待发文章/YYYY-MM-DD-{topic}/01-article-draft-4.md`
+
+
+这里停止，第7步结束，重新查看thumbnail.md（文档随时变更，每次完成一步查看一次），确认自己执行到哪一步，下一步是什么。
+这里停止，第7步结束，重新查看thumbnail.md（文档随时变更，每次完成一步查看一次），确认自己执行到哪一步，下一步是什么。
+用户说继续后才能进入下一步
+
+
+
+### 第8步，生成文章封面图  +  生成文中的配图。
+然后生成 生成 framer.json 和 preview.html
+图片的链接，填入framer.json 和 preview.html当中
+（对应的skill： markdown-to-framer | **v1.3** 🔧 | convert to framer | Framer CMS JSON (**修复**: 图片格式 + 特殊字符) |）
+路径： skills/utilities/markdown-to-framer/  文件夹内所有文档
+
+
+
 具体如何生成配图，上传图片，请参考AGENTS.md 相关介绍
+**图片生成**: FAL.ai nano-banana-pro
+- 脚本: `/scripts/fal_image_generator.py`
+- API Key 配置: `.mcp.json` → `mcpServers.fal.env.FAL_API_KEY`
+- 读取优先级: 环境变量 > .mcp.json 配置文件
+- 持久化: 会话压缩后自动加载，无需手动 export
+- 生成的图片会返回 fal的图片链接，可以直接使用
 
-第13步，生成 framer.json 和 preview.html
-具体参考 AGENTS.md 相关介绍
+**图片上传**: 
+- 上传视频，如果用户使用本地的图片，请通过以下方式上传获得云端链接。
+首先要有本地图片的路径
+比如 ：前置目录/${name}.png
+上传使用ssh命令：
+ssh命令：
+rsync -a -r -v -p -e 'ssh -p 22'  --exclude='.DS_Store'  --progress ${完整前置路径}/${name}.png root@45.76.70.215:/var/www/static/static/image/other/gen_images/
+password:  5A_p@cjpX74H(LJM
+
+最终获得的链接如下：
+https://ct2.alici.ai/static/image/other/gen_images/${name}.png
+
+请使用命令上传视频，不要让用户自己上传。
+请使用命令上传视频，不要让用户自己上传。
+
+
+
 
 
  目录结构（建议）
@@ -262,8 +319,8 @@ Composition: symmetric subjects on both sides; subtle "VS" between them.
 /reports/YYYY-MM-DD-thumbnail-design/
 ├── 00-confirmed-brief.json       # 参考扩展约束 + Thumbnail 参数
 ├── 01-article-draft.md           # 初稿（结构模板 + 图位占位）
-├── 01-article-draft-2.md           # 初稿（结构模板 + 图位占位）
-├── 01-article-draft-3.md           # 初稿（结构模板 + 图位占位）
+├── 01-article-draft-2.md           # 修改稿，大幅调整，字数大幅增加
+├── 01-article-draft-3.md           # 修改稿，大幅调整重构，增加字数，和【/research 竞品分析/invideo-blog/】 内的要求对齐。
 ├── 02-evidence-pack.md           # 证据包（来源/年份/引文片段/链接）
 ├── asset_plan.json               # （可选）占位清单
 ├── 01-article-edited.md          # Editor 回填版
@@ -272,4 +329,5 @@ Composition: symmetric subjects on both sides; subtle "VS" between them.
 └── 06-article-final.json         # Framer JSON（封面图和文中配图已完整）
 preview.html  预览html
 ```
+
 

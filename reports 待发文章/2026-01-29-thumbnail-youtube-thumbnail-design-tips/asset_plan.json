@@ -1,0 +1,45 @@
+{
+  "images": [
+    {
+      "id": "hero-image",
+      "prompt": "Clean 16:9 YouTube thumbnail mockup: high-contrast background (teal vs deep navy), large 3-5 word Chinese headline centered, minimal icons, subtle drop shadow; modern, professional, premium, no clutter.",
+      "role": "hero",
+      "placeholder": "![hero-image](placeholder)",
+      "context": "文章开头的示意图：高对比+大字+极简信息密度"
+    },
+    {
+      "id": "variant-grid",
+      "prompt": "Side-by-side grid (2x2) of four thumbnail variations: (1) bright complementary colors, (2) close-up face with emotion, (3) minimal text over solid color, (4) action shot; consistent lighting; labeled A/B/C/D subtly.",
+      "role": "comparison",
+      "placeholder": "![variant-grid](placeholder)",
+      "context": "测试章节用于展示变体对照（A/B 测试）"
+    },
+    {
+      "id": "before-after",
+      "prompt": "Before/After split-screen thumbnail: left=BEFORE (duller colors, messy), right=AFTER (crisper, high-contrast, improved subject); thin center divider; white balance matched; clear difference near divider.",
+      "role": "comparison",
+      "placeholder": "![before-after](placeholder)",
+      "context": "工作流章节示例：左右镜像、差异点靠近分割线"
+    },
+    {
+      "id": "emotion-face",
+      "prompt": "Close-up human face with strong emotion (surprise), clean background, eyes looking toward headline area; sharp details, soft lighting, cinematic; Chinese typography zone reserved.",
+      "role": "inline",
+      "placeholder": "![emotion-face](placeholder)",
+      "context": "人像情绪示例：近景与视线引导"
+    },
+    {
+      "id": "mobile-tv-mock",
+      "prompt": "Mockup showing YouTube thumbnail on smartphone (small) and TV screen (far distance), ensuring readability of 3-5 word headline; modern flat style; neutral environment.",
+      "role": "inline",
+      "placeholder": "![mobile-tv-mock](placeholder)",
+      "context": "端侧可读性示意（Mobile & TV）"
+    }
+  ],
+  "metadata": {
+    "total_images": 5,
+    "article_slug": "youtube-thumbnail-design-0-to-1-2026",
+    "generated_at": "2026-01-29T23:55:00Z"
+  }
+}
+
