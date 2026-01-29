@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Untitled · Preview</title>
+    <style>
+      :root { --green:#00C2A8; --text:#111; --muted:#666; --bg:#fff; }
+      body { margin:0; font:16px/1.7 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif; color:var(--text); background:var(--bg); }
+      .wrap { max-width:880px; margin:48px auto; padding:0 20px; }
+      .preview-header{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+      .badge{background:var(--green);color:#fff;border-radius:6px;padding:4px 8px;font-weight:600;font-size:12px}
+      h1{font-size:34px;line-height:1.25;margin:8px 0 12px 0}
+      .meta{color:var(--muted);font-size:14px;margin-bottom:20px}
+      .cover{width:100%;border-radius:12px;overflow:hidden;margin:18px 0}
+      .cover img{width:100%;display:block}
+      h6{font-size:20px;margin:28px 0 8px 0}
+      h6 strong{font-weight:800}
+      p{margin:12px 0}
+      ul,ol{margin:12px 0 12px 24px}
+      li[data-preset-tag="p"]>p{margin:6px 0}
+      figure{margin:18px 0}
+      figure img{max-width:100%;border-radius:10px}
+      table{border-collapse:collapse;width:100%}
+      th,td{border:1px solid #eee;padding:8px}
+      blockquote{border-left:4px solid #eee;margin:16px 0;padding:8px 12px;color:#444}
+      a{color:#0a7;}
+      .cta{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;border-radius:10px;padding:10px 14px;margin:24px 0;text-decoration:none;font-weight:700}
+      .subtitle{color:var(--muted);margin-top:-6px}
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="preview-header">
+        <span class="badge">Preview Mode</span>
+        <span class="hint">这是 Framer CMS 导入后的预览效果</span>
+      </div>
+      <h1>Untitled</h1>
+      
+      <div class="meta">January 28, 2026 · 5 min</div>
+      <div class="cover">{{COVER_URL|IMG}}</div>
+      <article><p><strong><strong>Reframe 开篇（CTR-first × Mobile-first × Test-driven）</strong></strong></p>
+<p>缩略图直接影响 CTR 的首因印象。优化目标是：让用户在移动端 1 秒内完成识别与理解。方法路径：控制信息密度、提升前景/背景对比、放大关键词、使用高质量人脸与情绪、保持频道风格一致，并以多版本测试驱动迭代。本文将创作者常用的 11 个实操 Hack 与 2025 年的最佳实践逐条对齐，给出可执行的变更维度与复盘切口。</p>
+<p><strong><strong>Key Takeaways</strong></strong></p>
+<ul>
+<li data-preset-tag="p"><p>简洁优先：只保留一个核心信息与一个视觉焦点。</p></li>
+<li data-preset-tag="p"><p>大字与粗体：关键词在小屏上一眼读清。</p></li>
+<li data-preset-tag="p"><p>高对比配色：主体/文字与背景形成强反差。</p></li>
+<li data-preset-tag="p"><p>人脸与情绪：强表情更易抓注意力与点击意愿。</p></li>
+<li data-preset-tag="p"><p>风格一致：频道内构图/字体/色系统一，建立识别度。</p></li>
+<li data-preset-tag="p"><p>移动端优先：以小尺寸快扫为基准做可读性检查。</p></li>
+<li data-preset-tag="p"><p>多版本测试：准备候选图，比较点击表现并迭代。</p></li>
+</ul>
+<p><strong><strong>11 个 Hacks × 最佳实践（更有冲击力的标题）</strong></strong></p>
+<p><strong><strong>1. 删到只剩一个重点</strong></strong></p>
+<p>别让眼睛分心。把画面精简到“一个信息点 + 一个视觉焦点”，小屏一扫就懂，你的点击率就有机会起来。<br />
+从实际效果看，能被快速读懂的图，往往只有一个主语（人或物）和一句话的核心词。多加一个元素，理解成本就多一层；再多一个，就开始冲突。宁可少，不要杂。<br />
+做法上，把“非关键信息”移回标题或描述。缩略图的职责只有一个：帮用户判断“是否值得点开”。</p>
+<p><figure><img alt="Case: One focus, one message" src="https://v3b.fal.media/files/b/0a8c33fb/o_acnRt1JIbqOjkuaQz7S_25xmFlhe.png" /></figure></p>
+<p><strong><strong>2. 关键词要“大到一眼读清”</strong></strong></p>
+<p>真正决定有没有人停下来的，常常是那几个词。把关键词放大加粗，其他文字能省则省。<br />
+别指望小字在手机上会被仔细读，用户扫一眼只有几百毫秒。把“价值差异”用 2-4 个词讲清楚，其他说明去标题里说。字号层级最多两级，保证节奏感，不挤。</p>
+<p><figure><img alt="Case: Big bold keyword" src="https://v3b.fal.media/files/b/0a8c3402/bhrbgCcu4t12DQGwL_v5q_T4Jrj59I.png" /></figure></p>
+<p><strong><strong>3. 把对比拉满：浅底深字/深底浅字</strong></strong></p>
+<p>前景和背景要“跳”出来。颜色、明度、冷暖，任选一种方式把对比做足，别让字沉进背景里。<br />
+先把画面转灰度看一眼：如果灰阶接近，说明对比不够。再回到彩色，用互补色或冷暖对冲，一步到位。注意不要在纹理复杂的背景上压字，先降噪或铺底板。</p>
+<p><figure><img alt="Case: High contrast" src="https://v3b.fal.media/files/b/0a8c3406/F8p55SGSj8bI8LI49NXCw_8dJlQnf2.png" /></figure></p>
+<p><strong><strong>4. 用“人脸+情绪”抢注意力</strong></strong></p>
+<p>清晰的人脸与真情绪，是天然的注意力锚点。表情要到位、构图要靠前，模糊和噪点会直接拉低想点开的欲望。<br />
+需要脸时，就大胆靠近到胸像甚至更近，留出标题区域即可。表情可以稍夸张，但要真实可信；如果没有人脸，就用“动作瞬间”去替代情绪线索。</p>
+<p><figure><img alt="Case: Face + emotion" src="https://v3b.fal.media/files/b/0a8c340b/m5eq_7Co6l_gnGJGJg3s7_90SThO9B.png" /></figure></p>
+<p><strong><strong>5. 让风格统一到“一眼认出你”</strong></strong></p>
+<p>固定字体、色板与基础构图，让一组缩略图像“同一个人”做的。识别度是长期点击的底盘。<br />
+把常用的模板沉淀下来：字号、边距、阴影、主色都写进规范。每期微调内容元素，但不要每期都重做“设计语言”，否则认知要从零建立。</p>
+<p><figure><img alt="Case: Consistent style grid" src="https://v3b.fal.media/files/b/0a8c340f/aoDlf9W_XrSiVHWB5BS-F_v1sEKvDz.png" /></figure></p>
+<p><strong><strong>6. 先过小屏这一关</strong></strong></p>
+<p>先在手机上看是否读得清，再谈其他优化。多数观看发生在小屏，第一次检查就用小屏标准。<br />
+简单的验收方法：把图缩到 10–15% 查看；或直接在手机相册里看缩略视图。如果关键词和主体此时仍然清晰，你的基础就过关了。</p>
+<p><figure><img alt="Case: Mobile-first check" src="https://v3b.fal.media/files/b/0a8c3416/dF4NSjhYv82Vl1rLnSLe1_gWe2SkYD.png" /></figure></p>
+<p><strong><strong>7. 画质不妥协：模糊=丢点击</strong></strong></p>
+<p>素材清晰、细节到位，导出别过度压缩。模糊和涂抹感会让专业度“当场掉线”。<br />
+把“清晰度检查”加入发布流程：上传前对比不同导出质量，选择最小文件体积下仍不糊的那个。避免过度锐化带来的边缘伪影。</p>
+<p><figure><img alt="Case: Crisp vs blurry" src="https://v3b.fal.media/files/b/0a8c341a/VHeidW9rQTAyLGT6_P06__zz25g3Zo.png" /></figure></p>
+<p><strong><strong>8. 用画面讲“一个瞬间”，别堆满元素</strong></strong></p>
+<p>一个动作或结果，比零碎的装饰更能说服人。让画面在情绪上给人一个“要点开”的理由。<br />
+与其摆满图标，不如呈现“结果瞬间”：前后对比、发现表情、关键动作。画面只讲一个故事点，让标题接力完成解释。</p>
+<p><figure><img alt="Case: One story moment" src="https://v3b.fal.media/files/b/0a8c341e/Lbjeac68MhPyyoZ0bwqhS_zfREnTEz.png" /></figure></p>
+<p><strong><strong>9. 一次做多版，让数据替你选</strong></strong></p>
+<p>同一主题做几个候选，只改少量变量，谁点得多就留下谁。复盘把“常胜元素”沉淀成模板。<br />
+规则很简单：每次只改一个维度（文案、构图或配色），避免归因不清。记录每次“胜出的元素”，半年后你会有一套自己的点击公式。</p>
+<p><figure><img alt="Case: A/B variants" src="https://v3b.fal.media/files/b/0a8c3422/6uv6QWottRLElRkKKYjXn_pyjisBCY.png" /></figure></p>
+<p><strong><strong>10. 别抓帧，做“为这条内容定制的图”</strong></strong></p>
+<p>自动抓帧常常对不上主题，也少了冲击力。针对内容定制缩略图，更贴题，也更稳。<br />
+定制图不一定复杂：用同一模板、换上这期的主体和关键词就行。统一的模板 + 针对性的主体，既高效又稳妥。</p>
+<p><figure><img alt="Case: Custom-made thumbnail" src="https://v3b.fal.media/files/b/0a8c3426/4HiyRvIAqZQcl6CzB6f38_mshlWkWp.png" /></figure></p>
+<p><strong><strong>11. 让 AI 当加速器，不当终稿</strong></strong></p>
+<p>用 AI 快速产出候选，加速测试；最终版仍要人工把关风格与可读性，频道识别度优先。<br />
+把 AI 当“变体生成器”，别当“风格裁判”。最后的风格统一与可读性，仍然要靠你的规范来兜底。</p>
+<p><figure><img alt="Case: AI-assisted variants" src="https://v3b.fal.media/files/b/0a8c342a/fU-7p8yu42FYYVwsqMM6P_84h6kCh5.png" /></figure></p>
+<p><strong><strong>FAQ（常见问题）</strong></strong></p>
+<ul>
+<li data-preset-tag="p"><p>小频道一定要放人脸吗？<br />
+  不一定。人脸与强情绪能更快抢注意力；不适配时，用强对比的主体与关键词同样有效。</p></li>
+<li data-preset-tag="p"><p>文案要放多少字？<br />
+  2–4 个词足够说明价值差异；细节交给标题与描述。缩略图负责“被一眼看懂”。</p></li>
+<li data-preset-tag="p"><p>背景太花怎么办？<br />
+  降噪、虚化或铺底板，先确保文字与主体从背景中跳出，再谈装饰。</p></li>
+<li data-preset-tag="p"><p>字体怎么选？<br />
+  易读的无衬线粗体，并在频道内保持同一字体与层级，减少风格漂移。</p></li>
+<li data-preset-tag="p"><p>需要每期都换风格吗？<br />
+  不需要。用统一模板做微调，识别度比“每期推倒重来”更重要。</p></li>
+<li data-preset-tag="p"><p>怎么做 A/B 测试更省力？<br />
+  每次只改一个维度，保证可归因；保留“常胜元素”，沉淀为长期模板。</p></li>
+</ul>
+<p><strong><strong>常见错误与对策（映射最佳实践）</strong></strong></p>
+<ul>
+<li data-preset-tag="p"><p>信息过载：元素/文字过多 → 只保留一个焦点与一句关键词。</p></li>
+<li data-preset-tag="p"><p>低对比：背景与文字发灰 → 采用浅底深字或深底浅字的高反差方案。</p></li>
+<li data-preset-tag="p"><p>小字密集：移动端不可读 → 放大关键词、删除二级信息或移至标题。</p></li>
+<li data-preset-tag="p"><p>模糊压缩：画质涂抹 → 使用高质量原图，发布前做缩略清晰度检查。</p></li>
+<li data-preset-tag="p"><p>风格漂移：每期都变 → 固定字体与色板，设定基础构图模板。</p></li>
+</ul>
+<p><strong><strong>测试与优化（工作流）</strong></strong></p>
+<ul>
+<li data-preset-tag="p"><p>变更维度：文案用词、字号层级、主体构图、配色与背景。</p></li>
+<li data-preset-tag="p"><p>观察指标：点击率与观看行为变化，保留显著优于基线的版本。</p></li>
+<li data-preset-tag="p"><p>频率建议：每期至少 2–3 个候选并行，定期复盘保留“常胜元素”。</p></li>
+</ul>
+<p><strong><strong>Source Attribution</strong></strong></p>
+<ul>
+<li data-preset-tag="p"><p>文章：https://vidiq.com/blog/post/youtube-thumbnail-design-tips/</p></li>
+<li data-preset-tag="p"><p>视频：https://www.youtube.com/watch?v=dB6DXcZo6hE</p></li>
+</ul></article>
+      <p>
+        <a class="cta" href="https://app.alici.ai/" target="_blank" rel="noopener">Try alici.ai Free</a>
+      </p>
+    </div>
+    <script>
+      // Allow template to replace {{COVER_URL|IMG}}
+      (function(){
+        const wrap=document.querySelector('.cover');
+        const marker='{{COVER_URL|IMG}}';
+        if(wrap && wrap.textContent.includes(marker)){
+          const url='';
+          wrap.innerHTML = url ? '<img alt="cover" src="'+url+'" />' : '';
+        }
+      })();
+    </script>
+  </body>
+  </html>
+

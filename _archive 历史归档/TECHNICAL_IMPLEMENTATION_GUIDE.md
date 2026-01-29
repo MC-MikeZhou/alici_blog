@@ -201,14 +201,8 @@ def fetch_notion_page(page_id):
 #### SSH/rsync 图片上传
 
 **当前实现：** 手工执行 SSH 命令
+图片生成和图片上传，请参考 AGENTS.md / ClAUDE.md 中的相关描述
 
-**命令：**
-```bash
-rsync -a -r -v -p -e 'ssh -p 22' \
-  --exclude='.DS_Store' \
-  --progress ${项目路径}/gen_images \
-  root@45.76.70.215:/var/www/static/static/image/other/
-```
 
 **服务器信息：**
 - Host: `45.76.70.215`

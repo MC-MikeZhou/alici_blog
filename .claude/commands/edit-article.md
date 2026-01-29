@@ -114,15 +114,11 @@ S - Style: What aesthetic? (cinematic, McKinsey, modern)
 Reference templates from `prompts/image-prompt-templates.yaml`
 
 ### Phase 4: Generate Images
-
-1. Call FAL.ai **Nano Banana Pro** API for each selected position
-2. Endpoint: `https://queue.fal.run/fal-ai/nano-banana-pro`
-3. Save to `./gen_images/` with role-based names:
+图片生成和图片上传，请参考 AGENTS.md / ClAUDE.md 中的相关描述
+Save to `./gen_images/` with role-based names:
    - `[slug]-hero.png`
    - `[slug]-concept.png`
    - `[slug]-comparison.png`
-4. Upload to CDN via rsync
-5. Track cost: ~$0.15 per image
 
 ### Phase 5: Handle Skipped Positions
 

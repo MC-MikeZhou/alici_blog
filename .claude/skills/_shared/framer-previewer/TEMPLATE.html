@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{TITLE}} · Preview</title>
+    <style>
+      :root { --green:#00C2A8; --text:#111; --muted:#666; --bg:#fff; }
+      body { margin:0; font:16px/1.7 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif; color:var(--text); background:var(--bg); }
+      .wrap { max-width:880px; margin:48px auto; padding:0 20px; }
+      .preview-header{display:flex;gap:12px;align-items:center;margin-bottom:12px}
+      .badge{background:var(--green);color:#fff;border-radius:6px;padding:4px 8px;font-weight:600;font-size:12px}
+      h1{font-size:34px;line-height:1.25;margin:8px 0 12px 0}
+      .meta{color:var(--muted);font-size:14px;margin-bottom:20px}
+      .cover{width:100%;border-radius:12px;overflow:hidden;margin:18px 0}
+      .cover img{width:100%;display:block}
+      h6{font-size:20px;margin:28px 0 8px 0}
+      h6 strong{font-weight:800}
+      p{margin:12px 0}
+      ul,ol{margin:12px 0 12px 24px}
+      li[data-preset-tag="p"]>p{margin:6px 0}
+      figure{margin:18px 0}
+      figure img{max-width:100%;border-radius:10px}
+      table{border-collapse:collapse;width:100%}
+      th,td{border:1px solid #eee;padding:8px}
+      blockquote{border-left:4px solid #eee;margin:16px 0;padding:8px 12px;color:#444}
+      a{color:#0a7;}
+      .cta{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;border-radius:10px;padding:10px 14px;margin:24px 0;text-decoration:none;font-weight:700}
+      .subtitle{color:var(--muted);margin-top:-6px}
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="preview-header">
+        <span class="badge">Preview Mode</span>
+        <span class="hint">这是 Framer CMS 导入后的预览效果</span>
+      </div>
+      <h1>{{TITLE}}</h1>
+      {{SUB_TITLE_BLOCK}}
+      <div class="meta">{{DATE}} · {{READ_TIME}}</div>
+      <div class="cover">{{COVER_URL|IMG}}</div>
+      <article>{{ARTICLE_BODY}}</article>
+      <p>
+        <a class="cta" href="{{CTA_LINK}}" target="_blank" rel="noopener">{{CTA_BUTTON}}</a>
+      </p>
+    </div>
+    <script>
+      // Allow template to replace {{COVER_URL|IMG}}
+      (function(){
+        const wrap=document.querySelector('.cover');
+        const marker='{{COVER_URL|IMG}}';
+        if(wrap && wrap.textContent.includes(marker)){
+          const url='{{COVER_URL}}';
+          wrap.innerHTML = url ? '<img alt="cover" src="'+url+'" />' : '';
+        }
+      })();
+    </script>
+  </body>
+  </html>
+

@@ -1184,8 +1184,23 @@ Writer → Editor Gate → AEO → Improver → 竞品验证 → Framer → Prev
 - API Key 配置: `.mcp.json` → `mcpServers.fal.env.FAL_API_KEY`
 - 读取优先级: 环境变量 > .mcp.json 配置文件
 - 持久化: 会话压缩后自动加载，无需手动 export
-- 上传: `rsync` 到 `root@<YOUR_SERVER_IP>:/var/www/static/static/image/other/gen_images/`
-- CDN: `https://ct2.alici.ai/static/image/other/gen_images/`
+- 生成的图片会返回 fal的图片链接，可以直接使用
+
+**图片上传**: 
+- 上传视频，如果用户使用本地的图片，请通过以下方式上传获得云端链接。
+首先要有本地图片的路径
+比如 ：前置目录/${name}.png
+上传使用ssh命令：
+ssh命令：
+rsync -a -r -v -p -e 'ssh -p 22'  --exclude='.DS_Store'  --progress ${完整前置路径}/${name}.png root@45.76.70.215:/var/www/static/static/image/other/gen_images/
+password:  5A_p@cjpX74H(LJM
+
+最终获得的链接如下：
+https://ct2.alici.ai/static/image/other/gen_images/${name}.png
+
+请使用命令上传视频，不要让用户自己上传。
+请使用命令上传视频，不要让用户自己上传。
+
 
 **MCP**: DataForSEO (SERP + KEYWORDS_DATA)
 

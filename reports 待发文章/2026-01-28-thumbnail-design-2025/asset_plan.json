@@ -1,0 +1,142 @@
+{
+  "images": [
+    {
+      "id": "blog-cover-01",
+      "prompt": "YouTube thumbnail design 2025 hero cover, high-contrast teal brand palette, clean gradient background, empty negative space for title overlay, minimal geometric shapes, professional tech style, sharp lighting, 16:9",
+      "role": "hero",
+      "placeholder": "![Cover 01: Teal high-contrast abstract](placeholder)",
+      "context": "Article cover (top)"
+    },
+    {
+      "id": "blog-cover-02",
+      "prompt": "Mobile-first readability hero cover, bold large typography shapes (no real text), strong color blocks with teal accent, subtle noise texture, clear focal composition, 16:9 professional blog cover",
+      "role": "hero",
+      "placeholder": "![Cover 02: Bold blocks + teal accent](placeholder)",
+      "context": "Article cover (alternate)"
+    },
+    {
+      "id": "hack-01",
+      "prompt": "YouTube thumbnail case: ultra-clean layout with a single focal subject and one bold keyword, minimal elements, high negative space, mobile-first legibility, 16:9, professional tech blog style, teal accent",
+      "role": "inline",
+      "placeholder": "![Case: One focus, one message](placeholder)",
+      "context": "Section 1: 删到只剩一个重点"
+    },
+    {
+      "id": "hack-02",
+      "prompt": "Mobile screen mock with oversized bold keyword text on clean background, strong hierarchy, two font sizes only, high contrast, 16:9, teal accent, no real brand",
+      "role": "inline",
+      "placeholder": "![Case: Big bold keyword](placeholder)",
+      "context": "Section 2: 关键词大到一眼读清"
+    },
+    {
+      "id": "hack-03",
+      "prompt": "High-contrast color example: foreground text block popping from background using complementary colors, clear separation, grayscale check pass, 16:9, teal accent",
+      "role": "inline",
+      "placeholder": "![Case: High contrast](placeholder)",
+      "context": "Section 3: 把对比拉满"
+    },
+    {
+      "id": "hack-04",
+      "prompt": "Close-up portrait with authentic strong emotion (surprise or joy), sharp focus, clean background, room for overlay text, 16:9, teal accent, no real person identity",
+      "role": "inline",
+      "placeholder": "![Case: Face + emotion](placeholder)",
+      "context": "Section 4: 人脸+情绪"
+    },
+    {
+      "id": "hack-05",
+      "prompt": "Consistent channel style grid: multiple thumbnail tiles showing same font, color palette, and base composition, brand recognition vibe, 16:9, teal accent",
+      "role": "inline/comparison",
+      "placeholder": "![Case: Consistent style grid](placeholder)",
+      "context": "Section 5: 风格统一"
+    },
+    {
+      "id": "hack-06",
+      "prompt": "Mobile-first readability check: phone-in-hand view with a clearly legible thumbnail miniature, emphasis on readability at small size, 16:9, teal accent",
+      "role": "inline",
+      "placeholder": "![Case: Mobile-first check](placeholder)",
+      "context": "Section 6: 先过小屏"
+    },
+    {
+      "id": "hack-07",
+      "prompt": "Image quality comparison: crisp vs blurry split, same subject, showing loss from over-compression, professional lighting, 16:9, teal accent",
+      "role": "comparison",
+      "placeholder": "![Case: Crisp vs blurry](placeholder)",
+      "context": "Section 7: 画质不妥协"
+    },
+    {
+      "id": "hack-08",
+      "prompt": "Story moment: a single action or result captured clearly, simple scene, emotional cue, minimal decorations, 16:9, teal accent",
+      "role": "inline",
+      "placeholder": "![Case: One story moment](placeholder)",
+      "context": "Section 8: 讲一个瞬间"
+    },
+    {
+      "id": "hack-09",
+      "prompt": "A/B testing collage: two to three thumbnail variants side by side with subtle differences (copy/layout/color), clean presentation, 16:9, teal accent",
+      "role": "inline/comparison",
+      "placeholder": "![Case: A/B variants](placeholder)",
+      "context": "Section 9: 多版本测试"
+    },
+    {
+      "id": "hack-10",
+      "prompt": "Custom-made thumbnail example for a specific topic: focused subject with tailored headline area, not an auto frame, 16:9, teal accent",
+      "role": "inline",
+      "placeholder": "![Case: Custom-made thumbnail](placeholder)",
+      "context": "Section 10: 定制缩略图"
+    },
+    {
+      "id": "hack-11",
+      "prompt": "AI-assisted ideation board: multiple thumbnail drafts on a desk, consistent style, showing iteration process, final selection highlighted, 16:9, teal accent",
+      "role": "inline",
+      "placeholder": "![Case: AI-assisted variants](placeholder)",
+      "context": "Section 11: AI 当加速器"
+    },
+    {
+      "id": "hero-contrast-grid",
+      "prompt": "High-contrast abstract background to support headline about thumbnail best practices; strong color blocks, clean space for overlay text.",
+      "role": "hero",
+      "placeholder": "![Hero: High-contrast abstract background](placeholder)",
+      "context": "Article header, before Reframe 开篇"
+    },
+    {
+      "id": "large-text-bold",
+      "prompt": "Example of bold, large typography on a clean background to illustrate 'big bold keywords' principle.",
+      "role": "inline",
+      "placeholder": "![Example: Large bold typography](placeholder)",
+      "context": "Section: 2. 关键词大字粗体"
+    },
+    {
+      "id": "face-strong-emotion",
+      "prompt": "Close-up human face with strong, authentic emotion; sharp focus; clean background.",
+      "role": "inline",
+      "placeholder": "![Example: Face with strong emotion](placeholder)",
+      "context": "Section: 4. 人脸与强情绪"
+    },
+    {
+      "id": "mobile-readability",
+      "prompt": "Phone-in-hand or mobile screen close-up, representing 'mobile-first readability'.",
+      "role": "inline",
+      "placeholder": "![Example: Mobile-first readability](placeholder)",
+      "context": "Section: 6. 移动端优先"
+    },
+    {
+      "id": "color-contrast-example",
+      "prompt": "High-contrast color blocks that make foreground pop against background; clear separation.",
+      "role": "inline",
+      "placeholder": "![Example: High color contrast](placeholder)",
+      "context": "Section: 3. 高对比配色"
+    },
+    {
+      "id": "ab-test-collage",
+      "prompt": "Collage of multiple smartphone screens or variants to symbolize A/B testing of thumbnails.",
+      "role": "inline/comparison",
+      "placeholder": "![Example: A/B variants collage](placeholder)",
+      "context": "Section: 9. 多版本测试"
+    }
+  ],
+  "metadata": {
+    "total_images": 6,
+    "article_slug": "thumbnail-design-2025",
+    "generated_at": "2026-01-28T00:00:00Z"
+  }
+}

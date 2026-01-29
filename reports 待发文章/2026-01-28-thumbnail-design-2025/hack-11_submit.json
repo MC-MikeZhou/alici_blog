@@ -1,0 +1,10 @@
+{
+  "status": "IN_QUEUE",
+  "request_id": "0444b4be-7547-404e-a44f-2f9d78ba1a2b",
+  "response_url": "https://queue.fal.run/fal-ai/nano-banana-pro/requests/0444b4be-7547-404e-a44f-2f9d78ba1a2b",
+  "status_url": "https://queue.fal.run/fal-ai/nano-banana-pro/requests/0444b4be-7547-404e-a44f-2f9d78ba1a2b/status",
+  "cancel_url": "https://queue.fal.run/fal-ai/nano-banana-pro/requests/0444b4be-7547-404e-a44f-2f9d78ba1a2b/cancel",
+  "logs": null,
+  "metrics": {},
+  "queue_position": 0
+}

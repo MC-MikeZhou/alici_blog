@@ -1,0 +1,109 @@
+{
+  "images": [
+    {
+      "id": "blog-cover-01",
+      "cdn_url": null,
+      "status": "failed",
+      "generation_model": "fal-ai/nano-banana-pro",
+      "file_path": null
+    },
+    {
+      "id": "blog-cover-02",
+      "cdn_url": null,
+      "status": "failed",
+      "generation_model": "fal-ai/nano-banana-pro",
+      "file_path": null
+    },
+    {
+      "id": "blog-cover-01",
+      "cdn_url": "https://v3b.fal.media/files/b/0a8c3364/U0nWowZgb2F4tuJkSyLAj_plYeZYWP.png",
+      "status": "success",
+      "generation_model": "fal-ai/nano-banana-pro",
+      "file_path": null
+    },
+    {
+      "id": "blog-cover-02",
+      "cdn_url": "https://v3b.fal.media/files/b/0a8c3376/RwBQYt9acMR84X1Y3D2AF_BYWmdY6R.png",
+      "status": "success",
+      "generation_model": "fal-ai/nano-banana-pro",
+      "file_path": null
+    },
+    {
+      "id": "hack-01",
+      "cdn_url": "https://v3b.fal.media/files/b/0a8c33fb/o_acnRt1JIbqOjkuaQz7S_25xmFlhe.png",
+      "status": "success",
+      "generation_model": "fal-ai/nano-banana-pro",
+      "file_path": null
+    },
+    {
+      "id": "hack-02",
+      "cdn_url": "https://v3b.fal.media/files/b/0a8c3402/bhrbgCcu4t12DQGwL_v5q_T4Jrj59I.png",
+      "status": "success",
+      "generation_model": "fal-ai/nano-banana-pro",
+      "file_path": null
+    },
+    {
+      "id": "hack-03",
+      "cdn_url": "https://v3b.fal.media/files/b/0a8c3406/F8p55SGSj8bI8LI49NXCw_8dJlQnf2.png",
+      "status": "success",
+      "generation_model": "fal-ai/nano-banana-pro",
+      "file_path": null
+    },
+    {
+      "id": "hack-04",
+      "cdn_url": "https://v3b.fal.media/files/b/0a8c340b/m5eq_7Co6l_gnGJGJg3s7_90SThO9B.png",
+      "status": "success",
+      "generation_model": "fal-ai/nano-banana-pro",
+      "file_path": null
+    },
+    {
+      "id": "hack-05",
+      "cdn_url": "https://v3b.fal.media/files/b/0a8c340f/aoDlf9W_XrSiVHWB5BS-F_v1sEKvDz.png",
+      "status": "success",
+      "generation_model": "fal-ai/nano-banana-pro",
+      "file_path": null
+    },
+    {
+      "id": "hack-06",
+      "cdn_url": "https://v3b.fal.media/files/b/0a8c3416/dF4NSjhYv82Vl1rLnSLe1_gWe2SkYD.png",
+      "status": "success",
+      "generation_model": "fal-ai/nano-banana-pro",
+      "file_path": null
+    },
+    {
+      "id": "hack-07",
+      "cdn_url": "https://v3b.fal.media/files/b/0a8c341a/VHeidW9rQTAyLGT6_P06__zz25g3Zo.png",
+      "status": "success",
+      "generation_model": "fal-ai/nano-banana-pro",
+      "file_path": null
+    },
+    {
+      "id": "hack-08",
+      "cdn_url": "https://v3b.fal.media/files/b/0a8c341e/Lbjeac68MhPyyoZ0bwqhS_zfREnTEz.png",
+      "status": "success",
+      "generation_model": "fal-ai/nano-banana-pro",
+      "file_path": null
+    },
+    {
+      "id": "hack-09",
+      "cdn_url": "https://v3b.fal.media/files/b/0a8c3422/6uv6QWottRLElRkKKYjXn_pyjisBCY.png",
+      "status": "success",
+      "generation_model": "fal-ai/nano-banana-pro",
+      "file_path": null
+    },
+    {
+      "id": "hack-10",
+      "cdn_url": "https://v3b.fal.media/files/b/0a8c3426/4HiyRvIAqZQcl6CzB6f38_mshlWkWp.png",
+      "status": "success",
+      "generation_model": "fal-ai/nano-banana-pro",
+      "file_path": null
+    },
+    {
+      "id": "hack-11",
+      "cdn_url": "https://v3b.fal.media/files/b/0a8c342a/fU-7p8yu42FYYVwsqMM6P_84h6kCh5.png",
+      "status": "success",
+      "generation_model": "fal-ai/nano-banana-pro",
+      "file_path": null
+    }
+  ]
+}
