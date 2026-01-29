@@ -1,13 +1,13 @@
-# Thumbnail Mode — 洗稿基线版（v0.1）
+# Thumbnail Mode — 扩展参考版（v0.2）
 
-> 本链路专门用于“Thumbnail 主题博客”的生产，基于洗稿模式（rewrite_mode）搭建，但对对象与校验项做了适配。与既有三条链路（全自动/手动/Seed）剥离，作为第四条独立链路执行；末端继续复用 Editor → AEO → Framer 能力。
+> 本链路专门用于“Thumbnail 主题博客”的生产，基于参考扩展（reference_mode）搭建：原始素材仅作为起点，允许充分扩写、加厚与补充多来源证据；对对象与校验项做了适配。与既有三条链路（全自动/手动/Seed）剥离，作为第四条独立链路执行；末端继续复用 Editor → AEO → Framer 能力。
 
 ---
 
-定位与范围
+定位与范围（顶层规划）
 
 - 目标内容：关于缩略图/封面图设计的“方法论与模式”型文章（如 0→1 指南、12 类高 CTR 模式、对比与案例网格等）。
-- 基线模式：洗稿（40%+ 保留原素材结论与模式，新增大量内容做厚；品牌换 Alici AI）。
+- 基线模式：参考扩展（原始素材占比 20%–50%，在不造数据的前提下大量扩写、做厚、补充多来源证据；品牌换 Alici AI）。
 - 非目标：原创测试数据、主观打分/排名、虚构 CTR/点击差异等（均禁止）。
 
 ---
@@ -62,7 +62,7 @@
 - YouTube：`yt-{videoId}`（解析 videoId，写入 `transcript.json`/`metadata.json`/`thumbnails/` 占位）。
 
 1) 立即抓取素材（首次运行即离线可读）
-- 目标：获取“可离线复现。
+  - 目标：获取“可离线复现”。
   下面是3个资源的抓取方式：重要
 
 -1  网页抓取方法：
@@ -94,60 +94,85 @@ YouTube Data API v3  api key 这两个都可以:
 
 至此，链路中用户提供的素材准备完毕，即完成第一步。
 
-后面待修改
+---
 
+## 第二步 简阅素材 + 方向建议（Agent）
 
+目标：Agent 在不访问网络的前提下，快速打开并“看一遍”刚下载到本地的素材（网页 Markdown、assets 图片、YouTube transcript 与 metadata、thumbnails），基于直观理解提出 2–3 个写作方向建议与扩展强度建议，然后与用户确定取向。
 
+输入路径（示例）
+- 网页 Markdown：`/reports/.../sources/web-*/content.md`
+- 网页图片：`/reports/.../sources/web-*/assets/*`
+- YouTube：`/reports/.../sources/yt-*/transcript.json` / `metadata.json` / `thumbnails/*`
 
+注意：不做任何自动化“巡检/统计/索引”与复杂提取，只进行人工级别的快速浏览与判断。
 
+方向建议（与用户讨论）
+- A. Pattern Catalog Focus（模式目录为主）
+  - 场景：来源已有较清晰的模式结构；希望以“模式 → 使用时机 → 文案长度 → 易错点”为骨架。
+  - 扩展：新增 2–4 个模式（需证据），补充示例与 Pitfalls，加入 Case Grid（可选）。
+- B. Case Grid Focus（案例网格为主）
+  - 场景：来源图例丰富或 transcript 中大量描述“好/坏示例”。
+  - 扩展：构造 8–16 格网格（文字+占位），按对比主题分组（如“文本对比”“主体/背景”“构图/留白”）。
+- C. 0→1 Tutorial Focus（从零开始的流程指南）
+  - 场景：受众偏新手；来源覆盖面广但缺流程感。
+  - 扩展：结合模式目录，将“选模式→2–4 词文案→主体/背景对比→10–15% 缩放自检”做成分步；Catalog 作为附录。
+- D. Hybrid（目录 + 网格混合）
+  - 场景：既有模式也有案例；希望“快速决策 + 可视对比”两手抓。
 
+扩展强度（选择其一）
+- Lite（原素材 40%–50%）：以重述+组织优化为主，少量新增模式与示例。
+- Standard（原素材 30%–40%）：新增 2–4 模式；补上 3–5 个外部来源；加入小型案例网格。
+- Deep（原素材 20%–30%）：新增 4–6 模式；5–8 个外部来源；完整案例网格与“陷阱/对照”模块。
 
+Step 2 输出文件（极简）
+- `00-confirmed-brief.json`（草案，仅包含最小决策信息）：
+  ```json
+  { "mode": "reference", "direction": "catalog|grid|tutorial|hybrid", "expansion_intensity": "lite|standard|deep", "word_count_target": [1500, 3000] }
+  ```
 
+互动问句（示例）
+- “我已整理本地素材，建议 4 种方向：1) Pattern Catalog、2) Case Grid、3) 0→1 Tutorial、4) Hybrid。选择哪一个？以及扩展强度选 Lite/Standard/Deep？”
+- “是否需要新增模式？若是，请优先哪几类：文案长度/主体占比/对比/留白/构图/品牌一致性？”
 
-
-
-## 2) 执行链路（Thumbnail Pipeline）
-
-```
-输入（URL/参考文档）
-  ↓  Step 0: 项目初始化与素材归档（本地快照/字幕/元数据）
-  ↓  Step 1.5: 素材使用意图 = 洗稿（rewrite_mode）
-  ↓  Step 2: 快速问卷（受众/平台/是否包含案例网格）
-  ↓  Step 3: 内容抓取与要素抽取（pattern 列表、Do/Don't、示例、用词上限、尺寸规范）
-  ↓  Step 4: Writer 生成（Thumbnail 结构模板，洗稿约束生效）
-  ↓  Step 5: Editor Gate（InVideo 六原则 + 标题/开篇/CTA 强制）
-  ↓  Step 6: AEO 分析（≥75 理想；<75 触发改进）
-  ↓  Step 7: Framer JSON（可选：预览）
-```
+记录与可追溯
+- Step 2 的关键结论仅以一行摘要追加到 `00-implementation.md`（时间戳/操作者/方向/强度）。
 
 ---
 
-## 3) 洗稿基线 → Thumbnail 适配
+## 3) 扩展基线 → Thumbnail 适配
 
-### 3.1 rewrite_mode 约束映射
+### 3.1 reference_mode 约束映射（扩展版）
 
 ```yaml
-rewrite_mode:
+reference_mode:
   enabled: true
-  reference_ratio: 0.8            # 80%+ 内容参考原素材
-  word_count_ratio: [0.8, 1.2]    # 字数相对原素材
+  source_content_share: [0.2, 0.5]   # 原素材 20–50% 占比
+  allow_restructure: true            # 可重组结构
+  allow_new_patterns: true           # 允许新增模式（需证据）
+  allow_new_design_rules: true       # 允许新增强规则（需证据）
+  allow_new_examples: true           # 允许新增示例/案例网格项
+  allow_external_sources: true       # 可引入多来源支撑
+  no_fabricated_metrics: true        # 禁止虚构 CTR/评分/排名
   brand_swap: "Alici AI"
+  word_count_target: [1500, 3000]    # 目标字数区间（可按项目调整）
 
-  # Thumbnail 特化（以“模式/规范”替代“工具/场景”锁定）
-  lock_pattern_catalog: true       # 不新增原素材未提及的模式类型/数量
-  lock_design_rules: true          # 不新增原素材未给出的强规则（如尺寸/用词上限/安全边距）
-  no_fabricated_metrics: true      # 禁止编造 CTR/点击率/排名/评分
+evidence:
+  min_sources: 3                     # 最少 3 个权威来源（建议 5+）
+  citation_density_target: ">=4/千字"  # 引用密度目标（3–5/千字，目标 4+）
 
 validation:
-  check_pattern_set_match: true    # 原素材的模式清单一致（名称允许同义改写）
-  check_word_count_range: true
-  check_claim_accuracy: true       # 评分/排名/百分比→必须有来源，否则阻断
+  preserve_original_findings: true   # 保留原素材关键结论（可重述，不可歪曲）
+  require_citation_for_new_rules: true
+  require_citation_for_metrics: true
+  check_claim_accuracy: true         # 评分/排名/百分比→必须有来源，否则阻断
+  report_added_patterns: true        # 报告新增的模式/规则清单
   strict: true
 ```
 
 说明：
-- “工具/场景锁定”在 Thumbnail 语境中改为“模式目录/设计规则锁定”。
-- 允许结构化重写、表达优化与品牌位（CTA）植入，但不新增事实性主张与测试数据。
+- 原有模式/定义需保留且不歪曲；可在其上新增模式与设计规则，但新增项必须有明确来源与年份。
+- 允许结构化重写、表达优化与品牌位（CTA）植入；禁止新增未经证据支持的事实性主张与测试数据。
 
 ### 3.2 InVideo 六原则（仍然适用）
 
@@ -156,11 +181,11 @@ validation:
 - Source Attribution 专章（⛔）：声明来源/方法与披露。
 - 无虚假声明（⛔）：评分/排名/CTR 百分比必须注明来源与年份。
 - L4 整合者定位（⚠️）：定位为“整合能力/一站式起步”，非与竞品对立。
-- 引用密度（⚠️）：≥3/千字（Thumbnail 类文章推荐值；可按项目上调）。
+- 引用密度（⚠️）：3–5/千字，目标 4+（可按项目上调）。
 
 ---
 
-## 4) 结构模板（Thumbnail 洗稿版）
+## 4) 结构模板（Thumbnail 参考扩展版）
 
 1. H1 标题（含年份）
 2. Quick Answer / Key Takeaways（120–180 词）
@@ -176,7 +201,7 @@ validation:
 7. Mini FAQ（6–8 题）
 8. Final Advice + L4 Integrator（“不必只选一种，先用一站式起步做 AB 版”）+ CTA #3（强）
 
-注：为保持洗稿边界，默认不新增外部图片生成；如确需插图，请使用 Editor 的占位/清单并在 manifest 披露“来源/生成/是否可替代”。
+注：默认不新增外部图片生成；如需插图，请使用 Editor 的占位/清单并在 manifest 披露“来源/生成/是否可替代”。
 
 ---
 
@@ -187,14 +212,14 @@ Blocking（任一触发即阻断）：
 - 开篇未符合 Reframe 模式；包含弱开篇（In this article…）。
 - 缺少 Source Attribution/Disclosure/来源链接。
 - 出现无来源评分/排名/CTR 声称；第一人称“我们测试/我们的研究”。
-- 新增原素材未包含的“模式类别/强规则”。
+- 新增模式/强规则未给出明确来源与年份。
 
 Warning（保留并提示）：
 - 引用密度 < 3/千字；L4 定位缺失。
-- 字数超出 120% 或低于 80%（模板需求可放宽并在报告中解释）。
+- 字数明显偏离 word_count_target（模板需求可放宽并在报告中解释）。
 
 附加检查：
-- Pattern Set Match：名称可重述，但模式数与核心定义需一致。
+- Pattern Set Match：名称可重述，但模式数与核心定义需一致（若扩展，需给出来源）。
 - 文案长度约束：建议主文案 ≤ 4 词（或 ≤ 12 字母），超过则提示。
 - 10–15% 缩放可读性（人工/半自动打点）。
 
@@ -209,10 +234,10 @@ Warning（保留并提示）：
 
 Editor 输出（复用现有）：
 - `/reports/YYYY-MM-DD-{topic}/01-article-edited.md`
-- `/reports/YYYY-MM-DD-{topic}/asset_manifest.json`（新增字段可选：`text_length_ok`, `safe_margin_ok`, `readability_score`, `brand_match`）
+- `/reports/YYYY-MM-DD-{topic}/asset_manifest.json`（可选新增字段：`text_length_ok`, `safe_margin_ok`, `readability_score`, `brand_match`）
 - `/reports/YYYY-MM-DD-{topic}/prompts_used.md`
 
-说明：Thumbnail Mode 基线下，图片生成默认 SKIP（洗稿边界）；如启用资产生成，需在 manifest 中完整披露来源/生成方法与可读性自检结果。
+说明：在参考扩展基线下，图片生成默认 SKIP（不越界）；如启用资产生成，需在 manifest 中完整披露来源/生成方法与可读性自检结果。
 
 ---
 
@@ -220,8 +245,9 @@ Editor 输出（复用现有）：
 
 ```
 /reports/YYYY-MM-DD-thumbnail-design/
-├── 00-confirmed-brief.json       # 洗稿约束 + Thumbnail 参数
+├── 00-confirmed-brief.json       # 参考扩展约束 + Thumbnail 参数
 ├── 01-article-draft.md           # 初稿（结构模板 + 图位占位）
+├── 02-evidence-pack.md           # 证据包（来源/年份/引文片段/链接）
 ├── asset_plan.json               # （可选）占位清单
 ├── 01-article-edited.md          # Editor 回填版
 ├── 03-aeo-score.md               # AEO 分数与建议
@@ -233,8 +259,8 @@ Editor 输出（复用现有）：
 
 ## 8) 版本与后续
 
-- v0.1（当前）：确立洗稿基线与 Thumbnail 适配映射、结构模板与阻断清单。
-- v0.2（计划）：
+- v0.2（当前）：切换为“参考扩展”基线（20%–50% 原素材占比），引入 Evidence Pack、允许新增模式/规则但强制来源校验；更新阻断/警告标准与引用密度目标。简化 Step 2：只做“简阅 + 方向建议”，不做自动巡检。
+- v0.3（计划）：
   - 可读性半自动评分（10–15% 缩放 + OCR 文本长度/对比度检测）写入 manifest。
   - Pattern 小组件库（模板化片段与对比网格占位）。
   - 产品映射：CTA 自动映射到 `thumbnail_pro`（PRODUCT_CATALOG）。
