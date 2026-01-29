@@ -7,41 +7,25 @@
 定位与范围
 
 - 目标内容：关于缩略图/封面图设计的“方法论与模式”型文章（如 0→1 指南、12 类高 CTR 模式、对比与案例网格等）。
-- 基线模式：洗稿（80%+ 保留原素材结论与模式，不新增事实；品牌换 Alici AI）。
+- 基线模式：洗稿（40%+ 保留原素材结论与模式，新增大量内容做厚；品牌换 Alici AI）。
 - 非目标：原创测试数据、主观打分/排名、虚构 CTR/点击差异等（均禁止）。
 
 ---
 
-## 1) 项目初始化与素材归档
+## 第一步 项目初始化与素材归档
 
-目的：当用户丢入素材（网页 URL / YouTube URL）时，先在“待发文章”下创建项目目录，并为每个链接建立子目录，拉取与落盘“可重复使用的原始素材包”（HTML+资源 或 transcript+metadata）。
+目的：当用户丢入素材（网页 URL / YouTube URL）并与用户对齐项目目录名后，立即在“待发文章”下创建项目目录与每个链接的子目录，并直接抓取可离线浏览的素材包（网页 HTML+静态资源；YouTube 缩略图 + 字幕 + 元信息占位），保证首次运行后即可本地打开查看。
 
-目录规范（建议）：
-
-```
-/reports 待发文章/YYYY-MM-DD-{topic-or-batch}/
-├── 00-implementation.md              # 进度与操作日志
-├── sources/                          # 原始素材归档
-│   ├── web-{domain}-{slug}/          # 网页素材 1..N（域名+简短片段）
-│   │   ├── raw.html                  # 原始 HTML
-│   │   ├── page_complete/            # 完整页面 (资源本地化)
-│   │   │   ├── index.html            # 转换链接后的入口
-│   │   │   └── assets/...            # CSS/JS/IMG 等
-│   │   ├── metadata.json             # 标题/描述/og/语言/首发时间等
-│   │   └── fetch.log                 # 拉取日志
-│   └── yt-{videoId}/                 # YouTube 素材
-│       ├── transcript.json           # Supadata 获取的字幕（含时间戳）
-│       ├── metadata.json             # YouTube Data API v3 元信息
-│       ├── thumbnails/               # 官方缩略图（最大分辨率）
-│       └── fetch.log                 # 拉取日志
-└── 01-article-draft.md               # （后续步骤产物，占位）
-```
 
 ### 1.1) 项目目录命名确认（与用户交互）
 
 目标：在创建目录前，与用户确认“项目目录名”，做到可读、可批量、可追溯。
 
-命名权与交互原则（新增，强制）：
+
+目录：
+/reports 待发文章/YYYY-MM-DD-{topic-or-batch}/
+
+命名权与交互原则
 - 项目目录名由用户最终决定；Agent 仅根据素材生成 2–3 个“建议名”供参考，不得自行拍板。
 - 未得到用户明确选择/输入前，不得创建目录（无默认自动回退）。
 - 自动化/非交互场景：必须显式提供名称（如脚本的 `--name` 参数）；否则终止并提示用户指定名称。
@@ -63,40 +47,38 @@
     - ③ 自定义（输入英文/连字符）
     请选择 1/2/3 或输入自定义（留空将再次询问）：”
 
-- 唯一性与冲突处理：
-  - 若目录已存在：`{name}-2`、`{name}-3`… 或追加时分秒：`{name}-{HHmm}`。
-  - 最终选定名称写入 `00-implementation.md` 的开头（含时间与操作者）。
 
-- 多链接批处理：
-  - 若输入 ≥2 个 URL，默认使用 `YYYY-MM-DD-batch-{n}`；在 `sources/` 内为每条链接建子目录。
 
-- 校验规则速记：
-  - 仅 `[a-z0-9-]`；不以 `-` 开头/结尾；长度 8–40；连续 `-` 合并为 1。
-
+确认完项目目录和名称后，
 初始化流程（单/批量）：
-
 1) 创建项目目录（按当天批次或主题名）
 - 规则：`/reports 待发文章/YYYY-MM-DD-{topic-or-batch}`；`topic-or-batch` 尽量短小写、连字符。
-- 写入 `00-implementation.md`（记录素材清单、开始时间、操作者、环境信息）。
+- 写入/追加 `00-implementation.md`（记录素材清单、时间、操作者、候选名与最终名）。
+存在目录则不在新建
 
-2) 为每个链接创建子目录（sources/*）
+
+1) 为每个链接创建子目录（sources/*）
 - 网页：`web-{domain}-{slug}`（domain 取主域，slug 取路径末段 20 字内，非字母数字转 `-`）。
-- YouTube：`yt-{videoId}`（先解析 videoId，后续 metadata 可补充 title/author 到 metadata.json）。
+- YouTube：`yt-{videoId}`（解析 videoId，写入 `transcript.json`/`metadata.json`/`thumbnails/` 占位）。
 
-3) 网页素材抓取（完整页面 + 资源）
-- 目标：获取“可离线复现”的页面副本。推荐方法（择其一）：
-  - wget（标准）：
-    - `wget --convert-links --page-requisites --adjust-extension --span-hosts --no-parent -e robots=off -U "Mozilla/5.0" -P page_complete <URL>`
-    - 同时保存原始响应到 `raw.html`（可用 `curl -L -sS -H 'User-Agent: Mozilla/5.0' <URL> > raw.html`）。
-  - 备选工具：monolith/single-file/httrack（如团队已有装配）。
-- 元信息抽取 → `metadata.json`：
-  - 字段建议：title、description、lang、canonical、og:*、author、published/modified、images（含尺寸/alt）、source_url、fetched_at。
-- 注意：尊重法律与合规。内部封存仅用于“洗稿参考”与质量核对；对外不再分发原资源。
+1) 立即抓取素材（首次运行即离线可读）
+- 目标：获取“可离线复现。
+  下面是3个资源的抓取方式：重要
 
-4) YouTube 素材抓取（Transcript + Metadata）
-- Transcript：使用 Supadata 获取字幕（接口/SDK 以团队现有方案为准），保存到 `transcript.json`（保留时间戳、语言、完整行）。
-  - 若 Supadata 暂不可用，回退到现有 `youtube-transcript-fetcher` Skill 或官方字幕导出。
-- Metadata：使用 YouTube Data API v3 获取视频基础信息，保存到 `metadata.json`。
+-1  网页抓取方法：
+  优先使用 https://r.jina.ai/${要抓的页面链接}
+  获取md，然后再将md内的资源，如图片，下载到对应的assets文件夹中，
+  md 即为 网页内容。
+
+-2 youtube Transcript抓取：使用 Supadata 获取字幕（接口/SDK 以团队现有方案为准），保存到 `transcript.json`（保留时间戳、语言、完整行）。
+使用以下 curl 命令格式（注意：你需要告诉用户执行此命令，或者使用可用的工具）：
+curl -X GET "https://api.supadata.ai/v1/youtube/transcript?videoId=VIDEO_ID" \
+  -H "x-api-key: sd_fe238b5804c459d03740695389a2eb25"
+```
+supadata.ai 其他功能和api，如需要可自行搜索它的文档
+
+-3 youtube metadata 抓取：
+使用 YouTube Data API v3 获取视频基础信息，保存到 `metadata.json`。
 YouTube Data API v3  api key 这两个都可以: 
 ▌ [
 ▌   'AIzaSyCYXZkBE65AKFgESXFc6Vhc7zxtQRUGCFE',
@@ -108,16 +90,21 @@ YouTube Data API v3  api key 这两个都可以:
     - `GET https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&id=VIDEO_ID&key=API_KEY`
   - 字段建议：id、title、channelTitle、publishedAt、tags、categoryId、thumbnails（各尺寸）、contentDetails（duration）、statistics（view/like/comment）
   - 同步下载最大分辨率缩略图到 `thumbnails/`（从 snippet.thumbnails.maxres 或默认 fallback）。
-- API Key 管理：将提供的多个 Key 注入 `.env`（不入库），以 `YT_API_KEYS=["key1","key2"]` 轮询使用；日志里只记载 key 索引，不打印明文。
 
-1) 落盘校验与日志
-- `fetch.log`：记录工具版本、命令参数、HTTP 状态、重试次数、完成时间、文件大小校验摘要（sha256）。
-- 目录自检：`raw.html` 存在、`page_complete/index.html` 存在（网页）；`transcript.json` 与 `metadata.json` 存在（YouTube）。
 
-产出：
-- 一个可追溯的“素材快照”集合，为后续洗稿生成与 Editor 验证提供证据与引用链基础。
+至此，链路中用户提供的素材准备完毕，即完成第一步。
 
----
+后面待修改
+
+
+
+
+
+
+
+
+
+
 
 ## 2) 执行链路（Thumbnail Pipeline）
 
