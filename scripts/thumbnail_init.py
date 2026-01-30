@@ -22,6 +22,7 @@ import json
 import os
 import re
 import shutil
+import subprocess
 import sys
 import time
 from datetime import datetime
@@ -32,6 +33,12 @@ from urllib.request import urlopen, Request
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 REPORTS_DIR = REPO_ROOT / "reports 待发文章"
+
+# Some sources (and r.jina.ai) can block Python's default HTTP stack.
+# We keep urllib as the default, but fall back to curl when needed.
+# Note: r.jina.ai can be surprisingly picky about User-Agent strings.
+# "Mozilla/5.0" is a safe, low-friction default here.
+BROWSER_UA = "Mozilla/5.0"
 
 
 def read_env(key: str) -> Optional[str]:
@@ -57,9 +64,36 @@ def read_env(key: str) -> Optional[str]:
 
 
 def http_get(url: str, headers: Optional[Dict[str, str]] = None, timeout: int = 30) -> bytes:
-    req = Request(url, headers=headers or {"User-Agent": "alici-thumbnail-init/0.1"})
-    with urlopen(req, timeout=timeout) as resp:
-        return resp.read()
+    # Prefer urllib, fallback to curl on common blocks (403/503).
+    base_headers = {
+        "User-Agent": os.environ.get("THUMBNAIL_INIT_USER_AGENT", BROWSER_UA),
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7",
+    }
+    if headers:
+        base_headers.update(headers)
+    try:
+        req = Request(url, headers=base_headers)
+        with urlopen(req, timeout=timeout) as resp:
+            return resp.read()
+    except Exception as e:
+        # curl fallback: -L follow redirects; -f fail on 4xx/5xx
+        try:
+            return subprocess.check_output(
+                [
+                    "curl",
+                    "-sS",
+                    "-L",
+                    "-f",
+                    "-A",
+                    base_headers["User-Agent"],
+                    url,
+                ],
+                stderr=subprocess.STDOUT,
+                timeout=timeout,
+            )
+        except Exception:
+            raise e
 
 
 def is_youtube_url(url: str) -> bool:
@@ -92,8 +126,22 @@ def jina_markdown(url: str) -> str:
     else:
         url_https = url
     jina_url = f"https://r.jina.ai/{url_https}"
-    data = http_get(jina_url)
-    return data.decode("utf-8", errors="replace")
+    # Retry a few times; r.jina.ai sometimes rate-limits.
+    last_err: Optional[Exception] = None
+    for i in range(4):
+        try:
+            data = http_get(jina_url, timeout=45)
+            txt = data.decode("utf-8", errors="replace")
+            # When blocked, r.jina.ai sometimes returns an HTML "403 Forbidden" page.
+            if "403 Forbidden" in txt and "<title>403</title>" in txt:
+                raise RuntimeError("r.jina.ai returned 403 HTML page")
+            if "Service Unavailable" in txt and "<title>" in txt:
+                raise RuntimeError("r.jina.ai returned Service Unavailable HTML page")
+            return txt
+        except Exception as e:
+            last_err = e
+            time.sleep(1.5 * (i + 1))
+    raise RuntimeError(f"Failed to fetch markdown via r.jina.ai: {url}: {last_err}")
 
 
 def sanitize_filename(name: str) -> str:
@@ -344,4 +392,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

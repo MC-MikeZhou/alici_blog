@@ -54,15 +54,32 @@ def md_to_framer_html(md_text: str) -> str:
     # Remove top-level H1 lines
     md_text = re.sub(r'^# .*$', '', md_text, flags=re.MULTILINE)
 
+    # Remove the first markdown image (hero). Framer uses `cover.url` as the hero.
+    md_text = re.sub(r'^\s*!\[.*?\]\(.*?\)\s*\n?', '', md_text, count=1, flags=re.MULTILINE)
+
     html = markdown.markdown(
         md_text,
         extensions=['tables', 'fenced_code', 'nl2br']
     )
 
-    # Headings: H2 → <h6><strong>, H3-H6 → <p><strong>
-    html = re.sub(r'<h2>(.*?)</h2>', r'<h6><strong>\1</strong></h6>', html)
+    # Headings:
+    # - H3-H6 → <p><strong>...</strong></p>
+    # - H2 → <h6><strong>...</strong></h6>
+    #
+    # Order matters: convert H3-H6 first so our H2->H6 output isn't re-processed.
     for level in range(3, 7):
-        html = re.sub(fr'<h{level}>(.*?)</h{level}>', r'<p><strong>\1</strong></p>', html)
+        html = re.sub(
+            fr'<h{level}[^>]*>(.*?)</h{level}>',
+            r'<p><strong>\1</strong></p>',
+            html,
+            flags=re.DOTALL
+        )
+    html = re.sub(
+        r'<h2[^>]*>(.*?)</h2>',
+        r'<h6><strong>\1</strong></h6>',
+        html,
+        flags=re.DOTALL
+    )
 
     # Lists: <li> → add data-preset-tag and wrap in <p>
     html = re.sub(r'<li>(.*?)</li>', r'<li data-preset-tag="p"><p>\1</p></li>', html, flags=re.DOTALL)
@@ -95,13 +112,34 @@ def md_to_framer_html(md_text: str) -> str:
 
 
 def extract_tlnr(md_body: str) -> str:
-    # TLNR from first non-empty paragraph after removing H1 lines
-    body = re.sub(r'^# .*$', '', md_body, flags=re.MULTILINE)
-    paras = [p.strip() for p in body.split('\n\n') if p.strip()]
-    if paras:
-        t = paras[0]
-        t = re.sub(r'\s+', ' ', t)
+    """
+    TLNR (Too Long; Not Reading):
+    Prefer extracting from the explicit DIRECT_ANSWER block if present; otherwise
+    take the first real paragraph (skip hero image, headings, lists).
+    """
+    body = re.sub(r'^# .*$', '', md_body, flags=re.MULTILINE).strip()
+
+    # 1) Prefer explicit DIRECT_ANSWER block
+    m = re.search(r'<!--\s*DIRECT_ANSWER\s*-->(.*?)<!--\s*/DIRECT_ANSWER\s*-->', body, flags=re.DOTALL)
+    if m:
+        t = m.group(1)
+        # Strip markdown links/images and collapse whitespace
+        t = re.sub(r'!\[.*?\]\(.*?\)', '', t)
+        t = re.sub(r'\[([^\]]+)\]\([^)]+\)', r'\1', t)
+        t = re.sub(r'`([^`]+)`', r'\1', t)
+        t = re.sub(r'\s+', ' ', t).strip()
         return t[:300]
+
+    # 2) Fallback: first paragraph that isn't an image/list/heading
+    paras = [p.strip() for p in body.split('\n\n') if p.strip()]
+    for p in paras:
+        if p.startswith('!['):
+            continue
+        if p.startswith(('#', '-', '*', '1)', '1.')):
+            continue
+        t = re.sub(r'\s+', ' ', p).strip()
+        if len(t) >= 50:
+            return t[:300]
     return ''
 
 
@@ -189,7 +227,12 @@ def main():
 
     # Date & read_time
     iso_date = datetime.utcnow().strftime('%Y-%m-%dT00:00:00.000Z')
-    read_time = compute_read_time(md_body_replaced)
+    # Prefer frontmatter read_time when present and already formatted like "12 min".
+    fm_read_time = (fm.get('read_time') or '').strip()
+    if re.match(r'^\d+\s+min$', fm_read_time):
+        read_time = fm_read_time
+    else:
+        read_time = compute_read_time(md_body_replaced)
 
     # CTA: 优先读取 frontmatter，其次使用统一产品链接
     cta_link = fm.get('CTA_alici_link') or 'https://alici.ai/youtube-thumbnail'
@@ -204,13 +247,13 @@ def main():
         "Date": iso_date,
         "read_time": read_time,
         "main_category": main_category,
-        "recommend_category": main_category,
+        "recommend_category": "",
         "article_body_content": article_html,
         "CTA_alici_link": cta_link,
         "CTA button": cta_button,
         "meta_title": meta_title,
         "meta_description": meta_description,
-        "tag_for_SEO": "youtube, thumbnail, tutorial"
+        "tag_for_SEO": ', '.join((fm.get('tags') or []) or ["youtube", "thumbnail", "tutorial"])
     }
 
     out_path = article_dir / '06-article-final.json'
