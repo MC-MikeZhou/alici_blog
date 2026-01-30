@@ -81,7 +81,8 @@
 必须获取，不要使用现有的脚本获取，字幕一定要用Supadata curl获取再进行下一步
 
 使用 Supadata 获取字幕，保存到 `transcript.json`（保留时间戳、语言、完整行）。
-使用以下 curl 命令格式（注意：你需要告诉用户执行此命令，或者使用可用的工具）：
+查看 /skills/utilities/youtube-transcript-fetcher/SKILL.md 
+使用以下 curl 命令格式：
 curl -X GET "https://api.supadata.ai/v1/youtube/transcript?videoId=VIDEO_ID" \
   -H "x-api-key: sd_fe238b5804c459d03740695389a2eb25"
 
@@ -133,9 +134,8 @@ YouTube Data API v3  api key 这两个都可以:
 撰写前查看 AGENTS.md内关联的skill。
 形成初稿：
 - `/reports 待发文章/YYYY-MM-DD-{topic}/01-article-draft.md`
-这里停止，第4步结束，重新查看thumbnail.md（文档随时变更，每次完成一步查看一次），确认自己执行到哪一步，下一步是什么。
-这里停止，第4步结束，重新查看thumbnail.md（文档随时变更，每次完成一步查看一次），确认自己执行到哪一步，下一步是什么。
-用户说继续后才能进入下一步
+第4步结束，重新查看thumbnail.md（文档随时变更，每次完成一步查看一次），确认自己执行到哪一步，下一步是什么。
+然后输出一下自己的进度，完成了什么，下一步做什么。然后进入下一步。
 
 
 ### 第5步，editor 介入
@@ -150,9 +150,8 @@ YouTube Data API v3  api key 这两个都可以:
 验证：
 写完后，对比 01-article-draft.md 01-article-draft-2.md ，直接输出二者的size，字节数，进行比较。看看size 大小是否有增加一倍，如果没有，重新进行这一步。
 
-这里停止，第5步结束，重新查看thumbnail.md（文档随时变更，每次完成一步查看一次），确认自己执行到哪一步，下一步是什么。
-这里停止，第5步结束，重新查看thumbnail.md（文档随时变更，每次完成一步查看一次），确认自己执行到哪一步，下一步是什么。
-用户说继续后才能进入下一步
+第5步结束，重新查看thumbnail.md（文档随时变更，每次完成一步查看一次），确认自己执行到哪一步，下一步是什么。
+然后输出一下自己的进度，完成了什么，下一步做什么。然后进入下一步。
 
 
 
@@ -183,9 +182,8 @@ YouTube Data API v3  api key 这两个都可以:
 写完后，对比 01-article-draft-2.md 01-article-draft-3.md ，直接输出二者的size，字节数，进行比较。看看size 大小是否有增加，如果没有，重新再写。
 写完后，对比 01-article-draft-2.md 01-article-draft-3.md ，直接输出二者的size，字节数，进行比较。看看size 大小是否有增加，如果没有，重新再写。
 
-这里停止，第6步结束，重新查看thumbnail.md（文档随时变更，每次完成一步查看一次），确认自己执行到哪一步，下一步是什么。
-这里停止，第6步结束，重新查看thumbnail.md（文档随时变更，每次完成一步查看一次），确认自己执行到哪一步，下一步是什么。
-用户说继续后才能进入下一步
+第6步结束，重新查看thumbnail.md（文档随时变更，每次完成一步查看一次），确认自己执行到哪一步，下一步是什么。
+然后输出一下自己的进度，完成了什么，下一步做什么。然后进入下一步。
 
 
 
@@ -276,14 +274,12 @@ YouTube Data API v3  api key 这两个都可以:
 
 
 ### 第8步，生成文章封面图  +  生成文中的配图。
-配图语言要求： 英语。请使用英语prompt，生成最终版的英文内容图片。
+查看 /skills/utilities/youtube-transcript-fetcher/SKILL.md 
 
 然后生成 生成 framer.json 和 preview.html
 图片的链接，填入framer.json 和 preview.html当中
 （对应的skill： markdown-to-framer | **v1.3** 🔧 | convert to framer | Framer CMS JSON (**修复**: 图片格式 + 特殊字符) |）
 路径： skills/utilities/markdown-to-framer/  文件夹内所有文档
-
-
 
 具体如何生成配图，上传图片，请参考AGENTS.md 相关介绍
 **图片生成**: FAL.ai nano-banana-pro
@@ -304,9 +300,15 @@ password:  5A_p@cjpX74H(LJM
 
 最终获得的链接如下：
 https://ct2.alici.ai/static/image/other/gen_images/${name}.png
+请使用命令上传图片，不要让用户自己上传。
 
-请使用命令上传视频，不要让用户自己上传。
-请使用命令上传视频，不要让用户自己上传。
+
+### 第9步，生成文章封面图
+封面语言要求： 英语。
+查看 /skills/utilities/blog-cover-generator/SKILL.md 
+请使用英语prompt，生成最终版的英文内容图片。
+
+
 
 
 
