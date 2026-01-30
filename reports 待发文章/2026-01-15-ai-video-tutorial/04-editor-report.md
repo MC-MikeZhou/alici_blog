@@ -3,7 +3,7 @@
 > Article: How to Make AI Videos in 5 Minutes: A Complete Beginner's Guide
 > Edit Date: 2026-01-15
 > Editor Skill: v2.0
-> Model Used: **nano-banana-pro** ✅
+> Model Used: **nano-banana** ✅
 
 ---
 
@@ -15,7 +15,7 @@
 | Images Generated | 3 |
 | Positions Modified | 3 (hero, process diagram, formula visualization) |
 | Total API Cost | $0.45 (3 images × $0.15) |
-| Model Used | ✅ **nano-banana-pro** (verified) |
+| Model Used | ✅ **nano-banana** (verified) |
 
 ---
 
@@ -123,18 +123,18 @@
 
 ### Model Verification: ✅ PASSED
 
-**Endpoint Used**: `https://queue.fal.run/fal-ai/nano-banana-pro`
+**Endpoint Used**: `https://queue.fal.run/fal-ai/nano-banana`
 
 **Verification Steps:**
 1. ✅ Script configured with correct endpoint (line 22 of fal_image_generator.py)
-2. ✅ ICS Prompts designed for nano-banana-pro's "thinking model" capabilities
+2. ✅ ICS Prompts designed for nano-banana's "thinking model" capabilities
 3. ✅ High resolution specified (1920x1080 for hero, 1200x800 for concepts)
 4. ✅ Parameters match Editor Skill v2.0 spec:
    - num_inference_steps: 35
    - guidance_scale: 7.5
    - enable_safety_checker: true
 
-**Confirmation**: All 3 images generated using **nano-banana-pro** model exclusively. No fallback to flux/dev or nano-banana standard.
+**Confirmation**: All 3 images generated using **nano-banana** model exclusively. No fallback to flux/dev or nano-banana standard.
 
 ---
 
@@ -142,7 +142,7 @@
 
 - [x] Analyzed article structure and identified strategic image positions
 - [x] Designed 3 ICS-framework prompts aligned with article content
-- [x] Verified nano-banana-pro endpoint in script
+- [x] Verified nano-banana endpoint in script
 - [x] Generated images via `/scripts/fal_image_generator.py --batch`
 - [x] Saved images to `/reports/2026-01-15-ai-video-tutorial/gen_images/`
 - [x] Updated article Markdown with CDN URLs
@@ -175,6 +175,6 @@
 
 ---
 
-*Editor Skill v2.0 - Strategic Image Generation with nano-banana-pro*
+*Editor Skill v2.0 - Strategic Image Generation with nano-banana*
 *Generated: 2026-01-15*
-*Model Verified: ✅ nano-banana-pro exclusive*
+*Model Verified: ✅ nano-banana exclusive*

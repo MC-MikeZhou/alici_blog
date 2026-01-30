@@ -4,7 +4,7 @@ set -euo pipefail
 # Generate FAL images for hack-01..hack-11 from asset_plan.json
 # Key resolution source per AGENTS.md: .mcp.json -> mcpServers.fal.env.FAL_API_KEY
 
-QUEUE_ENDPOINT="https://queue.fal.run/fal-ai/nano-banana-pro"
+QUEUE_ENDPOINT="https://queue.fal.run/fal-ai/nano-banana"
 OUT_DIR="reports 待发文章/2026-01-28-thumbnail-design-2025"
 PLAN="$OUT_DIR/asset_plan.json"
 MANIFEST="$OUT_DIR/asset_manifest.json"
@@ -77,7 +77,7 @@ generate_one() {
   local tmp
   tmp=$(mktemp)
   jq --arg id "$id" --arg url "$url" \
-     '.images += [{id: $id, cdn_url: $url, status: "success", generation_model: "fal-ai/nano-banana-pro", file_path: null}]' \
+     '.images += [{id: $id, cdn_url: $url, status: "success", generation_model: "fal-ai/nano-banana", file_path: null}]' \
      "$MANIFEST" > "$tmp" && mv "$tmp" "$MANIFEST"
   echo "✅ $id -> $url" >&2
 }
@@ -87,7 +87,7 @@ jq -r '.images[] | select(.id | test("^hack-\\d{2}$")) | [.id, .prompt] | @tsv' 
 while IFS=$'\t' read -r ID PROMPT; do
   generate_one "$ID" "$PROMPT" || {
     tmp=$(mktemp)
-    jq --arg id "$ID" '.images += [{id: $id, cdn_url: null, status: "failed", generation_model: "fal-ai/nano-banana-pro", file_path: null}]' "$MANIFEST" > "$tmp" && mv "$tmp" "$MANIFEST"
+    jq --arg id "$ID" '.images += [{id: $id, cdn_url: null, status: "failed", generation_model: "fal-ai/nano-banana", file_path: null}]' "$MANIFEST" > "$tmp" && mv "$tmp" "$MANIFEST"
   }
 done
 

@@ -531,7 +531,7 @@ M6: E-E-A-T 内容深度检查 (12分) ← 新增
 
 ### 6.1 图片生成
 
-**服务**: FAL.ai nano-banana-pro
+**服务**: FAL.ai nano-banana
 - 脚本: `/scripts/fal_image_generator.py`
 - API Key 配置: `.mcp.json` → `mcpServers.fal.env.FAL_API_KEY`
 - 读取优先级: 环境变量 > .mcp.json 配置文件

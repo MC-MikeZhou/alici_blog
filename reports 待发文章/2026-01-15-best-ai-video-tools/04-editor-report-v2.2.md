@@ -13,7 +13,7 @@
 | **文章类型** | List（榜单对比） |
 | **字数** | ~3,500 词 |
 | **配图策略** | 3 张战略图（ICSB框架） |
-| **生成模型** | nano-banana-pro |
+| **生成模型** | nano-banana |
 | **图片比例** | 统一 16:9 ✅ |
 | **品牌美学** | 绿色中心渐变 + 极简留白 |
 
@@ -99,7 +99,7 @@
 | **API 参数** | `image_size: {width, height}` (无效) | `aspect_ratio: "16:9"` + `resolution` (✅) |
 | **API Key 管理** | 系统环境变量（会话丢失） | `.mcp.json` 配置文件（持久化） ✅ |
 | **Prompt 框架** | ICS (3层) | ICSB (4层，含 Brand Layer) ✅ |
-| **生成模型** | nano-banana-pro | nano-banana-pro |
+| **生成模型** | nano-banana | nano-banana |
 | **总耗时** | ~3 分钟 | ~2.5 分钟 |
 
 ### 4.2 视觉对比
@@ -265,7 +265,7 @@ v2.2 Guide:
 
 ### 8.1 技术验证
 
-- [x] **模型确认**: nano-banana-pro (`https://queue.fal.run/fal-ai/nano-banana-pro`)
+- [x] **模型确认**: nano-banana (`https://queue.fal.run/fal-ai/nano-banana`)
 - [x] **比例确认**: 所有图片 16:9 比例
   - Hero: 2752×1536 (1.79) ✓
   - Comparison: 1376×768 (1.79) ✓
@@ -413,7 +413,7 @@ v2.2 Guide:
 
 **Editor**: Claude Sonnet 4.5 + Editor Skill v2.2
 **Generated**: 2026-01-15 22:40
-**Image Model**: FAL.ai nano-banana-pro
+**Image Model**: FAL.ai nano-banana
 **Status**: ✅ Complete
 
 **v2.2 核心成就**:

@@ -215,7 +215,7 @@ python3 scripts/fal_image_generator.py --show-log | grep submit
 - ✅ 新增 --show-log 和 --clear-cache 参数
 
 **v2.0 (2026-01-14)**
-- ✅ 统一使用 nano-banana-pro 模型
+- ✅ 统一使用 nano-banana 模型
 - ✅ 修复 response_url 处理
 - ✅ 修复状态比较 bug
 

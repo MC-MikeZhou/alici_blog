@@ -35,7 +35,7 @@
 | ID | Title | URL/Slug | Type | Pillar | Status | Keywords |
 |----|-------|----------|------|--------|--------|----------|
 | image-001 | Best AI Image Generators 2026 | /blog/best-ai-image-generators-2026 | List | pillar-002 | Planned | image generators, Flux, Ideogram, AI art |
-| image-002 | Nano Banana Pro: Advanced AI Image Generation | /blog/nano-banana-pro-guide | Tutorial | pillar-002 | Planned | Nano Banana Pro, AI image, character generation |
+| image-002 | Nano Banana Pro: Advanced AI Image Generation | /blog/nano-banana-guide | Tutorial | pillar-002 | Planned | Nano Banana Pro, AI image, character generation |
 
 ### Marketing Cluster
 

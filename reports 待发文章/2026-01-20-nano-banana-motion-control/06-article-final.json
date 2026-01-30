@@ -3,7 +3,7 @@
   "slug": "nano-banana-motion-control-2026-01",
   "description": "Motion Control 将动作生成从 prompt 文字猜测变成视觉参考迁移，结合 Nano Banana Pro 角色生成，创作者可在 Alici AI 平台内完成从角色到动作的完整工作流。",
   "category": "insights",
-  "tags": ["motion-control", "kling-2.6", "nano-banana-pro", "video-generation", "alici-ai"],
+  "tags": ["motion-control", "kling-2.6", "nano-banana", "video-generation", "alici-ai"],
   "publishedAt": "2026-01-20",
   "updatedAt": "2026-01-20",
   "readTime": "3 min",

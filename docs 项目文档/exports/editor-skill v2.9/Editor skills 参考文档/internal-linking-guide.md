@@ -131,7 +131,7 @@
 | ID | 标题 | URL | 类型 | 状态 |
 |----|------|-----|------|------|
 | image-001 | Best AI Image Generators 2026 | /blog/best-ai-image-generators-2026 | List | Planned |
-| image-002 | Nano Banana Pro Guide | /blog/nano-banana-pro-guide | Tutorial | Planned |
+| image-002 | Nano Banana Pro Guide | /blog/nano-banana-guide | Tutorial | Planned |
 
 ### Product Landing Pages
 

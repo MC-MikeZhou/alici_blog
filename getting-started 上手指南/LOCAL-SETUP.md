@@ -44,7 +44,7 @@ AliciBlog 使用以下外部服务：
 | 服务 | 用途 | 配置位置 |
 |------|------|---------|
 | **DataForSEO** | 关键词研究 + SERP 数据 | `.mcp.json` |
-| **FAL.ai** | 图片生成 (nano-banana-pro) | `.mcp.json` |
+| **FAL.ai** | 图片生成 (nano-banana) | `.mcp.json` |
 
 ### 3.1 获取 API 密钥
 
@@ -56,7 +56,7 @@ AliciBlog 使用以下外部服务：
 **FAL.ai**:
 1. 注册 https://fal.ai/
 2. 创建 API Key
-3. 选择模型: nano-banana-pro
+3. 选择模型: nano-banana
 
 ### 3.2 配置 .mcp.json
 
@@ -192,7 +192,7 @@ cd /Users/H/Documents/AliciBlog && claude
 
 ## 7. 图片生成配置
 
-图片通过 FAL.ai nano-banana-pro 模型生成：
+图片通过 FAL.ai nano-banana 模型生成：
 
 ```
 生成脚本: /scripts/fal_image_generator.py

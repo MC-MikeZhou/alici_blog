@@ -1179,7 +1179,7 @@ Writer → Editor Gate → AEO → Improver → 竞品验证 → Framer → Prev
 
 ## 关键配置
 
-**图片生成**: FAL.ai nano-banana-pro
+**图片生成**: FAL.ai nano-banana
 - 脚本: `/scripts/fal_image_generator.py`
 - API Key 配置: `.mcp.json` → `mcpServers.fal.env.FAL_API_KEY`
 - 读取优先级: 环境变量 > .mcp.json 配置文件

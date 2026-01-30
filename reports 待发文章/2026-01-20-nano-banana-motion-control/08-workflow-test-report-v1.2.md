@@ -109,7 +109,7 @@ micro_roundup 目标: ≥70
 | `CTA button` | ✅ 匹配 | Create AI Videos Now |
 | `meta_title` | ✅ 完整 | 如何用 Nano Banana + Motion Control 制作病毒视频 |
 | `meta_description` | ✅ 完整 | Kling 2.6 Motion Control 刚发布，案例爆发... |
-| `tag_for_SEO` | ✅ 生成 | motion-control, kling-2.6, nano-banana-pro... |
+| `tag_for_SEO` | ✅ 生成 | motion-control, kling-2.6, nano-banana... |
 
 ### 自动修复记录
 
@@ -317,7 +317,7 @@ micro_roundup 目标: ≥70
   "CTA button": "Create AI Videos Now", ✅
   "meta_title": "如何用 Nano Banana + Motion Control 制作病毒视频", ✅
   "meta_description": "Kling 2.6 Motion Control 刚发布...", ✅
-  "tag_for_SEO": "motion-control, kling-2.6, nano-banana-pro..." ✅
+  "tag_for_SEO": "motion-control, kling-2.6, nano-banana..." ✅
 }
 ```
 

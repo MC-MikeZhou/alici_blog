@@ -13,7 +13,7 @@
 | **文章类型** | List（榜单对比） |
 | **字数** | ~3,500 词 |
 | **配图策略** | 3 张战略图（非机械填充） |
-| **生成模型** | nano-banana-pro |
+| **生成模型** | nano-banana |
 | **图片比例** | 统一 16:9 |
 
 ---
@@ -138,7 +138,7 @@ python3 scripts/fal_image_generator.py --show-log
 
 ### 技术验证
 
-- [x] **模型确认**: nano-banana-pro (`https://queue.fal.run/fal-ai/nano-banana-pro`)
+- [x] **模型确认**: nano-banana (`https://queue.fal.run/fal-ai/nano-banana`)
 - [x] **比例确认**: 所有图片 16:9 比例
   - Hero: 1920×1080 ✓
   - Comparison: 1280×720 ✓
@@ -233,5 +233,5 @@ python3 scripts/fal_image_generator.py --show-log
 
 **Editor**: Claude Sonnet 4.5 + Editor Skill v2.1
 **Generated**: 2026-01-15 18:00
-**Image Model**: FAL.ai nano-banana-pro
+**Image Model**: FAL.ai nano-banana
 **Status**: ✅ Complete

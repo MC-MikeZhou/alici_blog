@@ -1,9 +1,9 @@
 {
   "status": "COMPLETED",
   "request_id": "2d70a609-ef3a-4073-9fba-36e8993422d4",
-  "response_url": "https://queue.fal.run/fal-ai/nano-banana-pro/requests/2d70a609-ef3a-4073-9fba-36e8993422d4",
-  "status_url": "https://queue.fal.run/fal-ai/nano-banana-pro/requests/2d70a609-ef3a-4073-9fba-36e8993422d4/status",
-  "cancel_url": "https://queue.fal.run/fal-ai/nano-banana-pro/requests/2d70a609-ef3a-4073-9fba-36e8993422d4/cancel",
+  "response_url": "https://queue.fal.run/fal-ai/nano-banana/requests/2d70a609-ef3a-4073-9fba-36e8993422d4",
+  "status_url": "https://queue.fal.run/fal-ai/nano-banana/requests/2d70a609-ef3a-4073-9fba-36e8993422d4/status",
+  "cancel_url": "https://queue.fal.run/fal-ai/nano-banana/requests/2d70a609-ef3a-4073-9fba-36e8993422d4/cancel",
   "logs": null,
   "metrics": {
     "inference_time": 56.40682005882263
