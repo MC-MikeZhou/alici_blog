@@ -1,0 +1,15 @@
+{
+  "background_type": "fluid-shape",
+  "color": "#4FD1C5",
+  "h1_text": "YOUTUBE THUMBNAILS",
+  "h2_text": "0 to 1 Guide",
+  "h3_text": null,
+  "prompt_used": "Minimalist blog cover on black background with a soft teal fluid ribbon glow (Core Teal #4FD1C5). 16:9 hero composition, generous negative space (60%), crisp edges, no text, no logo, no icons, no noise, professional, modern, high contrast, mobile-friendly.",
+  "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/2026-01-28-youtube-thumbnail-0-to-1_cover.png",
+  "local_path": "/reports 待发文章/2026-01-28-youtube-thumbnail-0-to-1_副本2/assets/2026-01-28-youtube-thumbnail-0-to-1_cover.png",
+  "generated_at": "2026-01-30T13:36:00Z",
+  "model": "fal-ai/nano-banana",
+  "aspect_ratio": "16:9",
+  "resolution": "2K"
+}
+

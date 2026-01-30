@@ -1,0 +1,61 @@
+{
+  "mode": "thumbnail_mode",
+  "intent": "参考扩展",
+  "audience": "新手创作者",
+  "project_dir": "reports 待发文章/2026-01-28-youtube-thumbnail-0-to-1_副本2",
+  "image_plan": {
+    "total_planned": 3,
+    "notes": "仅占位，不生成；文内就近插图，不集中堆放",
+    "candidates": [
+      {
+        "id": "flow-upload-thumb",
+        "role": "流程示意",
+        "context": "第2节：如何更换/添加缩略图",
+        "placeholder": "![流程示意：在 YouTube Studio 上传自定义缩略图](placeholder)"
+      },
+      {
+        "id": "type-comparison-grid",
+        "role": "类型示意/对比",
+        "context": "第6节：12种类型速查（选1-2类做简要示例）",
+        "placeholder": "![示意：疑问钩子 vs VS 对比的构图差异](placeholder)"
+      },
+      {
+        "id": "text-vs-no-text",
+        "role": "设计取舍示例",
+        "context": "第7节：目的导向设计（是否加入文字）",
+        "placeholder": "![示意：『文字版』与『纯画面版』一眼可读性对比](placeholder)"
+      }
+    ]
+  },
+  "constraints": {
+    "no_fabricated_data": true,
+    "source_attribution_required": true,
+    "keep_on_topic": true,
+    "no_appendix_or_exercises": true
+  },
+  "structure_goals": [
+    "0→1 正确添加路径",
+    "12 类高点击类型",
+    "目的导向设计要点",
+    "常见误区与避免",
+    "Mini FAQ",
+    "CTA 卡片"
+  ],
+  "validation_targets": {
+    "title_year_2026_or_2027": true,
+    "key_takeaways_front": true,
+    "data_hook_opening": "best_effort",
+    "cta_card": true
+  },
+  "sources_seed": [
+    {
+      "name": "InVideo Blog: How to Add a Thumbnail to a YouTube Video",
+      "url": "https://invideo.io/blog/how-to-add-thumbnail-to-youtube-video/"
+    },
+    {
+      "name": "vidIQ Blog: The 12 Best YouTube Thumbnails People Love to Click On",
+      "url": "https://vidiq.com/blog/post/types-youtube-thumbnails/"
+    }
+  ]
+}
+

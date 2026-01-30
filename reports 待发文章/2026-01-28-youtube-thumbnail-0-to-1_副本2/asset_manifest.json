@@ -1,0 +1,42 @@
+{
+  "images": [
+    {
+      "id": "flow-upload-thumb",
+      "name": "2026-01-28-youtube-thumbnail-0-to-1_flow-upload-thumb.png",
+      "original_prompt": "Minimal, clean UI-style illustration of YouTube Studio thumbnail upload flow: highlight the Thumbnails panel and an Upload Thumbnail button. Flat design, high contrast, smartphone readability, brand-neutral, white background, teal accent, crisp icons, 16:9.",
+      "final_prompt": "Minimal, clean UI-style mock of YouTube Studio Thumbnails panel with an 'Upload Thumbnail' button highlighted. Flat graphic design, high contrast, brand-neutral, crisp lines, white background with teal accent, mobile-first readability, no logos, no tiny text, 16:9.",
+      "request_id": "baf93e3d-6b17-43e7-86ba-2f3814f14506",
+      "file_path": "assets/2026-01-28-youtube-thumbnail-0-to-1_flow_upload_thumb.png",
+      "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/2026-01-28-youtube-thumbnail-0-to-1_flow_upload_thumb.png",
+      "generation_model": "fal-ai/nano-banana",
+      "status": "success"
+    },
+    {
+      "id": "type-comparison-grid",
+      "name": "2026-01-28-youtube-thumbnail-0-to-1_type-comparison-grid.png",
+      "original_prompt": "Split-screen comparison: left shows a Burning Question thumbnail (big short question text on clean background), right shows a VS comparison thumbnail (two symmetric subjects with a restrained VS). Strong contrast, few words, mobile-first readability, minimal style, 16:9.",
+      "final_prompt": "Split-screen comparison: LEFT = Burning Question thumbnail (very short bold question on clean background), RIGHT = VS comparison (two symmetric subjects with a restrained 'VS'). Minimalist, strong contrast, few words, mobile-friendly, clear edges, 16:9.",
+      "request_id": "33cce863-6259-422a-bd7e-a98c5647d602",
+      "file_path": "assets/2026-01-28-youtube-thumbnail-0-to-1_type_comparison_grid.png",
+      "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/2026-01-28-youtube-thumbnail-0-to-1_type_comparison_grid.png",
+      "generation_model": "fal-ai/nano-banana",
+      "status": "success"
+    },
+    {
+      "id": "text-vs-no-text",
+      "name": "2026-01-28-youtube-thumbnail-0-to-1_text-vs-no-text.png",
+      "original_prompt": "Side-by-side readability test: left variant with 2–4 word bold text, right variant with no text (pure visual). Same subject, clean backgrounds, clear edges, strong contrast, mobile friendly, minimalist graphic style, 16:9.",
+      "final_prompt": "Side-by-side readability test for thumbnails: LEFT variant uses 2-4 bold words, RIGHT variant has no text (pure visual). Same subject, clean backgrounds, crisp edges, strong contrast, minimal style, 16:9, mobile-friendly.",
+      "request_id": "b02eb86a-f679-4123-9966-04903cb225a6",
+      "file_path": "assets/2026-01-28-youtube-thumbnail-0-to-1_text_vs_no_text.png",
+      "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/2026-01-28-youtube-thumbnail-0-to-1_text_vs_no_text.png",
+      "generation_model": "fal-ai/nano-banana",
+      "status": "success"
+    }
+  ],
+  "summary": {
+    "total_planned": 3,
+    "total_generated": 0,
+    "success_rate": "0%"
+  }
+}
