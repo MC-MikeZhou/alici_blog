@@ -1,0 +1,59 @@
+{
+  "images": [
+    {
+      "original_url": "https://cdnwebsite.databox.com/wp-content/uploads/2021/08/11050419/youtube_channel_perf_dashboard_template_preview_databox-1000x551.jpg",
+      "local_path": "assets/img001.jpg",
+      "status": "downloaded"
+    },
+    {
+      "original_url": "https://cdnwebsite.databox.com/wp-content/uploads/2022/08/28110848/Image-2020-12-18-at-12.41.41-AM.jpg",
+      "local_path": "assets/img002.jpg",
+      "status": "downloaded"
+    },
+    {
+      "original_url": "https://cdnwebsite.databox.com/wp-content/uploads/2022/08/28110942/Image-2020-12-18-at-12.42.18-AM-1000x526.jpg",
+      "local_path": "assets/img003.jpg",
+      "status": "downloaded"
+    },
+    {
+      "original_url": "https://cdnwebsite.databox.com/wp-content/uploads/2022/08/28111235/p2-1.png",
+      "local_path": "assets/img004.png",
+      "status": "downloaded"
+    },
+    {
+      "original_url": "https://cdnwebsite.databox.com/wp-content/uploads/2022/08/28111302/r2.png",
+      "local_path": "assets/img005.png",
+      "status": "downloaded"
+    },
+    {
+      "original_url": "https://cdnwebsite.databox.com/wp-content/uploads/2022/08/28112829/mojoo.jpg",
+      "local_path": "assets/img006.jpg",
+      "status": "downloaded"
+    },
+    {
+      "original_url": "https://cdnwebsite.databox.com/wp-content/uploads/2022/08/28113844/sol-1000x529.jpg",
+      "local_path": "assets/img007.jpg",
+      "status": "downloaded"
+    },
+    {
+      "original_url": "https://cdnwebsite.databox.com/wp-content/uploads/2022/08/28113920/pepe-1000x499.jpg",
+      "local_path": "assets/img008.jpg",
+      "status": "downloaded"
+    },
+    {
+      "original_url": "https://cdnwebsite.databox.com/wp-content/uploads/2022/08/31063749/youtube-ctr-average.png",
+      "local_path": "assets/img009.png",
+      "status": "downloaded"
+    },
+    {
+      "original_url": "https://cdnwebsite.databox.com/wp-content/uploads/2022/08/31070607/2-8.png",
+      "local_path": "assets/img010.png",
+      "status": "downloaded"
+    },
+    {
+      "original_url": "https://cdnwebsite.databox.com/wp-content/uploads/2023/08/25022508/Group-13260.png",
+      "local_path": "assets/img011.png",
+      "status": "downloaded"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "project_name": "2026-01-30-thumbnail-youtube-ctr",
+  "mode": "thumbnail-reference-expansion",
+  "keywords": ["youtube ctr", "youtube click through rate", "improve youtube ctr", "good ctr youtube"],
+  "sources": [
+    {"title": "vidIQ: 6 tips good CTR", "url": "https://vidiq.com/blog/post/6-tips-good-CTR-youtube/"},
+    {"title": "Databox: Improve YouTube CTR", "url": "https://databox.com/improve-youtube-ctr"},
+    {"title": "Lenos Tube: CTR Benchmark", "url": "https://www.lenostube.com/en/youtube-ctr-benchmark-average-good-best-practices/"}
+  ],
+  "constraints": {
+    "no_fabricated_data": true,
+    "source_attribution": true,
+    "brand": "Alici AI"
+  }
+}

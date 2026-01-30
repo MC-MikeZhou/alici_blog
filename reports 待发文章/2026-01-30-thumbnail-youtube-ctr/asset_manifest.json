@@ -1,0 +1,36 @@
+{
+  "images": [
+    {
+      "id": "ctr-retention-diagram",
+      "source": "sources/web-vidiq-6-tips-good-ctr-youtube/assets/img003.jpg",
+      "status": "used_source"
+    },
+    {
+      "id": "studio-reach-screenshot",
+      "source": "sources/web-databox-improve-youtube-ctr/assets/img003.jpg",
+      "status": "used_source"
+    },
+    {
+      "id": "mobile-150-check",
+      "original_prompt": "Mobile-first thumbnail readability checklist: big 3-4 word text, single focal point, strong contrast, 150x150 pixel preview inset to show legibility. Flat illustration, simple shapes, high contrast.",
+      "file_path": "reports 待发文章/2026-01-30-thumbnail-youtube-ctr/assets/gen_images/mobile-150-check-youtube-ctr-2026.png",
+      "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/mobile-150-check-youtube-ctr-2026.png",
+      "generation_model": "fal-ai/nano-banana",
+      "status": "generated"
+    },
+    {
+      "id": "blog-cover",
+      "original_prompt": "Minimalist black background with teal abstract data waves/curves, subtle glow, high contrast, no text, 16:9, 2K, clean composition, one focal area, brand teal (#4FD1C5, #81E6D9, #319795).",
+      "file_path": "reports 待发文章/2026-01-30-thumbnail-youtube-ctr/assets/gen_images/cover-youtube-ctr-2026.png",
+      "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/cover-youtube-ctr-2026.png",
+      "generation_model": "fal-ai/nano-banana",
+      "status": "generated"
+    }
+  ],
+  "summary": {
+    "total_planned": 4,
+    "total_generated": 2,
+    "total_used_source": 2,
+    "success_rate": "100%"
+  }
+}

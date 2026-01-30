@@ -1,0 +1,31 @@
+{
+  "images": [
+    {
+      "id": "ctr-retention-diagram",
+      "prompt": "A clean infographic showing the relationship between YouTube CTR (click-through rate) and retention/watch time. Arrows from 'Impressions → CTR (Click) → Retention (Watch) → Recommendation'. Minimalist, dark UI friendly, high contrast, readable at 1080x608 and also legible when scaled down.",
+      "role": "inline",
+      "placeholder": "![图：CTR × 留存的关系示意（点击是入口，留存决定放大）](placeholder)",
+      "context": "为什么 CTR 重要但不是全部 一节顶部"
+    },
+    {
+      "id": "studio-reach-screenshot",
+      "prompt": "Mock YouTube Studio analytics Reach tab style UI (do not include logos): panels with 'Impressions', 'CTR', 'Views', 'Unique viewers'. Emphasize the Reach tab with CTR selected. Clean, neutral colors.",
+      "role": "inline",
+      "placeholder": "![图：Studio → Analytics → Reach 查看 CTR 的页面示意](placeholder)",
+      "context": "什么是 CTR，以及如何在 Studio 查看 一节"
+    },
+    {
+      "id": "mobile-150-check",
+      "prompt": "Mobile-first thumbnail readability checklist: big 3-4 word text, single focal point, strong contrast, 150x150 pixel preview inset to show legibility. Flat illustration, simple shapes, high contrast.",
+      "role": "inline",
+      "placeholder": "![图：移动端 150×150 可读性自检清单（3–4 词、单焦点、高对比）](placeholder)",
+      "context": "8 步闭环第 3 步（移动优先缩略图）"
+    }
+  ],
+  "metadata": {
+    "total_images": 3,
+    "article_slug": "youtube-ctr-guide-2026",
+    "generated_at": "2026-01-30T00:00:00Z"
+  }
+}
+

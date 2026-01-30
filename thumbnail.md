@@ -1,6 +1,23 @@
 # Thumbnail Mode — 扩展参考版（v0.2）
 
-> 本链路专门用于“Thumbnail 主题博客”的生产搭建：原始素材仅作为起点，允许充分扩写、加厚与补充多来源证据；对对象与校验项做了适配。与既有三条链路（全自动/手动/Seed）剥离，作为第四条独立链路执行；末端继续复用 Editor → AEO → Framer 能力。
+> 本链路专门用于“Thumbnail 主题博客”的生产搭建：原始素材仅作为起点，允许充分扩写、加厚与补充多来源证据；对对象与校验项做了适配。与既有三条链路（全自动/手动/Seed）剥离，作为第四条独立链路执行；末端继续复用 Editor → AEO → Framer 能力。 
+> 本链路 Thumbnail 主题博客 生产的blog，最终会导量到我们网站的 Alici.ai Thumbnail 创作工具产品。
+### Alici.ai Thumbnail 产品背景
+Alici.ai 是一个 AI 内容创作平台，其中 **Thumbnail 生成** 是核心产品之一。
+### Thumbnail 产品核心功能
+| 功能 | 描述 | 竞品对比 |
+|------|------|---------|
+| **AI 快速生成** | 从创意/脚本快速生成缩略图 | 与 Canva/vidIQ 类似 |
+| **Script → Thumbnail** | 输入视频脚本，自动生成匹配的缩略图
+| **URL Reference** | 输入参考视频 URL，生成类似风格缩略图
+| **One-Face** | 上传 1 张照片，所有缩略图自动使用你的脸
+### 目标用户
+**主要用户**: 小 YouTuber / 小视频创作者 / 新手创作者
+————————
+产品Landing Page：https://alici.ai/youtube-thumbnail
+
+
+
 
 注意，充分扩写，加厚，但
 不可增加一些【附录】，【习题集】等，和主线内容偏离较大的内容
@@ -76,10 +93,13 @@
 
 -1  网页抓取方法：
   优先使用 https://r.jina.ai/${要抓的页面链接}
-  获取md，
-  md 即为 网页文本内容。
+  获取md， 即为 网页文本内容。
 
--2 youtube Transcript 获取（）：
+-2 网页中的图片
+  https://r.jina.ai/${要抓的页面链接} 获取到上述网页md后，
+  查看md，找到图片类型的内容，进行下载，放到.md文件夹中，对应assets/ 下
+
+-3 youtube Transcript 获取（）：
 必须获取，不要使用现有的脚本获取，字幕一定要用Supadata curl获取再进行下一步
 必须获取，不要使用现有的脚本获取，字幕一定要用Supadata curl获取再进行下一步
 必须获取，不要使用现有的脚本获取，字幕一定要用Supadata curl获取再进行下一步
@@ -90,7 +110,7 @@
 curl -X GET "https://api.supadata.ai/v1/youtube/transcript?videoId=VIDEO_ID" \
   -H "x-api-key: sd_fe238b5804c459d03740695389a2eb25"
 
--3 youtube metadata 抓取：
+-4 youtube metadata 抓取：
 使用 YouTube Data API v3 获取视频基础信息，保存到 `metadata.json`。
 YouTube Data API v3  api key 这两个都可以: 
  [
@@ -129,14 +149,14 @@ YouTube Data API v3  api key 这两个都可以:
 等等其他维度你能考虑到在列出一些，综合考虑提出 4–5个建议
 是否需要图文案例进行内容扩充？
 
+3.3  根据3.2的选项，确认blog 标题
+给出4-5个建议
 
-3.3 前置讨论完毕，设定计划
+3.4 前置讨论完毕，设定计划
 重新查看thumbnail.md（文档随时变更，每次完成一步查看一次），确认自己执行到哪一步，后面都有哪些详细步骤。
-根据详细的步骤，列出规划plan给用户查看
+根据详细的步骤，列出规划plan list给用户查看
+然后按照plan list 依次连续执行
 
-
-这里停止，第3步结束，等待用户确认
-然后按照plan 依次执行
 
 
 ### 第4步，writer模式 开始介入，进行整体撰写
@@ -155,9 +175,15 @@ YouTube Data API v3  api key 这两个都可以:
 不可增加一些【附录】，【习题集】等，和主线内容偏离较大的内容
 不可增加一些【附录】，【习题集】等，和主线内容偏离较大的内容
 
-配图：规划文中配图，穿插在文章当中，不要排在一起.
+关于文章配图：
+规划文中配图，穿插在文章当中，不要排在一起.
 如果是图文案例，图片和案例要在一起。
-是否需要生图：不需要生成图片，占位即可
+
+关于配图来源，：
+1 优先，查看前面使用 https://r.jina.ai/${要抓的页面链接} 抓取的页面，assets/中对应的图片，是否有合适，如果合适可以直接使用。填入对应位置。
+
+2 其次，否则由后续生图来实现。
+  当前是否生图：本步骤不需要生成图片，占位即可
 
 - `/reports 待发文章/YYYY-MM-DD-{topic}/01-article-draft-2.md`
 记住不需要生成图片，占位即可，不需要再询问用户
@@ -261,7 +287,16 @@ YouTube Data API v3  api key 这两个都可以:
 用户说继续后才能进入下一步
 
 
-### 第8步，  生成文中的配图。
+### 第8步，  文中配图环节 
+8.1
+注意，优先使用 source/  中的来源网页配图
+先查看一遍source/ 中所有的图片，全部用文字描述出图片内容，列出来给用户，
+然后提出一版配图方案，对应之前规划的占位，列出来给用户，让用户选择。
+使用source/  图片，可以上传到 cdn获得云端链接，后续使用
+
+8.2
+没有使用source/ 中图片的占位，则使用AI生图的方式得到图片 和 fal的云端链接，后续使用，
+具体如下
 生图会扣费，因此生图前，请告知用户本次会生成多少张配图。用户确认后再继续。
 查看 /skills/utilities/youtube-transcript-fetcher/SKILL.md 
 
@@ -295,8 +330,16 @@ https://ct2.alici.ai/static/image/other/gen_images/${name}.png
 请使用英语prompt，生成最终版的英文内容图片。
 
 
-### 第10步，清理文中的debug文案，比如 【xxx占位】，【临时模拟】等
-然后生成 生成 framer.json 和 preview.html
+### 第10步，清理debug文案，更新错误链接。 
+严格执行：
+1  清理 01-article-draft-4.md 文中的debug文案
+2  thumbnail 所有导流，链接统一换成： https://alici.ai/youtube-thumbnail  ， 而不是  https://app.alici.ai/ ,
+3  生成
+- `/reports 待发文章/YYYY-MM-DD-{topic}/01-article-draft-5.md`
+
+
+### 第11步，生成预览网页和json
+然后基于01-article-draft-5.md，生成 framer.json 和 preview.html
 图片的链接，填入framer.json 和 preview.html当中
 （生成 framer.json  对应的skill： markdown-to-framer | **v1.3** 🔧 | convert to framer | Framer CMS JSON (**修复**: 图片格式 + 特殊字符) |）
 路径： skills/utilities/markdown-to-framer/  文件夹内所有文档
