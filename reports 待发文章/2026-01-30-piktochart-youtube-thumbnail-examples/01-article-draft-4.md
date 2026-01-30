@@ -129,116 +129,16 @@ Piktochart 的 25 个例子本质上是一份“按标签的示例墙”。为�
 - 你要“冲突/参与” → 选对比/拼贴类
 - 你要“结果/收益” → 选数字钩子类
 
-### 2.2 选择模板的决策树（If/Then）
-你可以这样做一个 30 秒判断：先别管“好不好看”，先问观众点开前最想确认哪件事。
+### 2.2 30 秒选模板（精简版）
+不纠结“好不好看”，先问观众点开前最想确认什么：
 
-- 想确认“能学到什么/能得到什么”（教程、攻略、步骤）→ 用信息卡片类（优先 3.3 或 3.6）。  
-- 想先看到“差异/胜负/对比”（对战、评测、新旧对比）→ 用对比类（优先 3.4）。  
-- 想被“情绪与反应”带走（反应、娱乐、合集）→ 用拼贴/情绪类（优先 3.9）。  
-- 想先看到“结果或风险”（理财、副业、职业成长）→ 用数字钩子类（优先 3.8 或 3.6）。  
-- 想确认“是不是我需要的触发词/会不会太吵”（ASMR、助眠、放松）→ 用氛围 + 触发词类（优先 3.7）。  
-- 想先确认“质感与口感”（美食、探店）→ 用特写 + 色块标题类（优先 3.2）。  
-- 想先被“关系与反差”抓住（宠物、萌宠）→ 用人脸 + 互动关系类（优先 3.1）。  
+- 教程/攻略/步骤（想确认能学到什么）→ 信息卡片类（优先 3.3 或 3.6）
+- 对战/评测/新旧对比（想先看到差异与胜负）→ VS 对比类（优先 3.4）
+- 反应/娱乐/合集（想被情绪带走）→ 拼贴/情绪类（优先 3.9）
+- 理财/副业/职业成长（想先看到结果或风险）→ 数字钩子类（优先 3.8 或 3.6）
+- ASMR/助眠（想确认触发词与“安不安”）→ 氛围 + 触发词类（优先 3.7）
 
-把选择做对后，接下来你只需要做一件事：把模板当作“结构骨架”，不要把它当作“固定成品”。你每次只替换 3 个变量，风格就能稳定且可复盘。
-
-### 2.3 垂类文案词库（写“短句”，别写“标题摘要”）
-很多缩略图失败不是因为画面不够酷，而是因为文字写成了“内容摘要”。缩略图更像路边招牌：一句话让人停下来。
-
-下面给你一个按垂类可直接替换的短句词库（你可以把下划线替换成对象/城市/工具/人物）。
-
-宠物/萌宠（可爱 + 反差）
-- FIRST DAY HOME
-- HE FINALLY ___
-- NO MORE ___
-- DOES THIS WORK?
-- BEST DOG EVER?
-- I CAN’T BELIEVE THIS
-
-美食/探店（质感 + 评价）
-- BEST ___ IN ___
-- $5 ___ CHALLENGE
-- DON’T ORDER THIS
-- WORTH THE HYPE?
-- CRISPY IN 10 MIN
-- I TRIED THE ___
-
-旅行/攻略（省时 + 路线）
-- 48H IN ___
-- TOP 7 STOPS
-- PERFECT ROUTE
-- DON’T WASTE TIME
-- MUST-SEE SPOTS
-- FIRST TIME IN ___
-
-游戏/对战（冲突 + 悬念）
-- NEW vs OLD
-- 1v1 THIS
-- CAN I WIN?
-- BUILD BATTLE
-- SPEEDRUN FAIL?
-- THIS IS BROKEN
-
-运动/高能（瞬间 + 节点）
-- FINAL ROUND
-- KO MOMENT
-- POWER ROUND 5
-- I GOT HUMBLED
-- TRAINING DAY
-- UNREAL HIT
-
-副业/赚钱（交付物 + 路径）
-- ___ BLUEPRINT
-- SIDE HUSTLE STACK
-- FROM 0 TO 1
-- BEGINNER SYSTEM
-- DO THIS FIRST
-- MY EXACT PLAN
-
-ASMR/助眠（触发词 + 确定性）
-- NO TALKING
-- MIC BRUSH
-- GENTLE TAPPING
-- SLEEP FAST
-- RELAX + FOCUS
-- 1 HOUR LOOP
-
-理财/投资（语境 + 数字）
-- +___% RETURNS
-- I LOST ___
-- WHAT I’D DO NOW
-- BULL vs BEAR
-- THIS CHANGED EVERYTHING
-- RISK WARNING
-
-反应/娱乐（对象 + 情绪）
-- FIRST LISTEN
-- ALBUM REACTION
-- I’M SHOOK
-- DID YOU HEAR THAT?
-- BEST TRACK?
-- THIS PART…
-
-写法提示（让你更像“频道语言”而不是“海报文案”）
-- 优先动词与短问句（CAN I…? / WORTH…?），少用形容词堆叠（AMAZING/INSANE/CRAZY 连用很容易显得廉价）。
-- 把“范围/条件”留给标题：缩略图写“WORTH IT?”，标题写“$10 Burger Review (Downtown LA)”。
-- 如果你做中文频道：同样原则成立，只是把短句改成 3-5 个字的口语表达（例如“真香吗”“别点这个”“48 小时路线”）。
-### 2.4 标题与缩略图怎么分工（3 个常见好搭配）
-你可以用“分工配对”的方式避免复读：
-
-配对 A：缩略图给情绪，标题给对象
-- 缩略图：I’M SHOOK
-- 标题：First Listen: {Artist} — {Album} (Track-by-Track)
-
-配对 B：缩略图给结果，标题给条件
-- 缩略图：CRISPY IN 10 MIN
-- 标题：Air Fryer Wings: 3 Sauces, 2 Temperatures, 1 Winner
-
-配对 C：缩略图给冲突，标题给解释
-- 缩略图：NEW vs OLD
-- 标题：{Game} Patch {X} vs {Y}: What Actually Changed?
-
-你只要保证“缩略图给的东西”和“标题补充的东西”不重复，你就会立刻感觉到点击动机变得更清晰。
+一句话规则：缩略图只写 3-5 个词做“记忆点”，标题负责补“范围与条件”，两者别复读。
 ## 3) Alici 9 个模板库（按垂类拆解：怎么改成你的版本）
 > 规则：每个模板都按 “适用题材 → 为什么像这个垂类 → 只改三件事 → 可复制文案 → 用 Alici.ai 怎么做” 来讲。你不需要背理论，照着改就能上手。
 

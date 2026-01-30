@@ -139,117 +139,16 @@ You don’t need to memorize every Piktochart tag. Put it into one of these buck
 - Selling “conflict/participation” → VS/collage
 - Selling “result/risk” → Numeric hook
 
-### 2.2 A 30-second decision tree (If/Then)
-Ignore “pretty” for a moment. Ask: what must the viewer know before clicking?
+### 2.2 Quick pick (30 seconds)
+Don’t start with “pretty.” Start with what the viewer needs to confirm before they click:
 
-- They want “what will I learn / get?” (tutorials, guides, steps) → Info card style (3.3 or 3.6)
-- They want “difference / win / comparison” (showdowns, reviews, patches) → VS style (3.4)
-- They want “emotion / reaction” (entertainment, compilations) → Collage/emotion style (3.9)
-- They want “result or risk” (finance, side hustle, career) → Numeric hook style (3.8 or 3.6)
-- They want “trigger words / will this be calm?” (ASMR, sleep) → Atmosphere + trigger words (3.7)
-- They want “taste/texture” (food) → Macro + color block (3.2)
-- They want “relationship/contrast” (pets) → Face + interaction (3.1)
+- Tutorials/guides/steps (learn something) → Info card (3.3 or 3.6)
+- Showdowns/reviews/new vs old (see the difference first) → VS comparison (3.4)
+- Reactions/entertainment/compilations (ride emotion) → Collage/emotion (3.9)
+- Finance/side hustle/career (see result or risk first) → Numeric hook (3.8 or 3.6)
+- ASMR/sleep (confirm triggers + “calm”) → Atmosphere + trigger words (3.7)
 
-Once you pick right, do one thing: treat the template as a skeleton, not a finished design. Swap just 3 variables each time and you’ll get stable, reviewable iterations.
-
-### 2.3 Niche copy bank (write “short phrases,” not “title summaries”)
-Many thumbnails fail because the text is written like a content summary. A thumbnail is more like a street sign: one phrase that stops the scroll.
-
-Below are short phrases by niche (replace the underscores with your city/tool/object).
-
-Pets / Cute (cute + contrast)
-- FIRST DAY HOME
-- HE FINALLY ___
-- NO MORE ___
-- DOES THIS WORK?
-- BEST DOG EVER?
-- I CAN’T BELIEVE THIS
-
-Food (texture + judgment)
-- BEST ___ IN ___
-- $5 ___ CHALLENGE
-- DON’T ORDER THIS
-- WORTH THE HYPE?
-- CRISPY IN 10 MIN
-- I TRIED THE ___
-
-Travel / Guides (time-saving + route)
-- 48H IN ___
-- TOP 7 STOPS
-- PERFECT ROUTE
-- DON’T WASTE TIME
-- MUST-SEE SPOTS
-- FIRST TIME IN ___
-
-Gaming / Showdowns (conflict + suspense)
-- NEW vs OLD
-- 1v1 THIS
-- CAN I WIN?
-- BUILD BATTLE
-- SPEEDRUN FAIL?
-- THIS IS BROKEN
-
-Sports / Action (moment + key node)
-- FINAL ROUND
-- KO MOMENT
-- POWER ROUND 5
-- I GOT HUMBLED
-- TRAINING DAY
-- UNREAL HIT
-
-Side Hustle / Money (deliverable + path)
-- ___ BLUEPRINT
-- SIDE HUSTLE STACK
-- FROM 0 TO 1
-- BEGINNER SYSTEM
-- DO THIS FIRST
-- MY EXACT PLAN
-
-ASMR / Sleep (trigger words + certainty)
-- NO TALKING
-- MIC BRUSH
-- GENTLE TAPPING
-- SLEEP FAST
-- RELAX + FOCUS
-- 1 HOUR LOOP
-
-Finance / Investing (context + numbers)
-- +___% RETURNS
-- I LOST ___
-- WHAT I’D DO NOW
-- BULL vs BEAR
-- THIS CHANGED EVERYTHING
-- RISK WARNING
-
-Reaction / Entertainment (object + emotion)
-- FIRST LISTEN
-- ALBUM REACTION
-- I’M SHOOK
-- DID YOU HEAR THAT?
-- BEST TRACK?
-- THIS PART…
-
-Writing tips (sound like “channel language,” not poster copy)
-- Prefer verbs and short questions (CAN I…? / WORTH…?) over adjective stacks (AMAZING/INSANE/CRAZY quickly feels cheap).
-- Leave “scope/conditions” for the title: thumbnail says “WORTH IT?”; title says “$10 Burger Review (Downtown LA).”
-- For non-English channels, the principle is the same: 3–5 short, spoken words; the title provides constraints.
-
-### 2.4 How titles and thumbnails split roles (3 good pairings)
-Use “division of labor” to avoid duplication:
-
-Pairing A: thumbnail gives emotion, title gives object
-- Thumbnail: I’M SHOOK
-- Title: First Listen: {Artist} - {Album} (Track-by-Track)
-
-Pairing B: thumbnail gives result, title gives conditions
-- Thumbnail: CRISPY IN 10 MIN
-- Title: Air Fryer Wings: 3 Sauces, 2 Temperatures, 1 Winner
-
-Pairing C: thumbnail gives conflict, title explains what changed
-- Thumbnail: NEW vs OLD
-- Title: {Game} Patch {X} vs {Y}: What Actually Changed?
-
-As long as the thumbnail and title don’t repeat the same thing, the click motive becomes much clearer.
+One-line rule: keep thumbnail copy to 3–5 words for the “memory hook,” and let the title carry scope/constraints - don’t repeat the same sentence.
 
 ## 3) Alici’s 9 templates (by niche): how to adapt each one
 Rule: each template follows the same structure - **Best fit → why it matches the niche → change only 3 things → copy you can steal → how to do it in Alici.ai**. No theory memorization needed.
