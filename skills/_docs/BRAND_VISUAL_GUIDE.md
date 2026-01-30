@@ -1,8 +1,22 @@
 # alici.ai 品牌视觉规范
 
-> **版本**: v1.0
-> **更新日期**: 2026-01-15
+> **版本**: v1.1
+> **更新日期**: 2026-01-30
 > **适用范围**: 所有 alici.ai 博客文章配图、营销素材、社交媒体图片
+
+---
+
+## 0. 视觉规范体系 (v1.1 新增)
+
+本文档定义 **Professional Cover** 的视觉规范（极简、绿色系、抽象隐喻）。
+
+对于 **Thumbnail 相关内容**（YouTube、视频封面、创作者工具），请参考：
+
+> 📄 **[THUMBNAIL_VISUAL_GUIDE.md](/skills/utilities/blog-cover-generator/THUMBNAIL_VISUAL_GUIDE.md)**
+> - 高饱和色彩（Purple/Red/Blue/Green）
+> - 人脸为核心构图
+> - 动感背景 + 3D 装饰元素
+> - 4 种子类型: T1 Creator Showcase, T2 Money/Success, T3 Tutorial Hero, T4 Reaction Shot
 
 ---
 
@@ -319,6 +333,7 @@ composition with implied motion but balanced stability
 
 | 版本 | 日期 | 变更内容 |
 |------|------|----------|
+| v1.1 | 2026-01-30 | 新增 Section 0 视觉规范体系，引用 THUMBNAIL_VISUAL_GUIDE.md |
 | v1.0 | 2026-01-15 | 初始版本，定义绿色中心色彩体系、ICSB 框架、Stripe 风格参考 |
 
 ---

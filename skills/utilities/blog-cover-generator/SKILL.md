@@ -1,23 +1,28 @@
 ---
 name: blog-cover-generator
-version: "1.0"
+version: "2.0"
 description: >
-  Generate minimalist blog cover images for Alici.AI using Nano Banana Pro.
-  6 background types (Gradient Glow, Fluid Shape, Geometric, Typography-Led, Data Abstract, Grid)
-  with teal brand color palette and text hierarchy system.
+  Generate blog cover images for Alici.AI using Nano Banana Pro.
+  Supports TWO cover categories:
+  - Category A: Professional (6 types - minimalist, teal, abstract)
+  - Category B: Thumbnail Style (4 types - vibrant, person-centered, YouTube aesthetic)
+  Auto-detects category based on article content.
   Triggers on: 生成封面, blog cover, 封面图, generate cover, create thumbnail.
 allowed-tools: Bash, Read, Write, Grep, Glob
 env-required: FAL_API_KEY
 dependencies:
   - path: "/skills/_docs/BRAND_VISUAL_GUIDE.md"
-    purpose: "Color palette consistency (teal colors align with brand guide)"
+    purpose: "Color palette consistency for Professional covers"
+  - path: "/skills/utilities/blog-cover-generator/THUMBNAIL_VISUAL_GUIDE.md"
+    purpose: "Visual specs for Thumbnail Style covers (v2.0 NEW)"
   - path: "/scripts/fal_image_generator.py"
     purpose: "FAL.ai image generation and CDN upload"
 ---
 
-# Blog Cover Generator Skill v1.0
+# Blog Cover Generator Skill v2.0
 
-> **Purpose**: Generate minimalist, professional blog cover images for Alici.AI using Nano Banana Pro AI image generation.
+> **Purpose**: Generate blog cover images for Alici.AI using Nano Banana Pro AI image generation.
+> **v2.0 NEW**: Dual-category system - Professional (minimalist) + Thumbnail Style (vibrant, person-centered)
 
 ## Trigger Conditions
 
@@ -25,6 +30,119 @@ dependencies:
 - SmartLauncher full auto flow (after competitive-validator, before markdown-to-framer)
 - Keywords: "生成封面", "blog cover", "封面图", "generate cover", "create thumbnail"
 - Auto-trigger condition: AEO >= 75 AND competitive-validator = PASS
+
+---
+
+## Two-Category Architecture (v2.0 NEW)
+
+```
+blog-cover-generator v2.0
+│
+├── Category A: Professional Cover (现有 6 种)
+│   ├── Gradient Glow
+│   ├── Fluid Shape
+│   ├── Geometric Minimal
+│   ├── Typography-Led
+│   ├── Data Abstract
+│   └── Grid/Matrix
+│   └── 特点: 极简、留白 40%+、绿色系、抽象隐喻
+│
+└── Category B: Thumbnail Style Cover (v2.0 新增) 🆕
+    ├── T1: Creator Showcase (作品展示)
+    ├── T2: Money/Success (收益变现)
+    ├── T3: Tutorial Hero (教程指南)
+    └── T4: Reaction Shot (惊喜评测)
+    └── 特点: 人脸核心、高饱和、动感背景、装饰元素
+```
+
+### Category Detection (Phase 1.5)
+
+```python
+def detect_cover_category(frontmatter, article_path):
+    """
+    判断使用 Professional 还是 Thumbnail 风格
+    """
+    thumbnail_signals = [
+        "thumbnail", "缩略图", "封面设计",
+        "youtube", "视频封面", "点击率"
+    ]
+
+    title = frontmatter.get("title", "").lower()
+    tags = [t.lower() for t in frontmatter.get("tags", [])]
+
+    # 检测文章路径是否在 thumbnail 相关目录
+    if "thumbnail" in article_path.lower():
+        return "thumbnail"  # → Category B
+
+    # 检测标题或标签
+    if any(signal in title for signal in thumbnail_signals):
+        return "thumbnail"
+    if any(signal in tags for signal in thumbnail_signals):
+        return "thumbnail"
+
+    return "professional"  # → Category A (默认)
+```
+
+### Thumbnail Subtype Selection (Phase 2.5)
+
+```python
+def select_thumbnail_subtype(frontmatter, article_body):
+    """
+    选择 Thumbnail 子类型 T1-T4
+    """
+    title_lower = frontmatter.get("title", "").lower()
+    tags = [t.lower() for t in frontmatter.get("tags", [])]
+
+    # T2: Money/Success
+    if any(kw in title_lower for kw in ["money", "earn", "monetize", "$", "income", "revenue"]):
+        return "T2-money-success"
+
+    # T4: Reaction Shot
+    if any(kw in title_lower for kw in ["vs", "comparison", "best", "review", "shocking", "amazing"]):
+        return "T4-reaction-shot"
+
+    # T1: Creator Showcase
+    if any(kw in title_lower for kw in ["generated", "created", "showcase", "examples", "gallery"]):
+        return "T1-creator-showcase"
+
+    # T3: Tutorial Hero (default for thumbnail content)
+    return "T3-tutorial-hero"
+```
+
+### Person Source Selection
+
+```python
+ALICI_LUCY_URL = "https://ct2.alici.ai/static/image/other/design/aliciLucy.png"
+ALICI_ANDY_URL = "https://ct2.alici.ai/static/image/other/design/aliciAndy.png"
+
+def select_person_source(user_input, preferences):
+    """
+    选择人物来源: Alici 模特 / AI 生成 / 用户自定义
+    """
+    # 1. 用户明确指定照片
+    if user_input.has_photo:
+        photo_url = upload_to_cdn(user_input.photo)
+        return {"source": "custom", "url": photo_url}
+
+    # 2. 用户指定使用模特
+    if "lucy" in user_input.lower():
+        return {"source": "alici", "url": ALICI_LUCY_URL, "name": "Lucy"}
+    if "andy" in user_input.lower():
+        return {"source": "alici", "url": ALICI_ANDY_URL, "name": "Andy"}
+
+    # 3. 根据内容自动选择模特
+    if preferences.get("gender") == "female":
+        return {"source": "alici", "url": ALICI_LUCY_URL, "name": "Lucy"}
+    elif preferences.get("gender") == "male":
+        return {"source": "alici", "url": ALICI_ANDY_URL, "name": "Andy"}
+
+    # 4. 默认使用 AI 生成通用人物
+    return {"source": "ai_generated", "description": "friendly content creator"}
+```
+
+---
+
+## Category A: Professional Cover
 
 ## Design Principles
 
@@ -134,7 +252,40 @@ Sparse dot grid or line patterns.
 
 ---
 
-## Execution Workflow
+---
+
+## Category B: Thumbnail Style Cover (v2.0 NEW)
+
+> **详细规范**: 见 `THUMBNAIL_VISUAL_GUIDE.md`
+
+### Thumbnail 子类型总览
+
+| 子类型 | 代码 | 适用场景 | 背景色 | 人物姿态 | 装饰元素 |
+|--------|------|---------|--------|---------|---------|
+| **T1** | `creator-showcase` | AI 生成作品展示 | Red/Pink | 展示手势 | 设备框+闪光 |
+| **T2** | `money-success` | 收益、变现 | Purple/Gold | 双手举物 | 金币+箭头 |
+| **T3** | `tutorial-hero` | 教程、How-to | Blue/Green | 竖拇指 | 清单+播放键 |
+| **T4** | `reaction-shot` | 评测、惊喜 | Red/Orange | 惊讶表情 | VS符号+截图 |
+
+### Thumbnail 色彩规范
+
+| 名称 | 色值 | 用途 |
+|------|------|------|
+| Electric Purple | `#7C3AED` | T2 背景 |
+| Vibrant Red | `#EF4444` | T1/T4 背景 |
+| Bright Blue | `#3B82F6` | T3 背景 |
+| Golden Yellow | `#FBBF24` | 装饰强调 |
+
+### Alici 模特库
+
+| 模特 | URL | 适用场景 |
+|------|-----|---------|
+| 👩 AliciLucy | `https://ct2.alici.ai/static/image/other/design/aliciLucy.png` | 女性向、创作者 |
+| 👨 AliciAndy | `https://ct2.alici.ai/static/image/other/design/aliciAndy.png` | 男性向、技术 |
+
+---
+
+## Execution Workflow (v2.0 Updated)
 
 ### Phase 1: Extract Title from Article
 
@@ -177,12 +328,36 @@ def extract_cover_text(article_path):
 | "Sora vs Runway vs Kling" | "SORA vs RUNWAY" | "vs Kling" |
 | "Motion Control Tutorial" | "MOTION CONTROL" | "Tutorial" |
 
-### Phase 2: Detect Content Type
+### Phase 1.5: Detect Cover Category (v2.0 NEW)
+
+```python
+def detect_cover_category(frontmatter, article_path):
+    """
+    判断使用 Professional (A) 还是 Thumbnail (B) 风格
+    """
+    thumbnail_signals = ["thumbnail", "缩略图", "封面设计", "youtube", "视频封面", "点击率"]
+
+    title = frontmatter.get("title", "").lower()
+    tags = [t.lower() for t in frontmatter.get("tags", [])]
+
+    if "thumbnail" in article_path.lower():
+        return "thumbnail"
+    if any(signal in title or signal in tags for signal in thumbnail_signals):
+        return "thumbnail"
+
+    return "professional"
+```
+
+**分支逻辑**:
+- `professional` → Phase 2 (原有流程)
+- `thumbnail` → Phase 2-T (Thumbnail 子类型选择)
+
+### Phase 2: Detect Content Type (Category A: Professional)
 
 ```python
 def detect_content_type(frontmatter, article_body):
     """
-    从文章元数据和内容检测内容类型
+    从文章元数据和内容检测内容类型 (仅用于 Professional 类型)
     """
     title_lower = frontmatter.get("title", "").lower()
     category = frontmatter.get("category", "")
@@ -210,6 +385,25 @@ def detect_content_type(frontmatter, article_body):
     return "general"
 ```
 
+### Phase 2-T: Select Thumbnail Subtype (Category B: Thumbnail) (v2.0 NEW)
+
+```python
+def select_thumbnail_subtype(frontmatter):
+    """
+    选择 Thumbnail 子类型 T1-T4
+    """
+    title_lower = frontmatter.get("title", "").lower()
+
+    if any(kw in title_lower for kw in ["money", "earn", "monetize", "$", "income"]):
+        return "T2-money-success"
+    if any(kw in title_lower for kw in ["vs", "comparison", "best", "review", "shocking"]):
+        return "T4-reaction-shot"
+    if any(kw in title_lower for kw in ["generated", "created", "showcase", "examples"]):
+        return "T1-creator-showcase"
+
+    return "T3-tutorial-hero"  # 默认
+```
+
 ### Phase 3: Select Background Type
 
 ```python
@@ -229,18 +423,27 @@ def select_background_type(content_type):
     return TYPE_MAP.get(content_type, TYPE_MAP["general"])
 ```
 
-### Phase 4: Build Prompt from Template
+### Phase 4: Build Prompt from Template (v2.0 Updated)
 
 ```python
-def build_cover_prompt(background_type, cover_text, color):
+def build_cover_prompt(category, subtype, cover_text, color, person_source=None):
     """
-    从模板构建完整 prompt
+    从模板构建完整 prompt (支持双类型)
     """
-    # 读取模板
-    template = read_template(f"references/PROMPT_TEMPLATES.md", background_type)
+    # 根据类型选择模板文件
+    if category == "thumbnail":
+        template = read_template("THUMBNAIL_VISUAL_GUIDE.md", subtype)
+        # Thumbnail 需要额外的人物信息
+        if person_source and person_source.get("url"):
+            prompt = template.replace("[PERSON_DESC:", f"Reference image: {person_source['url']}\n[PERSON_DESC:")
+        else:
+            prompt = template.replace("[PERSON_DESC:", "[PERSON_DESC: friendly content creator,")
+    else:
+        template = read_template("references/PROMPT_TEMPLATES.md", subtype)
+        prompt = template
 
-    # 替换变量
-    prompt = template.replace("[H1_TEXT]", cover_text["h1"])
+    # 替换通用变量
+    prompt = prompt.replace("[H1_TEXT]", cover_text["h1"])
     prompt = prompt.replace("[H2_TEXT]", cover_text.get("h2", ""))
     prompt = prompt.replace("[H3_TEXT]", cover_text.get("h3", ""))
     prompt = prompt.replace("[COLOR]", color)
@@ -317,22 +520,43 @@ rsync -avz /reports/YYYY-MM-DD-{topic-slug}/assets/cover.png \
 
 ---
 
-## Integration with SmartLauncher Flow
+## Integration with SmartLauncher Flow (v2.0 Updated)
 
 ```
 SmartLauncher (目标+组合)
        ↓
    Writer → Editor → AEO → [Improver] → Competitive Validator
        ↓
-┌──────────────────────────────────┐
-│  blog-cover-generator (全自动)    │
-│  └── 读取文章标题                 │
-│  └── 选择背景类型                 │
-│  └── 生成 Prompt                  │
-│  └── FAL.ai 生成                  │
-│  └── CDN 上传                     │
-│  └── 输出 06-cover-metadata.json  │
-└──────────────────────────────────┘
+┌──────────────────────────────────────────────────────────┐
+│  blog-cover-generator v2.0 (全自动)                       │
+│                                                          │
+│  Phase 1: 读取文章标题                                    │
+│       ↓                                                  │
+│  Phase 1.5: 判断封面类型 (v2.0 NEW)                       │
+│       ├── thumbnail 关键词? → Category B (Thumbnail)     │
+│       └── 其他 → Category A (Professional)               │
+│       ↓                                                  │
+│  ┌─────────────────┬─────────────────┐                   │
+│  │ Category A      │ Category B      │                   │
+│  │ (Professional)  │ (Thumbnail)     │                   │
+│  ├─────────────────┼─────────────────┤                   │
+│  │ Phase 2:        │ Phase 2-T:      │                   │
+│  │ 检测内容类型    │ 选择 T1-T4      │                   │
+│  │ (6 种背景)      │ 选择人物来源    │                   │
+│  ├─────────────────┼─────────────────┤                   │
+│  │ Phase 3:        │ Phase 3-T:      │                   │
+│  │ 选择背景类型    │ 选择背景+装饰   │                   │
+│  └────────┬────────┴────────┬────────┘                   │
+│           └────────┬────────┘                            │
+│                    ↓                                     │
+│  Phase 4: 从模板构建 Prompt                               │
+│       ↓                                                  │
+│  Phase 5: FAL.ai 生成                                     │
+│       ↓                                                  │
+│  Phase 6: CDN 上传                                        │
+│       ↓                                                  │
+│  Phase 7: 输出 06-cover-metadata.json                     │
+└──────────────────────────────────────────────────────────┘
        ↓
    markdown-to-framer (读取 cover_image_url)
        ↓
@@ -394,6 +618,20 @@ After competitive-validator = PASS:
 ---
 
 ## Changelog
+
+**v2.0** (2026-01-30):
+- **Two-Category Architecture**: Professional (A) + Thumbnail Style (B)
+- **Category B: Thumbnail Style** - 4 subtypes (T1-T4)
+  - T1 Creator Showcase: 作品展示
+  - T2 Money/Success: 收益变现
+  - T3 Tutorial Hero: 教程指南
+  - T4 Reaction Shot: 惊喜评测
+- **Alici 模特库**: Lucy + Andy 预设模特
+- **Person Source System**: Alici 模特 / AI 生成 / 用户自定义
+- **THUMBNAIL_VISUAL_GUIDE.md**: 完整 Thumbnail 视觉规范
+- **Phase 1.5**: 自动检测封面类型
+- **Phase 2-T**: Thumbnail 子类型选择
+- **高饱和色彩系统**: Purple/Red/Blue/Green + Gold/Pink/Orange
 
 **v1.0** (2026-01-22):
 - Initial release

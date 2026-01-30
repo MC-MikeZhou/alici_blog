@@ -1,0 +1,28 @@
+{
+  "mode": "thumbnail",
+  "reference_policy": {
+    "type": "reference_expand",
+    "source_usage_ratio": "20%-50%",
+    "no_fabricated_data": true,
+    "no_invented_ctr_or_tests": true,
+    "notes": "Use Veritasium video as starting point; expand with multiple sources; keep mainline (no appendices/exercises)."
+  },
+  "topic": {
+    "working_title": "Veritasium: How They Make High-CTR YouTube Thumbnails (and how you can adapt the playbook)",
+    "primary_subject": "YouTube thumbnail strategy",
+    "angle": "Deconstruct Veritasium clickbait mechanics into repeatable thumbnail patterns"
+  },
+  "inputs": {
+    "youtube_url": "https://www.youtube.com/watch?v=S2xHZPH5Sng",
+    "internal_links": [
+      "https://alici.ai/blog/how-to-make-youtube-thumbnails-best-practices-2026",
+      "https://alici.ai/blog/youtube-thumbnail-size-2026",
+      "https://alici.ai/blog/best-ai-youtube-thumbnail-makers-2025"
+    ],
+    "product_landing": "https://alici.ai/youtube-thumbnail"
+  },
+  "output": {
+    "language": "zh-CN",
+    "cta_destination": "https://alici.ai/youtube-thumbnail"
+  }
+}

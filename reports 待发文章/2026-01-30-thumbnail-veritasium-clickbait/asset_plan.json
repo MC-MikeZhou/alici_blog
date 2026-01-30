@@ -1,0 +1,23 @@
+{
+  "images": [
+    {
+      "id": "concept-clickbait-map",
+      "role": "inline/concept_diagram",
+      "placeholder": "![Concept Diagram: 信息差 vs 误导性（占位）](placeholder)",
+      "context": "Place under section: \"Veritasium 的核心框架：把 clickbait 放到二维坐标系里\". Explain the 2-axis model (misleadingness vs information withheld) and highlight the 'ethical sweet spot'.",
+      "prompt": "ICSB\nI (Image Type): pitch-deck style infographic / 2D matrix diagram (16:9), designed for blog readability\nC (Content): a clean 2-axis chart with English labels:\n- X-axis: Misleading / Emotional Manipulation (LOW -> HIGH)\n- Y-axis: Information Withheld (LOW -> HIGH)\nShow 4 quadrants with short English labels:\n- bottom-left: \"BLIND SPOT\\n(Too Bland)\"\n- bottom-right: \"HYPE\\n(Emotional, Not Hidden)\"\n- top-left: \"ETHICAL CLICKBAIT\\n(Curiosity, Accurate)\" (highlight with a subtle glow)\n- top-right: \"CLICK TRAP\\n(Misleading + Mystery)\"\nAdd a small callout arrow pointing to \"ETHICAL CLICKBAIT\" with caption: \"Sweet spot: curiosity without deception\".\nS (Style): modern pitch deck layout (like the reference slide): big clean title at top (\"Clickbait Map\"), generous whitespace, soft shadows, rounded corners, geometric icons optional, crisp sans-serif typography, mobile-readable\nB (Brand Layer): alici.ai green-centered palette (deep emerald -> mint accents), white/very-light background, restrained color use, NO blue/purple, professional and modern"
+    },
+    {
+      "id": "workflow-3-variant-loop",
+      "role": "inline/flow_diagram",
+      "placeholder": "![Flow Diagram: 多版本 thumbnail 迭代流程（占位）](placeholder)",
+      "context": "Place under section: \"可复制工作流 3：先做 2–3 个版本，把它当成实验\". Show the publish-and-iterate loop and the 'one-variable' idea.",
+      "prompt": "ICSB\nI (Image Type): pitch-deck style flowchart / loop diagram (16:9), designed for blog readability\nC (Content): a 5-step loop with large numbered nodes and short English labels:\n1) \"Make 3 Variants\" (A/B/C thumbnails)\n2) \"Publish\"\n3) \"Watch Metrics\" (Impressions / CTR / First-30s Retention)\n4) \"Change ONE Variable\" (face OR text OR main subject)\n5) \"Log & Pick Winner\"\nUse arrows forming a loop from 5 back to 1.\nInclude a small side note box (English): \"Don't change title + thumbnail at the same time\".\nS (Style): modern pitch deck layout (like the reference slide): rounded cards, soft shadows, clean icons, generous whitespace, crisp sans-serif typography, mobile-readable\nB (Brand Layer): alici.ai green accents (emerald/mint), white/very-light background, restrained palette, NO blue/purple, no noisy backgrounds"
+    }
+  ],
+  "metadata": {
+    "total_images": 2,
+    "article_slug": "veritasium-high-ctr-thumbnail-playbook-2026",
+    "generated_at": "2026-01-30T00:00:00Z"
+  }
+}

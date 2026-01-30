@@ -1,0 +1,36 @@
+{
+  "images": [
+    {
+      "id": "concept-clickbait-map",
+      "file_path": "assets/veritasium-clickbait/concept-clickbait-map.png",
+      "status": "success",
+      "generation_model": "pillow/vector",
+      "original_prompt": "ICSB\nI (Image Type): pitch-deck style infographic / 2D matrix diagram (16:9), designed for blog readability\nC (Content): a clean 2-axis chart with English labels:\n- X-axis: Misleading / Emotional Manipulation (LOW -> HIGH)\n- Y-axis: Information Withheld (LOW -> HIGH)\nShow 4 quadrants with short English labels:\n- bottom-left: \"BLIND SPOT\\n(Too Bland)\"\n- bottom-right: \"HYPE\\n(Emotional, Not Hidden)\"\n- top-left: \"ETHICAL CLICKBAIT\\n(Curiosity, Accurate)\" (highlight with a subtle glow)\n- top-right: \"CLICK TRAP\\n(Misleading + Mystery)\"\nAdd a small callout arrow pointing to \"ETHICAL CLICKBAIT\" with caption: \"Sweet spot: curiosity without deception\".\nS (Style): modern pitch deck layout (like the reference slide): big clean title at top (\"Clickbait Map\"), generous whitespace, soft shadows, rounded corners, geometric icons optional, crisp sans-serif typography, mobile-readable\nB (Brand Layer): alici.ai green-centered palette (deep emerald -> mint accents), white/very-light background, restrained color use, NO blue/purple, professional and modern",
+      "final_prompt": "ICSB\nI (Image Type): pitch-deck style infographic / 2D matrix diagram (16:9), designed for blog readability\nC (Content): a clean 2-axis chart with English labels:\n- X-axis: Misleading / Emotional Manipulation (LOW -> HIGH)\n- Y-axis: Information Withheld (LOW -> HIGH)\nShow 4 quadrants with short English labels:\n- bottom-left: \"BLIND SPOT\\n(Too Bland)\"\n- bottom-right: \"HYPE\\n(Emotional, Not Hidden)\"\n- top-left: \"ETHICAL CLICKBAIT\\n(Curiosity, Accurate)\" (highlight with a subtle glow)\n- top-right: \"CLICK TRAP\\n(Misleading + Mystery)\"\nAdd a small callout arrow pointing to \"ETHICAL CLICKBAIT\" with caption: \"Sweet spot: curiosity without deception\".\nS (Style): modern pitch deck layout (like the reference slide): big clean title at top (\"Clickbait Map\"), generous whitespace, soft shadows, rounded corners, geometric icons optional, crisp sans-serif typography, mobile-readable\nB (Brand Layer): alici.ai green-centered palette (deep emerald -> mint accents), white/very-light background, restrained color use, NO blue/purple, professional and modern",
+      "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/concept-clickbait-map.png"
+    },
+    {
+      "id": "workflow-3-variant-loop",
+      "file_path": "assets/veritasium-clickbait/workflow-3-variant-loop.png",
+      "status": "success",
+      "generation_model": "pillow/vector",
+      "original_prompt": "ICSB\nI (Image Type): pitch-deck style flowchart / loop diagram (16:9), designed for blog readability\nC (Content): a 5-step loop with large numbered nodes and short English labels:\n1) \"Make 3 Variants\" (A/B/C thumbnails)\n2) \"Publish\"\n3) \"Watch Metrics\" (Impressions / CTR / First-30s Retention)\n4) \"Change ONE Variable\" (face OR text OR main subject)\n5) \"Log & Pick Winner\"\nUse arrows forming a loop from 5 back to 1.\nInclude a small side note box (English): \"Don't change title + thumbnail at the same time\".\nS (Style): modern pitch deck layout (like the reference slide): rounded cards, soft shadows, clean icons, generous whitespace, crisp sans-serif typography, mobile-readable\nB (Brand Layer): alici.ai green accents (emerald/mint), white/very-light background, restrained palette, NO blue/purple, no noisy backgrounds",
+      "final_prompt": "ICSB\nI (Image Type): pitch-deck style flowchart / loop diagram (16:9), designed for blog readability\nC (Content): a 5-step loop with large numbered nodes and short English labels:\n1) \"Make 3 Variants\" (A/B/C thumbnails)\n2) \"Publish\"\n3) \"Watch Metrics\" (Impressions / CTR / First-30s Retention)\n4) \"Change ONE Variable\" (face OR text OR main subject)\n5) \"Log & Pick Winner\"\nUse arrows forming a loop from 5 back to 1.\nInclude a small side note box (English): \"Don't change title + thumbnail at the same time\".\nS (Style): modern pitch deck layout (like the reference slide): rounded cards, soft shadows, clean icons, generous whitespace, crisp sans-serif typography, mobile-readable\nB (Brand Layer): alici.ai green accents (emerald/mint), white/very-light background, restrained palette, NO blue/purple, no noisy backgrounds",
+      "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/workflow-3-variant-loop.png"
+    },
+    {
+      "id": "cover",
+      "original_prompt": null,
+      "final_prompt": "WHY YOU CLICK / Make Thumbnails People Notice (Veritasium-Style) / Alici.AI. Generated with fal-ai/nano-banana, typography composited locally.",
+      "file_path": "/assets/veritasium-clickbait/cover.png",
+      "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/cover.png",
+      "generation_model": "fal-ai/nano-banana + local typography",
+      "status": "success"
+    }
+  ],
+  "summary": {
+    "total_planned": 2,
+    "total_generated": 3,
+    "success_rate": "100%"
+  }
+}
