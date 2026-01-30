@@ -37,7 +37,7 @@ featured_image:
 
 观众在手机上一滑而过时，只来得及读“Fix CTR”。他点进来，是想看“怎么修”。所以别在图上塞进第二个话题，比如“脚本怎么写”之类——那是另一个视频。
 
-![Title x Thumbnail Synergy](assets/selected/title-thumbnail-sync.jpg)
+![Title x Thumbnail Synergy](https://ct2.alici.ai/static/image/other/gen_images/thumbnail-small-channel-growth-title-thumbnail-sync.jpg)
 
 ---
 
@@ -104,7 +104,7 @@ Shorts 可以拉来很多路人，但你要接住他。把封面的颜色、词�
 
 ---
 
-![First 30s Storyboard](assets/generated/first-30s-structure.png)
+![First 30s Storyboard](https://ct2.alici.ai/static/image/other/gen_images/thumbnail-small-channel-growth-first-30s-structure.png)
 
 ---
 

@@ -59,3 +59,11 @@ Time: 2026-01-30 21:12:52
 - Step 7 (de-AI-ify): rewrote parts of `01-article-draft-4.md` to reduce repetitive checklist tone without deleting or adding new ideas.
 - Prepared source images for Step 8: converted Piktochart page `assets/*.avif` to PNG in `sources/web-piktochart-youtube-thumbnail-examples/assets_png/` (25 files) for easier preview and downstream usage.
 - Uploaded Alici template images to CDN (9 files) and recorded mapping in `asset_manifest.json`.
+- Generated blog cover via FAL nano-banana and uploaded to CDN:
+  - local: `reports 待发文章/2026-01-30-piktochart-youtube-thumbnail-examples/assets/youtube-thumbnail-styles-by-niche-2026-cover.png`
+  - cdn: https://ct2.alici.ai/static/image/other/gen_images/youtube-thumbnail-styles-by-niche-2026-cover.png
+  - metadata: `reports 待发文章/2026-01-30-piktochart-youtube-thumbnail-examples/06-cover-metadata.json`
+- Step 10: created `reports 待发文章/2026-01-30-piktochart-youtube-thumbnail-examples/01-article-draft-5.md` (cover + CDN image links + CTA uses https://alici.ai/youtube-thumbnail).
+- Step 11: generated Framer JSON + preview:
+  - `reports 待发文章/2026-01-30-piktochart-youtube-thumbnail-examples/06-article-final.json`
+  - `reports 待发文章/2026-01-30-piktochart-youtube-thumbnail-examples/07-preview.html`

@@ -1,0 +1,14 @@
+{
+  "background_type": "gradient-glow",
+  "color": "#4FD1C5",
+  "h1_text": "THUMBNAIL STYLES",
+  "h2_text": "BY NICHE",
+  "h3_text": "9 TEMPLATES",
+  "prompt_used": "Create a minimalist tech blog cover image for Alici.AI.\\n\\nBackground: Pure black (#000000) with a soft, organic teal gradient (#4FD1C5)\\nemanating from the right edge, fading smoothly into darkness.\\nThe gradient should feel like diffused light or gentle aurora.\\nNo hard edges, no texture, no noise.\\n\\nTypography:\\n- Main title: \\\"THUMBNAIL STYLES\\\" in bold white (#FFFFFF) sans-serif typography\\n  (similar to Inter Black), large and prominent\\n- Secondary: \\\"BY NICHE\\\" in bold white, 50% size of main title\\n- Subtitle: \\\"9 TEMPLATES\\\" in regular white at 70% opacity, 25% size\\n- Brand tag: \\\"Officially on Alici.AI\\\" in small regular white at 60% opacity,\\n  positioned at bottom\\n\\nText position: Left-aligned, vertically centered\\n\\nStyle: Ultra-minimalist, generous negative space (60%+ dark),\\nclean typography hierarchy. Professional tech aesthetic.\\n\\nAspect ratio: 16:9\\nResolution: 1920x1080",
+  "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/youtube-thumbnail-styles-by-niche-2026-cover.png",
+  "local_path": "reports 待发文章/2026-01-30-piktochart-youtube-thumbnail-examples/assets/youtube-thumbnail-styles-by-niche-2026-cover.png",
+  "generated_at": "2026-01-30T15:17:30Z",
+  "model": "fal-ai/nano-banana",
+  "aspect_ratio": "16:9",
+  "resolution": "2K"
+}

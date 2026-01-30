@@ -11,6 +11,7 @@ Markdown → Framer CMS JSON (v1.3-compatible minimal converter)
 import os
 import re
 import sys
+import argparse
 import json
 import math
 from pathlib import Path
@@ -54,8 +55,11 @@ def md_to_framer_html(md_text: str) -> str:
     # Remove top-level H1 lines
     md_text = re.sub(r'^# .*$', '', md_text, flags=re.MULTILINE)
 
-    # Remove the first markdown image (hero). Framer uses `cover.url` as the hero.
-    md_text = re.sub(r'^\s*!\[.*?\]\(.*?\)\s*\n?', '', md_text, count=1, flags=re.MULTILINE)
+    # Remove the first markdown image only when it is explicitly marked as a hero image.
+    # Framer uses `cover.url` as the hero; we should not drop the first inline image by accident.
+    first_img = re.search(r'^\s*!\[(?P<alt>[^\]]*)\]\((?P<src>[^)]+)\)\s*$', md_text, flags=re.MULTILINE)
+    if first_img and re.search(r'\bhero\b', first_img.group('alt') or '', flags=re.IGNORECASE):
+        md_text = re.sub(r'^\s*!\[[^\]]*\]\([^)]+\)\s*\n?', '', md_text, count=1, flags=re.MULTILINE)
 
     html = markdown.markdown(
         md_text,
@@ -167,11 +171,17 @@ def replace_placeholders_with_images(md_body: str, mapping: dict) -> str:
 
 
 def main():
-    if len(sys.argv) < 2:
-        print("Usage: python3 scripts/markdown_to_framer_json.py <markdown_file>")
-        sys.exit(1)
+    parser = argparse.ArgumentParser(description="Markdown → Framer CMS JSON")
+    parser.add_argument("markdown_file", help="Path to the Markdown file")
+    parser.add_argument(
+        "--out",
+        dest="out_path",
+        default=None,
+        help="Output JSON path (default: <article_dir>/06-article-final.json)",
+    )
+    args = parser.parse_args()
 
-    md_path = Path(sys.argv[1])
+    md_path = Path(args.markdown_file)
     article_dir = md_path.parent
 
     fm, md_body = read_markdown(md_path)
@@ -256,7 +266,7 @@ def main():
         "tag_for_SEO": ', '.join((fm.get('tags') or []) or ["youtube", "thumbnail", "tutorial"])
     }
 
-    out_path = article_dir / '06-article-final.json'
+    out_path = Path(args.out_path) if args.out_path else (article_dir / '06-article-final.json')
     out_path.write_text(json.dumps([obj], ensure_ascii=False, indent=2), encoding='utf-8')
     print(f"✅ Framer JSON written: {out_path}")
 

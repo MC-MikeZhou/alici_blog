@@ -44,7 +44,7 @@ Simple examples:
 
 If your image tries to introduce a second topic (script writing, camera gear, etc.), you split intent and lose clarity.
 
-![Title x Thumbnail Synergy](assets/selected/title-thumbnail-sync.jpg)
+![Title x Thumbnail Synergy](https://ct2.alici.ai/static/image/other/gen_images/thumbnail-small-channel-growth-title-thumbnail-sync.jpg)
 
 ---
 
@@ -125,7 +125,7 @@ A simple cadence you can actually stick to:
 
 Once the cadence exists, anxiety drops.
 
-![First 30s Storyboard](assets/generated/first-30s-structure.png)
+![First 30s Storyboard](https://ct2.alici.ai/static/image/other/gen_images/thumbnail-small-channel-growth-first-30s-structure.png)
 
 ---
 
