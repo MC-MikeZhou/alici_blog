@@ -4,7 +4,7 @@ author: Alici AI Team
 lang: zh-CN
 featured_image:
   url: https://v3b.fal.media/files/b/0a8c332a/xt4KRZs6LQ8m7tE8YPz7__EVCBNoMq.png
-CTA_alici_link: https://app.alici.ai/
+CTA_alici_link: https://alici.ai/youtube-thumbnail
 CTA button: 免费试用 Alici AI
 ---
 

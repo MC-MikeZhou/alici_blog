@@ -181,7 +181,8 @@ def main():
     meta_title = title[:60]
     tlnr = extract_tlnr(md_body_replaced)
     meta_description = (tlnr[:157] + '...') if len(tlnr) > 160 else tlnr
-    sub_title = '从添加到表达：小屏可读的一页工作流'
+    # Sub title: 优先 frontmatter，回退中文默认
+    sub_title = fm.get('sub_title') or '从添加到表达：小屏可读的一页工作流'
 
     # Body HTML
     article_html = md_to_framer_html(md_body_replaced)
@@ -190,9 +191,9 @@ def main():
     iso_date = datetime.utcnow().strftime('%Y-%m-%dT00:00:00.000Z')
     read_time = compute_read_time(md_body_replaced)
 
-    # CTA
-    cta_link = 'https://app.alici.ai/'
-    cta_button = 'Create Thumbnails Now'
+    # CTA: 优先读取 frontmatter，其次使用统一产品链接
+    cta_link = fm.get('CTA_alici_link') or 'https://alici.ai/youtube-thumbnail'
+    cta_button = fm.get('CTA button') or '免费试用 Alici AI'
 
     obj = {
         "Slug": slug,

@@ -344,7 +344,12 @@ https://ct2.alici.ai/static/image/other/gen_images/${name}.png
 （生成 framer.json  对应的skill： markdown-to-framer | **v1.3** 🔧 | convert to framer | Framer CMS JSON (**修复**: 图片格式 + 特殊字符) |）
 路径： skills/utilities/markdown-to-framer/  文件夹内所有文档
 
-
+### 第12步，讨论和推荐给用户，英文标题，修改Slug
+输出4-5个英文标题，用户确认后
+完整翻译 06-article-final.json , 内部字段填入对应的英文，包括标题，
+Slug、sub title，也根据最新的标题，进行调整
+生成新的  
+- `/reports 待发文章/YYYY-MM-DD-{topic}/06-article-final-en.json`
 
 ===========================================
  目录结构（建议）
