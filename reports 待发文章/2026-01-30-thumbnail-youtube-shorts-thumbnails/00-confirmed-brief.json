@@ -1,0 +1,16 @@
+{
+  "mode": "thumbnail",
+  "intent": "reference",
+  "policy": {
+    "no_fabricated_data": true,
+    "source_attribution": true,
+    "validate_claim_accuracy": true
+  },
+  "sources": [
+    {"type": "web", "url": "https://vidiq.com/blog/post/youtube-shorts-custom-thumbnails/"},
+    {"type": "web", "url": "https://www.tubebuddy.com/blog/youtube-shorts-thumbnails-best-practices/"},
+    {"type": "web", "url": "https://www.capcut.com/resource/youtube-short-thumbnail"}
+  ],
+  "created_at": "2026-01-30T09:19:10Z",
+  "note": "Thumbnail mode reference expansion; downstream Editor→AEO→Framer"
+}

@@ -1,0 +1,14 @@
+{
+  "background_type": "geometric-minimal",
+  "color": "#4FD1C5",
+  "h1_text": "THUMBNAIL STYLES",
+  "h2_text": "2026 PLAYBOOK",
+  "h3_text": null,
+  "prompt_used": "Create a minimalist tech blog cover image for Alici.AI.\n\nBackground: Pure black (#000000) with minimal geometric elements\nin teal (#4FD1C5). A large circle outline (stroke only, no fill)\npositioned off-center to the right, partially cropped by frame edge.\nThe geometry should be clean, precise, with subtle glow.\nVery minimal - 65% of frame remains pure black.\n\nTypography:\n- Main title: \"THUMBNAIL STYLES\" in bold white (#FFFFFF) sans-serif typography\n  (similar to Inter Black), large and prominent\n- Secondary: \"2026 PLAYBOOK\" in bold white, 50% size of main title\n- Brand tag: \"Officially on Alici.AI\" in small regular white at 60% opacity\n\nText position: Left-center, with circle element on right as accent.\n\nStyle: Ultra-minimalist, precise, technical aesthetic.\nClean typography with geometric accent.\n\nAspect ratio: 16:9\nResolution: 1920x1080",
+  "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/2026-01-30-thumbnail-big-creators-cover.png",
+  "local_path": "reports 待发文章/2026-01-30-thumbnail-big-creators/assets/cover.png",
+  "generated_at": "2026-01-30T12:03:08+00:00",
+  "model": "fal-ai/nano-banana",
+  "aspect_ratio": "16:9",
+  "resolution": "2K"
+}

@@ -1,0 +1,44 @@
+{
+  "images": [
+    {
+      "id": "hero-ai-vs-human",
+      "prompt": "Split-screen YouTube thumbnail concept: left side clean AI-style layout with bold colors and geometric shapes; right side human-crafted layout with expressive face and story-driven composition. High contrast, 16:9, modern creator aesthetic.",
+      "role": "hero",
+      "placeholder": "![Hero: AI vs Human split thumbnail concept](placeholder)",
+      "context": "Top of article after Data Hook"
+    },
+    {
+      "id": "comparison-grid-homogeneity",
+      "prompt": "Grid of thumbnails showing homogenous AI-style designs versus distinct human-direction thumbnails. Emphasize pattern repetition on AI side and unique identity on human side. 16:9 grid, editorial look.",
+      "role": "comparison",
+      "placeholder": "![Comparison Grid: AI-looking vs distinct human direction](placeholder)",
+      "context": "Section 2: Homogeneity risk"
+    },
+    {
+      "id": "three-c-diagram",
+      "prompt": "Simple triangle diagram labeled Curiosity, Clarity, Contrast; clean infographic style, minimal colors, 16:9 or 4:3.",
+      "role": "inline",
+      "placeholder": "![Diagram: 3C triangle for thumbnails](placeholder)",
+      "context": "Section 3: 3C framework"
+    },
+    {
+      "id": "anti-trending-examples",
+      "prompt": "Thumbnail examples showing anti-trending approach: raw screenshot, minimal text, authentic facial expression. Side-by-side with overly polished AI look. 16:9.",
+      "role": "inline",
+      "placeholder": "![Anti-trending examples: raw screenshot + minimal text](placeholder)",
+      "context": "Section 4: Anti-trending"
+    },
+    {
+      "id": "workflow-ai-human-testing",
+      "prompt": "Workflow diagram: AI drafts -> human selection -> 3C check -> YouTube test & compare. Clean arrows, minimal icons, 16:9.",
+      "role": "inline",
+      "placeholder": "![Workflow: AI drafts -> human selection -> 3C check -> A/B testing](placeholder)",
+      "context": "Section 6: Recommended workflow"
+    }
+  ],
+  "metadata": {
+    "total_images": 5,
+    "article_slug": "thumbnail-ai-vs-human",
+    "generated_at": "2026-01-30T00:00:00Z"
+  }
+}

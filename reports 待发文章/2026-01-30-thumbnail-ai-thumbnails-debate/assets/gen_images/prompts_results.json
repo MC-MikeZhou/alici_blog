@@ -1,0 +1,20 @@
+[
+  {
+    "role": "concept",
+    "local_path": "reports 待发文章/2026-01-30-thumbnail-ai-thumbnails-debate/assets/gen_images/thumbnail-workflow-1.png",
+    "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/thumbnail-workflow-1.png",
+    "config": {
+      "aspect_ratio": "16:9",
+      "resolution": "1K"
+    }
+  },
+  {
+    "role": "concept",
+    "local_path": "reports 待发文章/2026-01-30-thumbnail-ai-thumbnails-debate/assets/gen_images/thumbnail-workflow-2.png",
+    "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/thumbnail-workflow-2.png",
+    "config": {
+      "aspect_ratio": "16:9",
+      "resolution": "1K"
+    }
+  }
+]

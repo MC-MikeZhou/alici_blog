@@ -286,15 +286,25 @@ YouTube Data API v3  api key 这两个都可以:
 这里停止，第7步结束，重新查看thumbnail.md（文档随时变更，每次完成一步查看一次），确认自己执行到哪一步，下一步是什么。
 用户说继续后才能进入下一步
 
+### 第8步，清理debug文案，更新错误链接。 
+严格执行：
+1  清理 01-article-draft-4.md 文中的debug文案
+2  thumbnail 所有导流，链接统一换成： https://alici.ai/youtube-thumbnail  ， 而不是  https://app.alici.ai/ ,
+3  生成
+- `/reports 待发文章/YYYY-MM-DD-{topic}/01-article-draft-5.md`
 
-### 第8步，  文中配图环节 
-8.1
+### 第9步，执行AEO 评分检测
+目标，达到75分以上，
+没有达到，修改blog，如此反复。
+
+### 第10步，  文中配图环节 
+10.1
 注意，优先使用 source/  中的来源网页配图
 先查看一遍source/ 中所有的图片，全部用文字描述出图片内容，列出来给用户，
 然后提出一版配图方案，对应之前规划的占位，列出来给用户，让用户选择。
 使用source/  图片，可以上传到 cdn获得云端链接，后续使用
 
-8.2
+10.2
 没有使用source/ 中图片的占位，则使用AI生图的方式得到图片 和 fal的云端链接，后续使用，
 具体如下
 生图会扣费，因此生图前，请告知用户本次会生成多少张配图。用户确认后再继续。
@@ -312,42 +322,39 @@ YouTube Data API v3  api key 这两个都可以:
 **图片上传**: 
 - 上传视频，如果用户使用本地的图片，请通过以下方式上传获得云端链接。
 首先要有本地图片的路径
-比如 ：前置目录/${name}.png
+比如 ：前置目录/${name}_${时间戳}.png
 上传使用ssh命令：
 ssh命令：
-rsync -a -r -v -p -e 'ssh -p 22'  --exclude='.DS_Store'  --progress ${完整前置路径}/${name}.png root@45.76.70.215:/var/www/static/static/image/other/gen_images/
+rsync -a -r -v -p -e 'ssh -p 22'  --exclude='.DS_Store'  --progress ${完整前置路径}/${name}_${时间戳}.png root@45.76.70.215:/var/www/static/static/image/other/gen_images/
 password:  5A_p@cjpX74H(LJM
 
 最终获得的链接如下：
-https://ct2.alici.ai/static/image/other/gen_images/${name}.png
+https://ct2.alici.ai/static/image/other/gen_images/${name}_${时间戳}.png
 请使用命令上传图片，不要让用户自己上传。
 
 
-### 第9步，生成文章封面图
+### 第11步，生成文章封面图
 生图会扣费，因此生图前，请告知用户
 封面语言要求： 英语。
 查看 /skills/utilities/blog-cover-generator/SKILL.md  了解封面的要求，prompt的要求
 请使用英语prompt，生成最终版的英文内容图片。
 
 
-### 第10步，清理debug文案，更新错误链接。 
-严格执行：
-1  清理 01-article-draft-4.md 文中的debug文案
-2  thumbnail 所有导流，链接统一换成： https://alici.ai/youtube-thumbnail  ， 而不是  https://app.alici.ai/ ,
-3  生成
-- `/reports 待发文章/YYYY-MM-DD-{topic}/01-article-draft-5.md`
 
 
-### 第11步，生成预览网页和json
+
+### 第12步，生成预览网页和json
 然后基于01-article-draft-5.md，生成 framer.json 和 preview.html
 图片的链接，填入framer.json 和 preview.html当中
 （生成 framer.json  对应的skill： markdown-to-framer | **v1.3** 🔧 | convert to framer | Framer CMS JSON (**修复**: 图片格式 + 特殊字符) |）
 路径： skills/utilities/markdown-to-framer/  文件夹内所有文档
 
-### 第12步，讨论和推荐给用户，英文标题，修改Slug
+### 第13步，讨论和推荐给用户，英文标题，修改Slug
 输出4-5个英文标题，用户确认后
 完整翻译 06-article-final.json , 内部字段填入对应的英文，包括标题，
 Slug、sub title，也根据最新的标题，进行调整
+注意，翻译不能用脚本，需要你作为AI Agent，自行进行翻译。
+
 生成新的  
 - `/reports 待发文章/YYYY-MM-DD-{topic}/06-article-final-en.json`
 

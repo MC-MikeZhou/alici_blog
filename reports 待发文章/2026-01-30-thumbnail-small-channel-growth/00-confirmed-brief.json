@@ -1,0 +1,46 @@
+{
+  "mode": "thumbnail_mode",
+  "approach": "reference_expansion",
+  "topic": "小频道如何增长 — Thumbnail-First 增长法（新手视角）",
+  "date": "2026-01-30",
+  "keywords": ["grow youtube channel", "how to grow small youtube channel", "youtube growth tips"],
+  "sources": [
+    {
+      "title": "How to Grow Your YouTube Channel in 2026",
+      "publisher": "vidIQ",
+      "url": "https://vidiq.com/blog/post/grow-youtube-channel/"
+    },
+    {
+      "title": "9 Expert Strategies and Tips to Get More Views on YouTube",
+      "publisher": "SocialPilot",
+      "url": "https://www.socialpilot.co/youtube-marketing/how-to-grow-youtube-channel"
+    },
+    {
+      "title": "11 Tips on How to Grow Your YouTube Channel in 2026",
+      "publisher": "Neal Schaffer",
+      "url": "https://nealschaffer.com/grow-your-youtube-channel/"
+    }
+  ],
+  "ignored_sources": [
+    {
+      "title": "13 Strategies to Grow Your YouTube Channel",
+      "publisher": "Fourthwall",
+      "url": "https://fourthwall.com/blog/13-strategies-to-help-grow-youtube-channel",
+      "reason": "404 Not Found at fetch time"
+    }
+  ],
+  "audience": "小型/新手 YouTube 频道",
+  "lens": ["beginner", "thumbnail_first"],
+  "language": {
+    "article": "zh-CN",
+    "thumbnails": "en"
+  },
+  "constraints": {
+    "no_fabricated_data": true,
+    "source_attribution_required": true,
+    "no_case_gallery_in_body": true,
+    "images": "use placeholders now; prefer sources/assets later; AI generation optional in step 8",
+    "product_link": "https://alici.ai/youtube-thumbnail"
+  }
+}
+

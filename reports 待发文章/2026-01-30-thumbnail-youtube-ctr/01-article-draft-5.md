@@ -1,15 +1,15 @@
 ---
-title: "YouTube CTR 完整指南2026"
+title: "YouTube CTR Guide (2026)"
 slug: "youtube-ctr-guide-2026"
 category: "tutorial"
 featured_image:
-  url: "https://ct2.alici.ai/static/image/other/gen_images/cover-youtube-ctr-2026.png"
-meta_title: "YouTube CTR 完整指南（2026）：小频道的运营+数据闭环"
+  url: "https://v3b.fal.media/files/b/0a8c7a52/GeOFqF0KLP7nNj4eqWMUv.png"
+meta_title: "YouTube CTR Guide (2026)"
 tags: ["youtube ctr", "thumbnail", "click-through rate"]
 date: "2026-01-30"
 ---
 
-# YouTube CTR 完整指南2026（人话精修版）
+# YouTube CTR Guide (2026)
 
 > 面向小体量频道（Small YouTubers）的运营 + 数据闭环实践。全篇不造数据，所有概念/口径来自公开资料（vidIQ / Databox / Lenos Tube）。本版在 v3 的基础上，专门把几处“过于模板化、像 AI 的写法”改成更好读、更贴近实际操作的段落描述，信息不变、讲法更人性。
 

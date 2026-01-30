@@ -1,0 +1,56 @@
+{
+  "images": [
+    {
+      "id": "hero-ai-vs-human",
+      "original_prompt": "Split-screen YouTube thumbnail concept: left side clean AI-style layout with bold colors and geometric shapes; right side human-crafted layout with expressive face and story-driven composition. High contrast, 16:9, modern creator aesthetic.",
+      "final_prompt": "Source image selected (creator watching YouTube on TV)",
+      "file_path": "/reports 待发文章/2026-01-30-thumbnail-ai-vs-human/assets/hero_youtube_couch_20260130.jpg",
+      "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/hero_youtube_couch_20260130.jpg",
+      "generation_model": "source",
+      "status": "success"
+    },
+    {
+      "id": "comparison-grid-homogeneity",
+      "original_prompt": "Grid of thumbnails showing homogenous AI-style designs versus distinct human-direction thumbnails. Emphasize pattern repetition on AI side and unique identity on human side. 16:9 grid, editorial look.",
+      "final_prompt": "Source image selected (AI-looking thumbnail example)",
+      "file_path": "/reports 待发文章/2026-01-30-thumbnail-ai-vs-human/assets/ai-thumbnail-example_20260130.jpg",
+      "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/ai-thumbnail-example_20260130.jpg",
+      "generation_model": "source",
+      "status": "success"
+    },
+    {
+      "id": "three-c-diagram",
+      "original_prompt": "Simple triangle diagram labeled Curiosity, Clarity, Contrast; clean infographic style, minimal colors, 16:9 or 4:3.",
+      "final_prompt": "Minimal flat infographic on white background: an equilateral triangle with thin lines, each corner labeled 'Curiosity', 'Clarity', 'Contrast'. Use three accent colors (teal, orange, blue) for corners, no extra text, clean modern YouTube creator aesthetic, high contrast.",
+      "file_path": "/reports 待发文章/2026-01-30-thumbnail-ai-vs-human/assets/three-c-triangle_20260130.png",
+      "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/three-c-triangle_20260130.png",
+      "generation_model": "fal-ai/nano-banana",
+      "status": "success"
+    },
+    {
+      "id": "anti-trending-examples",
+      "original_prompt": "Thumbnail examples showing anti-trending approach: raw screenshot, minimal text, authentic facial expression. Side-by-side with overly polished AI look. 16:9.",
+      "final_prompt": "Source image selected (raw workspace screenshot feel)",
+      "file_path": "/reports 待发文章/2026-01-30-thumbnail-ai-vs-human/assets/anti-trending-raw-screen_20260130.jpg",
+      "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/anti-trending-raw-screen_20260130.jpg",
+      "generation_model": "source",
+      "status": "success"
+    },
+    {
+      "id": "workflow-ai-human-testing",
+      "original_prompt": "Workflow diagram: AI drafts -> human selection -> 3C check -> YouTube test & compare. Clean arrows, minimal icons, 16:9.",
+      "final_prompt": "Source image selected (team reviewing performance)",
+      "file_path": "/reports 待发文章/2026-01-30-thumbnail-ai-vs-human/assets/workflow-team-review_20260130.jpg",
+      "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/workflow-team-review_20260130.jpg",
+      "generation_model": "source",
+      "status": "success"
+    }
+  ],
+  "summary": {
+    "total_planned": 5,
+    "total_from_source": 4,
+    "total_generated": 1,
+    "success_rate": "100%"
+  }
+}
+

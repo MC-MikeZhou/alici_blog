@@ -1,0 +1,24 @@
+{
+  "title": "AI vs Human: Which Thumbnail Maker is Best",
+  "language": "zh-CN",
+  "mode": "thumbnail",
+  "intent": "reference_expansion",
+  "audience": "小型YouTuber/新手创作者",
+  "primary_angles": [
+    "同质化危机与识别度",
+    "三C框架(好奇/清晰/对比)",
+    "反趋势(anti-trending)作为差异化",
+    "AI+人类协作流程"
+  ],
+  "constraints": [
+    "不虚构数据与结论",
+    "不新增偏离主线的附录/习题集",
+    "避免夸张营销词",
+    "品牌替换为 Alici.ai，导流链接使用 https://alici.ai/youtube-thumbnail"
+  ],
+  "sources": [
+    "https://vidiq.com/blog/post/ai-thumbnail-makers-destroying-youtube/",
+    "https://superagi.com/ai-vs-human-which-thumbnail-maker-is-best-for-youtube-creators-in-2025/",
+    "https://www.superside.com/blog/ai-thumbnail-makers-for-youtube"
+  ]
+}

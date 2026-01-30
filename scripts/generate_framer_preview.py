@@ -13,6 +13,21 @@ from datetime import datetime
 import markdown
 import yaml
 
+def strip_duplicate_cover(body_html: str, cover_url: str) -> str:
+    """Remove the first cover image if it also appears in the body."""
+    if not cover_url:
+        return body_html
+    cover_re = re.escape(cover_url)
+    patterns = [
+        re.compile(r'<p>\s*<img[^>]*src="' + cover_re + r'"[^>]*>\s*</p>', re.IGNORECASE),
+        re.compile(r'<figure>\s*<img[^>]*src="' + cover_re + r'"[^>]*>\s*</figure>', re.IGNORECASE),
+        re.compile(r'<img[^>]*src="' + cover_re + r'"[^>]*>', re.IGNORECASE),
+    ]
+    for pat in patterns:
+        if pat.search(body_html):
+            return pat.sub('', body_html, count=1)
+    return body_html
+
 def parse_markdown_file(file_path):
     """Parse markdown file with frontmatter"""
     with open(file_path, 'r', encoding='utf-8') as f:
@@ -185,6 +200,9 @@ def generate_preview_html(input_file):
     read_time = frontmatter.get('read_time', '5 min')
     date_str = frontmatter.get('date', datetime.now().strftime('%Y-%m-%d'))
 
+    # If body already includes the cover image, remove the duplicate
+    body_html = strip_duplicate_cover(body_html, cover_url)
+
     # Format date
     if 'T' in date_str:
         date_obj = datetime.fromisoformat(date_str.replace('Z', '+00:00'))
@@ -215,6 +233,10 @@ def generate_preview_html(input_file):
     html = template.replace('{{TITLE}}', title)
     html = html.replace('{{SUB_TITLE_BLOCK}}', sub_title_block)
     html = html.replace('{{COVER_URL}}', cover_url)
+    html = html.replace(
+        '{{COVER_URL|IMG}}',
+        f'<img alt="cover" src="{cover_url}" />' if cover_url else ''
+    )
     html = html.replace('{{READ_TIME}}', read_time)
     html = html.replace('{{DATE}}', date_formatted)
     html = html.replace('{{ARTICLE_BODY}}', body_html)

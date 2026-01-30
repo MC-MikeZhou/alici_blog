@@ -1,0 +1,17 @@
+{
+  "mode": "reference_expansion",
+  "topic": "AI Thumbnails Debate",
+  "intent": "B",
+  "created_at": "2026-01-30T08:40:22Z",
+  "constraints": {
+    "source_ratio": "20-50%",
+    "no_fabrication": true,
+    "multi_source_evidence": true,
+    "non_targets": ["subjective rankings without method", "invented CTR numbers"]
+  },
+  "sources": [
+    {"type":"web","url":"https://vidiq.com/blog/post/ai-thumbnail-makers-destroying-youtube/","dir":"sources/web-vidiq-ai-thumbnail-makers-destroying-youtube"},
+    {"type":"web","url":"https://superagi.com/ai-vs-human-which-thumbnail-maker-is-best-for-youtube-creators-in-2025/","dir":"sources/web-superagi-ai-vs-human-which-thumbnail-maker-is-best-for-youtube-creators-in-2025"},
+    {"type":"web","url":"https://www.superside.com/blog/ai-thumbnail-makers-for-youtube","dir":"sources/web-superside-ai-thumbnail-makers-for-youtube"}
+  ]
+}

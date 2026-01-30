@@ -1,4 +1,11 @@
 {
-  "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/cover-youtube-ctr-2026.png"
+  "cdn_url": "https://v3b.fal.media/files/b/0a8c7a52/GeOFqF0KLP7nNj4eqWMUv.png",
+  "background_type": "data-abstract",
+  "color": "#4FD1C5",
+  "h1_text": "YOUTUBE CTR",
+  "h2_text": "GUIDE (2026)",
+  "h3_text": "Small Channel Playbook",
+  "model": "fal-ai/nano-banana",
+  "aspect_ratio": "16:9",
+  "resolution": "2K"
 }
-

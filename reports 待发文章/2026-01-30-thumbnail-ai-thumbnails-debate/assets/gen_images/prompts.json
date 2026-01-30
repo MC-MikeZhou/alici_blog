@@ -1,0 +1,12 @@
+[
+  {
+    "prompt": "Infographic workflow diagram, modern editorial style. Teal accent, white background, 16:9. Show steps as simple labeled blocks with arrows: Promise sentence → AI generates 6–12 variants → Human review (storytelling & psychology check) → Phone 5‑second readability check → YouTube Test & Compare (A/B) → Retention‑first winner → Retrospective pattern library. Minimal icons, high contrast, legible on mobile, no clutter, no photo, vector flat design.",
+    "role": "concept",
+    "filename": "thumbnail-workflow-1.png"
+  },
+  {
+    "prompt": "Decision criteria diagram for thumbnail A/B testing. 16:9 flat vector, teal accent, white background. Show metrics nodes: CTR, Avg View Duration, Retention@30s. Rule: Choose winner by retention/avg view duration first; CTR only when retention is equal. Include a red warning badge for 'High CTR, Low Retention = misleading'. Clean arrows, readable labels, minimalist editorial infographic.",
+    "role": "concept",
+    "filename": "thumbnail-workflow-2.png"
+  }
+]

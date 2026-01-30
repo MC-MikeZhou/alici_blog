@@ -1,0 +1,50 @@
+{
+  "images": [
+    {
+      "id": "template-pet",
+      "local_path": "alici_template/png/6ybXsBaX8ptHglXGbYDZGYMl9k.png",
+      "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/6ybXsBaX8ptHglXGbYDZGYMl9k.png"
+    },
+    {
+      "id": "template-food",
+      "local_path": "alici_template/png/cYsglAz9Koz89f6RN3uPOs9mvk.png",
+      "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/cYsglAz9Koz89f6RN3uPOs9mvk.png"
+    },
+    {
+      "id": "template-travel",
+      "local_path": "alici_template/png/hOMvEYEdW4u121aPRT0Ddn90uBc.png",
+      "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/hOMvEYEdW4u121aPRT0Ddn90uBc.png"
+    },
+    {
+      "id": "template-gaming",
+      "local_path": "alici_template/png/7jjib9ogMpCZKog1efsEDkfBRbc.png",
+      "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/7jjib9ogMpCZKog1efsEDkfBRbc.png"
+    },
+    {
+      "id": "template-sports",
+      "local_path": "alici_template/png/kAyF66HO0c5wKO1kNAZDgTmJmy8.png",
+      "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/kAyF66HO0c5wKO1kNAZDgTmJmy8.png"
+    },
+    {
+      "id": "template-side-hustle",
+      "local_path": "alici_template/png/mce3IbjiTNJFW4VoYkh8pDUt6Y4.png",
+      "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/mce3IbjiTNJFW4VoYkh8pDUt6Y4.png"
+    },
+    {
+      "id": "template-asmr",
+      "local_path": "alici_template/png/VEsnqkegUsJJDyrGramd6qEat5A.png",
+      "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/VEsnqkegUsJJDyrGramd6qEat5A.png"
+    },
+    {
+      "id": "template-finance",
+      "local_path": "alici_template/png/XOyaS8naPGSnkJhrVN8OL2clCcA.png",
+      "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/XOyaS8naPGSnkJhrVN8OL2clCcA.png"
+    },
+    {
+      "id": "template-reaction",
+      "local_path": "alici_template/png/zWI20DCRpeYmqxRqZ38wBb03c.png",
+      "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/zWI20DCRpeYmqxRqZ38wBb03c.png"
+    }
+  ]
+}
+

@@ -1,0 +1,14 @@
+{
+  "background_type": "typography-led",
+  "color": "#4FD1C5",
+  "h1_text": "THUMBNAIL FIRST",
+  "h2_text": null,
+  "h3_text": null,
+  "prompt_used": "Typography-led minimalist blog cover, black background with soft teal gradient glow (#4FD1C5), large bold sans-serif white text 'THUMBNAIL FIRST' centered in lower third, geometric subtle lines, generous negative space, high contrast, crisp edges, modern professional, no logos, no extra decorations, 16:9",
+  "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/cover_timestamp.png",
+  "local_path": "reports 待发文章/2026-01-30-thumbnail-small-channel-growth/assets/cover_timestamp.png",
+  "generated_at": "2026-01-30T17:17:00Z",
+  "model": "fal-ai/nano-banana",
+  "aspect_ratio": "16:9",
+  "resolution": "2K"
+}

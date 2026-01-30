@@ -1,0 +1,59 @@
+{
+  "images": [
+    {
+      "id": "hero-image",
+      "prompt": "YouTube thumbnail-first growth for small creators, single clear subject, bold high-contrast typography with 2-3 English words (e.g., 'THUMBNAIL FIRST'), phone screen mockup showing YouTube feed, minimal red/white/black palette, modern, studio lighting, wide 16:9, clean background, no brand logos",
+      "role": "hero",
+      "placeholder": "![Hero: Thumbnail-First Growth](placeholder)",
+      "context": "Article hero image at the top"
+    },
+    {
+      "id": "workflow-diagram",
+      "prompt": "Clean infographic, flowchart arrows: Title ↔ Thumbnail ↔ 30s Hook ↔ Analytics (CTR & Retention) ↺ Iteration, minimalist flat design, high contrast labels, readable on mobile, 16:9",
+      "role": "inline",
+      "placeholder": "![Workflow Diagram](placeholder)",
+      "context": "Section: 工作流（两周循环）"
+    },
+    {
+      "id": "title-thumbnail-sync",
+      "prompt": "Side-by-side composition demonstrating title and thumbnail synergy, left: concise 55-65 character title bar, right: 2-3 word thumbnail text over subject, color harmony, alignment lines, 16:9",
+      "role": "inline",
+      "placeholder": "![Title x Thumbnail Synergy](placeholder)",
+      "context": "Section: 标题与缩略图协同"
+    },
+    {
+      "id": "ab-test-matrix",
+      "prompt": "A/B test grid mockup for three thumbnail variants A/B/C with CTR placeholders, neutral UI style, clear differences in color/subject/text, 16:9",
+      "role": "inline",
+      "placeholder": "![A/B Test Matrix](placeholder)",
+      "context": "Section: A/B 测试与版本差异度"
+    },
+    {
+      "id": "first-30s-structure",
+      "prompt": "Storyboard frames for first 30 seconds: Hook (0-5s), Setup (5-15s), Payoff preview (15-25s), Path forward (25-30s), minimalist captions, 16:9",
+      "role": "inline",
+      "placeholder": "![First 30s Storyboard](placeholder)",
+      "context": "Section: 前30秒兑现封面承诺"
+    },
+    {
+      "id": "shorts-to-long-bridge",
+      "prompt": "Bridge concept: YouTube Shorts to Long-Form, consistent thumbnail style and color, arrow from short vertical card to long video, clear label 'Watch Full', 16:9",
+      "role": "inline",
+      "placeholder": "![Shorts → Long Bridge](placeholder)",
+      "context": "Section: Shorts→长视频导流"
+    },
+    {
+      "id": "analytics-quadrant",
+      "prompt": "2x2 quadrant chart: CTR (low→high) vs Retention (low→high), actions labeled: Repackaging, Re-cut Intro, Deep Edit, Double Down; bold axes, simple annotations, 16:9",
+      "role": "inline",
+      "placeholder": "![CTR × Retention Quadrant](placeholder)",
+      "context": "Section: 数据驱动迭代"
+    }
+  ],
+  "metadata": {
+    "total_images": 7,
+    "article_slug": "thumbnail-first-small-channel-growth-2026",
+    "generated_at": "2026-01-30T16:40:00Z"
+  }
+}
+
