@@ -1,0 +1,27 @@
+[
+  {
+    "prompt": "YouTube thumbnail blog cover, minimal clean composition, bold cyan/magenta accents, editorial typography reading 'YouTube Thumbnail 0 to 1', modern professional, high contrast, mobile-first readability, clean background, 16:9, studio lighting, photorealistic",
+    "role": "hero",
+    "filename": "yt-thumb-hero.png"
+  },
+  {
+    "prompt": "Minimal YouTube thumbnail, large central question text 'Add Subtitles in 2 Steps?', clean gradient background, high contrast, no clutter, bold condensed sans-serif, mobile-first readability, 16:9, professional look",
+    "role": "concept",
+    "filename": "yt-thumb-question-hook.png"
+  },
+  {
+    "prompt": "Split-screen YouTube thumbnail, left 'Phone Editing', right 'Desktop Editing', neutral 'VS' in the center, two short tags 'Faster' vs 'Stable', symmetrical layout, strong edge separation, high contrast, bold but minimal, 16:9",
+    "role": "comparison",
+    "filename": "yt-thumb-vs.png"
+  },
+  {
+    "prompt": "POV shot from mountain summit at sunrise, warm light, strong depth, cinematic framing, minimal overlay text 'Summit POV', high clarity, YouTube thumbnail style, 16:9, immersive and emotional",
+    "role": "concept",
+    "filename": "yt-thumb-emotion.png"
+  },
+  {
+    "prompt": "Clean infographic, 5-step workflow diagram: '1 First-Glance Info' -> '2 Pick One Expression' -> '3 Placeholder Layout' -> '4 Phone Preview' -> '5 Save as Template'; thin lines, minimal icons, teal/cyan accents, high readability, 16:9",
+    "role": "concept",
+    "filename": "yt-thumb-workflow.png"
+  }
+]

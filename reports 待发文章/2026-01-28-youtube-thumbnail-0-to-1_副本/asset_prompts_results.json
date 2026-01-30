@@ -1,0 +1,47 @@
+[
+  {
+    "role": "hero",
+    "local_path": "reports 待发文章/2026-01-28-youtube-thumbnail-0-to-1_副本/assets/yt-thumb-hero.png",
+    "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/yt-thumb-hero.png",
+    "config": {
+      "aspect_ratio": "16:9",
+      "resolution": "2K"
+    }
+  },
+  {
+    "role": "concept",
+    "local_path": "reports 待发文章/2026-01-28-youtube-thumbnail-0-to-1_副本/assets/yt-thumb-question-hook.png",
+    "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/yt-thumb-question-hook.png",
+    "config": {
+      "aspect_ratio": "16:9",
+      "resolution": "1K"
+    }
+  },
+  {
+    "role": "comparison",
+    "local_path": "reports 待发文章/2026-01-28-youtube-thumbnail-0-to-1_副本/assets/yt-thumb-vs.png",
+    "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/yt-thumb-vs.png",
+    "config": {
+      "aspect_ratio": "16:9",
+      "resolution": "1K"
+    }
+  },
+  {
+    "role": "concept",
+    "local_path": "reports 待发文章/2026-01-28-youtube-thumbnail-0-to-1_副本/assets/yt-thumb-emotion.png",
+    "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/yt-thumb-emotion.png",
+    "config": {
+      "aspect_ratio": "16:9",
+      "resolution": "1K"
+    }
+  },
+  {
+    "role": "concept",
+    "local_path": "reports 待发文章/2026-01-28-youtube-thumbnail-0-to-1_副本/assets/yt-thumb-workflow.png",
+    "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/yt-thumb-workflow.png",
+    "config": {
+      "aspect_ratio": "16:9",
+      "resolution": "1K"
+    }
+  }
+]

@@ -1,0 +1,221 @@
+#!/usr/bin/env python3
+"""
+Markdown → Framer CMS JSON (v1.3-compatible minimal converter)
+ - Reads Markdown with YAML frontmatter
+ - Integrates 06-cover-metadata.json for cover.url
+ - Converts body to Framer-compatible HTML (no <figure> for <img>, alt before src)
+ - Replaces selected image placeholders with generated CDN URLs
+ - Outputs array JSON to 06-article-final.json
+"""
+
+import os
+import re
+import sys
+import json
+import math
+from pathlib import Path
+from datetime import datetime
+
+import yaml
+import markdown
+
+
+def read_markdown(path: Path):
+    text = path.read_text(encoding='utf-8')
+    fm = {}
+    body = text
+    if text.startswith('---'):
+        parts = text.split('---', 2)
+        if len(parts) >= 3:
+            fm = yaml.safe_load(parts[1]) or {}
+            body = parts[2].strip()
+    return fm, body
+
+
+def sanitize_slug(s: str) -> str:
+    s = s.lower()
+    s = re.sub(r'[^a-z0-9\-]+', '-', s)
+    s = re.sub(r'-{2,}', '-', s).strip('-')
+    return s
+
+
+def derive_slug_from_dir(article_dir: Path) -> str:
+    # directory name like: 2026-01-28-youtube-thumbnail-0-to-1_副本
+    name = article_dir.name
+    # remove date prefix
+    m = re.match(r'\d{4}-\d{2}-\d{2}-(.+)', name)
+    base = m.group(1) if m else name
+    # remove non-ascii suffix (like _副本)
+    base = re.sub(r'[^a-zA-Z0-9\-]+', '-', base)
+    return sanitize_slug(base)
+
+
+def md_to_framer_html(md_text: str) -> str:
+    # Remove top-level H1 lines
+    md_text = re.sub(r'^# .*$', '', md_text, flags=re.MULTILINE)
+
+    html = markdown.markdown(
+        md_text,
+        extensions=['tables', 'fenced_code', 'nl2br']
+    )
+
+    # Headings: H2 → <h6><strong>, H3-H6 → <p><strong>
+    html = re.sub(r'<h2>(.*?)</h2>', r'<h6><strong>\1</strong></h6>', html)
+    for level in range(3, 7):
+        html = re.sub(fr'<h{level}>(.*?)</h{level}>', r'<p><strong>\1</strong></p>', html)
+
+    # Lists: <li> → add data-preset-tag and wrap in <p>
+    html = re.sub(r'<li>(.*?)</li>', r'<li data-preset-tag="p"><p>\1</p></li>', html, flags=re.DOTALL)
+
+    # Ensure <img> format: no <figure>, and alt before src
+    # Remove any wrapping <figure> that markdown might produce (it doesn't by default)
+    html = html.replace('<figure>', '').replace('</figure>', '')
+
+    # Reorder attributes in <img ...>
+    def reorder_img(m):
+        attrs = m.group(1)
+        # capture src and alt
+        src_m = re.search(r'src=\"(.*?)\"', attrs)
+        alt_m = re.search(r'alt=\"(.*?)\"', attrs)
+        src = src_m.group(1) if src_m else ''
+        alt = alt_m.group(1) if alt_m else ''
+        # other attrs
+        others = re.sub(r'(src=\".*?\"|alt=\".*?\")', '', attrs).strip()
+        parts = [f'alt="{alt}"', f'src="{src}"']
+        if others:
+            parts.append(others)
+        return '<img ' + ' '.join(parts) + '>'
+
+    html = re.sub(r'<img\s+([^>]+)>', reorder_img, html)
+
+    # Replace em dash
+    html = html.replace('—', ' - ')
+
+    return html
+
+
+def extract_tlnr(md_body: str) -> str:
+    # TLNR from first non-empty paragraph after removing H1 lines
+    body = re.sub(r'^# .*$', '', md_body, flags=re.MULTILINE)
+    paras = [p.strip() for p in body.split('\n\n') if p.strip()]
+    if paras:
+        t = paras[0]
+        t = re.sub(r'\s+', ' ', t)
+        return t[:300]
+    return ''
+
+
+def compute_read_time(md_body: str) -> str:
+    # Rough estimate: 800 Chinese chars/min or 200 words/min
+    # use characters
+    chars = len(re.sub(r'\s+', '', md_body))
+    minutes = max(4, math.ceil(chars / 800))
+    return f"{minutes} min"
+
+
+def replace_placeholders_with_images(md_body: str, mapping: dict) -> str:
+    # mapping: {index0_based: url}
+    lines = md_body.splitlines()
+    count = 0
+    for i, line in enumerate(lines):
+        if re.search(r'!\[.*?\]\(placeholder\)', line):
+            if count in mapping:
+                url = mapping[count]
+                # keep original alt text
+                alt = re.sub(r'^.*!\[(.*?)\]\(placeholder\).*$', r'\1', line)
+                lines[i] = re.sub(r'!\[.*?\]\(placeholder\)', f'![{alt}]({url})', line)
+            count += 1
+    return '\n'.join(lines)
+
+
+def main():
+    if len(sys.argv) < 2:
+        print("Usage: python3 scripts/markdown_to_framer_json.py <markdown_file>")
+        sys.exit(1)
+
+    md_path = Path(sys.argv[1])
+    article_dir = md_path.parent
+
+    fm, md_body = read_markdown(md_path)
+
+    # Placeholder replacement mapping (by occurrence order)
+    # 0: workflow, 4: VS, 8: emotion (or 15), 5: question hook (approx indices based on draft-4)
+    mapping = {
+        0: 'https://ct2.alici.ai/static/image/other/gen_images/yt-thumb-workflow.png',
+        5: 'https://ct2.alici.ai/static/image/other/gen_images/yt-thumb-question-hook.png',
+        9: 'https://ct2.alici.ai/static/image/other/gen_images/yt-thumb-vs.png',
+        15: 'https://ct2.alici.ai/static/image/other/gen_images/yt-thumb-emotion.png'
+    }
+    md_body_replaced = replace_placeholders_with_images(md_body, mapping)
+
+    # Cover URL from 06-cover-metadata.json
+    cover_meta_path = article_dir / '06-cover-metadata.json'
+    cover_url = ''
+    if cover_meta_path.exists():
+        try:
+            cover_url = json.loads(cover_meta_path.read_text(encoding='utf-8')).get('cdn_url', '')
+        except Exception:
+            cover_url = ''
+    if not cover_url:
+        cover_url = (fm.get('featured_image') or {}).get('url', '')
+    if not cover_url:
+        print('❌ Missing cover image URL (06-cover-metadata.json or frontmatter.featured_image.url)')
+        sys.exit(2)
+
+    # Slug
+    slug = fm.get('slug') or derive_slug_from_dir(article_dir)
+
+    # Main category mapping
+    cat = (fm.get('category') or 'tutorial').lower()
+    if cat in ['how-to', 'guide']:
+        main_category = 'tutorial'
+    elif cat in ['list', 'comparison', 'best', 'top']:
+        main_category = 'list'
+    elif cat in ['news', 'announcement', 'update']:
+        main_category = 'news'
+    else:
+        main_category = 'tutorial'
+
+    # Title/meta
+    title = fm.get('title', 'Untitled')
+    meta_title = title[:60]
+    tlnr = extract_tlnr(md_body_replaced)
+    meta_description = (tlnr[:157] + '...') if len(tlnr) > 160 else tlnr
+    sub_title = '从添加到表达：小屏可读的一页工作流'
+
+    # Body HTML
+    article_html = md_to_framer_html(md_body_replaced)
+
+    # Date & read_time
+    iso_date = datetime.utcnow().strftime('%Y-%m-%dT00:00:00.000Z')
+    read_time = compute_read_time(md_body_replaced)
+
+    # CTA
+    cta_link = 'https://app.alici.ai/'
+    cta_button = 'Create Thumbnails Now'
+
+    obj = {
+        "Slug": slug,
+        "title": title,
+        "sub_title": sub_title,
+        "TLNR": tlnr,
+        "cover": {"url": cover_url},
+        "Date": iso_date,
+        "read_time": read_time,
+        "main_category": main_category,
+        "recommend_category": main_category,
+        "article_body_content": article_html,
+        "CTA_alici_link": cta_link,
+        "CTA button": cta_button,
+        "meta_title": meta_title,
+        "meta_description": meta_description,
+        "tag_for_SEO": "youtube, thumbnail, tutorial"
+    }
+
+    out_path = article_dir / '06-article-final.json'
+    out_path.write_text(json.dumps([obj], ensure_ascii=False, indent=2), encoding='utf-8')
+    print(f"✅ Framer JSON written: {out_path}")
+
+
+if __name__ == '__main__':
+    main()
