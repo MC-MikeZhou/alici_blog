@@ -360,5 +360,5 @@ composition with implied motion but balanced stability
 
 ## Sources
 
-- [Google Nano Banana 2 API: AI Image Generation + Editing | fal.ai](https://fal.ai/models/fal-ai/nano-banana-pro/api)
-- [How to Specify Aspect Ratio in Nano Banana Pro: Complete 2025 Developer Guide](https://www.aifreeapi.com/en/posts/nano-banana-pro-aspect-ratio-guide)
+- [Google Nano Banana 2 API: AI Image Generation + Editing | fal.ai](https://fal.ai/models/fal-ai/nano-banana/api)
+- [How to Specify Aspect Ratio in Nano Banana Pro: Complete 2025 Developer Guide](https://www.aifreeapi.com/en/posts/nano-banana-aspect-ratio-guide)

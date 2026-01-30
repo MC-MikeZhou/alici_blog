@@ -7,7 +7,7 @@ replacement: "editor v2.0"
 description: >
   ⚠️ DEPRECATED - This skill is no longer maintained. Use Editor Skill v2.0 instead.
   All image generation functionality has been consolidated into Editor Skill v2.0
-  with nano-banana-pro model and strategic image selection.
+  with nano-banana model and strategic image selection.
   Triggers on: fill images, generate images, image placeholders, add images.
 allowed-tools: Bash, Read, Write, Grep, Glob
 env-required: FAL_API_KEY
@@ -20,7 +20,7 @@ env-required: FAL_API_KEY
 > **替代方案**: 使用 [Editor Skill v2.0](../editor/SKILL.md)
 >
 > **迁移理由**:
-> - Editor v2.0 使用更高质量的 nano-banana-pro 模型
+> - Editor v2.0 使用更高质量的 nano-banana 模型
 > - 采用战略性图片选择（3-5 张）而非机械填充
 > - 使用 ICS Prompt 框架提升图片信息密度
 > - 统一的可执行脚本 (`/scripts/fal_image_generator.py`)

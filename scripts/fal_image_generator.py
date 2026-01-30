@@ -56,7 +56,7 @@ def get_fal_api_key():
 
     return ''
 
-FAL_ENDPOINT = "https://queue.fal.run/fal-ai/nano-banana-pro"
+FAL_ENDPOINT = "https://queue.fal.run/fal-ai/nano-banana"
 FAL_API_KEY = get_fal_api_key()
 
 # Default parameters matching Editor Skill v2.0 spec
@@ -65,7 +65,7 @@ DEFAULT_STEPS = 35
 DEFAULT_GUIDANCE = 7.5
 
 # Image role configurations (Editor Skill v2.6 - correct API format)
-# nano-banana-pro uses aspect_ratio + resolution, not width/height
+# nano-banana uses aspect_ratio + resolution, not width/height
 ROLE_CONFIGS = {
     "hero": {"aspect_ratio": "16:9", "resolution": "2K"},      # 16:9 high-res
     "concept": {"aspect_ratio": "16:9", "resolution": "1K"},   # 16:9 standard
@@ -121,7 +121,7 @@ def log_api_call(
 
     Args:
         action: "submit" | "poll" | "download"
-        model: Model name (e.g., "nano-banana-pro")
+        model: Model name (e.g., "nano-banana")
         prompt_hash: Hash of the prompt
         config: Dict with 'aspect_ratio' and 'resolution'
         status: "success" | "failed"
@@ -149,7 +149,7 @@ def log_api_call(
 
 def submit_image_request(prompt: str, config: Dict[str, str]) -> Optional[str]:
     """
-    Submit image generation request to FAL.ai nano-banana-pro
+    Submit image generation request to FAL.ai nano-banana
 
     Args:
         prompt: ICS-framework structured prompt
@@ -198,26 +198,26 @@ def submit_image_request(prompt: str, config: Dict[str, str]) -> Optional[str]:
         with urllib.request.urlopen(request, timeout=30) as response:
             result = json.loads(response.read().decode('utf-8'))
 
-            # nano-banana-pro returns request_id for polling
+            # nano-banana returns request_id for polling
             if 'request_id' in result:
                 request_id = result['request_id']
                 # Cache the request
                 _request_cache[prompt_hash] = request_id
                 # Log successful submission
                 duration_ms = int((time.time() - start_time) * 1000)
-                log_api_call("submit", "nano-banana-pro", prompt_hash, config, "success", duration_ms)
+                log_api_call("submit", "nano-banana", prompt_hash, config, "success", duration_ms)
                 return request_id
             # Some endpoints return image immediately
             elif 'images' in result and len(result['images']) > 0:
                 image_url = result['images'][0]['url']
                 _request_cache[prompt_hash] = image_url
                 duration_ms = int((time.time() - start_time) * 1000)
-                log_api_call("submit", "nano-banana-pro", prompt_hash, config, "success", duration_ms)
+                log_api_call("submit", "nano-banana", prompt_hash, config, "success", duration_ms)
                 return image_url
             else:
                 print(f"❌ Unexpected response format: {result}")
                 duration_ms = int((time.time() - start_time) * 1000)
-                log_api_call("submit", "nano-banana-pro", prompt_hash, config, "failed", duration_ms)
+                log_api_call("submit", "nano-banana", prompt_hash, config, "failed", duration_ms)
                 return None
 
     except urllib.error.HTTPError as e:
@@ -228,12 +228,12 @@ def submit_image_request(prompt: str, config: Dict[str, str]) -> Optional[str]:
         except:
             pass
         duration_ms = int((time.time() - start_time) * 1000)
-        log_api_call("submit", "nano-banana-pro", prompt_hash, config, "failed", duration_ms)
+        log_api_call("submit", "nano-banana", prompt_hash, config, "failed", duration_ms)
         return None
     except Exception as e:
         print(f"❌ Request failed: {str(e)}")
         duration_ms = int((time.time() - start_time) * 1000)
-        log_api_call("submit", "nano-banana-pro", prompt_hash, config, "failed", duration_ms)
+        log_api_call("submit", "nano-banana", prompt_hash, config, "failed", duration_ms)
         return None
 
 
@@ -390,7 +390,7 @@ def generate_image(
     filename: Optional[str] = None
 ) -> Optional[Dict]:
     """
-    Generate single image with nano-banana-pro
+    Generate single image with nano-banana
 
     Args:
         prompt: ICS-framework prompt

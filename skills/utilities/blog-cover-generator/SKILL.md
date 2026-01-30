@@ -265,7 +265,7 @@ python /Users/H/Documents/AliciBlog/scripts/fal_image_generator.py \
 ```
 
 **API Parameters**:
-- **Model**: fal-ai/nano-banana-pro
+- **Model**: fal-ai/nano-banana
 - **Aspect Ratio**: 16:9 (fixed for blog covers)
 - **Resolution**: 2K
 - **num_inference_steps**: 35
@@ -296,7 +296,7 @@ rsync -avz /reports/YYYY-MM-DD-{topic-slug}/assets/cover.png \
   "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/{slug}-cover.png",
   "local_path": "/reports/YYYY-MM-DD-{slug}/assets/cover.png",
   "generated_at": "2026-01-22T14:30:00Z",
-  "model": "fal-ai/nano-banana-pro",
+  "model": "fal-ai/nano-banana",
   "aspect_ratio": "16:9",
   "resolution": "2K"
 }

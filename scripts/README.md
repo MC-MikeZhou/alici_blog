@@ -6,7 +6,7 @@
 
 | 脚本 | 用途 |
 |------|------|
-| `fal_image_generator.py` | FAL.ai nano-banana-pro 图片生成 |
+| `fal_image_generator.py` | FAL.ai nano-banana 图片生成 |
 | `cdn_uploader.py` | CDN 上传（rsync） |
 | `requirements.txt` | 依赖声明（当前无外部依赖） |
 
@@ -210,7 +210,7 @@ Editor Skill 会自动：
 
 | 端点 | 用途 |
 |------|------|
-| `https://queue.fal.run/fal-ai/nano-banana-pro` | 提交请求 |
+| `https://queue.fal.run/fal-ai/nano-banana` | 提交请求 |
 | `{endpoint}/requests/{id}/status` | 轮询结果 |
 
 ### CDN 配置
@@ -226,7 +226,7 @@ Editor Skill 会自动：
 ## 开发计划
 
 ### v1.0 (当前)
-- [x] nano-banana-pro 图片生成
+- [x] nano-banana 图片生成
 - [x] 异步队列轮询
 - [x] 批量生成
 - [x] CDN 上传

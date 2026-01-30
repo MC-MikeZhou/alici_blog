@@ -1604,7 +1604,7 @@ python /Users/H/Documents/AliciBlog/scripts/cdn_uploader.py --dir ./gen_images
 
 **脚本优势**:
 - ✅ 自动处理异步队列轮询
-- ✅ 统一使用 nano-banana-pro 端点
+- ✅ 统一使用 nano-banana 端点
 - ✅ 错误处理和重试机制
 - ✅ 批量生成进度跟踪
 - ✅ 自动生成 CDN URL
@@ -1622,7 +1622,7 @@ python /Users/H/Documents/AliciBlog/scripts/cdn_uploader.py --dir ./gen_images
 export FAL_API_KEY='your-api-key'
 
 # Primary endpoint - Nano Banana Pro
-URL: https://queue.fal.run/fal-ai/nano-banana-pro
+URL: https://queue.fal.run/fal-ai/nano-banana
 
 # Request payload (UPDATED: use aspect_ratio + resolution, NOT image_size)
 {
@@ -1635,7 +1635,7 @@ URL: https://queue.fal.run/fal-ai/nano-banana-pro
 }
 ```
 
-**⚠️ IMPORTANT**: nano-banana-pro does NOT support `image_size: {width, height}`. Must use `aspect_ratio` + `resolution`.
+**⚠️ IMPORTANT**: nano-banana does NOT support `image_size: {width, height}`. Must use `aspect_ratio` + `resolution`.
 
 **Cost Control**:
 - Max 5 images per article

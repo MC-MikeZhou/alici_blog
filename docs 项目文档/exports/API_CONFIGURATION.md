@@ -89,7 +89,7 @@ cp .mcp.json.example .mcp.json
 4. 创建新 API Key（复制完整 key，格式: `xxx:yyy`）
 5. 充值账户（按图片数量计费）
 
-**模型**: `nano-banana-pro`
+**模型**: `nano-banana`
 - 速度: 快（~5-10 秒/图）
 - 质量: 高（8K 分辨率）
 - 成本: $0.15/图

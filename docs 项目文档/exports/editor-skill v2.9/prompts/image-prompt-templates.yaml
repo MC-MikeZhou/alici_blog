@@ -7,7 +7,7 @@
 version: "2.6"
 framework: "ICSB"
 brand_guide_reference: "/.claude/skills/_shared/BRAND_VISUAL_GUIDE.md"
-model: "nano-banana-pro"
+model: "nano-banana"
 max_images_per_article: 5
 recommended_images: 3-4
 asset_pack_mode_min: 7  # For micro_roundup: 1 cover + 3 characters + 3 frames

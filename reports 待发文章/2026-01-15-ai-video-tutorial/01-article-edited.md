@@ -327,4 +327,4 @@ Most AI video generators produce 5-10 second clips in 30-90 seconds. Faster mode
 ---
 
 *Written by the alici.ai Content Team. Last updated: January 15, 2026.*
-*Images generated with nano-banana-pro via Editor Skill v2.0.*
+*Images generated with nano-banana via Editor Skill v2.0.*

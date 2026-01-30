@@ -8,7 +8,7 @@
   "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/kling-motion-control-cover.png",
   "local_path": "/Users/H/Documents/AliciBlog/reports/2026-01-22-kling-character-transformation/assets/cover.png",
   "generated_at": "2026-01-22T16:30:00Z",
-  "model": "fal-ai/nano-banana-pro",
+  "model": "fal-ai/nano-banana",
   "aspect_ratio": "16:9",
   "resolution": "2K",
   "upload_status": "pending"

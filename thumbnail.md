@@ -282,7 +282,9 @@ YouTube Data API v3  api key 这两个都可以:
 路径： skills/utilities/markdown-to-framer/  文件夹内所有文档
 
 具体如何生成配图，上传图片，请参考AGENTS.md 相关介绍
-**图片生成**: FAL.ai nano-banana-pro
+
+**图片生成**: FAL.ai nano-banana
+
 - 脚本: `/scripts/fal_image_generator.py`
 - API Key 配置: `.mcp.json` → `mcpServers.fal.env.FAL_API_KEY`
 - 读取优先级: 环境变量 > .mcp.json 配置文件

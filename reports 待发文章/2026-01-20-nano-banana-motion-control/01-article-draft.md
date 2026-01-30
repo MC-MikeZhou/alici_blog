@@ -5,7 +5,7 @@ slug: "nano-banana-motion-control-2026-01"
 content_profile: micro_roundup
 read_time: "3 min"
 category: "insights"
-tags: ["motion-control", "kling-2.6", "nano-banana-pro", "video-generation", "alici-ai"]
+tags: ["motion-control", "kling-2.6", "nano-banana", "video-generation", "alici-ai"]
 
 date: "2026-01-20"
 last_updated: "2026-01-20"
