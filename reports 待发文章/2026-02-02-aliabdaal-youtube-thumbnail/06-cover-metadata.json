@@ -1,0 +1,14 @@
+{
+  "background_type": "thumbnail-style-tutorial-hero",
+  "color": "#84CC16→#FBBF24",
+  "h1_text": "ALI ABDAAL THUMBNAILS",
+  "h2_text": "7 PATTERNS 2026",
+  "h3_text": "Alici.AI",
+  "prompt_used": "Thumbnail-style YouTube cover, 16:9. An Indian male creator with short curly hair and thin silver-frame glasses. Slightly tilted head upward, confident expression. He is pointing at a large bold 'CTR' text floating beside him. Background: lime green gradient with golden yellow highlights, dynamic wavy pattern. Add subtle 3D elements: play button icon and small arrows around the 'CTR'. Main text (H1) in large bold white: 'ALI ABDAAL THUMBNAILS'. Subtitle (H2) below in white: '7 PATTERNS 2026'. Small brand tag in a corner: 'Alici.AI'. High saturation, high contrast, sharp focus, YouTube aesthetic.",
+  "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/aliabdaal_cover_20260202_202900.png",
+  "local_path": "/Users/dancy/Desktop/Code/AliciBlog sam版 thumbnail log/reports 待发文章/2026-02-02-aliabdaal-youtube-thumbnail/assets/cover.png",
+  "generated_at": "2026-02-02T12:38:17Z",
+  "model": "fal-ai/nano-banana",
+  "aspect_ratio": "16:9",
+  "resolution": "2K"
+}

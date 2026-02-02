@@ -5,7 +5,7 @@ description: >
   基于 mission-brief 对素材进行八维深度分析。
   Part A (维度 1-5): 素材理解层 - 先理解素材本身
   Part B (维度 6-8): SEO/AEO 应用层 - 再提取应用价值
-  输出: parsed-source.json + assets
+  输出: parsed-source.md (人类可读报告) + assets
 triggers:
   - "source parser"
   - "解读素材"
@@ -84,8 +84,8 @@ Phase 5: 事实核查 (基于 parsing_focus.verify)
 └── 记录验证来源
 
 Phase 6: 输出
-├── parsed-source.json (结构化数据)
-├── parsed-source.md (人类可读报告)
+├── parsed-source.md (主输出：人类可读的八维分析报告)
+├── raw-content.md (原始内容备份)
 └── assets/ (提取的表格/图片)
 ```
 
@@ -391,76 +391,11 @@ verification_methods:
 
 ### 核查结果格式
 
-```json
-{
-  "claim": "声明内容",
-  "original": "原文中的值",
-  "verified": "核实后的值",
-  "status": "confirmed | outdated | unverified | disputed",
-  "source": "核实来源",
-  "verification_date": "核实日期",
-  "action_required": "需要的操作（如果 status 不是 confirmed）"
-}
-```
+在报告中以表格形式呈现：
 
----
-
-## Output Schema: parsed-source.json
-
-```json
-{
-  "schema_version": "1.0",
-  "mission_brief_ref": "mission-brief.json 路径",
-  "source_url": "素材 URL",
-  "parsed_at": "ISO 8601 timestamp",
-  "parsing_mode": "洗稿 | 参考 | 提取数据",
-
-  // Part A: 素材理解层
-  "dimension_1_core_content": { ... },
-  "dimension_2_context": { ... },
-  "dimension_3_critical_review": { ... },
-  "dimension_4_value_extraction": { ... },
-  "dimension_5_writing_techniques": { ... },
-
-  // Part B: SEO/AEO 应用层
-  "dimension_6_seo_aeo_signals": { ... },
-  "dimension_7_reusable_data": { ... },
-  "dimension_8_brand_alignment": { ... },
-
-  // 事实核查结果
-  "fact_check_results": [ ... ],
-
-  // 提取的资产
-  "assets": {
-    "tables": [ ... ],
-    "images": [ ... ]
-  },
-
-  // 分析摘要
-  "parsing_summary": {
-    "dimensions_completed": 8,
-    "understanding_layer": {
-      "core_thesis_clear": true,
-      "credibility_assessment": "medium",
-      "critical_gaps_found": 3,
-      "reusable_frameworks_found": 1
-    },
-    "seo_aeo_layer": {
-      "seo_score_potential": "high",
-      "aeo_elements_found": 4,
-      "reusable_data_points": 12,
-      "brand_alignment": "medium"
-    },
-    "fact_check": {
-      "verified_count": 8,
-      "outdated_count": 2,
-      "needs_verification_count": 4
-    },
-    "priority_actions": [ ... ],
-    "outperform_opportunities": [ ... ]
-  }
-}
-```
+| 声明 | 原值 | 验证值 | 状态 | 来源 |
+|------|------|--------|------|------|
+| 具体声明 | 原文值 | 核实值 | ✅ 已确认 / ⚠️ 已过时 / ❓ 未验证 | 核实来源 |
 
 ---
 
@@ -469,8 +404,7 @@ verification_methods:
 ```
 /research 竞品分析/parsed-sources/
 └── YYYY-MM-DD-{topic-slug}/
-    ├── parsed-source.json      # 结构化数据
-    ├── parsed-source.md        # 人类可读报告
+    ├── parsed-source.md        # 主输出：人类可读的八维分析报告
     ├── raw-content.md          # 原始内容备份
     └── assets/
         ├── table_feature.md    # 提取的表格
@@ -478,93 +412,251 @@ verification_methods:
         └── screenshot_1.png    # 提取的图片
 ```
 
+> **设计决策**: 输出格式选择 Markdown 而非 JSON，因为：
+> 1. 人类可直接阅读和审核
+> 2. 可在 GitHub/IDE 中预览
+> 3. 表格和层级结构更清晰
+> 4. 后续 Writer Skills 仍可解析 Markdown 提取信息
+
 ---
 
-## Human-Readable Report: parsed-source.md
+## Output Template: parsed-source.md
 
 ```markdown
-# Source Analysis: {topic-slug}
+# 素材深度解读报告
 
-## 素材概览
-- **来源**: {source_url}
-- **分析时间**: {parsed_at}
-- **分析模式**: {parsing_mode}
-- **Mission Brief**: {mission_brief_ref}
+> **来源**: https://example.com/blog/article
+> **解读日期**: 2026-02-02
+> **解读模式**: 洗稿
+> **关联 Brief**: /research/mission-briefs/2026-02-02-topic-slug/mission-brief.md
 
 ---
 
 ## Part A: 素材理解层
 
-### 维度一: 核心内容
-**核心论点**: {core_thesis}
+### 维度一：核心内容
+
+**核心论点**: Runway 在质量上领先，Kling 在性价比上胜出
 
 **关键概念**:
-{key_concepts 列表}
+| 概念 | 定义 |
+|------|------|
+| Motion Control | 控制视频中物体运动轨迹的能力 |
 
 **文章结构**:
-{structure 描述}
+- **论证展开**: 对比框架：先总结 → 逐项对比 → 场景推荐
+- **H2 章节**: Quick Comparison, Quality, Pricing, Verdict
 
 **证据支撑**:
-{evidence 列表}
+- **数据点**: Runway 质量评分 8.5/10, Kling 价格 $9.90/月
+- **引用**: "Based on our testing across 5 scenarios..."
+- **案例**: Motion control demo 对比
 
-### 维度二: 背景语境
-**作者**: {author_identity}
-**写作背景**: {writing_context}
-**隐含假设**: {underlying_assumptions}
+---
 
-### 维度三: 批判性审视
-**可能的反驳**: {potential_rebuttals}
-**论证漏洞**: {argument_gaps}
-**适用边界**: {applicability_bounds}
-**回避问题**: {avoided_topics}
+### 维度二：背景语境
 
-### 维度四: 价值提取
-**可复用框架**: {reusable_frameworks}
-**对创作者的启发**: {insights_for_creators}
-**认知转变**: {cognitive_shifts}
+**作者信息**:
+- **作者/团队**: InVideo Team
+- **背景**: AI 视频工具公司博客
+- **立场**: 可能偏向自家产品
 
-### 维度五: 写作技巧
-**结构设计**: {structure_design}
-**值得学习**: {worth_learning}
-**需要避免**: {worth_avoiding}
+**写作背景**:
+- **背景**: 2026-01 发布，响应 Kling 2.6 发布
+- **回应**: 市场对 AI 视频工具对比的需求
+- **目的**: 帮助用户选择工具（同时推广 InVideo）
+
+**隐含假设**:
+- 假设读者是视频创作者
+- 假设读者关心性价比
+- 假设质量 > 价格（隐含）
+
+---
+
+### 维度三：批判性审视
+
+**可能的反驳**: 测试场景可能不代表真实使用
+
+**论证漏洞**:
+- 未说明测试设备和环境
+- 未提供样本量 (n=?)
+
+**适用边界**: 适用于短视频创作者，不适用于长片制作
+
+**回避的话题**: API 集成、团队协作功能、自家产品 InVideo 的劣势
+
+---
+
+### 维度四：价值提取
+
+**可复用框架**:
+
+| 框架名称 | 结构 | 复用场景 |
+|---------|------|---------|
+| 5 维度评测框架 | 质量/速度/价格/易用性/功能 | 可用于任何工具对比文章 |
+
+**洞察提炼**:
+- **对创作者**: 质量优先选 Runway，预算优先选 Kling
+- **对营销人员**: 对比文章需要明确测试方法才有说服力
+- **认知转变**: 工具选择不是"最好"而是"最适合"
+
+---
+
+### 维度五：写作技巧
+
+**结构设计**:
+- **标题设计**: X vs Y: Which [Category] [Benefit]?
+- **开篇设计**: 直接给出结论 + 承诺详细对比
+- **结尾设计**: Decision Tree + CTA
+
+**说服技巧**: 数据支撑、场景化推荐、对比表格
+
+**吸引钩子**: Quick Comparison 前置、FAQ 解答疑虑
+
+**值得学习**: 结论前置、场景化推荐
+
+**需要避免**: 主观评价词过多、缺少测试方法说明
 
 ---
 
 ## Part B: SEO/AEO 应用层
 
-### 维度六: SEO/AEO 信号
-**标题分析**: {title_analysis}
-**AEO 元素**: {aeo_elements}
-**关键词分布**: {keyword_density}
+### 维度六：SEO/AEO 信号
 
-### 维度七: 可复用数据
-**测试数据**: {testing_data}
-**价格数据**: {pricing_data}
-**对比表格**: {comparison_tables}
+**标题分析**:
+| 属性 | 值 |
+|------|-----|
+| 原标题 | Kling vs Runway: Which AI Video Tool Wins in 2026? |
+| 标题公式 | comparison-1 (X vs Y: Which [Category]) |
+| 主关键词 | kling vs runway |
+| 次关键词 | ai video tool, kling 2.6, runway gen-4 |
+| 含年份 | ✅ |
+| 含数字 | ❌ |
 
-### 维度八: 品牌适配
-**产品映射**: {product_mapping}
-**品牌适配度**: {brand_alignment}
-**合规检查**: {compliance_check}
-**CTA 机会**: {cta_opportunities}
+**AEO 元素**:
+- **直接回答**: For most creators, Kling offers better value at $9.90/month, while Runway excels in quality for professional work.
+- **Featured Snippet 候选**: 开头的对比总结段落
+- **Key Takeaways**:
+  - Kling: Best for budget-conscious creators
+  - Runway: Best for quality-focused professionals
+- **FAQ 问题**:
+  - Which is better, Kling or Runway?
+  - How much does Kling cost?
+  - Can Runway do motion control?
+
+**关键词分布**:
+- **H1 关键词**: kling, runway, ai video
+- **H2 关键词**: comparison, pricing, quality, features
+- **前 100 词**: kling, runway, ai video, 2026, tool
 
 ---
 
-## 事实核查
+### 维度七：可复用数据
 
-| 声明 | 原值 | 核实值 | 状态 | 来源 |
+**测试数据**:
+| 声明 | 数据 | 来源 | 方法 | 日期 | 需验证 |
+|------|------|------|------|------|--------|
+| Runway Gen-4 人物一致性得分 | 8.5/10 | 原文测试 | 5 个场景测试 | 2026-01 | ⚠️ 是 |
+
+**价格数据**:
+| 工具 | 价格 | 数据日期 | 需验证 |
+|------|------|----------|--------|
+| Kling | $9.90/月 | 2026-01 | ⚠️ 是 |
+| Runway | $12/月 | 2026-01 | ⚠️ 是 |
+
+**对比表格**:
+| 表格 ID | 类型 | 提取路径 | 可直接复用 |
+|---------|------|----------|-----------|
+| feature_comparison | 功能对比 | /assets/table_feature.md | ✅ |
+
+**引用**:
+| 引用内容 | 来源 | 权威等级 |
+|---------|------|---------|
+| "Based on our testing across 5 scenarios..." | InVideo 原创测试 | L3 |
+
+---
+
+### 维度八：品牌适配
+
+**产品映射**:
+- **提及工具**: Kling, Runway
+- **适用 Alici 产品**: video_studio, video_prompt
+- **整合角度**: 整合者视角：Alici 支持 Kling + Runway + 更多模型
+
+**品牌一致性**:
+- **语气匹配度**: medium
+- **需调整**: 去掉主观评价词、增加数据支撑
+
+**合规检查**:
+- **竞品提及**: InVideo (原文来源)
+- **定位风险**: low
+- **待验证声明**: 价格数据、版本号
+
+**CTA 机会**:
+- **自然插入点**: Quick Comparison 之后、Category Winners 之后
+- **推荐 CTA**: 试用 Alici Video Studio
+
+---
+
+## 事实核查结果
+
+| 声明 | 原值 | 验证值 | 状态 | 来源 |
 |------|------|--------|------|------|
-{fact_check_results 表格}
+| Kling 2.6 价格 | $9.90/月 | $9.90/月 | ✅ 已确认 | Kling 官网 2026-02-02 |
+| Runway 版本 | Gen-3 | Gen-4 已发布 | ⚠️ 已过时 | - |
+
+**需要行动**: 更新为 Gen-4 信息
 
 ---
 
-## 分析摘要
+## 资产清单
 
-### 优先行动
-{priority_actions 列表}
+**表格**:
+- `feature_comparison` → /assets/table_feature.md
+- `pricing_comparison` → /assets/table_pricing.md
 
-### 超越机会
-{outperform_opportunities 列表}
+**图片**:
+- `quality_comparison` → /assets/quality_1.png (Quality comparison)
+
+---
+
+## 解读摘要
+
+| 指标 | 值 |
+|------|-----|
+| 完成维度 | 8/8 |
+
+### 素材理解层
+- **核心论点清晰**: ✅
+- **可信度评估**: medium
+- **发现论证漏洞**: 3 处
+- **可复用框架**: 1 个
+
+### SEO/AEO 应用层
+- **SEO 潜力**: high
+- **AEO 元素**: 4 个
+- **可复用数据点**: 12 个
+- **品牌适配度**: medium
+
+### 事实核查
+- **已验证**: 8 条
+- **已过时**: 2 条
+- **待验证**: 4 条
+
+---
+
+## 优先行动
+
+1. 更新 Runway 版本为 Gen-4
+2. 核实价格数据
+3. 补充测试方法论
+4. 调整语气以符合 Alici 品牌
+
+## 超越机会
+
+- **版本更新**: Runway Gen-3 → Gen-4
+- **工具扩展**: 加入 Sora 2 / Veo 3
+- **方法论**: 补充测试设备和样本量
 
 ---
 *Generated by source-parser v1.0*
@@ -612,4 +704,5 @@ parsing_focus_mapping:
 - 初始版本
 - 八维分析框架 (5 理解层 + 3 应用层)
 - 事实核查集成
-- 输出 parsed-source.json + parsed-source.md + assets
+- 输出 parsed-source.md (主输出) + assets
+- **设计决策**: 选择 Markdown 而非 JSON，便于人类阅读和审核

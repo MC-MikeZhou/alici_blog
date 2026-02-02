@@ -23,7 +23,10 @@
       "mcp__dataforseo__kw_data_google_ads_search_volume",
       "mcp__dataforseo__dataforseo_labs_google_keyword_suggestions",
       "WebFetch(domain:www.linkedin.com)",
-      "mcp__dataforseo__dataforseo_labs_google_keyword_overview"
+      "mcp__dataforseo__dataforseo_labs_google_keyword_overview",
+      "WebFetch(domain:vidiq.com)",
+      "WebFetch(domain:www.tubebuddy.com)",
+      "mcp__dataforseo__dataforseo_labs_google_keyword_ideas"
     ],
     "deny": [],
     "ask": []

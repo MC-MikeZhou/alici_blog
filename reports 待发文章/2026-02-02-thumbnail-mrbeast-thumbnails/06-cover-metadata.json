@@ -1,0 +1,14 @@
+{
+  "background_type": "thumbnail-style-reaction-shot",
+  "color": "#EF4444→#F97316",
+  "h1_text": "MRBEAST THUMBNAILS",
+  "h2_text": "10 PATTERNS 2026",
+  "h3_text": null,
+  "prompt_used": "Create a vibrant YouTube-style blog cover image. Character: Young American male content creator, late 20s, short brown hair, light stubble, wearing a blue hoodie. Surprised expression, open mouth, wide eyes, hands near face. Positioned center, occupying ~50% of frame. Background: Bold gradient from vibrant red (#EF4444) to orange (#F97316). Dynamic wave/burst pattern radiating from center. Decorative Elements: Floating thumbnail frames on both sides, 3D play button icon, subtle burst/spark accents, energetic 3D styling, no clutter over the face. Typography: Main title \"MRBEAST THUMBNAILS\" in extra-bold white sans-serif, very large, bottom center. Subtitle \"10 PATTERNS 2026\" in bold white, 50% size under main title. Brand tag \"Alici.AI\" small white at 40% opacity, bottom-right. Style: High-energy, high-saturation colors. Dramatic 3D elements. Reaction/review YouTube thumbnail aesthetic. Aspect ratio: 16:9. Resolution: 1920x1080.",
+  "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/mrbeast_thumbnails_20260202_cover.png",
+  "local_path": "/Users/dancy/Desktop/Code/AliciBlog sam版 thumbnail log/reports 待发文章/2026-02-02-thumbnail-mrbeast-thumbnails/assets/cover.png",
+  "generated_at": "2026-02-02T19:15:00Z",
+  "model": "fal-ai/nano-banana",
+  "aspect_ratio": "16:9",
+  "resolution": "2K"
+}

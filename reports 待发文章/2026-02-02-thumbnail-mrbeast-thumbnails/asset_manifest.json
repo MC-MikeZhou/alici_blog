@@ -1,0 +1,24 @@
+{
+  "images": [
+    {
+      "id": "mrbeast_collage",
+      "local_path": "/tmp/alici_upload_20260202_191329/mrbeast_collage_20260202_191329.jpg",
+      "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/mrbeast_collage_20260202_191329.jpg"
+    },
+    {
+      "id": "mrbeast_spreadsheet",
+      "local_path": "/tmp/alici_upload_20260202_191329/mrbeast_spreadsheet_20260202_191329.jpg",
+      "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/mrbeast_spreadsheet_20260202_191329.jpg"
+    },
+    {
+      "id": "mrbeast_facepanel",
+      "local_path": "/tmp/alici_upload_20260202_191329/mrbeast_facepanel_20260202_191329.jpg",
+      "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/mrbeast_facepanel_20260202_191329.jpg"
+    },
+    {
+      "id": "mrbeast_arrow",
+      "local_path": "/tmp/alici_upload_20260202_191329/mrbeast_arrow_20260202_191329.jpg",
+      "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/mrbeast_arrow_20260202_191329.jpg"
+    }
+  ]
+}
