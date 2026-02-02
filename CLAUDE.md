@@ -106,8 +106,12 @@
 | **trending-monitor** 🆕 | **v1.1** | 热点监测, QDF 信号 | QDF 信号检测 + 热点优先级 + 内容日历建议 |
 | **blog-cover-generator** 🆕 | **v1.0** | 生成封面, blog cover, 封面图 | 6 种背景类型 + 青绿色品牌规范 + Prompt 模板 |
 | **human-review-checklist** 🆕 | **v1.0** | 人工审核, 发布前检查, /human-review | 8 个检查模块 + **6 个自动修复** + **Writer Feedback Loop** + 竞品推荐检测 ⛔ BLOCKING |
+| **mission-brief** 🆕 | **v1.0** | mission brief, 创建 brief, 定义需求 | 7 问智能问卷 + **自动推断** + mission-brief.json |
+| **source-parser** 🆕 | **v1.0** | source parser, 解读素材, 分析素材 | **八维分析框架** (5 理解层 + 3 应用层) + 事实核查 |
 
-**调用链 (v2.8.3 Updated)**: `smart-launcher v2.2 (意图前置 + 模式选择) → growth-topic-scout v2.2 → writer路由 → editor gate → aeo-analyzer ⟷ improver → **human-review-checklist** → competitive-validator → framer → preview`
+**调用链 (v2.8.4 Updated)**:
+- **前置准备流程 (可选)**: `mission-brief → source-parser` → 带着结构化素材进入写作
+- **写作流程**: `smart-launcher v2.2 → growth-topic-scout v2.2 → writer路由 → editor gate → aeo-analyzer ⟷ improver → human-review-checklist → competitive-validator → framer → preview`
 
 ---
 
@@ -395,6 +399,15 @@ Step-by-step flowchart showing the AI workflow...
 **详细实施文档**: `/_archive 历史归档/00-PHASE-A-IMPLEMENTATION.md`
 
 ---
+
+- **v2.8.4 前置准备流程（2026-02-02）** 🆕:
+  - 🆕 `mission-brief v1.0` 上线：7 问智能问卷 + 自动推断 + mission-brief.json
+  - 🆕 `source-parser v1.0` 上线：八维分析框架 (5 理解层 + 3 应用层) + 事实核查
+  - 📐 **八维分析架构**：
+    - Part A 素材理解层：核心内容 / 背景语境 / 批判性审视 / 价值提取 / 写作技巧
+    - Part B SEO/AEO 应用层：SEO/AEO 信号 / 可复用数据 / 品牌适配
+  - 🎯 **核心理念**：理解先于提取 - 先深度理解素材，再做 SEO/AEO 提取
+  - 📁 **新增目录**：`/skills/preparation/` 存放前置准备类 skill
 
 - **v2.8.3 视频集成后处理（2026-01-27）** ⭐:
   - 🆕 `convert-to-video-framer-json v0.9` 上线：在现有 Framer JSON 基础上插入视频，输出 `*-video.json`（非破坏性）。
@@ -684,6 +697,8 @@ Writer → Editor Gate → AEO → Improver → 竞品验证 → Framer → Prev
 | `/generate-cover FILE` | **生成封面图 (6 种背景类型)** 🆕 |
 | `/human-review FILE` | **人工审核 + 自动修复 (8 个检查模块)** 🆕 |
 | `seed mode [关键词]` | **选题漏斗（从种子词发现 2 个可执行选题）** 🆕 |
+| `mission brief URL` | **定义文章需求（7 问智能问卷 + 自动推断）** 🆕 |
+| `source parser URL` | **八维素材分析（理解层 + 应用层 + 事实核查）** 🆕 |
 
 **使用示例**:
 ```bash
@@ -698,6 +713,10 @@ Writer → Editor Gate → AEO → Improver → 竞品验证 → Framer → Prev
 /edit-article "/reports 待发文章/2026-01-15-ai-video/01-article-draft.md"
 /human-review "/reports 待发文章/2026-01-15-ai-video/01-article-edited.md"
 /preview-framer "/reports 待发文章/2026-01-15-ai-video/01-article-reviewed.md"
+
+# 前置准备流程 (v2.8.4 NEW)
+mission brief https://invideo.io/blog/kling-vs-runway  # 定义文章需求
+source parser https://invideo.io/blog/kling-vs-runway  # 八维素材分析
 ```
 
 ---
@@ -725,7 +744,7 @@ Writer → Editor Gate → AEO → Improver → 竞品验证 → Framer → Prev
 
 | 规则 | 约束 | 验证方式 |
 |------|------|---------|
-| **基础目录** | 必须在 `/reports 待发文章/`, `/research 竞品分析/insights/`, `/research 竞品分析/case-packs/` 之一 | 写入前检查 |
+| **基础目录** | 必须在 `/reports 待发文章/`, `/research 竞品分析/insights/`, `/research 竞品分析/case-packs/`, `/research 竞品分析/mission-briefs/`, `/research 竞品分析/parsed-sources/` 之一 | 写入前检查 |
 | **日期格式** | 必须是 `YYYY-MM-DD` 前缀 | 自动修正 |
 | **Slug 格式** | 小写、连字符分隔、≤50 字符 | 自动修正 |
 | **目录创建** | 不存在则自动创建 | 自动执行 |
@@ -801,6 +820,18 @@ Writer → Editor Gate → AEO → Improver → 竞品验证 → Framer → Prev
 
 /research 竞品分析/case-packs/ # Case Pack 备份
 └── [YYYY-MM-DD-{topic-slug}_roundup-{number}.json]
+
+/research 竞品分析/mission-briefs/  # Mission Brief (v2.8.4 NEW)
+└── YYYY-MM-DD-{topic-slug}/
+    ├── mission-brief.json      # 结构化需求定义
+    └── mission-brief.md        # 人类可读摘要
+
+/research 竞品分析/parsed-sources/  # Parsed Source (v2.8.4 NEW)
+└── YYYY-MM-DD-{topic-slug}/
+    ├── parsed-source.json      # 八维分析结果
+    ├── parsed-source.md        # 人类可读报告
+    ├── raw-content.md          # 原始内容备份
+    └── assets/                 # 提取的表格/图片
 ```
 
 ---
@@ -1236,6 +1267,8 @@ https://ct2.alici.ai/static/image/other/gen_images/${name}.png
 | **blog-cover-generator/SKILL.md** | `/skills/utilities/blog-cover-generator/` | 封面生成 6 类型 + Prompt 模板 | SmartLauncher 全自动流程 |
 | **growth-topic-scout/MISSION_CONFIG_SCHEMA.json** | `/skills/core/growth-topic-scout/` | Mission Config JSON Schema | Seed Mode |
 | **growth-topic-scout/DIRECTION_SCHEMA.json** | `/skills/core/growth-topic-scout/` | Direction 对象 JSON Schema | Seed Mode |
+| **mission-brief/SKILL.md** 🆕 | `/skills/preparation/mission-brief/` | 7 问智能问卷 + 自动推断 + mission-brief.json | 前置准备流程 |
+| **source-parser/SKILL.md** 🆕 | `/skills/preparation/source-parser/` | 八维分析框架 + 事实核查 + parsed-source.json | 前置准备流程 |
 
 ### 哲学与策略文档
 

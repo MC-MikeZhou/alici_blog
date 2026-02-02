@@ -21,7 +21,9 @@
       "Bash(sshpass -p '5A_p@cjpX74H\\(LJM' rsync -avp -e 'ssh -p 22 -o StrictHostKeyChecking=no' --progress \"videos by models/cover-v2-top5-1280x720.png\" root@45.76.70.215:/var/www/static/static/image/other/cover-v2-top5.png)",
       "Bash(python:*)",
       "mcp__dataforseo__kw_data_google_ads_search_volume",
-      "mcp__dataforseo__dataforseo_labs_google_keyword_suggestions"
+      "mcp__dataforseo__dataforseo_labs_google_keyword_suggestions",
+      "WebFetch(domain:www.linkedin.com)",
+      "mcp__dataforseo__dataforseo_labs_google_keyword_overview"
     ],
     "deny": [],
     "ask": []
