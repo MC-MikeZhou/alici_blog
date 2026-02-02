@@ -1,0 +1,164 @@
+# Reader Persona Template v1.0
+# 目标读者画像模板
+# 用于 Human Review Checklist Module 9: Reader Persona Check
+
+version: "1.0"
+last_updated: "2026-02-01"
+
+# ========================================
+# 核心理念
+# ========================================
+
+core_principle: >
+  先理解目标读者是谁，再从他们的视角审视文章。
+  不是"我想说什么"，而是"读者需要听到什么"。
+
+# ========================================
+# Reader Persona 卡片结构
+# ========================================
+
+persona_card:
+  # 必填维度
+  required_dimensions:
+    - dimension: "who"
+      question: "他们是谁？"
+      description: "目标读者的身份、背景、经验水平"
+      examples:
+        - "小型 YouTube 创作者，订阅 <10K"
+        - "AI 初学者，想用 AI 生成视频"
+        - "独立创作者，没有专业设计背景"
+
+    - dimension: "pain"
+      question: "他们的痛点是什么？"
+      description: "驱动他们搜索的核心问题"
+      examples:
+        - "视频曝光多但点击少"
+        - "不知道怎么做出好看的封面"
+        - "花太多时间在封面设计上"
+
+    - dimension: "search"
+      question: "他们会怎么搜索？"
+      description: "他们在 Google/YouTube 输入的关键词"
+      examples:
+        - "how to improve youtube ctr"
+        - "why my videos don't get clicks"
+        - "youtube thumbnail tips"
+
+    - dimension: "language"
+      question: "他们用什么词汇？"
+      description: "读者熟悉的术语 vs 行业黑话"
+      examples:
+        reader_friendly:
+          - "thumbnail"
+          - "click rate"
+          - "views"
+          - "impressions"
+        jargon_to_avoid:
+          - "CTR" # 部分读者可能不熟悉缩写
+          - "APV" # Average Percentage Viewed
+          - "AEO" # Answer Engine Optimization
+          - "SERP" # Search Engine Results Page
+
+    - dimension: "goal"
+      question: "他们想得到什么？"
+      description: "阅读完文章后期望的收获"
+      examples:
+        - "具体可执行的改进方法"
+        - "可以直接复制的模板"
+        - "快速见效的技巧，而不是理论"
+
+# ========================================
+# 从文章提取 Persona
+# ========================================
+
+extraction_rules:
+  input_sources:
+    - "文章标题"
+    - "Key Takeaways / TL;DR"
+    - "前 500 字"
+    - "H2 标题列表"
+
+  extraction_prompt: |
+    基于以下文章内容，提取目标读者画像：
+
+    ---
+    标题: {title}
+    Key Takeaways: {takeaways}
+    前 500 字: {opening}
+    ---
+
+    请填写 Reader Persona 卡片：
+
+    **Who**: [他们是谁？]
+    **Pain**: [他们的痛点？]
+    **Search**: [他们会搜索什么？]
+    **Language**: [他们熟悉什么词汇？]
+    **Goal**: [他们想得到什么？]
+
+# ========================================
+# 用 Persona 审视文章
+# ========================================
+
+review_checklist:
+  - check: "title_search_match"
+    question: "标题匹配读者的搜索习惯吗？"
+    persona_dimension: "search"
+    fail_examples:
+      - title: "AEO-Optimized CTR Guide"
+        problem: "读者不会搜索 'AEO'"
+      - title: "Comprehensive Analysis of CTR Metrics"
+        problem: "太学术化，读者搜索更直接"
+    pass_examples:
+      - title: "How to Get More Clicks on YouTube (2026)"
+        reason: "直接匹配读者搜索意图"
+
+  - check: "terminology_clarity"
+    question: "术语是读者能理解的吗？"
+    persona_dimension: "language"
+    auto_fix: true
+    fix_strategy: "使用 TERM_REPLACEMENTS.yaml 替换或首次出现时解释"
+
+  - check: "opening_pain_response"
+    question: "开篇直接回应痛点吗？"
+    persona_dimension: "pain"
+    fail_patterns:
+      - "In this article, we will..."
+      - "Let's explore..."
+      - "[编辑注释开篇]"
+    pass_patterns:
+      - "[直接描述问题场景]"
+      - "[数据钩子：X% 的创作者遇到这个问题]"
+
+  - check: "content_goal_alignment"
+    question: "内容帮读者达成目标吗？"
+    persona_dimension: "goal"
+    indicators:
+      actionable: "有可执行的步骤"
+      specific: "有具体的数字/时间框架"
+      copy_paste: "有可直接使用的模板/示例"
+
+# ========================================
+# 输出格式
+# ========================================
+
+output_format: |
+  ### Module 9: Reader Persona Check
+
+  **Extracted Persona**:
+  | Dimension | Content |
+  |-----------|---------|
+  | Who | {who} |
+  | Pain | {pain} |
+  | Search | {search} |
+  | Language | {language} |
+  | Goal | {goal} |
+
+  **Persona-Based Review**:
+  | Check | Status | Details |
+  |-------|--------|---------|
+  | Title-Search Match | ✅/⚠️ | {details} |
+  | Terminology Clarity | ✅/⚠️ | {details} |
+  | Opening-Pain Response | ✅/⚠️ | {details} |
+  | Content-Goal Alignment | ✅/⚠️ | {details} |
+
+  **Persona Score**: {score}/100

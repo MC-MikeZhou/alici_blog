@@ -1,6 +1,6 @@
 # AliciBlog Skills
 
-> 21 Skills + 6 共享文档，按功能分组
+> 22 Skills + 6 共享文档，按功能分组
 
 ## 目录结构
 
@@ -8,7 +8,7 @@
 skills/
 ├── README.md                 ← 本文件
 ├── _docs/                    ← 共享文档 (6 个)
-├── core/                     ← 核心入口 (5 个 Skills)
+├── core/                     ← 核心入口 (6 个 Skills)
 ├── writers/                  ← Writer 组 (4 个 Skills)
 ├── utilities/                ← 工具组 (7 个 Skills)
 └── monitors/                 ← 监控分析组 (5 个 Skills)
@@ -42,6 +42,7 @@ skills/
 | **aeo-analyzer** | v2.4 | AEO 分析 | 100 分评分系统 |
 | **editor** | v2.9.2 | edit article | 图片 + Invideo Review + 4 项强制规则 |
 | **auto-improver** | v2.2 | 改进文章 | 改进版 + Changelog + E-E-A-T 保护 |
+| **human-review-checklist** | v1.0 | 人工审核, /human-review | 8 模块检查 + 6 自动修复 + Writer Feedback |
 
 ---
 
@@ -99,6 +100,8 @@ growth-topic-scout v2.2
 writer 路由 (tutorial/list/roundup)
     ↓
 editor gate → aeo-analyzer ⟷ improver
+    ↓
+human-review-checklist (8 模块 + 自动修复)
     ↓
 competitive-validator → framer → preview
 ```

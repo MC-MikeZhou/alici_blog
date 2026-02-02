@@ -1,7 +1,7 @@
 # Alici Blog Content Registry
 
-> **Version**: 1.0.0
-> **Last Updated**: 2026-01-21
+> **Version**: 1.1.0
+> **Last Updated**: 2026-01-31
 > **Purpose**: 维护所有已发布博客内容的索引，供 Editor Skill v2.7+ 进行内部链接匹配
 
 ---
@@ -42,6 +42,15 @@
 | ID | Title | URL/Slug | Type | Pillar | Status | Keywords |
 |----|-------|----------|------|--------|--------|----------|
 | mkt-001 | Best AI Marketing Tools 2026 | /blog/best-ai-marketing-tools-2026 | List | N/A | Draft | AI marketing, marketing automation, AI tools |
+
+### YouTube Thumbnail Cluster
+
+| ID | Title | URL/Slug | Type | Pillar | Status | Keywords |
+|----|-------|----------|------|--------|--------|----------|
+| thumb-001 | Best AI YouTube Thumbnail Makers in 2025 | /blog/best-ai-youtube-thumbnail-makers-2025 | List | N/A | Published | AI thumbnail, thumbnail maker, YouTube thumbnail, best tools, thumbnail generator |
+| thumb-002 | YouTube Thumbnail Dimensions 2026: Official Size + 5 Design Tips That Boost CTR | /blog/youtube-thumbnail-size-2026 | Tutorial | N/A | Published | thumbnail size, thumbnail dimensions, 1280x720, design tips, CTR, YouTube size |
+| thumb-003 | How to Make YouTube Thumbnails That Get Clicks (10 Best Practices 2026) | /blog/how-to-make-youtube-thumbnails-best-practices-2026 | Tutorial | N/A | Published | how to make thumbnails, best practices, get clicks, thumbnail design, YouTube thumbnail |
+| thumb-004 | Why Your YouTube Thumbnails Don't Get Clicks—And 4 Formulas to Fix It (2026) | /blog/youtube-thumbnail-formulas-get-clicks-veritasium | Tutorial | N/A | Published | thumbnail formulas, get clicks, Veritasium, clickbait, thumbnail fix, CTR |
 
 ---
 
@@ -91,6 +100,10 @@
 | /blog/nano-banana-motion-control-2026-01 | https://alici.ai/blog/nano-banana-motion-control-2026-01 |
 | /pages/videoGen | https://alici.ai/pages/videoGen |
 | /pages/imageGen | https://alici.ai/pages/imageGen |
+| /blog/best-ai-youtube-thumbnail-makers-2025 | https://alici.ai/blog/best-ai-youtube-thumbnail-makers-2025 |
+| /blog/youtube-thumbnail-size-2026 | https://alici.ai/blog/youtube-thumbnail-size-2026 |
+| /blog/how-to-make-youtube-thumbnails-best-practices-2026 | https://alici.ai/blog/how-to-make-youtube-thumbnails-best-practices-2026 |
+| /blog/youtube-thumbnail-formulas-get-clicks-veritasium | https://alici.ai/blog/youtube-thumbnail-formulas-get-clicks-veritasium |
 
 ---
 
@@ -109,6 +122,10 @@
 | Best AI Video Generators | "compare the best AI video tools" | "here" |
 | Kling Motion Control | "Motion Control tutorial" | "link" |
 | Sora 2 Prompt Guide | "master Sora 2 prompting" | "see" |
+| YouTube Thumbnail Makers | "best AI thumbnail makers" | "click" |
+| Thumbnail Size Guide | "official YouTube thumbnail dimensions" | "here" |
+| Thumbnail Best Practices | "10 thumbnail best practices" | "read" |
+| Thumbnail Formulas | "4 proven thumbnail formulas" | "this" |
 
 ### Product Links
 | Target | Good Anchor Text | Bad Anchor Text |
@@ -139,4 +156,4 @@
 
 ---
 
-*Registry maintained by Editor Skill v2.7+. Last sync: 2026-01-21*
+*Registry maintained by Editor Skill v2.7+ and Human Review Checklist v1.0. Last sync: 2026-01-31*

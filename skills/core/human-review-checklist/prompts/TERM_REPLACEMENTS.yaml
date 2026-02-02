@@ -1,0 +1,168 @@
+# Term Replacements v1.0
+# 术语替换词库：行业术语 → 读者语言
+# 用于 Human Review Checklist Module 2: Title-Reader Alignment
+
+version: "1.0"
+last_updated: "2026-01-31"
+
+# ========================================
+# AI Video 术语
+# ========================================
+
+ai_video:
+  # 技术缩写
+  "i2v": "image to video"
+  "t2v": "text to video"
+  "i2i": "image to image"
+  "img2vid": "image to video"
+  "txt2vid": "text to video"
+
+  # 技术概念
+  "temporal consistency": "smooth transitions"
+  "temporal coherence": "smooth motion"
+  "motion fidelity": "realistic movement"
+  "frame interpolation": "smooth frame transitions"
+  "latent space": null  # 太技术化，建议移除或改写
+  "diffusion model": "AI generation"
+  "transformer": "AI model"
+  "inference": "generation"
+  "inference time": "generation time"
+
+  # 功能术语
+  "lip-sync": "talking avatar"
+  "lip sync": "talking video"
+  "motion brush": "motion control"
+  "camera motion": "camera movement"
+  "keyframe": "key point"
+
+  # 质量术语
+  "upscaling": "quality enhancement"
+  "4K upscale": "4K quality boost"
+  "super resolution": "higher quality"
+
+# ========================================
+# AI Image 术语
+# ========================================
+
+ai_image:
+  # 技术缩写
+  "txt2img": "text to image"
+  "img2img": "image editing"
+
+  # 技术概念
+  "fine-tuning": "customizing"
+  "LoRA": "custom style"
+  "checkpoint": "model version"
+  "prompt engineering": "prompting"
+  "negative prompt": "what to avoid"
+  "CFG scale": "creativity level"
+  "sampling steps": "generation steps"
+  "seed": "random number"
+
+  # 功能术语
+  "inpainting": "image editing"
+  "outpainting": "image extension"
+  "controlnet": "guided generation"
+  "depth map": "depth guide"
+
+# ========================================
+# 通用技术术语
+# ========================================
+
+general_tech:
+  # 商业术语
+  "leverage": "use"
+  "utilize": "use"
+  "optimize": "improve"
+  "scalability": "growth capacity"
+  "synergy": "combination"
+  "paradigm": "approach"
+  "paradigm shift": "major change"
+
+  # AI 术语
+  "LLM": "AI language model"
+  "GPT": "AI model"
+  "neural network": "AI system"
+  "machine learning": "AI"
+  "deep learning": "advanced AI"
+  "NLP": "language AI"
+
+  # API 术语
+  "API": "connection"
+  "API call": "request"
+  "endpoint": "connection point"
+  "rate limit": "usage limit"
+  "token": "credit"
+
+# ========================================
+# 应用场景术语
+# ========================================
+
+use_cases:
+  # 创作术语
+  "content creator": "creator"
+  "UGC": "user content"
+  "B-roll": "background footage"
+  "storyboard": "visual plan"
+
+  # 营销术语
+  "CTR": "click rate"
+  "conversion": "results"
+  "engagement": "interaction"
+  "organic reach": "free reach"
+
+  # 技术实现
+  "workflow": "process"
+  "pipeline": "process"
+  "batch processing": "bulk processing"
+  "automation": "auto-processing"
+
+# ========================================
+# 替换规则配置
+# ========================================
+
+replacement_config:
+  # 应用范围
+  apply_to:
+    - title  # 标题
+    - h2_headings  # H2 标题
+    - meta_description  # 元描述
+
+  # 不应用于
+  skip_in:
+    - code_blocks
+    - technical_sections  # 如 "Technical Details" 章节
+    - api_documentation
+
+  # 替换策略
+  strategy:
+    # null 值表示该术语太技术化，应改写整句而非简单替换
+    null_handling: "flag_for_rewrite"
+
+    # 大小写保持
+    preserve_case: true
+
+    # 词边界匹配
+    word_boundary: true
+
+# ========================================
+# 特殊处理
+# ========================================
+
+special_cases:
+  # 某些术语在特定上下文中可保留
+  preserve_in_context:
+    - term: "API"
+      when: "discussing developer features"
+
+    - term: "fine-tuning"
+      when: "in advanced/technical sections"
+
+    - term: "LoRA"
+      when: "target audience is developers"
+
+  # 需要完整改写的术语 (null 值)
+  requires_sentence_rewrite:
+    - "latent space"
+    - "transformer architecture"
+    - "attention mechanism"

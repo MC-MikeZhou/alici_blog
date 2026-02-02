@@ -1,0 +1,377 @@
+# Competitor Wordbank v1.0
+# 竞品词库 + 推荐模式检测规则
+# 用于 Human Review Checklist Module 3: Competitor Mention Scan
+
+version: "1.0"
+last_updated: "2026-01-31"
+
+# ========================================
+# 竞品词库 (按类别)
+# ========================================
+
+competitors:
+  # ----------------------------------------
+  # AI Video Generators (直接竞品)
+  # ----------------------------------------
+  ai_video_direct:
+    - name: "Runway"
+      patterns:
+        - "runway"
+        - "runway ml"
+        - "runwayml"
+        - "gen-3"
+        - "gen-4"
+        - "gen 3"
+        - "gen 4"
+        - "gen3"
+        - "gen4"
+        - "gen-3 alpha"
+        - "gen-4 turbo"
+      domains:
+        - "runwayml.com"
+        - "runway.com"
+      risk_level: "high"
+
+    - name: "Pika"
+      patterns:
+        - "pika"
+        - "pika labs"
+        - "pika art"
+        - "pika 1.0"
+        - "pika 2.0"
+      domains:
+        - "pika.art"
+        - "pikalabs.ai"
+      risk_level: "high"
+
+    - name: "Kling"
+      patterns:
+        - "kling"
+        - "kling ai"
+        - "kling 1.0"
+        - "kling 1.5"
+        - "kling 2.0"
+        - "kling 2.5"
+        - "kling 2.6"
+        - "kuaishou"
+        - "kuaishou kling"
+      domains:
+        - "klingai.com"
+        - "kuaishou.com"
+      risk_level: "medium"  # 经常用于比较文章
+
+    - name: "Luma"
+      patterns:
+        - "luma"
+        - "luma ai"
+        - "luma labs"
+        - "dream machine"
+        - "luma dream machine"
+      domains:
+        - "lumalabs.ai"
+        - "luma.ai"
+      risk_level: "high"
+
+    - name: "Sora"
+      patterns:
+        - "sora"
+        - "openai sora"
+        - "sora 2"
+        - "sora 2.0"
+      domains:
+        - "openai.com"
+      risk_level: "medium"  # 经常在比较中提及
+
+    - name: "Veo"
+      patterns:
+        - "veo"
+        - "google veo"
+        - "veo 2"
+        - "veo 3"
+        - "veo 3.1"
+      domains:
+        - "deepmind.google"
+      risk_level: "medium"
+
+    - name: "Minimax/Hailuo"
+      patterns:
+        - "minimax"
+        - "hailuo"
+        - "hailuo ai"
+        - "海螺"
+        - "hailuoai"
+      domains:
+        - "hailuoai.video"
+        - "minimaxi.com"
+      risk_level: "high"
+
+    - name: "Haiper"
+      patterns:
+        - "haiper"
+        - "haiper ai"
+      domains:
+        - "haiper.ai"
+      risk_level: "high"
+
+    - name: "Synthesia"
+      patterns:
+        - "synthesia"
+        - "synthesia ai"
+      domains:
+        - "synthesia.io"
+      risk_level: "medium"
+
+    - name: "HeyGen"
+      patterns:
+        - "heygen"
+        - "hey gen"
+      domains:
+        - "heygen.com"
+      risk_level: "medium"
+
+  # ----------------------------------------
+  # YouTube/Creator Tools (间接竞品)
+  # ----------------------------------------
+  youtube_tools:
+    - name: "VidIQ"
+      patterns:
+        - "vidiq"
+        - "vid iq"
+      domains:
+        - "vidiq.com"
+      risk_level: "low"
+
+    - name: "TubeBuddy"
+      patterns:
+        - "tubebuddy"
+        - "tube buddy"
+      domains:
+        - "tubebuddy.com"
+      risk_level: "low"
+
+    - name: "Canva"
+      patterns:
+        - "canva"
+        - "canva video"
+      domains:
+        - "canva.com"
+      risk_level: "low"
+
+    - name: "InVideo"
+      patterns:
+        - "invideo"
+        - "in video"
+        - "invideo ai"
+      domains:
+        - "invideo.io"
+        - "invideo.ai"
+      risk_level: "medium"
+
+    - name: "Descript"
+      patterns:
+        - "descript"
+      domains:
+        - "descript.com"
+      risk_level: "low"
+
+    - name: "CapCut"
+      patterns:
+        - "capcut"
+        - "cap cut"
+      domains:
+        - "capcut.com"
+      risk_level: "low"
+
+  # ----------------------------------------
+  # AI Image Generators (直接竞品)
+  # ----------------------------------------
+  ai_image:
+    - name: "Midjourney"
+      patterns:
+        - "midjourney"
+        - "mid journey"
+        - "mj"
+      domains:
+        - "midjourney.com"
+      risk_level: "high"
+
+    - name: "DALL-E"
+      patterns:
+        - "dalle"
+        - "dall-e"
+        - "dall e"
+        - "openai dalle"
+        - "dall-e 3"
+      domains:
+        - "openai.com"
+      risk_level: "medium"
+
+    - name: "Stable Diffusion"
+      patterns:
+        - "stable diffusion"
+        - "sd"
+        - "sdxl"
+        - "stability ai"
+      domains:
+        - "stability.ai"
+      risk_level: "low"  # 经常作为基线
+
+    - name: "Ideogram"
+      patterns:
+        - "ideogram"
+        - "ideogram ai"
+      domains:
+        - "ideogram.ai"
+      risk_level: "high"
+
+    - name: "Leonardo"
+      patterns:
+        - "leonardo"
+        - "leonardo ai"
+      domains:
+        - "leonardo.ai"
+      risk_level: "high"
+
+    - name: "Flux"
+      patterns:
+        - "flux"
+        - "flux ai"
+        - "black forest labs"
+      domains:
+        - "blackforestlabs.ai"
+      risk_level: "medium"
+
+# ========================================
+# 推荐模式检测
+# ========================================
+
+recommendation_patterns:
+  # ----------------------------------------
+  # ⛔ BLOCKING: 直接推荐
+  # ----------------------------------------
+  strong_recommendation:
+    - pattern: "(we|i) recommend (using |trying )?(COMPETITOR)"
+      severity: "blocking"
+      fix_suggestion: "改为中性描述或添加 alici.ai 替代"
+
+    - pattern: "you should (try|use|get|sign up for) (COMPETITOR)"
+      severity: "blocking"
+      fix_suggestion: "改为客观比较语句"
+
+    - pattern: "the best (choice|option|tool) is (COMPETITOR)"
+      severity: "blocking"
+      fix_suggestion: "改为 'COMPETITOR is a strong option for...'"
+
+    - pattern: "go with (COMPETITOR)"
+      severity: "blocking"
+      fix_suggestion: "改为 'COMPETITOR works well for...'"
+
+    - pattern: "choose (COMPETITOR)( for| if| when)?"
+      severity: "blocking"
+      fix_suggestion: "改为 'Consider COMPETITOR if...'"
+
+    - pattern: "stick with (COMPETITOR)"
+      severity: "blocking"
+      fix_suggestion: "移除推荐语气"
+
+    - pattern: "(can't|cannot) go wrong with (COMPETITOR)"
+      severity: "blocking"
+      fix_suggestion: "改为客观描述"
+
+    - pattern: "(COMPETITOR) is (the )?best"
+      severity: "blocking"
+      fix_suggestion: "改为 'COMPETITOR excels at...' 或添加条件"
+
+    - pattern: "start with (COMPETITOR)"
+      severity: "blocking"
+      fix_suggestion: "改为 'Many users start with COMPETITOR because...'"
+
+    - pattern: "sign up for (COMPETITOR)"
+      severity: "blocking"
+      fix_suggestion: "删除 CTA"
+
+    - pattern: "try (COMPETITOR) (first|instead|now)"
+      severity: "blocking"
+      fix_suggestion: "改为中性描述"
+
+  # ----------------------------------------
+  # ⛔ BLOCKING: CTA 链接到竞品
+  # ----------------------------------------
+  competitor_cta:
+    - pattern: "\\[.*(try|start|get|sign up).*\\]\\(https?://(www\\.)?(COMPETITOR_DOMAIN)"
+      severity: "blocking"
+      auto_fix: "delete_line"
+      note: "自动删除指向竞品的 CTA 链接"
+
+    - pattern: "\\[.*→.*\\]\\(https?://(www\\.)?(COMPETITOR_DOMAIN)"
+      severity: "blocking"
+      auto_fix: "delete_line"
+      note: "自动删除带箭头的竞品链接"
+
+  # ----------------------------------------
+  # ⚠️ WARNING: 软推荐 (需人工审核)
+  # ----------------------------------------
+  soft_recommendation:
+    - pattern: "(COMPETITOR) is (great|excellent|good|perfect) for"
+      severity: "warning"
+      note: "可能暗示推荐，建议审核上下文"
+
+    - pattern: "prefer (COMPETITOR)"
+      severity: "warning"
+      note: "表达偏好，建议改为客观描述"
+
+    - pattern: "(COMPETITOR) works (best|better)"
+      severity: "warning"
+      note: "建议添加条件或场景限定"
+
+  # ----------------------------------------
+  # ✅ ALLOWED: 中性比较 (不触发警告)
+  # ----------------------------------------
+  neutral_comparison:
+    - "(COMPETITOR) offers"
+    - "(COMPETITOR) features"
+    - "(COMPETITOR) costs"
+    - "(COMPETITOR) pricing"
+    - "(COMPETITOR) vs"
+    - "compared to (COMPETITOR)"
+    - "unlike (COMPETITOR)"
+    - "(COMPETITOR) excels at"
+    - "(COMPETITOR) struggles with"
+    - "(COMPETITOR) limitations"
+    - "testing (COMPETITOR)"
+    - "according to (COMPETITOR)"
+    - "(COMPETITOR)'s (strengths?|weaknesses?|limitations?|pros?|cons?)"
+    - "when (COMPETITOR) (works|fails|shines)"
+
+# ========================================
+# 检测配置
+# ========================================
+
+detection_config:
+  # 上下文窗口大小 (前后字符数)
+  context_window: 200
+
+  # 大小写敏感
+  case_sensitive: false
+
+  # 词边界匹配 (避免 "Runway" 匹配 "runaway")
+  word_boundary: true
+
+  # 忽略代码块和链接中的匹配
+  ignore_code_blocks: true
+  ignore_link_text: false  # 链接文本仍需检测
+
+# ========================================
+# 自动修复配置
+# ========================================
+
+auto_fix:
+  # 可自动删除的内容
+  deletable:
+    - competitor_cta_links
+    - competitor_official_links
+
+  # 需要 Writer Feedback 的内容
+  requires_feedback:
+    - strong_recommendation_sentences
+    - soft_recommendation_sentences

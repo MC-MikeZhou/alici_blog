@@ -18,7 +18,10 @@
       "Bash(sshpass -p '5A_p@cjpX74H\\(LJM' rsync -avp -e 'ssh -p 22 -o StrictHostKeyChecking=no' --progress \"videos by models/kling 2.6   Kling - Dialogue, Lip-Sync, and Character Emotion.mp4\" root@45.76.70.215:/var/www/static/static/image/other/kling26-dialogue-demo.mp4)",
       "Bash(sshpass -p '5A_p@cjpX74H\\(LJM' rsync -avp -e 'ssh -p 22 -o StrictHostKeyChecking=no' --progress \"videos by models/Alici AI.mp4\" root@45.76.70.215:/var/www/static/static/image/other/alici-ai-platform.mp4)",
       "Bash(sips:*)",
-      "Bash(sshpass -p '5A_p@cjpX74H\\(LJM' rsync -avp -e 'ssh -p 22 -o StrictHostKeyChecking=no' --progress \"videos by models/cover-v2-top5-1280x720.png\" root@45.76.70.215:/var/www/static/static/image/other/cover-v2-top5.png)"
+      "Bash(sshpass -p '5A_p@cjpX74H\\(LJM' rsync -avp -e 'ssh -p 22 -o StrictHostKeyChecking=no' --progress \"videos by models/cover-v2-top5-1280x720.png\" root@45.76.70.215:/var/www/static/static/image/other/cover-v2-top5.png)",
+      "Bash(python:*)",
+      "mcp__dataforseo__kw_data_google_ads_search_volume",
+      "mcp__dataforseo__dataforseo_labs_google_keyword_suggestions"
     ],
     "deny": [],
     "ask": []
