@@ -27,6 +27,9 @@ ENV/
 *.log
 logs/
 
+# Local API usage logs
+scripts/api_usage.csv
+
 # Temporary files
 *.tmp
 *.temp
