@@ -1,0 +1,156 @@
+# Brand Voice Rules v1.0
+# alici.ai 品牌调性规则
+# 用于 Human Review Checklist Module 8: Brand Voice Check
+
+version: "1.0"
+last_updated: "2026-01-31"
+
+# ========================================
+# 品牌调性定义
+# ========================================
+
+brand_voice:
+  name: "alici.ai"
+
+  # 核心调性
+  tone:
+    - dimension: "专业度"
+      is: "专业但平易近人"
+      is_not: "学术化、炫技、过于技术"
+
+    - dimension: "语气"
+      is: "友好、实用、帮助性"
+      is_not: "销售腔、夸大、咄咄逼人"
+
+    - dimension: "视角"
+      is: "帮助用户做出最佳选择"
+      is_not: "推销自家产品、贬低竞品"
+
+    - dimension: "数据"
+      is: "有据可查、诚实透明"
+      is_not: "虚假声明、无来源数据"
+
+  # 一句话描述
+  summary: >
+    alici.ai 是一个值得信赖的 AI 工具顾问，用专业但易懂的语言
+    帮助用户了解和选择最适合自己的 AI 工具。
+
+# ========================================
+# 禁止词汇 + 替换建议
+# ========================================
+
+forbidden_replacements:
+  # 夸大词汇
+  "revolutionary": "effective"
+  "game-changing": "useful"
+  "groundbreaking": "innovative"
+  "best ever": "highly rated"
+  "unbelievable": "impressive"
+  "incredible": "notable"
+  "amazing": "effective"
+  "mind-blowing": "impressive"
+
+  # 销售腔
+  "industry-leading": "popular"
+  "#1 tool": "top-rated tool"
+  "market leader": "widely used"
+  "unmatched": "strong"
+  "unparalleled": "excellent"
+  "world-class": "professional-grade"
+  "cutting-edge": "modern"
+  "state-of-the-art": "advanced"
+
+  # 虚假权威
+  "we tested": "according to testing by [Source]"
+  "our research shows": "research by [Source] shows"
+  "studies show": "[Study Name] shows"
+  "experts agree": "[Expert/Source] states"
+
+  # 绝对化表述
+  "always": "typically"
+  "never": "rarely"
+  "everyone": "many users"
+  "no one": "few users"
+  "the only": "one of the few"
+  "guaranteed": "likely"
+  "definitely": "often"
+  "absolutely": "clearly"
+
+# ========================================
+# 禁止模式 (正则)
+# ========================================
+
+forbidden_patterns:
+  # 无来源排名
+  - pattern: "ranks?\s*#?\d+\s*(in|for|among)"
+    unless_followed_by: "(according to|based on|per|source:)"
+    message: "排名需要来源引用"
+    severity: "warning"
+
+  # 无来源评分
+  - pattern: "(\d+\.?\d*)/5\s*(stars?|rating)?"
+    unless_followed_by: "(on G2|on Capterra|according to|based on)"
+    message: "评分需要来源平台"
+    severity: "warning"
+
+  # 自称最佳
+  - pattern: "alici\.?ai is (the )?best"
+    message: "避免自称最佳，改为功能描述"
+    severity: "warning"
+
+  # 贬低竞品
+  - pattern: "(competitor|other tools?|alternatives?) (sucks?|fails?|is terrible)"
+    message: "避免贬低竞品，保持中性"
+    severity: "warning"
+
+# ========================================
+# 推荐用语
+# ========================================
+
+preferred_phrases:
+  # 描述产品
+  product_description:
+    instead_of: "alici.ai is the best AI platform"
+    use: "alici.ai provides access to multiple AI tools in one platform"
+
+  # 比较竞品
+  comparing_competitors:
+    instead_of: "Midjourney is worse than alici.ai"
+    use: "Midjourney excels at artistic styles, while alici.ai offers broader tool access"
+
+  # 推荐行为
+  recommendations:
+    instead_of: "You should definitely use X"
+    use: "X works well for [use case] because [reason]"
+
+  # 数据引用
+  citing_data:
+    instead_of: "Studies show that..."
+    use: "According to [Source, Year], ..."
+
+# ========================================
+# 自动修复规则
+# ========================================
+
+auto_fix:
+  enabled: true
+
+  # 直接替换的词汇
+  direct_replacement: true
+
+  # 需要人工确认的模式
+  requires_confirmation:
+    - forbidden_patterns  # 正则匹配的需要确认
+
+  # 替换后添加标记
+  add_marker: false  # 不添加 [FIXED] 标记
+
+# ========================================
+# 检测配置
+# ========================================
+
+detection_config:
+  case_sensitive: false
+  word_boundary: true
+  ignore_code_blocks: true
+  ignore_quotes: true  # 引用内容不检测

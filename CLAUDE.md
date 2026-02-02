@@ -105,8 +105,9 @@
 | **competitive-validator** 🆕 | **v1.1** | 竞品验证, competitive validation | Top 5 竞品对比 + 快速 AEO 评分 + PASS/FAIL 判定 |
 | **trending-monitor** 🆕 | **v1.1** | 热点监测, QDF 信号 | QDF 信号检测 + 热点优先级 + 内容日历建议 |
 | **blog-cover-generator** 🆕 | **v1.0** | 生成封面, blog cover, 封面图 | 6 种背景类型 + 青绿色品牌规范 + Prompt 模板 |
+| **human-review-checklist** 🆕 | **v1.0** | 人工审核, 发布前检查, /human-review | 8 个检查模块 + **6 个自动修复** + **Writer Feedback Loop** + 竞品推荐检测 ⛔ BLOCKING |
 
-**调用链 (v2.8.2 Updated)**: `smart-launcher v2.2 (意图前置 + 模式选择) → growth-topic-scout v2.2 → writer路由 → editor gate → aeo-analyzer ⟷ improver → competitive-validator → framer → preview`
+**调用链 (v2.8.3 Updated)**: `smart-launcher v2.2 (意图前置 + 模式选择) → growth-topic-scout v2.2 → writer路由 → editor gate → aeo-analyzer ⟷ improver → **human-review-checklist** → competitive-validator → framer → preview`
 
 ---
 
@@ -681,6 +682,7 @@ Writer → Editor Gate → AEO → Improver → 竞品验证 → Framer → Prev
 | `/preview-framer FILE` | Framer 可视化预览 |
 | `/fetch-transcript URL` | 获取 YouTube 字幕 |
 | `/generate-cover FILE` | **生成封面图 (6 种背景类型)** 🆕 |
+| `/human-review FILE` | **人工审核 + 自动修复 (8 个检查模块)** 🆕 |
 | `seed mode [关键词]` | **选题漏斗（从种子词发现 2 个可执行选题）** 🆕 |
 
 **使用示例**:
@@ -694,7 +696,8 @@ Writer → Editor Gate → AEO → Improver → 竞品验证 → Framer → Prev
 /write-roundup https://www.youtube.com/watch?v=xxx https://www.youtube.com/watch?v=yyy
 /fetch-transcript https://www.youtube.com/watch?v=dQw4w9WgXcQ
 /edit-article "/reports 待发文章/2026-01-15-ai-video/01-article-draft.md"
-/preview-framer "/reports 待发文章/2026-01-15-ai-video/01-article-edited.md"
+/human-review "/reports 待发文章/2026-01-15-ai-video/01-article-edited.md"
+/preview-framer "/reports 待发文章/2026-01-15-ai-video/01-article-reviewed.md"
 ```
 
 ---
@@ -781,7 +784,9 @@ Writer → Editor Gate → AEO → Improver → 竞品验证 → Framer → Prev
 ├── 06-cover-metadata.json    # 封面元数据 🆕
 ├── 07-article-final.json     # Framer CMS JSON (含 cover_image_url)
 ├── 07-article-final-video.json  # (可选) 视频集成版本 (输入名 + -video.json)
-└── 08-preview.html           # Framer 可视化预览
+├── 08-preview.html           # Framer 可视化预览
+├── 09-human-review-checklist.md  # 人工审核报告 (检查 + 修复记录) 🆕
+└── 01-article-reviewed.md    # 修复后版本 (human-review 输出) 🆕
 
 # 批量任务输出 (v2.3 NEW)
 /reports 待发文章/batch-[YYYY-MM-DD]-[id]/
