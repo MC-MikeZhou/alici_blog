@@ -1,0 +1,75 @@
+{
+  "project": {
+    "name": "alici-ai-image-model-nano-banana-pro",
+    "date": "2026-02-03",
+    "language": "zh",
+    "geo": "global"
+  },
+  "intent": {
+    "mode": "reference",
+    "notes": "参考扩展：两篇外部文章仅作为起点；允许加厚但不得编造测试数据/不可验证声明。本文不做 Thumbnail 产品导流，不引用 Thumbnail 定位。"
+  },
+  "article": {
+    "type": "micro_roundup",
+    "target_word_count": {
+      "min": 600,
+      "max": 1000
+    },
+    "core_thesis": "Alici AI Image Studio 上新 Nano Banana Pro，重点提升图片内文字可读性、人物/风格一致性与更可控的生成；并用 Nano Banana Pro vs Nano Banana 的对比帮助读者选型与落地。",
+    "must_include": [
+      "Key Takeaways 前置",
+      "Direct Answer/结论块（40-80字）",
+      "Nano Banana Pro vs Nano Banana 对比（至少 6 个维度，最好表格）",
+      "2 个可复用工作流建议（探索→交付、系列化产出）",
+      "2-3 个 Prompts to Try（偏 image 使用场景，不做 thumbnail 导流）",
+      "Source Attribution（列出两篇参考链接）"
+    ],
+    "do_not_do": [
+      "不虚构评测样本量、分数、跑分、CTR 或转化效果",
+      "不声称我们做了未做的对比测试（除非有内部素材/数据）",
+      "不绑定到 Alici Thumbnail 产品线或 Landing Page",
+      "不复制粘贴参考文整段内容（要重写和整合）"
+    ]
+  },
+  "audience": {
+    "primary": "对 AI image 感兴趣的创作者/设计师/营销人",
+    "secondary": "需要生成带文字海报、广告、信息图、UI mock 的产品与增长团队",
+    "reader_context": "读者可能听过 Nano Banana/Nano Banana Pro，但不清楚差异与适用场景。"
+  },
+  "product_lens": {
+    "product": "Alici AI Image Studio / alici.ai",
+    "positioning": "多模型一站式 AI image 生成与工作流落地",
+    "allowed_mentions": [
+      "在 Alici AI Image Studio 中可直接选择模型生成",
+      "强调工作流与可复用方法，不做硬推销"
+    ]
+  },
+  "parsing_focus": {
+    "extract": [
+      "Nano Banana Pro 的能力升级点（文字、身份一致性、推理/结构、控制项）",
+      "Pro vs Nano Banana 的对比维度与表格结构",
+      "适用场景与工作流建议",
+      "可复用的表达框架（key takeaways、对比表、upgrade 列表）"
+    ],
+    "ignore": [
+      "InVideo 对自家优惠/促销/产品引导",
+      "Higgsfield 对自家生态的强绑定描述（仅保留与模型能力相关的部分）"
+    ],
+    "verify": [
+      "两篇文章的发布时间",
+      "Pro/非 Pro 对应的模型命名（以来源表述为准：Gemini 3 Pro Image vs Gemini 2.5 Flash Image）",
+      "对“支持 2K/4K、最多 14 张参考图”等能力描述必须标注为“参考资料提到/来源称”"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Higgsfield blog",
+      "url": "https://higgsfield.ai/blog/Nano-Banana-Pro-is-Here-Full-Review-and-Guide"
+    },
+    {
+      "name": "InVideo blog",
+      "url": "https://invideo.io/blog/nano-banana-pro-vs-nano-banana-1/"
+    }
+  ]
+}
+

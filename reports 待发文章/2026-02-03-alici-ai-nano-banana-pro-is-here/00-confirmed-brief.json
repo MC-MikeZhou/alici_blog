@@ -1,0 +1,54 @@
+{
+  "mode": "thumbnail",
+  "project": {
+    "date": "2026-02-03",
+    "folder": "reports 待发文章/2026-02-03-alici-ai-nano-banana-pro-is-here",
+    "topic": "Alici.ai 上新 AI Image 模型：Nano Banana Pro"
+  },
+  "intent": "reference_expand",
+  "content_profile": "micro_roundup",
+  "language": "zh-CN",
+  "audience": "小 YouTuber / 小视频创作者 / 新手创作者",
+  "primary_goal": "介绍 Alici.ai 新模型能力，并给出 Nano Banana Pro vs Nano Banana 的选型建议（以缩略图为核心场景）",
+  "product_lens": {
+    "product": "Alici.ai YouTube Thumbnail",
+    "landing_page": "https://alici.ai/youtube-thumbnail",
+    "must_mention_features": [
+      "AI 快速生成",
+      "Script → Thumbnail",
+      "URL Reference",
+      "One-Face"
+    ],
+    "positioning_rule": "教育性叙事，不做硬广 CTA；在 How to Try / 最后给到产品入口"
+  },
+  "scope_rules": {
+    "source_usage": "参考扩展：原始素材占比 20%–50%，允许充分扩写、加厚与补充多来源证据",
+    "hard_constraints": [
+      "禁止虚构 CTR/点击差异等数据",
+      "禁止虚构价格、优惠、限时活动（如需提及，必须能在来源中找到明确表述）",
+      "所有具体事实/参数（模型名、版本、分辨率、日期、功能点）需要标注来源（Higgsfield / InVideo）或明确写“来源声称/据…称”",
+      "不生成原创测试结论或主观打分排名"
+    ]
+  },
+  "must_include": [
+    "Alici.ai 上新 Nano Banana Pro 的一句话价值（面向缩略图）",
+    "Nano Banana Pro vs Nano Banana：至少 2 个维度对比（建议：文字渲染、身份一致性；可补充：控制力/分辨率/工作流）",
+    "面向缩略图的 3 条可执行建议（prompt/构图/字体/一致性）",
+    "小 FAQ（2–4 个问题）"
+  ],
+  "sources": [
+    {
+      "name": "Higgsfield review",
+      "url": "https://higgsfield.ai/blog/Nano-Banana-Pro-is-Here-Full-Review-and-Guide",
+      "local_md": "reports 待发文章/2026-02-03-alici-ai-nano-banana-pro-is-here/sources/web-higgsfield-nano-banana-pro-is-h/source.md",
+      "local_assets_dir": "reports 待发文章/2026-02-03-alici-ai-nano-banana-pro-is-here/sources/web-higgsfield-nano-banana-pro-is-h/assets"
+    },
+    {
+      "name": "InVideo comparison",
+      "url": "https://invideo.io/blog/nano-banana-pro-vs-nano-banana-1/",
+      "local_md": "reports 待发文章/2026-02-03-alici-ai-nano-banana-pro-is-here/sources/web-invideo-nano-banana-pro-vs-n/source.md",
+      "local_assets_dir": "reports 待发文章/2026-02-03-alici-ai-nano-banana-pro-is-here/sources/web-invideo-nano-banana-pro-vs-n/assets"
+    }
+  ]
+}
+

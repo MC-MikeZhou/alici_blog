@@ -66,6 +66,9 @@ def md_to_framer_html(md_text: str) -> str:
         extensions=['tables', 'fenced_code', 'nl2br']
     )
 
+    # Links: add target="_blank"
+    html = re.sub(r'<a\s+href="([^"]+)"', r'<a href="\1" target="_blank"', html)
+
     # Headings:
     # - H3-H6 → <p><strong>...</strong></p>
     # - H2 → <h6><strong>...</strong></h6>
@@ -186,15 +189,10 @@ def main():
 
     fm, md_body = read_markdown(md_path)
 
-    # Placeholder replacement mapping (by occurrence order)
-    # 0: workflow, 4: VS, 8: emotion (or 15), 5: question hook (approx indices based on draft-4)
-    mapping = {
-        0: 'https://ct2.alici.ai/static/image/other/gen_images/yt-thumb-workflow.png',
-        5: 'https://ct2.alici.ai/static/image/other/gen_images/yt-thumb-question-hook.png',
-        9: 'https://ct2.alici.ai/static/image/other/gen_images/yt-thumb-vs.png',
-        15: 'https://ct2.alici.ai/static/image/other/gen_images/yt-thumb-emotion.png'
-    }
-    md_body_replaced = replace_placeholders_with_images(md_body, mapping)
+    # Optional placeholder replacement mapping (by occurrence order).
+    # If your project uses `!(...)(placeholder)` images, pass explicit image URLs
+    # in markdown instead of relying on this mapping.
+    md_body_replaced = md_body
 
     # Cover URL from 06-cover-metadata.json
     cover_meta_path = article_dir / '06-cover-metadata.json'
@@ -236,7 +234,14 @@ def main():
     article_html = md_to_framer_html(md_body_replaced)
 
     # Date & read_time
-    iso_date = datetime.utcnow().strftime('%Y-%m-%dT00:00:00.000Z')
+    # Prefer frontmatter date when present, else fallback to today.
+    fm_date = (fm.get('date') or '').strip()
+    if re.match(r'^\d{4}-\d{2}-\d{2}$', fm_date):
+        iso_date = f"{fm_date}T00:00:00.000Z"
+    elif re.match(r'^\d{4}-\d{2}-\d{2}T', fm_date):
+        iso_date = fm_date
+    else:
+        iso_date = datetime.utcnow().strftime('%Y-%m-%dT00:00:00.000Z')
     # Prefer frontmatter read_time when present and already formatted like "12 min".
     fm_read_time = (fm.get('read_time') or '').strip()
     if re.match(r'^\d+\s+min$', fm_read_time):
@@ -245,8 +250,21 @@ def main():
         read_time = compute_read_time(md_body_replaced)
 
     # CTA: 优先读取 frontmatter，其次使用统一产品链接
-    cta_link = fm.get('CTA_alici_link') or 'https://alici.ai/youtube-thumbnail'
-    cta_button = fm.get('CTA button') or '免费试用 Alici AI'
+    cta_link = (fm.get('CTA_alici_link') or '').strip()
+    cta_button = (fm.get('CTA button') or '').strip()
+    if not cta_link:
+        # Keyword-based fallback (image vs video). Keep conservative defaults.
+        title_lower = (fm.get('title') or '').lower()
+        tags_lower = [str(t).lower() for t in (fm.get('tags') or [])]
+        haystack = ' '.join([title_lower] + tags_lower)
+        if any(k in haystack for k in ['image', 'ai image', 'text-in-image', 'portrait', 'nano banana']):
+            cta_link = 'https://app.alici.ai/pages/imageGen'
+            cta_button = cta_button or 'Generate AI Images Free'
+        else:
+            cta_link = 'https://app.alici.ai/'
+            cta_button = cta_button or 'Try alici.ai Free'
+    if not cta_button:
+        cta_button = 'Try alici.ai Free'
 
     obj = {
         "Slug": slug,
@@ -263,7 +281,7 @@ def main():
         "CTA button": cta_button,
         "meta_title": meta_title,
         "meta_description": meta_description,
-        "tag_for_SEO": ', '.join((fm.get('tags') or []) or ["youtube", "thumbnail", "tutorial"])
+        "tag_for_SEO": ', '.join((fm.get('tags') or []) or [])
     }
 
     out_path = Path(args.out_path) if args.out_path else (article_dir / '06-article-final.json')

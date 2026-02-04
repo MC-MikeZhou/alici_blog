@@ -1,0 +1,17 @@
+{
+  "category": "professional",
+  "background_type": "typography-led",
+  "color": "#319795",
+  "typography": {
+    "h1": "NANO BANANA PRO",
+    "h2": "FULL REVIEW + GUIDE",
+    "h3": "on Alici.AI"
+  },
+  "prompt_used": "Create a minimalist tech blog cover image for Alici.AI.\n\nBackground: Pure black (#000000) with a very subtle deep teal (#319795) ambient glow behind the text, almost imperceptible—just enough to add depth. No shapes, no icons, no patterns, no textures, no noise, no logos, no people.\n\nTypography (the main visual element):\n- Line 1: \"NANO BANANA PRO\" in extra-bold white (#FFFFFF) modern sans-serif (Inter/Helvetica-like), very large\n- Line 2: \"FULL REVIEW + GUIDE\" in bold white, large (about 55% of line 1)\n- Line 3: \"on Alici.AI\" in regular white at ~70% opacity, medium (about 28% of line 1)\n\nText position: Stacked vertically, center-aligned, slight bias toward lower third. Keep generous negative space (60%+).\n\nStyle: Typography-driven design where scale and weight create the hierarchy. Ultra-clean, bold, professional.\n\nAspect ratio: 16:9",
+  "model": "fal-ai/nano-banana",
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "local_path": "reports 待发文章/2026-02-03-alici-ai-image-model-nano-banana-pro/assets/cover.png",
+  "cdn_url": "https://v3b.fal.media/files/b/0a8cfee5/IIdap6zXdUndo_SdadaTW.png",
+  "generated_at": "2026-02-03"
+}

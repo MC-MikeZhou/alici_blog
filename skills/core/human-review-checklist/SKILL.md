@@ -1,6 +1,6 @@
 ---
 name: human-review-checklist
-version: "1.1"
+version: "1.1.1"
 type: skill
 description: >
   Human Review Checklist v1.1 - 人工审核层，实现"读者视角"的检查 + 自动修复 + Writer Feedback Loop。
@@ -239,6 +239,17 @@ Please rewrite this paragraph and return only the revised text.
 
 ## Module 4: Internal Link Audit (内链检查)
 
+### 依赖文件 ⭐
+
+**必须读取**: `/skills/_docs/BLOG_CONTENT_REGISTRY.md`
+
+| 内容 | 用途 |
+|------|------|
+| Cluster Articles 表格 | 已发布文章索引（只链接 Status=**Published** 的文章） |
+| URL Resolution Table | slug → 完整 URL 映射 |
+| Linking Rules | Cluster→Pillar, Cluster↔Cluster, Article→Product 规则 |
+| Anchor Text Examples | 好锚文本 vs 坏锚文本示例 |
+
 ### 检查项
 
 | 检查项 | 标准 | 状态 |
@@ -250,20 +261,26 @@ Please rewrite this paragraph and return only the revised text.
 ### 自动修复规则
 
 ```python
-def auto_fix_internal_links(content, registry, target_count=3):
+def auto_fix_internal_links(content, target_count=3):
+    # Step 0: 读取 BLOG_CONTENT_REGISTRY.md
+    registry = read_file("/skills/_docs/BLOG_CONTENT_REGISTRY.md")
+    published_articles = filter_by_status(registry, "Published")
+
+    # Step 1: 扫描现有链接
     current_links = find_alici_blog_links(content)
 
     if len(current_links) >= 2:
         return content  # 已满足最低要求
 
-    # 从 BLOG_CONTENT_REGISTRY.md 选择相关文章
+    # Step 2: 提取关键词，匹配相关已发布文章
     keywords = extract_keywords(content)
-    related_articles = find_related(registry, keywords)
+    related_articles = find_related(published_articles, keywords)
 
+    # Step 3: 自动补充内链
     for article in related_articles[:target_count - len(current_links)]:
         # 找到最佳插入位置
         position = find_best_paragraph(content, article.keywords)
-        # 生成自然锚文本
+        # 生成自然锚文本 (参考 Registry 中的 Anchor Text Examples)
         anchor = generate_anchor(article.title)
         # 插入链接
         content = insert_link_at(content, position, anchor, article.url)
@@ -610,3 +627,22 @@ def run_human_review(article_path, max_rounds=2):
 - 8 个 Check Module
 - 6 个自动修复 + 2 个 Writer Feedback
 - 最多 2 轮 Feedback Loop
+
+---
+
+## 维护规则
+
+### Changelog 强制更新
+
+每次修改此 Skill 时，**必须**同步更新 `CHANGELOG.md`：
+
+1. 新增版本号（遵循 [SemVer](https://semver.org/)）
+   - MAJOR: 不兼容的改动
+   - MINOR: 新增功能（向后兼容）
+   - PATCH: 修复/文档改进
+2. 记录修改内容（分类：新增/修改/修复/文档）
+3. 说明修改原因或触发背景
+
+**文件位置**: `/skills/core/human-review-checklist/CHANGELOG.md`
+
+**违反后果**: 未记录的修改将被视为不完整提交，需要补充 Changelog 后才能视为完成。

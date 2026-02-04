@@ -1,0 +1,42 @@
+{
+  "version": "1.0",
+  "created_at": "2026-02-03",
+  "project": {
+    "slug": "alici-ai-nano-banana-pro-is-here",
+    "content_profile": "micro_roundup",
+    "language": "zh-CN"
+  },
+  "intent": "reference_expand",
+  "positioning": "产品上新 + 选型建议（缩略图场景）",
+  "audience": "content_creators",
+  "core_message": "Nano Banana Pro 更擅长“可读文字 + 可控一致性”的缩略图/广告图生产；Nano Banana（原版）仍适合快速草图与轻量创意探索。",
+  "product": {
+    "name": "Alici.ai YouTube Thumbnail",
+    "landing_page": "https://alici.ai/youtube-thumbnail",
+    "integration_level_target": "L3 (教育性叙事 + 工作流自然提及)"
+  },
+  "sources": [
+    "https://higgsfield.ai/blog/Nano-Banana-Pro-is-Here-Full-Review-and-Guide",
+    "https://invideo.io/blog/nano-banana-pro-vs-nano-banana-1/"
+  ],
+  "parsing_focus": {
+    "extract": [
+      "模型定位与命名（Nano Banana Pro / Nano Banana，及其在文中对应的 Gemini 代际）",
+      "对缩略图最相关的能力点：文字渲染、身份一致性、prompt 跟随/控制力、分辨率/细节",
+      "两篇文章的结构套路：Key Takeaways、对比表、FAQ"
+    ],
+    "ignore": [
+      "营销式承诺（如赠送一年等）— 除非要引用且能明确从来源中定位",
+      "无法验证的性能断言（速度、成本、绝对最好等）"
+    ],
+    "verify": [
+      "涉及具体规格/能力的表述（例如 2K/4K、参考图数量、模型代际）"
+    ]
+  },
+  "constraints": {
+    "no_fabricated_data": true,
+    "no_unverified_pricing_or_promos": true,
+    "no_ctr_claims": true
+  }
+}
+

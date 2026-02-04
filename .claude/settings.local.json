@@ -26,7 +26,15 @@
       "mcp__dataforseo__dataforseo_labs_google_keyword_overview",
       "WebFetch(domain:vidiq.com)",
       "WebFetch(domain:www.tubebuddy.com)",
-      "mcp__dataforseo__dataforseo_labs_google_keyword_ideas"
+      "mcp__dataforseo__dataforseo_labs_google_keyword_ideas",
+      "WebFetch(domain:invideo.io)",
+      "WebSearch",
+      "WebFetch(domain:www.opus.pro)",
+      "WebFetch(domain:alici.ai)",
+      "mcp__firecrawl__firecrawl_scrape",
+      "WebFetch(domain:www.arcads.ai)",
+      "WebFetch(domain:www.topview.ai)",
+      "WebFetch(domain:usemintly.com)"
     ],
     "deny": [],
     "ask": []

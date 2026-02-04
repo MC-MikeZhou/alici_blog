@@ -1,0 +1,75 @@
+{
+  "mode": "thumbnail_mode",
+  "intent": "reference_expand",
+  "content_type": "how_to",
+  "topic": "How to create YouTube thumbnails like big creators (MrBeast, Ali Abdaal, Veritasium, etc.)",
+  "locked_title": "How to Create YouTube Thumbnails Like Big Creators (MrBeast, Ali Abdaal, Veritasium, etc.)",
+  "title_notes": [
+    "User requested not to over-index on the keyword 'style'.",
+    "Body can cite reference examples (e.g., Zoe Sugg, JStu, Nino's Home) without listing them in the title."
+  ],
+  "positioning": {
+    "brand": "Alici.ai",
+    "lens": "Turn public best practices into reusable thumbnail templates and weekly optimization loops.",
+    "no_fabricated_data": true,
+    "no_ctr_claims_without_sources": true,
+    "use_observable_signals_language": true
+  },
+  "primary_sources": [
+    {
+      "type": "web",
+      "title": "Find the Best Thumbnail Styles for Your Channel",
+      "url": "https://vidiq.com/blog/post/choose-thumbnail-style-youtube/",
+      "role": "framework_backbone"
+    },
+    {
+      "type": "web",
+      "title": "11 YouTube Thumbnail Tips from Big Creators",
+      "url": "https://www.tubebuddy.com/blog/11-youtube-thumbnail-tips-from-big-creators/",
+      "role": "tips_and_examples"
+    }
+  ],
+  "internal_case_studies": [
+    {
+      "type": "internal_blog",
+      "title": "10 Best MrBeast Thumbnails for YouTube in 2026: Patterns That Drive Clicks",
+      "url": "https://alici.ai/blog/mrbeast-thumbnails-patterns-2026",
+      "role": "case_study_patterns"
+    },
+    {
+      "type": "internal_blog",
+      "title": "Ali Abdaal Thumbnail Playbook: 7 Stop-the-Scroll Patterns (2026)",
+      "url": "https://alici.ai/blog/ali-abdaal-thumbnail-playbook-2026",
+      "role": "case_study_patterns"
+    },
+    {
+      "type": "internal_blog",
+      "title": "Why Your YouTube Thumbnails Don't Get Clicks—And Veritasium 4 Formulas to Fix It (2026)",
+      "url": "https://alici.ai/blog/youtube-thumbnail-formulas-get-clicks-veritasium",
+      "role": "case_study_formulas"
+    }
+  ],
+  "aeo_requirements": {
+    "opening": [
+      "Direct Answer paragraph (Quick Answer)",
+      "Key Takeaways within first screen",
+      "Explicit limitations: no guaranteed CTR claims"
+    ],
+    "structure": [
+      "H2/H3 clean hierarchy",
+      "Step-by-step How-to section with checklist",
+      "FAQ section mapped to search queries",
+      "Source Attribution section (with years if known)"
+    ],
+    "invideo_alignment_notes": [
+      "Use citable blocks (tables, checklists, templates)",
+      "Prefer short paragraphs and explicit definitions",
+      "Product integration as workflow enabler (not hard sell)"
+    ]
+  },
+  "output_paths": {
+    "project_dir": "reports 待发文章/2026-02-03-thumbnail-creator-thumbnail-styles",
+    "draft": "reports 待发文章/2026-02-03-thumbnail-creator-thumbnail-styles/01-article-draft.md",
+    "evidence_pack": "reports 待发文章/2026-02-03-thumbnail-creator-thumbnail-styles/02-evidence-pack.md"
+  }
+}

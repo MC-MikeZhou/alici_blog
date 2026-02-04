@@ -1,5 +1,23 @@
 # Human Review Checklist - Changelog
 
+## [1.1.1] - 2026-02-03
+
+### 文档改进
+
+- **Module 4 依赖说明增强**: 明确指出需要读取 `/skills/_docs/BLOG_CONTENT_REGISTRY.md`
+  - 新增"依赖文件"小节，说明 Registry 中各表格的用途
+  - 代码示例更新：显式展示 Registry 文件读取步骤
+  - 强调只链接 Status=Published 的文章
+- **维护规则新增**: 在 SKILL.md 底部新增"Changelog 强制更新"规则
+  - 每次修改 Skill 必须同步更新 CHANGELOG.md
+  - 遵循 SemVer 版本号规范
+
+### 触发背景
+
+BLOG_CONTENT_REGISTRY.md 同步更新后（v1.2.0），发现 Module 4 内链检查没有明确引用该文件路径，导致执行时可能遗漏读取 Registry。
+
+---
+
 ## [1.1.0] - 2026-02-01
 
 ### 核心理念升级 ⭐
