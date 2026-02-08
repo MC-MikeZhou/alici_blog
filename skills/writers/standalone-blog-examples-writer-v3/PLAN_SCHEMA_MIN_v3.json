@@ -1,0 +1,65 @@
+{
+  "meta": {
+    "version": "3.0",
+    "freshness_date": "YYYY-MM-DD",
+    "examples_profile": "showcase | ideas_templates | mega",
+    "concept_count_target": 15,
+    "primary_keyword": "string",
+    "search_intent": "examples | ideas | templates | scripts",
+    "concept_pack_used": false
+  },
+  "concept_pool": [
+    {
+      "name": "string",
+      "source_type": "alici_use_case | brand_case | original_concept | competitor_reference",
+      "source_url": "https://...",
+      "notes": "string"
+    }
+  ],
+  "selected_concepts": [
+    {
+      "rank": 1,
+      "name": "string",
+      "scenario_summary": "string",
+      "category": "string (if categorized)",
+      "embed_type": "youtube | instagram | tiktok | screenshot | none",
+      "embed_source_hint": "string",
+      "card_depth": "light | medium | deep",
+      "source_type": "alici_use_case | brand_case | original_concept | competitor_reference",
+      "alici_use_case_url": "optional URL"
+    }
+  ],
+  "categorization": {
+    "method": "by_format | by_platform | by_industry | by_emotion | flat",
+    "categories": [
+      {"name": "string", "concept_ranks": [1, 2, 3]}
+    ]
+  },
+  "aeo_pack": {
+    "quick_answer": "string (120-180 words)",
+    "key_takeaways": ["string"],
+    "faq": [{"q": "string", "a": "optional"}]
+  },
+  "cta_plan": [
+    {"id": 1, "placement": "quick_answer_end | after_overview", "copy": "string", "url": "https://..."},
+    {"id": 2, "placement": "conclusion", "copy": "string", "url": "https://..."}
+  ],
+  "tables": {
+    "overview_flex_column": {
+      "slug": "difficulty | budget | engagement | effort | industry",
+      "label": "string (e.g., Budget Level)"
+    },
+    "overview_columns_showcase": ["#", "Concept", "Type/Category", "Best For", "{flex_column.label}"],
+    "master_list_columns_mega": ["#", "Concept", "Category", "Platform", "Quick Description"]
+  },
+  "brand_sources": [
+    {
+      "brand": "string",
+      "source_url": "https://...",
+      "data_used": "string"
+    }
+  ],
+  "assumptions": [
+    {"field": "string", "value": "any", "reason": "string"}
+  ]
+}

@@ -1,0 +1,191 @@
+{
+  "generated_at": "2026-02-04T00:00:00Z",
+  "seed": "ugc creator (video) + ai ugc ads",
+  "scope": {
+    "language": "en",
+    "geo": "US",
+    "audience": "ugc_creator_beginners"
+  },
+  "notes": [
+    "Corpus is limited to publicly accessible pages (no login / paywall scraping).",
+    "This is a research corpus for v2.0 planning + competitive mapping (not a content rewrite list)."
+  ],
+  "corpus": [
+    {
+      "group": "ugc_overview",
+      "publisher": "InVideo",
+      "title": "The Complete Guide to User-Generated Content (UGC) in 2025",
+      "url": "https://invideo.io/blog/ai-ugc-strategy-guide/",
+      "why_included": "Closest 2025 “complete guide” reference; strong structure but marketer-led.",
+      "accessed_at": "2026-02-04"
+    },
+    {
+      "group": "ugc_overview",
+      "publisher": "Shopify",
+      "title": "User-Generated Content (UGC): Getting the Internet to Create Content for Your Brand",
+      "url": "https://www.shopify.com/blog/user-generated-content",
+      "why_included": "Clear baseline definitions + brand POV framing.",
+      "accessed_at": "2026-02-04"
+    },
+    {
+      "group": "ugc_overview",
+      "publisher": "Later",
+      "title": "What is User-generated Content? Everything You Need to Know",
+      "url": "https://later.com/blog/user-generated-content/",
+      "why_included": "Creator-friendly UGC overview; good examples-oriented framing.",
+      "accessed_at": "2026-02-04"
+    },
+    {
+      "group": "ugc_creator_beginner",
+      "publisher": "Billo",
+      "title": "UGC Content Creators: Everything You Need to Know",
+      "url": "https://billo.app/blog/ugc-content-creator/",
+      "why_included": "One of the strongest beginner “how to become a UGC creator” style guides (platform POV).",
+      "accessed_at": "2026-02-04"
+    },
+    {
+      "group": "ugc_creator_beginner",
+      "publisher": "Billo",
+      "title": "Brands Looking for UGC Creators: Nailing Authentic Content",
+      "url": "https://billo.app/blog/brands-looking-for-ugc-creators/",
+      "why_included": "Demand-side framing: why brands hire UGC creators + what they want.",
+      "accessed_at": "2026-02-04"
+    },
+    {
+      "group": "rates_pricing",
+      "publisher": "Billo",
+      "title": "UGC Rates in 2025: What Brands Actually Pay (Why It Varies)",
+      "url": "https://billo.app/blog/ugc-rates/",
+      "why_included": "Pricing benchmark used for “money hook” without overpromising creator income.",
+      "accessed_at": "2026-02-04"
+    },
+    {
+      "group": "rights_licensing",
+      "publisher": "Billo",
+      "title": "Mastering UGC Usage Rights: A Legal Guide to Acquiring Usage Rights & Avoiding IP Pitfalls",
+      "url": "https://billo.app/blog/ugc-usage-rights/",
+      "why_included": "Rights/allowlisting concepts and pitfalls; useful for glossary + checklists.",
+      "accessed_at": "2026-02-04"
+    },
+    {
+      "group": "ugc_ads_creative_testing",
+      "publisher": "Billo",
+      "title": "UGC Ads: Mastering Highly Effective Ads at Scale (+Examples)",
+      "url": "https://billo.app/blog/ugc-ads/",
+      "why_included": "UGC Ads + briefs + creative testing framing (brand POV).",
+      "accessed_at": "2026-02-04"
+    },
+    {
+      "group": "ai_ugc_ads_synthetic",
+      "publisher": "HeyGen",
+      "title": "UGC Video Creator Tools & Automation | HeyGen",
+      "url": "https://www.heygen.com/blog/ugc-video-ads-ai",
+      "why_included": "AI-assisted UGC / synthetic UGC framing; useful for AI module boundaries + workflow.",
+      "accessed_at": "2026-02-04"
+    },
+    {
+      "group": "ai_ugc_ads_synthetic",
+      "publisher": "HeyGen",
+      "title": "UGC Ads Maker Online: Create High Impact Ads Instantly",
+      "url": "https://www.heygen.com/tool/ugc-ads-maker",
+      "why_included": "Tool-page positioning; helps map common “AI UGC ads” intent and claims.",
+      "accessed_at": "2026-02-04"
+    },
+    {
+      "group": "ugc_vs_influencer",
+      "publisher": "Shopify",
+      "title": "The Complete Guide to Influencer Marketing in 2025",
+      "url": "https://www.shopify.com/blog/influencer-marketing",
+      "why_included": "Influencer marketing baseline; useful for UGC vs influencer differences and rights nuance.",
+      "accessed_at": "2026-02-04"
+    },
+    {
+      "group": "compliance_disclosures",
+      "publisher": "FTC",
+      "title": "Endorsements, Influencers, and Reviews (Business Guidance)",
+      "url": "https://www.ftc.gov/business-guidance/advertising-marketing/endorsements-influencers-reviews",
+      "why_included": "US disclosure baseline for sponsored endorsements and “material connections”.",
+      "accessed_at": "2026-02-04"
+    },
+    {
+      "group": "compliance_disclosures",
+      "publisher": "TikTok",
+      "title": "Branded content on TikTok (Support)",
+      "url": "https://support.tiktok.com/en/business-and-creator/creator-and-business-accounts/branded-content-on-tiktok/",
+      "why_included": "Platform disclosure and branded content mechanics for creators.",
+      "accessed_at": "2026-02-04"
+    },
+    {
+      "group": "compliance_disclosures",
+      "publisher": "TikTok",
+      "title": "Branded Content Policy (Legal)",
+      "url": "https://www.tiktok.com/legal/page/global/bc-policy/en",
+      "why_included": "Policy reference for branded content constraints.",
+      "accessed_at": "2026-02-04"
+    },
+    {
+      "group": "money_hook_market",
+      "publisher": "Goldman Sachs",
+      "title": "The creator economy could approach half-a-trillion dollars by 2027",
+      "url": "https://www.goldmansachs.com/insights/articles/the-creator-economy-could-approach-half-a-trillion-dollars-by-2027",
+      "why_included": "Market-size anchor (creator economy demand signal) for the intro hook.",
+      "accessed_at": "2026-02-04"
+    },
+    {
+      "group": "money_hook_market",
+      "publisher": "HubSpot",
+      "title": "2026 state of marketing: Data from 1,500+ global marketers",
+      "url": "https://blog.hubspot.com/marketing/hubspot-blog-marketing-industry-trends-report",
+      "why_included": "Budget + AI adoption stats; supports “why now” and AI-assisted workflow positioning.",
+      "accessed_at": "2026-02-04"
+    },
+    {
+      "group": "trust_signal",
+      "publisher": "Nielsen",
+      "title": "Beyond martech: building trust with consumers and engaging where sentiment is high",
+      "url": "https://www.nielsen.com/insights/2021/beyond-martech-building-trust-with-consumers-and-engaging-where-sentiment-is-high/",
+      "why_included": "Trust stat used to explain why UGC works (avoid vague claims).",
+      "accessed_at": "2026-02-04"
+    },
+    {
+      "group": "product_reference",
+      "publisher": "Alici.AI",
+      "title": "Video Super Agent – AI Video Scripts & Storyboards",
+      "url": "https://alici.ai/video-super-agent",
+      "why_included": "Primary CTA + workflow anchor for AI Video acceleration module.",
+      "accessed_at": "2026-02-04"
+    },
+    {
+      "group": "product_reference",
+      "publisher": "Alici.AI",
+      "title": "Video Super Agent Use Cases",
+      "url": "https://alici.ai/video-super-agent/use-cases",
+      "why_included": "Use-case mapping for “niche entry points” and creator workflows.",
+      "accessed_at": "2026-02-04"
+    },
+    {
+      "group": "product_reference",
+      "publisher": "Alici.AI",
+      "title": "How to Create AI Videos: Complete Guide 2025",
+      "url": "https://alici.ai/blog/how-to-create-ai-videos-complete-guide-2025",
+      "why_included": "Internal deep link for multi-model AI video workflows (for the AI acceleration module).",
+      "accessed_at": "2026-02-04"
+    },
+    {
+      "group": "product_reference",
+      "publisher": "Alici.AI",
+      "title": "Wan 2.6 AI Video Generator: Native Audio for Creators",
+      "url": "https://alici.ai/blog/wan-2-6-ai-video-generator-native-audio-for-creators-2026",
+      "why_included": "Internal link supporting “fast iteration” and short-form production workflows.",
+      "accessed_at": "2026-02-04"
+    },
+    {
+      "group": "product_reference",
+      "publisher": "Alici.AI",
+      "title": "Viral Video Workflow: Nano Banana Pro to Kling Motion Control",
+      "url": "https://alici.ai/blog/viral-video-workflow-nano-banana-pro-kling-motion-control",
+      "why_included": "Internal workflow proof; supports “repeatable system” positioning in step-by-step section.",
+      "accessed_at": "2026-02-04"
+    }
+  ]
+}

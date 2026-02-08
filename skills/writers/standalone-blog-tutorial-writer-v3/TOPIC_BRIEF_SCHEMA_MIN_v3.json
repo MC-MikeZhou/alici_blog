@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "standalone-blog-tutorial-writer-v3/topic-brief.schema.json",
+  "title": "Topic Brief (Minimal) — Tutorial Writer v3.0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["primary_keyword", "audience", "goal", "constraints", "outline", "aeo_block", "product_mapping"],
+  "properties": {
+    "primary_keyword": { "type": "string", "minLength": 3 },
+    "audience": { "type": "string", "minLength": 3 },
+    "goal": { "type": "string", "minLength": 3 },
+    "constraints": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "tier_hint": {
+      "type": "integer",
+      "enum": [1, 2, 3],
+      "description": "Optional hint. Writer may override if incompatible with topic complexity."
+    },
+    "outline": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["key_questions"],
+      "properties": {
+        "key_questions": {
+          "type": "array",
+          "minItems": 3,
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "aeo_block": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["target_question", "direct_answer_draft"],
+      "properties": {
+        "target_question": { "type": "string", "minLength": 10 },
+        "direct_answer_draft": { "type": "string", "minLength": 30 }
+      }
+    },
+    "product_mapping": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["primary_product"],
+      "properties": {
+        "primary_product": {
+          "type": "object",
+          "additionalProperties": true,
+          "required": ["id", "name", "url", "cta_text"],
+          "properties": {
+            "id": { "type": "string", "minLength": 2 },
+            "name": { "type": "string", "minLength": 2 },
+            "url": { "type": "string", "minLength": 5 },
+            "cta_text": { "type": "string", "minLength": 2 }
+          }
+        },
+        "secondary_products": {
+          "type": "array",
+          "items": { "type": "object" },
+          "default": []
+        }
+      }
+    },
+    "insight_pack": {
+      "type": "object",
+      "description": "Optional. See references/INSIGHT_PACK_SCHEMA.md for full definitions.",
+      "additionalProperties": true
+    }
+  }
+}
+

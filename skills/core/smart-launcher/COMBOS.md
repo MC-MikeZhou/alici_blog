@@ -10,6 +10,7 @@
 |----------|--------|------|----------|----------|
 | **Tool Showdown** | blog-list-writer | tool_showdown | 2,500-3,500 | 75 |
 | **Listicle** | blog-list-writer | standard | 2,500-3,500 | 75 |
+| **Examples** | blog-examples-writer | - | 3,000-10,000 | 75 |
 | **Tutorial** | blog-tutorial-writer | - | 1,800-2,500 | 75 |
 | **Case Study** | case-roundup-writer | - | 300-600 | 70 |
 
@@ -234,6 +235,64 @@ features:
 
 ---
 
+## 5. Examples (示例/灵感) 🆕
+
+### 配置
+
+```yaml
+id: examples
+name: "示例/灵感"
+name_en: "Examples"
+
+# 检测信号
+detection_signals:
+  - "examples"
+  - "ideas"
+  - "templates"
+  - "scripts"
+  - "示例"
+  - "灵感"
+  - "创意"
+  - "模板"
+  - "inspiration"
+
+# Writer 配置
+writer: "blog-examples-writer"
+writer_mode: null
+word_count: [3000, 10000]
+aeo_target: 75
+
+# 标题公式
+title_formula: "[N] [Topic] Examples (+ [Value-Add]) in [Year]"
+title_examples:
+  - "15 UGC Ad Examples That Actually Convert (2026)"
+  - "10 Product Video Ideas with Scripts and Templates"
+  - "50 Instagram Reel Ideas for Brands"
+
+# 特性
+features:
+  - concept_cards: true
+  - embed_placeholders: true
+  - profile_selection: true   # showcase / ideas_templates / mega
+  - categorization: true
+  - how_to_recreate: true
+  - source_attribution: true
+```
+
+### Profile 自动选择
+
+```
+用户输入:
+  ├─ 25+ 个？          → mega
+  ├─ templates/scripts? → ideas_templates
+  ├─ workflow/playbook? → ideas_templates
+  ├─ ≤7 + 深度？       → ideas_templates
+  ├─ 10-25 展示型？     → showcase
+  └─ 默认              → showcase
+```
+
+---
+
 ## 路由决策逻辑
 
 ### 手动路线
@@ -246,12 +305,15 @@ features:
 def route_manual(user_input):
     text = user_input.lower()
 
-    # 优先级: Tool Showdown > Listicle > Tutorial > Case Study
+    # 优先级: Tool Showdown > Listicle > Examples > Tutorial > Case Study
     if any(s in text for s in ["vs", "对比", "对决", "comparison"]):
         return "tool_showdown"
 
     if any(s in text for s in ["best", "top", "榜单"]) or re.match(r'^\d+', text):
         return "listicle"
+
+    if any(s in text for s in ["examples", "ideas", "templates", "scripts", "示例", "灵感", "创意", "模板"]):
+        return "examples"
 
     if any(s in text for s in ["how to", "如何", "教程", "guide"]):
         return "tutorial"
@@ -304,6 +366,10 @@ def route_auto(content_features, goal):
     if goal == "教人做事":
         return "tutorial", {}
 
+    # 展示灵感 → 示例 (v3.0 NEW)
+    if goal == "展示灵感":
+        return "examples", {}
+
     # 展示发现 → 案例
     if goal == "展示发现":
         return "case_study", {}
@@ -318,6 +384,7 @@ def route_auto(content_features, goal):
 | 用户目标 | 推荐方向 | 备选方向 |
 |----------|----------|----------|
 | 帮人选择工具 | Tool Showdown | Listicle |
+| 展示灵感 | Examples | Listicle |
 | 教人做事 | Tutorial | - |
 | 展示发现 | Case Study | - |
 
@@ -351,6 +418,13 @@ def route_auto(content_features, goal):
       "aeo_target": 75,
       "signals": ["how to", "如何", "教程", "guide"]
     },
+    "examples": {
+      "writer": "blog-examples-writer",
+      "mode": null,
+      "word_count": [3000, 10000],
+      "aeo_target": 75,
+      "signals": ["examples", "ideas", "templates", "scripts", "示例", "灵感", "创意", "模板"]
+    },
     "case_study": {
       "writer": "case-roundup-writer",
       "mode": null,
@@ -365,6 +439,24 @@ def route_auto(content_features, goal):
 ---
 
 ## Changelog
+
+### v2.2.1 (2026-02-08)
+
+**新增第 5 条路由: Examples (示例/灵感)**
+
+1. **新增 Examples 路由**:
+   - Writer: blog-examples-writer (standalone v3.0)
+   - 3 种 Profile: showcase / ideas_templates / mega
+   - 字数范围: 3,000-10,000
+   - 检测信号: examples, ideas, templates, scripts, 示例, 灵感, 创意, 模板
+
+2. **路由优先级更新**:
+   - Tool Showdown > Listicle > Examples > Tutorial > Case Study
+
+3. **目标映射新增**:
+   - 展示灵感 → Examples (备选: Listicle)
+
+---
 
 ### v2.1.1 (2026-01-26)
 
@@ -405,4 +497,4 @@ def route_auto(content_features, goal):
 
 ---
 
-*SmartLauncher v2.1.1 COMBOS - 4 种核心方向 × 工具数量检测 × 洗稿约束*
+*SmartLauncher v2.2.1 COMBOS - 5 种核心方向 × 工具数量检测 × 洗稿约束 × Examples Profile*

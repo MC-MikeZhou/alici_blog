@@ -1,0 +1,145 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "standalone-blog-examples-writer-v3/self-check.schema.json",
+  "title": "Writer Self-Check — Examples Writer v3.0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["status", "profile", "checks", "profile_specific_checks", "errors", "warnings"],
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": ["PASS", "FAIL"]
+    },
+    "profile": {
+      "type": "string",
+      "enum": ["showcase", "ideas_templates", "mega"]
+    },
+    "checks": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": [
+        "concept_count",
+        "word_count_in_range",
+        "h2_order_correct",
+        "all_concept_cards_have_required_fields",
+        "citable_blocks_count",
+        "citable_block_types_distinct",
+        "faq_count",
+        "cta_cards_count",
+        "embed_placeholders_count",
+        "concept_card_markers_paired",
+        "quick_answer_word_count",
+        "key_takeaways_present",
+        "how_to_recreate_present",
+        "overview_table_columns_valid",
+        "source_attribution_adequate"
+      ],
+      "properties": {
+        "concept_count": {
+          "type": "object",
+          "properties": {
+            "expected": { "type": ["integer", "string"] },
+            "actual": { "type": "integer" },
+            "pass": { "type": "boolean" }
+          }
+        },
+        "word_count_in_range": {
+          "type": "object",
+          "properties": {
+            "range": { "type": "string" },
+            "actual": { "type": "integer" },
+            "pass": { "type": "boolean" }
+          }
+        },
+        "h2_order_correct": { "type": "boolean" },
+        "all_concept_cards_have_required_fields": { "type": "boolean" },
+        "citable_blocks_count": {
+          "type": "object",
+          "properties": {
+            "min": { "type": "integer" },
+            "actual": { "type": "integer" },
+            "pass": { "type": "boolean" }
+          }
+        },
+        "citable_block_types_distinct": {
+          "type": "object",
+          "properties": {
+            "min": { "type": "integer" },
+            "actual": { "type": "integer" },
+            "pass": { "type": "boolean" }
+          }
+        },
+        "faq_count": {
+          "type": "object",
+          "properties": {
+            "min": { "type": "integer" },
+            "actual": { "type": "integer" },
+            "pass": { "type": "boolean" }
+          }
+        },
+        "cta_cards_count": {
+          "type": "object",
+          "properties": {
+            "min": { "type": "integer" },
+            "actual": { "type": "integer" },
+            "pass": { "type": "boolean" }
+          }
+        },
+        "embed_placeholders_count": {
+          "type": "object",
+          "properties": {
+            "expected": { "type": ["integer", "string"] },
+            "actual": { "type": "integer" },
+            "pass": { "type": "boolean" }
+          }
+        },
+        "concept_card_markers_paired": { "type": "boolean" },
+        "quick_answer_word_count": {
+          "type": "object",
+          "properties": {
+            "range": { "type": "string" },
+            "actual": { "type": "integer" },
+            "pass": { "type": "boolean" }
+          }
+        },
+        "key_takeaways_present": { "type": "boolean" },
+        "how_to_recreate_present": { "type": "boolean" },
+        "overview_table_columns_valid": { "type": "boolean" },
+        "source_attribution_adequate": { "type": "boolean" }
+      }
+    },
+    "profile_specific_checks": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "scripts_present_in_all_cards": { "type": "boolean" },
+        "variations_present_in_all_cards": { "type": "boolean" },
+        "categorization_present": { "type": "boolean" }
+      }
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "code": { "type": "string" },
+          "message": { "type": "string" },
+          "details": { "type": "object" }
+        }
+      },
+      "default": []
+    },
+    "warnings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "code": { "type": "string" },
+          "message": { "type": "string" },
+          "details": { "type": "object" }
+        }
+      },
+      "default": []
+    }
+  }
+}

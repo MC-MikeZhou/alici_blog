@@ -34,7 +34,9 @@
       "mcp__firecrawl__firecrawl_scrape",
       "WebFetch(domain:www.arcads.ai)",
       "WebFetch(domain:www.topview.ai)",
-      "WebFetch(domain:usemintly.com)"
+      "WebFetch(domain:usemintly.com)",
+      "mcp__firecrawl__firecrawl_search",
+      "Bash(source:*)"
     ],
     "deny": [],
     "ask": []

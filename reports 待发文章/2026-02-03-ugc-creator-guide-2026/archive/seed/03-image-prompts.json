@@ -1,0 +1,22 @@
+[
+  {
+    "role": "hero",
+    "filename": "ugc-creator-guide-hero.png",
+    "prompt": "[Image Type]\nEditorial infographic hero cover for a beginner guide: \"How to Become a UGC Creator in 2026\"\n\n[Content]\n- A simple 6-step flow diagram with icons: Niche → 5‑Video Portfolio → Rate Card → Pitch → Deliver → Iterate\n- Each step has a short label (2–3 words) and a small icon (target, camera, tag, message, box, loop)\n- One subtle subtitle text: \"Beginner Video Workflow (Step‑by‑Step)\"\n\n[Style]\n- Format: 16:9 widescreen, horizontal\n- Layout: clean, modern, high information density, 55% negative space\n- Typography: minimal, readable, no clutter\n- Lighting: soft gradients, gentle depth, Stripe‑inspired 3D shapes\n\n[Brand Layer]\nBrand aesthetic: alici.ai (Stripe-inspired, green-centered)\nColor palette: deep emerald → fresh mint → light green gradient, white background space\nRestrictions: no blue/purple tones, no busy backgrounds, no photorealistic faces, no logos, no watermarks"
+  },
+  {
+    "role": "concept",
+    "filename": "ugc-creator-flywheel.png",
+    "prompt": "[Image Type]\nConcept diagram infographic: \"UGC Creator Flywheel\"\n\n[Content]\n- Circular loop with 4 nodes: Portfolio → Pitch → Deliver → Iterate\n- A center label: \"Repeatable system\"\n- A side callout card: \"Week 1 goal: ship 5 videos\"\n\n[Style]\n- Format: 16:9, horizontal\n- Clean vector-like shapes with soft 3D depth\n- Minimal text, clear arrows, high legibility\n\n[Brand Layer]\nBrand aesthetic: alici.ai (Stripe-inspired, green-centered)\nColor palette: emerald/mint greens + white, lots of negative space\nRestrictions: no blue/purple, no logos, no screenshots, no watermarks"
+  },
+  {
+    "role": "comparison",
+    "filename": "ugc-brief-script-shotlist.png",
+    "prompt": "[Image Type]\nInfographic: \"UGC Kit Templates\" (brief + script + shot list)\n\n[Content]\n- Three clean cards side-by-side labeled: Brief, Script, Shot List\n- Each card contains 5–7 short bullet lines (placeholder-style) to imply structure\n- A bottom note: \"Not legal advice — confirm usage rights\"\n\n[Style]\n- Format: 16:9 horizontal\n- Minimalist card UI look (not a real app UI), crisp spacing, strong hierarchy\n\n[Brand Layer]\nBrand aesthetic: alici.ai (Stripe-inspired, green-centered)\nGreen gradient accents, white background, generous padding\nRestrictions: no logos, no real UI screenshots, no watermarks"
+  },
+  {
+    "role": "cta",
+    "filename": "ugc-cta-script2video.png",
+    "prompt": "[Image Type]\nCTA card infographic: \"Turn your UGC script into a short video\"\n\n[Content]\n- A simple CTA card layout with 3 bullets: \"Generate hook variants\", \"Create shot list\", \"Export drafts\"\n- A button-like element reading: \"Try Any Script 2 AI Video\"\n- A tiny note: \"alici.ai\"\n\n[Style]\n- Format: 16:9 horizontal\n- Clean CTA card, minimal, high contrast text\n\n[Brand Layer]\nBrand aesthetic: alici.ai (Stripe-inspired, green-centered)\nGreen gradient accents, white negative space\nRestrictions: no external logos, no watermarks, no photorealistic faces"
+  }
+]

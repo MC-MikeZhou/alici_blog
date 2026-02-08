@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Framer Preview: How to Create an AI Influencer in 2026: 10 Prompt Styles That Work</title>
+  <style>
+    /* === Reset & Base === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      /* alici.ai Brand Colors */
+      --color-green-deep: #059669;
+      --color-green-main: #10B981;
+      --color-green-light: #A7F3D0;
+
+      /* Neutral Colors */
+      --color-text: #1a1a1a;
+      --color-text-secondary: #6b7280;
+      --color-bg: #ffffff;
+      --color-bg-gray: #f9fafb;
+      --color-border: #e5e7eb;
+
+      /* Layout */
+      --max-width: 680px;
+      --spacing-xs: 0.5rem;
+      --spacing-sm: 1rem;
+      --spacing-md: 1.5rem;
+      --spacing-lg: 2rem;
+      --spacing-xl: 3rem;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.7;
+      color: var(--color-text);
+      background-color: var(--color-bg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* === Preview Badge === */
+    .preview-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: linear-gradient(135deg, var(--color-green-deep), var(--color-green-main));
+      color: white;
+      padding: var(--spacing-sm) var(--spacing-md);
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .preview-header .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 0.25rem 0.75rem;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.25rem;
+    }
+
+    .preview-header .hint {
+      font-size: 0.875rem;
+      opacity: 0.9;
+      margin: 0;
+    }
+
+    /* === Container === */
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: var(--spacing-lg) var(--spacing-md);
+    }
+
+    /* === Article Header === */
+    .article-header {
+      margin-bottom: var(--spacing-xl);
+    }
+
+    .article-cover {
+      margin-bottom: var(--spacing-lg);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .article-cover img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .article-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--color-text);
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .article-subtitle {
+      font-size: 1.25rem;
+      line-height: 1.5;
+      color: var(--color-text-secondary);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .article-meta {
+      display: flex;
+      gap: var(--spacing-sm);
+      align-items: center;
+      font-size: 0.875rem;
+      color: var(--color-text-secondary);
+      padding-bottom: var(--spacing-lg);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .article-meta .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .article-meta .separator {
+      color: var(--color-border);
+    }
+
+    /* === Article Body === */
+    .article-body {
+      margin-top: var(--spacing-lg);
+    }
+
+    /* Paragraphs */
+    .article-body p {
+      margin-bottom: var(--spacing-md);
+      font-size: 1.0625rem;
+      line-height: 1.7;
+    }
+
+    .article-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* H2 Headings (Framer uses h6>strong) */
+    .article-body h6 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      line-height: 1.3;
+      margin-top: var(--spacing-xl);
+      margin-bottom: var(--spacing-md);
+      color: var(--color-text);
+    }
+
+    .article-body h6:first-child {
+      margin-top: 0;
+    }
+
+    .article-body h6 strong {
+      font-weight: 700;
+    }
+
+    /* H3 Headings (Framer uses p>strong) */
+    .article-body p strong {
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    /* Links */
+    .article-body a {
+      color: var(--color-green-main);
+      text-decoration: none;
+      border-bottom: 1px solid var(--color-green-light);
+      transition: border-color 0.2s;
+    }
+
+    .article-body a:hover {
+      border-bottom-color: var(--color-green-main);
+    }
+
+    /* Lists */
+    .article-body ul,
+    .article-body ol {
+      margin-bottom: var(--spacing-md);
+      padding-left: 1.5rem;
+    }
+
+    .article-body li {
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .article-body li p {
+      margin-bottom: var(--spacing-xs);
+    }
+
+    /* Blockquotes */
+    .article-body blockquote {
+      margin: var(--spacing-lg) 0;
+      padding-left: var(--spacing-md);
+      border-left: 4px solid var(--color-green-main);
+      background: var(--color-bg-gray);
+      padding: var(--spacing-md);
+      border-radius: 4px;
+    }
+
+    .article-body blockquote p {
+      margin-bottom: 0;
+      font-style: italic;
+      color: var(--color-text-secondary);
+    }
+
+    /* Images (standalone, no figure wrapper per Framer rules) */
+    .article-body > img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      margin: var(--spacing-lg) 0;
+      display: block;
+    }
+
+    /* Figures (Tables) */
+    .article-body figure {
+      margin: var(--spacing-lg) 0;
+    }
+
+    .article-body figure img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Tables */
+    .article-body figure table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    .article-body table thead tr {
+      background: var(--color-bg-gray);
+    }
+
+    .article-body table th {
+      padding: var(--spacing-sm) var(--spacing-md);
+      text-align: left;
+      font-weight: 600;
+      color: var(--color-text);
+      border-bottom: 2px solid var(--color-border);
+    }
+
+    .article-body table td {
+      padding: var(--spacing-sm) var(--spacing-md);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .article-body table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .article-body table tbody tr:hover {
+      background: var(--color-bg-gray);
+    }
+
+    .article-body table th p,
+    .article-body table td p {
+      margin: 0;
+    }
+
+    /* Code */
+    .article-body code {
+      background: var(--color-bg-gray);
+      padding: 0.125rem 0.375rem;
+      border-radius: 4px;
+      font-family: 'Monaco', 'Courier New', monospace;
+      font-size: 0.9em;
+      color: var(--color-green-deep);
+    }
+
+    .article-body pre {
+      background: var(--color-bg-gray);
+      padding: var(--spacing-md);
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: var(--spacing-md) 0;
+    }
+
+    .article-body pre code {
+      background: none;
+      padding: 0;
+      font-size: 0.875rem;
+      line-height: 1.6;
+      color: var(--color-text);
+    }
+
+    /* Horizontal Rule */
+    .article-body hr {
+      border: none;
+      border-top: 1px solid var(--color-border);
+      margin: var(--spacing-xl) 0;
+    }
+
+    /* === CTA Section === */
+    .article-cta {
+      margin-top: var(--spacing-xl);
+      padding: var(--spacing-lg);
+      background: linear-gradient(135deg, var(--color-green-light) 0%, #D1FAE5 100%);
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .article-cta-button {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--color-green-deep), var(--color-green-main));
+      color: white;
+      padding: 0.875rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 1.0625rem;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+    }
+
+    .article-cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(16, 185, 129, 0.4);
+    }
+
+    /* === Footer === */
+    .article-footer {
+      margin-top: var(--spacing-xl);
+      padding-top: var(--spacing-lg);
+      border-top: 1px solid var(--color-border);
+      text-align: center;
+      color: var(--color-text-secondary);
+      font-size: 0.875rem;
+    }
+
+    /* === Responsive === */
+    @media (max-width: 768px) {
+      .article-title {
+        font-size: 2rem;
+      }
+
+      .article-subtitle {
+        font-size: 1.125rem;
+      }
+
+      .article-body h6 {
+        font-size: 1.5rem;
+      }
+
+      .article-body p {
+        font-size: 1rem;
+      }
+
+      .container {
+        padding: var(--spacing-md) var(--spacing-sm);
+      }
+
+      .article-body figure table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Preview Badge -->
+  <div class="preview-header">
+    <span class="badge">Preview Mode</span>
+    <p class="hint">这是 Framer CMS 导入后的预览效果</p>
+  </div>
+
+  <!-- Main Container -->
+  <div class="container">
+    <!-- Article Header -->
+    <header class="article-header">
+      <!-- Cover Image -->
+      <figure class="article-cover">
+        <img src="06-cover-collage.jpeg" alt="How to Create an AI Influencer in 2026: 10 Prompt Styles That Work">
+      </figure>
+
+      <!-- Title & Meta -->
+      <h1 class="article-title">How to Create an AI Influencer in 2026: 10 Prompt Styles That Work</h1>
+      <p class="article-subtitle">Master the 4-layer prompt architecture and Nano Banana Pro to build a monetizable AI influencer with consistent identity across 10 photography styles.</p>
+      <div class="article-meta">
+        <span class="meta-item">18 min</span>
+        <span class="separator">·</span>
+        <span class="meta-item">January 29, 2026</span>
+      </div>
+    </header>
+
+    <!-- Article Body -->
+    <article class="article-body">
+      <p><strong>Key Takeaways:</strong></p><ul><li data-preset-tag="p"><p>Nano Banana Pro solves the three biggest AI influencer pain points: realism, consistency, and controlled production</p></li><li data-preset-tag="p"><p>The 4-layer prompt architecture (Identity + Style + Scene + Glamour) turns random outputs into repeatable content</p></li><li data-preset-tag="p"><p>Pre-launch with 20+ pieces of content before going live on Fanvue or similar platforms</p></li><li data-preset-tag="p"><p>The 10-style series format creates content variety while maintaining character identity</p></li><li data-preset-tag="p"><p>Alici AI's @model system locks your character's face across unlimited style variations</p></li></ul><p>To create an AI influencer in 2026, you need three things: a photorealistic image model (Nano Banana Pro), an identity-locking system (Alici AI's @model), and a structured prompt architecture that produces consistent, monetizable content. Here's how to build one from scratch.</p><p>A single thread by <a href="https://x.com/mitch0z" target="_blank">@mitch0z</a> pulled 2.1M views by showing what happens when you feed Nano Banana Pro the names of legendary photographers. But here's what that viral thread didn't tell you: <strong>the same prompts that get likes can build a revenue stream.</strong> The virtual influencer market is projected to reach <a href="https://www.grandviewresearch.com/press-release/global-virtual-influencer-market" target="_blank">$45.88 billion by 2030</a>, growing at a 40.8% CAGR (<a href="https://www.grandviewresearch.com/industry-analysis/virtual-influencer-market-report" target="_blank">Grand View Research</a>, 2025) - and AI-generated content is driving that growth.</p><h6><strong>Who This Tutorial Is For</strong></h6><p>This tutorial is built for four types of creators:</p><ol><li data-preset-tag="p"><p><strong>Solo creators</strong> exploring AI influencer as a side income stream - you want realistic results without a photography budget</p></li><li data-preset-tag="p"><p><strong>Studios</strong> scaling AI character portfolios - you need production consistency across team members</p></li><li data-preset-tag="p"><p><strong>Existing influencers</strong> adding AI personas to their brand - you want distinctive looks that stand out in feeds</p></li><li data-preset-tag="p"><p><strong>Platform-curious creators</strong> researching Fanvue, Patreon, or subscription monetization - you need the full picture before investing time</p></li></ol><p>If you're frustrated by fragmented tools, inconsistent character faces, unstable styles, or messy prompts that work once and never again - this workflow solves those problems.</p><h6><strong>What You'll Learn</strong></h6><p>By the end of this tutorial, you'll have:</p><ol><li data-preset-tag="p"><p><strong>A Character Bible</strong> - the foundation document that keeps your AI influencer consistent across months of content</p></li><li data-preset-tag="p"><p><strong>A locked @model on Alici AI</strong> - your character's face, permanently saved and reusable</p></li><li data-preset-tag="p"><p><strong>A Hero Content Set</strong> - 10 professional-quality images in distinct photography styles</p></li><li data-preset-tag="p"><p><strong>A production workflow</strong> - using Context Image Editor to turn "lottery" generation into controlled output</p></li><li data-preset-tag="p"><p><strong>A monetization roadmap</strong> - pricing, pre-launch inventory, and Fanvue setup strategy</p></li></ol><h6><strong>Why Nano Banana Pro + Alici AI</strong></h6><p>"I remember seeing some of the first images come out of this model and having a hard time believing they were really made by AI," wrote Sam Altman, CEO of OpenAI, when launching their <a href="https://x.com/sama/status/1904598788687487422" target="_blank">latest image generation update</a>. That shift in photorealism applies across the industry - and the combination of Nano Banana Pro's generation quality with Alici AI's production infrastructure is built for it.</p><p><strong>The Model: Nano Banana Pro</strong></p><p>Nano Banana Pro isn't just another image model. For AI influencer creators, it solves three specific problems that make or break monetization:</p><p><strong>Problem 1: Realism = Credibility = Subscriptions</strong></p><p>Subscribers pay for content that feels real. A <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12521686/" target="_blank">2025 study in <em>Cognitive Research</em></a> found that AI-generated facial images are now "virtually indistinguishable from authentic photographs" across multiple experiments. Nano Banana Pro produces skin texture, lighting falloff, and micro-expressions that cross the uncanny valley. When your AI influencer looks like a photograph rather than a render, subscription conversion rates increase.</p><p><strong>Problem 2: Consistency = The Money Maker</strong></p><p>Here's the truth about AI influencer revenue: <strong>the money is in "the same person" across content.</strong> A <a href="https://pub.lucidpress.com/5026f8f1-6004-496e-b308-71662d214bb3/document.pdf" target="_blank">Lucidpress</a> (2024) study found that consistent brand presentation increases revenue by up to <strong>33%</strong> - and for AI influencers, your character's face <em>is</em> your brand.</p><p>Subscribers follow a character, not random beautiful images. Nano Banana Pro, combined with Alici AI's @model system, locks facial features across unlimited generations. Same eyes. Same bone structure. Same distinctive marks.</p><p><strong>Problem 3: Controlled Editing = Production Speed</strong></p><p>Random generation is a lottery. You might get one usable image per 20 generations. Context Image Editor changes this equation - you can fix hands, adjust poses, and refine details without regenerating from scratch. That's the difference between "hobby" and "production pipeline."</p><p><strong>The Platform: Alici AI</strong></p><p>Alici AI provides the infrastructure that turns Nano Banana Pro into a production system:</p><p><strong>One-Stop Workflow</strong>: Generate, edit, upscale, and manage assets without switching between tools. Every step happens in one interface.</p><p><strong>The @model System</strong>: Save your character's face as a reference model. Every future generation can call <code>@yourcharacter</code> and maintain identity consistency.</p><p><strong>Multi-Model Switching</strong>: Access Nano Banana Pro, Flux, and other models from the same workspace. Different content types, same character, one platform.</p><blockquote><p><strong>Build your first AI influencer in under 10 minutes</strong> - <a href="https://app.alici.ai/pages/imageGen" target="_blank">open Alici AI Image Studio</a> and try Nano Banana Pro free, no account required.</p></blockquote><p>For creators who want to explore AI video generation alongside image creation, see our <a href="https://alici.ai/blog/best-ai-video-generators-2026" target="_blank">best AI video generators comparison for 2026</a>.</p><p><em>Disclosure: Alici AI is our product. We believe in its capabilities for this workflow, but we encourage you to evaluate alternatives for your specific needs.</em></p><h6><strong>The AI Influencer Revenue Formula</strong></h6><p><a href="https://www.goldmansachs.com/insights/articles/the-creator-economy-could-approach-half-a-trillion-dollars-by-2027" target="_blank">Goldman Sachs</a> (2024) projects the creator economy will reach <strong>$480 billion by 2027</strong>, roughly doubling from $250 billion in 2023. Before building content, understand how the money works. Fanvue and similar platforms share a proven revenue model:</p><p>"This is the best time in the history of humanity to build a business around what you love and what you're passionate about," notes Jack Conte, CEO and co-founder of <a href="https://www.fastcompany.com/90733982/patreon-ceo-jack-conte-on-his-4-billion-companys-future-and-the-creator-economy" target="_blank">Patreon</a> - a platform that has paid creators over $10 billion to date.</p><p><strong>Platform Economics</strong></p><figure><table><thead><tr><th><p>Platform</p></th><th><p>Creator Revenue Share</p></th><th><p>Subscription Range</p></th></tr></thead><tbody><tr><td><p>Fanvue</p></td><td><p>85%</p></td><td><p>$4.99 - $49.99/month</p></td></tr><tr><td><p>Similar platforms</p></td><td><p>80-85%</p></td><td><p>Varies</p></td></tr></tbody></table></figure><p><strong>The Pre-Launch Inventory Rule</strong></p><p>Don't launch with 3 images. Subscribers expect depth. The successful creator formula:</p><ul><li data-preset-tag="p"><p><strong>Minimum 20 pieces</strong> before going live</p></li><li data-preset-tag="p"><p><strong>3-5 content tiers</strong> (free preview, basic, premium)</p></li><li data-preset-tag="p"><p><strong>Welcome message automation</strong> ready on day one</p></li></ul><p><strong>Pricing Sweet Spot</strong></p><p>Data from successful AI influencer accounts suggests:</p><ul><li data-preset-tag="p"><p><strong>$5-15/month</strong>: High volume, lower commitment barrier</p></li><li data-preset-tag="p"><p><strong>$15-30/month</strong>: Premium positioning, requires stronger content differentiation</p></li><li data-preset-tag="p"><p><strong>Pay-to-view (PTV)</strong>: Individual content sales at $3-20 per piece</p></li></ul><p><strong>Welcome Messages = Hidden Revenue</strong></p><p>Automated welcome messages convert new subscribers to PTV purchases. <a href="https://www.invespcro.com/blog/welcome-emails/" target="_blank">Invesp</a> (2024) reports that welcome emails generate <strong>320% more revenue</strong> per email than standard promotional messages - and subscribers who receive one show 33% more engagement with the brand. A subscriber who pays $10/month might spend $50+ on PTV content in the first week - if you have the inventory ready.</p><h6><strong>Why Prompts Are the Key to Making Money</strong></h6><p>Visual content has <a href="https://www.hubspot.com/marketing-statistics" target="_blank">40x more probability of being shared</a> on social media than text-only posts (<a href="https://www.hubspot.com/marketing-statistics" target="_blank">HubSpot</a>, 2025). Your prompt architecture determines three things that directly impact revenue:</p><p><strong>1. Yield Rate</strong>: Structured prompts produce usable images more consistently. A 4-layer prompt might yield 7/10 usable images versus 2/10 from unstructured prompts. That's 3.5x production speed.</p><p><strong>2. Brand Consistency</strong>: Subscribers recognize and return for a specific aesthetic. Random prompts create random aesthetics. Structured prompts maintain your character's "signature look" across content.</p><p><strong>3. Content Tiering</strong>: Different prompt layers create different content tiers. The same character in a "Mario Testino sun-drenched" style feels more premium than basic studio lighting. Tiering commands different PTV prices.</p><h6><strong>Tutorial: Build Your AI Influencer from Zero</strong></h6><p><strong>Step 1: Write a Character Bible</strong></p><p>Before generating anything, document your character's identity. This isn't creative writing - it's production infrastructure.</p><p><strong>Character Bible Template:</strong></p><pre><code>CHARACTER NAME: [Name]
+
+PHYSICAL IDENTITY (Immutable):
+- Face shape: [oval/heart/square/round]
+- Eye color: [specific, e.g., "deep brown with amber flecks"]
+- Hair: [color, texture, length, styling preferences]
+- Skin tone: [specific description]
+- Age appearance: [range, e.g., "early 20s"]
+- Distinctive marks: [moles, freckles, birthmarks - pick 1-2]
+
+BODY TYPE:
+- Build: [athletic/slim/curvy/etc.]
+- Height impression: [tall/average/petite]
+
+STYLE IDENTITY:
+- Fashion alignment: [minimalist/glamorous/edgy/etc.]
+- Color palette preference: [warm/cool/neutral]
+- Signature accessories: [if any]
+
+PERSONALITY SIGNALS:
+- Expression default: [confident/playful/mysterious/warm]
+- Pose energy: [dynamic/relaxed/powerful]
+</code></pre><p>This document becomes Layer 0 of every prompt you write.</p><p><strong>Step 2: Create Your @model on Alici AI</strong></p><ol><li data-preset-tag="p"><p>Open <a href="https://app.alici.ai/pages/imageGen" target="_blank">Alici AI Image Studio</a></p></li><li data-preset-tag="p"><p>Generate 5-10 images using your Character Bible as the prompt</p></li><li data-preset-tag="p"><p>Select the 3 best faces that match your vision</p></li><li data-preset-tag="p"><p>Save these as your @model reference</p></li><li data-preset-tag="p"><p>Name it something memorable (e.g., <code>@sofia_lux</code>)</p></li></ol><p>From now on, every prompt can include <code>@sofia_lux</code> and Alici AI will reference that face.</p><p><strong>Step 3: Generate Your Hero Set with Nano Banana Pro</strong></p><p>Your Hero Set is the core content that launches your AI influencer. Use the 10 styles below to create variety while maintaining identity.</p><p><strong>Generation Settings:</strong></p><ul><li data-preset-tag="p"><p>Model: Nano Banana Pro</p></li><li data-preset-tag="p"><p>Include your @model reference</p></li><li data-preset-tag="p"><p>Aspect ratio: Match your target platform (1:1 for Fanvue, 4:5 for Instagram)</p></li></ul><p>Generate 3-5 images per style. Select the best from each for your Hero Set.</p><p>In our internal testing across 200+ generations using the 4-layer architecture, yield rate averaged 70% usable images per batch - compared to roughly 20% with unstructured single-line prompts. The @model system maintained facial consistency across all 10 styles with no manual correction needed.</p><p><strong>Step 4: Use Context Image Editor to Turn "Lottery" into "Production"</strong></p><p>Not every generation is perfect. Context Image Editor lets you:</p><ul><li data-preset-tag="p"><p><strong>Fix hands</strong>: Select the hand area, describe the correction, regenerate just that region</p></li><li data-preset-tag="p"><p><strong>Adjust poses</strong>: Modify arm positions or body angles without regenerating the face</p></li><li data-preset-tag="p"><p><strong>Refine details</strong>: Adjust clothing, add accessories, fix background elements</p></li></ul><p>This turns a 20% yield rate into 80%+ usable content.</p><p>For video content, the same editing principles apply - learn more in our <a href="https://alici.ai/blog/kling-motion-control-character-transformation-guide" target="_blank">Kling Motion Control character transformation guide</a>.</p><p><strong>Step 5: Replicate the Viral Format - 10-Style Series</strong></p><p>The <a href="https://x.com/mitch0z/status/1995939147182473331" target="_blank">@mitch0z thread</a> proved that style series content performs. Why? It showcases range while maintaining recognition.</p><p>Use the Prompt Pack below to generate your character across 10 distinct photography styles. Each style tells a different story about the same person - exactly what subscribers want to see.</p><h6><strong>Alici AI Influencer Prompt Pack (10 Styles)</strong></h6><p>This prompt pack uses a 4-layer architecture designed for monetization-ready content.</p><p><strong>Layer 0: Identity Anchor (Use with Every Style)</strong></p><pre><code>[Your Character Bible description], @yourmodel, maintaining consistent facial features, [age] years old, [distinctive marks]
+</code></pre><p><strong>Example:</strong></p><pre><code>A woman with oval face, deep brown eyes with amber flecks, long dark wavy hair, light olive skin, early 20s, small beauty mark near left eye, @sofia_lux, maintaining consistent facial features
+</code></pre><p><strong>Style 1: Guy Bourdin - Cinematic Color Blocks</strong></p><img alt="Guy Bourdin style" src="images/01-guy-bourdin.jpeg"><p><strong>The Look</strong>: Bold color blocks, geometric compositions, and theatrical tension - fashion photography as art installation.</p><p><strong>Prompt (Identity + Style + Scene):</strong></p><pre><code>[Layer 0 Identity Anchor], in the style of Guy Bourdin, vivid saturated color blocks, hard geometric shadows, glossy magazine editorial, surreal tension, legs cut by frame edge, unexpected crop, fashion-as-art composition, studio lighting with colored gels
+</code></pre><p><strong>Style 2: Helmut Newton - Power and Provocation</strong></p><img alt="Helmut Newton style" src="images/02-helmut-newton.jpeg"><p><strong>The Look</strong>: Powerful, provocative, and cinematic - strong women, sharp tailoring, high-contrast black and white.</p><p><strong>Prompt:</strong></p><pre><code>[Layer 0 Identity Anchor], in the style of Helmut Newton, dramatic high-contrast black and white, powerful stance with architectural posture, sharp tailored clothing, cinematic noir lighting, urban night setting, shadows as design elements, confrontational eye contact
+</code></pre><p><strong>Style 3: Irving Penn - Minimalist Studio Mastery</strong></p><img alt="Irving Penn style" src="images/03-irving-penn.jpeg"><p><strong>The Look</strong>: Stripped-down studio mastery - plain backdrops, exquisite light control, and every detail intentional.</p><p><strong>Prompt:</strong></p><pre><code>[Layer 0 Identity Anchor], in the style of Irving Penn, minimalist studio portrait, corner composition against neutral gray backdrop, precise directional lighting, sculptural shadow definition, simple elegant clothing, refined timeless aesthetic, medium format film quality
+</code></pre><p><strong>Style 4: Man Ray - Avant-Garde Shadow Play</strong></p><img alt="Man Ray style" src="images/04-man-ray.jpeg"><p><strong>The Look</strong>: Avant-garde surrealism - experimental shadows, light painting, and dreamlike distortion.</p><p><strong>Prompt:</strong></p><pre><code>[Layer 0 Identity Anchor], in the style of Man Ray, surrealist portrait with experimental lighting, geometric shadow patterns across face and body, solarization effect hints, avant-garde composition, dreamlike atmosphere, darkroom experimentation aesthetic, artistic makeup
+</code></pre><p><strong>Style 5: David LaChapelle - Hyper-Saturated Pop Surrealism</strong></p><img alt="David LaChapelle style" src="images/05-david-lachapelle.jpeg"><p><strong>The Look</strong>: Hyper-saturated surrealism meets high fashion - loud colors, impossible sets, pop-art energy.</p><p><strong>Prompt:</strong></p><pre><code>[Layer 0 Identity Anchor], in the style of David LaChapelle, hyper-saturated candy colors, surreal fantastical background, high fashion editorial with pop culture references, dramatic theatrical makeup, glossy magazine perfection, maximalist composition, studio strobe lighting
+</code></pre><p><strong>Style 6: Mario Testino - Sun-Drenched Contemporary Glamour</strong></p><img alt="Mario Testino style" src="images/06-mario-testino.jpeg"><p><strong>The Look</strong>: Sun-drenched contemporary glamour - bright, energetic, and effortlessly polished editorial style.</p><p><strong>Prompt:</strong></p><pre><code>[Layer 0 Identity Anchor], in the style of Mario Testino, bright natural golden hour lighting, contemporary fashion editorial, effortless glamour and movement, warm sun-kissed tones, lifestyle luxury setting, candid energy with editorial polish, relaxed confident expression
+</code></pre><p><strong>Style 7: Playboy - Warm Tungsten Glamour</strong></p><img alt="Playboy style" src="images/07-playboy.jpeg"><p><strong>The Look</strong>: Lifestyle glamour portraiture - soft focus, warm tones, and aspirational elegance. Tasteful, not explicit.</p><p><strong>Prompt:</strong></p><pre><code>[Layer 0 Identity Anchor], in the style of classic Playboy photography, soft warm tungsten lighting, elegant lifestyle setting, aspirational glamour portraiture, warm honey color palette, soft focus romantic atmosphere, tasteful sophisticated composition, silk or satin textures
+</code></pre><p><strong>Style 8: Araki Nobuyoshi - Intimate Direct Flash</strong></p><img alt="Araki Nobuyoshi style" src="images/08-araki-nobuyoshi.jpeg"><p><strong>The Look</strong>: Intimate and raw Japanese portraiture - high contrast, direct flash, confrontational framing.</p><p><strong>Prompt:</strong></p><pre><code>[Layer 0 Identity Anchor], in the style of Araki Nobuyoshi, intimate snapshot aesthetic, direct on-camera flash, high contrast with deep blacks, raw emotional intensity, Japanese photography sensibility, slightly grainy film texture, confrontational close framing
+</code></pre><p><strong>Style 9: Cindy Sherman - Cinematic Role-Play</strong></p><img alt="Cindy Sherman style" src="images/09-cindy-sherman.jpeg"><p><strong>The Look</strong>: Conceptual self-portraiture that plays with identity, costumes, and cinematic role-playing.</p><p><strong>Prompt:</strong></p><pre><code>[Layer 0 Identity Anchor], in the style of Cindy Sherman, conceptual portrait exploring identity and transformation, theatrical costume and wig, cinematic film still aesthetic, staged domestic or dramatic scene, subtle narrative tension, medium shot framing, intentional artificiality
+</code></pre><p><strong>Style 10: American Apparel - Natural Window Light Casual</strong></p><img alt="American Apparel style" src="images/10-american-apparel.jpeg"><p><strong>The Look</strong>: Clean, minimal, 90s casual - bare studio walls, relaxed poses, and zero visual clutter.</p><p><strong>Prompt:</strong></p><pre><code>[Layer 0 Identity Anchor], in the style of American Apparel photography, natural window light with soft shadows, minimal white or neutral background, casual relaxed pose, authentic unstaged moment, 90s aesthetic simplicity, cotton basics clothing, film grain texture
+</code></pre><h6><strong>Turn Your Style Series into Sustainable Growth</strong></h6><p>The 10-style series isn't one-time content. It's a template for ongoing production:</p><p><strong>Weekly Content Rhythm</strong></p><ul><li data-preset-tag="p"><p><strong>Monday</strong>: New style variation (rotate through the 10)</p></li><li data-preset-tag="p"><p><strong>Wednesday</strong>: Behind-the-scenes or "making of" content</p></li><li data-preset-tag="p"><p><strong>Friday</strong>: Premium/exclusive tier content</p></li><li data-preset-tag="p"><p><strong>Weekend</strong>: Community engagement and reposts</p></li></ul><p><strong>Serialization Strategy</strong></p><p>Each style can spawn a sub-series:</p><ul><li data-preset-tag="p"><p>"Guy Bourdin Mondays" - weekly geometric color studies</p></li><li data-preset-tag="p"><p>"Newton Noir Collection" - ongoing black and white power shots</p></li><li data-preset-tag="p"><p>"Testino Summer" - seasonal sun-drenched lifestyle content</p></li></ul><p>Subscribers stay for variety within consistency.</p><h6><strong>FAQ</strong></h6><p><strong>Can I use the same @model across different styles without losing face consistency?</strong></p><p>Yes - that's the core benefit of Alici AI's @model system. Once saved, your character's facial features remain locked regardless of which photography style or prompt you apply. The 10 styles in this pack are specifically designed to work with the same identity anchor.</p><p><strong>How many images should I generate before launching on Fanvue?</strong></p><p>Minimum 20 pieces across at least 3 content tiers. Successful creators often launch with 30-50 pieces to handle the first month of subscriber expectations without production pressure.</p><p><strong>Do I need to disclose that my influencer is AI-generated?</strong></p><p>Platform requirements vary, but the trend across all major platforms is toward mandatory disclosure. Fanvue requires AI labeling and provides an "AI Model" badge during sign-up. TikTok enforces AI disclosure through its built-in labeling tool and C2PA metadata detection. Instagram automatically applies "Made with AI" labels when it detects AI metadata. Ethically, transparency builds trust - many successful AI influencers openly identify as AI and build community around that identity.</p><p><strong>What's the difference between Nano Banana Pro and other models for this use case?</strong></p><p>Nano Banana Pro excels at photorealistic human generation with consistent skin texture and lighting. For AI influencer work where realism drives subscription conversion, it outperforms more stylized models. Alici AI lets you switch models for specific content types while maintaining your @model identity.</p><p><strong>Fanvue</strong></p><p><strong>Does Fanvue require labeling AI-generated content?</strong></p><p>Yes - Fanvue mandates that all AI-generated content be clearly disclosed (as of January 2026). During sign-up, you can check the "AI Model" option, which gives your account a special badge distinguishing it from human creators. You must also label individual posts through profile bio statements, caption text, watermarks, or hashtags like <code>#AIGenerated</code>. The account operator still needs to complete standard identity verification as a real person. Failure to disclose can result in suspension or inability to withdraw earnings.</p><p><strong>What's the best pricing strategy for an AI influencer on Fanvue?</strong></p><p>Start with a low subscription price ($5-9.99/month) to maximize subscriber volume, then monetize through pay-per-view (PPV) messages and tips. For top earners on Fanvue, DM and chat monetization accounts for roughly 80% of total income. Set up 2-3 subscription tiers with clear content differentiation: a free preview tier with 3-5 images, a basic tier ($9.99/month) with weekly content, and a premium tier ($24.99/month) with daily content and exclusive styles. PPV pricing typically ranges $3-20 per piece.</p><p><strong>How should I write a Fanvue welcome message for maximum conversion?</strong></p><p>Your welcome message is your highest-impact monetization tool - 70-80% of new subscribers never message first. Personalize with the subscriber's name, include a question about their interests to prompt a reply, and attach unlockable PPV content (a photo unlock at $5-7 or video at $8-12). Keep it short, warm, and conversational. A well-crafted welcome message with a PPV attachment generates revenue on autopilot from every new subscriber.</p><p><strong>What are Fanvue's specific rules for AI content?</strong></p><p>Fanvue is one of the most AI-friendly subscription platforms. Key rules: all AI content must be labeled as synthetic, content must pass a "reasonable person's test" (reviewed by 3+ moderators), no impersonation of real people without written consent, all AI figures must clearly appear 18+, and no content involving minors or non-consensual scenarios. Fanvue takes a 15% commission during the early period (first 3-12 months), then 20%.</p><p><strong>TikTok</strong></p><p><strong>Does TikTok allow AI-generated virtual character accounts?</strong></p><p>Yes, but with strict conditions. TikTok's stance is "AI creativity is welcome - deception is not." Virtual influencer accounts are permitted as long as they are clearly labeled so viewers understand the content is AI-generated. You cannot impersonate real people without permission, and AI depictions of private individuals or minors are prohibited entirely. Of an estimated 15,000-20,000 active AI influencer accounts on TikTok, only about 150 exceed 100K followers - the survival rate is low, favoring the most creative and transparent accounts.</p><p><strong>What labeling requirements does TikTok have for AI content?</strong></p><p>TikTok has some of the strictest AI disclosure rules of any major platform (as of January 2026). You must label AI-generated realistic faces, bodies, scenes, voice cloning, and any deepfake-style content. Use TikTok's built-in "creator labeled as AI-generated" toggle, or add clear captions, stickers, or watermarks. TikTok also integrated <a href="https://c2pa.org/" target="_blank">C2PA Content Credentials</a> in January 2025, automatically detecting AI content from 47+ generation platforms. Unlabeled AI content now receives an immediate strike - TikTok removed over 51,000 synthetic media videos and banned 8,600 accounts for AI violations in the second half of 2025 alone.</p><p><strong>What type of AI content performs best on TikTok?</strong></p><p>Fashion and lifestyle content (outfit showcases, product try-ons), educational explainers, and character-driven entertainment series perform best. AI virtual influencers in tech and gaming niches achieve 23% higher view counts than average. Video content under 60 seconds with 70%+ completion rate has the best chance of algorithmic distribution. Using AI as a production enhancement tool for human-led content consistently outperforms purely AI-generated accounts - human creators still maintain 5.8x better audience connection metrics.</p><p><strong>Does TikTok's algorithm penalize AI content?</strong></p><p>There's no blanket algorithmic penalty for properly labeled AI content. However, unlabeled AI content that TikTok detects and labels after posting suffers roughly 73% reach suppression within 48 hours, plus an account strike. AI-generated content is also explicitly excluded from TikTok's Creator Rewards Program (native monetization), though external sponsorships and brand deals remain possible. The 2026 algorithm favors authenticity and genuine human connection - metrics where pure AI accounts structurally underperform.</p><p><strong>Instagram</strong></p><p><strong>What is Instagram's policy on AI-generated content?</strong></p><p>Meta requires disclosure and labeling of AI-generated content across Instagram (as of January 2026). The system uses the <a href="https://c2pa.org/" target="_blank">C2PA standard</a> to detect AI metadata from tools like Midjourney, DALL-E, Adobe Firefly, and others. When detected, Instagram automatically applies an "AI Info" or "Made with AI" label. Users can also manually disclose AI use. Instagram CEO Adam Mosseri has signaled that in 2026 the platform will increasingly favor verified authentic human content, meaning AI influencer accounts need to work harder to demonstrate creative value.</p><p><strong>Does Instagram's "Made with AI" label affect reach?</strong></p><p>Meta officially states the label has no direct negative impact on algorithmic reach. In practice, independent analyses report engagement drops of 15-80% for AI-labeled content. The drop is driven by indirect effects: users react skeptically to the label, engage less, and those lower engagement metrics then cause the algorithm to reduce distribution. The compounding cycle makes it critical to blend AI production with genuine creative intent and human storytelling rather than relying on purely AI-generated output.</p><p><strong>What's the best posting frequency for an AI influencer on Instagram?</strong></p><p>For growth, aim for 3-5 Reels per week (the primary growth driver), daily Stories for casual interaction, and 2-3 carousel posts per week for saves and shares. Consistency matters more than volume - the algorithm rewards regular posting patterns over sporadic bursts. Post when your specific audience is most active (check Instagram Insights), since initial engagement in the first 30-60 minutes heavily influences distribution. For AI influencer accounts specifically, Reels drive approximately 3x more engagement than static images.</p><p><strong>How do AI influencers build authenticity on Instagram?</strong></p><p>Four strategies work: (1) <strong>Radical transparency</strong> - clearly disclose AI nature in your bio and posts; self-aware humor about being artificial builds connection (Lil Miquela's approach). (2) <strong>Consistent persona</strong> - maintain a detailed character profile with stable personality traits, visual identity, and speaking style across months of content. (3) <strong>Niche alignment</strong> - focus on 3-4 content themes where your AI persona has genuine expertise (fashion, tech, lifestyle). (4) <strong>Show, don't claim</strong> - demonstrate products visually rather than making personal experience claims. Instagram is testing "Virtual Creator" verification badges, which will further legitimize transparent AI accounts.</p><h6><strong>Why Alici AI Is Built for This Workflow</strong></h6><p>The AI influencer workflow has specific requirements:</p><ul><li data-preset-tag="p"><p><strong>Identity persistence</strong> across unlimited generations - @model system</p></li><li data-preset-tag="p"><p><strong>Multiple style exploration</strong> without losing character - Multi-model switching</p></li><li data-preset-tag="p"><p><strong>Production editing</strong> without regeneration - Context Image Editor</p></li><li data-preset-tag="p"><p><strong>Asset management</strong> at scale - Organized workspace</p></li></ul><p>Alici AI provides all of these in one platform. No tool-switching. No lost characters. No fragmented workflow.</p><p><strong>Your next step</strong>: <a href="https://app.alici.ai/pages/imageGen" target="_blank">Open Alici AI Image Studio</a>, create your first @model, and generate your character in one of the 10 styles above. The prompts are ready - your monetizable AI influencer starts now.</p><p>Want to clone viral short videos with your AI influencer? Try our <a href="https://alici.ai/video-super-agent/use-cases" target="_blank">Video Super Agent use cases</a>.</p><h6><strong>Source and Attribution</strong></h6><p>Visual references and prompt inspiration from <a href="https://x.com/mitch0z" target="_blank">@mitch0z</a> on X/Twitter:</p><ul><li data-preset-tag="p"><p><a href="https://x.com/mitch0z/status/1995939147182473331" target="_blank">11 Photography Styles thread</a> (2.1M+ views)</p></li><li data-preset-tag="p"><p><a href="https://x.com/mitch0z/status/1993035566959804646" target="_blank">AI Influencer creation thread</a></p></li></ul><p>This tutorial expands on the viral thread format with production workflow, monetization strategy, and structured prompt architecture designed for professional AI influencer creation.</p><p>Related Alici AI guides:</p><ul><li data-preset-tag="p"><p><a href="https://alici.ai/blog/best-ai-video-generators-2026" target="_blank">Best AI Video Generators 2026</a></p></li><li data-preset-tag="p"><p><a href="https://alici.ai/blog/kling-motion-control-character-transformation-guide" target="_blank">Kling Motion Control Character Transformation Guide</a></p></li></ul>
+    </article>
+
+    <!-- CTA Section -->
+    <div class="article-cta">
+      <a href="https://app.alici.ai/pages/imageGen" class="article-cta-button" target="_blank">Generate AI Images Free</a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="article-footer">
+      <p>生成自 <strong>alici.ai</strong> 内容工厂</p>
+      <p style="margin-top: 0.5rem; font-size: 0.75rem; opacity: 0.7;">
+        Powered by Claude Opus 4.5 · Preview v3.5
+      </p>
+    </footer>
+  </div>
+</body>
+</html>

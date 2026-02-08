@@ -1,0 +1,101 @@
+{
+  "images": [
+    {
+      "id": "style-01-guy-bourdin",
+      "source_file": "../In the style of \"Guy Bourdin\"-1.jpeg",
+      "source_url": "https://pbs.twimg.com/media/G7L6GCtWwAEflKp.jpg",
+      "role": "gallery",
+      "placeholder": "![Guy Bourdin style](../In%20the%20style%20of%20%22Guy%20Bourdin%22-1.jpeg)",
+      "context": "Style 1 of 10 — Guy Bourdin cinematic color blocks (Featured)"
+    },
+    {
+      "id": "style-02-helmut-newton",
+      "source_file": "../In the style of \"Helmut Newton\"-1.jpeg",
+      "source_url": "https://pbs.twimg.com/media/G7L6LBDWIAALQMr.jpg",
+      "role": "gallery",
+      "placeholder": "![Helmut Newton style](../In%20the%20style%20of%20%22Helmut%20Newton%22-1.jpeg)",
+      "context": "Style 2 of 10 — Helmut Newton power and provocation"
+    },
+    {
+      "id": "style-03-irving-penn",
+      "source_file": "../In the style of \"Irving Penn\"-1.jpeg",
+      "source_url": "https://pbs.twimg.com/media/G7L6iq8XoAAR8TF.jpg",
+      "role": "gallery",
+      "placeholder": "![Irving Penn style](../In%20the%20style%20of%20%22Irving%20Penn%22-1.jpeg)",
+      "context": "Style 3 of 10 — Irving Penn minimalist studio mastery"
+    },
+    {
+      "id": "style-04-man-ray",
+      "source_file": "../In the style of \"Man Ray\"-1.jpeg",
+      "source_url": "https://pbs.twimg.com/media/G7L6nc4XAAEon83.jpg",
+      "role": "gallery",
+      "placeholder": "![Man Ray style](../In%20the%20style%20of%20%22Man%20Ray%22-1.jpeg)",
+      "context": "Style 4 of 10 — Man Ray avant-garde shadow play"
+    },
+    {
+      "id": "style-05-david-lachapelle",
+      "source_file": "../In the style of \"David LaChapelle\"-1.jpeg",
+      "source_url": "https://pbs.twimg.com/media/G7L50U0XAAAUnZZ.jpg",
+      "role": "gallery",
+      "placeholder": "![David LaChapelle style](../In%20the%20style%20of%20%22David%20LaChapelle%22-1.jpeg)",
+      "context": "Style 5 of 10 — David LaChapelle hyper-saturated pop surrealism"
+    },
+    {
+      "id": "style-06-mario-testino",
+      "source_file": "../In the style of \"Mario Testino\"-1.jpeg",
+      "source_url": "https://pbs.twimg.com/media/G7L7E3tXMAE3ZDV.jpg",
+      "role": "gallery",
+      "placeholder": "![Mario Testino style](../In%20the%20style%20of%20%22Mario%20Testino%22-1.jpeg)",
+      "context": "Style 6 of 10 — Mario Testino sun-drenched contemporary glamour"
+    },
+    {
+      "id": "style-07-playboy",
+      "source_file": "../In the style of \"Playboy\"-1.jpeg",
+      "source_url": "https://pbs.twimg.com/media/G7L7gp8XMAAfpGL.jpg",
+      "role": "gallery",
+      "placeholder": "![Playboy style](../In%20the%20style%20of%20%22Playboy%22-1.jpeg)",
+      "context": "Style 7 of 10 — Playboy warm tungsten glamour"
+    },
+    {
+      "id": "style-08-araki-nobuyoshi",
+      "source_file": "../In the style of \"Araki Nobuyoshi\"-1.jpeg",
+      "source_url": "https://pbs.twimg.com/media/G7L5ZbMXcAA0m7z.jpg",
+      "role": "gallery",
+      "placeholder": "![Araki Nobuyoshi style](../In%20the%20style%20of%20%22Araki%20Nobuyoshi%22-1.jpeg)",
+      "context": "Style 8 of 10 — Araki Nobuyoshi intimate direct flash"
+    },
+    {
+      "id": "style-09-cindy-sherman",
+      "source_file": "../In the style of \"Cindy Sherman\"-1.jpeg",
+      "source_url": "https://pbs.twimg.com/media/G7L5mEOW0AAeA6f.jpg",
+      "role": "gallery",
+      "placeholder": "![Cindy Sherman style](../In%20the%20style%20of%20%22Cindy%20Sherman%22-1.jpeg)",
+      "context": "Style 9 of 10 — Cindy Sherman cinematic role-play"
+    },
+    {
+      "id": "style-10-american-apparel",
+      "source_file": "../In the style of \"American Apparel\"-1.jpeg",
+      "source_url": "https://pbs.twimg.com/media/G7L5UtaWEAAAdEZ.jpg",
+      "role": "gallery",
+      "placeholder": "![American Apparel style](../In%20the%20style%20of%20%22American%20Apparel%22-1.jpeg)",
+      "context": "Style 10 of 10 — American Apparel natural window light casual"
+    }
+  ],
+  "metadata": {
+    "total_images": 10,
+    "article_slug": "nano-banana-pro-ai-influencer-monetization-tutorial",
+    "article_type": "tutorial",
+    "source_thread": "https://x.com/mitch0z/status/1995939147182473331",
+    "image_source": "ThreadReaderApp extraction from @mitch0z X/Twitter thread",
+    "selection_criteria": "First variant (a) per style selected as hero image",
+    "generated_at": "2026-01-28T18:50:00+0800",
+    "version": "v3.2",
+    "changelog": {
+      "v2.0": "Initial draft with 11 styles",
+      "v2.1": "Removed Edward Steichen, moved Guy Bourdin to #1, reordered to 10 styles",
+      "v3.0": "Major rewrite: prompt-showcase → monetization-tutorial, 4-layer prompt architecture, 2500-3500 words, 3+ CTAs",
+      "v3.1": "Brand alignment (LetzAI → Alici AI) + 5 internal links for SEO",
+      "v3.2": "AEO optimization: Key Takeaways front, 5→3 links, 5→3 CTAs, +6 citations, +2 authority quotes, readability"
+    }
+  }
+}

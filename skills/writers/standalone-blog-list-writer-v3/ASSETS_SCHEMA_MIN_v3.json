@@ -1,0 +1,12 @@
+{
+  "meta": {"recommended_generate_max": 5},
+  "featured_image": {"alt": "string", "size": "1200x630", "priority": "high"},
+  "diagrams": [
+    {"type": "comparison_infographic", "alt": "string", "size": "1200x800", "priority": "high"},
+    {"type": "decision_tree", "alt": "string", "size": "1200x800", "priority": "high"}
+  ],
+  "tool_images": [
+    {"tool": "string", "alt": "string", "size": "1200x630", "priority": "low"}
+  ]
+}
+

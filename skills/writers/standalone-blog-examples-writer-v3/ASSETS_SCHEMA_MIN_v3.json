@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "version": "3.0",
+    "article_slug": "string",
+    "generated_at": "ISO-8601",
+    "recommended_generate_max": 3
+  },
+  "featured_image": {
+    "id": "hero-image",
+    "prompt": "detailed prompt for image generation",
+    "role": "hero",
+    "placeholder": "![Image description](placeholder)",
+    "context": "article hero image"
+  },
+  "diagrams": [
+    {
+      "id": "concept-overview",
+      "prompt": "detailed prompt",
+      "role": "diagram",
+      "type": "categorization_visual | concept_map | comparison_grid",
+      "priority": "recommended"
+    }
+  ],
+  "embed_placeholders": [
+    {
+      "id": "concept-1-embed",
+      "concept_rank": 1,
+      "type": "youtube | instagram | tiktok | screenshot",
+      "source_hint": "brand name or source description",
+      "alt": "descriptive alt text",
+      "priority": "required | recommended | optional"
+    }
+  ]
+}

@@ -89,6 +89,15 @@ triggers:
   - "案例"
   - "roundup"
   - "汇总"
+  # Examples/Ideas triggers (v3.0 NEW)
+  - "examples"
+  - "ideas"
+  - "templates"
+  - "scripts"
+  - "示例"
+  - "灵感"
+  - "创意"
+  - "模板"
   # Seed Mode triggers (v2.1 NEW)
   - "seed mode"
   - "种子模式"
