@@ -1,0 +1,160 @@
+{
+  "meta": {
+    "listicle_profile": "standard",
+    "list_size_target": 5,
+    "methodology_level": "research_only",
+    "freshness_date": "2026-02-09",
+    "primary_keyword": "best ai ugc ad tools",
+    "secondary_keywords": ["ai ugc video generator", "ai ugc ads", "ai ugc creator"],
+    "search_volume": {
+      "ai_ugc_video_generator": 260,
+      "ai_ugc_ads": 170,
+      "ai_ugc_creator": 90
+    },
+    "assumptions": [
+      "Alici.ai UGC pricing based on general platform free tier - specific UGC pricing not yet public",
+      "methodology_level set to research_only - no hands-on lab testing claimed",
+      "list_size_target of 5 is below standard profile minimum (10-13) - word count adjusted proportionally"
+    ]
+  },
+  "tool_pool": [
+    "Alici.ai Video Super Agent",
+    "Creatify",
+    "Arcads AI",
+    "MakeUGC",
+    "InVideo AI",
+    "Zeely AI",
+    "Tagshop AI",
+    "Captions (Mirage Studio)"
+  ],
+  "selected_tools": [
+    {
+      "name": "Alici.ai Video Super Agent",
+      "rank": 1,
+      "core_positioning": "Agent-driven UGC with your own face",
+      "rating": 9.0,
+      "official_url": "https://alici.ai/video-super-agent",
+      "pricing_url": "https://alici.ai/video-super-agent",
+      "evidence_links": {
+        "official": "https://alici.ai/video-super-agent"
+      }
+    },
+    {
+      "name": "Creatify",
+      "rank": 2,
+      "core_positioning": "Budget-friendly URL-to-video at scale",
+      "rating": 8.8,
+      "official_url": "https://creatify.ai",
+      "pricing_url": "https://creatify.ai/pricing",
+      "evidence_links": {
+        "official": "https://creatify.ai",
+        "pricing": "https://creatify.ai/pricing",
+        "g2_reviews": "https://www.g2.com/products/creatify-labs-inc-creatify-ai/reviews"
+      }
+    },
+    {
+      "name": "Arcads AI",
+      "rank": 3,
+      "core_positioning": "Most realistic talking-head performances",
+      "rating": 8.5,
+      "official_url": "https://www.arcads.ai/",
+      "pricing_url": "https://www.arcads.ai/",
+      "evidence_links": {
+        "official": "https://www.arcads.ai/",
+        "review_marketer_milk": "https://www.marketermilk.com/blog/arcads-review",
+        "review_dupple": "https://dupple.com/tools/arcads-ai"
+      }
+    },
+    {
+      "name": "MakeUGC",
+      "rank": 4,
+      "core_positioning": "Product-in-hand demonstrations",
+      "rating": 8.3,
+      "official_url": "https://www.makeugc.ai/",
+      "pricing_url": "https://www.makeugc.ai/pricing",
+      "evidence_links": {
+        "official": "https://www.makeugc.ai/",
+        "pricing": "https://www.makeugc.ai/pricing",
+        "review_superwebtricks": "https://www.superwebtricks.com/makeugc-ai/"
+      }
+    },
+    {
+      "name": "InVideo AI",
+      "rank": 5,
+      "core_positioning": "Multi-format video platform with UGC",
+      "rating": 8.0,
+      "official_url": "https://invideo.io/",
+      "pricing_url": "https://help.invideo.io/en/articles/11528140-what-plans-does-invideo-offer-and-what-s-included-in-each",
+      "evidence_links": {
+        "official": "https://invideo.io/",
+        "ugc_page": "https://invideo.io/make/ugc-ads/",
+        "g2_reviews": "https://www.g2.com/products/invideo/reviews"
+      }
+    }
+  ],
+  "evaluation_framework": {
+    "dimensions": [
+      {"name": "Avatar/Face Quality", "weight": 30, "method": "Sample outputs, G2/Trustpilot reviews, demo videos"},
+      {"name": "Script & Creative Control", "weight": 25, "method": "Scripting workflows, customization depth, creative flexibility"},
+      {"name": "Pricing & Value", "weight": 20, "method": "Cost-per-video calculation across tiers, feature-to-price ratios"},
+      {"name": "Language & Localization", "weight": 15, "method": "Supported language count, voice quality across accents"},
+      {"name": "Platform Integration", "weight": 10, "method": "Native integrations with Meta, TikTok, YouTube ad platforms"}
+    ]
+  },
+  "aeo_pack": {
+    "quick_answer": "The best AI UGC ad tools in 2026 are Alici.ai Video Super Agent (custom-face agent-driven ads), Creatify (budget URL-to-video), Arcads AI (realistic talking-heads), MakeUGC (product-in-hand demos), and InVideo AI (multi-format platform).",
+    "takeaways": [
+      "AI UGC tools cut costs from $500-5,000 to under $50 per video",
+      "Alici.ai lets you use your own face instead of preset avatars",
+      "Creatify offers the best entry price at $19/month with free plan",
+      "Arcads AI has the most realistic emotional performances",
+      "MakeUGC is unique for product-in-hand demonstrations",
+      "InVideo AI locks UGC features behind $100/month plan"
+    ],
+    "faq": [
+      "What is an AI UGC ad tool?",
+      "Are AI UGC ads as effective as real creator UGC?",
+      "How much do AI UGC tools cost per video?",
+      "Can I use my own face instead of preset AI avatars?",
+      "Which AI UGC tool has the most realistic avatars?"
+    ]
+  },
+  "cta_plan": {
+    "cta_1": {
+      "position": "after Quick Answer",
+      "type": "Top Pick",
+      "product": "Video Super Agent",
+      "url": "https://alici.ai/video-super-agent"
+    },
+    "cta_2": {
+      "position": "end of Conclusion",
+      "type": "Strong CTA",
+      "product": "Video Super Agent",
+      "url": "https://alici.ai/video-super-agent"
+    }
+  },
+  "tables": {
+    "comparison_table": {
+      "columns": ["Tool", "Core Positioning", "Entry Price", "AI Actors", "Languages", "Free Plan", "Standout Feature"],
+      "row_count": 5
+    },
+    "traditional_vs_ai": {
+      "columns": ["Factor", "Traditional UGC", "AI UGC"],
+      "row_count": 4
+    },
+    "evaluation_framework": {
+      "columns": ["Dimension", "Weight", "Evaluation Method"],
+      "row_count": 5
+    }
+  },
+  "brand_sources": [
+    {"name": "InVideo Blog", "url": "https://invideo.io/blog/best-ai-ugc-tools/", "type": "competitor_article"},
+    {"name": "Zeely Blog", "url": "https://zeely.ai/blog/best-ugc-ai-video-generators/", "type": "competitor_article"},
+    {"name": "Creatify Pricing", "url": "https://creatify.ai/pricing", "type": "official"},
+    {"name": "Arcads AI", "url": "https://www.arcads.ai/", "type": "official"},
+    {"name": "MakeUGC Pricing", "url": "https://www.makeugc.ai/pricing", "type": "official"},
+    {"name": "InVideo Plans", "url": "https://help.invideo.io/en/articles/11528140-what-plans-does-invideo-offer-and-what-s-included-in-each", "type": "official"},
+    {"name": "G2 Creatify Reviews", "url": "https://www.g2.com/products/creatify-labs-inc-creatify-ai/reviews", "type": "third_party"},
+    {"name": "G2 InVideo Reviews", "url": "https://www.g2.com/products/invideo/reviews", "type": "third_party"}
+  ]
+}

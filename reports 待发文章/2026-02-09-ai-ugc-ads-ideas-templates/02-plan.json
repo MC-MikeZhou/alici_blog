@@ -1,0 +1,284 @@
+{
+  "meta": {
+    "version": "3.0",
+    "freshness_date": "2026-02-09",
+    "examples_profile": "ideas_templates",
+    "concept_count_target": 10,
+    "primary_keyword": "ai ugc ads",
+    "search_intent": "scripts",
+    "concept_pack_used": false
+  },
+  "concept_pool": [
+    {
+      "name": "Daily Vitamin Routine Glow-Up (UGC-style)",
+      "source_type": "alici_use_case",
+      "source_url": "https://alici.ai/video-super-agent/use-cases/from-mat-to-glow-my-daily-vitamin-routine",
+      "notes": "UGC-style: routine + proof beats + on-screen text"
+    },
+    {
+      "name": "One Wipe, Zero Grease (Cleaning demo UGC-style)",
+      "source_type": "alici_use_case",
+      "source_url": "https://alici.ai/video-super-agent/use-cases/one-wipe-zero-grease-total-game-changer",
+      "notes": "UGC-style: satisfying before/after + close-up proof"
+    },
+    {
+      "name": "Stop Guessing Your Golf Shots (Sports watch UGC-style)",
+      "source_type": "alici_use_case",
+      "source_url": "https://alici.ai/video-super-agent/use-cases/stop-guessing-your-golf-shots",
+      "notes": "UGC-style: problem → tap → result, feature proof"
+    },
+    {
+      "name": "Soda Cravings: My All-Day Fizz Fix (Beverage UGC-style)",
+      "source_type": "alici_use_case",
+      "source_url": "https://alici.ai/video-super-agent/use-cases/soda-cravings-my-all-day-fizz-fix",
+      "notes": "UGC-style: cravings hook + routine montage + CTA"
+    },
+    {
+      "name": "Every Moment Deserves the Right Look (Eyeshadow UGC-style)",
+      "source_type": "alici_use_case",
+      "source_url": "https://alici.ai/video-super-agent/use-cases/every-moment-deserves-the-right-look",
+      "notes": "UGC-style: quick transformation + shade/story framing"
+    },
+    {
+      "name": "Family SUV Bring Home on Road (POV montage UGC-style)",
+      "source_type": "alici_use_case",
+      "source_url": "https://alici.ai/video-super-agent/use-cases/family-suv-bring-home-on-road",
+      "notes": "From list #4: real-moments montage + feature proof beats"
+    },
+    {
+      "name": "Icebreaking Kayak Action Cam (POV proof UGC-style)",
+      "source_type": "alici_use_case",
+      "source_url": "https://alici.ai/video-super-agent/use-cases/icebreaking-kayak-action-cam",
+      "notes": "From list #6: POV authenticity + in-the-moment proof"
+    },
+    {
+      "name": "Court Couture Spotlight (Fit check in motion UGC-style)",
+      "source_type": "alici_use_case",
+      "source_url": "https://alici.ai/video-super-agent/use-cases/court-couture-spotlight-game-set-match-fashion-film",
+      "notes": "From list #7: fit check + movement shots + captions"
+    },
+    {
+      "name": "M&M Detective Color Case (Micro-story skit UGC-style)",
+      "source_type": "alici_use_case",
+      "source_url": "https://alici.ai/video-super-agent/use-cases/mnm-detective-color-case",
+      "notes": "From list #9: skit structure (setup → clues → reveal) + product"
+    },
+    {
+      "name": "Bear Ear Selfie Flash (Selfie demo CTA UGC-style)",
+      "source_type": "alici_use_case",
+      "source_url": "https://alici.ai/video-super-agent/use-cases/bear-ear-selfie-flash",
+      "notes": "From list #10: problem → tap → result, short template"
+    },
+    {
+      "name": "InVideo benchmark: Product video ideas + templates",
+      "source_type": "competitor_reference",
+      "source_url": "https://invideo.io/blog/product-video-ideas-with-templates/",
+      "notes": "Structure reference only; do not copy wording."
+    }
+  ],
+  "selected_concepts": [
+    {
+      "rank": 1,
+      "name": "Daily Vitamin Routine Glow-Up",
+      "scenario_summary": "Routine-style UGC ad that makes the product feel like a personal habit: show the setup, the “why I take this” moment, and the observable end-state.",
+      "category": "UGC-style routines & demos",
+      "embed_type": "screenshot",
+      "embed_source_hint": "alici.ai Video SuperAgent use case",
+      "card_depth": "deep",
+      "source_type": "alici_use_case",
+      "alici_use_case_url": "https://alici.ai/video-super-agent/use-cases/from-mat-to-glow-my-daily-vitamin-routine"
+    },
+    {
+      "rank": 2,
+      "name": "One-Wipe Proof Demo (Zero Grease)",
+      "scenario_summary": "Satisfying proof-driven UGC ad: one close-up action demonstrates the claim, then you stack micro-proofs and a simple CTA.",
+      "category": "UGC-style routines & demos",
+      "embed_type": "screenshot",
+      "embed_source_hint": "alici.ai Video SuperAgent use case",
+      "card_depth": "deep",
+      "source_type": "alici_use_case",
+      "alici_use_case_url": "https://alici.ai/video-super-agent/use-cases/one-wipe-zero-grease-total-game-changer"
+    },
+    {
+      "rank": 3,
+      "name": "Stop Guessing Your Shots (Sports Watch Tap-to-Result)",
+      "scenario_summary": "Feature proof in selfie/POV format: show the moment of uncertainty, one tap or interaction, and the “now I know” result in plain language.",
+      "category": "Tap-to-result app/device demos",
+      "embed_type": "screenshot",
+      "embed_source_hint": "alici.ai Video SuperAgent use case",
+      "card_depth": "deep",
+      "source_type": "alici_use_case",
+      "alici_use_case_url": "https://alici.ai/video-super-agent/use-cases/stop-guessing-your-golf-shots"
+    },
+    {
+      "rank": 4,
+      "name": "All-Day Fizz Fix (Craving Hook → Routine Montage)",
+      "scenario_summary": "Cravings hook + day-in-the-life montage: the product shows up in multiple micro-moments, each reinforcing the same benefit.",
+      "category": "UGC-style routines & demos",
+      "embed_type": "screenshot",
+      "embed_source_hint": "alici.ai Video SuperAgent use case",
+      "card_depth": "deep",
+      "source_type": "alici_use_case",
+      "alici_use_case_url": "https://alici.ai/video-super-agent/use-cases/soda-cravings-my-all-day-fizz-fix"
+    },
+    {
+      "rank": 5,
+      "name": "Eyeshadow Switch-Up (Moment-Based Transformation)",
+      "scenario_summary": "Quick transformation UGC ad: tie each look to a real moment (work, date, party) so the benefit feels practical, not “beauty for beauty’s sake.”",
+      "category": "Transformations & before/after",
+      "embed_type": "screenshot",
+      "embed_source_hint": "alici.ai Video SuperAgent use case",
+      "card_depth": "deep",
+      "source_type": "alici_use_case",
+      "alici_use_case_url": "https://alici.ai/video-super-agent/use-cases/every-moment-deserves-the-right-look"
+    },
+    {
+      "rank": 6,
+      "name": "Family POV Montage (SUV Real-Moments Proof)",
+      "scenario_summary": "Lifestyle montage that feels like a real day: short clips show the vehicle solving small problems, with captions that translate moments into benefits.",
+      "category": "Montage & lifestyle proof",
+      "embed_type": "screenshot",
+      "embed_source_hint": "alici.ai Video SuperAgent use case",
+      "card_depth": "deep",
+      "source_type": "alici_use_case",
+      "alici_use_case_url": "https://alici.ai/video-super-agent/use-cases/family-suv-bring-home-on-road"
+    },
+    {
+      "rank": 7,
+      "name": "POV Proof-in-the-Moment (Action Cam Kayak)",
+      "scenario_summary": "POV authenticity: the “messy” details (motion, water, breath) become proof. The captions simply label what the viewer is already seeing.",
+      "category": "POV proof & authenticity",
+      "embed_type": "screenshot",
+      "embed_source_hint": "alici.ai Video SuperAgent use case",
+      "card_depth": "deep",
+      "source_type": "alici_use_case",
+      "alici_use_case_url": "https://alici.ai/video-super-agent/use-cases/icebreaking-kayak-action-cam"
+    },
+    {
+      "rank": 8,
+      "name": "Fit Check in Motion (Court Couture)",
+      "scenario_summary": "Fit check that moves: walking, turning, jumping. Motion reveals drape and comfort, while captions call out the one thing to notice.",
+      "category": "Fit checks & movement",
+      "embed_type": "screenshot",
+      "embed_source_hint": "alici.ai Video SuperAgent use case",
+      "card_depth": "deep",
+      "source_type": "alici_use_case",
+      "alici_use_case_url": "https://alici.ai/video-super-agent/use-cases/court-couture-spotlight-game-set-match-fashion-film"
+    },
+    {
+      "rank": 9,
+      "name": "Micro-Story Skit (Snack Detective)",
+      "scenario_summary": "A tiny story turns the product into the payoff: setup in one line, fast “clues,” then reveal. It feels like content first, ad second.",
+      "category": "Skits & micro-stories",
+      "embed_type": "screenshot",
+      "embed_source_hint": "alici.ai Video SuperAgent use case",
+      "card_depth": "deep",
+      "source_type": "alici_use_case",
+      "alici_use_case_url": "https://alici.ai/video-super-agent/use-cases/mnm-detective-color-case"
+    },
+    {
+      "rank": 10,
+      "name": "Selfie Demo CTA (Bear Ear App)",
+      "scenario_summary": "Selfie demo that earns trust: show the problem in plain language, one tap, then the result. End with a direct CTA the viewer can repeat.",
+      "category": "Tap-to-result app/device demos",
+      "embed_type": "screenshot",
+      "embed_source_hint": "alici.ai Video SuperAgent use case",
+      "card_depth": "deep",
+      "source_type": "alici_use_case",
+      "alici_use_case_url": "https://alici.ai/video-super-agent/use-cases/bear-ear-selfie-flash"
+    }
+  ],
+  "categorization": {
+    "method": "flat",
+    "categories": [
+      {
+        "name": "10 AI UGC-Style Ad Ideas (Scripts + Variations)",
+        "concept_ranks": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      }
+    ]
+  },
+  "aeo_pack": {
+    "quick_answer": "If you need AI UGC-style ads that feel like real creator content (without pretending they’re filmed by actual customers), use this idea pack: each concept includes a copy-ready Hook → Claim → Proof → CTA script plus two variations you can rotate for TikTok, Reels, and Shorts. Pick one concept, keep the visual structure simple, and change only one variable per iteration (the hook, the proof beat, or the CTA). The fastest wins usually come from clarity (one promise), proof (one visible moment), and pacing (captions that match the beat). Use the linked Video SuperAgent use cases as your baseline templates, then customize the product, offer, and on-screen text for your niche — and save your best hooks as a swipe file you can reuse.",
+    "key_takeaways": [
+      "UGC-style ads win when they feel like a creator’s “real moment,” not a brand’s pitch.",
+      "Write one core claim per ad, then prove it with a single visual moment.",
+      "Make two variations by changing only one variable: hook OR proof OR CTA.",
+      "Captions do the selling: keep them short, specific, and synced to the beat.",
+      "Treat each concept as a reusable template, not a one-off video."
+    ],
+    "faq": [
+      {
+        "q": "What does “AI UGC-style ad” mean?",
+        "a": "It means an ad designed to look and feel like creator content—casual framing, fast pacing, and caption-led storytelling—generated or assisted by AI. It does not mean you’re claiming the footage was filmed by real customers. Use “UGC-style” language and avoid implying real endorsements."
+      },
+      {
+        "q": "How long should these scripts be for TikTok, Reels, and Shorts?",
+        "a": "Keep the script tight enough to deliver one claim and one proof moment without extra context. Lead with the hook, show the proof fast, and end with a single CTA. If you need more detail, move it to the landing page, not the ad."
+      },
+      {
+        "q": "Do I need voiceover for UGC-style ads?",
+        "a": "Not always. Many high-performing UGC-style ads work with on-screen text only, especially for demos and before/after concepts. If you do use voiceover, keep it conversational and match it to the captions."
+      },
+      {
+        "q": "How do I create variations without rewriting everything?",
+        "a": "Pick one variable to change per variant: the hook line, the proof beat, or the CTA. Keep the core claim and visual structure the same so you can learn what actually caused the lift. This also keeps production simple."
+      },
+      {
+        "q": "What are common compliance mistakes with UGC-style ads?",
+        "a": "Avoid implying real customer endorsement if you don’t have it, and avoid absolute performance promises. Be careful with sensitive categories and claims that require substantiation. When in doubt, keep claims descriptive and show proof on screen."
+      },
+      {
+        "q": "How do I use Video SuperAgent with these concepts?",
+        "a": "Start with the closest use case template linked in each concept card, then swap in your product, offer, and caption copy. Generate two variations by changing only one variable per version. Export, publish, and keep notes on which hook/proof/CTA combination gets the best watch-through."
+      },
+      {
+        "q": "Should I mix multiple benefits into one UGC-style ad?",
+        "a": "Usually no. UGC-style ads tend to perform better when they focus on one primary benefit and support it with one proof moment. If you need to communicate multiple benefits, split them into separate variants."
+      },
+      {
+        "q": "What’s the fastest way to pick the right concept for my product?",
+        "a": "Choose based on the proof you can show. If you can demonstrate a visible change, use before/after or wipe-proof concepts. If the value is experiential, use routine or POV “real moment” concepts. If the product is interactive, use tap-to-result demos."
+      }
+    ]
+  },
+  "cta_plan": [
+    {
+      "id": 1,
+      "placement": "quick_answer_end",
+      "copy": "Try Video SuperAgent templates for AI UGC-style ads",
+      "url": "https://alici.ai/video-super-agent"
+    },
+    {
+      "id": 2,
+      "placement": "conclusion",
+      "copy": "Generate your first UGC-style ad with Video SuperAgent",
+      "url": "https://alici.ai/video-super-agent"
+    }
+  ],
+  "tables": {
+    "overview_flex_column": {
+      "slug": "effort",
+      "label": "Production Effort"
+    },
+    "overview_columns_showcase": ["#", "Concept", "Type/Category", "Best For", "{flex_column.label}"],
+    "master_list_columns_mega": ["#", "Concept", "Category", "Platform", "Quick Description"]
+  },
+  "brand_sources": [],
+  "assumptions": [
+    {
+      "field": "wording.ugc_style",
+      "value": "Use “UGC-style / AI UGC-style” only; do not imply real customers filmed these ads.",
+      "reason": "Compliance and trust: avoids false endorsement signals."
+    },
+    {
+      "field": "claims.performance",
+      "value": "No performance guarantees, no fabricated statistics, no “we tested” claims.",
+      "reason": "Skill guardrails: do not invent data."
+    },
+    {
+      "field": "source.watch_url_typo",
+      "value": "The sports watch use case URL is normalized to https:// (original note had 'ttps').",
+      "reason": "Ensure valid links in the article."
+    }
+  ]
+}

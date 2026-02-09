@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "profile": "ideas_templates",
+  "checks": {
+    "concept_count": {
+      "expected": 10,
+      "actual": 10,
+      "pass": true
+    },
+    "word_count_in_range": {
+      "range": "3000-5500",
+      "actual": 3430,
+      "pass": true
+    },
+    "h2_order_correct": true,
+    "all_concept_cards_have_required_fields": true,
+    "citable_blocks_count": {
+      "min": 5,
+      "actual": 5,
+      "pass": true
+    },
+    "citable_block_types_distinct": {
+      "min": 3,
+      "actual": 5,
+      "pass": true
+    },
+    "faq_count": {
+      "min": 6,
+      "actual": 8,
+      "pass": true
+    },
+    "cta_cards_count": {
+      "min": 2,
+      "actual": 2,
+      "pass": true
+    },
+    "embed_placeholders_count": {
+      "expected": 10,
+      "actual": 10,
+      "pass": true
+    },
+    "concept_card_markers_paired": true,
+    "quick_answer_word_count": {
+      "range": "120-180",
+      "actual": 139,
+      "pass": true
+    },
+    "key_takeaways_present": true,
+    "how_to_recreate_present": true,
+    "overview_table_columns_valid": true,
+    "source_attribution_adequate": true
+  },
+  "profile_specific_checks": {
+    "scripts_present_in_all_cards": true,
+    "variations_present_in_all_cards": true
+  },
+  "errors": [],
+  "warnings": [],
+  "files": {
+    "article": "/Users/dancy/Desktop/Code/AliciBlog sam版 thumbnail log/reports 待发文章/2026-02-09-ai-ugc-ads-ideas-templates/01-article-draft.md"
+  }
+}

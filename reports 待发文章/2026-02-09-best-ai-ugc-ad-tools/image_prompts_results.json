@@ -1,0 +1,29 @@
+[
+  {
+    "role": "hero",
+    "local_path": "reports 待发文章/2026-02-09-best-ai-ugc-ad-tools/assets/ugc-tools-hero.png",
+    "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/ugc-tools-hero.png",
+    "config": {
+      "aspect_ratio": "16:9",
+      "resolution": "2K"
+    }
+  },
+  {
+    "role": "concept",
+    "local_path": "reports 待发文章/2026-02-09-best-ai-ugc-ad-tools/assets/alici-ugc-workflow.png",
+    "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/alici-ugc-workflow.png",
+    "config": {
+      "aspect_ratio": "16:9",
+      "resolution": "1K"
+    }
+  },
+  {
+    "role": "comparison",
+    "local_path": "reports 待发文章/2026-02-09-best-ai-ugc-ad-tools/assets/ugc-tools-comparison.png",
+    "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/ugc-tools-comparison.png",
+    "config": {
+      "aspect_ratio": "16:9",
+      "resolution": "1K"
+    }
+  }
+]

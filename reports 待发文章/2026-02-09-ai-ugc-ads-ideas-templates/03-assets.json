@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "version": "3.0",
+    "article_slug": "ai-ugc-ads-ideas-templates-2026",
+    "generated_at": "2026-02-09T00:00:00Z",
+    "recommended_generate_max": 3
+  },
+  "featured_image": {
+    "id": "hero-image",
+    "prompt": "ICSB | Hero cover for a marketing playbook: “AI UGC-style ad ideas + scripts + variations”. Clean, modern, minimal, green-centered gradient (emerald → mint) with generous white space. Central concept: a simple card stack labeled Hook / Proof / CTA, plus subtle icons for TikTok, Instagram Reels, and YouTube Shorts. No brand logos. High-contrast typography area reserved for headline. Style: sleek, professional, Stripe-inspired soft 3D, smooth gradients, uncluttered.",
+    "role": "hero",
+    "placeholder": "![AI UGC-style ad ideas with scripts and variations](placeholder)",
+    "context": "article hero image"
+  },
+  "diagrams": [
+    {
+      "id": "concept-map",
+      "prompt": "ICSB | Concept map diagram summarizing 10 AI UGC-style ad ideas. Show a 3-column matrix: Hook type (Routine / Proof demo / POV / Skit / Tap-to-result), Proof beat (Before/after / Close-up / Montage / Screen+gesture), CTA type (Try / Buy / Save / Install / Learn). Place each of the 10 concepts as a labeled node in the matrix. Minimal, green-centered palette, lots of white space, clean lines, readable labels.",
+      "role": "diagram",
+      "type": "concept_map",
+      "priority": "recommended"
+    }
+  ],
+  "embed_placeholders": [
+    {
+      "id": "concept-1-embed",
+      "concept_rank": 1,
+      "type": "screenshot",
+      "source_hint": "alici.ai use case",
+      "alt": "Daily vitamin routine UGC-style ad example screenshot (Alici Video SuperAgent use case)",
+      "priority": "required"
+    },
+    {
+      "id": "concept-2-embed",
+      "concept_rank": 2,
+      "type": "screenshot",
+      "source_hint": "alici.ai use case",
+      "alt": "One-wipe zero grease proof demo UGC-style ad example screenshot (Alici Video SuperAgent use case)",
+      "priority": "required"
+    },
+    {
+      "id": "concept-3-embed",
+      "concept_rank": 3,
+      "type": "screenshot",
+      "source_hint": "alici.ai use case",
+      "alt": "Sports watch tap-to-result UGC-style ad example screenshot (Alici Video SuperAgent use case)",
+      "priority": "required"
+    },
+    {
+      "id": "concept-4-embed",
+      "concept_rank": 4,
+      "type": "screenshot",
+      "source_hint": "alici.ai use case",
+      "alt": "All-day fizz fix beverage routine montage UGC-style ad example screenshot (Alici Video SuperAgent use case)",
+      "priority": "required"
+    },
+    {
+      "id": "concept-5-embed",
+      "concept_rank": 5,
+      "type": "screenshot",
+      "source_hint": "alici.ai use case",
+      "alt": "Eyeshadow moment-based transformation UGC-style ad example screenshot (Alici Video SuperAgent use case)",
+      "priority": "required"
+    },
+    {
+      "id": "concept-6-embed",
+      "concept_rank": 6,
+      "type": "screenshot",
+      "source_hint": "alici.ai use case",
+      "alt": "Family SUV real-moments montage UGC-style ad example screenshot (Alici Video SuperAgent use case)",
+      "priority": "required"
+    },
+    {
+      "id": "concept-7-embed",
+      "concept_rank": 7,
+      "type": "screenshot",
+      "source_hint": "alici.ai use case",
+      "alt": "Kayak action cam POV proof UGC-style ad example screenshot (Alici Video SuperAgent use case)",
+      "priority": "required"
+    },
+    {
+      "id": "concept-8-embed",
+      "concept_rank": 8,
+      "type": "screenshot",
+      "source_hint": "alici.ai use case",
+      "alt": "Fashion fit check in motion UGC-style ad example screenshot (Alici Video SuperAgent use case)",
+      "priority": "required"
+    },
+    {
+      "id": "concept-9-embed",
+      "concept_rank": 9,
+      "type": "screenshot",
+      "source_hint": "alici.ai use case",
+      "alt": "Snack detective micro-story skit UGC-style ad example screenshot (Alici Video SuperAgent use case)",
+      "priority": "required"
+    },
+    {
+      "id": "concept-10-embed",
+      "concept_rank": 10,
+      "type": "screenshot",
+      "source_hint": "alici.ai use case",
+      "alt": "Selfie demo CTA app promo UGC-style ad example screenshot (Alici Video SuperAgent use case)",
+      "priority": "required"
+    }
+  ]
+}
+

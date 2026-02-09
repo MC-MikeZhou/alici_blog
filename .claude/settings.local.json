@@ -39,8 +39,11 @@
       "mcp__firecrawl__firecrawl_search",
       "Bash(source:*)",
 
+
       "Skill(analyze-aeo)",
-      "Skill(analyze-aeo:*)"
+      "Skill(analyze-aeo:*)",
+
+      "Bash(for dir in /Users/dancy/Desktop/Code/AliciBlog sam版 thumbnail log/skills/writers/*/)"
 
     ],
     "deny": [],

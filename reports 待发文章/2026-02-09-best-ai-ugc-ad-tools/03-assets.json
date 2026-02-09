@@ -1,0 +1,50 @@
+{
+  "recommended_generate_max": 5,
+  "images": [
+    {
+      "id": "hero-image",
+      "type": "hero",
+      "priority": 1,
+      "prompt": "A modern split-screen digital composition showing 5 AI UGC video tool interfaces side by side, each displaying a generated talking-head video ad with product overlay. Clean teal and white color scheme, professional marketing aesthetic, 2026 tech style.",
+      "placeholder": "<!-- IMAGE_PLACEHOLDER: type=hero -->",
+      "context": "Article hero image at top, before direct answer",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "id": "alici-screenshot",
+      "type": "screenshot",
+      "priority": 2,
+      "prompt": "Screenshot-style mockup of an AI video creation interface showing a UGC ad workflow: photo upload panel on left, AI agent chat generating script in center, video preview on right showing a person presenting a product. Teal accent colors, clean modern UI.",
+      "placeholder": "<!-- IMAGE_PLACEHOLDER: type=screenshot | Alici.ai -->",
+      "context": "Tool #1 Alici.ai section",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "id": "creatify-screenshot",
+      "type": "screenshot",
+      "priority": 3,
+      "prompt": "Screenshot-style mockup of a URL-to-video AI tool interface: product URL input bar at top, auto-generated video ad preview below showing AI avatar presenting an e-commerce product. Multiple avatar thumbnails on sidebar. Purple and white UI theme.",
+      "placeholder": "<!-- IMAGE_PLACEHOLDER: type=screenshot | Creatify -->",
+      "context": "Tool #2 Creatify section",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "id": "arcads-screenshot",
+      "type": "screenshot",
+      "priority": 4,
+      "prompt": "Screenshot-style mockup of an AI avatar selection interface with emotion control sliders: actor grid with diverse faces, emotion controls (excitement, curiosity, urgency) on right panel, video preview showing realistic talking-head ad. Dark UI with orange accents.",
+      "placeholder": "<!-- IMAGE_PLACEHOLDER: type=screenshot | Arcads AI -->",
+      "context": "Tool #3 Arcads AI section",
+      "aspect_ratio": "16:9"
+    },
+    {
+      "id": "comparison-infographic",
+      "type": "infographic",
+      "priority": 5,
+      "prompt": "Clean infographic comparing 5 AI UGC tools in a horizontal card layout: each card shows tool name, entry price, avatar count, and one-line positioning. Color-coded by category (budget=green, premium=gold, custom=teal). White background, modern typography.",
+      "placeholder": "<!-- IMAGE_PLACEHOLDER: type=infographic -->",
+      "context": "Quick Comparison section, visual supplement to the table",
+      "aspect_ratio": "16:9"
+    }
+  ]
+}

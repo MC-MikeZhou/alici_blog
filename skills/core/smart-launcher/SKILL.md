@@ -88,7 +88,7 @@ triggers:
   - "案例"
   - "roundup"
   - "汇总"
-  # Examples/Ideas triggers (v3.0 NEW)
+  # Examples/Ideas triggers (v2.3.1 NEW)
   - "examples"
   - "ideas"
   - "templates"
@@ -108,15 +108,6 @@ triggers:
   - "帮我找选题"
   - "expand from seed"
   - "从种子词扩展"
-  # Video embedding (new utility)
-  - "嵌入视频"
-  - "插入视频"
-  - "视频 json"
-  - "视频集成"
-  - "video embed"
-  - "embed video"
-  - "insert video"
-  - "framer video"
 ```
 
 ---
@@ -143,7 +134,6 @@ triggers:
 │  │ - 改进 → improve-article                                             │    │
 │  │ - 字幕 / YouTube URL (单独输入) → fetch-transcript                   │    │
 │  │ - 导出 → convert-to-framer                                           │    │
-│  │ - 嵌入视频 / video embed → convert-to-video-framer-json              │    │
 │  │ - 预览 → preview-chinese                                             │    │
 │  │ - Seed模式触发词 → 直接进入 Seed Mode                                 │    │
 │  │ - 否 → 进入写作流程                                                   │    │
@@ -451,9 +441,10 @@ auto_trigger_seed_mode:
 │ └── 用户确认数据 (可调整关键词)                                  │
 │                      ↓                                          │
 │ Step 3: 识别写作方向 (路由决策)                                   │
-│ ├── Tool Showdown → blog-list-writer (showdown mode)            │
+│ ├── Tool Showdown → blog-showdown-writer                        │
 │ ├── Listicle → blog-list-writer                                 │
 │ ├── Tutorial → blog-tutorial-writer                              │
+│ ├── Examples → blog-examples-writer                              │
 │ └── Case Study → case-roundup-writer                             │
 │                      ↓                                          │
 │ Step 4: 标题确认                                                 │
@@ -604,9 +595,10 @@ Step 1: 素材准备
 └── 无 URL? → 跳过
 
 Step 2: 内容生成 (根据路由结果选择 Writer)
-├── Tool Showdown → blog-list-writer (mode: tool_showdown)
+├── Tool Showdown → blog-showdown-writer
 ├── Listicle → blog-list-writer (mode: standard)
 ├── Tutorial → blog-tutorial-writer
+├── Examples → blog-examples-writer
 └── Case Study → case-roundup-writer
 
 Step 3: Editor Gate (强制)
@@ -660,6 +652,7 @@ Step 7: 输出生成
 | Tool Showdown | blog-showdown-writer | - | 2,500-3,500 | vs, 对比, 对决, comparison |
 | Listicle | blog-list-writer | standard | 2,500-3,500 | best, top N, 榜单, 数字开头 |
 | Tutorial | blog-tutorial-writer | - | 1,800-2,500 | how to, 如何, 教程, guide |
+| Examples | blog-examples-writer | - | 3,000-10,000 | examples, ideas, templates, 示例, 灵感 |
 | Case Study | case-roundup-writer | - | 300-600 | 案例, case, roundup, 汇总 |
 
 ---

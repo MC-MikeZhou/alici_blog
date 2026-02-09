@@ -1,0 +1,17 @@
+[
+  {
+    "prompt": "A clean, modern hero banner for a tech blog article about AI UGC ad tools. The image shows a stylized split-screen layout with 5 floating app interface cards arranged in a slight arc, each showing a different AI-generated talking-head video ad with product overlays. Soft teal gradient background (#0D9488 to #F0FDFA). Minimalist tech aesthetic with subtle grid lines. Professional, editorial quality. No text overlays.",
+    "role": "hero",
+    "filename": "ugc-tools-hero.png"
+  },
+  {
+    "prompt": "A clean mockup of a modern AI video creation dashboard interface. The left panel shows a photo upload area with a person's headshot and a product image. The center shows an AI chat agent generating an ad script automatically. The right panel shows a video preview of the person presenting the product in a UGC-style selfie video format. Teal accent colors (#0D9488), dark sidebar, white content area. Modern SaaS UI design, professional screenshot style.",
+    "role": "concept",
+    "filename": "alici-ugc-workflow.png"
+  },
+  {
+    "prompt": "A modern comparison infographic showing 5 AI UGC tools as horizontal cards stacked vertically. Each card has a colored icon on the left, tool name, price tag, and a one-line feature description. Color coding: teal for best overall, blue for budget pick, orange for premium, green for product demos, purple for multi-format. White background, clean sans-serif typography, subtle drop shadows. Professional editorial infographic style.",
+    "role": "comparison",
+    "filename": "ugc-tools-comparison.png"
+  }
+]
