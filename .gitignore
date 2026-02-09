@@ -45,3 +45,18 @@ logs/
 # Backup files
 *.bak
 *.backup
+
+# Video files / resources
+video_resources/
+*.mp4
+*.mov
+*.m4v
+*.mkv
+*.webm
+*.avi
+*.flv
+*.wmv
+*.mpg
+*.mpeg
+*.3gp
+*.3g2
