@@ -1,0 +1,23 @@
+date: Sun, 08 Feb 2026 14:48:52 GMT
+content-type: application/json; charset=utf-8
+content-length: 2796
+connection: close
+cf-ray: 9cabee299c46841c-TPE
+cache-control: max-age=0, private, must-revalidate
+content-security-policy: font-src 'self' blob: data: https://bc3-production-assets-cdn.basecamp-static.com https://bc3-rollout-assets-cdn.basecamp-static.com fonts.gstatic.com https://rsms.me https://use.typekit.net; object-src 'none'; script-src 'self' https://bc3-production-assets-cdn.basecamp-static.com https://bc3-rollout-assets-cdn.basecamp-static.com *.braintreegateway.com *.sentry-cdn.com https://basecamp.com https://www.dropbox.com/static/api/2/dropins.js https://platform.twitter.com hcaptcha.com *.hcaptcha.com beacon-v2.helpscout.net 'sha256-tkb4UZeVJlSA6VA48VjvAuLrjlKnMlkZ3aYzHpTVQ+Y=' https://cdn01.boxcdn.net/js/static/select.js embedr.flickr.com/assets/ widgets.flickr.com/embedr/ 'sha256-aCvRIQ79zbEtvxwsqDbuavE4Sa35jGPLpcm4Y1yIUA0=' 'sha256-Ez5uQZcKGUzoXDIfdPNg1TIyAIO39xBSe6Xba9lAhR4=' https://assets.tickspot.com https://secure.tickspot.com 'report-sample' 'nonce-da39a3ee5e6b4b0d3255bfef95601890afd80709'; style-src 'self' 'unsafe-inline' https://bc3-production-assets-cdn.basecamp-static.com https://bc3-rollout-assets-cdn.basecamp-static.com fonts.googleapis.com https://rsms.me/inter/inter.css https://assets.tickspot.com 'report-sample'; base-uri 'self'; form-action 'self' https://3.basecamp.com https://launchpad.37signals.com https://basecamp.com/; frame-ancestors 'self' https://3.basecamp.com
+etag: W/"132836155e5ba930a9e7f9ffd61c776c"
+referrer-policy: strict-origin-when-cross-origin
+server-timing: dc;desc=sc_chi
+strict-transport-security: max-age=15552000; includeSubDomains; preload
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+x-permitted-cross-domain-policies: none
+x-ratelimit: {"name":"API","period":10,"limit":50,"remaining":48,"until":"2026-02-08T14:49:00Z"}
+x-request-id: 9136a0a2-0290-41a4-83b0-c92932cfc594
+x-robots-tag: none
+x-runtime: 0.026760
+x-xss-protection: 0
+vary: Accept-Encoding
+cf-cache-status: BYPASS
+accept-ranges: bytes
+server: cloudflare

@@ -1,0 +1,551 @@
+{
+  "generated_at": "2026-02-08T22:50:14",
+  "seed_hint": "UGC ads",
+  "sources": [
+    {
+      "account": 3135399,
+      "bucket": 42744895,
+      "todolist_id": 9536725297,
+      "name": "UGC ads 增长策划中心",
+      "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todolists/9536725297",
+      "description_html": "<div>关联：<br><a href=\"https://3.basecamp.com/3135399/buckets/45547714/todolists/9546306218\">UGC ADs 模式 研发&nbsp;</a>\n</div>"
+    },
+    {
+      "account": 3135399,
+      "bucket": 45547714,
+      "todolist_id": 9546306218,
+      "name": "UGC ADs 模式 研发和Use Case",
+      "app_url": "https://3.basecamp.com/3135399/buckets/45547714/todolists/9546306218",
+      "description_html": "<div>关联：<br><a href=\"https://3.basecamp.com/3135399/buckets/45547714/todolists/9435649522\">Video SuperAgent的模板设计</a><br><a href=\"https://3.basecamp.com/3135399/buckets/42744895/todolists/9536725297\">UGC ads 增长策划&nbsp;&nbsp;</a>\n</div>"
+    }
+  ],
+  "lists": [
+    {
+      "id": 9536725297,
+      "name": "UGC ads 增长策划中心",
+      "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todolists/9536725297",
+      "url": "https://3.basecampapi.com/3135399/buckets/42744895/todolists/9536725297.json",
+      "bucket_id": 42744895,
+      "bucket_name": "Alici Growth ",
+      "parent_root_id": 9536725297,
+      "description_html": "<div>关联：<br><a href=\"https://3.basecamp.com/3135399/buckets/45547714/todolists/9546306218\">UGC ADs 模式 研发&nbsp;</a>\n</div>",
+      "status": "active",
+      "completed_ratio": "0/13",
+      "updated_at": "2026-02-08T11:11:00.726Z"
+    },
+    {
+      "id": 9556056518,
+      "name": "Instagram/TIktok/Youtube Ads 官方：创意中心",
+      "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todolists/9556056518",
+      "url": "https://3.basecampapi.com/3135399/buckets/42744895/todolists/9556056518.json",
+      "bucket_id": 42744895,
+      "bucket_name": "Alici Growth ",
+      "parent_root_id": 9536725297,
+      "description_html": "",
+      "status": "active",
+      "completed_ratio": "0/2",
+      "updated_at": "2026-02-08T11:11:00.722Z"
+    },
+    {
+      "id": 9536766978,
+      "name": "对标 InVideo Blog  ",
+      "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todolists/9536766978",
+      "url": "https://3.basecampapi.com/3135399/buckets/42744895/todolists/9536766978.json",
+      "bucket_id": 42744895,
+      "bucket_name": "Alici Growth ",
+      "parent_root_id": 9536725297,
+      "description_html": "",
+      "status": "active",
+      "completed_ratio": "0/4",
+      "updated_at": "2026-02-08T11:10:40.134Z"
+    },
+    {
+      "id": 9536873155,
+      "name": "Invideo UGC 模板复刻",
+      "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todolists/9536873155",
+      "url": "https://3.basecampapi.com/3135399/buckets/42744895/todolists/9536873155.json",
+      "bucket_id": 42744895,
+      "bucket_name": "Alici Growth ",
+      "parent_root_id": 9536725297,
+      "description_html": "",
+      "status": "active",
+      "completed_ratio": "0/2",
+      "updated_at": "2026-02-05T04:55:18.815Z"
+    },
+    {
+      "id": 9543378560,
+      "name": "UGC ads 真实案例",
+      "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todolists/9543378560",
+      "url": "https://3.basecampapi.com/3135399/buckets/42744895/todolists/9543378560.json",
+      "bucket_id": 42744895,
+      "bucket_name": "Alici Growth ",
+      "parent_root_id": 9536725297,
+      "description_html": "",
+      "status": "active",
+      "completed_ratio": "0/0",
+      "updated_at": "2026-02-08T11:11:00.703Z"
+    },
+    {
+      "id": 9556073256,
+      "name": "Alici Video Agent 的落地页",
+      "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todolists/9556073256",
+      "url": "https://3.basecampapi.com/3135399/buckets/42744895/todolists/9556073256.json",
+      "bucket_id": 42744895,
+      "bucket_name": "Alici Growth ",
+      "parent_root_id": 9536725297,
+      "description_html": "",
+      "status": "active",
+      "completed_ratio": "0/3",
+      "updated_at": "2026-02-08T11:10:16.502Z"
+    },
+    {
+      "id": 9536725742,
+      "name": "Alici Blog 选题策划 UGC ads系列",
+      "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todolists/9536725742",
+      "url": "https://3.basecampapi.com/3135399/buckets/42744895/todolists/9536725742.json",
+      "bucket_id": 42744895,
+      "bucket_name": "Alici Growth ",
+      "parent_root_id": 9536725297,
+      "description_html": "",
+      "status": "active",
+      "completed_ratio": "0/2",
+      "updated_at": "2026-02-08T10:13:05.435Z"
+    },
+    {
+      "id": 9546306218,
+      "name": "UGC ADs 模式 研发和Use Case",
+      "app_url": "https://3.basecamp.com/3135399/buckets/45547714/todolists/9546306218",
+      "url": "https://3.basecampapi.com/3135399/buckets/45547714/todolists/9546306218.json",
+      "bucket_id": 45547714,
+      "bucket_name": "Video Super Agent",
+      "parent_root_id": 9546306218,
+      "description_html": "<div>关联：<br><a href=\"https://3.basecamp.com/3135399/buckets/45547714/todolists/9435649522\">Video SuperAgent的模板设计</a><br><a href=\"https://3.basecamp.com/3135399/buckets/42744895/todolists/9536725297\">UGC ads 增长策划&nbsp;&nbsp;</a>\n</div>",
+      "status": "active",
+      "completed_ratio": "0/12",
+      "updated_at": "2026-02-08T07:03:23.705Z"
+    },
+    {
+      "id": 9550965183,
+      "name": "Demo 的准备和完善工作",
+      "app_url": "https://3.basecamp.com/3135399/buckets/45547714/todolists/9550965183",
+      "url": "https://3.basecampapi.com/3135399/buckets/45547714/todolists/9550965183.json",
+      "bucket_id": 45547714,
+      "bucket_name": "Video Super Agent",
+      "parent_root_id": 9546306218,
+      "description_html": "",
+      "status": "active",
+      "completed_ratio": "0/6",
+      "updated_at": "2026-02-08T06:41:02.940Z"
+    },
+    {
+      "id": 9550965653,
+      "name": "Opus 4.6 接入",
+      "app_url": "https://3.basecamp.com/3135399/buckets/45547714/todolists/9550965653",
+      "url": "https://3.basecampapi.com/3135399/buckets/45547714/todolists/9550965653.json",
+      "bucket_id": 45547714,
+      "bucket_name": "Video Super Agent",
+      "parent_root_id": 9546306218,
+      "description_html": "",
+      "status": "active",
+      "completed_ratio": "0/1",
+      "updated_at": "2026-02-06T03:10:45.990Z"
+    },
+    {
+      "id": 9555080319,
+      "name": "UGC ads Use Case",
+      "app_url": "https://3.basecamp.com/3135399/buckets/45547714/todolists/9555080319",
+      "url": "https://3.basecampapi.com/3135399/buckets/45547714/todolists/9555080319.json",
+      "bucket_id": 45547714,
+      "bucket_name": "Video Super Agent",
+      "parent_root_id": 9546306218,
+      "description_html": "",
+      "status": "active",
+      "completed_ratio": "0/4",
+      "updated_at": "2026-02-08T07:03:23.704Z"
+    },
+    {
+      "id": 9555892452,
+      "name": "UGC ads 用户行为研究",
+      "app_url": "https://3.basecamp.com/3135399/buckets/45547714/todolists/9555892452",
+      "url": "https://3.basecampapi.com/3135399/buckets/45547714/todolists/9555892452.json",
+      "bucket_id": 45547714,
+      "bucket_name": "Video Super Agent",
+      "parent_root_id": 9546306218,
+      "description_html": "",
+      "status": "active",
+      "completed_ratio": "0/1",
+      "updated_at": "2026-02-08T02:20:13.656Z"
+    }
+  ],
+  "todos": [
+    {
+      "id": 9556056698,
+      "list_id": 9556056518,
+      "status": "active",
+      "content": "🧵 Tiktok 官方指引： 广告 & 创意中心",
+      "description_html": "<div>\n<a target=\"_blank\" rel=\"noreferrer\" class=\"autolinked\" data-behavior=\"truncate\" href=\"https://ads.tiktok.com/business/creativecenter/inspiration/topads/\">https://ads.tiktok.com/business/creativecenter/inspiration/topads/</a><br><a target=\"_blank\" rel=\"noreferrer\" class=\"autolinked\" data-behavior=\"truncate\" href=\"https://ads.tiktok.com/business/creativecenter/\">https://ads.tiktok.com/business/creativecenter/</a>\n</div>",
+      "due_on": null,
+      "assignees": [],
+      "created_at": "2026-02-08T09:51:43.068Z",
+      "updated_at": "2026-02-08T10:01:56.172Z",
+      "url": "https://3.basecampapi.com/3135399/buckets/42744895/todos/9556056698.json",
+      "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todos/9556056698"
+    },
+    {
+      "id": 9543382856,
+      "list_id": 9556056518,
+      "status": "active",
+      "content": "👙 研究UGC ads 单价，看到一些标准的广告案例，可以作为素材和 参考对标",
+      "description_html": "",
+      "due_on": null,
+      "assignees": [],
+      "created_at": "2026-02-04T15:49:41.080Z",
+      "updated_at": "2026-02-08T11:11:00.686Z",
+      "url": "https://3.basecampapi.com/3135399/buckets/42744895/todos/9543382856.json",
+      "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todos/9543382856"
+    },
+    {
+      "id": 9556057393,
+      "list_id": 9536766978,
+      "status": "active",
+      "content": "💡 GPT5 Pro ：深度拆解Invideo Blog 有多少篇 UGC ads， 哪些值得复刻",
+      "description_html": "",
+      "due_on": null,
+      "assignees": [],
+      "created_at": "2026-02-08T09:53:55.512Z",
+      "updated_at": "2026-02-08T10:32:13.071Z",
+      "url": "https://3.basecampapi.com/3135399/buckets/42744895/todos/9556057393.json",
+      "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todos/9556057393"
+    },
+    {
+      "id": 9537217575,
+      "list_id": 9536766978,
+      "status": "active",
+      "content": "Invideo 洗稿：The Complete Guide to User-Generated Content (UGC) in 2025",
+      "description_html": "<div>\n<a target=\"_blank\" rel=\"noreferrer\" class=\"autolinked\" data-behavior=\"truncate\" href=\"https://invideo.io/blog/ai-ugc-strategy-guide/\">https://invideo.io/blog/ai-ugc-strategy-guide/</a><br><br><br>\n</div><h1><a href=\"https://claude.ai/public/artifacts/37b5ae7c-25ac-444a-8d7f-ddbbc7b031e4\" target=\"_blank\" rel=\"noreferrer\">全文翻译Artifact</a></h1><div><bc-attachment sgid=\"BAh7BkkiC19yYWlscwY6BkVUewdJIglkYXRhBjsAVEkiLmdpZDovL2JjMy9BdHRhY2htZW50LzgxMTAxNTA2NT9leHBpcmVzX2luBjsAVEkiCHB1cgY7AFRJIg9hdHRhY2hhYmxlBjsAVA==--91e99ac538f48e44014747d52ff4e7f53a86af63\" content-type=\"image/png\" url=\"https://preview.3.basecamp.com/3135399/blobs/cd3d7be2-00ee-11f1-9f21-0242ac120004/previews/full\" href=\"https://storage.3.basecamp.com/3135399/blobs/cd3d7be2-00ee-11f1-9f21-0242ac120004/download/image.png\" filename=\"image.png\" filesize=\"399631\" width=\"1200\" height=\"600\" previewable=\"true\" presentation=\"gallery\" caption=\"The Complete Guide to User-Generated Content (UGC) in 2025\"><figure>\n    <img srcset=\"https://preview.3.basecamp.com/3135399/blobs/cd3d7be2-00ee-11f1-9f21-0242ac120004/previews/full?dppx=2 2x, https://preview.3.basecamp.com/3135399/blobs/cd3d7be2-00ee-11f1-9f21-0242ac120004/previews/full?dppx=1 1x, https://preview.3.basecamp.com/3135399/blobs/cd3d7be2-00ee-11f1-9f21-0242ac120004/previews/full?dppx=3 3x, https://preview.3.basecamp.com/3135399/blobs/cd3d7be2-00ee-11f1-9f21-0242ac120004/previews/full?dppx=4 4x\" src=\"https://preview.3.basecamp.com/3135399/blobs/cd3d7be2-00ee-11f1-9f21-0242ac120004/previews/full\">\n  <figcaption>\n    The Complete Guide to User-Generated Content (UGC) in 2025\n  </figcaption>\n</figure></bc-attachment></div>",
+      "due_on": null,
+      "assignees": [
+        "hans"
+      ],
+      "created_at": "2026-02-03T10:55:25.016Z",
+      "updated_at": "2026-02-08T10:13:05.416Z",
+      "url": "https://3.basecampapi.com/3135399/buckets/42744895/todos/9537217575.json",
+      "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todos/9537217575"
+    },
+    {
+      "id": 9536794596,
+      "list_id": 9536766978,
+      "status": "active",
+      "content": "Invideo  Explore 拥有大量 UGC 素材",
+      "description_html": "<div>\n<br><a target=\"_blank\" rel=\"noreferrer\" class=\"autolinked\" data-behavior=\"truncate\" href=\"https://ai.invideo.io/workspace/130bcb6d-ee3c-419c-9e46-713b15e3fc21/v40-copilot\">https://ai.invideo.io/workspace/130bcb6d-ee3c-419c-9e46-713b15e3fc21/v40-copilot</a><br><bc-attachment sgid=\"BAh7BkkiC19yYWlscwY6BkVUewdJIglkYXRhBjsAVEkiLmdpZDovL2JjMy9BdHRhY2htZW50LzgxMDk2MzY5MT9leHBpcmVzX2luBjsAVEkiCHB1cgY7AFRJIg9hdHRhY2hhYmxlBjsAVA==--1372ab4dca22f5771d1bebc6bdc7ccf136e1ee6e\" content-type=\"image/png\" url=\"https://preview.3.basecamp.com/3135399/blobs/4c7e85dc-00da-11f1-b0a2-0242ac120003/previews/full\" href=\"https://storage.3.basecamp.com/3135399/blobs/4c7e85dc-00da-11f1-b0a2-0242ac120003/download/image.png\" filename=\"image.png\" filesize=\"3056622\" width=\"2284\" height=\"1648\" previewable=\"true\" presentation=\"gallery\"><figure>\n    <img srcset=\"https://preview.3.basecamp.com/3135399/blobs/4c7e85dc-00da-11f1-b0a2-0242ac120003/previews/full?dppx=2 2x, https://preview.3.basecamp.com/3135399/blobs/4c7e85dc-00da-11f1-b0a2-0242ac120003/previews/full?dppx=1 1x, https://preview.3.basecamp.com/3135399/blobs/4c7e85dc-00da-11f1-b0a2-0242ac120003/previews/full?dppx=3 3x, https://preview.3.basecamp.com/3135399/blobs/4c7e85dc-00da-11f1-b0a2-0242ac120003/previews/full?dppx=4 4x\" src=\"https://preview.3.basecamp.com/3135399/blobs/4c7e85dc-00da-11f1-b0a2-0242ac120003/previews/full\">\n  <figcaption>\n    image.png\n  </figcaption>\n</figure></bc-attachment>\n</div>",
+      "due_on": null,
+      "assignees": [],
+      "created_at": "2026-02-03T08:27:35.193Z",
+      "updated_at": "2026-02-03T08:28:22.561Z",
+      "url": "https://3.basecampapi.com/3135399/buckets/42744895/todos/9536794596.json",
+      "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todos/9536794596"
+    },
+    {
+      "id": 9541413054,
+      "list_id": 9536766978,
+      "status": "active",
+      "content": "（已发布）How to Become a UGC Creator — The Complete Step-by-Step Guide for 2026",
+      "description_html": "<div>\n<a href=\"https://3.basecamp.com/3135399/buckets/42744895/todos/9537217575\">Invideo 重组新视角：The Complete Guide to User-Generated Content (UGC) in 2025&nbsp; &nbsp;</a><br><a href=\"https://3.basecamp.com/3135399/buckets/42744895/todos/9541407450\">素材</a>\n</div>",
+      "due_on": null,
+      "assignees": [
+        "hans"
+      ],
+      "created_at": "2026-02-04T05:40:23.667Z",
+      "updated_at": "2026-02-08T09:54:49.358Z",
+      "url": "https://3.basecampapi.com/3135399/buckets/42744895/todos/9541413054.json",
+      "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todos/9541413054"
+    },
+    {
+      "id": 9536876664,
+      "list_id": 9536873155,
+      "status": "active",
+      "content": "👟 Invideo UGC 模板：那些看起来和感觉一样好的运动鞋",
+      "description_html": "<div>\n<a target=\"_blank\" rel=\"noreferrer\" class=\"autolinked\" data-behavior=\"truncate\" href=\"https://invideo.io/ai-videos/?template_id=31129&amp;show_preview=true\">https://invideo.io/ai-videos/?template_id=31129&amp;show_preview=true</a><br><br><bc-attachment sgid=\"BAh7BkkiC19yYWlscwY6BkVUewdJIglkYXRhBjsAVEkiLmdpZDovL2JjMy9BdHRhY2htZW50LzgxMDk3MzU3OD9leHBpcmVzX2luBjsAVEkiCHB1cgY7AFRJIg9hdHRhY2hhYmxlBjsAVA==--c167d28342dcd00c7b3ce6c302e70218bb1600f1\" content-type=\"image/png\" url=\"https://preview.3.basecamp.com/3135399/blobs/5bc2e69c-00de-11f1-a836-0242ac120004/previews/full\" href=\"https://storage.3.basecamp.com/3135399/blobs/5bc2e69c-00de-11f1-a836-0242ac120004/download/image.png\" filename=\"image.png\" filesize=\"887182\" width=\"2906\" height=\"1350\" previewable=\"true\" presentation=\"gallery\"><figure>\n    <img srcset=\"https://preview.3.basecamp.com/3135399/blobs/5bc2e69c-00de-11f1-a836-0242ac120004/previews/full?dppx=2 2x, https://preview.3.basecamp.com/3135399/blobs/5bc2e69c-00de-11f1-a836-0242ac120004/previews/full?dppx=1 1x, https://preview.3.basecamp.com/3135399/blobs/5bc2e69c-00de-11f1-a836-0242ac120004/previews/full?dppx=3 3x, https://preview.3.basecamp.com/3135399/blobs/5bc2e69c-00de-11f1-a836-0242ac120004/previews/full?dppx=4 4x\" src=\"https://preview.3.basecamp.com/3135399/blobs/5bc2e69c-00de-11f1-a836-0242ac120004/previews/full\">\n  <figcaption>\n    image.png\n  </figcaption>\n</figure></bc-attachment>\n</div>",
+      "due_on": null,
+      "assignees": [],
+      "created_at": "2026-02-03T08:57:41.465Z",
+      "updated_at": "2026-02-03T08:57:41.497Z",
+      "url": "https://3.basecampapi.com/3135399/buckets/42744895/todos/9536876664.json",
+      "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todos/9536876664"
+    },
+    {
+      "id": 9536888942,
+      "list_id": 9536873155,
+      "status": "active",
+      "content": "尝试用 Alici Super Agent 直接复刻UGC ads提示词模板 2.3",
+      "description_html": "<div>\n<a href=\"https://3.basecamp.com/3135399/buckets/42744895/todos/8829932830\">谁是 Harry Dry ？ 文案大师的方法论 </a><bc-attachment sgid=\"BAh7BkkiC19yYWlscwY6BkVUewdJIglkYXRhBjsAVEkiLmdpZDovL2JjMy9BdHRhY2htZW50LzgxMDk5NzE1NT9leHBpcmVzX2luBjsAVEkiCHB1cgY7AFRJIg9hdHRhY2hhYmxlBjsAVA==--797f84cb3d44d4a63e06884dd5f26357721e5cda\" content-type=\"image/png\" url=\"https://preview.3.basecamp.com/3135399/blobs/a1015f00-00e7-11f1-9452-0242ac120002/previews/full\" href=\"https://storage.3.basecamp.com/3135399/blobs/a1015f00-00e7-11f1-9452-0242ac120002/download/image.png\" filename=\"image.png\" filesize=\"1709490\" width=\"1832\" height=\"1020\" previewable=\"true\" presentation=\"gallery\"><figure>\n    <img srcset=\"https://preview.3.basecamp.com/3135399/blobs/a1015f00-00e7-11f1-9452-0242ac120002/previews/full?dppx=2 2x, https://preview.3.basecamp.com/3135399/blobs/a1015f00-00e7-11f1-9452-0242ac120002/previews/full?dppx=1 1x, https://preview.3.basecamp.com/3135399/blobs/a1015f00-00e7-11f1-9452-0242ac120002/previews/full?dppx=3 3x, https://preview.3.basecamp.com/3135399/blobs/a1015f00-00e7-11f1-9452-0242ac120002/previews/full?dppx=4 4x\" src=\"https://preview.3.basecamp.com/3135399/blobs/a1015f00-00e7-11f1-9452-0242ac120002/previews/full\">\n  <figcaption>\n    image.png\n  </figcaption>\n</figure></bc-attachment>\n</div>",
+      "due_on": null,
+      "assignees": [
+        "hans"
+      ],
+      "created_at": "2026-02-03T09:01:49.768Z",
+      "updated_at": "2026-02-05T04:55:18.797Z",
+      "url": "https://3.basecampapi.com/3135399/buckets/42744895/todos/9536888942.json",
+      "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todos/9536888942"
+    },
+    {
+      "id": 9556073428,
+      "list_id": 9556073256,
+      "status": "active",
+      "content": "Alici VideoAgent 落地页，需要更新 UGC ads 的视频以及描述",
+      "description_html": "<div><a target=\"_blank\" rel=\"noreferrer\" class=\"autolinked\" data-behavior=\"truncate\" href=\"https://alici.ai/video-super-agent\">https://alici.ai/video-super-agent</a></div>",
+      "due_on": null,
+      "assignees": [
+        "dancy song"
+      ],
+      "created_at": "2026-02-08T10:39:01.630Z",
+      "updated_at": "2026-02-08T10:39:01.698Z",
+      "url": "https://3.basecampapi.com/3135399/buckets/42744895/todos/9556073428.json",
+      "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todos/9556073428"
+    },
+    {
+      "id": 9556089119,
+      "list_id": 9556073256,
+      "status": "active",
+      "content": "zeely.ai的 UGC ads 落地页，可以参考",
+      "description_html": "<div><a target=\"_blank\" rel=\"noreferrer\" class=\"autolinked\" data-behavior=\"truncate\" href=\"https://zeely.ai/ugc-video-ad-creator/\">https://zeely.ai/ugc-video-ad-creator/</a></div>",
+      "due_on": null,
+      "assignees": [],
+      "created_at": "2026-02-08T11:10:11.283Z",
+      "updated_at": "2026-02-08T11:10:11.292Z",
+      "url": "https://3.basecampapi.com/3135399/buckets/42744895/todos/9556089119.json",
+      "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todos/9556089119"
+    },
+    {
+      "id": 9536804477,
+      "list_id": 9556073256,
+      "status": "active",
+      "content": "🌟 Invideo UGC ads有个落地页，值得学习吗",
+      "description_html": "<div>\n<a href=\"https://chatgpt.com/c/6981af78-a5bc-83a4-bc2f-26f116383e7c\" target=\"_blank\" rel=\"noreferrer\">GPT5 Pro</a><br>Hans：<a target=\"_blank\" rel=\"noreferrer\" class=\"autolinked\" data-behavior=\"truncate\" href=\"https://invideo.io/make/ugc-ads/\">https://invideo.io/make/ugc-ads/</a> <br>如果你是一个准备研究 UGC 广告的AI video创作者，然后看到了这样的页面，你能看到什么？这是一个从创作者视角的页面。 同时也请你作为一个 AEO 专家的视角，分析一下这样的落地页面对于一个像 Alici AI 这样的平台（也就是 InVideo 的竞品）来说，有哪些价值？也就是说，如果你是 Alici 的产品经理和增长负责人，你会做这样的页面吗？做这样的页面能够有更好的流量效果吧？<br><br><br>GPT：<br><strong><br>它把“UGC 广告”拆成了几个你能立刻理解的生产能力</strong>\n</div><div>\n<br>在「UGC video creator」段落里，它强调了几类能力点（本质是：解决你制作 UGC 广告最担心的几个痛点）：</div><ul>\n<li>\n<strong>Precise Script Control</strong>：强调可以“秒级脚本、分屏、反应、每个场景元素可控”，让你相信它不是“随机生成”。</li>\n<li>\n<strong>Authentic UGC ads with AI</strong>：刻意强调“手抖手机、自然光、不完美”，也就是“像真 UGC”。</li>\n<li>\n<strong>多种 UGC 风格</strong>：spokesperson、selfie、walk-and-talk、two-person skit。</li>\n<li>\n<strong>Podcast Ad generator</strong>：把“对谈/播客式软植入”单拎出来，说明他们把“可转化的叙事结构”当作核心卖点。<br><br>\n</li>\n</ul><blockquote>创作者心理感受：它不是在卖“AI 视频”，而是在卖“UGC 广告的可复用结构”。</blockquote><div>\n<br><strong><br>AEO 专家视角：这种落地页对 Alici AI 这种竞品到底有什么价值？</strong>\n</div><ul>\n<li>价值 1：它是一张“高意图需求”的入口网</li>\n<li>价值 2：它是一个“主题集群（Topic Cluster）”的中枢</li>\n<li>价值 3：它的页面结构天然利于被“摘要/引用”</li>\n<li>价值 4：它是“可规模化复制”的增长模板（pSEO 的味道很浓）<br><strong><br><br></strong>\n</li>\n</ul>",
+      "due_on": null,
+      "assignees": [],
+      "created_at": "2026-02-03T08:31:09.408Z",
+      "updated_at": "2026-02-08T11:10:16.462Z",
+      "url": "https://3.basecampapi.com/3135399/buckets/42744895/todos/9536804477.json",
+      "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todos/9536804477"
+    },
+    {
+      "id": 9536996960,
+      "list_id": 9536725742,
+      "status": "active",
+      "content": "🧵 如何制作不完美的真实感： GPT5 Pro 给出了三个选题， 感觉相当靠谱",
+      "description_html": "<div>\n<bc-attachment sgid=\"BAh7BkkiC19yYWlscwY6BkVUewdJIglkYXRhBjsAVEkiLmdpZDovL2JjMy9BdHRhY2htZW50LzgxMDk4OTc0MT9leHBpcmVzX2luBjsAVEkiCHB1cgY7AFRJIg9hdHRhY2hhYmxlBjsAVA==--b42a19534459820713e6fdb7fc14ec358f2e680d\" content-type=\"image/png\" url=\"https://preview.3.basecamp.com/3135399/blobs/c13e7cb0-00e4-11f1-bb78-0242ac120003/previews/full\" href=\"https://storage.3.basecamp.com/3135399/blobs/c13e7cb0-00e4-11f1-bb78-0242ac120003/download/image.png\" filename=\"image.png\" filesize=\"2998804\" width=\"1536\" height=\"1024\" previewable=\"true\" presentation=\"gallery\" caption=\"UGC 广告中的“不完美真实感”\"><figure>\n    <img srcset=\"https://preview.3.basecamp.com/3135399/blobs/c13e7cb0-00e4-11f1-bb78-0242ac120003/previews/full?dppx=2 2x, https://preview.3.basecamp.com/3135399/blobs/c13e7cb0-00e4-11f1-bb78-0242ac120003/previews/full?dppx=1 1x, https://preview.3.basecamp.com/3135399/blobs/c13e7cb0-00e4-11f1-bb78-0242ac120003/previews/full?dppx=3 3x, https://preview.3.basecamp.com/3135399/blobs/c13e7cb0-00e4-11f1-bb78-0242ac120003/previews/full?dppx=4 4x\" src=\"https://preview.3.basecamp.com/3135399/blobs/c13e7cb0-00e4-11f1-bb78-0242ac120003/previews/full\">\n  <figcaption>\n    UGC 广告中的“不完美真实感”\n  </figcaption>\n</figure></bc-attachment><a href=\"https://chatgpt.com/c/69811c9a-c0f4-83a3-bb01-d731ea5ac67e\" target=\"_blank\" rel=\"noreferrer\">GPT5 Pro</a>\n</div><ul>\n<li>从一个 ChatGPT 动态开始</li>\n<li>让 GPT agent mode 去找 10 篇内容， 类似seed mode扩散</li>\n<li>让GPT Pro 成为 Alici AI 的主编和测试，选出三个主题</li>\n</ul><div>\n<br><br>\n</div><h1>主题 1：Lo‑Fi UGC Ads 制作指南</h1><ul>\n<li>FOR 作为芬兰品牌设计公司， 调性相当惊艳～</li>\n<li>这篇什么是<a href=\"https://for.co/blog/what-is-lo-fi-content-and-how-should-brands-approach-it\" target=\"_blank\" rel=\"noreferrer\"> Lo-Fi 内容</a>， 让我大开眼界</li>\n<li>候选标题：<strong>Lo‑Fi UGC Ads Playbook：如何做出“不像广告”的 TikTok 风格 UGC 广告&nbsp;</strong>\n</li>\n</ul><h1>主题 2：Pratfall Effect 与“可控瑕疵”策略</h1><ul>\n<li>Dentsu 这篇关于<a href=\"https://www.dxglobal.com/insights/authenticity-the-irresistible-appeal-of-whats-not-perfect-beyond-2025/\" target=\"_blank\" rel=\"noreferrer\">真实性的博文</a>，也抓的很好&nbsp;</li>\n<li>其中 提到 Intermarché 用“庆祝不完美蔬果”对抗浪费</li>\n<li>候选标题：<strong>Pratfall Effect for UGC Ads：为什么“轻微瑕疵”让广告更可信？</strong>\n</li>\n</ul><h1>主题 3：AI 生成的 UGC 广告如何“做人味”</h1><div><br></div><ul><li>候选标题：Humanize AI UGC Ads：让 AI 生成视频更像真人 UGC 的 12 个“不完美细节”（避开 Uncanny Valley）</li></ul><div></div>",
+      "due_on": null,
+      "assignees": [],
+      "created_at": "2026-02-03T09:40:49.414Z",
+      "updated_at": "2026-02-03T09:54:04.902Z",
+      "url": "https://3.basecampapi.com/3135399/buckets/42744895/todos/9536996960.json",
+      "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todos/9536996960"
+    },
+    {
+      "id": 9541074504,
+      "list_id": 9536725742,
+      "status": "active",
+      "content": "新手教程：How to Create Viral AI UGC Ads in 2026: Best Practices for Beginners",
+      "description_html": "",
+      "due_on": null,
+      "assignees": [
+        "hans"
+      ],
+      "created_at": "2026-02-04T02:21:42.956Z",
+      "updated_at": "2026-02-04T02:21:43.015Z",
+      "url": "https://3.basecampapi.com/3135399/buckets/42744895/todos/9541074504.json",
+      "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todos/9541074504"
+    },
+    {
+      "id": 9546324815,
+      "list_id": 9550965183,
+      "status": "active",
+      "content": "为模式新建内置的agent、tools、service",
+      "description_html": "",
+      "due_on": null,
+      "assignees": [
+        "sam huang"
+      ],
+      "created_at": "2026-02-05T04:35:54.556Z",
+      "updated_at": "2026-02-06T02:58:58.935Z",
+      "url": "https://3.basecampapi.com/3135399/buckets/45547714/todos/9546324815.json",
+      "app_url": "https://3.basecamp.com/3135399/buckets/45547714/todos/9546324815"
+    },
+    {
+      "id": 9546325204,
+      "list_id": 9550965183,
+      "status": "active",
+      "content": "Veo 3.1 fast 更换成 Veo 3.1",
+      "description_html": "",
+      "due_on": null,
+      "assignees": [
+        "sam huang"
+      ],
+      "created_at": "2026-02-05T04:36:16.234Z",
+      "updated_at": "2026-02-06T02:59:00.513Z",
+      "url": "https://3.basecampapi.com/3135399/buckets/45547714/todos/9546325204.json",
+      "app_url": "https://3.basecamp.com/3135399/buckets/45547714/todos/9546325204"
+    },
+    {
+      "id": 9546325556,
+      "list_id": 9550965183,
+      "status": "active",
+      "content": "Banana 更换成 Banana Pro",
+      "description_html": "",
+      "due_on": null,
+      "assignees": [
+        "sam huang"
+      ],
+      "created_at": "2026-02-05T04:36:29.047Z",
+      "updated_at": "2026-02-06T02:59:02.480Z",
+      "url": "https://3.basecampapi.com/3135399/buckets/45547714/todos/9546325556.json",
+      "app_url": "https://3.basecamp.com/3135399/buckets/45547714/todos/9546325556"
+    },
+    {
+      "id": 9546697118,
+      "list_id": 9550965183,
+      "status": "active",
+      "content": "UGC Ads : veo 3.1 fast vs kling 3.0 vs seedance1.5 pro",
+      "description_html": "",
+      "due_on": null,
+      "assignees": [
+        "dancy song"
+      ],
+      "created_at": "2026-02-05T07:53:42.038Z",
+      "updated_at": "2026-02-06T02:59:04.519Z",
+      "url": "https://3.basecampapi.com/3135399/buckets/45547714/todos/9546697118.json",
+      "app_url": "https://3.basecamp.com/3135399/buckets/45547714/todos/9546697118"
+    },
+    {
+      "id": 9547574480,
+      "list_id": 9550965183,
+      "status": "active",
+      "content": "UGC Ads demo v0.2",
+      "description_html": "<div><a href=\"https://3.basecamp.com/3135399/buckets/42744895/todos/9536888942#__recording_9542067277\">Re: 尝试用 Alici Super Agent 直接复刻UGC ads提示词模板 2.3 - Alici Growth&nbsp;</a></div>",
+      "due_on": null,
+      "assignees": [
+        "dancy song"
+      ],
+      "created_at": "2026-02-05T13:12:08.698Z",
+      "updated_at": "2026-02-07T03:39:11.134Z",
+      "url": "https://3.basecampapi.com/3135399/buckets/45547714/todos/9547574480.json",
+      "app_url": "https://3.basecamp.com/3135399/buckets/45547714/todos/9547574480"
+    },
+    {
+      "id": 9552142614,
+      "list_id": 9550965183,
+      "status": "active",
+      "content": "UGC Ads Mode 聊天价格调整",
+      "description_html": "",
+      "due_on": null,
+      "assignees": [
+        "sam huang"
+      ],
+      "created_at": "2026-02-06T12:21:55.180Z",
+      "updated_at": "2026-02-08T06:41:02.914Z",
+      "url": "https://3.basecampapi.com/3135399/buckets/45547714/todos/9552142614.json",
+      "app_url": "https://3.basecamp.com/3135399/buckets/45547714/todos/9552142614"
+    },
+    {
+      "id": 9550984534,
+      "list_id": 9550965653,
+      "status": "active",
+      "content": "Opus4.6 已登录 OpenRounter，价格和 Opus4.5 一样",
+      "description_html": "<div><a target=\"_blank\" rel=\"noreferrer\" class=\"autolinked\" data-behavior=\"truncate\" href=\"https://openrouter.ai/anthropic/claude-opus-4.6\">https://openrouter.ai/anthropic/claude-opus-4.6</a></div>",
+      "due_on": null,
+      "assignees": [],
+      "created_at": "2026-02-06T03:10:41.356Z",
+      "updated_at": "2026-02-06T03:10:45.989Z",
+      "url": "https://3.basecampapi.com/3135399/buckets/45547714/todos/9550984534.json",
+      "app_url": "https://3.basecamp.com/3135399/buckets/45547714/todos/9550984534"
+    },
+    {
+      "id": 9555081861,
+      "list_id": 9555080319,
+      "status": "active",
+      "content": "🥤UGC ads Use Case ：海瑟薇的饮料",
+      "description_html": "",
+      "due_on": null,
+      "assignees": [
+        "Petty Chiao"
+      ],
+      "created_at": "2026-02-07T03:43:23.701Z",
+      "updated_at": "2026-02-07T03:45:15.871Z",
+      "url": "https://3.basecampapi.com/3135399/buckets/45547714/todos/9555081861.json",
+      "app_url": "https://3.basecamp.com/3135399/buckets/45547714/todos/9555081861"
+    },
+    {
+      "id": 9555083067,
+      "list_id": 9555080319,
+      "status": "active",
+      "content": "⌚️ UGC ads Use Case：高尔夫运动手表",
+      "description_html": "",
+      "due_on": null,
+      "assignees": [
+        "Petty Chiao"
+      ],
+      "created_at": "2026-02-07T03:45:47.288Z",
+      "updated_at": "2026-02-07T03:47:00.964Z",
+      "url": "https://3.basecampapi.com/3135399/buckets/45547714/todos/9555083067.json",
+      "app_url": "https://3.basecamp.com/3135399/buckets/45547714/todos/9555083067"
+    },
+    {
+      "id": 9555084049,
+      "list_id": 9555080319,
+      "status": "active",
+      "content": "🧽 UGC ads Use Case：神器厨房布",
+      "description_html": "",
+      "due_on": null,
+      "assignees": [
+        "Petty Chiao"
+      ],
+      "created_at": "2026-02-07T03:48:16.758Z",
+      "updated_at": "2026-02-07T03:49:49.198Z",
+      "url": "https://3.basecampapi.com/3135399/buckets/45547714/todos/9555084049.json",
+      "app_url": "https://3.basecamp.com/3135399/buckets/45547714/todos/9555084049"
+    },
+    {
+      "id": 9555993416,
+      "list_id": 9555080319,
+      "status": "active",
+      "content": "🧘‍♀️ UGC ads Use case：女性维生素糖",
+      "description_html": "",
+      "due_on": null,
+      "assignees": [
+        "Petty Chiao"
+      ],
+      "created_at": "2026-02-08T07:01:23.856Z",
+      "updated_at": "2026-02-08T07:03:23.703Z",
+      "url": "https://3.basecampapi.com/3135399/buckets/45547714/todos/9555993416.json",
+      "app_url": "https://3.basecamp.com/3135399/buckets/45547714/todos/9555993416"
+    },
+    {
+      "id": 9555892454,
+      "list_id": 9555892452,
+      "status": "active",
+      "content": "🧽 Tiktok 付费用户susieblankenship@gmail.com，购买年度 Pro 后，尝试各种 VideoAgent UGC ads玩法，成为第一个 UGC Mode 超级用户 2.8",
+      "description_html": "<div>用户基础数据：<br>&nbsp;邮箱：&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a target=\"_blank\" rel=\"noreferrer\" class=\"autolinked\" data-behavior=\"truncate\" href=\"mailto:susieblankenship@gmail.com\">susieblankenship@gmail.com</a><br>&nbsp;google name：&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Susie Olson<br>&nbsp;注册日期：&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2026-02-07 15:54:30<br>&nbsp;活动领取：&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;参加了【黑五 video Gen】 活动<br>&nbsp;渠道来源（不准确）：&nbsp; &nbsp; &nbsp; &nbsp;【tiktok_landing】<br>pro功能使用综合数据：<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 【videoGeneratorWeb: videoFlow 】&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3 次<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 【aliciAgentWeb: agent 】&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;27 次<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 【alici_super_agent_ldoc93bf: aliciGenerateImage 】&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;16 次<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 【alici_image_editor_v2_fjpad3j: imageGen 】&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;2 次<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 【characterWeb: character_photo 】&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1 次<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 【alici_super_agent_cysb7n20: aliciGenerateImage 】&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;7 次<br><br>Video模型使用整理：<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 【google_veo_31_fast_r 】&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;3 次<br><br>用户购买整理：<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 用户于2026-02-07 18:22:50 购买了【Extra Credits 1750 Cr - 10% off】, 花费了【7200】美分<br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 用户于2026-02-07 16:19:40 购买了【Pro Plan (Yearly)】, 花费了【22260】美分<br><br>用户的所有聊天💬💬💬💬💬💬：<br><br>Title：A tiktok shop/ugc vi<br><a target=\"_blank\" rel=\"noreferrer\" class=\"autolinked\" data-behavior=\"truncate\" href=\"https://app.alici.ai/pages/chat?agent_id=alici_gpt4o&amp;vc=69878217f10d3f4d21d72801\">https://app.alici.ai/pages/chat?agent_id=alici_gpt4o&amp;vc=69878217f10d3f4d21d72801</a><br>Title：This model walking i<br><a target=\"_blank\" rel=\"noreferrer\" class=\"autolinked\" data-behavior=\"truncate\" href=\"https://app.alici.ai/pages/chat?agent_id=alici_gpt4o&amp;vc=698769c065614e0be9078f2f\">https://app.alici.ai/pages/chat?agent_id=alici_gpt4o&amp;vc=698769c065614e0be9078f2f</a><br>Title：have the model wear&nbsp;<br><a target=\"_blank\" rel=\"noreferrer\" class=\"autolinked\" data-behavior=\"truncate\" href=\"https://app.alici.ai/pages/chat?agent_id=alici_gpt4o&amp;vc=698767c757b6046c996d8d61\">https://app.alici.ai/pages/chat?agent_id=alici_gpt4o&amp;vc=698767c757b6046c996d8d61</a><br>Title：ugc video about this<br><a target=\"_blank\" rel=\"noreferrer\" class=\"autolinked\" data-behavior=\"truncate\" href=\"https://app.alici.ai/pages/chat?agent_id=alici_gpt4o&amp;vc=698761510a3c9219c07cd274\">https://app.alici.ai/pages/chat?agent_id=alici_gpt4o&amp;vc=698761510a3c9219c07cd274</a>\n</div>",
+      "due_on": null,
+      "assignees": [],
+      "created_at": "2026-02-08T02:11:47.173Z",
+      "updated_at": "2026-02-08T02:20:13.392Z",
+      "url": "https://3.basecampapi.com/3135399/buckets/45547714/todos/9555892454.json",
+      "app_url": "https://3.basecamp.com/3135399/buckets/45547714/todos/9555892454"
+    }
+  ],
+  "cross_links": [
+    {
+      "from": "https://3.basecamp.com/3135399/buckets/42744895/todolists/9536725297",
+      "to": "https://3.basecamp.com/3135399/buckets/45547714/todolists/9546306218"
+    },
+    {
+      "from": "https://3.basecamp.com/3135399/buckets/45547714/todolists/9546306218",
+      "to": "https://3.basecamp.com/3135399/buckets/45547714/todolists/9435649522"
+    },
+    {
+      "from": "https://3.basecamp.com/3135399/buckets/45547714/todolists/9546306218",
+      "to": "https://3.basecamp.com/3135399/buckets/42744895/todolists/9536725297"
+    }
+  ]
+}
