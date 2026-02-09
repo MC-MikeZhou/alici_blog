@@ -153,7 +153,11 @@
         },
         {
           "label": "使用 Seed Mode 发现方向",
-          "description": "通过选题漏斗发现 2 个高潜力方向"
+          "description": "通过竞品锚定漏斗发现 2 个高潜力方向 (D1)"
+        },
+        {
+          "label": "使用 Diversity Seed Mode (v2)",
+          "description": "通过多策略发散 + 语义去重发现 3 个高潜力方向 (D2)"
         }
       ]
     }
@@ -316,10 +320,12 @@ reference_expansion:
 │                                                                 │
 │ 种子词: [ai video tools 2026]                    [编辑]         │
 │                                                                 │
-│ 竞品博客 (3 个):                                                │
+│ 竞品博客 (5 个，默认):                                          │
 │   1. invideo.io/blog                            [更换]         │
 │   2. higgsfield.ai/blog                         [更换]         │
 │   3. freepik.com/blog                           [更换]         │
+│   4. blog.fal.ai                                [更换]         │
+│   5. wavespeed.ai/blog                          [更换]         │
 │                                                                 │
 │ Scope 设置:                                                     │
 │   语言: en                                       [更换]         │
@@ -344,8 +350,8 @@ reference_expansion:
       "header": "Competitor",
       "multiSelect": false,
       "options": [
-        {"label": "使用默认竞品池", "description": "invideo.io, higgsfield.ai, freepik.com"},
-        {"label": "输入自定义竞品", "description": "输入 3 个竞品博客 URL"}
+        {"label": "使用默认竞品池", "description": "invideo.io, higgsfield.ai, freepik.com, blog.fal.ai, wavespeed.ai"},
+        {"label": "输入自定义竞品", "description": "输入 3–5 个竞品博客 URL"}
       ]
     }
   ]
@@ -393,46 +399,60 @@ reference_expansion:
 
 ### 1.6.5 Seed Mode 执行
 
-确认后，调用 `growth-topic-scout v2.2 Mode D`:
+确认后，调用 `growth-topic-scout v2.3` 的 Seed 模式：
+- 选择「使用 Seed Mode 发现方向」→ Mode D1（竞品锚定，输出 2 个方向）
+- 选择「使用 Diversity Seed Mode (v2)」→ Mode D2（多样性引擎，输出 3 个方向）
 
 ```
 ═══════════════════════════════════════════════════
 ▶ 执行 Seed Mode 选题漏斗
 ═══════════════════════════════════════════════════
 
-[1/6] Phase 0: Mission Config 已保存...
-[2/6] Phase 0.5: 抓取竞品博客...
+[D1/6] Phase 0: Mission Config 已保存...
+[D1/6] Phase 0.5: 抓取竞品博客...
       ├── invideo.io: 15 篇文章
       ├── higgsfield.ai: 22 篇文章
-      └── freepik.com: 16 篇文章
+      ├── freepik.com: 16 篇文章
+      ├── blog.fal.ai: 12 篇文章
+      └── wavespeed.ai: 14 篇文章
       发现 6 种意图模式 ✓
 
-[3/6] Phase 1: 意图模式扩散...
+[D1/6] Phase 1: 意图模式扩散...
       └── 生成 64 个待验证关键词 ✓
 
-[4/6] Phase 2: DataForSEO 验证...
+[D1/6] Phase 2: DataForSEO 验证...
       ├── 高优先级: 10 个
       ├── 中优先级: 19 个
       └── 长尾: 35 个
 
-[5/6] Phase 2.5: Scope 裁剪...
+[D1/6] Phase 2.5: Scope 裁剪...
       └── 64 → 10 个方向 ✓
 
-[6/6] Phase 3: Title Lock...
+[D1/6] Phase 3: Title Lock...
       └── 2 个可执行方向 ✓
 
 ═══════════════════════════════════════════════════
 ✅ Seed Mode 完成
 ═══════════════════════════════════════════════════
+
+-----------------------------------------
+
+[D2/7] Phase 0: Mission Config + Diversity Config ✓
+[D2/7] Phase 0.2: Seed 解构（5 维 + query seeds）✓
+[D2/7] Phase 1: 多策略发散（~45 topics）✓
+[D2/7] Phase 2: 语义聚类去重 + 多样性门禁（avg_sim<0.50）✓
+[D2/7] Phase 3: DataForSEO 验证（8-15 候选）✓
+[D2/7] Phase 4: Portfolio Scoring（SEO+AEO+diversity_bonus）✓
+[D2/7] Phase 5: Title Lock → 3 个可执行方向 ✓
 ```
 
 ### 1.6.6 方向选择
 
-Seed Mode 完成后，展示 2 个方向供用户选择:
+Seed Mode 完成后，展示 2 个方向（D1）或 3 个方向（D2）供用户选择:
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│ 📊 Seed Mode 结果: 2 个可执行方向                                │
+│ 📊 Seed Mode 结果: 2-3 个可执行方向                              │
 ├─────────────────────────────────────────────────────────────────┤
 │                                                                 │
 │ 🥇 方向 1: AI Video Tool Comparisons                            │
@@ -447,6 +467,13 @@ Seed Mode 完成后，展示 2 个方向供用户选择:
 │    标题: How to Create AI Videos for YouTube in 2026            │
 │    SEO: 82 | AEO: 78 | 综合: High                               │
 │    搜索量: 8,500 | 趋势: → 平稳                                 │
+│    推荐 Writer: blog-tutorial-writer                            │
+│                                                                 │
+│ 🥉 方向 3 (D2 可选): Troubleshooting - Fix AI-looking Videos     │
+│    ─────────────────────────────────────────────                │
+│    标题: Why Your Sora Videos Look \"AI-ish\" (and How to Fix It)│
+│    SEO: 76 | AEO: 84 | 综合: High (AEO-first)                   │
+│    搜索量: 1,200 | 趋势: ↑ 上升                                 │
 │    推荐 Writer: blog-tutorial-writer                            │
 │                                                                 │
 └─────────────────────────────────────────────────────────────────┘

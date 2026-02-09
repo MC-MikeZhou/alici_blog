@@ -36,7 +36,8 @@
       "WebFetch(domain:www.topview.ai)",
       "WebFetch(domain:usemintly.com)",
       "mcp__firecrawl__firecrawl_search",
-      "Bash(source:*)"
+      "Bash(source:*)",
+      "Bash(for dir in /Users/dancy/Desktop/Code/AliciBlog sam版 thumbnail log/skills/writers/*/)"
     ],
     "deny": [],
     "ask": []

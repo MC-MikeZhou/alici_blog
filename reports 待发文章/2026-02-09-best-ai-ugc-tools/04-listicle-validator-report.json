@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "profile": "standard",
+  "errors": [],
+  "warnings": [
+    {
+      "code": "EVIDENCE_TOP5_THIRD_PARTY_MISSING",
+      "message": "Top 5 tool missing third-party evidence (warning only)",
+      "details": {
+        "tool": "alici.ai"
+      }
+    },
+    {
+      "code": "EVIDENCE_TOP5_THIRD_PARTY_MISSING",
+      "message": "Top 5 tool missing third-party evidence (warning only)",
+      "details": {
+        "tool": "MakeUGC"
+      }
+    },
+    {
+      "code": "EVIDENCE_TOP5_THIRD_PARTY_MISSING",
+      "message": "Top 5 tool missing third-party evidence (warning only)",
+      "details": {
+        "tool": "InVideo AI"
+      }
+    },
+    {
+      "code": "EVIDENCE_TOP5_THIRD_PARTY_MISSING",
+      "message": "Top 5 tool missing third-party evidence (warning only)",
+      "details": {
+        "tool": "Arcads AI"
+      }
+    },
+    {
+      "code": "EVIDENCE_TOP5_THIRD_PARTY_MISSING",
+      "message": "Top 5 tool missing third-party evidence (warning only)",
+      "details": {
+        "tool": "Creatify"
+      }
+    }
+  ],
+  "files": {
+    "article": "/Users/dancy/Desktop/Code/AliciBlog sam版 thumbnail log/reports 待发文章/2026-02-09-best-ai-ugc-tools/01-article-draft.md"
+  }
+}

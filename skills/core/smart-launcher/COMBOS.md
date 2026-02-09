@@ -1,6 +1,6 @@
-# SmartLauncher v2.0 - Writer 路由配置
+# SmartLauncher v2.3 - Writer 路由配置
 
-> v2.0 简化: 4 种核心写作方向，与 Writer 路由表对齐
+> v2.3.1 更新: 6 种核心写作方向 (5 种直接路由 + 1 种深度研究路由)
 
 ---
 
@@ -8,11 +8,80 @@
 
 | 写作方向 | Writer | Mode | 输出字数 | AEO 目标 |
 |----------|--------|------|----------|----------|
-| **Tool Showdown** | blog-list-writer | tool_showdown | 2,500-3,500 | 75 |
+| **Tool Showdown** | blog-showdown-writer | - | 2,500-3,500 | 75 |
 | **Listicle** | blog-list-writer | standard | 2,500-3,500 | 75 |
-| **Examples** | blog-examples-writer | - | 3,000-10,000 | 75 |
 | **Tutorial** | blog-tutorial-writer | - | 1,800-2,500 | 75 |
+| **Examples** | blog-examples-writer | - | 3,000-10,000 | 75 |
 | **Case Study** | case-roundup-writer | - | 300-600 | 70 |
+
+---
+
+## 0. Deep Research (深度研究) — Route D 🆕
+
+### 配置
+
+```yaml
+id: deep_research
+name: "深度研究"
+name_en: "Deep Research"
+
+# 检测信号
+detection_signals:
+  - "团队研究"
+  - "多角色选题"
+  - "全景扫描"
+  - "agent team"
+  - "team scout"
+  - "deep research"
+  - "多角度研究"
+
+# Skill 配置 (非 Writer，而是调用 art-scout)
+skill: "art-scout"
+skill_version: "1.1"
+output_type: "directions"    # 输出方向，非文章
+direction_count: [5, 8]      # 5-8 个方向
+
+# 后续 Writer 路由
+# 用户选择 Direction 后，根据 Direction 的 recommended_skill 路由到对应 Writer
+post_selection_routing:
+  - tutorial: "blog-tutorial-writer"
+  - listicle: "blog-list-writer"
+  - showdown: "blog-showdown-writer"
+  - examples: "blog-examples-writer"
+  - roundup: "case-roundup-writer"
+
+# 特性
+features:
+  - multi_agent_parallel: true    # 5 Agent 并行
+  - ceo_synthesis: true           # CEO 综合去重
+  - dataforseo_validation: true   # Phase 3 集中验证
+  - decision_brief: true          # Decision Brief 输出
+  - diversity_analysis: true      # 多样性分析
+
+# 输出目录
+output_path: "/research 竞品分析/team-research/YYYY-MM-DD-{seed-slug}/"
+```
+
+### Route D 流程
+
+```
+用户选择 [D] 深度研究
+  ↓
+art-scout Phase 0: Mission Briefing (3 个问题)
+  ↓
+art-scout Phase 1: 5 SubAgent 并行探索 (WebSearch)
+  ↓
+art-scout Phase 2: CEO 综合 (去重 + 排名 + 多样性分析)
+  ↓
+art-scout Phase 3: DataForSEO 集中验证 + Title Lock
+  ↓
+art-scout Phase 4: 输出 5-8 个 Direction + Decision Brief
+  ↓
+用户选择 1-2 个 Direction
+  ↓
+→ 回到 SmartLauncher 共享执行阶段:
+  Writer 路由 → Editor Gate → AEO → Improver → Framer → Preview
+```
 
 ---
 
@@ -65,8 +134,8 @@ tool_count_threshold:
   listicle_min: 5        # ≥5 工具 → Listicle 可扩展模式
 
 # Writer 配置
-writer: "blog-list-writer"
-writer_mode: "tool_showdown"
+writer: "blog-showdown-writer"
+writer_mode: null
 word_count: [2500, 3500]
 aeo_target: 75
 
@@ -235,7 +304,7 @@ features:
 
 ---
 
-## 5. Examples (示例/灵感) 🆕
+## 5. Examples (示例/灵感)
 
 ### 配置
 
@@ -366,7 +435,7 @@ def route_auto(content_features, goal):
     if goal == "教人做事":
         return "tutorial", {}
 
-    # 展示灵感 → 示例 (v3.0 NEW)
+    # 展示灵感 → 示例
     if goal == "展示灵感":
         return "examples", {}
 
@@ -397,9 +466,16 @@ def route_auto(content_features, goal):
 ```json
 {
   "routes": {
+    "deep_research": {
+      "skill": "art-scout",
+      "version": "1.1",
+      "output_type": "directions",
+      "direction_count": [5, 8],
+      "signals": ["团队研究", "多角色选题", "全景扫描", "agent team", "deep research"]
+    },
     "tool_showdown": {
-      "writer": "blog-list-writer",
-      "mode": "tool_showdown",
+      "writer": "blog-showdown-writer",
+      "mode": null,
       "word_count": [2500, 3500],
       "aeo_target": 75,
       "signals": ["vs", "对比", "对决", "comparison"]
@@ -440,21 +516,27 @@ def route_auto(content_features, goal):
 
 ## Changelog
 
-### v2.2.1 (2026-02-08)
+### v2.3.1 (2026-02-09)
 
-**新增第 5 条路由: Examples (示例/灵感)**
+**新增 Examples 路由 (整合 blog-examples-writer)**
 
-1. **新增 Examples 路由**:
-   - Writer: blog-examples-writer (standalone v3.0)
-   - 3 种 Profile: showcase / ideas_templates / mega
-   - 字数范围: 3,000-10,000
-   - 检测信号: examples, ideas, templates, scripts, 示例, 灵感, 创意, 模板
+1. **新增 examples 路由配置**: blog-examples-writer, 3,000-10,000 词
+2. **Profile 自动选择**: showcase / ideas_templates / mega
+3. **路由优先级更新**: Tool Showdown > Listicle > Examples > Tutorial > Case Study
+4. **目标映射新增**: 展示灵感 → Examples
+5. **Route D post_selection_routing 新增**: examples → blog-examples-writer
+6. **路由总览更新**: 6 种方向 (5 种直接路由 + 1 种深度研究)
 
-2. **路由优先级更新**:
-   - Tool Showdown > Listicle > Examples > Tutorial > Case Study
+---
 
-3. **目标映射新增**:
-   - 展示灵感 → Examples (备选: Listicle)
+### v2.3 (2026-02-07)
+
+**新增 Route D: 深度研究 (art-scout 集成)**
+
+1. **新增 deep_research 路由配置**: 调用 art-scout v1.1
+2. **Direction 后续路由**: 用户选择 Direction 后路由到对应 Writer
+3. **JSON 索引更新**: 新增 deep_research 条目
+4. **路由总览更新**: 5 种方向 (含深度研究)
 
 ---
 
@@ -497,4 +579,4 @@ def route_auto(content_features, goal):
 
 ---
 
-*SmartLauncher v2.2.1 COMBOS - 5 种核心方向 × 工具数量检测 × 洗稿约束 × Examples Profile*
+*SmartLauncher v2.3.1 COMBOS - 6 种方向 (深度研究 + 5 种写作) × 工具数量检测 × 洗稿约束 × Showdown 独立路由 × Examples Profile*
