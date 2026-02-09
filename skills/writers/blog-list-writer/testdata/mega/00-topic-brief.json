@@ -1,0 +1,18 @@
+{
+  "analysis_date": "2026-02-04",
+  "schema_version": "1.1",
+  "data_source": "test_fixture",
+  "selected_topic": {
+    "primary_keyword": "best ai video tools",
+    "search_intent": "best-list",
+    "recommended_titles": [
+      "20+ Best AI Video Tools in 2026: Mega Guide by Category"
+    ],
+    "content_type": "list",
+    "listicle_profile": "mega",
+    "list_size_target": 20,
+    "freshness_date": "2026-02-04",
+    "methodology_level": "research_only"
+  }
+}
+

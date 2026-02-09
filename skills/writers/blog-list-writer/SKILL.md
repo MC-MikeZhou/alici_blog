@@ -1,30 +1,37 @@
 ---
 name: blog-list-writer
-version: "2.4"
+version: "3.1"
 description: >
-  Generate SEO/AEO-optimized List/Listicle articles (2,500-3,500 words).
+  Generate SEO/AEO-optimized List/Listicle articles with a compile-like structure.
   Input: Topic Brief from growth-topic-scout.
-  Output: Complete List article with evaluation methodology + comparison table + one-line positioning + SEO metadata.
-  Structure: Introduction → Evaluation Methodology → Background → List Items → Comparison → How to Choose → Conclusion → FAQ.
-  Triggers on: write list, best tools, top alternatives, comparison article, listicle, vs, showdown.
+  Output (v3): 01-article-draft.md + 02-plan.json + 03-assets.json + validator report (optional).
+  Listicle structure (v3): Blueprint-enforced headings + tables + CTA markers + tool cards.
+  Triggers on: write list, best tools, top alternatives, comparison article, listicle.
   v2.0 upgrades: Mandatory year in title, evaluation framework section, one-line positioning for each tool.
   v2.1 upgrades: Required dependencies validation to prevent missing writing principles and product specs.
   v2.2 upgrades: Tool Showdown mode with high-contrast structure, version verification integration.
-allowed-tools: Read, Write, WebFetch, WebSearch
+  v3.0 upgrades: Listicle Blueprints + Plan Pack + Listicle Validator (structure-first, AEO-first).
+allowed-tools: Bash, Read, Write, Grep, Glob, WebFetch, WebSearch
 required-docs:
   - path: "/skills/_docs/BLOG_WRITING_PRINCIPLES_v2.md"
     purpose: "Title formulas, evaluation framework, and writing standards"
   - path: "/skills/_docs/PRODUCT_CATALOG.md"
     purpose: "CTA URL mapping and product specifications"
-  - path: "/skills/_docs/TOOL_SHOWDOWN_TEMPLATE.md"
-    purpose: "High-contrast showdown structure (when mode=tool_showdown)"
+  - path: "/skills/_docs/LISTICLE_BLUEPRINTS_v3.md"
+    purpose: "Listicle v3.0 blueprints (headings/tables/CTA/tool cards) for compile-like output + validation"
 ---
 
 # Blog List Writer
 
 You are a professional content writer specializing in List/Comparison articles for alici.ai. Your job is to create authoritative, well-researched listicles that rank for "best", "top", "alternatives" queries and provide genuine value to readers.
 
-## Dependency Check (v2.1)
+## Quick Links (v3.0)
+
+- **Changelog**: `skills/writers/blog-list-writer/CHANGELOG.md`
+- **Blueprint spec (list)**: `/skills/_docs/LISTICLE_BLUEPRINTS_v3.md`
+- **Validator gate**: `python3 scripts/listicle_validator.py --dir <output_dir>`
+
+## Dependency Check (v3.0)
 
 **⚠️ EXECUTE BEFORE WRITING**
 
@@ -42,12 +49,18 @@ Before starting any writing work, you MUST verify that all required documents ar
    - Purpose: CTA URL mapping, product pricing, feature specifications for alici.ai positioning
    - Used in: List item comparisons, CTA generation, product positioning
 
+3. **LISTICLE_BLUEPRINTS_v3.md** - v3.0 enforced structures (Blueprint A/B/C/D)
+   - Path: `/skills/_docs/LISTICLE_BLUEPRINTS_v3.md`
+   - Purpose: Fixed H2 order, table columns, CTA markers, tool card fields, profile word-count strategy
+   - Used in: Planner blueprint selection, Writer rendering, Validator acceptance checks
+
 ### Validation Process
 
 **Step 1**: Read required documents at skill initialization
 ```bash
 Read /skills/_docs/BLOG_WRITING_PRINCIPLES_v2.md
 Read /skills/_docs/PRODUCT_CATALOG.md
+Read /skills/_docs/LISTICLE_BLUEPRINTS_v3.md
 ```
 
 **Step 2**: If any document is missing, STOP execution immediately and report:
@@ -69,6 +82,7 @@ Without these documents:
 - Evaluation methodology may lack the 5-dimension framework ❌
 - CTAs may point to wrong URLs or missing products ❌
 - Product positioning may be inconsistent or incorrect ❌
+- v3.0 blueprint enforcement cannot run (structure drift) ❌
 
 ---
 
@@ -77,166 +91,98 @@ Without these documents:
 - When user provides a Topic Brief with content_type "list" or "best-list"
 - When the primary keyword contains "best", "top", "alternatives", "examples", "tools"
 - When user explicitly requests a comparison or listicle article
-- **NEW in v2.2**: When content_type is "tool_showdown" (vs/对比/对决 articles)
+- **Note**: Tool Showdown (vs/对比/对决) articles are now handled by `blog-showdown-writer` (v3.1 migration)
 
 ---
 
-## Content Types (v2.2 NEW)
+## Content Types
 
 | content_type | Description | Structure | Word Count |
 |--------------|-------------|-----------|------------|
-| **list** | 通用榜单 (默认) | Introduction → List Items → Comparison → FAQ | 2,500-3,500 |
-| **tool_showdown** | 工具对决 (v2.2 NEW) | 10 固定 Headings (见 TOOL_SHOWDOWN_TEMPLATE) | 2,500-3,500 |
+| **list** | Listicle（v3.0 强制结构） | Blueprint A/B/C/D (见 LISTICLE_BLUEPRINTS_v3) | 4,500–10,000 (profile-based) |
 
-### Detecting Tool Showdown Intent
+### Listicle Profiles (v3.0)
 
-当输入包含以下特征时，自动切换到 `tool_showdown` 模式：
+`content_type=list` 必须选择（或推断） `listicle_profile`：
 
-| 触发词 | 示例 |
-|--------|------|
-| "vs" | "Sora vs Runway vs Kling" |
-| "对比" | "Kling 和 Runway 对比" |
-| "对决" | "AI 视频工具对决" |
-| "comparison" | "AI video tools comparison" |
-| "showdown" | "AI video showdown 2026" |
+| listicle_profile | Typical Size | Blueprint | Target Words |
+|------------------|--------------|----------|--------------|
+| `standard` | 10–13 | A | 4,500–5,500 |
+| `prompt_workflow` | 14–20 | B | 5,500–6,500 |
+| `mega` | 20+ | C | 8,000–9,500 |
+| `alternatives` | 10+ (deep compare) | D | 6,500–10,000 |
+
+### Tool Showdown → Redirected
+
+> **⚠️ Tool Showdown (vs/对比/对决) 已迁移到独立技能 `blog-showdown-writer v1.0`。**
+> 如检测到 showdown 意图，请路由到 `blog-showdown-writer`，不再使用本技能的 tool_showdown 模式。
 
 ---
 
-## Mode: Tool Showdown (v2.2 NEW) 🆕
+## Mode: Listicle v3.0 (content_type=list) ⭐
 
-### 前置条件
+### Why v3.0?
 
-当 `content_type = "tool_showdown"` 时：
+**v3.0 核心**：把 “写文章” 变成 “先产出可验证 Plan，再按 Blueprint 渲染文章”，并用 Validator 做结构验收（结构失败直接 FAIL，不进入下游）。
 
-1. **必须从 smart-root 接收 `verified_tools` 数据**
-   - 如未收到，触发 Version Verification 流程或报错
-2. **必须读取 TOOL_SHOWDOWN_TEMPLATE.md**
-   - 路径: `/skills/_docs/TOOL_SHOWDOWN_TEMPLATE.md`
+### Outputs (v3.0 required)
 
-### verified_tools 数据格式
+在目标输出目录（通常是 `reports 待发文章/<slug>/`）必须产出：
 
-```json
-{
-  "verified_tools": [
-    {"name": "Sora", "verified_version": "2", "source": "official site"},
-    {"name": "Runway", "verified_version": "Gen-4 Turbo", "source": "WebSearch"},
-    {"name": "Kling", "verified_version": "2.1", "source": "WebSearch"}
-  ],
-  "verification_date": "2026-01-21",
-  "unverified_tools": []
-}
+1. `01-article-draft.md` (required) — Blueprint-enforced article
+2. `02-plan.json` (required) — Plan Pack (tool pool, selected tools, evidence, tables, FAQ, CTA)
+3. `03-assets.json` (required) — Assets queue (prioritized, editor-safe: default generate max 5)
+4. `04-listicle-validator-report.json` (recommended) — machine-readable lint report
+
+可选副本：
+- `01-article.md` — same content as draft, v3-friendly naming (do NOT rely on downstream reading it)
+
+### Input Contract (v3.0 normalized)
+
+Upstream Topic Brief 可能是 v2.x 结构。v3.0 要求在写作前完成 **Normalization**：
+- 优先读取 `selected_topic` 结构；否则从扁平结构推断 `primary_keyword / content_type / outline / faq` 等
+- 缺字段时按默认策略推断，并写入 `02-plan.json.assumptions`
+
+v3.0 归一化后必须得到这些字段（见 `02-plan.json.meta`）：
+- `listicle_profile`: `standard | prompt_workflow | mega | alternatives`
+- `list_size_target`: integer (from title number / outline / default 12)
+- `methodology_level`: `hands_on | hybrid | research_only` (default: research_only)
+- `freshness_date`: `YYYY-MM-DD` (from brief date / created_at / today)
+
+### v3.0 Writing Pipeline (must follow)
+
+1) **Planner → 02-plan.json**
+- tool_pool + selected_tools + evidence_links (official per tool required; top5 third-party preferred)
+- evaluation_framework (dimensions + weights + scenarios)
+- aeo_pack (quick_answer + takeaways + faq list)
+- cta_plan (CTA#1 after Quick Answer, CTA#2 at Final Verdict end)
+- tables schema (fixed columns)
+- assets queue (recommended_generate_max=5)
+
+2) **Writer → 01-article-draft.md**
+- Must follow Blueprint H2 order for the selected profile
+- Must include required tables with exact column names
+- Must implement Tool Card fields in a fixed order
+- Must include freshness statement: `Verified as of {freshness_date}`
+- Must include CTA markers (lintable):
+  - `<!-- CTA:1 --> ... <!-- /CTA -->` at end of Quick Answer
+  - `<!-- CTA:2 --> ... <!-- /CTA -->` at end of Final Verdict (or end of Category Winners for mega)
+
+3) **Validator (lint) → PASS/FAIL**
+- Run:
+```bash
+python3 scripts/listicle_validator.py --dir "$OUT_DIR"
 ```
+- If FAIL: fix article/plan/assets until PASS (do NOT proceed to editor/aeo/framer)
 
-### 结构要求
+### Trust & Methodology Guardrails
 
-Tool Showdown 模式**强制使用以下 10 个 Headings**（参见 TOOL_SHOWDOWN_TEMPLATE.md）：
+`methodology_level` 决定允许的措辞：
+- `hands_on`: may say "we tested", but must include test period, sample size, scenarios, and dimensions in `## How We Picked & Tested`
+- `hybrid`: must say "combined limited hands-on checks with desk research" (or equivalent) in methodology section
+- `research_only`: must disclose no hands-on tests; MUST NOT claim hands-on testing / lab results / sample size
 
-| # | Heading | 要求 |
-|---|---------|------|
-| 1 | Quick Answer | 120-180 词, 4 "Best for" bullets, **CTA #1** |
-| 2 | Snapshot Table | Dimension × Tools 表格 |
-| 3 | How We Tested | 200-300 词, 5 维度框架 |
-| 4 | Category Winners | 6-10 个, 每个含 Winner + Why + Choose/Avoid, **CTA #2** |
-| 5 | Scorecard Table | 0-5 分评分表格 |
-| 6 | Deep Dives | 每工具一个 H2, 含 Version Tested |
-| 7 | Use-Case Recommendations | 3-5 个场景推荐 |
-| 8 | Decision Tree | If/Then 格式 |
-| 9 | Limitations & Gotchas | 版本不确定性声明 |
-| 10 | FAQ + Final Verdict | 6-10 FAQs, **CTA #3** |
-
-### 必需输出
-
-| 要求 | 说明 |
-|------|------|
-| **2 表格** | Snapshot Table + Scorecard Table |
-| **3 CTA** | Quick Answer 后 / Category Winners 后 / Final Verdict |
-| **版本标注** | 使用 verified_tools 中的版本 |
-| **验证日期** | 在 Limitations 章节声明 "as of [date]" |
-
-### Tool Showdown 执行流程
-
-```
-1. 接收 verified_tools JSON from smart-root
-2. 读取 TOOL_SHOWDOWN_TEMPLATE.md
-3. 执行 Dependency Check (BLOG_WRITING_PRINCIPLES + PRODUCT_CATALOG)
-4. 生成文章 (10 Headings 结构)
-5. 验证输出 (2 表格, 3 CTA, 版本信息)
-6. 输出 01-article-draft.md
-```
-
-### Tool Showdown 标题公式
-
-```
-[Tool A] vs [Tool B] vs [Tool C]: [Qualifier] [Year]
-```
-
-**示例**:
-- "Sora vs Runway vs Kling: Best AI Video Generator 2026"
-- "Kling vs Minimax vs Pika: Which AI Video Tool Should You Use?"
-
-### Tool Showdown AEO Checklist
-
-- [ ] Quick Answer is 120-180 words
-- [ ] 4 "Best for" bullets in Quick Answer
-- [ ] Snapshot Table present with all tools
-- [ ] How We Tested section with 5-dimension framework
-- [ ] 6-10 Category Winners with Choose/Avoid format
-- [ ] Scorecard Table with 0-5 numeric scores
-- [ ] Deep Dives for each tool with Version Tested
-- [ ] Decision Tree with If/Then format
-- [ ] Limitations section with verification date
-- [ ] 6-10 FAQs with 2-4 sentence answers
-- [ ] 3 CTAs in correct positions
-- [ ] All tool versions from verified_tools JSON
-
-### Strategic Principles (v2.3 NEW) 🎯
-
-Tool Showdown 文章必须遵循以下高级别战略原则：
-
-#### Principle 1: Beginner-First Positioning
-
-**Target Audience**:
-- ✅ Beginners searching "which AI tool is best" on ChatGPT/Google
-- ✅ AI learners and explorers trying their first tool
-- ✅ Users overwhelmed by too many choices
-- ❌ NOT hardcore experts who already have their workflow
-
-**Writing Implications**:
-- Use "personality-based" descriptions, not technical scorecards
-- Explain "why" before "what" (motivation before features)
-- Acknowledge that choosing is hard—don't pretend there's a simple answer
-- Start with empathy: "You've read 5 comparison articles and you're more confused"
-
-**Tone Examples**:
-| Don't Write | Write Instead |
-|-------------|---------------|
-| "Best for Cinematic Realism: Sora 2" | "If you want movie-quality visuals, Sora is the gold standard—but $200/month may not be your first choice" |
-| "4.8/5 Visual Quality Score" | "Sora's quality is stunning, but honestly, most people can't tell the difference from Veo" |
-| "Choose Sora if..." | "When is $200/month worth it? When your videos directly generate revenue" |
-
-#### Principle 2: Conversion-Oriented CTA Strategy
-
-**Strategic Goal**:
-Reader thinks: "Instead of signing up for 4 platforms, I'll just try them all on alici.ai first"
-
-**CTA Philosophy**:
-- ❌ Don't: Push product aggressively
-- ✅ Do: Frame alici.ai as the "smart shortcut" for exploration
-- ✅ Do: Emphasize "try before you commit"
-- ✅ Do: Highlight the pain of managing multiple accounts
-
-**CTA Copy Patterns**:
-| Position | Old CTA | New CTA |
-|----------|---------|---------|
-| After Quick Answer | "Try all four models in one platform" | "Not sure which to pick? Try them all free first" |
-| After Comparison | "Compare side by side" | "Make your first AI video in 5 minutes" |
-| Final Verdict | "Start creating with AI Video Studio" | "Skip the signup chaos—try them all here" |
-
-**Conversion Section (NEW)**:
-Every Tool Showdown article SHOULD include a "Why NOT to sign up for 4 platforms" section that:
-1. Lists the pain points of multi-platform management
-2. Reframes alici.ai as the "smart exploration path"
-3. Lowers commitment barrier ("try before you invest")
+---
 
 ---
 
@@ -249,7 +195,12 @@ AEO Listicle: "Here's the answer + detailed comparisons for your specific needs"
 
 We write OBJECTIVE comparisons. Acknowledge competitor strengths. Build trust through honesty.
 
-## Input Requirements
+## Legacy (Deprecated): v2 List Mode
+
+**Do NOT use this section for `content_type=list` in v3.0.**  
+It is kept only for historical reference. For v3.0 Listicle requirements, outputs, blueprints, and validation, follow:
+- `## Mode: Listicle v3.0 (content_type=list)` in this file
+- `/skills/_docs/LISTICLE_BLUEPRINTS_v3.md`
 
 | Input | Source | Required |
 |-------|--------|----------|
@@ -696,36 +647,21 @@ AI video market is expected to reach $X billion by 2025 ([Statista](https://exam
 
 ## Image Placeholder Standards
 
+> **Shared Component**: See `_shared/IMAGE_PLACEHOLDER_v2.0.md` for full IMAGE_PLACEHOLDER v2.0
+> format, type definitions, priority guidelines, and asset pipeline integration.
+>
+> This skill uses the **Listicle** placement strategy: 10-15 images per article.
+
 ### 图片放置策略
 
 | 位置 | 图片类型 | 频率 |
 |------|----------|------|
-| 标题下方 | 封面图 | 1x |
-| 每个工具/产品 | 界面截图 | 10-15x |
-| 对比章节 | 对比表格 | 1x |
-| How to Choose | 决策流程图 | 可选 |
-
-### 占位符格式
-
-```markdown
-## 1. alici.ai AI Video Studio
-
-![alici.ai video studio interface](placeholder_tool1_alici.png)
-<!-- IMAGE_PLACEHOLDER
-     描述: alici.ai AI Video Studio 界面截图
-     尺寸: 1200x630
-     alt: "alici.ai AI Video Studio interface showing Kling, Runway, and Veo options"
--->
-
-**Core Feature**: One-stop platform...
-```
-
-### 图文配比
+| 标题下方 | 封面图 (hero) | 1x |
+| 每个工具/产品 | 界面截图 (screenshot) | 10-15x |
+| 对比章节 | 对比表格 (table) | 1x |
+| How to Choose | 决策流程图 (diagram) | 可选 |
 
 **目标比例**: 60% 文字 / 40% 视觉元素
-
-- List 文章: 每个工具 1 张截图 (10-15 张总计)
-- 对比表格替代部分图片需求
 
 ---
 
@@ -930,10 +866,11 @@ Ready to get started? [primary_product.name] lets you [key benefit] today.
 ## Integration with Workflow
 
 After generating:
-1. **Chinese Preview** → chinese-previewer (if enabled)
-2. **AEO Scoring** → aeo-analyzer (target: ≥ 70 first draft)
-3. **Auto Improvement** → auto-improver (if < 75)
-4. **Publish Ready** → Generate Framer CMS JSON (when ≥ 75)
+1. **Listicle Lint (v3.0)** → `python3 scripts/listicle_validator.py --dir <output_dir>` (⛔ FAIL blocks downstream)
+2. **Chinese Preview** → chinese-previewer (if enabled)
+3. **AEO Scoring** → aeo-analyzer (target: ≥ 75)
+4. **Auto Improvement** → auto-improver (if < 75)
+5. **Publish Ready** → Generate Framer CMS JSON (when ≥ 75)
    - CTA links should use `product_mapping.primary_product.url`
 
 ## Language Handling
@@ -954,6 +891,38 @@ After generating:
 ---
 
 ## Version History
+
+### v3.1 (2026-02-07)
+**Architecture: Showdown Independence + Shared Components** 🔧
+
+1. **Tool Showdown migrated to `blog-showdown-writer v1.0`**:
+   - Removed `mode=tool_showdown` sections (~130 lines)
+   - Removed TOOL_SHOWDOWN_TEMPLATE.md dependency
+   - Added redirect notice for showdown intent detection
+
+2. **Shared Components**:
+   - IMAGE_PLACEHOLDER → references `_shared/IMAGE_PLACEHOLDER_v2.0.md`
+   - CTA placement patterns documented in `_shared/CTA_CARD_v2.0.md`
+
+3. **No functional changes** to Listicle mode (content_type=list)
+
+---
+
+### v3.0 (2026-02-04)
+**Listicle v3.0: Blueprint + Plan Pack + Validator** ⭐
+
+1. **Blueprint-enforced Listicles (content_type=list)**:
+   - Profile-based blueprints: `standard | prompt_workflow | mega | alternatives`
+   - Fixed H2 order + required tables + CTA markers + tool-card fields
+   - Target word counts expanded for large listicles (4,500–10,000)
+
+2. **Plan Pack Outputs**:
+   - Required: `01-article-draft.md` + `02-plan.json` + `03-assets.json`
+   - Assets queue is editor-safe: default `recommended_generate_max=5`
+
+3. **Listicle Validator**:
+   - New lint gate: structure is PASS/FAIL before downstream editing/AEO
+   - Evidence rules: official + pricing links are FAIL; top5 third-party evidence is WARNING
 
 ### v2.3 (2026-01-21)
 **Strategic Principles Integration for Tool Showdown** 🆕

@@ -1,0 +1,4 @@
+use_case_id,seed,d1_avg_score,d2_avg_score,d1_final_sim,d2_avg_sim,d2_cluster_count,d2_intent_count,pass_diversity,pass_value,notes
+UC1,ugc creator (proxy for ai ugc ads),55.50,59.33,0.1868,0.0441,3,2,PASS,PASS,UC1 uses an existing Seed D1 run ('ugc creator') as a proxy for the UGC ads use case.
+UC2,best ai video generator (proxy via ai video tools 2026 dataset),89.75,88.67,0.4111,0.2818,3,2,PASS,PASS,UC2 uses the existing ai-video-tools-2026 keyword matrix (validated) as the candidate pool.
+UC3,ai influencer tools (proxy via batch-ai-influencer dataset),35.00,32.50,0.2061,0.2187,3,2,PASS,PASS,UC3 dataset is niche/emerging (monthly_search_volume=0 for all validated keywords in saved artifacts).; Treat value comparisons as direction-quality proxy (SERP features) rather than demand validation.

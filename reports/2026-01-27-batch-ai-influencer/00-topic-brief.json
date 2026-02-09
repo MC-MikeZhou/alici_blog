@@ -1,0 +1,220 @@
+{
+  "topic": "How to Create AI Influencers at Scale",
+  "slug": "batch-ai-influencer-tutorial-2026",
+  "content_type": "tutorial",
+  "word_count_target": 3500,
+  "language": "en",
+  "
+_date": "2026-01-27",
+  "source": {
+    "type": "chinese_draft",
+    "file": "00-chinese-source.md",
+    "word_count": 903,
+    "quality": "high_data_density"
+  },
+  "primary_keyword": "how to create AI influencer at scale",
+  "primary_keyword_validation": {
+    "search_volume": 0,
+    "competition": "MODERATE",
+    "tier": "TIER_4_EMERGING",
+    "aeo_features": ["Featured Snippet"],
+    "first_mover_advantage": true,
+    "ranking_timeline": "2-4 weeks",
+    "confidence": "95-98%",
+    "dataforseo_cost": "$0.068",
+    "validation_date": "2026-01-27"
+  },
+  "secondary_keywords": [
+    "batch AI influencer tutorial 2026",
+    "AI digital human content creation",
+    "scalable AI influencer strategy"
+  ],
+  "product_mapping": {
+    "primary": "AI Video Studio",
+    "secondary": "Image to AI Video",
+    "tertiary": "Any Script 2 AI Video",
+    "integration_level": "L3_natural_positioning"
+  },
+  "title_format": "How to [Action] + [Tool/Method] + [Promise/Year]",
+  "title_locked": "How to Create AI Influencers at Scale | Complete 2026 Batch Processing Guide",
+  "title_alternatives": [
+    "How to Build AI Digital Humans in Bulk | Step-by-Step Scalable Framework",
+    "How to Launch Batch AI Influencers | Proven Tutorial for Content Creators 2026"
+  ],
+  "data_sources": {
+    "primary": [
+      {
+        "source": "eMarketer",
+        "stat": "45% YoY growth in AI-generated content market (2025)",
+        "url": "placeholder"
+      },
+      {
+        "source": "Hootsuite",
+        "stat": "63% of marketers plan to increase AI adoption in 2026",
+        "url": "placeholder"
+      },
+      {
+        "source": "Wyzowl",
+        "stat": "Video content converts 10x better than text",
+        "url": "placeholder"
+      }
+    ],
+    "case_studies": [
+      {
+        "case": "AI Baby Dance",
+        "metric": "94,000+ likes",
+        "platform": "TikTok",
+        "impact": "Global imitation trend"
+      },
+      {
+        "case": "HeyGen TikTok Account",
+        "metric": "28,000+ likes",
+        "platform": "TikTok",
+        "impact": "Brand demonstration"
+      },
+      {
+        "case": "Kling Motion Control",
+        "metric": "700,000+ views",
+        "platform": "Multi-platform",
+        "impact": "Showcase of batch capabilities"
+      }
+    ],
+    "additional_data": [
+      "53% ad load reduction with batch production",
+      "46% time usage increase with automation",
+      "1.389 billion views/minute on short video platforms",
+      "98% content from 25% creators (power law distribution)",
+      "$5-10 per video production cost",
+      "4-8 weeks to 1,000 followers (low competition niche)",
+      "$500-$5,000+ monthly monetization potential"
+    ]
+  },
+  "structure_mapping": {
+    "chinese_sections": [
+      "概述",
+      "为什么现在需要 AI Influencer",
+      "Step 0: 准备阶段",
+      "Step 1: 选择角色和 Niche",
+      "Step 2: 生成素材",
+      "Step 3: 批量制作",
+      "Step 4: 发布策略",
+      "Step 5: 互动运营",
+      "Step 6: 数据分析",
+      "Step 7: 变现",
+      "FAQ (7 questions)",
+      "数据源与参考"
+    ],
+    "english_sections": [
+      "YAML Frontmatter",
+      "Key Takeaways (5-7 bullets, within 500 chars after H1)",
+      "AIDA Opening (80-120 words)",
+      "Why Now: The Data-Driven Case for AI Influencers",
+      "Understanding the Building Blocks",
+      "Step 1: Pick a Scalable Content Format",
+      "Step 2: Build Your Character Library",
+      "Step 3: Create Your Motion Library",
+      "Step 4: Batch-Generate with Kling Motion Control",
+      "Step 5: Add Talking Head Videos (HeyGen / Veo 3.1)",
+      "Step 6: Make Batch Content Look Unique",
+      "Step 7: Scale Your Publishing Cadence",
+      "Step 8: Review, Remix, and Double Down",
+      "Common Mistakes to Avoid (NEW, 3-5 items)",
+      "FAQ (All 7 preserved)",
+      "Sources (inline citations throughout)"
+    ]
+  },
+  "content_preservation_requirements": {
+    "must_preserve": [
+      "All specific numbers (94K, 28K, 700K, 53%, 46%, 1.389亿, 98%/25%)",
+      "All data sources (eMarketer, Hootsuite, Pew Research, Wyzowl, Teen Vogue, Reuters)",
+      "All 7 FAQ questions and answers",
+      "Kling vs HeyGen vs Veo 3.1 tool positioning logic",
+      "Character prompt templates",
+      "Motion library structure",
+      "Cost breakdown ($5-10 per video)",
+      "Timeline data (4-8 weeks to 1K followers)",
+      "Monetization ranges ($500-$5,000+)"
+    ],
+    "must_add": [
+      "YAML Frontmatter with all required fields",
+      "Key Takeaways (5-7 bullets, within 500 chars after H1) - BLOCKING",
+      "AIDA Opening (80-120 words, 4 paragraphs) - BLOCKING",
+      "5+ Citable Blocks (40-80 words each)",
+      "5-7 Image placeholders with specific descriptions",
+      "Common Mistakes to Avoid section (3-5 items)",
+      "Inline citations in [Source](URL) format",
+      "Footer signature",
+      "End-of-article CTA Card - BLOCKING"
+    ]
+  },
+  "tool_references": {
+    "ai_generation_tools": [
+      "HeyGen (recommended, 100+ templates)",
+      "D-ID (high-precision lip sync)",
+      "Synthesia (enterprise solution)",
+      "Kling Motion Control (batch generation)",
+      "Veo 3.1 (talking head alternative)"
+    ],
+    "editing_tools": [
+      "CapCut (mobile, quick editing)",
+      "Adobe Premiere Pro (professional)",
+      "Alici AI Multi-Model Platform (one-stop solution)"
+    ],
+    "publishing_tools": [
+      "Later (Instagram scheduling)",
+      "Buffer (multi-platform publishing)",
+      "Hootsuite (analytics tracking)"
+    ]
+  },
+  "faq_preserved": [
+    {
+      "q": "Do AI digital human content violate platform policies?",
+      "a": "No, but transparency is required. Recommend marking 'AI-powered' in bio and video descriptions."
+    },
+    {
+      "q": "Can one person run multiple AI Influencer accounts?",
+      "a": "Yes. Start with 1-2 accounts, expand to 5-10 after establishing templated workflows."
+    },
+    {
+      "q": "What's the cost per video?",
+      "a": "HeyGen subscription: $95-$195/month, music: free (YouTube Audio Library), editing: CapCut free or Adobe $55/month. Total: ~$5-$10 per video."
+    },
+    {
+      "q": "How long until follower growth?",
+      "a": "Low competition: 4-8 weeks to 1,000 followers. Medium: 8-12 weeks. High: 3-6 months."
+    },
+    {
+      "q": "Full-time or side hustle?",
+      "a": "Start as side hustle (5-8 hrs/week for 0-3 months), semi-pro (15-20 hrs/week for 3-6 months), consider full-time after 6+ months."
+    },
+    {
+      "q": "How to handle algorithm changes?",
+      "a": "Follow official announcements, run quick A/B tests, maintain content diversity, build private audience (email/community)."
+    },
+    {
+      "q": "Is AI Influencer sustainable long-term?",
+      "a": "Yes. Global AI content market projected 45% growth in 2025. Early positioning builds brand premium. Tools like Alici AI lower technical barriers."
+    }
+  ],
+  "target_audience": {
+    "primary": "Content creators looking to scale",
+    "secondary": "Marketing professionals exploring AI automation",
+    "tertiary": "Side hustlers seeking passive income"
+  },
+  "seo_intent": "transactional + informational",
+  "aeo_target": 75,
+  "estimated_reading_time": "12-14 minutes",
+  "content_angle": "step_by_step_tutorial_with_data_validation",
+  "unique_value_proposition": "Only tutorial combining batch production workflows with real cost/timeline data and 7 platform-specific FAQs",
+  "execution_notes": {
+    "phase_2_priority": "Information fidelity over stylistic translation",
+    "blocking_elements": [
+      "YAML Frontmatter",
+      "Key Takeaways within 500 chars after H1",
+      "AIDA Opening",
+      "End-of-article CTA"
+    ],
+    "optional_validation": "DataForSEO keyword check (~$0.37 cost)",
+    "context_management": "Run /compact after Phase 2 if approaching 30% (60,000 tokens)"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "meta": {
+    "version": "3.0",
+    "tier": 2,
+    "word_count": 2202,
+    "generated_at": "2026-02-06T19:10:00Z"
+  },
+  "aeo_pre_check": {
+    "estimated_score": 85,
+    "citable_blocks": 5,
+    "citable_block_types": [
+      "comparison",
+      "definition",
+      "key_takeaway",
+      "methodology",
+      "recommendation"
+    ],
+    "experience_evidence": "partial",
+    "faq_count": 8
+  },
+  "tier_compliance": {
+    "tier_detected": 2,
+    "tier_justification": "Workflow-focused tutorial with prerequisites, 7 operational steps, troubleshooting table, and FAQ.",
+    "word_count_in_range": true,
+    "conditional_sections_correct": true
+  },
+  "sections": {
+    "prerequisites": true,
+    "workflow_selector": false,
+    "market_context": false,
+    "monetization_framework": false,
+    "troubleshooting": true
+  },
+  "images": [
+    {
+      "id": "hero-sora2-viral-workflow",
+      "type": "hero",
+      "priority": "required",
+      "alt": "Sora 2 short-form workflow from prompt structure to A/B publishing",
+      "where": "Below H1 opening"
+    },
+    {
+      "id": "prompt-version-log",
+      "type": "diagram",
+      "priority": "recommended",
+      "alt": "Simple prompt version log with one-variable change tracking",
+      "where": "After prerequisites table"
+    },
+    {
+      "id": "packaging-checklist-card",
+      "type": "comparison",
+      "priority": "recommended",
+      "alt": "Before-and-after packaging comparison for short-form publish quality",
+      "where": "After Step 6 checklist"
+    }
+  ],
+  "ctas": [
+    {
+      "position": "after-step-3",
+      "trigger": "friction_point",
+      "product": "video_prompt",
+      "cta_type": "try_free",
+      "url": "https://app.alici.ai/pages/videoGen"
+    },
+    {
+      "position": "end",
+      "trigger": "decision",
+      "product": "video_studio",
+      "cta_type": "learn_more",
+      "url": "https://app.alici.ai/pages/videoGen"
+    }
+  ],
+  "validation": {
+    "schema_markers_complete": true,
+    "step_headings_contiguous": true,
+    "self_test_placeholder_present": true,
+    "notes": "Canonical v3 draft for validator-first workflow."
+  },
+  "warnings": [
+    "SELF_TEST_PLACEHOLDER present: replace with measured experiment_pack results before final publication."
+  ]
+}

@@ -1,6 +1,6 @@
 # 02 - Skills 清单
 
-> 所有 Skills 的 High-Level 定义与分类 (v2.7 - 2026-01-21 更新)
+> 所有 Skills 的 High-Level 定义与分类 (v3.2 - 2026-02-07 更新)
 
 ---
 
@@ -16,16 +16,19 @@ skills/
 │   ├── PRODUCT_CATALOG.md
 │   └── TOOL_SHOWDOWN_TEMPLATE.md
 │
-├── core/                 # 核心入口 (5 个 Skills)
+├── core/                 # 核心入口 (6 个 Skills)
 │   ├── smart-launcher/
 │   ├── growth-topic-scout/
+│   ├── art-scout/            # 🆕 v1.1 Agent Team 多角色研究
 │   ├── aeo-analyzer/
 │   ├── editor/
 │   └── auto-improver/
 │
-├── writers/              # Writer 组 (4 个 Skills)
+├── writers/              # Writer 组 (5 个 Skills + 共享层)
+│   ├── _shared/              # 🆕 共享组件 (CTA_CARD, IMAGE_PLACEHOLDER, WRITER_COMPONENTS)
 │   ├── blog-tutorial-writer/
 │   ├── blog-list-writer/
+│   ├── blog-showdown-writer/ # 🆕 v1.0 独立 Showdown 技能
 │   ├── case-roundup-writer/
 │   └── chinese-previewer/
 │
@@ -54,40 +57,42 @@ skills/
 
 | Skill | 版本 | 用途 | 触发关键词 | 状态 |
 |-------|------|------|------------|------|
-| **smart-router** | v2.0 | 智能路由，自然语言意图识别 | 自动激活 | ✅ |
-| **smart-root** | v2.2 🆕 | 交互式选题确认 + 版本验证 | "帮我写", "vs", "对比" | ✅ |
-| **batch-processor** | v1.0 | 批量处理多 URL | "批量", "多个" | ✅ |
+| **smart-launcher** | v2.3 ⭐ | 四轨制统一入口 + 意图前置 | "帮我写", "vs", "对比", "seed mode" | ✅ |
+| **growth-topic-scout** | v2.4 | 竞品分析 + 选题发现 + Seed D2 多样性发散 | "竞品分析", "选题", "seed mode" | ✅ |
+| **art-scout** | v1.1 🆕 | Agent Team 多角色并行研究 | "团队研究", "全景扫描", "agent team" | ✅ |
+| **batch-processor** | v1.1 | 批量处理多 URL | "批量", "多个" | ✅ |
 | **aeo-analyzer** | v2.4 | AEO 内容评估 (100 分制) | "AEO 分析" | ✅ |
-| **auto-improver** | v2.1 | 基于 AEO 评分自动改进 | "改进文章" | ✅ |
-| **growth-topic-scout** | v1.2 | 竞品分析 + 选题发现 | "竞品分析", "选题" | ✅ |
-| **editor** | v2.6 | 图片生成 + 优化 + 版本检查 | "edit article" | ✅ |
-| **competitive-validator** | v1.0 🆕 | 竞品验证 + PASS/FAIL 判定 | "竞品验证" | ✅ |
-| **trending-monitor** | v1.0 🆕 | QDF 热点信号检测 | "热点监测" | ✅ |
-| **markdown-to-framer** | v1.0 | 内容转 Framer CMS JSON | "convert to framer" | ✅ |
-| **framer-previewer** | v1.0 | Framer 本地预览 | "preview framer" | ✅ |
-| **youtube-transcript-fetcher** | v1.0 | YouTube 字幕抓取 | "抓取字幕", "transcript" | ✅ |
+| **auto-improver** | v2.2 | 基于 AEO 评分自动改进 | "改进文章" | ✅ |
+| **editor** | v2.9.2 | 图片生成 + 优化 + Editor Gate + Writer Feedback | "edit article" | ✅ |
+| **competitive-validator** | v1.1 | 竞品验证 + PASS/FAIL 判定 | "竞品验证" | ✅ |
+| **trending-monitor** | v1.1 | QDF 热点信号检测 | "热点监测" | ✅ |
+| **markdown-to-framer** | v1.3 | 内容转 Framer CMS JSON | "convert to framer" | ✅ |
+| **framer-previewer** | v1.1 | Framer 本地预览 | "preview framer" | ✅ |
+| **youtube-transcript-fetcher** | v1.1 | YouTube 字幕抓取 | "抓取字幕", "transcript" | ✅ |
 
-### smart-router v2.0
+### smart-launcher v2.3 ⭐
 
-- **定位**: 智能路由层，自动识别用户意图并分发到对应工作流
-- **输入**: 自然语言 | /命令 | URL
-- **输出**: 路由到对应的 Skill 或命令
-- **v2.0 升级**: 写作意图自动路由到 smart-root
+- **定位**: 四轨制统一入口，意图前置架构
+- **输入**: 自然语言 | /命令 | URL | 种子词
+- **输出**: 路由到对应模式 → Writer → 全自动执行
+- **v2.3 升级**: 新增 Route D 深度研究 (art-scout 集成)
+- **四轨制**:
+  1. [A] 全自动模式 - URL → 洗稿 → 一键到 Preview
+  2. [B] 手动模式 - 5 步确认 + DataForSEO
+  3. [C] Seed 模式 - 选题漏斗 (2-3 方向)
+  4. [D] 深度研究 - art-scout 5 Agent 并行 (5-8 方向)
+- **合并组件**: smart-router v2.0 + smart-root v2.2 (已废弃)
 
-### smart-root v2.2 🆕
+### art-scout v1.1 🆕
 
-- **定位**: 交互式选题确认 + 工具对决版本验证
-- **输入**: 写作意图描述
-- **输出**: 4 步问卷确认后全自动执行
-- **流程**:
-  1. Phase 0: 版本验证 (检测 vs/对比 → WebSearch 验证)
-  2. Step 1: 内容类型选择 (含 Tool Showdown)
-  3. Step 2: DataForSEO 搜索量验证
-  4. Step 3: 标题选择 (5+ 选项)
-  5. Step 4: 语言+配图确认
-- **v2.2 升级**: 新增 Phase 0 版本验证，输出 verified_tools JSON
+- **定位**: Agent Team 多角色并行选题研究
+- **输入**: 种子词 + 3 个问题 (受众/目标/产品)
+- **输出**: 5-8 个 Direction + Decision Brief + DataForSEO 验证数据
+- **架构**: 5 Agent 并行 (keyword_scout, content_strategist, market_analyst, tech_specialist, user_persona) → CEO 综合
+- **独立触发**: 团队研究, 多角色选题, 全景扫描, agent team
+- **SmartLauncher 集成**: Route D 深度研究模式
 
-### batch-processor v1.0
+### batch-processor v1.1
 
 - **定位**: 批量处理多个 URL
 - **输入**: URL 列表 (手动或文件)
@@ -108,12 +113,16 @@ skills/
 - **输出**: 改进版 + Changelog
 - **v2.1 升级**: E-E-A-T 保护标记系统
 
-### growth-topic-scout v1.2
+### growth-topic-scout v2.3
 
 - **定位**: 竞品内容分析，发现验证的选题机会
-- **输入**: 竞品 URL
-- **输出**: Top 10 选题 (100 分制) + Topic Brief
-- **v1.2 升级**: 3 类型标题建议 + CTR 预测 + trending-monitor 集成
+- **输入**: 竞品 URL / 种子关键词（含发散选题）
+- **输出**:
+  - Mode A: Top 10 选题 + Topic Brief
+  - Mode B: 关键词矩阵 + Top 20 选题 + 差距报告
+  - Seed D1: 2 个 Direction（可直接开写）
+  - Seed D2: 3 个 Direction + `diversity_report`（可量化多样性）
+- **v2.3 升级**: 新增 Seed D2（多策略发散 → 语义聚类去重 → 多样性门禁 → DataForSEO 验证）
 
 ### editor v2.6
 
@@ -146,32 +155,47 @@ Blog 生产线特有的内容生成能力。
 
 | Skill | 版本 | 用途 | 字数 | 状态 |
 |-------|------|------|------|------|
-| **blog-tutorial-writer** | v2.2 | Tutorial 教程文章 | 1,800-2,500 | ✅ |
-| **blog-list-writer** | v2.2 🆕 | List 榜单文章 + Tool Showdown | 2,500-3,500 | ✅ |
-| **case-roundup-writer** | v1.3 | 案例汇总小博文 | 300-600 | ✅ |
-| **chinese-previewer** | v1.0 | 中文预览版 | - | ✅ |
+| **blog-tutorial-writer** | v3.1 ⭐ | Tutorial 教程文章 (Three-Tier) | 1,800-3,500 | ✅ |
+| **blog-list-writer** | v3.1 ⭐ | List 榜单文章 (Blueprint 强制) | 4,500-10,000 | ✅ |
+| **blog-showdown-writer** | v1.0 🆕 | Tool Showdown 工具对决 | 2,500-3,500 | ✅ |
+| **case-roundup-writer** | v1.5 | 案例汇总小博文 | 300-600 | ✅ |
+| **chinese-previewer** | v1.1 | 中文预览版 | - | ✅ |
 
-### blog-tutorial-writer v2.2
+### blog-tutorial-writer v3.1 ⭐
 
-- **定位**: 生成 1,800-2,500 词的 Tutorial 教程文章
+- **定位**: 生成 1,800-3,500 词的 Tutorial 教程文章
+- **输入**: Topic Brief | Insight Pack (可选)
+- **输出**: 符合规范的 Tutorial + SEO 元数据 + Self-Check JSON
+- **v3.1 特性**:
+  - Three-Tier 分级 (Tier 1/2/3 自动匹配复杂度)
+  - Citable Block Taxonomy v3.0 (7 种引用块类型)
+  - CTA/IMAGE 引用共享组件 (`/skills/writers/_shared/`)
+  - experiment_pack 可选经验证据
+
+### blog-list-writer v3.1 ⭐
+
+- **定位**: 生成 4,500-10,000 词的 List 榜单文章
 - **输入**: Topic Brief
-- **输出**: 符合规范的 Tutorial 文章 + SEO 元数据
-- **结构**: Direct Answer → Introduction → Background → Steps → [Prompt Structure (if AI)] → Mistakes → Tips → Conclusion → FAQ
-- **v2.2 升级**: 版本继承机制，检测并保留 improved 版本的 E-E-A-T 内容
+- **输出**: Blueprint 强制结构 + Plan Pack Bundle + Validator Gate 报告
+- **v3.1 特性**:
+  - 4 种 Blueprint Profile (A/B/C/D)
+  - Plan Pack Bundle (4 文件输出)
+  - Listicle Validator Gate (PASS/FAIL)
+  - methodology_level 护栏
+  - tool_showdown 模式已独立为 blog-showdown-writer
 
-### blog-list-writer v2.2 🆕
+### blog-showdown-writer v1.0 🆕
 
-- **定位**: 生成 2,500-3,500 词的 List 榜单文章
-- **输入**: Topic Brief | verified_tools JSON (工具对决)
-- **输出**: 符合规范的 List 文章 + 评测方法论 + 对比表格
-- **结构**: Direct Answer → Introduction → Evaluation Methodology → Items → Comparison → How to Choose → FAQ
-- **v2.2 升级**:
-  - 新增 `tool_showdown` 内容类型
-  - 10 固定 Headings 高对比度结构
-  - Category Winners (Choose/Avoid) 格式
-  - 2 表格 (Snapshot + Scorecard) + 3 CTA
+- **定位**: 生成 2,500-3,500 词的 Tool Showdown 工具对决文章
+- **输入**: Topic Brief + verified_tools JSON
+- **输出**: 11 固定标题结构 + Showdown Plan + Showdown Validator Gate
+- **v1.0 特性**:
+  - 从 blog-list-writer tool_showdown 模式独立
+  - P4 Reframe 强制开篇 + L4 Integrator 定位
+  - evidence_level 护栏 (source_based / hybrid / hands_on)
+  - Source Attribution 章节
 
-### case-roundup-writer v1.3
+### case-roundup-writer v1.5
 
 - **定位**: 生成 300-600 词的案例汇总小博文
 - **输入**: Real Material (视频 URL、字幕、观察案例) - **必需**
@@ -199,7 +223,7 @@ Skills 共享的配置和参考文档。
 | **PRODUCT_CATALOG.md** | CTA 映射、产品定价 | 所有 Writer Skills |
 | **BRAND_VISUAL_GUIDE.md** | 绿色视觉规范、ICSB 框架 | Editor |
 | **BLOG_WRITING_PRINCIPLES_v2.md** | 标题公式、评测方法论 | 所有 Writer Skills |
-| **TOOL_SHOWDOWN_TEMPLATE.md** 🆕 | 工具对决 10 Headings 结构 | blog-list-writer (tool_showdown) |
+| **TOOL_SHOWDOWN_TEMPLATE.md** | 工具对决 11 Headings 结构 | blog-showdown-writer |
 | **BLOG_CONTENT_REGISTRY.md** | 内容注册表 | smart-root |
 
 ---
@@ -208,22 +232,17 @@ Skills 共享的配置和参考文档。
 
 | 类别 | 数量 | 已实现 |
 |------|------|--------|
-| 共用 Skills | 12 | 12 |
-| Blog Skills | 4 | 4 |
-| **总计** | **16** | **16** |
+| 共用 Skills | 13 | 13 |
+| Blog Skills | 5 | 5 |
+| **总计** | **18** | **18** |
 
-### v2.7 更新 (2026-01-21)
+### v3.2 更新 (2026-02-07)
 
-1. **smart-root v2.2** - Phase 0 版本验证 + verified_tools JSON
-2. **blog-list-writer v2.2** - tool_showdown 模式 + 10 固定 Headings
-3. **TOOL_SHOWDOWN_TEMPLATE.md** - 工具对决文章结构规范
-
-### v2.6 更新 (2026-01-20)
-
-1. **competitive-validator v1.0** - 竞品验证 + PASS/FAIL
-2. **trending-monitor v1.0** - QDF 热点信号检测
-3. **editor v2.6** - Visual Asset System
-4. **aeo-analyzer v2.4** - Content Freshness Signals
+1. **art-scout v1.1** - Agent Team 多角色并行研究 (SmartLauncher Route D)
+2. **blog-showdown-writer v1.0** - 独立 Showdown 技能 (从 blog-list-writer 分离)
+3. **smart-launcher v2.3** - 四轨制架构 (新增深度研究)
+4. **blog-tutorial-writer v3.1** + **blog-list-writer v3.1** - 共享组件层
+5. **case-roundup-writer v1.5** - Editor Gate 集成
 
 ---
 

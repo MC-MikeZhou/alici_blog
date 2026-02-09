@@ -12,6 +12,7 @@
       "Bash(rsync:*)",
       "Bash(ls:*)",
       "Bash(xargs cat:*)",
+
       "Bash(sshpass -p '5A_p@cjpX74H\\(LJM' rsync -avp -e 'ssh -p 22 -o StrictHostKeyChecking=no' --progress \"videos by models/sora2-podcast.mp4\" root@45.76.70.215:/var/www/static/static/image/other/sora2-podcast.mp4)",
       "Bash(sshpass -p '5A_p@cjpX74H\\(LJM' rsync -avp -e 'ssh -p 22 -o StrictHostKeyChecking=no' --progress \"videos by models/Gen-4.5 is a major step forward for generative video that understands anatomy, physics and motion..mp4\" root@45.76.70.215:/var/www/static/static/image/other/runway-gen45-demo.mp4)",
       "Bash(sshpass -p '5A_p@cjpX74H\\(LJM' rsync -avp -e 'ssh -p 22 -o StrictHostKeyChecking=no' --progress \"videos by models/Wan2.6 Camera Logic and Cinematic Direction Inside Every Frame.mp4\" root@45.76.70.215:/var/www/static/static/image/other/wan26-camera-demo.mp4)",
@@ -36,7 +37,11 @@
       "WebFetch(domain:www.topview.ai)",
       "WebFetch(domain:usemintly.com)",
       "mcp__firecrawl__firecrawl_search",
-      "Bash(source:*)"
+      "Bash(source:*)",
+
+      "Skill(analyze-aeo)",
+      "Skill(analyze-aeo:*)"
+
     ],
     "deny": [],
     "ask": []

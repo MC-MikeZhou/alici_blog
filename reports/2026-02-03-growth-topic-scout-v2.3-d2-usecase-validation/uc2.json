@@ -1,0 +1,138 @@
+{
+  "use_case_id": "UC2",
+  "zh_prompt": "10个最佳 AI Video Generator 是什么？",
+  "seed": "best ai video generator (proxy via ai video tools 2026 dataset)",
+  "source_dir": "/Users/H/Documents/AliciBlog/reports 待发文章/2026-01-24-ai-video-tools-2026",
+  "d1": {
+    "directions": [
+      {
+        "id": "UC2-C02",
+        "title": "sora 2 vs runway gen-4",
+        "primary_keyword": "sora 2 vs runway gen-4",
+        "theme": "AI Video Tools",
+        "intent_type": "comparison",
+        "seo_score": 92.0,
+        "aeo_score": 88.0,
+        "volume": 12200.0,
+        "strategy_source": "serp_gap",
+        "cluster_id": null
+      },
+      {
+        "id": "UC2-C05",
+        "title": "sora 2 vs kling 2.6 vs veo 3",
+        "primary_keyword": "sora 2 vs kling 2.6 vs veo 3",
+        "theme": "AI Video Tools",
+        "intent_type": "comparison",
+        "seo_score": 89.0,
+        "aeo_score": 90.0,
+        "volume": 7500.0,
+        "strategy_source": "serp_gap",
+        "cluster_id": null
+      }
+    ],
+    "note": "D1 baseline is reconstructed as top-2 by (SEO+AEO)/2 from existing validated keyword matrix outputs."
+  },
+  "d2": {
+    "directions": [
+      {
+        "id": "UC2-C02",
+        "title": "sora 2 vs runway gen-4",
+        "primary_keyword": "sora 2 vs runway gen-4",
+        "theme": "AI Video Tools",
+        "intent_type": "comparison",
+        "seo_score": 92.0,
+        "aeo_score": 88.0,
+        "volume": 12200.0,
+        "strategy_source": "serp_gap",
+        "cluster_id": "C01"
+      },
+      {
+        "id": "UC2-C05",
+        "title": "sora 2 vs kling 2.6 vs veo 3",
+        "primary_keyword": "sora 2 vs kling 2.6 vs veo 3",
+        "theme": "AI Video Tools",
+        "intent_type": "comparison",
+        "seo_score": 89.0,
+        "aeo_score": 90.0,
+        "volume": 7500.0,
+        "strategy_source": "serp_gap",
+        "cluster_id": "C02"
+      },
+      {
+        "id": "UC2-C01",
+        "title": "best ai video tools 2026",
+        "primary_keyword": "best ai video tools 2026",
+        "theme": "AI Video Tools",
+        "intent_type": "list",
+        "seo_score": 88.0,
+        "aeo_score": 85.0,
+        "volume": 14500.0,
+        "strategy_source": "seed_xpollination",
+        "cluster_id": "C03"
+      }
+    ],
+    "diversity_report": {
+      "engine_version": "2.3-diversity-offline",
+      "thresholds": {
+        "cluster_threshold": 0.6,
+        "target_avg_similarity": 0.5,
+        "final_pairwise_max": 0.6,
+        "min_final_clusters": 3,
+        "min_intent_types_final": 2
+      },
+      "metrics": {
+        "avg_pairwise_similarity": 0.2818,
+        "max_pairwise_similarity": 0.4929,
+        "cluster_count": 3,
+        "intent_type_count": 2
+      },
+      "strategy_mix": {
+        "counts": {
+          "serp_gap": 2,
+          "seed_xpollination": 1
+        }
+      },
+      "gate_passed": true,
+      "rejection_log": [],
+      "similarity_to_other_finals": {
+        "UC2-C02": [
+          {
+            "direction_id": "UC2-C05",
+            "similarity": 0.4929
+          },
+          {
+            "direction_id": "UC2-C01",
+            "similarity": 0.1938
+          }
+        ],
+        "UC2-C05": [
+          {
+            "direction_id": "UC2-C02",
+            "similarity": 0.4929
+          },
+          {
+            "direction_id": "UC2-C01",
+            "similarity": 0.1589
+          }
+        ],
+        "UC2-C01": [
+          {
+            "direction_id": "UC2-C02",
+            "similarity": 0.1938
+          },
+          {
+            "direction_id": "UC2-C05",
+            "similarity": 0.1589
+          }
+        ]
+      },
+      "notes": [
+        "This diversity report is reconstructed offline using TF-IDF cosine similarity (lexical proxy).",
+        "Strategy sources are heuristic labels derived from intent types; not from an actual D2 runtime."
+      ]
+    }
+  },
+  "notes": [
+    "UC2 uses the existing ai-video-tools-2026 keyword matrix (validated) as the candidate pool."
+  ]
+}

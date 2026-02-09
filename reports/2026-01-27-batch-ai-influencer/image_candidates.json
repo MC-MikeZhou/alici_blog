@@ -1,0 +1,219 @@
+{
+  "scoring_date": "2026-01-28",
+  "threshold": 60,
+  "scoring_dimensions": {
+    "relevance": {"weight": 30, "description": "Does the image match the alt text intent?"},
+    "quality": {"weight": 25, "description": "Resolution, clarity, no watermarks or artifacts"},
+    "hook_power": {"weight": 20, "description": "Would this stop a reader scrolling?"},
+    "legal_safety": {"weight": 15, "description": "Source reliability and usage rights"},
+    "brand_fit": {"weight": 10, "description": "Aligns with Alici.AI visual tone"}
+  },
+  "candidates": [
+    {
+      "filename": "img-2_aitana_01.jpg",
+      "slot_id": "img-2",
+      "source_site": "euronews.com",
+      "scores": {
+        "relevance": 28,
+        "quality": 24,
+        "hook_power": 19,
+        "legal_safety": 12,
+        "brand_fit": 9
+      },
+      "total_score": 92,
+      "tier": "strong",
+      "notes": "Aitana Lopez portrait from Euronews editorial. High-res 1440x810, clean white background, striking pink hair immediately signals 'AI influencer'. Perfect for the comparison section — recognizable subject, professional quality. Editorial use from major news outlet."
+    },
+    {
+      "filename": "img-2_miquela_01.jpg",
+      "slot_id": "img-2",
+      "source_site": "virtualhumans.org",
+      "scores": {
+        "relevance": 28,
+        "quality": 22,
+        "hook_power": 18,
+        "legal_safety": 12,
+        "brand_fit": 8
+      },
+      "total_score": 88,
+      "tier": "strong",
+      "notes": "Lil Miquela profile photo from VirtualHumans.org. Iconic look with space buns, sequined outfit. Clear CGI quality visible — demonstrates the 'virtual influencer' concept well. Good resolution, recognizable subject."
+    },
+    {
+      "filename": "img-2_lumagalu_01.jpg",
+      "slot_id": "img-2",
+      "source_site": "virtualhumans.org",
+      "scores": {
+        "relevance": 27,
+        "quality": 20,
+        "hook_power": 16,
+        "legal_safety": 12,
+        "brand_fit": 8
+      },
+      "total_score": 83,
+      "tier": "strong",
+      "notes": "Lu do Magalu profile photo from VirtualHumans.org. 3D-rendered character with blue dress and pearl necklaces. Clearly CGI/virtual — distinct visual style from Miquela and Aitana, good for showing diversity of AI influencer approaches. Slightly lower resolution."
+    },
+    {
+      "filename": "img-3_kling_02.jpg",
+      "slot_id": "img-3",
+      "source_site": "litmedia.ai",
+      "scores": {
+        "relevance": 27,
+        "quality": 23,
+        "hook_power": 15,
+        "legal_safety": 10,
+        "brand_fit": 8
+      },
+      "total_score": 83,
+      "tier": "strong",
+      "notes": "Kling AI 2.1 interface — Image to Video mode. Shows actual UI with upload area, prompt field, model selector, and Generate button. Clean dark theme screenshot. Excellent for tool comparison slot — shows real product interface readers will encounter."
+    },
+    {
+      "filename": "img-3_kling_03.jpg",
+      "slot_id": "img-3",
+      "source_site": "litmedia.ai",
+      "scores": {
+        "relevance": 26,
+        "quality": 22,
+        "hook_power": 14,
+        "legal_safety": 10,
+        "brand_fit": 8
+      },
+      "total_score": 80,
+      "tier": "strong",
+      "notes": "Kling AI 1.6 interface — Text to Video mode with red annotation boxes highlighting key areas (prompt field, settings). Annotated screenshots add instructional value. Shows prompt input, negative prompt, and generation settings."
+    },
+    {
+      "filename": "img-2_miquela_02.jpg",
+      "slot_id": "img-2",
+      "source_site": "supercarblondie.com",
+      "scores": {
+        "relevance": 25,
+        "quality": 21,
+        "hook_power": 17,
+        "legal_safety": 10,
+        "brand_fit": 7
+      },
+      "total_score": 80,
+      "tier": "strong",
+      "notes": "Side-by-side dual image of Lil Miquela — selfie pose and beach shot. Shows lifestyle content variety. Good for demonstrating how AI influencers create varied social content. Two images in one adds visual interest."
+    },
+    {
+      "filename": "img-3_heygen_01.png",
+      "slot_id": "img-3",
+      "source_site": "fahimai.com",
+      "scores": {
+        "relevance": 22,
+        "quality": 20,
+        "hook_power": 14,
+        "legal_safety": 10,
+        "brand_fit": 8
+      },
+      "total_score": 74,
+      "tier": "acceptable",
+      "notes": "HeyGen logo/branding image with tagline 'AI Video Creation Tool'. Clean design with gradient background and HeyGen logo. Not an interface screenshot — it's a branding graphic. Useful as brand identifier in a side-by-side comparison but lacks UI detail."
+    },
+    {
+      "filename": "img-3_kling_01.jpg",
+      "slot_id": "img-3",
+      "source_site": "litmedia.ai",
+      "scores": {
+        "relevance": 20,
+        "quality": 23,
+        "hook_power": 16,
+        "legal_safety": 10,
+        "brand_fit": 7
+      },
+      "total_score": 76,
+      "tier": "strong",
+      "notes": "Kling AI homepage banner — 'From Vision to Screen' tagline with beautiful AI-generated girl with flowers. Shows the brand identity and prompt input field. More of a marketing splash than a functional screenshot, but visually impressive."
+    },
+    {
+      "filename": "img-2_miquela_03.jpg",
+      "slot_id": "img-2",
+      "source_site": "supercarblondie.com",
+      "scores": {
+        "relevance": 24,
+        "quality": 19,
+        "hook_power": 15,
+        "legal_safety": 10,
+        "brand_fit": 6
+      },
+      "total_score": 74,
+      "tier": "acceptable",
+      "notes": "Close-up selfie of Lil Miquela smiling, blue fuzzy jacket, gold necklace. Casual lifestyle shot. Good detail but we already have stronger Miquela candidates. Backup option."
+    },
+    {
+      "filename": "img-1_heygen_review_01.webp",
+      "slot_id": "img-1",
+      "source_site": "vidmetoo.com",
+      "scores": {
+        "relevance": 15,
+        "quality": 18,
+        "hook_power": 12,
+        "legal_safety": 10,
+        "brand_fit": 6
+      },
+      "total_score": 61,
+      "tier": "acceptable",
+      "notes": "HeyGen review header — split navy/gold design with HeyGen logo and 'Pros, Cons & Features' text. Blog review header graphic. Not a dashboard screenshot. Marginally relevant to img-1 hero slot — could represent the 'tool ecosystem' angle but not ideal. Recommend FAL.ai fallback for hero image."
+    },
+    {
+      "filename": "img-2_miquela_04.jpg",
+      "slot_id": "img-2",
+      "source_site": "supercarblondie.com",
+      "scores": {
+        "relevance": 22,
+        "quality": 16,
+        "hook_power": 10,
+        "legal_safety": 10,
+        "brand_fit": 4
+      },
+      "total_score": 62,
+      "tier": "acceptable",
+      "notes": "Lil Miquela in hoodie, tongue out — casual Instagram-style selfie. Lower quality and less professional feel compared to other Miquela images. The pose is less suitable for a professional article context."
+    },
+    {
+      "filename": "img-3_heygen_02.png",
+      "slot_id": "img-3",
+      "source_site": "fahimai.com",
+      "scores": {
+        "relevance": 15,
+        "quality": 14,
+        "hook_power": 8,
+        "legal_safety": 10,
+        "brand_fit": 5
+      },
+      "total_score": 52,
+      "tier": "rejected",
+      "notes": "HeyGen logo only — plain text logo on light background. Too simple/minimal to serve as illustration. No interface, no features shown. Rejected."
+    }
+  ],
+  "summary": {
+    "total_scored": 12,
+    "strong": 7,
+    "acceptable": 4,
+    "rejected": 1,
+    "advanced_to_phase_4": 11
+  },
+  "slot_recommendations": {
+    "img-2": {
+      "top_pick": "img-2_aitana_01.jpg (92/100)",
+      "runner_up": "img-2_miquela_01.jpg (88/100)",
+      "third": "img-2_lumagalu_01.jpg (83/100)",
+      "recommendation": "Use all three in a composite/side-by-side layout to match the alt text 'Comparison of three AI influencers'. Each represents a different AI influencer mentioned in the article."
+    },
+    "img-3": {
+      "top_pick": "img-3_kling_02.jpg (83/100)",
+      "runner_up": "img-3_kling_03.jpg (80/100)",
+      "third": "img-3_heygen_01.png (74/100)",
+      "recommendation": "Pair Kling interface screenshot (img-3_kling_02.jpg) with HeyGen branding (img-3_heygen_01.png) for a side-by-side comparison matching the alt text."
+    },
+    "img-1": {
+      "top_pick": "img-1_heygen_review_01.webp (61/100)",
+      "recommendation": "FALLBACK RECOMMENDED: No strong hero dashboard candidate found. The HeyGen review header is borderline acceptable. Recommend using FAL.ai (image-generator skill) to create a custom hero image showing a batch production dashboard concept."
+    }
+  },
+  "generated_by": "image-sourcer v1.0"
+}

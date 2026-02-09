@@ -6,7 +6,14 @@
       "env": {
         "DATAFORSEO_USERNAME": "YOUR_DATAFORSEO_USERNAME",
         "DATAFORSEO_PASSWORD": "YOUR_DATAFORSEO_PASSWORD",
-        "ENABLED_MODULES": "SERP,KEYWORDS_DATA"
+        "ENABLED_MODULES": "SERP,KEYWORDS_DATA,DATAFORSEO_LABS,ONPAGE,AI_OPTIMIZATION"
+      }
+    },
+    "firecrawl": {
+      "command": "npx",
+      "args": ["-y", "firecrawl-mcp"],
+      "env": {
+        "FIRECRAWL_API_KEY": "YOUR_FIRECRAWL_API_KEY"
       }
     },
     "fal": {

@@ -1,6 +1,6 @@
 # Sources (offline pack)
 
-This project runs in **Thumbnail Mode** (see `thumbnail.md`).
+This project runs in **Thumbnail Mode** (see `easy_mode.md`).
 
 Because this environment has restricted network access, all sources are stored as an **offline pack** under this folder.
 

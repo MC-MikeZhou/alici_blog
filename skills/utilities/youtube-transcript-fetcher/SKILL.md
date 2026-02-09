@@ -188,10 +188,10 @@ Show the user:
 
 Create directory if needed:
 ```bash
-mkdir -p /Users/H/Documents/AliciBlog/reports/transcripts
+mkdir -p "reports 待发文章/transcripts"
 ```
 
-Save to: `/Users/H/Documents/AliciBlog/reports/transcripts/YYYY-MM-DD-{video-id}.md`
+Save to: `reports 待发文章/transcripts/YYYY-MM-DD-{video-id}.md`
 
 **Manual mode:** Claude will display the formatted transcript, and you'll need to manually copy-paste it to a file on your computer.
 
@@ -237,7 +237,7 @@ Reference in Topic Brief:
 {
   "reference_sources": {
     "youtube_transcripts": [
-      "/Users/H/Documents/AliciBlog/reports/transcripts/2026-01-19-video-id.md"
+      "reports 待发文章/transcripts/2026-01-19-video-id.md"
     ]
   }
 }
@@ -252,12 +252,12 @@ Reference in Topic Brief:
 2. Call API with video ID
 3. Process and format transcript
 4. Display in chat with timestamps
-5. Save to `/Users/H/Documents/AliciBlog/reports/transcripts/2026-01-21-dQw4w9WgXcQ.md`
+5. Save to `reports 待发文章/transcripts/2026-01-21-dQw4w9WgXcQ.md`
 6. Confirm save location to user
 
 ## Notes
 
-- Always ensure the `/Users/H/Documents/AliciBlog/reports/transcripts/` directory exists before saving
+- Always ensure the `reports 待发文章/transcripts/` directory exists before saving
 - Use today's date (YYYY-MM-DD format) as file prefix for easy chronological sorting
 - If transcript is very long, consider showing first ~20 lines in chat and mentioning "... (truncated, see full transcript in saved file)"
 - Keep the API key secure and never display it in user-facing output

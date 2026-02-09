@@ -8,6 +8,10 @@
 |------|------|
 | `fal_image_generator.py` | FAL.ai nano-banana 图片生成 |
 | `cdn_uploader.py` | CDN 上传（rsync） |
+| `download_visual_references.py` | 从 reports/*/cases/*.md 抓取并下载案例图片到 visual-references/ |
+| `basecamp_pull_todolist.py` | 拉取 Basecamp todolist 并生成本地 context pack（raw + normalized + digest） |
+| `basecamp_map_directions.py` | 将 directions.json 映射到 Basecamp todos（生成 mapping.json） |
+| `render_team_research_preview.py` | 将 Basecamp context + directions + decision brief + mapping 渲染为本地预览 HTML（Tab + 纸张风格） |
 | `requirements.txt` | 依赖声明（当前无外部依赖） |
 
 ---

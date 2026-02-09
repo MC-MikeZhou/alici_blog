@@ -1,0 +1,86 @@
+{
+  "topic": "Sora AI Prompts for Viral UGC Ads (2026) — 25 Copy-Paste Templates + What to Change",
+  "slug": "sora-ai-prompts-viral-ugc-ads-templates-2026",
+  "content_type": "list",
+  "language": "en",
+  "geo": "US",
+  "primary_keyword": "sora ai prompts",
+  "secondary_keywords": [
+    "sora prompt examples",
+    "best sora prompts",
+    "viral sora prompts",
+    "ugc ad prompts",
+    "ai video prompt examples"
+  ],
+  "title_locked": "Sora AI Prompts for Viral UGC Ads (2026): 25 Copy-Paste Templates + What to Change",
+  "title_alternatives": [
+    "Best Sora Prompts for Viral Videos (2026): UGC Ad Templates + Fixes",
+    "Sora Prompt Examples for UGC Ads: 25 Copy-Paste Templates (With Variables)"
+  ],
+  "target_audience": "Creators making short-form UGC-style ads (TikTok/Reels/Shorts) who want copy-paste prompts, fast variations, and reliable hook/proof/loop structure.",
+  "article_angle": "Template-library post (not a full tutorial): 25 UGC ad prompt templates grouped by archetype, each with variable slots ('what to change'), plus a short usage guide, troubleshooting fix lines, and a direct CTA workflow to run Sora 2 / Sora 2 Pro inside alici.ai.",
+  "word_count_target": "2200-3200",
+  "validation": {
+    "method": "reuse_dataforseo_results",
+    "source_file": "reports 待发文章/2026-01-28-ai-video-prompts/phase-2-validation-results.json",
+    "load_bearing_metrics": {
+      "Sora AI prompts": {
+        "search_volume": 390,
+        "cpc": 4.24,
+        "competition_index": "LOW",
+        "serp_features": {
+          "people_also_ask": true,
+          "video": true
+        },
+        "paa_questions": [
+          "What are some really good AI prompts?",
+          "Can Sora AI generate anything?",
+          "Can you try Sora AI for free?",
+          "Is Sora AI restricted?"
+        ],
+        "top_competitors": [
+          "https://travisnicholson.medium.com/best-sora-prompts-for-viral-videos-074eedb80ddf",
+          "https://www.reddit.com/r/OpenAI/comments/1hbed8s/sora_analysis_32_experiments_what_works_what/",
+          "https://www.soraprompting.com/",
+          "https://developers.openai.com/cookbook/examples/sora/sora2_prompting_guide/"
+        ]
+      },
+      "AI video prompt templates": {
+        "search_volume": 0,
+        "note": "Use 'templates' as value promise, not primary keyword."
+      }
+    },
+    "gate_1": {
+      "rule": ">=80% keywords have volume > 0",
+      "result": "FAIL (11/25 = 44%)",
+      "decision": "Proceed, but anchor SEO on 'Sora AI prompts' and 'examples' rather than relying on 'prompt templates' query demand."
+    }
+  },
+  "product_mapping": {
+    "primary": "AI Video Studio",
+    "secondary": "Video Prompt Assistant",
+    "integration_level": "L3_natural_positioning",
+    "cta_links": [
+      "https://app.alici.ai/pages/videoGen",
+      "https://app.alici.ai/chat?agent_id=alici_video_prompt"
+    ]
+  },
+  "requirements": {
+    "must_include": [
+      "Direct answer within first 50 words (template-library intent + viral UGC formula)",
+      "At least 1 table (archetype map or variation knobs)",
+      "At least 2 citable/quotable blocks",
+      "25 templates grouped by 5 archetypes (5 each)",
+      "Each template includes: Hook beat + Proof beat + Loop ending + 'What to change' slots",
+      "Troubleshooting section with viral failure modes (>=7) and fix lines",
+      "FAQ 5-7 questions (prioritize PAA questions from validation)",
+      "CTA: open alici.ai → choose Sora 2/Pro → paste template → generate 6 variations → prompt assistant tighten"
+    ],
+    "must_avoid": [
+      "Hard numeric claims about Sora limits/pricing/quotas unless sourced from official OpenAI public docs",
+      "Overly long tutorial sections (keep it a template library for differentiation)"
+    ]
+  },
+  "created_at": "2026-02-03"
+}
+

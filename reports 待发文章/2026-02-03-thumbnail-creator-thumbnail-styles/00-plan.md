@@ -10,7 +10,7 @@ Locked Title: **How to Create YouTube Thumbnails Like Big Creators (MrBeast, Ali
 - Source Attribution section with link + year where known
 - Clear limitations: **no guaranteed CTR claims**, use “observable signals” language
 
-## Steps (mapped to `thumbnail.md`)
+## Steps (mapped to `easy_mode.md`)
 
 1) Step 3 — Direction & structure lock (completed in docs)
    - Inputs: `00-topic-scout-report.md`, `00-parsed-sources.md`

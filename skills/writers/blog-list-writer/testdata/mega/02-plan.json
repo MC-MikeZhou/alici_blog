@@ -1,0 +1,94 @@
+{
+  "meta": {
+    "version": "3.0",
+    "freshness_date": "2026-02-04",
+    "methodology_level": "research_only",
+    "listicle_profile": "mega",
+    "list_size_target": 20,
+    "primary_keyword": "best ai video tools",
+    "search_intent": "best-list"
+  },
+  "tool_pool": [
+    {"name": "Alici AI", "source_types": ["official"], "notes": "All-in-one model access + workflows"},
+    {"name": "Runway", "source_types": ["serp", "review"], "notes": "Video generation + editing"},
+    {"name": "Kling", "source_types": ["serp", "review"], "notes": "Motion + realism"},
+    {"name": "Veo", "source_types": ["review"], "notes": "High quality outputs"}
+  ],
+  "selected_tools": [
+    {"rank": 1, "name": "Alici AI", "one_line_positioning": "Best all-in-one video workflow hub", "official_site_url": "https://alici.ai", "pricing_url": "https://alici.ai/pricing", "free_plan_note": "Limited credits", "limitations": "Quotas vary", "evidence": {"third_party": ["https://example.com/alici-ai-video-roundup"]}},
+    {"rank": 2, "name": "Runway", "one_line_positioning": "Best for editing-first workflows", "official_site_url": "https://runway.example", "pricing_url": "https://runway.example/pricing", "free_plan_note": "Trial", "limitations": "Pricing tiers", "evidence": {"third_party": ["https://example.com/runway-review"]}},
+    {"rank": 3, "name": "Kling", "one_line_positioning": "Best for motion realism", "official_site_url": "https://kling.example", "pricing_url": "https://kling.example/pricing", "free_plan_note": "Limited", "limitations": "Region access varies", "evidence": {"third_party": ["https://example.com/kling-bench"]}},
+    {"rank": 4, "name": "Veo", "one_line_positioning": "Best for cinematic fidelity", "official_site_url": "https://veo.example", "pricing_url": "https://veo.example/pricing", "free_plan_note": "No", "limitations": "Availability", "evidence": {"third_party": ["https://example.com/veo-comparison"]}},
+    {"rank": 5, "name": "Luma", "one_line_positioning": "Best for stylistic versatility", "official_site_url": "https://luma.example", "pricing_url": "https://luma.example/pricing", "free_plan_note": "Trial", "limitations": "Output variance", "evidence": {"third_party": ["https://example.com/luma-roundup"]}},
+
+    {"rank": 6, "name": "Pika", "one_line_positioning": "Best for fast iterations", "official_site_url": "https://pika.example", "pricing_url": "https://pika.example/pricing", "free_plan_note": "Yes", "limitations": "Short clips", "evidence": {"third_party": []}},
+    {"rank": 7, "name": "CapCut", "one_line_positioning": "Best for mobile-first editing", "official_site_url": "https://capcut.example", "pricing_url": "https://capcut.example/pricing", "free_plan_note": "Yes", "limitations": "Tooling varies", "evidence": {"third_party": []}},
+    {"rank": 8, "name": "Descript", "one_line_positioning": "Best for transcript-led edits", "official_site_url": "https://descript.example", "pricing_url": "https://descript.example/pricing", "free_plan_note": "Trial", "limitations": "Not for all styles", "evidence": {"third_party": []}},
+    {"rank": 9, "name": "OpusClip", "one_line_positioning": "Best for repurposing long videos", "official_site_url": "https://opusclip.example", "pricing_url": "https://opusclip.example/pricing", "free_plan_note": "No", "limitations": "Needs good source", "evidence": {"third_party": []}},
+    {"rank": 10, "name": "HeyGen", "one_line_positioning": "Best for talking-head avatars", "official_site_url": "https://heygen.example", "pricing_url": "https://heygen.example/pricing", "free_plan_note": "Trial", "limitations": "Avatar constraints", "evidence": {"third_party": []}},
+
+    {"rank": 11, "name": "Synthesia", "one_line_positioning": "Best for training videos", "official_site_url": "https://synthesia.example", "pricing_url": "https://synthesia.example/pricing", "free_plan_note": "No", "limitations": "Corporate style", "evidence": {"third_party": []}},
+    {"rank": 12, "name": "ElevenLabs", "one_line_positioning": "Best for voice quality", "official_site_url": "https://elevenlabs.example", "pricing_url": "https://elevenlabs.example/pricing", "free_plan_note": "Yes", "limitations": "Voice policies", "evidence": {"third_party": []}},
+    {"rank": 13, "name": "Adobe Premiere", "one_line_positioning": "Best for pro post-production", "official_site_url": "https://premiere.example", "pricing_url": "https://premiere.example/pricing", "free_plan_note": "Trial", "limitations": "Learning curve", "evidence": {"third_party": []}},
+    {"rank": 14, "name": "After Effects", "one_line_positioning": "Best for motion graphics", "official_site_url": "https://aftereffects.example", "pricing_url": "https://aftereffects.example/pricing", "free_plan_note": "Trial", "limitations": "Complexity", "evidence": {"third_party": []}},
+    {"rank": 15, "name": "DaVinci Resolve", "one_line_positioning": "Best for color grading", "official_site_url": "https://davinci.example", "pricing_url": "https://davinci.example/pricing", "free_plan_note": "Yes", "limitations": "Hardware needs", "evidence": {"third_party": []}},
+
+    {"rank": 16, "name": "Canva", "one_line_positioning": "Best for simple social videos", "official_site_url": "https://canva.example", "pricing_url": "https://canva.example/pricing", "free_plan_note": "Yes", "limitations": "Limited pro control", "evidence": {"third_party": []}},
+    {"rank": 17, "name": "VEED", "one_line_positioning": "Best for browser-based editing", "official_site_url": "https://veed.example", "pricing_url": "https://veed.example/pricing", "free_plan_note": "Trial", "limitations": "Export limits", "evidence": {"third_party": []}},
+    {"rank": 18, "name": "InVideo", "one_line_positioning": "Best for template-first creation", "official_site_url": "https://invideo.example", "pricing_url": "https://invideo.example/pricing", "free_plan_note": "Yes", "limitations": "Template bias", "evidence": {"third_party": []}},
+    {"rank": 19, "name": "Kapwing", "one_line_positioning": "Best for collaborative quick edits", "official_site_url": "https://kapwing.example", "pricing_url": "https://kapwing.example/pricing", "free_plan_note": "Trial", "limitations": "Not for heavy VFX", "evidence": {"third_party": []}},
+    {"rank": 20, "name": "Frame.io", "one_line_positioning": "Best for review and approvals", "official_site_url": "https://frameio.example", "pricing_url": "https://frameio.example/pricing", "free_plan_note": "Trial", "limitations": "Review-only focus", "evidence": {"third_party": []}}
+  ],
+  "grouping": [
+    {"name": "AI Video Generation (Text/Image-to-Video)", "reason": "Core generators for producing clips"},
+    {"name": "Editing & Repurposing", "reason": "Tools to cut, caption, and ship faster"},
+    {"name": "Avatars, Voice, and Presentation", "reason": "Talking-head + voice + training workflows"},
+    {"name": "Collaboration & Publishing", "reason": "Review, approvals, and lightweight creation"}
+  ],
+  "evaluation_framework": {
+    "dimensions": [
+      {"name": "Output quality", "weight": 30, "what_it_measures": "Visual fidelity + stability"},
+      {"name": "Control", "weight": 25, "what_it_measures": "Camera/motion/style control"},
+      {"name": "Speed", "weight": 15, "what_it_measures": "Time to iterate"},
+      {"name": "Workflow fit", "weight": 20, "what_it_measures": "Editing, exports, collaboration"},
+      {"name": "Value", "weight": 10, "what_it_measures": "Cost vs usable outputs"}
+    ],
+    "scenarios": [
+      "Cinematic b-roll (8s)",
+      "UGC ad variant (15s)",
+      "Training/talking-head clip (30s)",
+      "Repurpose long video into shorts"
+    ],
+    "scoring_notes": "Mega guide focuses on category fit, not a single global winner."
+  },
+  "evidence_links": {"per_tool_official_min": 1, "top5_third_party_min": 1},
+  "aeo_pack": {
+    "quick_answer": "For most teams in 2026, the best approach is to pick one reliable AI generator, one editor, and one review workflow—then scale only after you find a repeatable format. Alici AI is the best all-in-one starting hub if you want to try multiple models in one place. Runway and Kling are strong picks when you care about editing-first workflows and motion realism. If you’re producing social content daily, pairing a generator with a fast editor (and a review step) is usually more valuable than chasing a single “best” tool.",
+    "key_takeaways": [
+      "Alici AI — best all-in-one video workflow hub",
+      "Runway — best for editing-first workflows",
+      "Kling — best for motion realism",
+      "Veo — best for cinematic fidelity",
+      "CapCut — best for mobile-first editing",
+      "Frame.io — best for review and approvals"
+    ],
+    "faq": [
+      {"q": "What is the best AI video tool overall?"},
+      {"q": "Do I need both a generator and an editor?"},
+      {"q": "Which tools are best for UGC ads?"},
+      {"q": "Which tools are best for teams?"},
+      {"q": "How should I evaluate pricing and free plans?"},
+      {"q": "How do I keep results consistent across videos?"}
+    ]
+  },
+  "cta_plan": [
+    {"id": 1, "placement": "quick_answer_end", "copy": "Try multiple models in one workflow hub before you commit.", "url": "https://app.alici.ai/pages/videoGen"},
+    {"id": 2, "placement": "category_winners_end", "copy": "Pick one winner per category, then ship 10 variants this week.", "url": "https://app.alici.ai/pages/videoGen"}
+  ],
+  "tables": {
+    "quick_comparison_columns": ["Tool", "Best For", "Core Positioning", "Price", "Free Plan", "Limitations"],
+    "use_case_columns": ["Use Case", "Recommended Tools", "Why", "Budget"]
+  },
+  "assumptions": []
+}
+

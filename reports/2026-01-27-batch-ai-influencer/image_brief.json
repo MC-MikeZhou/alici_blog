@@ -1,0 +1,75 @@
+{
+  "article_path": "/Users/H/Documents/AliciBlog/reports 待发文章/2026-01-27-batch-ai-influencer/01-article-edited-v2.2.md",
+  "article_title": "How to Create AI Influencers in 2026 | Batch Production Guide",
+  "total_slots": 6,
+  "target_slots": 3,
+  "slots": [
+    {
+      "id": "img-2",
+      "line": 76,
+      "alt_text": "Comparison of three AI influencers: Lil Miquela, Aitana Lopez, and Lu do Magalu with follower counts and annual revenue",
+      "section": "Real AI Influencers Making Real Money",
+      "hook_impact": "critical",
+      "target": true,
+      "search_priority": 1,
+      "rationale": "Social proof visual — real AI influencers with revenue data. Highest hook impact because it validates the entire article premise with recognizable faces."
+    },
+    {
+      "id": "img-1",
+      "line": 30,
+      "alt_text": "Hero Image: AI influencer batch production dashboard showing character library, motion templates, and multi-platform publishing schedule",
+      "section": "Introduction (Hero)",
+      "hook_impact": "critical",
+      "target": true,
+      "search_priority": 2,
+      "rationale": "Hero image sets the visual tone for the entire article. Dashboard/workflow visual communicates 'system' and 'scale'. May need FAL.ai fallback if no real dashboard screenshot fits."
+    },
+    {
+      "id": "img-3",
+      "line": 102,
+      "alt_text": "Side-by-side tool comparison showing Kling AI for motion videos vs HeyGen for talking heads, with pricing tiers",
+      "section": "Tools and Real Pricing",
+      "hook_impact": "high",
+      "target": true,
+      "search_priority": 3,
+      "rationale": "Tool screenshots add credibility to the pricing section. Real product UI is more trustworthy than AI-generated mockups."
+    },
+    {
+      "id": "img-4",
+      "line": 150,
+      "alt_text": "Variable Library concept diagram: Character Library (10 faces) + Motion Library (30 templates) + Script Library (50 scripts) = hundreds of unique combinations",
+      "section": "Build Your Variable Library",
+      "hook_impact": "medium",
+      "target": false,
+      "search_priority": 4,
+      "rationale": "Conceptual diagram — better suited for AI-generated illustration (FAL.ai fallback recommended)."
+    },
+    {
+      "id": "img-5",
+      "line": 241,
+      "alt_text": "Weekly publishing calendar showing video distribution across Instagram, TikTok, and YouTube with automation workflow icons",
+      "section": "Scale Publishing and Automate",
+      "hook_impact": "medium",
+      "target": false,
+      "search_priority": 5,
+      "rationale": "Calendar/schedule visual — generic enough for AI generation. No real-world subject to photograph."
+    },
+    {
+      "id": "img-6",
+      "line": 284,
+      "alt_text": "Monetization funnel showing four revenue streams with estimated monthly income ranges at different follower milestones",
+      "section": "How to Monetize Your AI Influencer",
+      "hook_impact": "medium",
+      "target": false,
+      "search_priority": 6,
+      "rationale": "Funnel diagram — conceptual graphic, better as AI-generated custom illustration."
+    }
+  ],
+  "fallback_recommendations": {
+    "img-4": "Generate with FAL.ai — diagram showing 10 characters x 30 motions = 300 combinations",
+    "img-5": "Generate with FAL.ai — weekly content calendar grid",
+    "img-6": "Generate with FAL.ai — monetization funnel with 4 revenue streams"
+  },
+  "generated_at": "2026-01-28T12:00:00Z",
+  "generated_by": "image-sourcer v1.0"
+}

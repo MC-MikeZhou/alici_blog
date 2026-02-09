@@ -1,0 +1,203 @@
+{
+  "seed": "UGC ads",
+  "generated_at": "2026-02-08",
+  "inputs": {
+    "basecamp_context_pack": "tmp/basecamp-context/2026-02-08-ugc-ads-v2",
+    "basecamp_roots": [
+      "https://3.basecamp.com/3135399/buckets/42744895/todolists/9536725297",
+      "https://3.basecamp.com/3135399/buckets/45547714/todolists/9546306218"
+    ]
+  },
+  "directions": [
+    {
+      "direction_id": "UGC-ADS-D01-BEGINNER-WORKFLOW",
+      "angle_cn": "新手从 0 到 1 的 Viral AI UGC Ads 工作流：从创意拆解到脚本、镜头、迭代与投放复盘（强调可复制流程，而不是泛泛介绍 UGC creator）。",
+      "english_titles": [
+        "How to Create Viral AI UGC Ads in 2026: A Beginner-Friendly Workflow",
+        "AI UGC Ads for Beginners: Hooks, Scripts, Shots, and Iteration Loops (2026)"
+      ],
+      "recommended_skill": "blog-tutorial-writer",
+      "target_audience": "Beginner marketers, indie founders, and creators who want a repeatable UGC ads workflow",
+      "deliverable": "One end-to-end tutorial with a reusable checklist + prompt blocks + shot list templates",
+      "basecamp_trace": {
+        "todo_ids": [9541074504, 9536996960],
+        "lists": [9536725742],
+        "rationale": "Matches the explicit beginner tutorial todo and the topic-seed thread."
+      },
+      "risk": {
+        "cannibalization": "LOW (keeps focus on ads system, not general 'UGC creator' onboarding)"
+      },
+      "validation": {
+        "dataforseo": "PENDING"
+      }
+    },
+    {
+      "direction_id": "UGC-ADS-D02-CREATIVE-CENTER-TO-SCRIPT",
+      "angle_cn": "把 TikTok Creative Center 等官方创意中心变成可执行的 UGC ads 选题和脚本：如何找 winning hooks、格式、行业基准，并快速转成脚本与镜头表。",
+      "english_titles": [
+        "TikTok Creative Center for UGC Ads: How to Find Winning Hooks, Formats, and Benchmarks (2026)",
+        "From Creative Center to Script: A Practical UGC Ads Research Workflow"
+      ],
+      "recommended_skill": "blog-tutorial-writer",
+      "target_audience": "Performance marketers and UGC ad creators who need reliable creative research sources",
+      "deliverable": "Tutorial + example walk-through using Creative Center to generate 3 ad angles",
+      "basecamp_trace": {
+        "todo_ids": [9556056698],
+        "lists": [9556056518],
+        "rationale": "Directly anchored to the TikTok official guidance todo."
+      },
+      "risk": {
+        "cannibalization": "LOW"
+      },
+      "validation": {
+        "dataforseo": "PENDING"
+      }
+    },
+    {
+      "direction_id": "UGC-ADS-D03-INVIDEO-REVERSE-ENGINEERING",
+      "angle_cn": "反向工程 InVideo 的 UGC ads 内容与素材供给：他们写什么、缺什么、哪些值得复刻，怎样做差异化（并用 Alici 的产品映射写出更强的 tutorial/list）。",
+      "english_titles": [
+        "InVideo's UGC Ads Content Strategy: What to Copy, What to Skip, and How to Differentiate",
+        "UGC Ads Topic Map: Reverse-Engineering InVideo's Blog and Template Library (2026)"
+      ],
+      "recommended_skill": "blog-tutorial-writer",
+      "target_audience": "Content strategists building an SEO + product-led growth flywheel for UGC ads",
+      "deliverable": "Competitor teardown + a prioritized topic map with differentiation rules",
+      "basecamp_trace": {
+        "todo_ids": [9556057393, 9536794596, 9537217575, 9536804477],
+        "lists": [9536766978, 9556073256],
+        "rationale": "Covers the explicit InVideo deep-dive and ties to landing page learning."
+      },
+      "risk": {
+        "cannibalization": "MEDIUM (competitor 'UGC creator' topics exist; keep scope on ads + differentiation)"
+      },
+      "validation": {
+        "dataforseo": "PENDING"
+      }
+    },
+    {
+      "direction_id": "UGC-ADS-D04-TEMPLATE-PROMPT-LIBRARY",
+      "angle_cn": "UGC ads 提示词模板库：把 InVideo 的模板思路变成 Alici VideoAgent 可复用的 prompt blocks（按行业/产品/受众拆分），并提供 A/B 变体生成策略。",
+      "english_titles": [
+        "UGC Ads Prompt Templates That Convert: 12 Plug-and-Play Scripts (with Variations)",
+        "From InVideo Templates to VideoAgent: A UGC Ads Template Porting Playbook"
+      ],
+      "recommended_skill": "blog-list-writer",
+      "target_audience": "Creators and marketers who want reusable scripts and prompt blocks",
+      "deliverable": "Listicle-style template library (12 templates) + a portability checklist",
+      "basecamp_trace": {
+        "todo_ids": [9536876664, 9536888942, 9546324815],
+        "lists": [9536873155, 9550965183],
+        "rationale": "Directly aligns with the template cloning + internal agent/tools todo."
+      },
+      "risk": {
+        "cannibalization": "LOW"
+      },
+      "validation": {
+        "dataforseo": "PENDING"
+      }
+    },
+    {
+      "direction_id": "UGC-ADS-D05-LANDING-PAGE-TEARDOWN",
+      "angle_cn": "UGC ads 工具落地页拆解与模板：哪些模块能解释价值、建立信任、展示 demo，并把 Use Case 变成可点击的转化资产（对标 zeely.ai 与 InVideo）。",
+      "english_titles": [
+        "UGC Ads Landing Page Teardown: Sections, Proof, and Demos That Drive Trials",
+        "How to Build a High-Converting UGC Ads Tool Landing Page (with Copy Blocks)"
+      ],
+      "recommended_skill": "blog-tutorial-writer",
+      "target_audience": "Product/marketing owners improving Alici VideoAgent landing page conversion",
+      "deliverable": "Teardown framework + copy blocks + checklist for updating Alici landing page",
+      "basecamp_trace": {
+        "todo_ids": [9556073428, 9556089119, 9536804477],
+        "lists": [9556073256],
+        "rationale": "Directly anchored to the landing page update + reference tasks."
+      },
+      "risk": {
+        "cannibalization": "LOW"
+      },
+      "validation": {
+        "dataforseo": "PENDING"
+      }
+    },
+    {
+      "direction_id": "UGC-ADS-D06-PRICING-BENCHMARKS",
+      "angle_cn": "UGC ads 单价与基准：从创意样片/案例中总结可引用的 benchmark（创作者费用、制作成本、投放指标的常见区间），并明确 AI 生成对单价与迭代速度的影响。",
+      "english_titles": [
+        "What Does a UGC Ad Cost in 2026? Benchmarks, Rates, and AI vs Human Tradeoffs",
+        "UGC Ads Pricing Benchmarks: From Creator Fees to Media Spend (2026)"
+      ],
+      "recommended_skill": "blog-tutorial-writer",
+      "target_audience": "Founders and marketers budgeting UGC ads production and testing loops",
+      "deliverable": "Benchmark guide with an evidence-first structure (sources and assumptions explicit)",
+      "basecamp_trace": {
+        "todo_ids": [9543382856],
+        "lists": [9556056518],
+        "rationale": "Directly anchored to the 'UGC ads 单价' benchmarking todo."
+      },
+      "risk": {
+        "cannibalization": "MEDIUM (pricing overlaps with generic UGC creator topics; keep it ads+budget focused)"
+      },
+      "validation": {
+        "dataforseo": "PENDING"
+      }
+    },
+    {
+      "direction_id": "UGC-ADS-D07-USECASE-SCRIPT-SERIES",
+      "angle_cn": "UGC ads Use Case 小系列：把 4 个产品场景做成可复用的脚本与镜头模板，并定义“同一个模板如何换产品”的变体生成规则（适合后续批量扩展）。",
+      "english_titles": [
+        "UGC Ads Use Cases: A Script-and-Storyboard Library for VideoAgent (2026)",
+        "4 UGC Ads Scripts You Can Reuse: Beverage, Wearable, Kitchen Gadget, and Vitamins"
+      ],
+      "recommended_skill": "case-roundup-writer",
+      "target_audience": "Teams producing multiple UGC ads variants across products",
+      "deliverable": "A mini-series plan: 4 short case posts + a shared template and shot bank",
+      "basecamp_trace": {
+        "todo_ids": [9555081861, 9555083067, 9555084049, 9555993416],
+        "lists": [9555080319],
+        "rationale": "Directly anchored to the four concrete use-case todos."
+      },
+      "risk": {
+        "cannibalization": "LOW"
+      },
+      "validation": {
+        "dataforseo": "PENDING"
+      }
+    },
+    {
+      "direction_id": "UGC-ADS-D08-MODEL-SHOWDOWN",
+      "angle_cn": "UGC ads 生成模型对决：Veo vs Kling vs Seedance 在广告脚本一致性、镜头可控性、速度与成本上的差异（按 UGC ads 的实际评测维度写成 showdown）。",
+      "english_titles": [
+        "Veo 3.1 Fast vs Kling 3.0 vs Seedance 1.5 Pro for AI UGC Ads: Which Wins in 2026?",
+        "Best AI Video Model for UGC Ads (2026): Veo vs Kling vs Seedance"
+      ],
+      "recommended_skill": "blog-showdown-writer",
+      "target_audience": "Creators selecting a generation stack for UGC ads production",
+      "deliverable": "Tool/model showdown with a clear test rubric and decision matrix",
+      "basecamp_trace": {
+        "todo_ids": [9546697118, 9546325204, 9547574480],
+        "lists": [9550965183],
+        "rationale": "Directly anchored to the explicit model comparison + demo tasks."
+      },
+      "risk": {
+        "cannibalization": "LOW"
+      },
+      "validation": {
+        "dataforseo": "PENDING"
+      }
+    }
+  ],
+  "diversity_report": {
+    "avg_pairwise_similarity": null,
+    "intent_type_distribution": {
+      "informational": 6,
+      "commercial_investigation": 2,
+      "transactional": 0
+    },
+    "source_agent_distribution": {
+      "manual_seed_portfolio": 8
+    },
+    "diversity_gate_status": "PASS",
+    "note": "Diversity status is a manual judgment (DataForSEO + semantic scoring not executed in this environment)."
+  }
+}
+

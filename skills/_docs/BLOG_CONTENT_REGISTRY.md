@@ -29,12 +29,16 @@
 | video-004 | How to Create Viral Videos with Kling 2.6 Motion Control | /blog/kling-2-6-motion-control-tutorial-2026 | Tutorial | pillar-001 | Published | Kling motion control, motion transfer, dance videos, AI video generation |
 | video-005 | Nano Banana + Motion Control: 病毒视频创作新范式 | /blog/nano-banana-motion-control-2026-01 | Roundup | pillar-001 | Draft | motion control, Kling 2.6, Nano Banana Pro, video generation |
 | video-006 | Kling 2.6 is Here | /blog/kling-2-6-is-here | News | pillar-001 | **Published** | Kling 2.6, motion control, AI video news |
+
 | video-007 | How to Create AI Videos: Complete 15-Step Guide for 2025 | /blog/how-to-create-ai-videos-complete-guide-2025 | Tutorial | pillar-001 | **Published** | AI video, video generation, how to, complete guide, 2025 |
 | video-008 | Viral Video Workflow: Nano Banana Pro to Kling 2.6 Motion Control | /blog/viral-video-workflow-nano-banana-pro-kling-motion-control | Tutorial | pillar-001 | **Published** | viral video, Nano Banana Pro, Kling 2.6, motion control, workflow |
 | video-009 | How to Create AI Baby Dance Videos with Kling AI (2026 Guide) | /blog/ai-baby-dance-tutorial-2026 | Tutorial | pillar-001 | **Published** | AI baby dance, Kling AI, dance video, viral content |
 | video-010 | How to Turn Yourself Into Any Character Using Kling Motion Control | /blog/kling-motion-control-character-transformation-guide | Tutorial | pillar-001 | **Published** | character transformation, Kling motion control, avatar, cosplay |
 | video-011 | Wan 2.6 AI Video Generator: Native Audio for Creators (2026) | /blog/wan-2-6-ai-video-generator-native-audio-for-creators-2026 | News | pillar-001 | **Published** | Wan 2.6, native audio, AI video generator, creators |
 | video-012 | 5 Best AI Video Generators in 2026 (Tested & Compared) | /blog/best-ai-video-generators-2026 | List | pillar-001 | **Published** | best AI video generators, comparison, 2026, tested |
+
+| video-013 | How to Write Sora 2 Prompts for Beginners (2026): Templates + Checklist + Fixes | /blog/sora-2-prompt-guide-beginners-templates-2026 | Tutorial | pillar-001 | Draft | Sora 2, prompt guide, prompt templates, prompt checklist, beginner, AI video prompts |
+
 
 ### AI Image Cluster
 

@@ -1567,7 +1567,7 @@ Editor Skill v2.2 推荐使用项目统一的图片生成脚本 (已更新支持
 
 **单图生成**:
 ```bash
-python /Users/H/Documents/AliciBlog/scripts/fal_image_generator.py \
+python scripts/fal_image_generator.py \
   --prompt "Magazine cover style editorial photography..." \
   --role hero \
   --output-dir ./gen_images \
@@ -1594,12 +1594,12 @@ python /Users/H/Documents/AliciBlog/scripts/fal_image_generator.py \
 
 2. 执行批量生成:
 ```bash
-python /Users/H/Documents/AliciBlog/scripts/fal_image_generator.py --batch prompts.json
+python scripts/fal_image_generator.py --batch prompts.json
 ```
 
 3. 自动上传 CDN（可选）:
 ```bash
-python /Users/H/Documents/AliciBlog/scripts/cdn_uploader.py --dir ./gen_images
+python scripts/cdn_uploader.py --dir ./gen_images
 ```
 
 **脚本优势**:

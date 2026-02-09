@@ -1,0 +1,59 @@
+{
+  "topic": "Nano Banana Pro for Hyper‑Real AI UGC Ads (2026) — Prompts + Workflow",
+  "slug": "nano-banana-pro-ai-ugc-ads-2026",
+  "content_type": "tutorial",
+  "language": "en",
+  "geo": "US",
+  "primary_keyword": "nano banana pro",
+  "secondary_keywords": [
+    "ai ugc ads",
+    "ai ugc ad prompts",
+    "product in hand ugc ad",
+    "realistic ai ugc ads",
+    "phone selfie prompt",
+    "image to video ugc ad",
+    "alici ai ugc",
+    "kling end card",
+    "veo 3.1"
+  ],
+  "title_locked": "How to Use Nano Banana Pro to Make Hyper‑Real AI UGC Ads in 2026 (Prompts + Workflow)",
+  "title_alternatives": [
+    "Nano Banana Pro for AI UGC Ads (2026): Realism Playbook + Copy‑Paste Prompts",
+    "Hyper‑Real AI UGC Ads in 2026: Nano Banana Pro Workflow for Product‑in‑Hand Demos"
+  ],
+  "target_audience": "Performance marketers and creators who want to produce short-form, UGC-style product demo ads (TikTok/Reels/Shorts) without filming, using an image→video pipeline and reusable prompts.",
+  "article_angle": "Realism-first pipeline: use Nano Banana Pro to get phone-selfie camera language + natural skin texture + believable hands/product integration, then scale with talking clips, end cards, and variations.",
+  "word_count_target": "1800-2600",
+  "product_mapping": {
+    "primary": "AI Video Studio",
+    "secondary": "Any Script 2 AI Video",
+    "tertiary": "Image to AI Video",
+    "integration_level": "L3_natural_positioning"
+  },
+  "source": {
+    "type": "youtube",
+    "url": "https://www.youtube.com/watch?v=_H01wcSCEko",
+    "local_transcript_file": "00-youtube-transcript.md",
+    "usage_intent": "reference",
+    "timestamp_policy": "Use timestamps for factual workflow references; do not reuse wording from transcript."
+  },
+  "requirements": {
+    "must_include": [
+      "Key Takeaways section immediately after the hero image",
+      "AIDA opening (80-120 words, 4 short paragraphs) + data point within first 150 words",
+      "Definitions: UGC ad, angle, proof, product-in-hand, end card",
+      "Step-by-step workflow (actor → product refs → in-hand composite → talking clip → end card → assemble → iterate)",
+      "Copy-paste prompt templates for each step (with placeholders)",
+      "Nano Banana Pro realism checklist (skin texture, hands, camera language, lighting direction, shadows/occlusion)",
+      "Ethics/policy checklist (consent, disclosure, no impersonation)",
+      "FAQ (6-8) with short standalone answers",
+      "End-of-article CTA card"
+    ],
+    "must_avoid": [
+      "Reproducing long transcript passages",
+      "Claims about performance uplift without data",
+      "Instructions to impersonate real people or misuse trademarks"
+    ]
+  },
+  "created_at": "2026-02-04"
+}

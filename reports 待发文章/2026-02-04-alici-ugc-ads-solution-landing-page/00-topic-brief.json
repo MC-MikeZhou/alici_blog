@@ -1,0 +1,50 @@
+{
+  "topic": "UGC Ad Generator Landing Page (AEO/SEO) — Hub + 10 Subpages",
+  "slug": "ugc-ads-solution-landing-page",
+  "content_type": "product_landing_page_spec",
+  "language": "en",
+  "geo": "global",
+  "primary_keyword": "ugc ad generator",
+  "secondary_keywords": [
+    "create ugc video ads",
+    "how to make ugc ads",
+    "testimonial ad script template",
+    "product demo ugc ad",
+    "ugc ad hooks",
+    "ugc ads for tiktok",
+    "ugc ads for instagram",
+    "ugc ads for shopify",
+    "ugc ads for amazon"
+  ],
+  "target_audience": "Performance marketers, DTC/ecommerce founders, and UGC creators who need UGC-style short-form video ad scripts, shot lists, and rapid creative variations for testing on TikTok/Reels/Shorts.",
+  "page_goal": "Rank for UGC ad intent queries, educate on what UGC ads are and how to produce them, and convert high-intent visitors into generating a first UGC ad script (one free preview) → signup → export video variants.",
+  "product_assumptions": {
+    "core_capability": "text-to-video + script + storyboard/shotlist",
+    "not_assumed": [
+      "large actor marketplace",
+      "unlimited licensed stock library",
+      "voice cloning as a core promise"
+    ],
+    "gating_rule": "Allow 1 script preview without login; require signup for exporting and multi-variant generation."
+  },
+  "requirements": {
+    "must_include": [
+      "Key Takeaways block above-the-fold",
+      "Short TL;DR answer paragraph",
+      "HowTo in 3 steps (input → generate script/shot list → export variants)",
+      "At least 6 copy-paste script + shot list templates",
+      "Use-case cards linking to 10 subpages",
+      "FAQ (8–12) written as query-shaped questions",
+      "Compliance section (no impersonation, disclosure, platform policies)",
+      "JSON-LD snippets (FAQPage, HowTo, BreadcrumbList; optional VideoObject)"
+    ],
+    "must_avoid": [
+      "Performance uplift claims without data",
+      "Claims about capabilities Alici does not ship",
+      "Encouraging impersonation or deceptive deepfakes",
+      "Keyword-stuffed copy that reduces readability"
+    ]
+  },
+  "created_at": "2026-02-04"
+}
+

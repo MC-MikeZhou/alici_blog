@@ -1,0 +1,95 @@
+{
+  "version": "1.2",
+  "generated_date": "2026-02-06",
+  "topic_info": {
+    "primary_keyword": "sora 2 viral prompt guide",
+    "secondary_keywords": [
+      "sora 2 prompts for tiktok",
+      "viral ai video prompts",
+      "sora 2 prompt templates",
+      "how to make viral ai videos 2026",
+      "sora 2 short form video"
+    ],
+    "topic_category": "AI Video Generation Tutorial",
+    "search_intent": "how-to",
+    "target_audience": "Short-form creators, marketers, and UGC teams using Sora 2 to produce viral-ready videos"
+  },
+  "recommended_titles": {
+    "how_to_formula": {
+      "title": "Sora 2 Prompt Guide: How to Create Viral Videos in 2026",
+      "format": "[Tool] Prompt Guide: How to [Outcome] in [Year]",
+      "how_to_prefix": true,
+      "year_included": true,
+      "tool_included": "Sora 2",
+      "benefit_promise": "Create Viral Videos",
+      "ctr_prediction": 4.3,
+      "rationale": "Combines 'prompt guide' intent with a clear viral outcome; includes year for freshness and tool for specificity"
+    },
+    "guide_formula": {
+      "title": "How to Write Viral Sora 2 Prompts: 10 Templates + A 7-Step Workflow (2026)",
+      "format": "How to [Action]: [Number] [Asset] + [Workflow] ([Year])",
+      "how_to_prefix": true,
+      "year_included": true,
+      "tool_included": "Sora 2",
+      "benefit_promise": "Viral Sora 2 Prompts",
+      "ctr_prediction": 4.1,
+      "rationale": "Highlights concrete deliverables (templates + workflow) and captures search intent for prompt templates"
+    },
+    "listicle_formula": {
+      "title": "10 Viral Sora 2 Video Prompt Templates for TikTok, Reels, and Shorts (2026)",
+      "format": "[Number] [Adjective] [Tool] [Templates] for [Platforms] ([Year])",
+      "how_to_prefix": false,
+      "year_included": true,
+      "tool_included": "Sora 2",
+      "benefit_promise": "Viral Prompt Templates",
+      "ctr_prediction": 4.2,
+      "rationale": "Strong CTR via number + platforms; focuses on copy-paste templates"
+    }
+  },
+  "selected_title": "Sora 2 Prompt Guide: How to Create Viral Videos in 2026",
+  "selected_title_type": "how_to_formula",
+  "title_validation": {
+    "has_how_to_prefix": true,
+    "includes_tool_name": true,
+    "includes_year": true,
+    "includes_benefit": true,
+    "estimated_ctr": 4.3
+  },
+  "content_requirements": {
+    "article_type": "tutorial",
+    "required_sections": [
+      "Opening direct answer (≤ 60 words)",
+      "AIDA opening (80-120 words)",
+      "Why Sora 2 videos go viral in 2026 (retention + shareability + speed)",
+      "The 9-block viral prompt formula + table",
+      "Prompt checklist (first 10 seconds self-check)",
+      "Viral Formats Library (2026) — 10 copy-paste templates + filled examples",
+      "Step-by-step workflow (7 steps) + scorecard + packaging checklist",
+      "Troubleshooting: 10 common mistakes + prompt fixes",
+      "Safety, ethics, and IP section (no impersonation, no copyrighted characters, no deceptive news)",
+      "Pro tips (8 items)",
+      "FAQ (8 questions)",
+      "3–5 citable blocks with external sources"
+    ],
+    "must_include_prompt_structure_chapter": true,
+    "target_word_count": "2500-3200 (EN) / 4000-5000 chars (ZH target range)",
+    "skill_version": "blog-tutorial-writer v2.2"
+  },
+  "seo_metrics": {
+    "estimated_traffic_potential": "High",
+    "competition_level": "Medium",
+    "topic_score": 80,
+    "freshness_factor": "High (2026 year included)"
+  },
+  "aeo_targets": {
+    "initial_score_target": 80,
+    "final_score_target": 85,
+    "key_improvements": [
+      "Lead with a copy-paste framework and templates",
+      "Add citable blocks with official sources",
+      "Provide step-by-step workflow + checklists",
+      "Include safety/IP do-not-do list and safe alternatives"
+    ]
+  }
+}
+

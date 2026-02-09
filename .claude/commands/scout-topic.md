@@ -1,6 +1,8 @@
 # /scout-topic - 竞品分析与选题发现
 
-使用 growth-topic-scout Skill 分析竞品内容，发现 Top 10 选题机会。
+使用 growth-topic-scout（Mode A）分析竞品内容，发现 Top 10 选题机会。
+
+如果你要从“种子词”发散找选题（尤其是多样性发散 D2），使用 `/seed-mode-v2`。
 
 ## 预置上下文
 
@@ -10,7 +12,7 @@ echo "今日日期: $(date +%Y-%m-%d)"
 
 # 检查 DataForSEO MCP 状态
 echo "MCP 配置状态:"
-cat /Users/H/Documents/AliciBlog/.mcp.json 2>/dev/null | head -5
+cat .mcp.json 2>/dev/null | head -5
 ```
 
 ## 执行步骤
@@ -45,4 +47,4 @@ cat /Users/H/Documents/AliciBlog/.mcp.json 2>/dev/null | head -5
 
 ---
 
-*基于 growth-topic-scout Skill v1.1*
+*基于 growth-topic-scout Skill v2.3*

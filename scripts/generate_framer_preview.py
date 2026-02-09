@@ -28,6 +28,29 @@ def strip_duplicate_cover(body_html: str, cover_url: str) -> str:
             return pat.sub('', body_html, count=1)
     return body_html
 
+def rewrite_remote_images_to_local(html: str, article_dir: Path) -> str:
+    """
+    When CDN URLs are not publicly reachable (e.g., ct2.alici.ai not uploaded yet),
+    rewrite <img src=".../filename.png"> to local workspace files if they exist.
+
+    Expected local path: <article_dir>/images/<filename>
+    """
+    images_dir = article_dir / "images"
+    if not images_dir.exists():
+        return html
+
+    def replace_src(match):
+        src = match.group(1)
+        filename = os.path.basename(src.split("?")[0].split("#")[0])
+        local_candidate = images_dir / filename
+        if local_candidate.exists():
+            return f'src="images/{filename}"'
+        return match.group(0)
+
+    # Replace src="...".
+    html = re.sub(r'src="([^"]+)"', replace_src, html)
+    return html
+
 def parse_markdown_file(file_path):
     """Parse markdown file with frontmatter"""
     with open(file_path, 'r', encoding='utf-8') as f:
@@ -93,8 +116,12 @@ def markdown_to_framer_html(md_text):
         html
     )
 
-    # H4, H5, H6 → <p><strong>
-    for level in range(4, 7):
+    # H4, H5 → <p><strong>
+    #
+    # NOTE: H2 is converted to <h6><strong>...</strong></h6> for Framer.
+    # We must NOT convert <h6> again, otherwise we lose heading styling and
+    # double-wrap <strong>.
+    for level in range(4, 6):
         html = re.sub(
             f'<h{level}>(.*?)</h{level}>',
             r'<p><strong>\1</strong></p>',
@@ -193,6 +220,9 @@ def generate_preview_html(input_file):
         body_html = markdown_to_framer_html(body_md)
         is_json_input = False
 
+    # If CDN URLs are not uploaded/reachable yet, prefer local images for preview.
+    body_html = rewrite_remote_images_to_local(body_html, input_path.parent)
+
     # Extract metadata
     title = frontmatter.get('title', 'Untitled')
     sub_title = frontmatter.get('sub_title', '')
@@ -232,11 +262,27 @@ def generate_preview_html(input_file):
     # Replace template variables
     html = template.replace('{{TITLE}}', title)
     html = html.replace('{{SUB_TITLE_BLOCK}}', sub_title_block)
-    html = html.replace('{{COVER_URL}}', cover_url)
+
+
+
+
+
+    # Prefer local cover image if present in images/
+    cover_url_local = cover_url
+    if cover_url:
+        filename = os.path.basename(str(cover_url).split("?")[0].split("#")[0])
+        local_cover = input_path.parent / "images" / filename
+        if local_cover.exists():
+            cover_url_local = f"images/{filename}"
+
+    html = html.replace('{{COVER_URL}}', cover_url_local)
+    
     html = html.replace(
         '{{COVER_URL|IMG}}',
-        f'<img alt="cover" src="{cover_url}" />' if cover_url else ''
+        f'<img alt="cover" src="{cover_url_local}" />' if cover_url_local else ''
     )
+
+
     html = html.replace('{{READ_TIME}}', read_time)
     html = html.replace('{{DATE}}', date_formatted)
     html = html.replace('{{ARTICLE_BODY}}', body_html)

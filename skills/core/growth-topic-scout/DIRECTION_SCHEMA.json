@@ -28,6 +28,11 @@
       "pattern": "^D[0-9]{2}$",
       "examples": ["D01", "D02"]
     },
+    "cluster_id": {
+      "type": "string",
+      "description": "Cluster identifier for semantic diversity grouping (Mode D2)",
+      "examples": ["C01", "C02"]
+    },
     "theme": {
       "type": "string",
       "description": "High-level theme/category of this direction",
@@ -202,6 +207,34 @@
       "type": "string",
       "description": "Recommended mode for the writer skill",
       "enum": ["tool_showdown", "standard", null]
+    },
+    "strategy_source": {
+      "type": "string",
+      "description": "Which divergence strategy produced this direction (Mode D2)",
+      "enum": ["seed_xpollination", "persona_rotation", "serp_gap", "competitor_diverge", null]
+    },
+    "similarity_to_other_finals": {
+      "type": "array",
+      "description": "Pairwise semantic similarity to other final directions (Mode D2 audit trail)",
+      "items": {
+        "type": "object",
+        "required": ["direction_id", "similarity"],
+        "properties": {
+          "direction_id": { "type": "string" },
+          "similarity": { "type": "number", "minimum": 0, "maximum": 1 }
+        }
+      }
+    },
+    "diversity_bonus": {
+      "type": "integer",
+      "description": "Diversity bonus points (0-15) (Mode D2)",
+      "minimum": 0,
+      "maximum": 15
+    },
+    "portfolio_score": {
+      "type": "number",
+      "description": "Portfolio score used for final selection (Mode D2). Typically f(seo_score, aeo_score) + diversity_bonus.",
+      "minimum": 0
     },
     "product_mapping": {
       "type": "object",

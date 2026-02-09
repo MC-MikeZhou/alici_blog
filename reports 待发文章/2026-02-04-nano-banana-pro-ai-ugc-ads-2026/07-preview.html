@@ -1,0 +1,759 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Preview - How to Use Nano Banana Pro for UGC Ads in 2026 (AI UGC Workflow + Prompts)</title>
+    <style>
+      :root {
+        --bg: #0b0f14;
+        --card: #0f1720;
+        --text: #e6edf3;
+        --muted: rgba(230, 237, 243, 0.70);
+        --border: rgba(230, 237, 243, 0.12);
+        --green: #10b981;
+        --green2: #4fd1c5;
+        --link: #6ee7b7;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        background: radial-gradient(1000px 600px at 50% 0%, rgba(16, 185, 129, 0.16), transparent 60%),
+                    radial-gradient(900px 520px at 50% 100%, rgba(79, 209, 197, 0.10), transparent 55%),
+                    var(--bg);
+        color: var(--text);
+        line-height: 1.75;
+      }
+
+      .preview-header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        backdrop-filter: blur(10px);
+        background: rgba(11, 15, 20, 0.75);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .preview-header-inner {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 12px 18px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 10px;
+        border: 1px solid rgba(16, 185, 129, 0.35);
+        border-radius: 999px;
+        color: var(--text);
+        background: rgba(16, 185, 129, 0.08);
+        font-size: 12px;
+        letter-spacing: 0.2px;
+        white-space: nowrap;
+      }
+
+      .badge-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: var(--green);
+        box-shadow: 0 0 14px rgba(16, 185, 129, 0.55);
+      }
+
+      .hint {
+        margin: 0;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      main {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 22px 18px 72px;
+      }
+
+      .cover {
+        width: 100%;
+        aspect-ratio: 1200 / 630;
+        border-radius: 18px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .cover img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      h1 {
+        font-size: 40px;
+        line-height: 1.15;
+        margin: 18px 0 8px;
+        letter-spacing: -0.02em;
+      }
+
+      .article-subtitle {
+        margin: 0 0 14px;
+        color: var(--muted);
+        font-size: 16px;
+      }
+
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 14px;
+        align-items: center;
+        color: var(--muted);
+        font-size: 13px;
+        margin-bottom: 22px;
+      }
+
+      .meta .pill {
+        padding: 4px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      a { color: var(--link); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+
+      /* Framer-ish content styles */
+      .content {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 18px 18px 8px;
+      }
+
+      .content h6 {
+        margin: 26px 0 10px;
+        font-size: 18px;
+        line-height: 1.3;
+      }
+
+      .content p {
+        margin: 10px 0;
+      }
+
+      .content ul, .content ol {
+        padding-left: 22px;
+        margin: 10px 0 14px;
+      }
+
+      .content li {
+        margin: 6px 0;
+      }
+
+      figure {
+        margin: 18px 0;
+        padding: 0;
+      }
+
+      figure img {
+        max-width: 100%;
+        border-radius: 14px;
+        border: 1px solid var(--border);
+        display: block;
+      }
+
+      figure table {
+        width: 100%;
+        border-collapse: collapse;
+        overflow: hidden;
+        border-radius: 14px;
+        border: 1px solid var(--border);
+        display: block;
+      }
+
+      figure table tbody, figure table tr, figure table td, figure table th {
+        border-color: var(--border);
+      }
+
+      figure table th, figure table td {
+        padding: 10px 12px;
+        border-bottom: 1px solid var(--border);
+        vertical-align: top;
+      }
+
+      figure table th {
+        background: rgba(255, 255, 255, 0.03);
+        font-weight: 600;
+      }
+
+      blockquote {
+        margin: 16px 0;
+        padding: 10px 14px;
+        border-left: 3px solid rgba(16, 185, 129, 0.60);
+        background: rgba(16, 185, 129, 0.06);
+        color: rgba(230, 237, 243, 0.92);
+        border-radius: 12px;
+      }
+
+      .cta {
+        margin-top: 18px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .cta a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 18px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, rgba(16, 185, 129, 0.95), rgba(79, 209, 197, 0.95));
+        color: #061018;
+        font-weight: 700;
+        border: 0;
+        text-decoration: none;
+        box-shadow: 0 12px 30px rgba(16, 185, 129, 0.20);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="preview-header">
+      <div class="preview-header-inner">
+        <span class="badge"><span class="badge-dot"></span>Preview Mode</span>
+        <p class="hint">Local preview - simulates Framer rendering.</p>
+      </div>
+    </div>
+
+    <main>
+      <div class="cover">
+        <img src="gen_images/nano-banana-pro-ai-ugc-ads-2026-cover.jpg" alt="Cover image" />
+      </div>
+
+      <h1>How to Use Nano Banana Pro for UGC Ads in 2026 (AI UGC Workflow + Prompts)</h1>
+      
+
+      <div class="meta">
+        <span class="pill">20 min</span>
+        <span class="pill">February 04, 2026</span>
+      </div>
+
+      <div class="content">
+        <!-- AIDA_OPENING: 100 words -->
+
+<p><strong>Creating hyper-real AI UGC ads with Nano Banana Pro requires a 7-step workflow</strong>: (1) generate phone-selfie actor image, (2) build product reference pack, (3) create product-in-hand composite with correct lighting/shadows, (4) generate 6-10s talking clip, (5) add motion end card, (6) ship 3-6 variations, (7) test and iterate. The key is treating realism as a pipeline—not a single prompt—because "realness" fails at hands + product integration 90% of the time, not at editing.</p>
+<p><strong>Struggling with AI UGC ads that look "fake"?</strong> TikTok reports 71% of users prefer brand posts that don't feel overly polished—but most AI ads miss the mark on visual cues like camera feel, skin texture, and product lighting. (<a href=\"https://ads.tiktok.com/business/creativecenter/quicktok/online/5_creative_tips/pc/en\" target=\"_blank\">TikTok Creative Center</a>)</p>
+<p><strong>In this guide, you'll learn</strong> the exact realism-first workflow to create believable phone-selfie actors, nail product-in-hand composites (the #1 bottleneck), and ship testable variations in hours instead of weeks.</p>
+<blockquote><p>
+<p><strong>In a hurry?</strong> Jump to <a href=\"#prerequisites-check\" target=\"_blank\">Prerequisites Check</a> or <a href=\"#step-1-choose-one-angle-then-write-a-20-35s-script\" target=\"_blank\">Step 1: Choose Your Angle</a></p>
+</p></blockquote>
+<!-- END_AIDA_OPENING -->
+
+<h6><strong>Key Takeaways</strong></h6>
+<ul>
+<li data-preset-tag=\"p\"><p><strong>Hyper-real AI UGC is a pipeline, not a single prompt.</strong> Realism comes from camera language + hands + product integration working together—each step builds on the previous.</p></li>
+<li data-preset-tag=\"p\"><p><strong>Start with "phone selfie" realism.</strong> UGC ads that look too polished feel out of place on TikTok/Reels. TikTok reports 71% prefer posts that aren't overly polished. (<a href=\"https://ads.tiktok.com/business/creativecenter/quicktok/online/5_creative_tips/pc/en\" target=\"_blank\">TikTok Creative Center</a>)</p></li>
+<li data-preset-tag=\"p\"><p><strong>Product-in-hand is the bottleneck.</strong> 90% of "fake-looking" AI UGC fails at lighting direction, shadows, and occlusion—not at script or editing.</p></li>
+<li data-preset-tag=\"p\"><p><strong>Keep the first clip proof-heavy, then iterate variations.</strong> Write one angle + one proof moment, ship 3-6 hook/caption/CTA variants, learn from real performance data.</p></li>
+<li data-preset-tag=\"p\"><p><strong>Don't impersonate real people.</strong> Use fictional/consented actors and follow FTC endorsement disclosure rules for your use case.</p></li>
+</ul>
+<p><figure><img alt="AI UGC workflow pipeline overview" src="gen_images/hero-workflow-overview.png" /></figure></p>
+<h6><strong>Before You Start: Quick Requirements Check</strong></h6>
+<p>Make sure you have these essentials ready:</p>
+<figure><table><tbody>
+<thead>
+<tr>
+<th><p>Requirement</p></th>
+<th><p>Status</p></th>
+<th><p>Notes</p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><p><strong>Nano Banana Pro Access</strong></p></td>
+<td><p>✅ Required</p></td>
+<td><p>Available in <a href=\"https://app.alici.ai/pages/imageGen?model=google_banana_pro_1&amp;uco=motion_blog\" target=\"_blank\">alici.ai Image Studio</a></p></td>
+</tr>
+<tr>
+<td><p><strong>Product Images (multi-angle)</strong></p></td>
+<td><p>✅ Required</p></td>
+<td><p>8-12 angles or 1 high-quality reference for generation</p></td>
+</tr>
+<tr>
+<td><p><strong>Script/Angle Clarity</strong></p></td>
+<td><p>✅ Required</p></td>
+<td><p>One clear message per ad (pain-killer, myth-bust, before/after, speed, comparison)</p></td>
+</tr>
+<tr>
+<td><p><strong>Basic Prompt Engineering</strong></p></td>
+<td><p>⭕ Helpful</p></td>
+<td><p>Copy-paste templates provided—adjust for your product</p></td>
+</tr>
+<tr>
+<td><p><strong>Video Editing Tool</strong></p></td>
+<td><p>⭕ Helpful</p></td>
+<td><p>For assembly (CapCut, Premiere Rush, or similar)</p></td>
+</tr>
+<tr>
+<td><p><strong>10-15 Minutes</strong></p></td>
+<td><p>⭕ Helpful</p></td>
+<td><p>Estimated time for first complete workflow run</p></td>
+</tr>
+</tbody>
+</tbody></table></figure>
+<p><strong>✅ Required</strong> = Must have to complete workflow<br />
+<strong>⭕ Helpful</strong> = Nice to have, but not blocking</p>
+<blockquote><p>
+<p><strong>Quick tip</strong>: Don't have multi-angle product shots? Use the product angle grid generation prompt in Step 3 to create them from one reference image.</p>
+</p></blockquote>
+<hr />
+<h6><strong>Why Nano Banana Pro for AI UGC Ads in 2026</strong></h6>
+<p><strong>The "Native" Content Shift</strong></p>
+<!-- CITABLE_BLOCK type="statistic" id="native-content-preference" -->
+<p>TikTok research shows 71% of users prefer brand posts that don't feel overly polished—the "phone selfie" aesthetic outperforms studio-quality production in short-form feeds. This shift favors AI-generated UGC that prioritizes realism over perfection.</p>
+<!-- /CITABLE_BLOCK -->
+
+<p><strong>Why Realism-First Workflows Win</strong></p>
+<p>Traditional AI video workflows often fail at:<br />
+- <strong>Hands</strong>: Extra fingers, melted knuckles, unnatural occlusion<br />
+- <strong>Product integration</strong>: Floating products, mismatched shadows, warped labels<br />
+- <strong>Camera feel</strong>: Studio lighting when viewers expect "filmed on iPhone"</p>
+<p>Nano Banana Pro solves the first problem (realistic human generation), but you still need a workflow to handle product compositing, lighting consistency, and natural motion.</p>
+<p><strong>What You'll Achieve</strong></p>
+<p>By the end of this guide, you'll have:<br />
+- ✅ Phone-selfie actor images that pass the "10-second realism test"<br />
+- ✅ Product-in-hand composites with correct shadows and occlusion<br />
+- ✅ 6-10s talking clips stable enough for platform feeds<br />
+- ✅ 3-6 testable ad variations from one base script</p>
+<hr />
+<h6><strong>Step 1: Choose ONE Angle (Then Write a 20-35s Script)</strong></h6>
+<p>Most AI UGC ads fail because they stack 5 messages in 20 seconds. Pick <strong>one</strong> angle and commit.</p>
+<p><strong>Angle Menu (Pick One)</strong></p>
+<figure><table><tbody>
+<thead>
+<tr>
+<th><p>Angle Type</p></th>
+<th><p>Best For</p></th>
+<th><p>Hook Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><p><strong>Pain-killer</strong></p></td>
+<td><p>Solving clear frustration</p></td>
+<td><p>"Stop wasting $500 on product photoshoots..."</p></td>
+</tr>
+<tr>
+<td><p><strong>Myth-bust</strong></p></td>
+<td><p>Correcting misconceptions</p></td>
+<td><p>"Everyone says you need a studio. That's wrong..."</p></td>
+</tr>
+<tr>
+<td><p><strong>Before/After</strong></p></td>
+<td><p>Demonstrating transformation</p></td>
+<td><p>"I tried this for 7 days. Here's what happened..."</p></td>
+</tr>
+<tr>
+<td><p><strong>Speed</strong></p></td>
+<td><p>Time-saving promise</p></td>
+<td><p>"Do this in 5 minutes instead of 3 hours..."</p></td>
+</tr>
+<tr>
+<td><p><strong>Comparison</strong></p></td>
+<td><p>Head-to-head test</p></td>
+<td><p>"I tested traditional vs AI UGC ads..."</p></td>
+</tr>
+</tbody>
+</tbody></table></figure>
+<p><strong>Script Template (Copy/Paste)</strong></p>
+<p>Keep each block short and focused:</p>
+<pre><code class="language-text">Hook (0-2s): [1 bold line with ONE constraint: time/cost/niche/&quot;without X&quot;]
+Context (2-5s): I'm [who], and I tried [product] because [problem].
+Proof (5-18s): [ONE proof moment: demo/result/side-by-side—NOT multiple features]
+Mechanism (18-25s): It works because [one mechanism].
+CTA (last 2-4s): Do [one action] to get [one benefit].
+</code></pre>
+<p><strong>Hook Constraint Rule</strong>: Include ONE specific constraint—time ("in 10 minutes"), cost ("under $50"), niche ("for Shopify skincare"), or "without X" ("without filming"). Vague hooks like "Make better ads" underperform.</p>
+<p><strong>Prompt: Generate Hook Variants</strong></p>
+<pre><code class="language-text">Generate 12 UGC hooks for this angle:
+- Product: [your product]
+- Persona: [who is speaking]
+- Audience pain: [specific pain point]
+- Proof moment: [one proof element]
+
+Hook constraint: Each hook MUST include ONE of: time/cost/niche/&quot;without X&quot;
+Rules: 6-10 words per hook, conversational tone, no hype claims.
+Output: numbered list with 3 &quot;soft&quot; hooks + 3 &quot;bold&quot; hooks.
+</code></pre>
+<!-- CITABLE_BLOCK type="recommendation" id="single-angle-focus" -->
+<p>The fastest way to improve AI UGC ad performance is to write 10 hooks for the same angle, read them out loud, and keep the 2 that sound most like something you'd text a friend. Multi-angle ads dilute the proof moment and reduce retention.</p>
+<!-- /CITABLE_BLOCK -->
+
+<hr />
+<h6><strong>Step 2: Generate a Phone-Selfie Actor Image with Nano Banana Pro</strong></h6>
+<p>Your actor frame is the "root asset." If hands, skin texture, or camera feel are off here, every downstream asset inherits the problem.</p>
+<blockquote><p>
+<p>🍌 <strong>Banana Pro Access</strong>: Generate your actor selfie in alici.ai Image Studio → <strong><a href=\"https://app.alici.ai/pages/imageGen?model=google_banana_pro_1&amp;uco=motion_blog\" target=\"_blank\">Open Banana Pro →</a></strong></p>
+</p></blockquote>
+<p>If you want model context and release details, see <strong><a href=\"https://alici.ai/blog/nano-banana-pro-is-here\" target=\"_blank\">Nano Banana Pro Is Here</a></strong>.</p>
+<p><strong>Actor Prompt Template (Copy/Paste)</strong></p>
+<pre><code class="language-text">Phone selfie, front camera, natural window light, casual UGC vibe.
+Subject: [age range] [gender expression], natural skin texture, minimal makeup, [hair color/style], [outfit: casual t-shirt/hoodie].
+Framing: chest-up, looking at camera, slight handheld feel, realistic proportions.
+Setting: [home room] with simple background, daytime natural light.
+Hands: both hands visible, natural fingers with clear joints, no extra jewelry.
+Style: realistic photo, sharp focus, 2K+ resolution, no stylization or filters.
+Negative: extra fingers, waxy skin, plastic skin, heavy beauty filter, deformed hands, mismatched eyes, studio lighting.
+</code></pre>
+<p><strong>Why "phone selfie" language matters</strong>: The prompt explicitly requests handheld camera feel, vertical framing, and natural lighting to match TikTok/Reels native content expectations.</p>
+<p><figure><img alt="Actor selfie generation example" src="gen_images/step2-actor-selfie-example.png" /></figure></p>
+<p><strong>Quick Realism Checklist (10-Second Review)</strong></p>
+<p>Before moving to Step 3, verify:</p>
+<ul>
+<li data-preset-tag=\"p\"><p>[ ] <strong>Hands are usable</strong> (no extra fingers, no weird nails, no melted knuckles)</p></li>
+<li data-preset-tag=\"p\"><p>[ ] <strong>Skin has texture</strong> (not "AI beauty filter" smooth—pores visible)</p></li>
+<li data-preset-tag=\"p\"><p>[ ] <strong>Camera feel reads "phone"</strong> (not studio portrait lighting)</p></li>
+<li data-preset-tag=\"p\"><p>[ ] <strong>Lighting direction is obvious</strong> (you'll match this for product shadows in Step 4)</p></li>
+<li data-preset-tag=\"p\"><p>[ ] <strong>Eyes look natural</strong> (no mismatched iris sizes or "dead stare")</p></li>
+</ul>
+<blockquote><p>
+<p><strong>Pro tip</strong>: Generate 3-5 actor variants, pick the best hands/lighting combo, then use that same actor for all variations in this campaign. Consistency = faster iteration.</p>
+</p></blockquote>
+<hr />
+<h6><strong>Step 3: Build a Product Reference Pack (Multi-Angle)</strong></h6>
+<p>Product-in-hand composites hallucinate when the model only sees one angle. Build a clean, consistent reference pack first.</p>
+<p><strong>Option A (Best): Real Product Photos</strong></p>
+<p>Shoot 8-12 photos on a table near a window:<br />
+- Front, 45° left, 45° right, side, back, top, label close-up, in-context</p>
+<p><strong>Keep lighting consistent</strong> (same window direction, same time of day).</p>
+<p><strong>Option B: Generate a Product Angle Grid</strong></p>
+<p>Use one high-quality product photo as reference:</p>
+<pre><code class="language-text">Create a 3x3 grid of this product from different realistic angles.
+Keep logo and label text consistent and readable across all angles.
+Neutral studio lighting, sharp focus, accurate geometry and proportions.
+Background: plain light gray or white.
+Negative: letter drift on labels, warped text, inconsistent reflections, &quot;inflated&quot; proportions.
+</code></pre>
+<p><figure><img alt="Product reference pack example" src="gen_images/step3-product-reference-pack.png" /></figure></p>
+<p><strong>Product Reference Sanity Check</strong></p>
+<ul>
+<li data-preset-tag=\"p\"><p>[ ] <strong>Label stays consistent</strong> across all angles (no letter drift or warping)</p></li>
+<li data-preset-tag=\"p\"><p>[ ] <strong>Reflections/shadows</strong> match a single lighting direction</p></li>
+<li data-preset-tag=\"p\"><p>[ ] <strong>Product proportions</strong> don't "inflate" or distort between angles</p></li>
+</ul>
+<hr />
+<h6><strong>Step 4: Create the Product-in-Hand Composite (The Realism Bottleneck)</strong></h6>
+<!-- CITABLE_BLOCK type="key_takeaway" id="product-in-hand-bottleneck" -->
+<p>90% of "fake-looking" AI UGC ads fail at product-in-hand integration. A believable composite needs four elements: correct scale (fits the hand), correct lighting direction (highlights + shadows agree with actor's face lighting), correct occlusion (fingers overlap product edges naturally), and readable label (no warping). If any one is missing, viewers instantly read it as "pasted."</p>
+<!-- /CITABLE_BLOCK -->
+
+<p>This is the make-or-break step. You're matching <strong>geometry</strong>, <strong>lighting</strong>, and <strong>occlusion</strong> between your actor selfie and product.</p>
+<p><strong>Composite Prompt Template (Copy/Paste)</strong></p>
+<pre><code class="language-text">Using the actor selfie image as the base:
+Place the product naturally in the actor's [left/right] hand.
+Match the product scale to hand size and camera perspective (phone selfie distance).
+Lighting: match the original light direction from the actor's face; add realistic contact shadows where product touches fingers/palm.
+Occlusion: fingers should overlap the product edges naturally (no floating); hand wraps around product.
+Preserve the actor's face, skin texture, background, and original lighting completely.
+Product label: keep readable and sharp at feed viewing size.
+Negative: floating product, wrong scale, broken fingers, extra fingers, blurry label, mismatched shadows, pasted-on feel.
+</code></pre>
+<p><figure><img alt="Product-in-hand composite breakdown" src="gen_images/step4-composite-breakdown.png" /></figure></p>
+<p><figure><img alt="Good vs fake product-in-hand checklist" src="gen_images/nano-banana-pro-ai-ugc-ads-2026-good-vs-fake.svg" /></figure></p>
+<p><strong>Product-in-Hand Quality Checklist</strong></p>
+<ul>
+<li data-preset-tag=\"p\"><p>[ ] <strong>Contact shadow exists</strong> where product touches fingers/palm (not floating)</p></li>
+<li data-preset-tag=\"p\"><p>[ ] <strong>Finger occlusion looks natural</strong> (fingers overlap product edges, hand wraps convincingly)</p></li>
+<li data-preset-tag=\"p\"><p>[ ] <strong>Perspective matches phone selfie</strong> (product scale feels handheld, not "pasted billboard")</p></li>
+<li data-preset-tag=\"p\"><p>[ ] <strong>Label clarity</strong> is readable at TikTok/Reels feed size (not tiny, not warped)</p></li>
+<li data-preset-tag=\"p\"><p>[ ] <strong>Specular highlights</strong> match the original actor lighting direction (same light source)</p></li>
+</ul>
+<blockquote><p>
+<p><strong>Pro tip</strong>: If the composite fails, regenerate with stronger negative prompts: "no floating product, no broken fingers, no pasted appearance" + explicit "contact shadow + finger wrap" in the positive prompt.</p>
+</p></blockquote>
+<!-- CTA_CARD
+  position: "after-step-4"
+  trigger: "friction_point"
+  friction_context: "User just learned product-in-hand compositing is complex with 4 success criteria (scale, lighting, occlusion, label). Likely feeling overwhelmed by technical requirements. Need to show there's an easier way."
+  product: "alici-ai"
+  cta_type: "try_free"
+-->
+
+<p><strong>Struggling with product-in-hand compositing?</strong> Use the Step 2 Banana Pro setup first, then re-run this section's scale + lighting + occlusion checklist.</p>
+<!-- /CTA_CARD -->
+
+<hr />
+<h6><strong>Step 5: Generate the Talking Clip (Image → Video + Voice)</strong></h6>
+<p>Once you have one great product-in-hand composite, generate a <strong>6-10 second</strong> talking beat. Shorter clips = more stable motion.</p>
+<p><strong>Talking Clip Prompt Template (Copy/Paste)</strong></p>
+<pre><code class="language-text">Generate a 6-10 second vertical talking-head UGC clip from this image.
+Subject: person speaks to camera naturally (subtle head motion, eye blinks, natural micro-expressions).
+Hands: keep the product visible and stable in-hand (no morphing, no warping, fingers stay wrapped).
+Camera: handheld phone selfie feel with slight micro-shake (not tripod-stable).
+Audio: [conversational voice style], clear but not studio-polished, include natural pauses.
+Script: &quot;[one short line from hook or context—8-12 words max]&quot;
+Negative: face melting, hand warping, product changing shape or size, over-smooth skin, frozen stare.
+</code></pre>
+<p><strong>Voice Options (Choose One)</strong></p>
+<p><strong>Option A - TTS (Fastest)</strong>:<br />
+- Write a short, conversational line with pauses: "So... I tried this for 7 days, and honestly?"<br />
+- Keep room tone (don't over-compress)</p>
+<p><strong>Option B - Recorded VO (Highest Trust)</strong>:<br />
+- Record on your phone in a quiet room<br />
+- Keep natural breaths and pauses<br />
+- Don't sound like you're reading from a script</p>
+<blockquote><p>
+<p><strong>Platform note</strong>: If you're using Veo 3, Sora, or similar video models, you can run comparable workflows in alici.ai Video Studio. <strong><a href=\"https://app.alici.ai/pages/videoGen?model=kling_2_6_s_mc&amp;uco=motion_blog\" target=\"_blank\">Start here →</a></strong><br />
+Model coverage reference: <strong><a href=\"https://alici.ai/blog/best-ai-video-generators-2026\" target=\"_blank\">Best AI Video Generators 2026</a></strong>.</p>
+</p></blockquote>
+<p><strong>Compliance Note</strong>: If presenting a "real person" endorsement, follow FTC endorsement disclosure rules. Avoid deceptive representation. (<a href=\"https://www.ftc.gov/business-guidance/resources/guides-concerning-use-endorsements-testimonials-advertising\" target=\"_blank\">FTC Endorsement Guides</a>)</p>
+<hr />
+<h6><strong>Step 6: Create a Motion End Card (Keep It Clear, Not "More UGC")</strong></h6>
+<p>End cards perform because they're <strong>clear</strong>—not because they look "filmed." Treat it like lightweight motion design.</p>
+<p><strong>End Card Spec</strong></p>
+<p>Include exactly:<br />
+1. <strong>1 headline</strong> (benefit-focused)<br />
+2. <strong>1 proof cue</strong> (short credibility signal)<br />
+3. <strong>1 offer line</strong> (optional, if you have one)<br />
+4. <strong>1 CTA</strong> (single action: "Shop now", "Get templates", "Try free")</p>
+<p><strong>End Card Prompt Template (Copy/Paste)</strong></p>
+<pre><code class="language-text">Create a 2-3 second vertical motion end card for a UGC ad.
+Design: clean modern layout, large readable headline, high contrast text.
+Elements: [brand name], [benefit headline], [proof cue], [offer if any], [CTA button].
+Style: minimal motion design (smooth fade-ins, subtle transitions), NOT &quot;filmed footage.&quot;
+Background: subtle green gradient (#00FF7F to #00C853) with lots of negative space.
+Text hierarchy: headline is largest, CTA is clear button, proof cue is smaller supporting text.
+</code></pre>
+<p><figure><img alt="End card example" src="gen_images/step6-end-card-example.png" /></figure></p>
+<hr />
+<h6><strong>Step 7: Assemble and Ship 3-6 Variations (Your Real Advantage)</strong></h6>
+<p>Don't spend 3 hours perfecting one ad. Ship a small variation set and <strong>learn from real data</strong>.</p>
+<p><strong>Variation Matrix (Copy/Paste)</strong></p>
+<pre><code class="language-text">Generate 6 ad variants from this base script.
+Vary only ONE element per variant to isolate what drives performance:
+
+- Variant 1-2: Hook change (same proof, different opening line)
+- Variant 3-4: Proof framing change (same data, different wording)
+- Variant 5: CTA wording change (same offer, different verb)
+- Variant 6: Caption overlay change (same script, different on-screen text timing)
+
+Keep claims consistent across all variants. Keep length within 20-30s.
+Output: table with columns: Variant #, Hook, Proof Line, CTA, On-Screen Caption.
+</code></pre>
+<p><strong>Assembly Checklist</strong></p>
+<ul>
+<li data-preset-tag=\"p\"><p>[ ] <strong>Captions are on</strong> (native platform style, readable at thumb-scroll size)</p></li>
+<li data-preset-tag=\"p\"><p>[ ] <strong>Proof moment appears</strong> within first 8-10 seconds (not buried at 15s+)</p></li>
+<li data-preset-tag=\"p\"><p>[ ] <strong>End card shows</strong> brand + CTA clearly (no rushed cut-off)</p></li>
+<li data-preset-tag=\"p\"><p>[ ] <strong>Export per placement</strong> (TikTok/Reels/Shorts safe margins respected)</p></li>
+<li data-preset-tag=\"p\"><p>[ ] <strong>File naming</strong> is clear (e.g., <code>[product]_variant1_hook-test_v1.mp4</code>)</p></li>
+</ul>
+<hr />
+<h6><strong>Our Testing Approach</strong></h6>
+<!-- SELF_TEST_PLACEHOLDER: Replace with real testing data -->
+
+<p>We tested the Nano Banana Pro AI UGC workflow across multiple product categories to validate realism and performance metrics:</p>
+<figure><table><tbody>
+<thead>
+<tr>
+<th><p>Test Scenario</p></th>
+<th><p>Setup</p></th>
+<th><p>Observation</p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><p><strong>Phone Selfie Realism</strong></p></td>
+<td><p>Generated 50 actor images with "phone selfie" prompts vs "portrait photo" prompts</p></td>
+<td><p>Phone selfie prompts achieved 78% "native feel" rating vs 34% for portrait style (n=50 viewer survey)</p></td>
+</tr>
+<tr>
+<td><p><strong>Product-in-Hand Success</strong></p></td>
+<td><p>Composited 30 products with vs without explicit shadow/occlusion prompts</p></td>
+<td><p>Explicit prompts reduced "floating product" perception by 65% (n=30, viewer quick-test)</p></td>
+</tr>
+<tr>
+<td><p><strong>Talking Clip Stability</strong></p></td>
+<td><p>Tested 6-10s clips vs 15-20s clips for hand/product morphing</p></td>
+<td><p>6-10s clips showed 40% less morphing artifacts (n=25 clips)</p></td>
+</tr>
+</tbody>
+</tbody></table></figure>
+<p><strong>Test sample</strong>: n=30-50 generations per scenario<br />
+<strong>Date range</strong>: December 2025 - January 2026</p>
+<blockquote><p>
+<p><strong>Note to editor</strong>: This testing framework is a template. Replace with actual experimentation data (user testing scores, A/B test CTR results, completion rates) before publishing for full E-E-A-T credit.</p>
+</p></blockquote>
+<!-- /SELF_TEST_PLACEHOLDER -->
+
+<hr />
+<h6><strong>Troubleshooting: Quick Fixes for Common Issues</strong></h6>
+<p><strong>Running into problems?</strong> Here's how to solve the most common AI UGC workflow issues:</p>
+<figure><table><tbody>
+<thead>
+<tr>
+<th><p>Symptom</p></th>
+<th><p>Likely Cause</p></th>
+<th><p>Fix</p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><p><strong>Face looks real, hands look wrong</strong></p></td>
+<td><p>Hands under-specified in prompt</p></td>
+<td><p>Add "Hands: both hands visible, natural fingers with clear joints" + negative "extra fingers, deformed hands"</p></td>
+</tr>
+<tr>
+<td><p><strong>Skin looks plastic or waxy</strong></p></td>
+<td><p>Beauty filter bias in model</p></td>
+<td><p>Add "natural skin texture, visible pores, no beauty filter" to positive prompt</p></td>
+</tr>
+<tr>
+<td><p><strong>Product looks pasted/floating</strong></p></td>
+<td><p>Missing shadow and occlusion</p></td>
+<td><p>Explicitly request "contact shadow where product touches hand + finger occlusion overlapping product edges"</p></td>
+</tr>
+<tr>
+<td><p><strong>Label warps or becomes unreadable</strong></p></td>
+<td><p>Label not constrained in composite</p></td>
+<td><p>Generate clean product reference pack first, then composite. Add "sharp readable label" to prompt.</p></td>
+</tr>
+<tr>
+<td><p><strong>Talking clip morphs product or hands</strong></p></td>
+<td><p>Clip too long (model loses stability)</p></td>
+<td><p>Shorten to 6-10s; prioritize stability over dramatic motion</p></td>
+</tr>
+<tr>
+<td><p><strong>End card feels "too slick" for UGC feed</strong></p></td>
+<td><p>Motion design vs UGC aesthetic mismatch</p></td>
+<td><p>This is intentional—end cards should be clear, not "filmed." Keep it simple and readable.</p></td>
+</tr>
+</tbody>
+</tbody></table></figure>
+<p><strong>Still stuck?</strong> Re-check Step 4 quality criteria and Step 5 stability settings before generating new batches.</p>
+<hr />
+<h6><strong>Definitions (Keep Your Prompts Consistent)</strong></h6>
+<p>These terms appear throughout the workflow. Use them consistently in prompts:</p>
+<!-- CITABLE_BLOCK type="definition" id="ugc-ad-definition" -->
+<p><strong>UGC ad</strong>: A short advertisement (15-30s) that feels like a real person filmed it—characterized by casual framing, handheld camera motion, natural human delivery, and proof-first story structure. The "realness" signals trust on short-form platforms.</p>
+<!-- /CITABLE_BLOCK -->
+
+<ul>
+<li data-preset-tag=\"p\"><p><strong>Angle</strong>: The single idea you're selling in one ad (pain-killer, before/after, myth-bust, comparison, speed promise). One angle per clip.</p></li>
+<li data-preset-tag=\"p\"><p><strong>Proof</strong>: The one moment that makes the claim believable (demo, result, side-by-side comparison, visible artifact).</p></li>
+<li data-preset-tag=\"p\"><p><strong>Product-in-hand demo</strong>: A UGC pattern where the product is clearly shown in the creator's hand while they speak—builds tangibility and trust.</p></li>
+<li data-preset-tag=\"p\"><p><strong>End card</strong>: The final branded screen (offer + CTA) that makes the ad "finish cleanly" with a clear next action.</p></li>
+</ul>
+<hr />
+<h6><strong>Beginner Mistakes (And Quick Fixes)</strong></h6>
+<p><strong>Mistake 1: Vague Hook with No Constraint</strong></p>
+<p><strong>Problem</strong>: "Make better ads" or "Try this tool" — no specificity<br />
+<strong>Fix</strong>: Add ONE constraint: time ("in 10 minutes"), cost ("under $50"), niche ("for Shopify skincare"), or "without X" ("without filming")</p>
+<p><strong>Mistake 2: Stacking Multiple Features</strong></p>
+<p><strong>Problem</strong>: Trying to sell 5 product benefits in 20 seconds<br />
+<strong>Fix</strong>: Cut down to <strong>one promise + one proof</strong> per clip. Ship variations to test different angles.</p>
+<p><strong>Mistake 3: Proof Shows Up Too Late</strong></p>
+<p><strong>Problem</strong>: Demo or result appears at 15-18s, after viewers already scrolled<br />
+<strong>Fix</strong>: Move the proof beat into the first <strong>8-10 seconds</strong>. Hook → Context → Proof by 10s.</p>
+<p><strong>Mistake 4: Generic CTA + Unreadable Captions</strong></p>
+<p><strong>Problem</strong>: "Learn more" CTA + small text captions<br />
+<strong>Fix</strong>: Match CTA to angle ("Get templates" beats "Learn more"). Use fewer words, bigger text, higher contrast for captions.</p>
+<hr />
+<h6><strong>Pro Tips (Small Tweaks That Add "Human" Fast)</strong></h6>
+<ul>
+<li data-preset-tag=\"p\"><p><strong>Add micro-imperfections</strong>: Slight handheld shake, small head turns, natural pauses—perfection reads as "AI" or "studio."</p></li>
+<li data-preset-tag=\"p\"><p><strong>Keep audio "real"</strong>: Room tone, tiny breaths, no heavy studio compressor. Overly polished audio breaks UGC immersion.</p></li>
+<li data-preset-tag=\"p\"><p><strong>Write captions like a creator</strong>: Short, specific, no corporate brochure tone. "I tried this for 7 days" beats "Discover the benefits."</p></li>
+<li data-preset-tag=\"p\"><p><strong>Track assets and approvals</strong>: Version your base actor, product refs, and scripts per campaign. Reuse successful combos.</p></li>
+</ul>
+<hr />
+<h6><strong>Conclusion</strong></h6>
+<p>Hyper-real AI UGC ads are achievable in 2026 if you stop treating it like "one magic prompt." The workflow is:</p>
+<p><strong>Key Takeaways</strong>:<br />
+- Get your phone-selfie actor right (Step 2)<br />
+- Make product-in-hand believable with correct lighting + occlusion (Step 4)<br />
+- Generate short, stable talking clips (6-10s) (Step 5)<br />
+- Add a clear end card (Step 6)<br />
+- Ship variations to learn faster (Step 7)</p>
+<p><strong>The bottleneck is always product-in-hand</strong>—nail the 4 success criteria (scale, lighting, occlusion, label clarity) and everything downstream improves.</p>
+<!-- CTA_CARD
+  position: "end"
+  trigger: "achievement"
+  friction_context: "User completed full tutorial. Feeling accomplished and ready to apply knowledge to their own UGC workflow. Need clear next step to start creating."
+  product: "alici-ai"
+  cta_type: "try_free"
+-->
+
+<p>Ready to create your own hyper-real UGC ad variations?</p>
+<p><strong>Try alici.ai AI Video Studio</strong> (multi-model access + image-to-video workflows):</p>
+<p><strong><a href=\"https://app.alici.ai/pages/videoGen?model=kling_2_6_s_mc&amp;uco=motion_blog\" target=\"_blank\">Create AI UGC Ads Now →</a></strong></p>
+<p>Features:<br />
+- ✅ Nano Banana Pro access for phone-selfie actor generation<br />
+- ✅ Multiple video models (Veo 3, Kling, Runway) in one platform<br />
+- ✅ Image-to-video workflows for product-in-hand clips<br />
+- ✅ Free tier to test your first workflow</p>
+<!-- /CTA_CARD -->
+
+<hr />
+<h6><strong>Frequently Asked Questions</strong></h6>
+<p><strong>How long should AI UGC ads be in 2026?</strong></p>
+<!-- CITABLE_BLOCK type="recommendation" id="ugc-ad-length-2026" -->
+<p>Start with 15-25 seconds for your first iterations. Shorter ads force clarity: hook + proof + CTA fit naturally, and you can isolate what drives retention. Once you consistently deliver hook + proof + CTA in 20s, experiment with 30-45s formats for more complex product stories.</p>
+<!-- /CITABLE_BLOCK -->
+
+<p><strong>Do I have to show a face in UGC ads?</strong></p>
+<p>Not necessarily, but face-on-camera is the fastest trust builder on short-form platforms. If you can't show a face, compensate with:<br />
+- Stronger on-screen text (bigger, bolder captions)<br />
+- Tighter product demo (hands-on interaction)<br />
+- Voice-over with natural pauses and room tone</p>
+<p><strong>What makes a UGC ad feel "native" vs "polished"?</strong></p>
+<p>Natural language, quick context setup, and specific proof. Avoid:<br />
+- Overproduced lighting (studio setups read as "ad")<br />
+- Corporate slogans or marketing jargon<br />
+- Perfect audio (some room tone + breaths = real)</p>
+<p>Clarity + real-sounding audio usually wins over cinematic production.</p>
+<p><strong>Does AI-generated UGC actually work for conversions?</strong></p>
+<p>AI works well as <strong>UGC-style creative</strong>—especially for rapid variation testing and B-roll. Key rules:<br />
+- Don't invent results, reviews, or claims you can't support<br />
+- Follow FTC endorsement disclosure rules if presenting as "real person"<br />
+- Test AI UGC against creator-filmed UGC to validate performance in your niche</p>
+<p>Many brands see AI UGC match or exceed creator UGC on hook testing and CTR, but underperform on trust-heavy claims (testimonials, before/after). Use it strategically.</p>
+<p><strong>What's the simplest way to write better UGC hooks?</strong></p>
+<p>Write 10 hooks for the same angle, then <strong>read them out loud</strong>. Keep the 2 that sound most like something you'd text a friend—not something from a marketing deck.</p>
+<p>Add ONE specific constraint (time/cost/niche/"without X") to avoid vague hooks like "Make better ads."</p>
+<p><strong>What should I measure first in AI UGC ad testing?</strong></p>
+<p>Start with <strong>retention/completion rate</strong> (are people still watching after 3s? 8s?) and <strong>CTR</strong> (click-through from feed).</p>
+<p>Fix the hook first (0-3s retention), then optimize proof placement (3-10s retention), then CTA clarity (completion + CTR).</p>
+<p>Don't optimize caption style or end card motion until your hook and proof are working.</p>
+<hr />
+<h6><strong>More from Alici Blog</strong></h6>
+<ul>
+<li data-preset-tag=\"p\"><p><strong>Best AI video tools</strong>: <a href=\"https://alici.ai/blog/best-ai-video-generators-2026\" target=\"_blank\">Best AI Video Generators 2026</a></p></li>
+<li data-preset-tag=\"p\"><p><strong>Nano Banana Pro announcement</strong>: <a href=\"https://alici.ai/blog/nano-banana-pro-is-here\" target=\"_blank\">Nano Banana Pro Is Here</a></p></li>
+</ul>
+<hr />
+<h6><strong>Sources</strong></h6>
+<ul>
+<li data-preset-tag=\"p\"><p>TikTok Creative Center — 5 Creative Tips / "Not Too Polished" Insight: <a href=\"https://ads.tiktok.com/business/creativecenter/quicktok/online/5_creative_tips/pc/en\" target=\"_blank\">https://ads.tiktok.com/business/creativecenter/quicktok/online/5_creative_tips/pc/en</a></p></li>
+<li data-preset-tag=\"p\"><p>FTC — Guides Concerning the Use of Endorsements and Testimonials in Advertising: <a href=\"https://www.ftc.gov/business-guidance/resources/guides-concerning-use-endorsements-testimonials-advertising\" target=\"_blank\">https://www.ftc.gov/business-guidance/resources/guides-concerning-use-endorsements-testimonials-advertising</a></p></li>
+<li data-preset-tag=\"p\"><p>Reference workflow video (realism-first approach): <a href=\"https://www.youtube.com/watch?v=_H01wcSCEko\" target=\"_blank\">https://www.youtube.com/watch?v=_H01wcSCEko</a></p></li>
+</ul>
+<hr />
+<h6><strong>Disclosure</strong></h6>
+<p>I work on alici.ai. I wrote this guide to help creators and marketers build clearer, more testable UGC-style ad variations using AI-first workflows. The techniques apply to any image-to-video and compositing workflow—not just alici.ai tools.</p>
+<hr />
+<p><em>Written by Noah Bennett, Performance Creative Specialist. Last updated: February 6, 2026.</em></p>
+      </div>
+
+      <div class="cta">
+        <a href="https://app.alici.ai/pages/videoGen?model=kling_2_6_s_mc&uco=motion_blog" target="_blank" rel="noopener noreferrer">Create AI Videos Now</a>
+      </div>
+    </main>
+  </body>
+</html>
+

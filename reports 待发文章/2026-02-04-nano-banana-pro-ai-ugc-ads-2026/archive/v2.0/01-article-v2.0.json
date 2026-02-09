@@ -1,0 +1,118 @@
+{
+  "meta": {
+    "version": "3.0",
+    "tier": 2,
+    "word_count": 2680,
+    "generated_at": "2026-02-05T15:30:00Z",
+    "skill_version": "blog-tutorial-writer v3.0"
+  },
+  "aeo_pre_check": {
+    "estimated_score": 88,
+    "citable_blocks": 6,
+    "citable_block_types": [
+      "statistic",
+      "key_takeaway",
+      "recommendation",
+      "definition"
+    ],
+    "experience_evidence": "partial",
+    "faq_count": 6
+  },
+  "tier_compliance": {
+    "tier_detected": 2,
+    "tier_justification": "Workflow/multi-step tutorial with Prerequisites Check and Troubleshooting Table sections. Clear 7-step process requiring conditional sections.",
+    "word_count_in_range": true,
+    "conditional_sections_correct": true
+  },
+  "sections": {
+    "prerequisites": true,
+    "workflow_selector": false,
+    "market_context": true,
+    "monetization_framework": false,
+    "troubleshooting": true
+  },
+  "images": [
+    {
+      "id": "hero-workflow-overview",
+      "type": "diagram",
+      "priority": "required",
+      "status": "placeholder",
+      "alt": "7-step Nano Banana Pro workflow: Angle selection → Actor selfie → Product refs → Product-in-hand → Talking clip → End card → Variations"
+    },
+    {
+      "id": "step2-actor-selfie-example",
+      "type": "screenshot",
+      "priority": "required",
+      "status": "placeholder",
+      "alt": "Nano Banana Pro actor selfie showing natural skin texture, visible hands, and phone camera aesthetic"
+    },
+    {
+      "id": "step3-product-reference-pack",
+      "type": "comparison",
+      "priority": "recommended",
+      "status": "placeholder",
+      "alt": "Product angle grid showing 9 views: front, 45° angles, sides, back, top, label close-up"
+    },
+    {
+      "id": "step4-composite-breakdown",
+      "type": "diagram",
+      "priority": "required",
+      "status": "placeholder",
+      "alt": "Annotated product-in-hand showing: contact shadow, finger occlusion, matched lighting direction, label clarity"
+    },
+    {
+      "id": "step6-end-card-example",
+      "type": "screenshot",
+      "priority": "recommended",
+      "status": "placeholder",
+      "alt": "Clean motion end card showing brand name, benefit headline, CTA button on green gradient background"
+    }
+  ],
+  "ctas": [
+    {
+      "position": "after-step-4",
+      "trigger": "friction_point",
+      "product": "alici-ai",
+      "friction_context": "User just learned product-in-hand compositing is complex with 4 success criteria (scale, lighting, occlusion, label). Likely feeling overwhelmed by technical requirements."
+    },
+    {
+      "position": "end",
+      "trigger": "achievement",
+      "product": "alici-ai",
+      "friction_context": "User completed full tutorial. Feeling accomplished and ready to apply knowledge to their own UGC workflow."
+    }
+  ],
+  "validation": {
+    "title_formula": "PASS - How-to + Specific Action + Tool Name + Year",
+    "opening_pattern": "PASS - AIDA framework with 100 words, includes TikTok 71% statistic",
+    "word_budget": "PASS - Tier 2 within range (2,200-2,800), actual: 2,680",
+    "insight_pack_used": false,
+    "experiment_pack_used": false,
+    "self_test_generated": true
+  },
+  "warnings": [
+    "experiment_pack not provided - generated Self-Test placeholder instead (n=30-50 template data)",
+    "No Workflow Selector section - article has linear workflow, not multi-path",
+    "Citable Blocks: 6 total (meets 5-7 requirement), but only 4 types used (target: 3+ types ✓)"
+  ],
+  "v3_features_applied": {
+    "tier_structure": true,
+    "prerequisites_check": true,
+    "troubleshooting_table": true,
+    "citable_block_taxonomy": true,
+    "image_placeholder_v2": true,
+    "cta_card_v2_friction_aligned": true,
+    "self_test_framework": true,
+    "self_check_json_output": true
+  },
+  "improvements_from_v1": [
+    "Added Prerequisites Check section (Tier 2 requirement)",
+    "Upgraded Troubleshooting to table format (6 issues with Symptom → Cause → Fix)",
+    "Added Citable Block type taxonomy (statistic, key_takeaway, recommendation, definition)",
+    "Added IMAGE_PLACEHOLDER v2.0 attributes (id, type, priority, alt, where, context)",
+    "Added CTA_CARD v2.0 with friction-aligned positioning (after-step-4 friction_point, end achievement)",
+    "Added Self-Test framework with placeholder n=30-50 data",
+    "Increased Citable Blocks from 2 to 6 (200% increase)",
+    "Word count: 2,680 (within Tier 2 range 2,200-2,800)"
+  ]
+}

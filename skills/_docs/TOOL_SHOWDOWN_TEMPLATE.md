@@ -1,5 +1,11 @@
 # Tool Showdown Template v1.2
 
+> **⚠️ MIGRATED (2026-02-07)**: 此模板已迁移到独立技能目录。
+> **新位置**: `/skills/writers/blog-showdown-writer/SHOWDOWN_TEMPLATE.md`
+> **独立技能**: `blog-showdown-writer v1.0` (`/skills/writers/blog-showdown-writer/SKILL.md`)
+>
+> 本文件保留作为参考。新开发请使用迁移后的版本。
+
 > High-contrast comparison structure for "vs" and "showdown" articles.
 > This template enforces 11 mandatory headings with specific formats for tables, CTAs, and decision trees.
 > **v1.2 NEW**: Source Attribution 章节 + Reframe 开篇强制 + L4 Integrator 定位

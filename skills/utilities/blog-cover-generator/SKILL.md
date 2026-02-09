@@ -458,7 +458,7 @@ def build_cover_prompt(category, subtype, cover_text, color, person_source=None)
 
 ```bash
 # 使用项目统一脚本生成封面
-python /Users/H/Documents/AliciBlog/scripts/fal_image_generator.py \
+python scripts/fal_image_generator.py \
   --prompt "[generated_prompt]" \
   --role cover \
   --aspect-ratio 16:9 \

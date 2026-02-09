@@ -1,0 +1,35 @@
+{
+  "analysis_date": "2026-02-04",
+  "schema_version": "1.1",
+  "data_source": "test_fixture",
+  "selected_topic": {
+    "primary_keyword": "best ai ugc tools",
+    "search_intent": "best-list",
+    "recommended_titles": [
+      "10 Best AI UGC Tools in 2026: Compared by Use Case"
+    ],
+    "content_type": "list",
+    "listicle_profile": "standard",
+    "list_size_target": 10,
+    "freshness_date": "2026-02-04",
+    "methodology_level": "research_only",
+    "outline": {
+      "h2_sections": [
+        "Quick Answer",
+        "Key Takeaways",
+        "Quick Comparison (Table)",
+        "How We Picked & Tested",
+        "Tool items (10)",
+        "Use Case Matching (Table)",
+        "How to Choose",
+        "FAQ + Final Verdict"
+      ],
+      "key_questions": [
+        "What is the best AI UGC tool?",
+        "Are AI UGC tools worth it?",
+        "Which AI UGC tool is best for beginners?"
+      ]
+    }
+  }
+}
+

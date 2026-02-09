@@ -1,4 +1,4 @@
-具体步骤内容，以thumbnail.md 为准，每次确认步骤请重新查看
+具体步骤内容，以easy_mode.md 为准，每次确认步骤请重新查看
 
 # 00-Implementation — Thumbnail Mode 执行记录（v0.2）
 

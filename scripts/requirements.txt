@@ -1,8 +1,10 @@
 # AliciBlog Scripts Dependencies
 # Python 3.8+
 
-# Note: All scripts use only Python standard library (urllib, json, subprocess)
-# No external dependencies required!
+# Note: Some scripts require third-party libs.
+
+PyYAML==6.0.2
+Markdown==3.7
 
 # Optional: for future enhancements
 # requests>=2.31.0  # Alternative to urllib (more user-friendly)

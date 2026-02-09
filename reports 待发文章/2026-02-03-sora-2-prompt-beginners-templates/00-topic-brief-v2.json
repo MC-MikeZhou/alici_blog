@@ -1,0 +1,73 @@
+{
+  "topic": "Sora 2 Prompt Guide for Viral UGC Ads (2026) — Hook Framework + Templates + Fixes",
+  "slug": "sora-2-prompt-guide-beginners-templates-2026",
+  "content_type": "tutorial",
+  "language": "en",
+  "geo": "US",
+  "primary_keyword": "sora 2 prompt guide",
+  "secondary_keywords": [
+    "ugc ad prompts",
+    "viral ugc ads",
+    "sora 2 prompt templates",
+    "sora 2 prompt examples",
+    "ai video prompt framework",
+    "prompt troubleshooting"
+  ],
+  "title_locked": "Sora 2 Prompt Guide for Viral UGC Ads (2026): Hook Framework + Templates + Fixes",
+  "title_alternatives": [
+    "How to Write Sora 2 Prompts for Viral UGC Ads (2026): Templates + Checklist + Fixes",
+    "Sora 2 Prompts for UGC Ads: A Viral-Style Template System You Can Copy"
+  ],
+  "target_audience": "Beginner-to-intermediate creators making UGC-style ads (TikTok/Reels/Shorts) who want viral-style pacing, clear product proof, and repeatable prompt templates.",
+  "article_angle": "Outcome-first playbook: define hook/proof/loop in prompt terms, then generate 6–12 variations, pick top 2, and iterate with symptom→fix prompt lines. Templates and the 7-element prompt structure are framed as tools for viral UGC outcomes.",
+  "word_count_target": "1800-2500",
+  "product_mapping": {
+    "primary": "AI Video Studio",
+    "secondary": "Video Prompt Assistant",
+    "integration_level": "L3_natural_positioning",
+    "cta_links": [
+      "https://app.alici.ai/pages/videoGen",
+      "https://app.alici.ai/chat?agent_id=alici_video_prompt"
+    ],
+    "positioning": "Make viral-style UGC ads by running Sora 2 / Sora 2 Pro inside alici.ai, then iterating with a prompt assistant and variation workflow."
+  },
+  "references": {
+    "competitors": [
+      {
+        "name": "Higgsfield",
+        "url": "https://higgsfield.ai/blog/SORA-2-Prompt-Guide-How-to-Create-Viral-Videos-Like-a-Pro",
+        "usage_intent": "reference (structure + creator positioning)"
+      },
+      {
+        "name": "WaveSpeed",
+        "url": "https://wavespeed.ai/blog/posts/sora-2-prompting-tips-better-videos-2026/",
+        "usage_intent": "reference (tips + pitfalls)"
+      }
+    ],
+    "constraints": [
+      "No hard numeric claims about Sora limits/specs unless sourced from official OpenAI public docs",
+      "No invented performance stats"
+    ]
+  },
+  "requirements": {
+    "must_include": [
+      "Direct answer within first 50 words and explicitly mentions viral UGC outcome",
+      "AIDA opening focused on creators (viral UGC ads) not prompt theory",
+      "A dedicated section: What Makes a UGC Ad Go Viral (In Prompt Terms)",
+      "7-step viral workflow (archetype → hook → proof → prompt structure → variations → pick top 2 → tighten + loop)",
+      "Understanding Prompt Structure section (Two strategies + 7 essential elements) using UGC ad examples",
+      "At least 1 table mapping: Element → Viral leverage → Example line",
+      "5 archetype templates (product-in-hand, before/after, satisfying process, POV problem→solution, proof shot close-up)",
+      "Viral failure modes troubleshooting (>=7) with symptom→cause→fix lines",
+      "FAQ (5–7) with short, quotable answers",
+      "CTA that explicitly guides: open alici.ai → choose Sora 2 or Sora 2 Pro → paste template → generate 6 variations"
+    ],
+    "must_avoid": [
+      "Overly cinematic storytelling as the main pitch (keep it UGC-realism first)",
+      "Unsourced claims about duration, pricing, quotas, or model tiers"
+    ]
+  },
+  "created_at": "2026-02-03",
+  "previous_version": "01-article-draft.md"
+}
+

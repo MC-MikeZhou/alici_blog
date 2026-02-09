@@ -1,0 +1,124 @@
+{
+  "title": "5 Best AI Tools for UGC Ads in 2026 (Test-Ready Picks)",
+  "slug": "best-ai-tools-for-ugc-ads-2026-top-5",
+  "content_type": "list",
+  "language": "en",
+  "geo": "US",
+  "created_date": "2026-02-06",
+  "word_count_target": "1700-2500",
+  "search_intent": "best-list",
+  "target_audience": "Performance marketers, e-commerce teams, and creators evaluating AI UGC ad tools",
+  "core_angle": "Traffic-first keyword strategy centered on 'ugc ads', with a practical Top 5 buyer guide format.",
+  "keyword_strategy": {
+    "primary_keyword": "ugc ads",
+    "secondary_keywords": [
+      "user generated content ads",
+      "ai video ad generator",
+      "ugc ads examples",
+      "best ugc ads"
+    ],
+    "locked_out_keywords": [
+      "best ai ugc tools",
+      "best ai ugc ads tools",
+      "ai tools for ugc ads"
+    ],
+    "rationale": "Primary keyword has validated search demand and stronger AEO features; zero-volume variants are used only as semantic support, not title anchors."
+  },
+  "title_strategy": {
+    "h1": "5 Best AI Tools for UGC Ads in 2026 (Test-Ready Picks)",
+    "meta_title": "5 Best AI Tools for UGC Ads in 2026 | Compare Pricing, Speed, and Realism",
+    "meta_description": "Top 5 AI tools for UGC ads in 2026, with a quick comparison table, best-use recommendations, and a freshness checkpoint for pricing and limitations."
+  },
+  "evidence": {
+    "source": "DataForSEO live API + Google organic SERP live advanced",
+    "validated_at": "2026-02-06",
+    "keyword_validation": [
+      {
+        "keyword": "ugc ads",
+        "search_volume": 1300,
+        "cpc": 12.7,
+        "competition": "MEDIUM"
+      },
+      {
+        "keyword": "best ai ad generator",
+        "search_volume": 260,
+        "cpc": 25.63,
+        "competition": "HIGH"
+      },
+      {
+        "keyword": "best ai ugc ads tools",
+        "search_volume": 0,
+        "cpc": 0.0,
+        "competition": "N/A"
+      },
+      {
+        "keyword": "best ai ugc tools",
+        "search_volume": 0,
+        "cpc": 0.0,
+        "competition": "N/A"
+      },
+      {
+        "keyword": "ai tools for ugc ads",
+        "search_volume": 0,
+        "cpc": 0.0,
+        "competition": "N/A"
+      }
+    ],
+    "serp_features": [
+      {
+        "keyword": "ugc ads",
+        "ai_overview": true,
+        "people_also_ask": true,
+        "featured_snippet": false,
+        "video": true
+      },
+      {
+        "keyword": "ai ad generator",
+        "ai_overview": false,
+        "people_also_ask": false,
+        "featured_snippet": false,
+        "video": true
+      },
+      {
+        "keyword": "ai video ad generator",
+        "ai_overview": false,
+        "people_also_ask": false,
+        "featured_snippet": false,
+        "video": false
+      }
+    ]
+  },
+  "locked_decisions": {
+    "article_scale": "Top 5",
+    "output_language": "English",
+    "methodology_level": "research_only",
+    "freshness_statement": "Verified as of 2026-02-06"
+  },
+  "tool_candidates": [
+    "Alici AI",
+    "InVideo AI",
+    "Arcads AI",
+    "Pippit AI",
+    "MakeUGC"
+  ],
+  "article_structure": {
+    "sections": [
+      "Quick Answer",
+      "Key Takeaways",
+      "Quick Comparison (Table)",
+      "How We Picked & Tested",
+      "Top 5 tool cards",
+      "Use Case Matching (Table)",
+      "How to Choose",
+      "FAQ + Final Verdict"
+    ]
+  },
+  "quality_gates": {
+    "primary_keyword_volume_gt_zero": true,
+    "title_contains": ["UGC Ads", "AI Tools", "2026", "5"],
+    "listicle_validator_status": "PASS",
+    "aeo_score_target": ">=75",
+    "compliance_no_hands_on_claims": true
+  },
+  "status": "ready_for_draft"
+}

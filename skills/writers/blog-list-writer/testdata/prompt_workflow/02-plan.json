@@ -1,0 +1,74 @@
+{
+  "meta": {
+    "version": "3.0",
+    "freshness_date": "2026-02-04",
+    "methodology_level": "hybrid",
+    "listicle_profile": "prompt_workflow",
+    "list_size_target": 14,
+    "primary_keyword": "best ai video prompt tools",
+    "search_intent": "best-list"
+  },
+  "tool_pool": [
+    {"name": "Alici AI", "source_types": ["official"], "notes": "Prompt-to-video workflow + model access"},
+    {"name": "PromptKit", "source_types": ["serp"], "notes": "Prompt templates"},
+    {"name": "SceneSmith", "source_types": ["review"], "notes": "Storyboard prompts"}
+  ],
+  "selected_tools": [
+    {"rank": 1, "name": "Alici AI", "one_line_positioning": "Best all-in-one prompt-to-video workflow", "official_site_url": "https://alici.ai", "pricing_url": "https://alici.ai/pricing", "free_plan_note": "Limited credits", "limitations": "Quotas vary", "evidence": {"third_party": ["https://example.com/alici-ai-prompts"]}},
+    {"rank": 2, "name": "PromptKit", "one_line_positioning": "Best for fast prompt templates", "official_site_url": "https://promptkit.example", "pricing_url": "https://promptkit.example/pricing", "free_plan_note": "Yes", "limitations": "Generic templates", "evidence": {"third_party": ["https://example.com/promptkit-review"]}},
+    {"rank": 3, "name": "SceneSmith", "one_line_positioning": "Best for storyboard-style prompting", "official_site_url": "https://scenesmith.example", "pricing_url": "https://scenesmith.example/pricing", "free_plan_note": "Trial", "limitations": "Learning curve", "evidence": {"third_party": ["https://example.com/scenesmith-roundup"]}},
+    {"rank": 4, "name": "AngleForge", "one_line_positioning": "Best for ad angles and hooks", "official_site_url": "https://angleforge.example", "pricing_url": "https://angleforge.example/pricing", "free_plan_note": "Trial", "limitations": "Text-first", "evidence": {"third_party": ["https://example.com/angleforge-bench"]}},
+    {"rank": 5, "name": "ShotPlanner", "one_line_positioning": "Best for camera and shot prompts", "official_site_url": "https://shotplanner.example", "pricing_url": "https://shotplanner.example/pricing", "free_plan_note": "No", "limitations": "Narrow scope", "evidence": {"third_party": ["https://example.com/shotplanner-review"]}},
+    {"rank": 6, "name": "StyleAtlas", "one_line_positioning": "Best for style reference prompts", "official_site_url": "https://styleatlas.example", "pricing_url": "https://styleatlas.example/pricing", "free_plan_note": "Yes", "limitations": "Style-only", "evidence": {"third_party": []}},
+    {"rank": 7, "name": "MotionCue", "one_line_positioning": "Best for motion and timing cues", "official_site_url": "https://motioncue.example", "pricing_url": "https://motioncue.example/pricing", "free_plan_note": "Trial", "limitations": "Requires practice", "evidence": {"third_party": []}},
+    {"rank": 8, "name": "DialogueDraft", "one_line_positioning": "Best for dialogue scene prompts", "official_site_url": "https://dialoguedraft.example", "pricing_url": "https://dialoguedraft.example/pricing", "free_plan_note": "No", "limitations": "Not for visuals", "evidence": {"third_party": []}},
+    {"rank": 9, "name": "BrollBank", "one_line_positioning": "Best for B-roll prompt packs", "official_site_url": "https://brollbank.example", "pricing_url": "https://brollbank.example/pricing", "free_plan_note": "Yes", "limitations": "Repetitive", "evidence": {"third_party": []}},
+    {"rank": 10, "name": "ProductDemoPrompter", "one_line_positioning": "Best for product demo prompting", "official_site_url": "https://productdemoprompter.example", "pricing_url": "https://productdemoprompter.example/pricing", "free_plan_note": "Trial", "limitations": "Ecom-focused", "evidence": {"third_party": []}},
+    {"rank": 11, "name": "UGCBuilder", "one_line_positioning": "Best for UGC-style prompt recipes", "official_site_url": "https://ugcbuilder.example", "pricing_url": "https://ugcbuilder.example/pricing", "free_plan_note": "No", "limitations": "Template bias", "evidence": {"third_party": []}},
+    {"rank": 12, "name": "BrandGuard", "one_line_positioning": "Best for brand-safe prompt constraints", "official_site_url": "https://brandguard.example", "pricing_url": "https://brandguard.example/pricing", "free_plan_note": "Trial", "limitations": "Conservative", "evidence": {"third_party": []}},
+    {"rank": 13, "name": "BatchVariations", "one_line_positioning": "Best for batch prompt variants", "official_site_url": "https://batchvariations.example", "pricing_url": "https://batchvariations.example/pricing", "free_plan_note": "Yes", "limitations": "Needs QA", "evidence": {"third_party": []}},
+    {"rank": 14, "name": "PromptLinter", "one_line_positioning": "Best for prompt QA checklists", "official_site_url": "https://promptlinter.example", "pricing_url": "https://promptlinter.example/pricing", "free_plan_note": "Yes", "limitations": "Rules can be rigid", "evidence": {"third_party": []}}
+  ],
+  "grouping": [],
+  "evaluation_framework": {
+    "dimensions": [
+      {"name": "Clarity", "weight": 25, "what_it_measures": "Prompt structure and unambiguity"},
+      {"name": "Control", "weight": 25, "what_it_measures": "Camera, motion, style constraints"},
+      {"name": "Reusability", "weight": 20, "what_it_measures": "Template quality and portability"},
+      {"name": "Workflow fit", "weight": 20, "what_it_measures": "Iteration, batch, QA"},
+      {"name": "Value", "weight": 10, "what_it_measures": "Cost per usable template"}
+    ],
+    "scenarios": ["UGC ad (15s)", "Product demo (10s)", "Cinematic B-roll (8s)"],
+    "scoring_notes": "Hybrid methodology: limited hands-on spot-checks + desk research."
+  },
+  "evidence_links": {"per_tool_official_min": 1, "top5_third_party_min": 1},
+  "aeo_pack": {
+    "quick_answer": "If you want the fastest path from idea to a usable AI video prompt, start with Alici AI for a structured prompt-to-video workflow, then add a template library like PromptKit for quick variations. SceneSmith is best when you need storyboard-style control, while ShotPlanner helps when camera movement is your bottleneck. Use the comparison table to match tools to your workflow, and copy-paste the templates in the prompting section to get a first result in minutes.",
+    "key_takeaways": [
+      "Alici AI — best all-in-one prompt-to-video workflow",
+      "PromptKit — best for fast prompt templates",
+      "SceneSmith — best for storyboard-style prompting",
+      "ShotPlanner — best for camera and shot prompts",
+      "BatchVariations — best for batch prompt variants",
+      "PromptLinter — best for prompt QA checklists"
+    ],
+    "faq": [
+      {"q": "What is the best AI video prompt tool?"},
+      {"q": "Do prompt templates actually help?"},
+      {"q": "How do I write prompts that control camera movement?"},
+      {"q": "What should I avoid in prompts?"},
+      {"q": "Is free tier enough to learn prompting?"},
+      {"q": "How do I scale prompt variations safely?"}
+    ]
+  },
+  "cta_plan": [
+    {"id": 1, "placement": "quick_answer_end", "copy": "Try a structured prompt-to-video workflow first, then add templates.", "url": "https://app.alici.ai/pages/videoGen"},
+    {"id": 2, "placement": "final_verdict_end", "copy": "Use one template, ship 10 variants, then iterate based on results.", "url": "https://app.alici.ai/pages/videoGen"}
+  ],
+  "tables": {
+    "quick_comparison_columns": ["Tool", "Best For", "Core Positioning", "Price", "Free Plan", "Limitations"],
+    "use_case_columns": ["Use Case", "Recommended Tools", "Why", "Budget"]
+  },
+  "assumptions": []
+}
+

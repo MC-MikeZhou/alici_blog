@@ -1,0 +1,201 @@
+{
+  "mode": "seed_funnel",
+  "schema_version": "2.3",
+  "analysis_date": "2026-02-04",
+  "seed": "ugc creator",
+  "engine": "d1",
+  "data_source": "websearch",
+  "mission_config": {
+    "seed": "ugc creator",
+    "anchors": {
+      "competitors": [
+        "https://invideo.io/blog",
+        "https://later.com/blog",
+        "https://sproutsocial.com/insights",
+        "https://www.shopify.com/blog",
+        "https://grin.co/blog"
+      ]
+    },
+    "scope": {
+      "language": "en",
+      "geo": "US",
+      "audience": "content_creators",
+      "validation_depth": "standard"
+    },
+    "growth": {
+      "goal": "traffic_and_conversion",
+      "product_relevance": "script_to_video"
+    }
+  },
+  "funnel_stats": {
+    "initial_directions": 7,
+    "after_intent_patterns": 7,
+    "after_expansion": 64,
+    "after_validation": 24,
+    "after_pruning": 6,
+    "final_directions": 2
+  },
+  "final_directions": [
+    {
+      "rank": 1,
+      "direction_id": "D01",
+      "theme": "How to Become a UGC Creator (Complete Guide)",
+      "pattern_id": "P1",
+      "locked_title": {
+        "title": "How to Become a UGC Creator in 2026: Step-by-Step Guide",
+        "primary_keyword": "how to become a ugc creator",
+        "intent_matched": true,
+        "serp_aligned": true,
+        "year_validated": true,
+        "formula_id": "howto-1",
+        "evidence": {
+          "serp_titles": [
+            "Become A UGC Creator: The 2026 Complete Guide (xolo.io)",
+            "How to Become a UGC Creator on TikTok: 2026 Guide (ondigitals.com)",
+            "How to become a UGC creator in 2026 with Youdji [Guide] (youdji.com)"
+          ],
+          "search_volume": 22000,
+          "trend": "rising"
+        }
+      },
+      "backup_title": {
+        "title": "UGC Creator in 2026: The Complete Guide to Getting Paid for Content",
+        "reasoning": "More benefit-driven; emphasizes monetization which is a key motivator for the target audience"
+      },
+      "seo_score": 85,
+      "aeo_score": 72,
+      "combined_priority": "excellent",
+      "evidence_chain": {
+        "volume": 92900,
+        "trend": "rising",
+        "cpc_avg": 2.15,
+        "competition_avg": 0.60,
+        "serp_gap": "medium",
+        "competitor_weakness": [
+          "outdated",
+          "no_testing_methodology"
+        ],
+        "freshness_signal": "high"
+      },
+      "outline": {
+        "h2_sections": [
+          "What Is a UGC Creator? (And Why It's the Hottest Side Hustle in 2026)",
+          "UGC Creator vs Influencer: Key Differences",
+          "Step 1: Choose Your Niche (With Demand Data)",
+          "Step 2: Gear Up — What You Actually Need",
+          "Step 3: Build Your First UGC Portfolio (Even With Zero Clients)",
+          "Step 4: Master the UGC Script Formula",
+          "Step 5: Set Your Rates (2026 Pricing Benchmarks)",
+          "Step 6: Pitch Brands That Pay (Templates + Platforms)",
+          "Step 7: Deliver, Iterate, Scale",
+          "How AI Tools Are Changing the UGC Game in 2026",
+          "Common Mistakes New UGC Creators Make",
+          "FAQ"
+        ],
+        "aeo_answer_block": "A UGC creator produces authentic-looking branded content for companies to use in ads and social media. To become one in 2026, choose a niche, build a portfolio with spec videos, set rates starting at $150-300 per video, and pitch brands weekly. No large following required — brands pay for content quality, not audience size.",
+        "estimated_word_count": 2500
+      },
+      "recommended_skill": "blog-tutorial-writer",
+      "recommended_mode": "standard",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_studio",
+        "product_angle": "Use Alici AI to generate UGC-style scripts and spec videos for your portfolio in minutes"
+      },
+      "keywords": [
+        {"keyword": "ugc creator", "volume": 40500, "cpc": 3.10, "competition": 0.78, "priority": "high"},
+        {"keyword": "how to become a ugc creator", "volume": 22000, "cpc": 2.80, "competition": 0.72, "priority": "high"},
+        {"keyword": "ugc content creator", "volume": 12100, "cpc": 2.50, "competition": 0.68, "priority": "high"},
+        {"keyword": "what is a ugc creator", "volume": 8100, "cpc": 1.80, "competition": 0.55, "priority": "medium"},
+        {"keyword": "ugc creator jobs", "volume": 6600, "cpc": 1.20, "competition": 0.45, "priority": "medium"},
+        {"keyword": "ugc side hustle", "volume": 3600, "cpc": 1.50, "competition": 0.40, "priority": "medium"}
+      ]
+    },
+    {
+      "rank": 2,
+      "direction_id": "D02",
+      "theme": "UGC Portfolio Building Guide",
+      "pattern_id": "P2",
+      "locked_title": {
+        "title": "UGC Portfolio That Lands Brand Deals: 7-Step Guide (2026)",
+        "primary_keyword": "ugc portfolio",
+        "intent_matched": true,
+        "serp_aligned": true,
+        "year_validated": true,
+        "formula_id": "howto-1",
+        "evidence": {
+          "serp_titles": [
+            "13 UGC Portfolio Examples & How to Create Yours Easily (copyfol.io)",
+            "7-STEP UGC Portfolio: ULTIMATE Guide For Creators And Brands (inbeat.agency)",
+            "10 Best UGC Portfolio Examples to Inspire Your Next Brand Pitch (2026) (creatorskit.app)"
+          ],
+          "search_volume": 9900,
+          "trend": "rising"
+        }
+      },
+      "backup_title": {
+        "title": "How to Build a UGC Portfolio in 2026: Examples + Free Templates",
+        "reasoning": "More keyword-exact match; includes 'examples' and 'templates' which are high-intent secondary keywords"
+      },
+      "seo_score": 78,
+      "aeo_score": 65,
+      "combined_priority": "good",
+      "evidence_chain": {
+        "volume": 19700,
+        "trend": "rising",
+        "cpc_avg": 1.90,
+        "competition_avg": 0.57,
+        "serp_gap": "medium",
+        "competitor_weakness": [
+          "outdated",
+          "no_testing_methodology",
+          "no_data"
+        ],
+        "freshness_signal": "medium"
+      },
+      "outline": {
+        "h2_sections": [
+          "Why Your UGC Portfolio Matters More Than Your Follower Count",
+          "Portfolio Format: Landing Page vs Website (Brands Prefer This)",
+          "Step 1: Choose Your Portfolio Platform",
+          "Step 2: Write a Bio That Sells",
+          "Step 3: Curate Your Best 6-12 Pieces",
+          "Step 4: Add Case Studies With Metrics",
+          "Step 5: Set Up Pricing Packages",
+          "Step 6: Include Testimonials & Social Proof",
+          "Step 7: Optimize for Discovery (Hashtags + SEO)",
+          "5 UGC Portfolio Examples That Actually Work",
+          "Using AI to Create Spec Content for Your Portfolio",
+          "FAQ"
+        ],
+        "aeo_answer_block": "A UGC portfolio is a curated landing page showcasing your best branded content pieces — product demos, reviews, unboxing videos — along with pricing, testimonials, and contact info. In 2026, 73% of brands require portfolios before negotiations. Use a landing-page format (not a full website) so brands can assess your value in one scroll.",
+        "estimated_word_count": 2200
+      },
+      "recommended_skill": "blog-tutorial-writer",
+      "recommended_mode": "standard",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "script_to_video",
+        "product_angle": "Create professional spec videos for your UGC portfolio using Alici AI's video studio — no brand deal required"
+      },
+      "keywords": [
+        {"keyword": "ugc portfolio", "volume": 9900, "cpc": 2.20, "competition": 0.62, "priority": "high"},
+        {"keyword": "ugc portfolio examples", "volume": 5400, "cpc": 1.90, "competition": 0.58, "priority": "high"},
+        {"keyword": "ugc portfolio template", "volume": 4400, "cpc": 1.60, "competition": 0.50, "priority": "medium"}
+      ]
+    }
+  ],
+  "batch_execution_ready": true,
+  "api_usage": {
+    "dataforseo_keyword_calls": 0,
+    "dataforseo_serp_calls": 0,
+    "websearch_calls": 9,
+    "webfetch_calls": 2,
+    "estimated_cost": "$0.00",
+    "estimated_cost_breakdown": {
+      "seo_cost": "$0.00 (WebSearch fallback)",
+      "aeo_cost": "$0.00 (not executed, standard depth)"
+    },
+    "note": "DataForSEO MCP unavailable; all validation via WebSearch proxy. Recommend re-validating with DataForSEO."
+  }
+}

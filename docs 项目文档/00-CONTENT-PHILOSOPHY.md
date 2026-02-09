@@ -110,10 +110,11 @@ content_product_mapping:
 - "Best [Category] in [Year]" 格式易于 AI 提取和引用
 - 公式化标题 = 更高的 Answer Engine 可见性
 
-### 三大内容类型公式
+### 四大内容类型公式
 
 | 类型 | 公式 | 必须元素 | 示例 |
 |------|------|----------|------|
+| **Showdown** | `[A] vs [B] vs [C]: Which [Category] Wins in [Year]?` | vs + 问句 | "Sora vs Runway vs Kling: Which AI Video Model Wins in 2026?" |
 | **Listicle** | `[Best/Top N] + [品类] + in [年份]` | 数字 + 年份 | "Best AI Video Generators in 2026" |
 | **How-to** | `How to [动词] with [工具] + [承诺]` | How to + 工具名 | "How to Create Viral Videos with Sora 2" |
 | **Insights** | `[数字] + [Predictions/Trends] + for [品类] + in [年份]` | 数字 + 年份 | "5 Bold Predictions for AI Video in 2026" |
@@ -139,7 +140,15 @@ SEO 关键词研究 → 提取核心词组 → 直接嵌入标题
 
 ### 应用到 Skills
 
-**blog-list-writer v2.0 升级**:
+**blog-showdown-writer v1.0**:
+```yaml
+title_validation:
+  must_include: "vs"
+  must_end_with_question: true
+  format: "[A] vs [B] vs [C]: Which [category] Wins in [YYYY]?"
+```
+
+**blog-list-writer v3.1 升级**:
 ```yaml
 title_validation:
   must_include_year: true
@@ -147,7 +156,7 @@ title_validation:
   format: "[Best/Top N] + [category] + in [YYYY]"
 ```
 
-**blog-tutorial-writer v2.1 升级**:
+**blog-tutorial-writer v3.1 升级**:
 ```yaml
 title_validation:
   must_start_with: "How to" | "Guide to"
@@ -155,9 +164,10 @@ title_validation:
   format: "How to [action] with [tool] + [promise]"
 ```
 
-**growth-topic-scout v1.2 升级**:
-- 输出 3 个标题建议 (按类型分: Listicle / How-to / Insights)
+**growth-topic-scout v2.4 升级**:
+- 输出 4 类标题建议 (Showdown / Listicle / How-to / Insights)
 - 每个标题必须验证年份和数字
+- "vs/对比" 信号自动路由到 Showdown 类型
 
 ---
 
@@ -392,6 +402,35 @@ author_strategy:
 
 ---
 
+## 四 Writer 增长漏斗 (v3.1 架构)
+
+每个 Writer 在流量漏斗中承担不同的增长角色：
+
+```
+                    ┌──────────┐
+                    │ Showdown │  ← 最高转化率，精准长尾流量
+                    │  决策层   │     "Sora vs Runway" ~2K/月
+                 ┌──┴──────────┴──┐
+                 │   List Writer   │  ← 中等转化，最大搜索量入口
+                 │    考虑层        │     "Best AI video generators" ~12K/月
+              ┌──┴────────────────┴──┐
+              │   Tutorial Writer    │  ← 信任建设，最高停留时间
+              │      兴趣层           │     "How to make AI video" ~30K/月
+           ┌──┴──────────────────────┴──┐
+           │   Case Roundup Writer       │  ← 时效性流量 (QDF 加分)
+           │        洞察层                │     热点峰值流量
+           └─────────────────────────────┘
+```
+
+| Writer | 增长角色 | 核心 KPI | AEO 价值 |
+|--------|---------|---------|----------|
+| **Showdown** | **转化引擎** — 最后一步决策 | CTR → 注册转化率 | 极高: AI 搜索直接推荐 "choose X for Y" |
+| **Listicle** | **流量基石** — 最大搜索量入口 | 有机流量 + 品牌曝光 | 高: "Best X" 是 AI 摘要高频触发词 |
+| **Tutorial** | **信任建设** — 建立专家权威 | 停留时间 + 回访率 | 中: 教程被引用但不直接推荐产品 |
+| **Roundup** | **时效补充** — 追热点 QDF 加分 | 首发速度 + 社交分享 | 低-中: 时效性内容 AI 引用短暂 |
+
+---
+
 ## 与现有文档的关系
 
 ```
@@ -399,9 +438,11 @@ author_strategy:
   ↓
 BLOG_WRITING_PRINCIPLES_v2.md
   ↓ (具体化)
-blog-list-writer v2.0
-blog-tutorial-writer v2.1
-growth-topic-scout v1.2
+blog-showdown-writer v1.0
+blog-list-writer v3.1
+blog-tutorial-writer v3.1
+case-roundup-writer v1.5
+growth-topic-scout v2.4
   ↓ (执行)
 实际博客内容
 ```
@@ -409,7 +450,7 @@ growth-topic-scout v1.2
 **层次关系**:
 1. **哲学层** (本文): 为什么这样做？
 2. **原则层** (BLOG_WRITING_PRINCIPLES_v2.md): 应该怎么做？
-3. **Skills 层** (各个 Skills): 具体执行步骤
+3. **Skills 层** (4 个 Writer + 工具链): 具体执行步骤
 4. **产出层** (博客文章): 最终内容
 
 ---
@@ -427,8 +468,8 @@ growth-topic-scout v1.2
 
 ### 立即实施
 
-- [ ] blog-list-writer v2.0: 强制年份 + 数字、评测方法论章节
-- [ ] blog-tutorial-writer v2.1: How-to 公式、Prompt 结构章节
+- [x] blog-list-writer v3.0: Blueprint 强制结构 + Validator Gate
+- [x] blog-tutorial-writer v3.0: Tier 系统 + Self-Check Report
 - [ ] growth-topic-scout v1.2: 3 个标题建议 (按类型)、年份验证
 - [ ] BLOG_WRITING_PRINCIPLES_v2.md: 补充公式化原则
 
@@ -465,7 +506,7 @@ growth-topic-scout v1.2
 
 不猜测用户需要什么，而是看竞品已证明什么有效。
 
-- **Phase 0.5**: 从 3 个竞品博客提取 5-8 种意图模式
+- **Phase 0.5**: 从 5 个竞品博客（默认）提取 5-8 种意图模式
 - **结果**: 方向与市场需求对齐，而非理论推测
 
 #### 2. Direction > Keywords
@@ -503,7 +544,8 @@ growth-topic-scout v1.2
 ├── 哲学 2: 公式化是 SEO 的保证
 ├── 哲学 3: 评测方法论 = 权威信号
 ├── 哲学 4: 弱化作者、强化平台 (可选)
-└── [NEW] Seed Mode 选题漏斗哲学 ← 选题阶段的方法论
+├── 四 Writer 增长漏斗 ← 每个 Writer 的增长角色定义
+└── Seed Mode 选题漏斗哲学 ← 选题阶段的方法论
 ```
 
 **层次关系**:
@@ -514,6 +556,8 @@ growth-topic-scout v1.2
 
 ## 版本历史
 
+- **v2.2** (2026-02-07): 新增四 Writer 增长漏斗章节，新增 Showdown 标题公式，更新 Writer 版本引用至 v3.1
+- **v2.1** (2026-02-06): 更新 Writer 版本引用至 v3.0
 - **v2.0** (2026-01-25): 新增 Seed Mode 选题漏斗哲学章节
 - **v1.0** (2026-01-18): 初始版本，基于 Higgsfield 竞品洞察
 

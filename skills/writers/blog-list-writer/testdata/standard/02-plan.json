@@ -1,0 +1,178 @@
+{
+  "meta": {
+    "version": "3.0",
+    "freshness_date": "2026-02-04",
+    "methodology_level": "research_only",
+    "listicle_profile": "standard",
+    "list_size_target": 10,
+    "primary_keyword": "best ai ugc tools",
+    "search_intent": "best-list"
+  },
+  "tool_pool": [
+    {"name": "Alici AI", "source_types": ["official"], "notes": "All-in-one AI visual workflow platform"},
+    {"name": "ToolAlpha", "source_types": ["serp", "review"], "notes": "UGC scripting + hooks"},
+    {"name": "ToolBeta", "source_types": ["serp", "competitor"], "notes": "Avatar-style UGC"},
+    {"name": "ToolGamma", "source_types": ["review"], "notes": "Ad creative variations"}
+  ],
+  "selected_tools": [
+    {
+      "rank": 1,
+      "name": "Alici AI",
+      "one_line_positioning": "Best overall workflow for AI UGC",
+      "official_site_url": "https://alici.ai",
+      "pricing_url": "https://alici.ai/pricing",
+      "free_plan_note": "Limited free credits",
+      "limitations": "Model availability and quotas vary",
+      "evidence": {"third_party": ["https://example.com/review-alici-ai"]}
+    },
+    {
+      "rank": 2,
+      "name": "ToolAlpha",
+      "one_line_positioning": "Best for hook and script generation",
+      "official_site_url": "https://toolalpha.example",
+      "pricing_url": "https://toolalpha.example/pricing",
+      "free_plan_note": "Trial available",
+      "limitations": "Template-heavy outputs",
+      "evidence": {"third_party": ["https://example.com/toolalpha-roundup"]}
+    },
+    {
+      "rank": 3,
+      "name": "ToolBeta",
+      "one_line_positioning": "Best for avatar-led UGC videos",
+      "official_site_url": "https://toolbeta.example",
+      "pricing_url": "https://toolbeta.example/pricing",
+      "free_plan_note": "No free plan",
+      "limitations": "Limited avatar diversity",
+      "evidence": {"third_party": ["https://example.com/toolbeta-review"]}
+    },
+    {
+      "rank": 4,
+      "name": "ToolGamma",
+      "one_line_positioning": "Best for rapid ad creative variations",
+      "official_site_url": "https://toolgamma.example",
+      "pricing_url": "https://toolgamma.example/pricing",
+      "free_plan_note": "Free tier (watermarked)",
+      "limitations": "Export quality depends on tier",
+      "evidence": {"third_party": ["https://example.com/toolgamma-bench"]}
+    },
+    {
+      "rank": 5,
+      "name": "ToolDelta",
+      "one_line_positioning": "Best for UGC video editing speed",
+      "official_site_url": "https://tooldelta.example",
+      "pricing_url": "https://tooldelta.example/pricing",
+      "free_plan_note": "Trial available",
+      "limitations": "Advanced features are paywalled",
+      "evidence": {"third_party": ["https://example.com/tooldelta-comparison"]}
+    },
+    {
+      "rank": 6,
+      "name": "ToolEpsilon",
+      "one_line_positioning": "Best for product demo shots",
+      "official_site_url": "https://toolepsilon.example",
+      "pricing_url": "https://toolepsilon.example/pricing",
+      "free_plan_note": "Limited free exports",
+      "limitations": "Limited brand controls",
+      "evidence": {"third_party": []}
+    },
+    {
+      "rank": 7,
+      "name": "ToolZeta",
+      "one_line_positioning": "Best for caption-first UGC",
+      "official_site_url": "https://toolzeta.example",
+      "pricing_url": "https://toolzeta.example/pricing",
+      "free_plan_note": "Free tier (limited)",
+      "limitations": "Weak multi-language support",
+      "evidence": {"third_party": []}
+    },
+    {
+      "rank": 8,
+      "name": "ToolEta",
+      "one_line_positioning": "Best for creator marketplace workflows",
+      "official_site_url": "https://tooleeta.example",
+      "pricing_url": "https://tooleeta.example/pricing",
+      "free_plan_note": "No",
+      "limitations": "Region availability varies",
+      "evidence": {"third_party": []}
+    },
+    {
+      "rank": 9,
+      "name": "ToolTheta",
+      "one_line_positioning": "Best for compliance-friendly templates",
+      "official_site_url": "https://tooltheta.example",
+      "pricing_url": "https://tooltheta.example/pricing",
+      "free_plan_note": "Trial",
+      "limitations": "Fewer creative styles",
+      "evidence": {"third_party": []}
+    },
+    {
+      "rank": 10,
+      "name": "ToolIota",
+      "one_line_positioning": "Best for budget teams",
+      "official_site_url": "https://tooliota.example",
+      "pricing_url": "https://tooliota.example/pricing",
+      "free_plan_note": "Free plan",
+      "limitations": "Lower output resolution",
+      "evidence": {"third_party": []}
+    }
+  ],
+  "grouping": [],
+  "evaluation_framework": {
+    "dimensions": [
+      {"name": "Output quality", "weight": 30, "what_it_measures": "Visual realism + editability"},
+      {"name": "Speed", "weight": 20, "what_it_measures": "Time to first usable variant"},
+      {"name": "Controllability", "weight": 20, "what_it_measures": "Prompts, styles, brand controls"},
+      {"name": "Workflow fit", "weight": 20, "what_it_measures": "Collaboration + export + iteration"},
+      {"name": "Value", "weight": 10, "what_it_measures": "Cost vs usable output"}
+    ],
+    "scenarios": [
+      "Lo-fi UGC ad (15s)",
+      "Product demo clip (10s)",
+      "Hook-first scripted talking head"
+    ],
+    "scoring_notes": "Weights are tuned for performance marketers producing short-form UGC."
+  },
+  "evidence_links": {
+    "per_tool_official_min": 1,
+    "top5_third_party_min": 1
+  },
+  "aeo_pack": {
+    "quick_answer": "The best AI UGC tools depend on your workflow: Alici AI is the best overall end-to-end option, ToolAlpha is best for hook and script generation, and ToolBeta is best if you want avatar-led UGC at scale. If you’re optimizing for speed and iteration, ToolDelta is the safest pick. Use the comparison table below to match tools to your exact use case.",
+    "key_takeaways": [
+      "Alici AI — best overall workflow for AI UGC",
+      "ToolAlpha — best for hook and script generation",
+      "ToolBeta — best for avatar-led UGC videos",
+      "ToolGamma — best for rapid ad creative variations",
+      "ToolDelta — best for UGC editing speed",
+      "ToolIota — best for budget teams"
+    ],
+    "faq": [
+      {"q": "What is the best AI UGC tool in 2026?"},
+      {"q": "Are AI UGC tools worth it for small teams?"},
+      {"q": "Which AI UGC tool is best for beginners?"},
+      {"q": "Can AI UGC replace real creators?"},
+      {"q": "What should I look for in pricing and free plans?"},
+      {"q": "How do I keep outputs compliant and not misleading?"}
+    ]
+  },
+  "cta_plan": [
+    {
+      "id": 1,
+      "placement": "quick_answer_end",
+      "copy": "Not sure which tool to pick? Try multiple models and workflows in one place.",
+      "url": "https://app.alici.ai/pages/videoGen"
+    },
+    {
+      "id": 2,
+      "placement": "final_verdict_end",
+      "copy": "Start with one workflow, then scale variations once you’ve found what converts.",
+      "url": "https://app.alici.ai/pages/videoGen"
+    }
+  ],
+  "tables": {
+    "quick_comparison_columns": ["Tool", "Best For", "Core Positioning", "Price", "Free Plan", "Limitations"],
+    "use_case_columns": ["Use Case", "Recommended Tools", "Why", "Budget"]
+  },
+  "assumptions": []
+}
+

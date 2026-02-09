@@ -6,7 +6,7 @@
 
 ```bash
 # 检查最新文章
-ls -la /Users/H/Documents/AliciBlog/reports/*/01-article-draft.md 2>/dev/null | tail -3
+ls -la reports/*/01-article-draft.md 2>/dev/null | tail -3
 
 # AEO 评分框架位置
 echo "评分框架: skills/core/aeo-analyzer/EVALUATION_FRAMEWORK.md"

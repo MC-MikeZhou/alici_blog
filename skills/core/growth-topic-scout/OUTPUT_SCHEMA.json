@@ -1,14 +1,14 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Growth Topic Scout Output v2.1",
-  "description": "Machine-readable output from growth-topic-scout skill for downstream content production. Supports Mode A (URL Analysis), Mode B (Keyword Matrix), and Mode C (AEO Validation).",
+  "title": "Growth Topic Scout Output",
+  "description": "Machine-readable output from growth-topic-scout skill for downstream content production. Supports Mode A (URL Analysis), Mode B (Keyword Matrix), Mode C (AEO Validation), and Seed Modes (D1/D2).",
   "type": "object",
   "required": ["analysis_date", "mode", "schema_version"],
   "properties": {
     "schema_version": {
       "type": "string",
-      "const": "2.1",
-      "description": "Schema version for compatibility checking"
+      "enum": ["2.1", "2.3"],
+      "description": "Schema version for compatibility checking (v2.3 adds Seed Mode outputs)"
     },
     "analysis_date": {
       "type": "string",
@@ -17,8 +17,16 @@
     },
     "mode": {
       "type": "string",
-      "enum": ["url_analysis", "keyword_matrix", "aeo_validation", "url_analysis_with_aeo", "keyword_matrix_with_aeo"],
-      "description": "Analysis mode: url_analysis (Mode A), keyword_matrix (Mode B), aeo_validation (Mode C only), or combined modes"
+      "enum": [
+        "url_analysis",
+        "keyword_matrix",
+        "aeo_validation",
+        "url_analysis_with_aeo",
+        "keyword_matrix_with_aeo",
+        "seed_funnel",
+        "seed_funnel_diversity"
+      ],
+      "description": "Analysis mode: url_analysis (Mode A), keyword_matrix (Mode B), aeo_validation (Mode C only), combined modes, or seed_funnel variants (D1/D2)"
     },
     "data_source": {
       "type": "string",
@@ -36,6 +44,37 @@
     "seed_keyword": {
       "type": "string",
       "description": "Seed keyword for matrix expansion (Mode B only)"
+    },
+    "seed": {
+      "type": "string",
+      "description": "Seed keyword for seed funnel modes (Mode D1/D2)"
+    },
+    "engine": {
+      "type": "string",
+      "enum": ["d1", "d2", null],
+      "description": "Seed funnel engine variant (d1=competitor-anchored, d2=diversity engine)"
+    },
+    "mission_config": {
+      "type": "object",
+      "description": "Mission config used for seed funnel execution (Mode D1/D2)",
+      "$ref": "#/definitions/mission_config"
+    },
+    "funnel_stats": {
+      "type": "object",
+      "description": "Funnel statistics for seed modes (Mode D1/D2)",
+      "$ref": "#/definitions/funnel_stats"
+    },
+    "final_directions": {
+      "type": "array",
+      "description": "Final ready-to-write directions (Mode D1/D2)",
+      "items": {
+        "$ref": "#/definitions/direction_entry"
+      }
+    },
+    "diversity_report": {
+      "type": "object",
+      "description": "Diversity Engine metrics and gate results (Mode D2 only)",
+      "$ref": "#/definitions/diversity_report"
     },
     "total_keywords": {
       "type": "integer",
@@ -182,6 +221,28 @@
       }
     }
   },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "mode": { "const": "seed_funnel" }
+        }
+      },
+      "then": {
+        "required": ["seed", "mission_config", "funnel_stats", "final_directions"]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "mode": { "const": "seed_funnel_diversity" }
+        }
+      },
+      "then": {
+        "required": ["seed", "mission_config", "funnel_stats", "final_directions", "diversity_report"]
+      }
+    }
+  ],
   "definitions": {
     "keyword_entry": {
       "type": "object",
@@ -727,6 +788,144 @@
           }
         }
       }
+    },
+    "mission_config": {
+      "type": "object",
+      "description": "Mission config object (v2.3). Full schema lives in MISSION_CONFIG_SCHEMA.json; this is a compatible subset.",
+      "properties": {
+        "seed": { "type": "string" },
+        "anchors": {
+          "type": "object",
+          "properties": {
+            "competitors": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          },
+          "additionalProperties": true
+        },
+        "diversity": {
+          "type": "object",
+          "properties": {
+            "enabled": { "type": "boolean" },
+            "engine_version": { "type": "string" }
+          },
+          "additionalProperties": true
+        },
+        "scope": { "type": "object", "additionalProperties": true },
+        "growth": { "type": "object", "additionalProperties": true },
+        "metadata": { "type": "object", "additionalProperties": true }
+      },
+      "additionalProperties": true
+    },
+    "funnel_stats": {
+      "type": "object",
+      "description": "Seed funnel statistics (Mode D1/D2)",
+      "properties": {
+        "initial_directions": { "type": "integer", "minimum": 0 },
+        "after_intent_patterns": { "type": "integer", "minimum": 0 },
+        "after_expansion": { "type": "integer", "minimum": 0 },
+        "after_validation": { "type": "integer", "minimum": 0 },
+        "final_directions": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": true
+    },
+    "diversity_report": {
+      "type": "object",
+      "description": "Diversity Engine report (Mode D2)",
+      "properties": {
+        "engine_version": { "type": "string" },
+        "thresholds": {
+          "type": "object",
+          "properties": {
+            "cluster_threshold": { "type": "number", "minimum": 0, "maximum": 1 },
+            "target_avg_similarity": { "type": "number", "minimum": 0, "maximum": 1 },
+            "final_pairwise_max": { "type": "number", "minimum": 0, "maximum": 1 }
+          },
+          "additionalProperties": true
+        },
+        "metrics": {
+          "type": "object",
+          "properties": {
+            "avg_pairwise_similarity": { "type": "number", "minimum": 0, "maximum": 1 },
+            "max_pairwise_similarity": { "type": "number", "minimum": 0, "maximum": 1 },
+            "cluster_count": { "type": "integer", "minimum": 0 },
+            "intent_type_count": { "type": "integer", "minimum": 0 }
+          },
+          "additionalProperties": true
+        },
+        "strategy_mix": {
+          "type": "object",
+          "description": "Counts/percentages by strategy",
+          "additionalProperties": true
+        },
+        "gate_passed": { "type": "boolean" },
+        "rejection_log": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "topic_id": { "type": "string" },
+              "reason": { "type": "string" }
+            },
+            "additionalProperties": true
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "direction_entry": {
+      "type": "object",
+      "description": "Final direction object (Mode D1/D2). Full schema lives in DIRECTION_SCHEMA.json; this is a compatible subset.",
+      "required": ["rank", "direction_id", "locked_title", "seo_score", "aeo_score", "combined_priority", "recommended_skill"],
+      "properties": {
+        "rank": { "type": "integer", "minimum": 1 },
+        "direction_id": { "type": "string" },
+        "cluster_id": { "type": "string" },
+        "theme": { "type": "string" },
+        "strategy_source": {
+          "type": "string",
+          "enum": ["seed_xpollination", "persona_rotation", "serp_gap", "competitor_diverge", null]
+        },
+        "locked_title": {
+          "type": "object",
+          "required": ["title", "primary_keyword", "intent_matched", "serp_aligned", "year_validated"],
+          "properties": {
+            "title": { "type": "string" },
+            "primary_keyword": { "type": "string" },
+            "intent_matched": { "type": "boolean" },
+            "serp_aligned": { "type": "boolean" },
+            "year_validated": { "type": "boolean" }
+          },
+          "additionalProperties": true
+        },
+        "backup_title": { "type": "object", "additionalProperties": true },
+        "seo_score": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "aeo_score": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "diversity_bonus": { "type": "integer", "minimum": 0, "maximum": 15 },
+        "portfolio_score": { "type": "number", "minimum": 0 },
+        "combined_priority": {
+          "type": "string",
+          "enum": ["excellent", "high_seo_first", "high_aeo_first", "good", "low"]
+        },
+        "similarity_to_other_finals": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "direction_id": { "type": "string" },
+              "similarity": { "type": "number", "minimum": 0, "maximum": 1 }
+            },
+            "additionalProperties": true
+          }
+        },
+        "evidence_chain": { "type": "object", "additionalProperties": true },
+        "outline": { "type": "object", "additionalProperties": true },
+        "recommended_skill": { "type": "string" },
+        "recommended_mode": { "type": ["string", "null"] },
+        "product_mapping": { "type": "object", "additionalProperties": true }
+      },
+      "additionalProperties": true
     },
     "aeo_score_breakdown": {
       "type": "object",

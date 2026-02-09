@@ -3,6 +3,7 @@
 .env
 .env.local
 .env.*.local
+.env.basecamp
 
 # macOS
 .DS_Store
@@ -49,6 +50,7 @@ scripts/api_usage.csv
 *.bak
 *.backup
 
+
 # Local video resources (do not track)
 /video_resources/
 
@@ -86,3 +88,7 @@ scripts/api_usage.csv
 *.rmvb
 *.qt
 *.dat
+
+
+# Basecamp context dumps (local-only)
+tmp/basecamp-context/

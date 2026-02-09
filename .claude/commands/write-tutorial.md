@@ -6,7 +6,7 @@
 
 ```bash
 # 检查 Topic Brief 是否存在
-ls -la /Users/H/Documents/AliciBlog/reports/*/00-topic-brief.json 2>/dev/null | tail -3
+ls -la reports/*/00-topic-brief.json 2>/dev/null | tail -3
 
 # 当前日期
 echo "发布日期: $(date +%Y-%m-%d)"

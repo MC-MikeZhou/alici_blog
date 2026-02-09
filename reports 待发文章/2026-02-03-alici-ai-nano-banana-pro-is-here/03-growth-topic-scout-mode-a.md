@@ -119,7 +119,7 @@ EXECUTIVE SUMMARY
    - Intent: Framework / Insight
    - Angle: 复用 Higgsfield 的 pipeline 概念，落到可执行步骤
 
-## Next Actions（对齐 thumbnail.md Step 4 起）
+## Next Actions（对齐 easy_mode.md Step 4 起）
 
 - Lock 4–5 个标题候选 → 选 1 个作为本次发布稿标题
 - 用 micro_roundup 模板生成 `01-article-draft.md`（Direct Answer + Key Takeaways + 对比小表 + Mini FAQ + How to Try）

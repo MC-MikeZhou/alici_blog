@@ -1,0 +1,186 @@
+{
+  "metadata": {
+    "seed_keyword": "sora 2 prompt guide",
+    "mode": "seed",
+    "version": "v2.2",
+    "created_at": "2026-02-03",
+    "total_directions_evaluated": 10,
+    "locked_directions": 2,
+    "validation_status": "⚠️ PENDING - DataForSEO validation blocked in sandbox",
+    "last_updated": "2026-02-03T00:00:00Z",
+    "audience": "content_creators",
+    "geo": "US",
+    "language": "en",
+    "notes": "New article (avoid cannibalizing video-003 cinematic draft)"
+  },
+  "constraints": {
+    "must_avoid": [
+      "Hard numeric claims about Sora 2 limits/capabilities unless sourced from OpenAI official public docs",
+      "Invented performance stats",
+      "Paywalled/login-only scraping"
+    ],
+    "must_include": [
+      "Direct answer within first 50 words",
+      "Step-by-step workflow (5-8 steps)",
+      "Understanding Prompt Structure section (Two strategies + 7 elements + example + checklist)",
+      "Common mistakes (>=7) with symptom→cause→fix prompts",
+      "Pro tips (>=7)",
+      "FAQ (5-7) with short, quotable answers",
+      "At least 1 table and 2 quotable/citable blocks",
+      "CTA to AI Video Studio + Video Prompt Assistant"
+    ]
+  },
+  "competitor_anchors": [
+    {
+      "name": "Higgsfield AI",
+      "url": "https://higgsfield.ai/blog/SORA-2-Prompt-Guide-How-to-Create-Viral-Videos-Like-a-Pro",
+      "usage_intent": "reference"
+    },
+    {
+      "name": "WaveSpeed",
+      "url": "https://wavespeed.ai/blog/posts/sora-2-prompting-tips-better-videos-2026/",
+      "usage_intent": "reference"
+    },
+    {
+      "name": "InVideo",
+      "url": "https://invideo.io/help-center/how-to-use-invideo-ai-to-create-videos-from-prompts-or-scripts/",
+      "usage_intent": "reference"
+    },
+    {
+      "name": "Freepik",
+      "url": "https://www.freepik.com/blog/your-first-ai-video/",
+      "usage_intent": "reference"
+    }
+  ],
+  "directions": [
+    {
+      "direction_id": "D1",
+      "locked_title": "How to Write Sora 2 Prompts for Beginners (2026): Templates + Checklist + Fixes",
+      "locked_slug": "sora-2-prompt-guide-beginners-templates-2026",
+      "direction_name": "Beginner How-to + Templates + Debugging",
+      "pattern": "Tool/Feature Tutorial",
+      "recommended_skill": "blog-tutorial-writer",
+      "evidence_chain": {
+        "data_source": "qualitative_proxy_only",
+        "validation_warning": "⚠️ DataForSEO validation could not run in this sandbox. Volumes/CPC/competition are PENDING.",
+        "search_demand": {
+          "primary_keyword": "sora 2 prompt guide for beginners",
+          "search_volume": null,
+          "cpc": null,
+          "competition": null,
+          "monthly_searches": null,
+          "status": "PENDING"
+        },
+        "cluster_keywords": [
+          { "keyword": "sora 2 prompt guide", "volume": null, "status": "PENDING" },
+          { "keyword": "how to write sora 2 prompts", "volume": null, "status": "PENDING" },
+          { "keyword": "sora 2 prompt examples", "volume": null, "status": "PENDING" },
+          { "keyword": "sora 2 prompt templates", "volume": null, "status": "PENDING" },
+          { "keyword": "sora 2 prompt tips", "volume": null, "status": "PENDING" }
+        ],
+        "serp_paradigm": {
+          "expected_top_format": "How-to + Templates/Examples + Tips/Best Practices",
+          "common_sections": [
+            "Prompt structure / framework",
+            "Examples / templates",
+            "Troubleshooting",
+            "FAQ"
+          ],
+          "year_presence": "At least one title should include 2026, but not mandatory for all."
+        },
+        "competitor_gap": {
+          "gap_opportunity": "A beginner-safe, workflow-first guide with copy-paste templates + debugging playbook + checklist (highly AEO extractable).",
+          "why_this_is_different": [
+            "Not cinematic-first (avoids overlap with video-003)",
+            "Treats prompts as a system: variables + recipes + iteration loop",
+            "Includes symptom→fix prompts to reduce failed generations"
+          ]
+        },
+        "intent_match": {
+          "user_intent": "informational + practical (copy + run) + light transactional",
+          "match_score": 90,
+          "reasoning": "Beginners want a repeatable framework + templates; we can naturally map to prompt-assistant + multi-model studio CTA."
+        }
+      },
+      "product_mapping": {
+        "primary": "AI Video Studio",
+        "secondary": "Video Prompt Assistant",
+        "integration_level": "L3_natural_positioning",
+        "cta_links": [
+          "https://app.alici.ai/pages/videoGen",
+          "https://app.alici.ai/chat?agent_id=alici_video_prompt"
+        ]
+      },
+      "outline": {
+        "h1": "How to Write Sora 2 Prompts for Beginners (2026): Templates + Checklist + Fixes",
+        "sections": [
+          { "h2": "Quick Answer (Copy This Prompt Skeleton)", "purpose": "Immediate direct answer + skeleton template" },
+          { "h2": "What Makes a Good Sora 2 Prompt (Beginner Rules)", "purpose": "Explain the constraints beginners should follow" },
+          { "h2": "Step-by-Step: A 7-Step Prompt Workflow (0→First Good Clip)", "purpose": "5–8 step workflow" },
+          { "h2": "Understanding Prompt Structure for Sora 2", "purpose": "Two strategies + 7 elements + example + checklist" },
+          { "h2": "Copy-Paste Prompt Templates (And What to Change)", "purpose": "Short and long prompt templates" },
+          { "h2": "Common Mistakes (Symptoms → Fix Prompts)", "purpose": ">=7 mistakes with fixes" },
+          { "h2": "Pro Tips for Consistent Results", "purpose": ">=7 actionable tips" },
+          { "h2": "FAQ", "purpose": "5–7 short Q&As for AEO" },
+          { "h2": "Next Steps: Scale Your Workflow (Multi-Model + Prompt Assistant)", "purpose": "CTA + internal links" }
+        ],
+        "target_word_count": "1800-2500"
+      },
+      "validation_status": {
+        "keyword_hit_check": "PENDING (requires SERP validation)",
+        "intent_match": "✅ PASS (how-to + templates + beginner framing)",
+        "serp_alignment": "PENDING (requires SERP snapshot)",
+        "year_validation": "✅ PASS (title includes 2026)",
+        "overall": "✅ LOCKED (provisionally) - proceed to writing, then validate"
+      }
+    },
+    {
+      "direction_id": "D2",
+      "locked_title": "Sora 2 Prompt Templates (2026): 25 Copy-Paste Recipes for Short-Form Creators",
+      "locked_slug": "sora-2-prompt-templates-2026",
+      "direction_name": "Templates library by creator use-case",
+      "pattern": "Prompt Templates Library",
+      "recommended_skill": "blog-list-writer (or blog-tutorial-writer if structured as recipes + checklist)",
+      "evidence_chain": {
+        "data_source": "qualitative_proxy_only",
+        "validation_warning": "⚠️ DataForSEO validation could not run in this sandbox. Volumes/CPC/competition are PENDING.",
+        "search_demand": {
+          "primary_keyword": "sora 2 prompt templates",
+          "search_volume": null,
+          "cpc": null,
+          "competition": null,
+          "monthly_searches": null,
+          "status": "PENDING"
+        },
+        "cluster_keywords": [
+          { "keyword": "sora 2 prompt templates", "volume": null, "status": "PENDING" },
+          { "keyword": "sora 2 prompt examples", "volume": null, "status": "PENDING" },
+          { "keyword": "best sora 2 prompts", "volume": null, "status": "PENDING" },
+          { "keyword": "ai video prompt templates", "volume": null, "status": "PENDING" }
+        ],
+        "competitor_gap": {
+          "gap_opportunity": "A curated templates library with clear variable slots + 'what to change' annotations (turns templates into a system).",
+          "risk": "Template posts can be easy to imitate; needs strong structure + debugging add-ons."
+        }
+      },
+      "outline": {
+        "h1": "Sora 2 Prompt Templates (2026): 25 Copy-Paste Recipes for Short-Form Creators",
+        "sections": [
+          { "h2": "How to Use These Templates (Beginner Instructions)", "purpose": "Explain variable slots + iteration loop" },
+          { "h2": "25 Templates by Use Case", "purpose": "Reels/UGC/Product/Lifestyle/Travel etc" },
+          { "h2": "Troubleshooting (When a Template Fails)", "purpose": "Quick fixes by symptom" },
+          { "h2": "Checklist + Next Steps", "purpose": "AEO + CTA" }
+        ],
+        "target_word_count": "1600-2400"
+      },
+      "validation_status": {
+        "keyword_hit_check": "PENDING",
+        "intent_match": "✅ PASS",
+        "serp_alignment": "PENDING",
+        "year_validation": "✅ PASS",
+        "overall": "✅ LOCKED (provisionally) - recommended as follow-up post"
+      }
+    }
+  ],
+  "selected_direction": "D1"
+}

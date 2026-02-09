@@ -1,0 +1,72 @@
+{
+  "topic": "How to Make Lo\u2011Fi Content for AI UGC Ads in 2026: Imperfect by Design (Playbook + Templates)",
+  "slug": "lofi-content-ai-ugc-ads-2026",
+  "content_type": "tutorial",
+  "language": "en",
+  "geo": "US",
+  "primary_keyword": "lo-fi content",
+  "secondary_keywords": [
+    "lo-fi vs hi-fi",
+    "unpolished ads",
+    "tiktok ugc ads",
+    "ai ugc ads",
+    "ugc ad templates",
+    "ugc ad hooks"
+  ],
+  "title_locked": "How to Make Lo\u2011Fi Content for AI UGC Ads in 2026: Imperfect by Design (Playbook + Templates)",
+  "title_alternatives": [
+    "Lo\u2011Fi Content for AI UGC Ads (2026): 7-Step Playbook + Templates",
+    "How to Create Unpolished UGC-Style Ads with AI in 2026 (Checklist + Examples)"
+  ],
+  "target_audience": "Beginner creators and performance marketers producing short-form UGC-style ads (TikTok/Reels/Shorts) who want their AI-generated creatives to feel real, not overproduced.",
+  "article_angle": "AI UGC often fails because it looks too perfect and therefore fake. This tutorial reframes \"Lo\u2011Fi\" as a deliberate design system (imperfections, handheld energy, imperfect editing) and provides a 7-step playbook, copy-paste templates, and a quality checklist to produce believable, testable UGC-style ads.",
+  "word_count_target": "1800-2500",
+  "product_mapping": {
+    "primary": "AI Video Studio",
+    "secondary": "Video Prompt Assistant",
+    "integration_level": "L3_natural_positioning",
+    "cta_policy": {
+      "product_links_max": 2,
+      "allowed_positions": ["opening_quick_start", "closing_cta_card"],
+      "primary_product_url": "https://alici.ai/pages/videoGen"
+    }
+  },
+  "source": {
+    "type": "web",
+    "urls": [
+      "https://www.dashsocial.com/blog/lo-fi-vs-hi-fi-video-performance",
+      "https://ads.tiktok.com/business/creativecenter/quicktok/online/5_creative_tips/pc/en",
+      "https://for.co/blog/what-is-lo-fi-content-and-how-should-brands-approach-it",
+      "https://www.clicky.co.uk/blog/the-great-2026-split-lo-fi-authenticity-vs.-ai-automated-scale/",
+      "https://www.crealytics.com/blog/native-ads-vs-product-ads-why-unpolished-creative-and-product-ads-together-drive-the-best-results",
+      "https://invideo.io/blog/ai-ugc-strategy-guide/"
+    ],
+    "usage_intent": "reference",
+    "note": "Use as conceptual + data support. Do not copy structure or wording."
+  },
+  "requirements": {
+    "must_include": [
+      "Hero image placeholder (to be generated in edit phase)",
+      "Key Takeaways section immediately after H1",
+      "The 90-second answer (AIDA opening): first 50 words directly answer the title question; first 150 words include a data hook",
+      "Definitions: Lo-Fi content (and what it isn't), UGC ad, angle, proof, CTA",
+      "Why Lo-Fi works for UGC ads (with cited data from DashSocial and TikTok Creative Center)",
+      "7-step \u201cImperfect by Design\u201d playbook (each step includes a copy-paste template and a checklist)",
+      "Prompt Structure section using the 7 essential prompt elements, with 2 complete prompt examples (Beginner + Pro)",
+      "At least 1 comparison table (Lo-Fi vs Hi-Fi, or Unpolished UGC vs Product Ad vs Combo)",
+      "At least 3 bullet lists",
+      "3-5 CITABLE_BLOCKs distributed across the article",
+      "Common mistakes (3-5) and fixes",
+      "Pro tips (3-5) for scaling variations",
+      "FAQ (6-8) with 40-60 word standalone answers",
+      "CTA card at the end linking to /pages/videoGen"
+    ],
+    "must_avoid": [
+      "Invented performance uplift stats (only include numbers when sourced)",
+      "Misleading advice about platform policies",
+      "Encouraging deception, impersonation, or undisclosed synthetic endorsements",
+      "Long verbatim excerpts from reference sources"
+    ]
+  },
+  "created_at": "2026-02-03"
+}

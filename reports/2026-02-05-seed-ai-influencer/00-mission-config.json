@@ -1,0 +1,27 @@
+{
+  "seed": "ai influencer",
+  "anchors": {
+    "competitors": [
+      "https://invideo.io/blog/",
+      "https://higgsfield.ai/blog/",
+      "https://heygen.com/blog"
+    ]
+  },
+  "scope": {
+    "language": "en",
+    "geo": "US",
+    "audience": "marketers",
+    "validation_depth": "standard",
+    "forbidden_zones": ["gambling", "adult"]
+  },
+  "growth": {
+    "goal": "traffic_and_conversion",
+    "product_relevance": "video_studio"
+  },
+  "metadata": {
+    "created_at": "2026-02-05",
+    "mode": "seed_funnel_top10",
+    "version": "v2.3"
+  }
+}
+

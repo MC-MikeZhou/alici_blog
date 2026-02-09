@@ -1,0 +1,72 @@
+{
+  "note": "Internal-only reference images downloaded for local preview/review. Do not publish without proper licensing/permission.",
+  "downloaded_at": "2026-02-03T21:35:27+08:00",
+  "assets": [
+    {
+      "filename": "cover-for-lofi.webp",
+      "source_page_url": "https://for.co/blog/what-is-lo-fi-content-and-how-should-brands-approach-it",
+      "asset_url": "https://framerusercontent.com/images/2XfCYn7W52ZDZMcwSfRwtEuBXEs.webp",
+      "note": "internal-only; candidate (previous cover; square)"
+    },
+    {
+      "filename": "cover-selected.webp",
+      "source_page_url": "https://for.co/blog/what-is-lo-fi-content-and-how-should-brands-approach-it",
+      "asset_url": "https://framerusercontent.com/images/cdTAYdOnawjJLTA8evTNZ5gM.webp?width=1456&height=816",
+      "note": "internal-only; selected (featured image + hero image)"
+    },
+    {
+      "filename": "cover_candidates/candidate-00-for-square.webp",
+      "source_page_url": "https://for.co/blog/what-is-lo-fi-content-and-how-should-brands-approach-it",
+      "asset_url": "https://framerusercontent.com/images/2XfCYn7W52ZDZMcwSfRwtEuBXEs.webp",
+      "note": "internal-only; cover candidate (square)"
+    },
+    {
+      "filename": "cover_candidates/candidate-01-for-hero.webp",
+      "source_page_url": "https://for.co/blog/what-is-lo-fi-content-and-how-should-brands-approach-it",
+      "asset_url": "https://framerusercontent.com/images/cdTAYdOnawjJLTA8evTNZ5gM.webp?width=1456&height=816",
+      "note": "internal-only; cover candidate (1456x816) — copied to cover-selected.webp"
+    },
+    {
+      "filename": "cover_candidates/candidate-02-clicky-2026.png",
+      "source_page_url": "https://www.clicky.co.uk/blog/the-great-2026-split-lo-fi-authenticity-vs.-ai-automated-scale/",
+      "asset_url": "https://framerusercontent.com/images/mQ0KgY7nfqumIZ6AUbzjkIzysNs.png",
+      "note": "internal-only; cover candidate"
+    },
+    {
+      "filename": "cover_candidates/candidate-03-dashsocial-header.avif",
+      "source_page_url": "https://www.dashsocial.com/blog/lo-fi-vs-hi-fi-video-performance",
+      "asset_url": "https://cdn.prod.website-files.com/674dddf9ddc209ee3d765f1c/674dddf9ddc209ee3d766e5f_video-blog-header.avif",
+      "note": "internal-only; cover candidate (small)"
+    },
+    {
+      "filename": "lofi-vs-hifi-dashsocial.avif",
+      "source_page_url": "https://www.dashsocial.com/blog/lo-fi-vs-hi-fi-video-performance",
+      "asset_url": "https://cdn.prod.website-files.com/674dddf9ddc209ee3d765f1c/675b40b2401c62fae9750b55_675b40a970a1f665d167f6cf_lo-fi-vs-hi-fi-video-performance.avif",
+      "note": "internal-only; selected (comparison chart)"
+    },
+    {
+      "filename": "tiktok-not-too-polished.jpeg",
+      "source_page_url": "https://ads.tiktok.com/business/creativecenter/quicktok/online/5_creative_tips/pc/en",
+      "asset_url": "https://p16-cc-sg.tiktokcdn.com/tos-alisg-i-hdprqziq2y/5b17ca21a92041cebbab084650aecc01~tplv-hdprqziq2y-png.jpeg",
+      "note": "internal-only; selected (platform guidance visual)"
+    },
+    {
+      "filename": "tiktok-candidate-1.jpeg",
+      "source_page_url": "https://ads.tiktok.com/business/creativecenter/quicktok/online/5_creative_tips/pc/en",
+      "asset_url": "https://p16-cc-sg.tiktokcdn.com/tos-alisg-i-hdprqziq2y/5b17ca21a92041cebbab084650aecc01~tplv-hdprqziq2y-png.jpeg",
+      "note": "internal-only; candidate (1500x525) — copied to tiktok-not-too-polished.jpeg"
+    },
+    {
+      "filename": "tiktok-candidate-2.jpeg",
+      "source_page_url": "https://ads.tiktok.com/business/creativecenter/quicktok/online/5_creative_tips/pc/en",
+      "asset_url": "https://p16-cc-sg.tiktokcdn.com/tos-alisg-i-hdprqziq2y/39945e660d024b3eb1e37fef615b3673~tplv-hdprqziq2y-png.jpeg",
+      "note": "internal-only; candidate"
+    },
+    {
+      "filename": "tiktok-candidate-3.jpeg",
+      "source_page_url": "https://ads.tiktok.com/business/creativecenter/quicktok/online/5_creative_tips/pc/en",
+      "asset_url": "https://p16-cc-sg.tiktokcdn.com/tos-alisg-i-hdprqziq2y/313d5d7a13cf4d7bbdc5d9d45535aa00~tplv-hdprqziq2y-png.jpeg",
+      "note": "internal-only; candidate"
+    }
+  ]
+}

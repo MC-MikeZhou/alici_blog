@@ -1,29 +1,40 @@
-# Growth Topic Scout v2.0：团队简介
+# Growth Topic Scout v2.3：团队简介
 
-> 一句话：输入竞品 URL **或** 种子关键词，输出经过验证的选题机会清单 + 竞品差距报告。
+> 一句话：输入竞品 URL / 种子关键词（含发散选题），输出经过验证的选题机会清单（SEO+AEO）以及可直接开写的方向（Seed 模式）。
 
 ---
 
-## v2.0 新特性
+## v2.3 核心能力
 
-### 双模式架构
+### 多模式架构（A/B/C + Seed D1/D2）
 
 ```
-Growth Topic Scout v2.0
-├── 模式 A: URL 分析 (现有，保持不变)
+Growth Topic Scout v2.3
+├── 模式 A: URL 分析
 │   └── 竞品 URL → 提取话题 → DataForSEO 验证 → Top 10 选题
 │
-└── 模式 B: 关键词矩阵 (新增) ⭐
-    └── 种子词 → 矩阵扩展 (50-100词) → DataForSEO 验证
-        → SERP 分析 (Top 20) → 竞品爬取 → 差距报告
+├── 模式 B: 关键词矩阵
+│   └── 种子词 → 矩阵扩展 (50-100) → DataForSEO 验证 → SERP/竞品差距报告
+│
+├── 模式 C: AEO 验证层
+│   └── AI keyword heat + LLM mentions + LLM responses → AEO Score (100)
+│
+└── Seed 模式（两条路线）
+    ├── D1: Anchored Seed Funnel（竞品锚定，2 方向）
+    │   └── 竞品意图模式 → 扩散 → DataForSEO 验证 → Title Lock
+    └── D2: Diversity Engine（发散引擎，3 方向）⭐ NEW
+        └── 多策略发散 → 语义聚类去重 → 多样性门禁 → DataForSEO 验证 → Title Lock
 ```
 
 | 版本 | 输入 | 能力 | 输出 |
 |------|------|------|------|
-| **v1.3** | 竞品 URL | 单篇分析 + 话题发现 | Top 10 选题 |
-| **v2.0** | 竞品 URL **或** 种子关键词 | 单篇分析 **+** 关键词矩阵 **+** 批量竞品分析 | Top 10/20 选题 + 差距报告 |
+| **v2.1** | 竞品 URL / 种子词 | + AEO 验证层（双评分） | SEO Score + AEO Score |
+| **v2.2** | 种子词 | Seed D1（竞品锚定漏斗） | 2 个 Direction（可开写） |
+| **v2.3** | 种子词（可无竞品） | Seed D2（多样性引擎） | 3 个 Direction + diversity_report |
 
 ---
+
+## Legacy: v2.0 新特性（保留作为参考）
 
 ## 它是什么？
 
@@ -127,6 +138,23 @@ Growth Topic Scout 是一个「选题侦察」技能，帮助内容团队：
 - 规模化选题
 - programmatic SEO
 
+### Seed D1 触发（竞品锚定漏斗，2 方向）
+- seed mode
+- 种子模式
+- topic funnel
+- 选题漏斗
+- 帮我找选题
+- find topics for
+
+### Seed D2 触发（Diversity Engine，多样性发散，3 方向）⭐ NEW
+- seed mode v2
+- diversity seed
+- 发散选题
+- 多样性选题
+- cosine
+- 余弦相似度
+- Mollick protocol
+
 ---
 
 ## 为什么有效？
@@ -156,20 +184,20 @@ Growth Topic Scout 是一个「选题侦察」技能，帮助内容团队：
 
 ---
 
-## 评分体系（100分）
+## 评分体系（v2.3）
 
-| 维度 | 权重 | 含义 |
-|-----|-----|------|
-| **需求信号** | 30 | 搜索量 + 趋势 (DataForSEO) |
-| **AEO 潜力** | 25 | AI Overview/PAA/Featured Snippet 机会 |
-| **竞争空白** | 25 | 差距分数 (竞品弱点累加) |
-| **业务匹配** | 20 | 与 alici.ai 产品的相关性 |
+Growth Topic Scout 使用**双评分**，把“能排”与“能被 AI 推荐”分开衡量：
 
-**评分解读**：
-- 80-100：优先做，立即启动
-- 60-79：值得做，排入日程
-- 40-59：资源允许时做
-- <40：暂时不做
+1) **SEO Score（0-100）**：需求/竞争/业务可赢性  
+2) **AEO Score（0-100）**：AI 时代可见度窗口（AI search heat / LLM mentions / LLM responses）
+
+并根据二者映射 `combined_priority`（excellent / high_seo_first / high_aeo_first / good / low）。
+
+### D2（Diversity Engine）额外评分
+
+Seed D2 在最终 3 个方向上新增：
+- `diversity_bonus`（0-15）：与其它入选方向的语义差异度奖励
+- `portfolio_score`：用于在“多样性约束”下做最终排序
 
 ---
 
@@ -189,6 +217,25 @@ Growth Topic Scout 是一个「选题侦察」技能，帮助内容团队：
 ├── keyword_matrix.json        # 完整矩阵数据
 ├── gap_analysis.json          # 差距分析数据
 └── 00-topic-brief.json        # 给 Writer 的 Brief (Top 20)
+```
+
+### Seed D1 输出（2 方向）
+```
+/reports/YYYY-MM-DD-{seed-slug}/
+├── 00-mission-config.json     # Mission Config
+├── 00-directions-report.md    # 人可读漏斗报告
+└── 00-topic-brief.json        # final_directions[2]
+```
+
+### Seed D2 输出（3 方向 + 多样性报告）⭐
+```
+/reports/YYYY-MM-DD-{seed-slug}/
+├── 00-mission-config.json     # Mission Config (diversity.enabled=true)
+├── 01-seed-dimensions.json    # 5 维解构 + query_seeds
+├── 02-raw-topics.json         # 3 策略 raw pool
+├── 03-diversity-report.json   # clustering + metrics + gate
+├── 00-directions-report.md    # 人可读漏斗报告
+└── 00-topic-brief.json        # final_directions[3] + diversity_report
 ```
 
 ---

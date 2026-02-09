@@ -1,0 +1,275 @@
+{
+  "generated_at": "2026-02-08T22:50:14",
+  "context_sources": [
+    {
+      "account": 3135399,
+      "bucket": 42744895,
+      "todolist_id": 9536725297,
+      "name": "UGC ads 增长策划中心",
+      "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todolists/9536725297",
+      "description_html": "<div>关联：<br><a href=\"https://3.basecamp.com/3135399/buckets/45547714/todolists/9546306218\">UGC ADs 模式 研发&nbsp;</a>\n</div>"
+    },
+    {
+      "account": 3135399,
+      "bucket": 45547714,
+      "todolist_id": 9546306218,
+      "name": "UGC ADs 模式 研发和Use Case",
+      "app_url": "https://3.basecamp.com/3135399/buckets/45547714/todolists/9546306218",
+      "description_html": "<div>关联：<br><a href=\"https://3.basecamp.com/3135399/buckets/45547714/todolists/9435649522\">Video SuperAgent的模板设计</a><br><a href=\"https://3.basecamp.com/3135399/buckets/42744895/todolists/9536725297\">UGC ads 增长策划&nbsp;&nbsp;</a>\n</div>"
+    }
+  ],
+  "direction_count": 8,
+  "min_confidence": 0.55,
+  "items": [
+    {
+      "direction_id": "UGC-ADS-D01-BEGINNER-WORKFLOW",
+      "matched_todos": [
+        {
+          "todo_id": 9541074504,
+          "list_id": 9536725742,
+          "status": "active",
+          "content": "新手教程：How to Create Viral AI UGC Ads in 2026: Best Practices for Beginners",
+          "confidence": 1.0,
+          "rationale": "pinned_from_basecamp_trace",
+          "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todos/9541074504",
+          "url": "https://3.basecampapi.com/3135399/buckets/42744895/todos/9541074504.json"
+        },
+        {
+          "todo_id": 9536996960,
+          "list_id": 9536725742,
+          "status": "active",
+          "content": "🧵 如何制作不完美的真实感： GPT5 Pro 给出了三个选题， 感觉相当靠谱",
+          "confidence": 1.0,
+          "rationale": "pinned_from_basecamp_trace",
+          "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todos/9536996960",
+          "url": "https://3.basecampapi.com/3135399/buckets/42744895/todos/9536996960.json"
+        }
+      ]
+    },
+    {
+      "direction_id": "UGC-ADS-D02-CREATIVE-CENTER-TO-SCRIPT",
+      "matched_todos": [
+        {
+          "todo_id": 9556056698,
+          "list_id": 9556056518,
+          "status": "active",
+          "content": "🧵 Tiktok 官方指引： 广告 & 创意中心",
+          "confidence": 1.0,
+          "rationale": "pinned_from_basecamp_trace",
+          "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todos/9556056698",
+          "url": "https://3.basecampapi.com/3135399/buckets/42744895/todos/9556056698.json"
+        }
+      ]
+    },
+    {
+      "direction_id": "UGC-ADS-D03-INVIDEO-REVERSE-ENGINEERING",
+      "matched_todos": [
+        {
+          "todo_id": 9556057393,
+          "list_id": 9536766978,
+          "status": "active",
+          "content": "💡 GPT5 Pro ：深度拆解Invideo Blog 有多少篇 UGC ads， 哪些值得复刻",
+          "confidence": 1.0,
+          "rationale": "pinned_from_basecamp_trace",
+          "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todos/9556057393",
+          "url": "https://3.basecampapi.com/3135399/buckets/42744895/todos/9556057393.json"
+        },
+        {
+          "todo_id": 9536794596,
+          "list_id": 9536766978,
+          "status": "active",
+          "content": "Invideo  Explore 拥有大量 UGC 素材",
+          "confidence": 1.0,
+          "rationale": "pinned_from_basecamp_trace",
+          "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todos/9536794596",
+          "url": "https://3.basecampapi.com/3135399/buckets/42744895/todos/9536794596.json"
+        },
+        {
+          "todo_id": 9537217575,
+          "list_id": 9536766978,
+          "status": "active",
+          "content": "Invideo 洗稿：The Complete Guide to User-Generated Content (UGC) in 2025",
+          "confidence": 1.0,
+          "rationale": "pinned_from_basecamp_trace",
+          "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todos/9537217575",
+          "url": "https://3.basecampapi.com/3135399/buckets/42744895/todos/9537217575.json"
+        },
+        {
+          "todo_id": 9536804477,
+          "list_id": 9556073256,
+          "status": "active",
+          "content": "🌟 Invideo UGC ads有个落地页，值得学习吗",
+          "confidence": 1.0,
+          "rationale": "pinned_from_basecamp_trace",
+          "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todos/9536804477",
+          "url": "https://3.basecampapi.com/3135399/buckets/42744895/todos/9536804477.json"
+        }
+      ]
+    },
+    {
+      "direction_id": "UGC-ADS-D04-TEMPLATE-PROMPT-LIBRARY",
+      "matched_todos": [
+        {
+          "todo_id": 9536876664,
+          "list_id": 9536873155,
+          "status": "active",
+          "content": "👟 Invideo UGC 模板：那些看起来和感觉一样好的运动鞋",
+          "confidence": 1.0,
+          "rationale": "pinned_from_basecamp_trace",
+          "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todos/9536876664",
+          "url": "https://3.basecampapi.com/3135399/buckets/42744895/todos/9536876664.json"
+        },
+        {
+          "todo_id": 9536888942,
+          "list_id": 9536873155,
+          "status": "active",
+          "content": "尝试用 Alici Super Agent 直接复刻UGC ads提示词模板 2.3",
+          "confidence": 1.0,
+          "rationale": "pinned_from_basecamp_trace",
+          "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todos/9536888942",
+          "url": "https://3.basecampapi.com/3135399/buckets/42744895/todos/9536888942.json"
+        },
+        {
+          "todo_id": 9546324815,
+          "list_id": 9550965183,
+          "status": "active",
+          "content": "为模式新建内置的agent、tools、service",
+          "confidence": 1.0,
+          "rationale": "pinned_from_basecamp_trace",
+          "app_url": "https://3.basecamp.com/3135399/buckets/45547714/todos/9546324815",
+          "url": "https://3.basecampapi.com/3135399/buckets/45547714/todos/9546324815.json"
+        }
+      ]
+    },
+    {
+      "direction_id": "UGC-ADS-D05-LANDING-PAGE-TEARDOWN",
+      "matched_todos": [
+        {
+          "todo_id": 9556073428,
+          "list_id": 9556073256,
+          "status": "active",
+          "content": "Alici VideoAgent 落地页，需要更新 UGC ads 的视频以及描述",
+          "confidence": 1.0,
+          "rationale": "pinned_from_basecamp_trace",
+          "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todos/9556073428",
+          "url": "https://3.basecampapi.com/3135399/buckets/42744895/todos/9556073428.json"
+        },
+        {
+          "todo_id": 9556089119,
+          "list_id": 9556073256,
+          "status": "active",
+          "content": "zeely.ai的 UGC ads 落地页，可以参考",
+          "confidence": 1.0,
+          "rationale": "pinned_from_basecamp_trace",
+          "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todos/9556089119",
+          "url": "https://3.basecampapi.com/3135399/buckets/42744895/todos/9556089119.json"
+        },
+        {
+          "todo_id": 9536804477,
+          "list_id": 9556073256,
+          "status": "active",
+          "content": "🌟 Invideo UGC ads有个落地页，值得学习吗",
+          "confidence": 1.0,
+          "rationale": "pinned_from_basecamp_trace",
+          "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todos/9536804477",
+          "url": "https://3.basecampapi.com/3135399/buckets/42744895/todos/9536804477.json"
+        }
+      ]
+    },
+    {
+      "direction_id": "UGC-ADS-D06-PRICING-BENCHMARKS",
+      "matched_todos": [
+        {
+          "todo_id": 9543382856,
+          "list_id": 9556056518,
+          "status": "active",
+          "content": "👙 研究UGC ads 单价，看到一些标准的广告案例，可以作为素材和 参考对标",
+          "confidence": 1.0,
+          "rationale": "pinned_from_basecamp_trace",
+          "app_url": "https://3.basecamp.com/3135399/buckets/42744895/todos/9543382856",
+          "url": "https://3.basecampapi.com/3135399/buckets/42744895/todos/9543382856.json"
+        }
+      ]
+    },
+    {
+      "direction_id": "UGC-ADS-D07-USECASE-SCRIPT-SERIES",
+      "matched_todos": [
+        {
+          "todo_id": 9555081861,
+          "list_id": 9555080319,
+          "status": "active",
+          "content": "🥤UGC ads Use Case ：海瑟薇的饮料",
+          "confidence": 1.0,
+          "rationale": "pinned_from_basecamp_trace",
+          "app_url": "https://3.basecamp.com/3135399/buckets/45547714/todos/9555081861",
+          "url": "https://3.basecampapi.com/3135399/buckets/45547714/todos/9555081861.json"
+        },
+        {
+          "todo_id": 9555083067,
+          "list_id": 9555080319,
+          "status": "active",
+          "content": "⌚️ UGC ads Use Case：高尔夫运动手表",
+          "confidence": 1.0,
+          "rationale": "pinned_from_basecamp_trace",
+          "app_url": "https://3.basecamp.com/3135399/buckets/45547714/todos/9555083067",
+          "url": "https://3.basecampapi.com/3135399/buckets/45547714/todos/9555083067.json"
+        },
+        {
+          "todo_id": 9555084049,
+          "list_id": 9555080319,
+          "status": "active",
+          "content": "🧽 UGC ads Use Case：神器厨房布",
+          "confidence": 1.0,
+          "rationale": "pinned_from_basecamp_trace",
+          "app_url": "https://3.basecamp.com/3135399/buckets/45547714/todos/9555084049",
+          "url": "https://3.basecampapi.com/3135399/buckets/45547714/todos/9555084049.json"
+        },
+        {
+          "todo_id": 9555993416,
+          "list_id": 9555080319,
+          "status": "active",
+          "content": "🧘‍♀️ UGC ads Use case：女性维生素糖",
+          "confidence": 1.0,
+          "rationale": "pinned_from_basecamp_trace",
+          "app_url": "https://3.basecamp.com/3135399/buckets/45547714/todos/9555993416",
+          "url": "https://3.basecampapi.com/3135399/buckets/45547714/todos/9555993416.json"
+        }
+      ]
+    },
+    {
+      "direction_id": "UGC-ADS-D08-MODEL-SHOWDOWN",
+      "matched_todos": [
+        {
+          "todo_id": 9546697118,
+          "list_id": 9550965183,
+          "status": "active",
+          "content": "UGC Ads : veo 3.1 fast vs kling 3.0 vs seedance1.5 pro",
+          "confidence": 1.0,
+          "rationale": "pinned_from_basecamp_trace",
+          "app_url": "https://3.basecamp.com/3135399/buckets/45547714/todos/9546697118",
+          "url": "https://3.basecampapi.com/3135399/buckets/45547714/todos/9546697118.json"
+        },
+        {
+          "todo_id": 9546325204,
+          "list_id": 9550965183,
+          "status": "active",
+          "content": "Veo 3.1 fast 更换成 Veo 3.1",
+          "confidence": 1.0,
+          "rationale": "pinned_from_basecamp_trace",
+          "app_url": "https://3.basecamp.com/3135399/buckets/45547714/todos/9546325204",
+          "url": "https://3.basecampapi.com/3135399/buckets/45547714/todos/9546325204.json"
+        },
+        {
+          "todo_id": 9547574480,
+          "list_id": 9550965183,
+          "status": "active",
+          "content": "UGC Ads demo v0.2",
+          "confidence": 1.0,
+          "rationale": "pinned_from_basecamp_trace",
+          "app_url": "https://3.basecamp.com/3135399/buckets/45547714/todos/9547574480",
+          "url": "https://3.basecampapi.com/3135399/buckets/45547714/todos/9547574480.json"
+        }
+      ]
+    }
+  ]
+}

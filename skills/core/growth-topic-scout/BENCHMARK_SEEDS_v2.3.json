@@ -1,0 +1,30 @@
+{
+  "schema_version": "2.3",
+  "generated_at": "2026-02-03",
+  "notes": "Seed set for comparing D1 (anchored) vs D2 (diversity engine). Keep this list stable across runs.",
+  "seeds": [
+    { "id": "S01", "seed": "ai video tools 2026", "language": "en", "category": "tools_list" },
+    { "id": "S02", "seed": "sora prompt guide", "language": "en", "category": "tutorial" },
+    { "id": "S03", "seed": "runway gen-4 vs kling", "language": "en", "category": "comparison" },
+    { "id": "S04", "seed": "ai video looks fake fix", "language": "en", "category": "troubleshooting" },
+    { "id": "S05", "seed": "text to video workflow", "language": "en", "category": "use_case" },
+    { "id": "S06", "seed": "ai video for ecommerce product demo", "language": "en", "category": "industry_use_case" },
+    { "id": "S07", "seed": "ai video for youtube shorts", "language": "en", "category": "platform_use_case" },
+    { "id": "S08", "seed": "ai video pricing comparison", "language": "en", "category": "commercial_intent" },
+    { "id": "S09", "seed": "best ai thumbnail tools", "language": "en", "category": "adjacent_image" },
+    { "id": "S10", "seed": "ai image to video tutorial", "language": "en", "category": "cross_modal" },
+
+    { "id": "S11", "seed": "AI 视频工具 2026", "language": "zh", "category": "tools_list" },
+    { "id": "S12", "seed": "Sora 提示词 模板", "language": "zh", "category": "tutorial" },
+    { "id": "S13", "seed": "可灵 vs Runway 对比", "language": "zh", "category": "comparison" },
+    { "id": "S14", "seed": "AI 视频 太假 怎么办", "language": "zh", "category": "troubleshooting" },
+    { "id": "S15", "seed": "短视频 批量生成 工作流", "language": "zh", "category": "workflow" },
+
+    { "id": "S16", "seed": "ai image generator alternatives", "language": "en", "category": "tools_list" },
+    { "id": "S17", "seed": "flux vs midjourney", "language": "en", "category": "comparison" },
+    { "id": "S18", "seed": "remove background online", "language": "en", "category": "utility" },
+    { "id": "S19", "seed": "ai headshot tool comparison", "language": "en", "category": "comparison" },
+    { "id": "S20", "seed": "viral video formats 2026", "language": "en", "category": "trend" }
+  ]
+}
+

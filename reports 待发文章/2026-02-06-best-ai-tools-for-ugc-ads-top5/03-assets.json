@@ -1,0 +1,29 @@
+{
+  "meta": {"recommended_generate_max": 5},
+  "featured_image": {
+    "alt": "5 best AI tools for UGC ads in 2026: comparison cover with workflow from hook to variants",
+    "size": "1200x630",
+    "priority": "high"
+  },
+  "diagrams": [
+    {
+      "type": "comparison_infographic",
+      "alt": "Infographic summarizing top AI tools for UGC ads by best-fit use case",
+      "size": "1200x800",
+      "priority": "high"
+    },
+    {
+      "type": "decision_tree",
+      "alt": "Decision tree for choosing an AI UGC ads tool by format, budget, and production scale",
+      "size": "1200x800",
+      "priority": "high"
+    }
+  ],
+  "tool_images": [
+    {"tool": "Alici AI", "alt": "Alici AI workflow hub interface (illustrative)", "size": "1200x630", "priority": "low"},
+    {"tool": "InVideo AI", "alt": "InVideo AI script-to-video workflow (illustrative)", "size": "1200x630", "priority": "low"},
+    {"tool": "Arcads AI", "alt": "Arcads AI talking-actor UGC generation screen (illustrative)", "size": "1200x630", "priority": "low"},
+    {"tool": "Pippit AI", "alt": "Pippit AI credits and publishing dashboard (illustrative)", "size": "1200x630", "priority": "low"},
+    {"tool": "MakeUGC", "alt": "MakeUGC batch UGC ad generation workflow (illustrative)", "size": "1200x630", "priority": "low"}
+  ]
+}

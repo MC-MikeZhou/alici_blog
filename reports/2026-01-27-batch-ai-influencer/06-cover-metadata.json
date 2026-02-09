@@ -1,0 +1,16 @@
+{
+  "background_type": "fluid-shape",
+  "color": "#4FD1C5",
+  "h1_text": "AI INFLUENCERS",
+  "h2_text": "Batch Production Guide 2026",
+  "h3_text": "How to Create at Scale",
+  "prompt_used": "Create a minimalist tech blog cover image for Alici.AI.\n\nBackground: Pure black (#000000) with a single abstract fluid shape in teal (#4FD1C5). The shape should look like a flowing ribbon of light, smooth and organic, suggesting motion and digital creation. It flows from the upper right toward center-left, occupying approximately 30% of the frame. Soft glow around edges, no hard boundaries. A subtle constellation of small teal dots scattered near the ribbon, suggesting a network of AI-generated personas.\n\nTypography:\n- Main title: \"AI INFLUENCERS\" in extra-bold white (#FFFFFF) sans-serif typography (similar to Inter Black), very large and prominent\n- Secondary: \"Batch Production Guide 2026\" in bold white, 50% size of main title\n- Subtitle: \"How to Create at Scale\" in regular white at 70% opacity, 25% size\n- Brand tag: \"Officially on Alici.AI\" in small regular white at 60% opacity, positioned at bottom\n\nText position: Left-center area, leaving right side for the fluid element.\n\nStyle: Ultra-minimalist, generous negative space (50%+ dark), clean typography hierarchy. Professional tech aesthetic. The fluid shape and text should feel balanced but not symmetrical.\n\nAspect ratio: 16:9\nResolution: 1920x1080",
+  "cdn_url": null,
+  "cdn_upload_status": "failed - SSH connection closed",
+  "local_path": "assets/cover.png",
+  "generated_at": "2026-01-28T06:55:00+08:00",
+  "model": "fal-ai/nano-banana-pro",
+  "aspect_ratio": "16:9",
+  "resolution": "2K",
+  "cost": "$0.15"
+}

@@ -1,0 +1,58 @@
+{
+  "topic": "AI UGC Ads With a Product-in-Hand Demo (2026) — Prompts + Workflow",
+  "slug": "ai-ugc-ads-product-in-hand",
+  "content_type": "tutorial",
+  "language": "en",
+  "geo": "US",
+  "primary_keyword": "ai ugc ads",
+  "secondary_keywords": [
+    "ai ugc ad prompts",
+    "product in hand ugc ad",
+    "ai product demo video",
+    "image to video ugc ad",
+    "elevenlabs ai ugc",
+    "kling end card"
+  ],
+  "title_locked": "How to Make AI UGC Ads With a Product-in-Hand Demo in 2026 (Prompts + Workflow)",
+  "title_alternatives": [
+    "AI UGC Ads in 2026: Product-in-Hand Workflow + Copy-Paste Prompts",
+    "How to Make Product Demo UGC Ads With AI (Step-by-Step + Prompt Pack)"
+  ],
+  "target_audience": "Performance marketers and creators who want to produce short-form, UGC-style product demo ads (TikTok/Reels/Shorts) without filming, using an image→video pipeline and reusable prompts.",
+  "article_angle": "Workflow-first and prompt-forward: create a realistic actor, place product in-hand, generate a talking clip with audio, add a motion end-card, and assemble variations for testing—plus a quality checklist and safety/ethics rules.",
+  "word_count_target": "1800-2600",
+  "product_mapping": {
+    "primary": "AI Video Studio",
+    "secondary": "Any Script 2 AI Video",
+    "tertiary": "Image to AI Video",
+    "integration_level": "L3_natural_positioning"
+  },
+  "source": {
+    "type": "youtube",
+    "url": "https://www.youtube.com/watch?v=_H01wcSCEko",
+    "local_transcript_file": "00-youtube-transcript.md",
+    "usage_intent": "reference",
+    "timestamp_policy": "Use timestamps for factual workflow references; do not reuse wording from transcript."
+  },
+  "requirements": {
+    "must_include": [
+      "Key Takeaways section immediately after H1",
+      "AIDA opening (80-120 words, 4 short paragraphs)",
+      "Definitions: UGC ad, angle, proof, end card",
+      "Step-by-step workflow (actor → product refs → in-hand composite → talking clip → end card → assemble)",
+      "Copy-paste prompt templates for each step (with placeholders)",
+      "Quality checklist (lighting, shadows, occlusion, consistency)",
+      "Ethics/policy checklist (consent, disclosure, no impersonation)",
+      "FAQ (6-8) with short answers",
+      "End-of-article CTA card"
+    ],
+    "must_avoid": [
+      "Copyright-avoidance framing (e.g., “洗稿/改写规避版权” wording)",
+      "Reproducing long transcript passages",
+      "Claims about performance uplift without data",
+      "Instructions to impersonate real people or misuse trademarks"
+    ]
+  },
+  "created_at": "2026-02-03"
+}
+

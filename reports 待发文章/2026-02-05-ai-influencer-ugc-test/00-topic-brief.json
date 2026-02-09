@@ -1,0 +1,47 @@
+{
+  "primary_keyword": "how to become ai influencer and make money with ugc ads",
+  "search_intent": "how-to",
+  "recommended_titles": [
+    "How to Become an AI Influencer and Make Money with UGC Ads in 2026",
+    "AI Influencer + UGC Ads: Complete Monetization Guide 2026",
+    "Make Money as an AI Influencer: 5 Revenue Streams from UGC Ads"
+  ],
+  "content_type": "tutorial",
+  "outline": {
+    "h2_sections": [
+      "Understanding AI Influencers",
+      "Why AI Influencers + UGC Ads Work",
+      "Step-by-Step Guide to Becoming an AI Influencer",
+      "Creating UGC Ads with Your AI Influencer",
+      "Common Mistakes to Avoid",
+      "Pro Tips for Success"
+    ],
+    "key_questions": [
+      "How much can I earn as an AI influencer?",
+      "What tools do I need to create an AI influencer?",
+      "How long does it take to monetize?"
+    ]
+  },
+  "aeo_block": {
+    "target_question": "How do I become an AI influencer and make money with UGC ads?",
+    "direct_answer_draft": "To become an AI influencer, create a consistent virtual character using AI tools like alici.ai, build a content portfolio across social platforms, and monetize through UGC ad services ($100-500/video), brand endorsements ($500-50,000/post), and digital products. The AI influencer market is growing at 40.8% CAGR, with UGC ads achieving 4x higher CTR than traditional advertising."
+  },
+  "alici_angle": "One-platform solution for AI influencer content creation with multi-model support",
+  "product_mapping": {
+    "primary_product": {
+      "id": "video_studio",
+      "name": "AI Video Studio",
+      "url": "https://app.alici.ai/pages/videoGen",
+      "cta_text": "Create AI Influencer Content Now",
+      "features": ["Kling 2.0", "Runway Gen-4", "Veo 3"]
+    },
+    "secondary_products": [
+      {
+        "id": "image_studio",
+        "name": "AI Image Studio",
+        "url": "https://app.alici.ai/pages/imageGen",
+        "use_case": "Create AI influencer profile images and promotional graphics"
+      }
+    ]
+  }
+}

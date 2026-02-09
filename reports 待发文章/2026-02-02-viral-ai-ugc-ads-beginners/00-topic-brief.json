@@ -1,0 +1,56 @@
+{
+  "topic": "Viral AI UGC Ads (2026) — Best Practices for Beginners",
+  "slug": "viral-ai-ugc-ads-beginners",
+  "content_type": "tutorial",
+  "language": "en",
+  "geo": "US",
+  "primary_keyword": "ugc ads",
+  "secondary_keywords": [
+    "ugc ad hooks",
+    "ugc ad script",
+    "ugc ads examples",
+    "tiktok ugc ads",
+    "ugc video ads",
+    "ai ugc ads"
+  ],
+  "title_locked": "How to Create Viral AI UGC Ads in 2026: Best Practices for Beginners",
+  "title_alternatives": [
+    "How to Make UGC Ads in 2026: A Beginner Workflow (Hooks, Script, Shot List, Edit)",
+    "UGC Ads for Beginners (2026): A Viral-Style Template You Can Copy"
+  ],
+  "target_audience": "Beginner creators and marketers making short-form UGC ads (TikTok/Reels/Shorts) with limited budget and no studio setup.",
+  "article_angle": "Creator-first, beginner-safe workflow: hook library → simple script → shot list → edit recipe → iterate via ad metrics, with optional AI acceleration.",
+  "word_count_target": "1800-2500",
+  "product_mapping": {
+    "primary": "AI Video Studio",
+    "secondary": "Any Script 2 AI Video",
+    "tertiary": "Image to AI Video",
+    "integration_level": "L3_natural_positioning"
+  },
+  "source": {
+    "type": "youtube",
+    "url": "https://www.youtube.com/watch?v=_H01wcSCEko",
+    "page_title": "How to Make Viral AI UGC Ads in 2026 (Full Workflow)",
+    "local_transcript_file": "00-youtube-transcript.md",
+    "usage_intent": "reference"
+  },
+  "requirements": {
+    "must_include": [
+      "Deliverable definition: clearly state the final output (UGC Ad Kit) in Key Takeaways",
+      "Key Takeaways section immediately after H1",
+      "AIDA opening (80-120 words, 4 short paragraphs)",
+      "Money hook: explain how UGC ads make money + why they work (with cited market data)",
+      "Beginner-friendly definitions (UGC ad, hook, angle, proof, CTA)",
+      "Hook library + script template + shot list template",
+      "Common mistakes (3-5) and how to fix",
+      "FAQ (8-12) with 2-4 sentence answers, including model workflow + brand relationship questions",
+      "End-of-article CTA card"
+    ],
+    "must_avoid": [
+      "Invented performance stats (use qualitative guidance unless sourced)",
+      "Misleading claims about platform policies",
+      "Overly tool-centric content (keep workflow-first)"
+    ]
+  },
+  "created_at": "2026-02-02"
+}
