@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "profile": "prompt_workflow",
+  "errors": [],
+  "warnings": [],
+  "files": {
+    "article": "skills/writers/blog-list-writer/testdata/prompt_workflow/01-article-draft.md"
+  }
+}

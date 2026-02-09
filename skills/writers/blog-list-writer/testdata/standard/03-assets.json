@@ -1,0 +1,35 @@
+{
+  "meta": {"recommended_generate_max": 5},
+  "featured_image": {
+    "alt": "A comparison-style cover showing AI UGC tools and short-form ad creation workflow",
+    "size": "1200x630",
+    "priority": "high"
+  },
+  "diagrams": [
+    {
+      "type": "comparison_infographic",
+      "alt": "Quick comparison infographic summarizing best AI UGC tools by use case",
+      "size": "1200x800",
+      "priority": "high"
+    },
+    {
+      "type": "decision_tree",
+      "alt": "Decision tree for choosing an AI UGC tool based on budget, workflow, and output style",
+      "size": "1200x800",
+      "priority": "high"
+    }
+  ],
+  "tool_images": [
+    {"tool": "Alici AI", "alt": "Alici AI UGC workflow dashboard (illustrative)", "size": "1200x630", "priority": "low"},
+    {"tool": "ToolAlpha", "alt": "ToolAlpha script-to-UGC flow (illustrative)", "size": "1200x630", "priority": "low"},
+    {"tool": "ToolBeta", "alt": "ToolBeta avatar UGC generator (illustrative)", "size": "1200x630", "priority": "low"},
+    {"tool": "ToolGamma", "alt": "ToolGamma ad variations grid (illustrative)", "size": "1200x630", "priority": "low"},
+    {"tool": "ToolDelta", "alt": "ToolDelta editing timeline (illustrative)", "size": "1200x630", "priority": "low"},
+    {"tool": "ToolEpsilon", "alt": "ToolEpsilon product demo generator (illustrative)", "size": "1200x630", "priority": "low"},
+    {"tool": "ToolZeta", "alt": "ToolZeta caption-first UGC builder (illustrative)", "size": "1200x630", "priority": "low"},
+    {"tool": "ToolEta", "alt": "ToolEta creator workflow (illustrative)", "size": "1200x630", "priority": "low"},
+    {"tool": "ToolTheta", "alt": "ToolTheta compliance templates (illustrative)", "size": "1200x630", "priority": "low"},
+    {"tool": "ToolIota", "alt": "ToolIota budget UGC tool interface (illustrative)", "size": "1200x630", "priority": "low"}
+  ]
+}
+

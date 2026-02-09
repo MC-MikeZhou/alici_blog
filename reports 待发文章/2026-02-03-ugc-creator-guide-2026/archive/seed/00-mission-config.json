@@ -1,0 +1,29 @@
+{
+  "seed": "ugc creator",
+  "anchors": {
+    "competitors": [
+      "https://invideo.io/blog",
+      "https://later.com/blog",
+      "https://sproutsocial.com/insights",
+      "https://www.shopify.com/blog",
+      "https://grin.co/blog"
+    ],
+    "competitor_strategy": {}
+  },
+  "scope": {
+    "language": "en",
+    "geo": "US",
+    "audience": "content_creators",
+    "forbidden_zones": ["gambling", "adult"],
+    "validation_depth": "standard"
+  },
+  "growth": {
+    "goal": "traffic_and_conversion",
+    "product_relevance": "script_to_video",
+    "conversion_priority": "balanced"
+  },
+  "metadata": {
+    "created_at": "2026-02-03T00:00:00Z",
+    "version": "2.2"
+  }
+}

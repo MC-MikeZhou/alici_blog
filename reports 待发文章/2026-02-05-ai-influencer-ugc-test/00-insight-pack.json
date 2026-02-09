@@ -1,0 +1,63 @@
+{
+  "insight_pack": {
+    "thesis": "AI Influencer + UGC Ads is the most profitable combo for content creators in 2026",
+    "why_now": "Market explosion ($6.06B) + tech maturity (SoulID) + cost advantage (-70%)",
+    "key_takeaways": [
+      "SoulID technology maintains virtual influencer character consistency",
+      "170+ language global capability without real human presence",
+      "UGC ad CTR improves 4x, cost reduces 70%",
+      "20 posts/day scalable production capability",
+      "5 monetization modes: endorsement/service/product/livestream/licensing"
+    ],
+    "market_data": {
+      "market_size": "$6.06B (2024)",
+      "cagr": "40.8% (2025-2030)",
+      "key_metrics": {
+        "ctr_improvement": "4x vs traditional ads",
+        "cost_reduction": "70% vs traditional shooting",
+        "conversion_lift": "29% conversion rate improvement"
+      }
+    },
+    "monetization_paths": [
+      {
+        "path": "Brand Endorsement",
+        "income_range": "$500-$50,000/post"
+      },
+      {
+        "path": "UGC Ad Services",
+        "income_range": "$100-$500/video"
+      },
+      {
+        "path": "Digital Products",
+        "income_range": "Passive income stream"
+      },
+      {
+        "path": "Livestream Commerce",
+        "income_range": "5-15% commission split"
+      },
+      {
+        "path": "IP Licensing",
+        "income_range": "$5,000-$50,000 annual fee"
+      }
+    ],
+    "competitive_sources": [
+      {
+        "source": "Higgsfield",
+        "data_used": "SoulID tech, UGC Factory"
+      },
+      {
+        "source": "HeyGen",
+        "data_used": "Avatar IV, 170+ languages"
+      },
+      {
+        "source": "Invideo",
+        "data_used": "4x CTR, 29% conversion"
+      }
+    ],
+    "content_gaps": [
+      "Chinese market strategy (Douyin/XiaoHongShu/Kuaishou)",
+      "Specific monetization amount cases",
+      "0-to-1 launch roadmap"
+    ]
+  }
+}

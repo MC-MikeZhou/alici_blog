@@ -1,0 +1,127 @@
+{
+  "images": [
+    {
+      "id": "helmut-newton-style",
+      "source_file": "In the style of \"Helmut Newton\"-1.jpeg",
+      "role": "inline",
+      "placeholder": "![Helmut Newton style](assets/In%20the%20style%20of%20%22Helmut%20Newton%22-1.jpeg)",
+      "context": "Section: Black & White Masters - Style 1",
+      "photographer": "Helmut Newton",
+      "style_category": "Black & White Masters"
+    },
+    {
+      "id": "irving-penn-style",
+      "source_file": "In the style of \"Irving Penn\"-1.jpeg",
+      "role": "inline",
+      "placeholder": "![Irving Penn style](assets/In%20the%20style%20of%20%22Irving%20Penn%22-1.jpeg)",
+      "context": "Section: Black & White Masters - Style 2",
+      "photographer": "Irving Penn",
+      "style_category": "Black & White Masters"
+    },
+    {
+      "id": "edward-steichen-style",
+      "source_file": "In the style of \"Edward Steichen\"-1.jpeg",
+      "role": "inline",
+      "placeholder": "![Edward Steichen style](assets/In%20the%20style%20of%20%22Edward%20Steichen%22-1.jpeg)",
+      "context": "Section: Black & White Masters - Style 3",
+      "photographer": "Edward Steichen",
+      "style_category": "Black & White Masters"
+    },
+    {
+      "id": "man-ray-style",
+      "source_file": "In the style of \"Man Ray\"-1.jpeg",
+      "role": "inline",
+      "placeholder": "![Man Ray style](assets/In%20the%20style%20of%20%22Man%20Ray%22-1.jpeg)",
+      "context": "Section: Black & White Masters - Style 4",
+      "photographer": "Man Ray",
+      "style_category": "Black & White Masters"
+    },
+    {
+      "id": "david-lachapelle-style",
+      "source_file": "In the style of \"David LaChapelle\"-1.jpeg",
+      "role": "inline",
+      "placeholder": "![David LaChapelle style](assets/In%20the%20style%20of%20%22David%20LaChapelle%22-1.jpeg)",
+      "context": "Section: Color Narrative Masters - Style 5",
+      "photographer": "David LaChapelle",
+      "style_category": "Color Narrative Masters"
+    },
+    {
+      "id": "guy-bourdin-style",
+      "source_file": "In the style of \"Guy Bourdin\"-1.jpeg",
+      "role": "inline",
+      "placeholder": "![Guy Bourdin style](assets/In%20the%20style%20of%20%22Guy%20Bourdin%22-1.jpeg)",
+      "context": "Section: Color Narrative Masters - Style 6",
+      "photographer": "Guy Bourdin",
+      "style_category": "Color Narrative Masters"
+    },
+    {
+      "id": "mario-testino-style",
+      "source_file": "In the style of \"Mario Testino\"-1.jpeg",
+      "role": "inline",
+      "placeholder": "![Mario Testino style](assets/In%20the%20style%20of%20%22Mario%20Testino%22-1.jpeg)",
+      "context": "Section: Color Narrative Masters - Style 7",
+      "photographer": "Mario Testino",
+      "style_category": "Color Narrative Masters"
+    },
+    {
+      "id": "playboy-style",
+      "source_file": "In the style of \"Playboy\"-1.jpeg",
+      "role": "inline",
+      "placeholder": "![Playboy style](assets/In%20the%20style%20of%20%22Playboy%22-1.jpeg)",
+      "context": "Section: Color Narrative Masters - Style 8",
+      "photographer": "Playboy",
+      "style_category": "Color Narrative Masters"
+    },
+    {
+      "id": "araki-nobuyoshi-style",
+      "source_file": "In the style of \"Araki Nobuyoshi\"-1.jpeg",
+      "role": "inline",
+      "placeholder": "![Araki Nobuyoshi style](assets/In%20the%20style%20of%20%22Araki%20Nobuyoshi%22-1.jpeg)",
+      "context": "Section: Cultural Signature Styles - Style 9",
+      "photographer": "Araki Nobuyoshi",
+      "style_category": "Cultural Signature Styles"
+    },
+    {
+      "id": "cindy-sherman-style",
+      "source_file": "In the style of \"Cindy Sherman\"-1.jpeg",
+      "role": "inline",
+      "placeholder": "![Cindy Sherman style](assets/In%20the%20style%20of%20%22Cindy%20Sherman%22-1.jpeg)",
+      "context": "Section: Cultural Signature Styles - Style 10",
+      "photographer": "Cindy Sherman",
+      "style_category": "Cultural Signature Styles"
+    },
+    {
+      "id": "american-apparel-style",
+      "source_file": "n the style of \"American Apparel\"-1.jpeg",
+      "role": "inline",
+      "placeholder": "![American Apparel style](assets/n%20the%20style%20of%20%22American%20Apparel%22-1.jpeg)",
+      "context": "Section: Cultural Signature Styles - Style 11",
+      "photographer": "American Apparel",
+      "style_category": "Cultural Signature Styles"
+    }
+  ],
+  "metadata": {
+    "total_images": 11,
+    "article_slug": "ai-portrait-photography-styles-guide",
+    "article_version": "v2.0",
+    "source_directory": "/Users/H/Documents/AliciBlog/AI influencers-11 iconic Poses/",
+    "generated_at": "2026-01-28T00:00:00Z",
+    "style_categories": [
+      {
+        "name": "Black & White Masters",
+        "photographers": ["Helmut Newton", "Irving Penn", "Edward Steichen", "Man Ray"],
+        "count": 4
+      },
+      {
+        "name": "Color Narrative Masters",
+        "photographers": ["David LaChapelle", "Guy Bourdin", "Mario Testino", "Playboy"],
+        "count": 4
+      },
+      {
+        "name": "Cultural Signature Styles",
+        "photographers": ["Araki Nobuyoshi", "Cindy Sherman", "American Apparel"],
+        "count": 3
+      }
+    ]
+  }
+}

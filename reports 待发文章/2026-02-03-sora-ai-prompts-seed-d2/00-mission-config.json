@@ -1,0 +1,38 @@
+{
+  "seed": "sora ai prompts",
+  "anchors": {
+    "competitors": [
+      "https://developers.openai.com/cookbook/examples/sora/sora2_prompting_guide/",
+      "https://www.soraprompting.com/",
+      "https://travisnicholson.medium.com/best-sora-prompts-for-viral-videos-074eedb80ddf",
+      "https://www.reddit.com/r/OpenAI/comments/1hbed8s/sora_analysis_32_experiments_what_works_what/",
+      "https://higgsfield.ai/blog/SORA-2-Prompt-Guide-How-to-Create-Viral-Videos-Like-a-Pro",
+      "https://wavespeed.ai/blog/posts/sora-2-prompting-tips-better-videos-2026/"
+    ],
+    "competitor_strategy": {
+      "notes": "Anchors come from real SERP top competitors in DataForSEO validation for the keyword 'Sora AI prompts' plus Higgsfield and WaveSpeed for creator-first viral positioning. No paywalled/login-only sources."
+    }
+  },
+  "scope": {
+    "language": "en",
+    "geo": "US",
+    "audience": "content_creators",
+    "forbidden_zones": [
+      "adult",
+      "gambling"
+    ],
+    "validation_depth": "standard"
+  },
+  "growth": {
+    "goal": "traffic_and_conversion",
+    "product_relevance": "video_studio",
+    "conversion_priority": "balanced"
+  },
+  "metadata": {
+    "created_at": "2026-02-03",
+    "created_by": "codex",
+    "session_id": "seed-mode-d2-sora-ai-prompts-templates-2026-02-03",
+    "version": "growth-topic-scout-v2.2"
+  }
+}
+

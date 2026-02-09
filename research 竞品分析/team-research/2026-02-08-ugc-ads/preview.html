@@ -1,0 +1,916 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UGC Ads 研究预览（UGC ads）</title>
+  <style>
+    :root {
+      --bg0: #f3efe6;
+      --bg1: #f7f1e1;
+      --paper: #fbf6ea;
+      --paper2: #f7f1e1;
+      --ink: #1f2328;
+      --muted: rgba(31,35,40,0.68);
+      --line: rgba(31,35,40,0.12);
+      --shadow: 0 10px 28px rgba(0,0,0,0.08);
+      --shadow2: 0 4px 14px rgba(0,0,0,0.08);
+      --accent: #2f6f5f;
+      --warn: #a46a10;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --serif: ui-serif, "Iowan Old Style", "Palatino Linotype", Palatino, "Noto Serif CJK SC", "Songti SC", STSong, serif;
+      --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: var(--sans);
+      background:
+        radial-gradient(1200px 800px at 10% 10%, rgba(47,111,95,0.08), transparent 60%),
+        radial-gradient(900px 700px at 90% 20%, rgba(164,106,16,0.08), transparent 55%),
+        linear-gradient(180deg, var(--bg0), #ffffff 60%, var(--bg0));
+    }
+    .wrap {
+      max-width: 1120px;
+      margin: 28px auto 64px;
+      padding: 0 18px;
+    }
+    header {
+      display: flex;
+      gap: 16px;
+      align-items: baseline;
+      justify-content: space-between;
+      padding: 18px 18px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: linear-gradient(180deg, var(--paper), var(--paper2));
+      box-shadow: var(--shadow2);
+    }
+    .title {
+      font-family: var(--serif);
+      letter-spacing: 0.2px;
+      line-height: 1.1;
+    }
+    .title h1 {
+      margin: 0;
+      font-size: 22px;
+      font-weight: 700;
+    }
+    .title .sub {
+      margin-top: 6px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    .tab {
+      appearance: none;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.6);
+      padding: 8px 10px;
+      border-radius: 999px;
+      font-size: 13px;
+      cursor: pointer;
+      transition: transform 120ms ease, background 120ms ease, border-color 120ms ease;
+      color: var(--ink);
+    }
+    .tab:hover { transform: translateY(-1px); border-color: rgba(31,35,40,0.22); }
+    .tab.active {
+      background: rgba(47,111,95,0.12);
+      border-color: rgba(47,111,95,0.35);
+    }
+    main { margin-top: 16px; }
+    .panel { display: none; }
+    .panel.active { display: block; }
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: linear-gradient(180deg, var(--paper), var(--paper2));
+      box-shadow: var(--shadow2);
+      padding: 16px 16px;
+      margin: 14px 0;
+    }
+    .card-title {
+      font-family: var(--serif);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+      margin-bottom: 10px;
+    }
+    .muted { color: var(--muted); }
+    .tiny { font-size: 12px; }
+    .mono { font-family: var(--mono); }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.55);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .pill.warn { border-color: rgba(164,106,16,0.35); background: rgba(164,106,16,0.10); color: #6b470c; }
+    .pill.soft { background: rgba(255,255,255,0.35); }
+    .pill.tiny { padding: 2px 8px; font-size: 11px; }
+    .chips { list-style: none; padding: 0; margin: 10px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.45);
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+    }
+    .kv {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 10px 12px;
+      align-items: baseline;
+    }
+    .kv .k { color: var(--muted); font-size: 12px; }
+    .kv .v { font-size: 13px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .linklist { margin: 0; padding-left: 18px; }
+    .todo-list { margin: 10px 0 0; padding-left: 18px; }
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.45);
+      font-size: 11px;
+      color: var(--muted);
+      margin-right: 6px;
+    }
+    details > summary {
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      gap: 10px;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+    details > summary::-webkit-details-marker { display: none; }
+    .summary-title {
+      font-family: var(--serif);
+      font-weight: 700;
+    }
+    .summary-meta {
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .meta { margin-top: 6px; font-size: 12px; color: var(--muted); }
+    .spacer { height: 8px; }
+    h1, h2, h3 { margin: 10px 0; font-family: var(--serif); }
+    h1 { font-size: 18px; }
+    h2 { font-size: 15px; }
+    h3 { font-size: 13px; }
+    p { margin: 8px 0; line-height: 1.6; }
+    code {
+      font-family: var(--mono);
+      font-size: 0.92em;
+      padding: 0.1em 0.35em;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255,255,255,0.45);
+    }
+    pre.code {
+      overflow: auto;
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.45);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+    }
+    pre.code code {
+      border: none;
+      background: transparent;
+      padding: 0;
+      font-size: 12px;
+      line-height: 1.5;
+      display: block;
+      white-space: pre;
+    }
+    .direction-head {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    .direction-id {
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.2px;
+    }
+    .direction-angle {
+      margin-top: 10px;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+    .subhead {
+      margin-top: 12px;
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 0.2px;
+    }
+    .text { margin-top: 6px; line-height: 1.6; }
+    .filters {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    #filterBox {
+      flex: 1;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px 12px;
+      font-size: 13px;
+      background: rgba(255,255,255,0.55);
+      outline: none;
+    }
+    #filterBox:focus { border-color: rgba(47,111,95,0.35); box-shadow: 0 0 0 4px rgba(47,111,95,0.08); }
+    .table-wrap { overflow: auto; border-radius: 12px; border: 1px solid var(--line); }
+    table.tbl {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 860px;
+      background: rgba(255,255,255,0.35);
+    }
+    .tbl th, .tbl td {
+      padding: 10px 12px;
+      border-bottom: 1px solid rgba(31,35,40,0.10);
+      vertical-align: top;
+      font-size: 13px;
+    }
+    .tbl th {
+      position: sticky;
+      top: 0;
+      background: rgba(251,246,234,0.98);
+      text-align: left;
+      font-family: var(--serif);
+      font-size: 12px;
+      letter-spacing: 0.2px;
+    }
+    .tbl tr:hover td { background: rgba(47,111,95,0.05); }
+
+    @media (max-width: 720px) {
+      header { flex-direction: column; align-items: flex-start; }
+      .tabs { justify-content: flex-start; }
+      .kv { grid-template-columns: 100px 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="title">
+        <h1>UGC Ads 研究预览（UGC ads）</h1>
+        <div class="sub">本地预览（离线单文件），最后更新：2026-02-08 23:11</div>
+      </div>
+      <nav class="tabs" id="tabs">
+        <button class="tab" data-tab="tab-overview">概览</button><button class="tab" data-tab="tab-basecamp">Basecamp 背景</button><button class="tab" data-tab="tab-directions">方向集</button><button class="tab" data-tab="tab-decision">决策简报</button><button class="tab" data-tab="tab-mapping">映射</button><button class="tab" data-tab="tab-appendix">附录</button>
+      </nav>
+    </header>
+    <main>
+      <section class="panel" id="tab-overview">
+        <div class="card">
+          <div class="card-title">概览</div>
+          <div class="kv">
+            <div class="k">Seed</div><div class="v"><span class="pill">UGC ads</span></div>
+            <div class="k">生成时间</div><div class="v">2026-02-08 23:11</div>
+            <div class="k">Basecamp Roots</div><div class="v">2</div>
+            <div class="k">列表数</div><div class="v">12</div>
+            <div class="k">Todos 数</div><div class="v">25</div>
+            <div class="k">DataForSEO 校验</div><div class="v"><span class="pill warn">未配置，待校验</span></div>
+          </div>
+        </div>
+        
+
+        <div class="card">
+          <div class="card-title">研究约束（来自 Basecamp）</div>
+          <div class="muted">这些约束用来避免研究漂移，确保方向能落回 backlog。</div>
+          <ul class="chips">
+            <li class="chip">竞品：InVideo</li><li class="chip">落地页</li><li class="chip">官方创意中心</li><li class="chip">单价与单位经济</li><li class="chip">UGC Ads 模式与 Demo</li><li class="chip">Use Case 库</li>
+          </ul>
+        </div>
+        </section><section class="panel" id="tab-basecamp"><div class="card"><div class="card-title">Basecamp Roots</div>
+<ul class="linklist">
+<li><a href="https://3.basecamp.com/3135399/buckets/42744895/todolists/9536725297" target="_blank" rel="noreferrer">UGC ads 增长策划中心</a></li>
+<li><a href="https://3.basecamp.com/3135399/buckets/45547714/todolists/9546306218" target="_blank" rel="noreferrer">UGC ADs 模式 研发和Use Case</a></li>
+</ul>
+</div>
+<div class="card">
+<details open>
+<summary><span class="summary-title">UGC ads 增长策划中心</span><span class="summary-meta">0 条</span></summary>
+<div class="meta"><a href="https://3.basecamp.com/3135399/buckets/42744895/todolists/9536725297" target="_blank" rel="noreferrer">https://3.basecamp.com/3135399/buckets/42744895/todolists/9536725297</a></div>
+<div class="muted">（空）</div>
+</details>
+</div>
+<div class="card">
+<details open>
+<summary><span class="summary-title">Alici Blog 选题策划 UGC ads系列</span><span class="summary-meta">2 条</span></summary>
+<div class="meta"><a href="https://3.basecamp.com/3135399/buckets/42744895/todolists/9536725742" target="_blank" rel="noreferrer">https://3.basecamp.com/3135399/buckets/42744895/todolists/9536725742</a></div>
+<ul class="todo-list">
+<li><span class="badge">active</span> <span class="mono">9536996960</span> 🧵 如何制作不完美的真实感： GPT5 Pro 给出了三个选题， 感觉相当靠谱 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9536996960" target="_blank" rel="noreferrer">打开</a></li>
+<li><span class="badge">active</span> <span class="mono">9541074504</span> 新手教程：How to Create Viral AI UGC Ads in 2026: Best Practices for Beginners <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9541074504" target="_blank" rel="noreferrer">打开</a></li>
+</ul>
+</details>
+</div>
+<div class="card">
+<details open>
+<summary><span class="summary-title">对标 InVideo Blog</span><span class="summary-meta">4 条</span></summary>
+<div class="meta"><a href="https://3.basecamp.com/3135399/buckets/42744895/todolists/9536766978" target="_blank" rel="noreferrer">https://3.basecamp.com/3135399/buckets/42744895/todolists/9536766978</a></div>
+<ul class="todo-list">
+<li><span class="badge">active</span> <span class="mono">9536794596</span> Invideo  Explore 拥有大量 UGC 素材 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9536794596" target="_blank" rel="noreferrer">打开</a></li>
+<li><span class="badge">active</span> <span class="mono">9537217575</span> Invideo 洗稿：The Complete Guide to User-Generated Content (UGC) in 2025 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9537217575" target="_blank" rel="noreferrer">打开</a></li>
+<li><span class="badge">active</span> <span class="mono">9541413054</span> （已发布）How to Become a UGC Creator — The Complete Step-by-Step Guide for 2026 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9541413054" target="_blank" rel="noreferrer">打开</a></li>
+<li><span class="badge">active</span> <span class="mono">9556057393</span> 💡 GPT5 Pro ：深度拆解Invideo Blog 有多少篇 UGC ads， 哪些值得复刻 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9556057393" target="_blank" rel="noreferrer">打开</a></li>
+</ul>
+</details>
+</div>
+<div class="card">
+<details open>
+<summary><span class="summary-title">Invideo UGC 模板复刻</span><span class="summary-meta">2 条</span></summary>
+<div class="meta"><a href="https://3.basecamp.com/3135399/buckets/42744895/todolists/9536873155" target="_blank" rel="noreferrer">https://3.basecamp.com/3135399/buckets/42744895/todolists/9536873155</a></div>
+<ul class="todo-list">
+<li><span class="badge">active</span> <span class="mono">9536876664</span> 👟 Invideo UGC 模板：那些看起来和感觉一样好的运动鞋 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9536876664" target="_blank" rel="noreferrer">打开</a></li>
+<li><span class="badge">active</span> <span class="mono">9536888942</span> 尝试用 Alici Super Agent 直接复刻UGC ads提示词模板 2.3 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9536888942" target="_blank" rel="noreferrer">打开</a></li>
+</ul>
+</details>
+</div>
+<div class="card">
+<details open>
+<summary><span class="summary-title">UGC ads 真实案例</span><span class="summary-meta">0 条</span></summary>
+<div class="meta"><a href="https://3.basecamp.com/3135399/buckets/42744895/todolists/9543378560" target="_blank" rel="noreferrer">https://3.basecamp.com/3135399/buckets/42744895/todolists/9543378560</a></div>
+<div class="muted">（空）</div>
+</details>
+</div>
+<div class="card">
+<details open>
+<summary><span class="summary-title">Instagram/TIktok/Youtube Ads 官方：创意中心</span><span class="summary-meta">2 条</span></summary>
+<div class="meta"><a href="https://3.basecamp.com/3135399/buckets/42744895/todolists/9556056518" target="_blank" rel="noreferrer">https://3.basecamp.com/3135399/buckets/42744895/todolists/9556056518</a></div>
+<ul class="todo-list">
+<li><span class="badge">active</span> <span class="mono">9543382856</span> 👙 研究UGC ads 单价，看到一些标准的广告案例，可以作为素材和 参考对标 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9543382856" target="_blank" rel="noreferrer">打开</a></li>
+<li><span class="badge">active</span> <span class="mono">9556056698</span> 🧵 Tiktok 官方指引： 广告 &amp; 创意中心 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9556056698" target="_blank" rel="noreferrer">打开</a></li>
+</ul>
+</details>
+</div>
+<div class="card">
+<details open>
+<summary><span class="summary-title">Alici Video Agent 的落地页</span><span class="summary-meta">3 条</span></summary>
+<div class="meta"><a href="https://3.basecamp.com/3135399/buckets/42744895/todolists/9556073256" target="_blank" rel="noreferrer">https://3.basecamp.com/3135399/buckets/42744895/todolists/9556073256</a></div>
+<ul class="todo-list">
+<li><span class="badge">active</span> <span class="mono">9536804477</span> 🌟 Invideo UGC ads有个落地页，值得学习吗 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9536804477" target="_blank" rel="noreferrer">打开</a></li>
+<li><span class="badge">active</span> <span class="mono">9556073428</span> Alici VideoAgent 落地页，需要更新 UGC ads 的视频以及描述 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9556073428" target="_blank" rel="noreferrer">打开</a></li>
+<li><span class="badge">active</span> <span class="mono">9556089119</span> zeely.ai的 UGC ads 落地页，可以参考 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9556089119" target="_blank" rel="noreferrer">打开</a></li>
+</ul>
+</details>
+</div>
+<div class="card">
+<details open>
+<summary><span class="summary-title">UGC ADs 模式 研发和Use Case</span><span class="summary-meta">0 条</span></summary>
+<div class="meta"><a href="https://3.basecamp.com/3135399/buckets/45547714/todolists/9546306218" target="_blank" rel="noreferrer">https://3.basecamp.com/3135399/buckets/45547714/todolists/9546306218</a></div>
+<div class="muted">（空）</div>
+</details>
+</div>
+<div class="card">
+<details open>
+<summary><span class="summary-title">Demo 的准备和完善工作</span><span class="summary-meta">6 条</span></summary>
+<div class="meta"><a href="https://3.basecamp.com/3135399/buckets/45547714/todolists/9550965183" target="_blank" rel="noreferrer">https://3.basecamp.com/3135399/buckets/45547714/todolists/9550965183</a></div>
+<ul class="todo-list">
+<li><span class="badge">active</span> <span class="mono">9546324815</span> 为模式新建内置的agent、tools、service <a class="tiny" href="https://3.basecamp.com/3135399/buckets/45547714/todos/9546324815" target="_blank" rel="noreferrer">打开</a></li>
+<li><span class="badge">active</span> <span class="mono">9546325204</span> Veo 3.1 fast 更换成 Veo 3.1 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/45547714/todos/9546325204" target="_blank" rel="noreferrer">打开</a></li>
+<li><span class="badge">active</span> <span class="mono">9546325556</span> Banana 更换成 Banana Pro <a class="tiny" href="https://3.basecamp.com/3135399/buckets/45547714/todos/9546325556" target="_blank" rel="noreferrer">打开</a></li>
+<li><span class="badge">active</span> <span class="mono">9546697118</span> UGC Ads : veo 3.1 fast vs kling 3.0 vs seedance1.5 pro <a class="tiny" href="https://3.basecamp.com/3135399/buckets/45547714/todos/9546697118" target="_blank" rel="noreferrer">打开</a></li>
+<li><span class="badge">active</span> <span class="mono">9547574480</span> UGC Ads demo v0.2 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/45547714/todos/9547574480" target="_blank" rel="noreferrer">打开</a></li>
+<li><span class="badge">active</span> <span class="mono">9552142614</span> UGC Ads Mode 聊天价格调整 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/45547714/todos/9552142614" target="_blank" rel="noreferrer">打开</a></li>
+</ul>
+</details>
+</div>
+<div class="card">
+<details open>
+<summary><span class="summary-title">Opus 4.6 接入</span><span class="summary-meta">1 条</span></summary>
+<div class="meta"><a href="https://3.basecamp.com/3135399/buckets/45547714/todolists/9550965653" target="_blank" rel="noreferrer">https://3.basecamp.com/3135399/buckets/45547714/todolists/9550965653</a></div>
+<ul class="todo-list">
+<li><span class="badge">active</span> <span class="mono">9550984534</span> Opus4.6 已登录 OpenRounter，价格和 Opus4.5 一样 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/45547714/todos/9550984534" target="_blank" rel="noreferrer">打开</a></li>
+</ul>
+</details>
+</div>
+<div class="card">
+<details open>
+<summary><span class="summary-title">UGC ads Use Case</span><span class="summary-meta">4 条</span></summary>
+<div class="meta"><a href="https://3.basecamp.com/3135399/buckets/45547714/todolists/9555080319" target="_blank" rel="noreferrer">https://3.basecamp.com/3135399/buckets/45547714/todolists/9555080319</a></div>
+<ul class="todo-list">
+<li><span class="badge">active</span> <span class="mono">9555081861</span> 🥤UGC ads Use Case ：海瑟薇的饮料 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/45547714/todos/9555081861" target="_blank" rel="noreferrer">打开</a></li>
+<li><span class="badge">active</span> <span class="mono">9555083067</span> ⌚️ UGC ads Use Case：高尔夫运动手表 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/45547714/todos/9555083067" target="_blank" rel="noreferrer">打开</a></li>
+<li><span class="badge">active</span> <span class="mono">9555084049</span> 🧽 UGC ads Use Case：神器厨房布 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/45547714/todos/9555084049" target="_blank" rel="noreferrer">打开</a></li>
+<li><span class="badge">active</span> <span class="mono">9555993416</span> 🧘‍♀️ UGC ads Use case：女性维生素糖 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/45547714/todos/9555993416" target="_blank" rel="noreferrer">打开</a></li>
+</ul>
+</details>
+</div>
+<div class="card">
+<details open>
+<summary><span class="summary-title">UGC ads 用户行为研究</span><span class="summary-meta">1 条</span></summary>
+<div class="meta"><a href="https://3.basecamp.com/3135399/buckets/45547714/todolists/9555892452" target="_blank" rel="noreferrer">https://3.basecamp.com/3135399/buckets/45547714/todolists/9555892452</a></div>
+<ul class="todo-list">
+<li><span class="badge">active</span> <span class="mono">9555892454</span> 🧽 Tiktok 付费用户susieblankenship@gmail.com，购买年度 Pro 后，尝试各种 VideoAgent UGC ads玩法，成为第一个 UGC Mode 超级用户 2.8 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/45547714/todos/9555892454" target="_blank" rel="noreferrer">打开</a></li>
+</ul>
+</details>
+</div>
+<div class="card"><div class="card-title">Basecamp Digest（原文）</div>
+<h1>Basecamp Context Digest</h1>
+<div class="spacer"></div>
+<ul>
+<li>generated_at: 2026-02-08</li>
+</ul>
+<div class="spacer"></div>
+<h2>1. Roots</h2>
+<div class="spacer"></div>
+<ul>
+<li>UGC ads 增长策划中心 (https://3.basecamp.com/3135399/buckets/42744895/todolists/9536725297)</li>
+<li>UGC ADs 模式 研发和Use Case (https://3.basecamp.com/3135399/buckets/45547714/todolists/9546306218)</li>
+</ul>
+<div class="spacer"></div>
+<h2>2. Lists And Todos</h2>
+<div class="spacer"></div>
+<h3>UGC ads 增长策划中心</h3>
+<ul>
+<li>app_url: https://3.basecamp.com/3135399/buckets/42744895/todolists/9536725297</li>
+<li>todos: (empty)</li>
+</ul>
+<div class="spacer"></div>
+<h3>Alici Blog 选题策划 UGC ads系列</h3>
+<ul>
+<li>app_url: https://3.basecamp.com/3135399/buckets/42744895/todolists/9536725742</li>
+<li>[active] 9536996960 🧵 如何制作不完美的真实感： GPT5 Pro 给出了三个选题， 感觉相当靠谱</li>
+<li>[active] 9541074504 新手教程：How to Create Viral AI UGC Ads in 2026: Best Practices for Beginners</li>
+</ul>
+<div class="spacer"></div>
+<h3>对标 InVideo Blog</h3>
+<ul>
+<li>app_url: https://3.basecamp.com/3135399/buckets/42744895/todolists/9536766978</li>
+<li>[active] 9556057393 💡 GPT5 Pro ：深度拆解Invideo Blog 有多少篇 UGC ads， 哪些值得复刻</li>
+<li>[active] 9537217575 Invideo 洗稿：The Complete Guide to User-Generated Content (UGC) in 2025</li>
+<li>[active] 9536794596 Invideo  Explore 拥有大量 UGC 素材</li>
+<li>[active] 9541413054 （已发布）How to Become a UGC Creator — The Complete Step-by-Step Guide for 2026</li>
+</ul>
+<div class="spacer"></div>
+<h3>Invideo UGC 模板复刻</h3>
+<ul>
+<li>app_url: https://3.basecamp.com/3135399/buckets/42744895/todolists/9536873155</li>
+<li>[active] 9536876664 👟 Invideo UGC 模板：那些看起来和感觉一样好的运动鞋</li>
+<li>[active] 9536888942 尝试用 Alici Super Agent 直接复刻UGC ads提示词模板 2.3</li>
+</ul>
+<div class="spacer"></div>
+<h3>UGC ads 真实案例</h3>
+<ul>
+<li>app_url: https://3.basecamp.com/3135399/buckets/42744895/todolists/9543378560</li>
+<li>todos: (empty)</li>
+</ul>
+<div class="spacer"></div>
+<h3>Instagram/TIktok/Youtube Ads 官方：创意中心</h3>
+<ul>
+<li>app_url: https://3.basecamp.com/3135399/buckets/42744895/todolists/9556056518</li>
+<li>[active] 9556056698 🧵 Tiktok 官方指引： 广告 &amp; 创意中心</li>
+<li>[active] 9543382856 👙 研究UGC ads 单价，看到一些标准的广告案例，可以作为素材和 参考对标</li>
+</ul>
+<div class="spacer"></div>
+<h3>Alici Video Agent 的落地页</h3>
+<ul>
+<li>app_url: https://3.basecamp.com/3135399/buckets/42744895/todolists/9556073256</li>
+<li>[active] 9556073428 Alici VideoAgent 落地页，需要更新 UGC ads 的视频以及描述</li>
+<li>[active] 9556089119 zeely.ai的 UGC ads 落地页，可以参考</li>
+<li>[active] 9536804477 🌟 Invideo UGC ads有个落地页，值得学习吗</li>
+</ul>
+<div class="spacer"></div>
+<h3>UGC ADs 模式 研发和Use Case</h3>
+<ul>
+<li>app_url: https://3.basecamp.com/3135399/buckets/45547714/todolists/9546306218</li>
+<li>todos: (empty)</li>
+</ul>
+<div class="spacer"></div>
+<h3>Demo 的准备和完善工作</h3>
+<ul>
+<li>app_url: https://3.basecamp.com/3135399/buckets/45547714/todolists/9550965183</li>
+<li>[active] 9546324815 为模式新建内置的agent、tools、service</li>
+<li>[active] 9546325204 Veo 3.1 fast 更换成 Veo 3.1</li>
+<li>[active] 9546325556 Banana 更换成 Banana Pro</li>
+<li>[active] 9546697118 UGC Ads : veo 3.1 fast vs kling 3.0 vs seedance1.5 pro</li>
+<li>[active] 9547574480 UGC Ads demo v0.2</li>
+<li>[active] 9552142614 UGC Ads Mode 聊天价格调整</li>
+</ul>
+<div class="spacer"></div>
+<h3>Opus 4.6 接入</h3>
+<ul>
+<li>app_url: https://3.basecamp.com/3135399/buckets/45547714/todolists/9550965653</li>
+<li>[active] 9550984534 Opus4.6 已登录 OpenRounter，价格和 Opus4.5 一样</li>
+</ul>
+<div class="spacer"></div>
+<h3>UGC ads Use Case</h3>
+<ul>
+<li>app_url: https://3.basecamp.com/3135399/buckets/45547714/todolists/9555080319</li>
+<li>[active] 9555081861 🥤UGC ads Use Case ：海瑟薇的饮料</li>
+<li>[active] 9555083067 ⌚️ UGC ads Use Case：高尔夫运动手表</li>
+<li>[active] 9555084049 🧽 UGC ads Use Case：神器厨房布</li>
+<li>[active] 9555993416 🧘‍♀️ UGC ads Use case：女性维生素糖</li>
+</ul>
+<div class="spacer"></div>
+<h3>UGC ads 用户行为研究</h3>
+<ul>
+<li>app_url: https://3.basecamp.com/3135399/buckets/45547714/todolists/9555892452</li>
+<li>[active] 9555892454 🧽 Tiktok 付费用户susieblankenship@gmail.com，购买年度 Pro 后，尝试各种 VideoAgent UGC ads玩法，成为第一个 UGC Mode 超级用户 2.8</li>
+</ul>
+<div class="spacer"></div>
+<h2>3. Extracted Research Constraints</h2>
+<div class="spacer"></div>
+<ul>
+<li>InVideo competitor</li>
+<li>Landing page</li>
+<li>Official creative centers</li>
+<li>Pricing / unit economics</li>
+<li>UGC ads mode / demo</li>
+<li>Use case library</li>
+</ul>
+<div class="spacer"></div>
+<h2>4. Gaps / Empty Lists</h2>
+<div class="spacer"></div>
+<ul>
+<li>UGC ads 增长策划中心 (https://3.basecamp.com/3135399/buckets/42744895/todolists/9536725297)</li>
+<li>UGC ads 真实案例 (https://3.basecamp.com/3135399/buckets/42744895/todolists/9543378560)</li>
+<li>UGC ADs 模式 研发和Use Case (https://3.basecamp.com/3135399/buckets/45547714/todolists/9546306218)</li>
+</ul>
+</div></section><section class="panel" id="tab-directions"><div class="card"><div class="card-title">方向集（中文为主，附英文标题）</div>
+<div class="muted">每个方向都映射到 Basecamp todo，方便闭环推进。</div></div>
+<div class="card direction">
+<div class="direction-head">
+<div class="direction-id mono">UGC-ADS-D01-BEGINNER-WORKFLOW</div>
+<div class="pills"><span class="pill">教程（blog-tutorial-writer）</span><span class="pill soft">蚕食风险：LOW (keeps focus on ads system, not general &#x27;UGC creator&#x27; onboarding)</span><span class="pill soft">校验：待校验</span></div>
+</div>
+<div class="direction-angle">新手从 0 到 1 的 Viral AI UGC Ads 工作流：从创意拆解到脚本、镜头、迭代与投放复盘（强调可复制流程，而不是泛泛介绍 UGC creator）。</div>
+<div class="subhead">英文标题候选</div>
+<ul class="linklist">
+<li>How to Create Viral AI UGC Ads in 2026: A Beginner-Friendly Workflow</li>
+<li>AI UGC Ads for Beginners: Hooks, Scripts, Shots, and Iteration Loops (2026)</li>
+</ul>
+<div class="subhead">目标受众</div>
+<div class="text">Beginner marketers, indie founders, and creators who want a repeatable UGC ads workflow</div>
+<div class="subhead">交付物</div>
+<div class="text">One end-to-end tutorial with a reusable checklist + prompt blocks + shot list templates</div>
+<div class="subhead">Basecamp 对应</div>
+<details>
+<summary>查看匹配的 todos（2 条）</summary>
+<ul class="todo-list">
+<li><span class="mono">9541074504</span> <span class="pill tiny">1.0</span> 新手教程：How to Create Viral AI UGC Ads in 2026: Best Practices for Beginners <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9541074504" target="_blank" rel="noreferrer">打开</a><div class="muted tiny">理由：pinned_from_basecamp_trace</div></li>
+<li><span class="mono">9536996960</span> <span class="pill tiny">1.0</span> 🧵 如何制作不完美的真实感： GPT5 Pro 给出了三个选题， 感觉相当靠谱 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9536996960" target="_blank" rel="noreferrer">打开</a><div class="muted tiny">理由：pinned_from_basecamp_trace</div></li>
+</ul>
+</details>
+</div>
+<div class="card direction">
+<div class="direction-head">
+<div class="direction-id mono">UGC-ADS-D02-CREATIVE-CENTER-TO-SCRIPT</div>
+<div class="pills"><span class="pill">教程（blog-tutorial-writer）</span><span class="pill soft">蚕食风险：低</span><span class="pill soft">校验：待校验</span></div>
+</div>
+<div class="direction-angle">把 TikTok Creative Center 等官方创意中心变成可执行的 UGC ads 选题和脚本：如何找 winning hooks、格式、行业基准，并快速转成脚本与镜头表。</div>
+<div class="subhead">英文标题候选</div>
+<ul class="linklist">
+<li>TikTok Creative Center for UGC Ads: How to Find Winning Hooks, Formats, and Benchmarks (2026)</li>
+<li>From Creative Center to Script: A Practical UGC Ads Research Workflow</li>
+</ul>
+<div class="subhead">目标受众</div>
+<div class="text">Performance marketers and UGC ad creators who need reliable creative research sources</div>
+<div class="subhead">交付物</div>
+<div class="text">Tutorial + example walk-through using Creative Center to generate 3 ad angles</div>
+<div class="subhead">Basecamp 对应</div>
+<details>
+<summary>查看匹配的 todos（1 条）</summary>
+<ul class="todo-list">
+<li><span class="mono">9556056698</span> <span class="pill tiny">1.0</span> 🧵 Tiktok 官方指引： 广告 &amp; 创意中心 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9556056698" target="_blank" rel="noreferrer">打开</a><div class="muted tiny">理由：pinned_from_basecamp_trace</div></li>
+</ul>
+</details>
+</div>
+<div class="card direction">
+<div class="direction-head">
+<div class="direction-id mono">UGC-ADS-D03-INVIDEO-REVERSE-ENGINEERING</div>
+<div class="pills"><span class="pill">教程（blog-tutorial-writer）</span><span class="pill soft">蚕食风险：MEDIUM (competitor &#x27;UGC creator&#x27; topics exist; keep scope on ads + differentiation)</span><span class="pill soft">校验：待校验</span></div>
+</div>
+<div class="direction-angle">反向工程 InVideo 的 UGC ads 内容与素材供给：他们写什么、缺什么、哪些值得复刻，怎样做差异化（并用 Alici 的产品映射写出更强的 tutorial/list）。</div>
+<div class="subhead">英文标题候选</div>
+<ul class="linklist">
+<li>InVideo&#x27;s UGC Ads Content Strategy: What to Copy, What to Skip, and How to Differentiate</li>
+<li>UGC Ads Topic Map: Reverse-Engineering InVideo&#x27;s Blog and Template Library (2026)</li>
+</ul>
+<div class="subhead">目标受众</div>
+<div class="text">Content strategists building an SEO + product-led growth flywheel for UGC ads</div>
+<div class="subhead">交付物</div>
+<div class="text">Competitor teardown + a prioritized topic map with differentiation rules</div>
+<div class="subhead">Basecamp 对应</div>
+<details>
+<summary>查看匹配的 todos（4 条）</summary>
+<ul class="todo-list">
+<li><span class="mono">9556057393</span> <span class="pill tiny">1.0</span> 💡 GPT5 Pro ：深度拆解Invideo Blog 有多少篇 UGC ads， 哪些值得复刻 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9556057393" target="_blank" rel="noreferrer">打开</a><div class="muted tiny">理由：pinned_from_basecamp_trace</div></li>
+<li><span class="mono">9536794596</span> <span class="pill tiny">1.0</span> Invideo  Explore 拥有大量 UGC 素材 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9536794596" target="_blank" rel="noreferrer">打开</a><div class="muted tiny">理由：pinned_from_basecamp_trace</div></li>
+<li><span class="mono">9537217575</span> <span class="pill tiny">1.0</span> Invideo 洗稿：The Complete Guide to User-Generated Content (UGC) in 2025 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9537217575" target="_blank" rel="noreferrer">打开</a><div class="muted tiny">理由：pinned_from_basecamp_trace</div></li>
+<li><span class="mono">9536804477</span> <span class="pill tiny">1.0</span> 🌟 Invideo UGC ads有个落地页，值得学习吗 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9536804477" target="_blank" rel="noreferrer">打开</a><div class="muted tiny">理由：pinned_from_basecamp_trace</div></li>
+</ul>
+</details>
+</div>
+<div class="card direction">
+<div class="direction-head">
+<div class="direction-id mono">UGC-ADS-D04-TEMPLATE-PROMPT-LIBRARY</div>
+<div class="pills"><span class="pill">榜单（blog-list-writer）</span><span class="pill soft">蚕食风险：低</span><span class="pill soft">校验：待校验</span></div>
+</div>
+<div class="direction-angle">UGC ads 提示词模板库：把 InVideo 的模板思路变成 Alici VideoAgent 可复用的 prompt blocks（按行业/产品/受众拆分），并提供 A/B 变体生成策略。</div>
+<div class="subhead">英文标题候选</div>
+<ul class="linklist">
+<li>UGC Ads Prompt Templates That Convert: 12 Plug-and-Play Scripts (with Variations)</li>
+<li>From InVideo Templates to VideoAgent: A UGC Ads Template Porting Playbook</li>
+</ul>
+<div class="subhead">目标受众</div>
+<div class="text">Creators and marketers who want reusable scripts and prompt blocks</div>
+<div class="subhead">交付物</div>
+<div class="text">Listicle-style template library (12 templates) + a portability checklist</div>
+<div class="subhead">Basecamp 对应</div>
+<details>
+<summary>查看匹配的 todos（3 条）</summary>
+<ul class="todo-list">
+<li><span class="mono">9536876664</span> <span class="pill tiny">1.0</span> 👟 Invideo UGC 模板：那些看起来和感觉一样好的运动鞋 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9536876664" target="_blank" rel="noreferrer">打开</a><div class="muted tiny">理由：pinned_from_basecamp_trace</div></li>
+<li><span class="mono">9536888942</span> <span class="pill tiny">1.0</span> 尝试用 Alici Super Agent 直接复刻UGC ads提示词模板 2.3 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9536888942" target="_blank" rel="noreferrer">打开</a><div class="muted tiny">理由：pinned_from_basecamp_trace</div></li>
+<li><span class="mono">9546324815</span> <span class="pill tiny">1.0</span> 为模式新建内置的agent、tools、service <a class="tiny" href="https://3.basecamp.com/3135399/buckets/45547714/todos/9546324815" target="_blank" rel="noreferrer">打开</a><div class="muted tiny">理由：pinned_from_basecamp_trace</div></li>
+</ul>
+</details>
+</div>
+<div class="card direction">
+<div class="direction-head">
+<div class="direction-id mono">UGC-ADS-D05-LANDING-PAGE-TEARDOWN</div>
+<div class="pills"><span class="pill">教程（blog-tutorial-writer）</span><span class="pill soft">蚕食风险：低</span><span class="pill soft">校验：待校验</span></div>
+</div>
+<div class="direction-angle">UGC ads 工具落地页拆解与模板：哪些模块能解释价值、建立信任、展示 demo，并把 Use Case 变成可点击的转化资产（对标 zeely.ai 与 InVideo）。</div>
+<div class="subhead">英文标题候选</div>
+<ul class="linklist">
+<li>UGC Ads Landing Page Teardown: Sections, Proof, and Demos That Drive Trials</li>
+<li>How to Build a High-Converting UGC Ads Tool Landing Page (with Copy Blocks)</li>
+</ul>
+<div class="subhead">目标受众</div>
+<div class="text">Product/marketing owners improving Alici VideoAgent landing page conversion</div>
+<div class="subhead">交付物</div>
+<div class="text">Teardown framework + copy blocks + checklist for updating Alici landing page</div>
+<div class="subhead">Basecamp 对应</div>
+<details>
+<summary>查看匹配的 todos（3 条）</summary>
+<ul class="todo-list">
+<li><span class="mono">9556073428</span> <span class="pill tiny">1.0</span> Alici VideoAgent 落地页，需要更新 UGC ads 的视频以及描述 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9556073428" target="_blank" rel="noreferrer">打开</a><div class="muted tiny">理由：pinned_from_basecamp_trace</div></li>
+<li><span class="mono">9556089119</span> <span class="pill tiny">1.0</span> zeely.ai的 UGC ads 落地页，可以参考 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9556089119" target="_blank" rel="noreferrer">打开</a><div class="muted tiny">理由：pinned_from_basecamp_trace</div></li>
+<li><span class="mono">9536804477</span> <span class="pill tiny">1.0</span> 🌟 Invideo UGC ads有个落地页，值得学习吗 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9536804477" target="_blank" rel="noreferrer">打开</a><div class="muted tiny">理由：pinned_from_basecamp_trace</div></li>
+</ul>
+</details>
+</div>
+<div class="card direction">
+<div class="direction-head">
+<div class="direction-id mono">UGC-ADS-D06-PRICING-BENCHMARKS</div>
+<div class="pills"><span class="pill">教程（blog-tutorial-writer）</span><span class="pill soft">蚕食风险：MEDIUM (pricing overlaps with generic UGC creator topics; keep it ads+budget focused)</span><span class="pill soft">校验：待校验</span></div>
+</div>
+<div class="direction-angle">UGC ads 单价与基准：从创意样片/案例中总结可引用的 benchmark（创作者费用、制作成本、投放指标的常见区间），并明确 AI 生成对单价与迭代速度的影响。</div>
+<div class="subhead">英文标题候选</div>
+<ul class="linklist">
+<li>What Does a UGC Ad Cost in 2026? Benchmarks, Rates, and AI vs Human Tradeoffs</li>
+<li>UGC Ads Pricing Benchmarks: From Creator Fees to Media Spend (2026)</li>
+</ul>
+<div class="subhead">目标受众</div>
+<div class="text">Founders and marketers budgeting UGC ads production and testing loops</div>
+<div class="subhead">交付物</div>
+<div class="text">Benchmark guide with an evidence-first structure (sources and assumptions explicit)</div>
+<div class="subhead">Basecamp 对应</div>
+<details>
+<summary>查看匹配的 todos（1 条）</summary>
+<ul class="todo-list">
+<li><span class="mono">9543382856</span> <span class="pill tiny">1.0</span> 👙 研究UGC ads 单价，看到一些标准的广告案例，可以作为素材和 参考对标 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9543382856" target="_blank" rel="noreferrer">打开</a><div class="muted tiny">理由：pinned_from_basecamp_trace</div></li>
+</ul>
+</details>
+</div>
+<div class="card direction">
+<div class="direction-head">
+<div class="direction-id mono">UGC-ADS-D07-USECASE-SCRIPT-SERIES</div>
+<div class="pills"><span class="pill">小博文/案例短文（case-roundup-writer）</span><span class="pill soft">蚕食风险：低</span><span class="pill soft">校验：待校验</span></div>
+</div>
+<div class="direction-angle">UGC ads Use Case 小系列：把 4 个产品场景做成可复用的脚本与镜头模板，并定义“同一个模板如何换产品”的变体生成规则（适合后续批量扩展）。</div>
+<div class="subhead">英文标题候选</div>
+<ul class="linklist">
+<li>UGC Ads Use Cases: A Script-and-Storyboard Library for VideoAgent (2026)</li>
+<li>4 UGC Ads Scripts You Can Reuse: Beverage, Wearable, Kitchen Gadget, and Vitamins</li>
+</ul>
+<div class="subhead">目标受众</div>
+<div class="text">Teams producing multiple UGC ads variants across products</div>
+<div class="subhead">交付物</div>
+<div class="text">A mini-series plan: 4 short case posts + a shared template and shot bank</div>
+<div class="subhead">Basecamp 对应</div>
+<details>
+<summary>查看匹配的 todos（4 条）</summary>
+<ul class="todo-list">
+<li><span class="mono">9555081861</span> <span class="pill tiny">1.0</span> 🥤UGC ads Use Case ：海瑟薇的饮料 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/45547714/todos/9555081861" target="_blank" rel="noreferrer">打开</a><div class="muted tiny">理由：pinned_from_basecamp_trace</div></li>
+<li><span class="mono">9555083067</span> <span class="pill tiny">1.0</span> ⌚️ UGC ads Use Case：高尔夫运动手表 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/45547714/todos/9555083067" target="_blank" rel="noreferrer">打开</a><div class="muted tiny">理由：pinned_from_basecamp_trace</div></li>
+<li><span class="mono">9555084049</span> <span class="pill tiny">1.0</span> 🧽 UGC ads Use Case：神器厨房布 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/45547714/todos/9555084049" target="_blank" rel="noreferrer">打开</a><div class="muted tiny">理由：pinned_from_basecamp_trace</div></li>
+<li><span class="mono">9555993416</span> <span class="pill tiny">1.0</span> 🧘‍♀️ UGC ads Use case：女性维生素糖 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/45547714/todos/9555993416" target="_blank" rel="noreferrer">打开</a><div class="muted tiny">理由：pinned_from_basecamp_trace</div></li>
+</ul>
+</details>
+</div>
+<div class="card direction">
+<div class="direction-head">
+<div class="direction-id mono">UGC-ADS-D08-MODEL-SHOWDOWN</div>
+<div class="pills"><span class="pill">工具对决（blog-showdown-writer）</span><span class="pill soft">蚕食风险：低</span><span class="pill soft">校验：待校验</span></div>
+</div>
+<div class="direction-angle">UGC ads 生成模型对决：Veo vs Kling vs Seedance 在广告脚本一致性、镜头可控性、速度与成本上的差异（按 UGC ads 的实际评测维度写成 showdown）。</div>
+<div class="subhead">英文标题候选</div>
+<ul class="linklist">
+<li>Veo 3.1 Fast vs Kling 3.0 vs Seedance 1.5 Pro for AI UGC Ads: Which Wins in 2026?</li>
+<li>Best AI Video Model for UGC Ads (2026): Veo vs Kling vs Seedance</li>
+</ul>
+<div class="subhead">目标受众</div>
+<div class="text">Creators selecting a generation stack for UGC ads production</div>
+<div class="subhead">交付物</div>
+<div class="text">Tool/model showdown with a clear test rubric and decision matrix</div>
+<div class="subhead">Basecamp 对应</div>
+<details>
+<summary>查看匹配的 todos（3 条）</summary>
+<ul class="todo-list">
+<li><span class="mono">9546697118</span> <span class="pill tiny">1.0</span> UGC Ads : veo 3.1 fast vs kling 3.0 vs seedance1.5 pro <a class="tiny" href="https://3.basecamp.com/3135399/buckets/45547714/todos/9546697118" target="_blank" rel="noreferrer">打开</a><div class="muted tiny">理由：pinned_from_basecamp_trace</div></li>
+<li><span class="mono">9546325204</span> <span class="pill tiny">1.0</span> Veo 3.1 fast 更换成 Veo 3.1 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/45547714/todos/9546325204" target="_blank" rel="noreferrer">打开</a><div class="muted tiny">理由：pinned_from_basecamp_trace</div></li>
+<li><span class="mono">9547574480</span> <span class="pill tiny">1.0</span> UGC Ads demo v0.2 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/45547714/todos/9547574480" target="_blank" rel="noreferrer">打开</a><div class="muted tiny">理由：pinned_from_basecamp_trace</div></li>
+</ul>
+</details>
+</div></section><section class="panel" id="tab-decision"><div class="card"><div class="card-title">决策简报</div>
+<div class="muted">这是下一步行动的最短路径建议。</div></div>
+<div class="card">
+<h1>Decision Brief: UGC Ads Seed Portfolio</h1>
+<div class="spacer"></div>
+<ul>
+<li>seed: UGC ads</li>
+<li>date: 2026-02-08</li>
+<li>context: <code>tmp/basecamp-context/2026-02-08-ugc-ads-v2/</code></li>
+</ul>
+<div class="spacer"></div>
+<h2>Recommended Next Actions (Pick 2 Now)</h2>
+<div class="spacer"></div>
+<h3>Pick 1 (must): D01 Beginner Workflow</h3>
+<div class="spacer"></div>
+<ul>
+<li>direction_id: <code>UGC-ADS-D01-BEGINNER-WORKFLOW</code></li>
+<li>why: Basecamp 明确写了 “新手教程” 作为 backlog 主线；也最容易接入 Alici 产品叙事并形成后续系列的骨架。</li>
+<li>output: tutorial（直接进入 <code>blog-tutorial-writer</code>）</li>
+</ul>
+<div class="spacer"></div>
+<h3>Pick 2 (strategic): D05 Landing Page Teardown</h3>
+<div class="spacer"></div>
+<ul>
+<li>direction_id: <code>UGC-ADS-D05-LANDING-PAGE-TEARDOWN</code></li>
+<li>why: 直接服务 “Alici VideoAgent 落地页需要更新” 的业务任务；同时可以把 D07 use cases 变成落地页的内容模块。</li>
+<li>output: tutorial（进入 <code>blog-tutorial-writer</code>），并把 “copy blocks + demo checklist” 作为可复用资产</li>
+</ul>
+<div class="spacer"></div>
+<h2>Optional (Pick 1 If You Want More Heat)</h2>
+<div class="spacer"></div>
+<h3>D08 Model Showdown</h3>
+<div class="spacer"></div>
+<ul>
+<li>direction_id: <code>UGC-ADS-D08-MODEL-SHOWDOWN</code></li>
+<li>why: Basecamp 已有 “Veo vs Kling vs Seedance” 的明确 todo；showdown 形式更易被分享。</li>
+<li>tradeoff: 需要明确评测 rubric，否则容易变成泛泛对比（建议先把 rubric 写成可复用评测表）。</li>
+</ul>
+<div class="spacer"></div>
+<h2>Sequencing (One-Week Loop)</h2>
+<div class="spacer"></div>
+<ol>
+<li>Week 1: D01 + D05（建立 workflow 骨架 + 落地页资产）</li>
+<li>Week 2: D07（use case 小系列，落地页可复用）+ D02（官方创意中心变成 research 方法）</li>
+<li>Week 3: D08（showdown）+ D03（InVideo topic map，驱动持续选题）</li>
+</ol>
+<div class="spacer"></div>
+<h2>Notes</h2>
+<div class="spacer"></div>
+<ul>
+<li>DataForSEO 未在当前环境配置，本轮方向仅做 backlog 对齐与结构化输出；下一步应做 title lock / volume / SERP format 验证。</li>
+</ul>
+<div class="spacer"></div>
+</div></section><section class="panel" id="tab-mapping"><div class="card"><div class="card-title">方向到 Todo 映射</div>
+<div class="muted">支持搜索过滤（按方向ID / todo 文本）。</div></div>
+
+        <div class="card">
+          <div class="filters">
+            <input id="filterBox" type="text" placeholder="搜索方向ID / todo 内容..." />
+            <div class="muted tiny" id="filterMeta"></div>
+          </div>
+          <div class="table-wrap">
+            <table class="tbl" id="mapTable">
+              <thead>
+                <tr>
+                  <th>方向ID</th>
+                  <th>Todo</th>
+                  <th>置信度</th>
+                  <th>理由</th>
+                </tr>
+              </thead>
+              <tbody>
+        
+<tr><td class="mono">UGC-ADS-D01-BEGINNER-WORKFLOW</td><td><span class="mono">9541074504</span> 新手教程：How to Create Viral AI UGC Ads in 2026: Best Practices for Beginners <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9541074504" target="_blank" rel="noreferrer">打开</a></td><td><span class="pill tiny">1.0</span></td><td class="muted tiny">pinned_from_basecamp_trace</td></tr>
+<tr><td class="mono">UGC-ADS-D01-BEGINNER-WORKFLOW</td><td><span class="mono">9536996960</span> 🧵 如何制作不完美的真实感： GPT5 Pro 给出了三个选题， 感觉相当靠谱 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9536996960" target="_blank" rel="noreferrer">打开</a></td><td><span class="pill tiny">1.0</span></td><td class="muted tiny">pinned_from_basecamp_trace</td></tr>
+<tr><td class="mono">UGC-ADS-D02-CREATIVE-CENTER-TO-SCRIPT</td><td><span class="mono">9556056698</span> 🧵 Tiktok 官方指引： 广告 &amp; 创意中心 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9556056698" target="_blank" rel="noreferrer">打开</a></td><td><span class="pill tiny">1.0</span></td><td class="muted tiny">pinned_from_basecamp_trace</td></tr>
+<tr><td class="mono">UGC-ADS-D03-INVIDEO-REVERSE-ENGINEERING</td><td><span class="mono">9556057393</span> 💡 GPT5 Pro ：深度拆解Invideo Blog 有多少篇 UGC ads， 哪些值得复刻 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9556057393" target="_blank" rel="noreferrer">打开</a></td><td><span class="pill tiny">1.0</span></td><td class="muted tiny">pinned_from_basecamp_trace</td></tr>
+<tr><td class="mono">UGC-ADS-D03-INVIDEO-REVERSE-ENGINEERING</td><td><span class="mono">9536794596</span> Invideo  Explore 拥有大量 UGC 素材 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9536794596" target="_blank" rel="noreferrer">打开</a></td><td><span class="pill tiny">1.0</span></td><td class="muted tiny">pinned_from_basecamp_trace</td></tr>
+<tr><td class="mono">UGC-ADS-D03-INVIDEO-REVERSE-ENGINEERING</td><td><span class="mono">9537217575</span> Invideo 洗稿：The Complete Guide to User-Generated Content (UGC) in 2025 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9537217575" target="_blank" rel="noreferrer">打开</a></td><td><span class="pill tiny">1.0</span></td><td class="muted tiny">pinned_from_basecamp_trace</td></tr>
+<tr><td class="mono">UGC-ADS-D03-INVIDEO-REVERSE-ENGINEERING</td><td><span class="mono">9536804477</span> 🌟 Invideo UGC ads有个落地页，值得学习吗 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9536804477" target="_blank" rel="noreferrer">打开</a></td><td><span class="pill tiny">1.0</span></td><td class="muted tiny">pinned_from_basecamp_trace</td></tr>
+<tr><td class="mono">UGC-ADS-D04-TEMPLATE-PROMPT-LIBRARY</td><td><span class="mono">9536876664</span> 👟 Invideo UGC 模板：那些看起来和感觉一样好的运动鞋 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9536876664" target="_blank" rel="noreferrer">打开</a></td><td><span class="pill tiny">1.0</span></td><td class="muted tiny">pinned_from_basecamp_trace</td></tr>
+<tr><td class="mono">UGC-ADS-D04-TEMPLATE-PROMPT-LIBRARY</td><td><span class="mono">9536888942</span> 尝试用 Alici Super Agent 直接复刻UGC ads提示词模板 2.3 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9536888942" target="_blank" rel="noreferrer">打开</a></td><td><span class="pill tiny">1.0</span></td><td class="muted tiny">pinned_from_basecamp_trace</td></tr>
+<tr><td class="mono">UGC-ADS-D04-TEMPLATE-PROMPT-LIBRARY</td><td><span class="mono">9546324815</span> 为模式新建内置的agent、tools、service <a class="tiny" href="https://3.basecamp.com/3135399/buckets/45547714/todos/9546324815" target="_blank" rel="noreferrer">打开</a></td><td><span class="pill tiny">1.0</span></td><td class="muted tiny">pinned_from_basecamp_trace</td></tr>
+<tr><td class="mono">UGC-ADS-D05-LANDING-PAGE-TEARDOWN</td><td><span class="mono">9556073428</span> Alici VideoAgent 落地页，需要更新 UGC ads 的视频以及描述 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9556073428" target="_blank" rel="noreferrer">打开</a></td><td><span class="pill tiny">1.0</span></td><td class="muted tiny">pinned_from_basecamp_trace</td></tr>
+<tr><td class="mono">UGC-ADS-D05-LANDING-PAGE-TEARDOWN</td><td><span class="mono">9556089119</span> zeely.ai的 UGC ads 落地页，可以参考 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9556089119" target="_blank" rel="noreferrer">打开</a></td><td><span class="pill tiny">1.0</span></td><td class="muted tiny">pinned_from_basecamp_trace</td></tr>
+<tr><td class="mono">UGC-ADS-D05-LANDING-PAGE-TEARDOWN</td><td><span class="mono">9536804477</span> 🌟 Invideo UGC ads有个落地页，值得学习吗 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9536804477" target="_blank" rel="noreferrer">打开</a></td><td><span class="pill tiny">1.0</span></td><td class="muted tiny">pinned_from_basecamp_trace</td></tr>
+<tr><td class="mono">UGC-ADS-D06-PRICING-BENCHMARKS</td><td><span class="mono">9543382856</span> 👙 研究UGC ads 单价，看到一些标准的广告案例，可以作为素材和 参考对标 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/42744895/todos/9543382856" target="_blank" rel="noreferrer">打开</a></td><td><span class="pill tiny">1.0</span></td><td class="muted tiny">pinned_from_basecamp_trace</td></tr>
+<tr><td class="mono">UGC-ADS-D07-USECASE-SCRIPT-SERIES</td><td><span class="mono">9555081861</span> 🥤UGC ads Use Case ：海瑟薇的饮料 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/45547714/todos/9555081861" target="_blank" rel="noreferrer">打开</a></td><td><span class="pill tiny">1.0</span></td><td class="muted tiny">pinned_from_basecamp_trace</td></tr>
+<tr><td class="mono">UGC-ADS-D07-USECASE-SCRIPT-SERIES</td><td><span class="mono">9555083067</span> ⌚️ UGC ads Use Case：高尔夫运动手表 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/45547714/todos/9555083067" target="_blank" rel="noreferrer">打开</a></td><td><span class="pill tiny">1.0</span></td><td class="muted tiny">pinned_from_basecamp_trace</td></tr>
+<tr><td class="mono">UGC-ADS-D07-USECASE-SCRIPT-SERIES</td><td><span class="mono">9555084049</span> 🧽 UGC ads Use Case：神器厨房布 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/45547714/todos/9555084049" target="_blank" rel="noreferrer">打开</a></td><td><span class="pill tiny">1.0</span></td><td class="muted tiny">pinned_from_basecamp_trace</td></tr>
+<tr><td class="mono">UGC-ADS-D07-USECASE-SCRIPT-SERIES</td><td><span class="mono">9555993416</span> 🧘‍♀️ UGC ads Use case：女性维生素糖 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/45547714/todos/9555993416" target="_blank" rel="noreferrer">打开</a></td><td><span class="pill tiny">1.0</span></td><td class="muted tiny">pinned_from_basecamp_trace</td></tr>
+<tr><td class="mono">UGC-ADS-D08-MODEL-SHOWDOWN</td><td><span class="mono">9546697118</span> UGC Ads : veo 3.1 fast vs kling 3.0 vs seedance1.5 pro <a class="tiny" href="https://3.basecamp.com/3135399/buckets/45547714/todos/9546697118" target="_blank" rel="noreferrer">打开</a></td><td><span class="pill tiny">1.0</span></td><td class="muted tiny">pinned_from_basecamp_trace</td></tr>
+<tr><td class="mono">UGC-ADS-D08-MODEL-SHOWDOWN</td><td><span class="mono">9546325204</span> Veo 3.1 fast 更换成 Veo 3.1 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/45547714/todos/9546325204" target="_blank" rel="noreferrer">打开</a></td><td><span class="pill tiny">1.0</span></td><td class="muted tiny">pinned_from_basecamp_trace</td></tr>
+<tr><td class="mono">UGC-ADS-D08-MODEL-SHOWDOWN</td><td><span class="mono">9547574480</span> UGC Ads demo v0.2 <a class="tiny" href="https://3.basecamp.com/3135399/buckets/45547714/todos/9547574480" target="_blank" rel="noreferrer">打开</a></td><td><span class="pill tiny">1.0</span></td><td class="muted tiny">pinned_from_basecamp_trace</td></tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+        </section><section class="panel" id="tab-appendix"><div class="card"><div class="card-title">附录</div>
+<div class="muted">输入文件、复现命令与校验提示。</div></div>
+
+        <div class="card">
+          <div class="card-title">下一步（DataForSEO）</div>
+          <ul>
+            <li>当前环境未配置 DataForSEO，方向集的 SERP/Volume/Title Lock 仍处于“待校验”。</li>
+            <li>建议优先校验：D01（新手工作流）、D05（落地页拆解）、D08（模型对决）的关键词与 SERP 形式。</li>
+          </ul>
+        </div>
+        </section>
+    </main>
+  </div>
+  <script>
+    (function() {
+      const tabs = Array.from(document.querySelectorAll('.tab'));
+      const panels = Array.from(document.querySelectorAll('.panel'));
+      function setActive(tabId) {
+        tabs.forEach(b => b.classList.toggle('active', b.dataset.tab === tabId));
+        panels.forEach(p => p.classList.toggle('active', p.id === tabId));
+        try {
+          localStorage.setItem('team_research_active_tab', tabId);
+        } catch (e) {}
+        const url = new URL(window.location.href);
+        url.hash = 'tab=' + encodeURIComponent(tabId);
+        history.replaceState(null, '', url.toString());
+      }
+      function resolveInitial() {
+        const h = (window.location.hash || '').replace(/^#/, '');
+        if (h.startsWith('tab=')) {
+          const id = decodeURIComponent(h.slice(4));
+          if (document.getElementById(id)) return id;
+        }
+        try {
+          const saved = localStorage.getItem('team_research_active_tab');
+          if (saved && document.getElementById(saved)) return saved;
+        } catch (e) {}
+        return panels[0]?.id;
+      }
+      tabs.forEach(b => b.addEventListener('click', () => setActive(b.dataset.tab)));
+      const initial = resolveInitial();
+      if (initial) setActive(initial);
+
+      // Mapping filter
+      const box = document.getElementById('filterBox');
+      const table = document.getElementById('mapTable');
+      const meta = document.getElementById('filterMeta');
+      if (box && table) {
+        function applyFilter() {
+          const q = (box.value || '').toLowerCase().trim();
+          const rows = Array.from(table.querySelectorAll('tbody tr'));
+          let visible = 0;
+          rows.forEach(r => {
+            const text = r.innerText.toLowerCase();
+            const ok = !q || text.includes(q);
+            r.style.display = ok ? '' : 'none';
+            if (ok) visible++;
+          });
+          if (meta) meta.textContent = q ? ('显示 ' + visible + ' / ' + rows.length + ' 条') : ('共 ' + rows.length + ' 条');
+        }
+        box.addEventListener('input', applyFilter);
+        applyFilter();
+      }
+    })();
+  </script>
+</body>
+</html>

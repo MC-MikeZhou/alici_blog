@@ -1,6 +1,6 @@
 # AliciBlog Skills
 
-> 21 Skills + 6 共享文档，按功能分组
+> 22 Skills + 6 共享文档，按功能分组
 
 ## 目录结构
 
@@ -10,7 +10,7 @@ skills/
 ├── _docs/                    ← 共享文档 (6 个)
 ├── core/                     ← 核心入口 (5 个 Skills)
 ├── writers/                  ← Writer 组 (4 个 Skills)
-├── utilities/                ← 工具组 (7 个 Skills)
+├── utilities/                ← 工具组 (8 个 Skills)
 └── monitors/                 ← 监控分析组 (5 个 Skills)
 ```
 
@@ -69,6 +69,7 @@ skills/
 | **framer-previewer** | v1.1 | preview framer | 本地预览 HTML |
 | **batch-processor** | v1.1 | 批量, batch | 队列执行 + 进度追踪 |
 | **blog-cover-generator** | v1.0 | 生成封面, blog cover | 6 种背景类型 + Prompt 模板 |
+| **image-sourcer** | v1.0 | 找配图, source images | Web 真实图片搜索 + 5 维评分 |
 | **image-generator** | - | - | 图片生成 |
 | **image-placeholder-filler** | - | - | 图片占位符填充 |
 
@@ -93,7 +94,7 @@ skills/
 ```
 smart-launcher v2.1 (三轨制)
     ↓
-growth-topic-scout v2.2
+growth-topic-scout v2.3 (Seed D2 可选)
     ↓
 writer 路由 (tutorial/list/roundup)
     ↓

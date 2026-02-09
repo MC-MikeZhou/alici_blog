@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Preview - {{TITLE}}</title>
+    <style>
+      :root {
+        --bg: #0b0f14;
+        --card: #0f1720;
+        --text: #e6edf3;
+        --muted: rgba(230, 237, 243, 0.70);
+        --border: rgba(230, 237, 243, 0.12);
+        --green: #10b981;
+        --green2: #4fd1c5;
+        --link: #6ee7b7;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        background: radial-gradient(1000px 600px at 50% 0%, rgba(16, 185, 129, 0.16), transparent 60%),
+                    radial-gradient(900px 520px at 50% 100%, rgba(79, 209, 197, 0.10), transparent 55%),
+                    var(--bg);
+        color: var(--text);
+        line-height: 1.75;
+      }
+
+      .preview-header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        backdrop-filter: blur(10px);
+        background: rgba(11, 15, 20, 0.75);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .preview-header-inner {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 12px 18px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 10px;
+        border: 1px solid rgba(16, 185, 129, 0.35);
+        border-radius: 999px;
+        color: var(--text);
+        background: rgba(16, 185, 129, 0.08);
+        font-size: 12px;
+        letter-spacing: 0.2px;
+        white-space: nowrap;
+      }
+
+      .badge-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: var(--green);
+        box-shadow: 0 0 14px rgba(16, 185, 129, 0.55);
+      }
+
+      .hint {
+        margin: 0;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      main {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 22px 18px 72px;
+      }
+
+      .cover {
+        width: 100%;
+        aspect-ratio: 1200 / 630;
+        border-radius: 18px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .cover img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      h1 {
+        font-size: 40px;
+        line-height: 1.15;
+        margin: 18px 0 8px;
+        letter-spacing: -0.02em;
+      }
+
+      .article-subtitle {
+        margin: 0 0 14px;
+        color: var(--muted);
+        font-size: 16px;
+      }
+
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 14px;
+        align-items: center;
+        color: var(--muted);
+        font-size: 13px;
+        margin-bottom: 22px;
+      }
+
+      .meta .pill {
+        padding: 4px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      a { color: var(--link); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+
+      /* Framer-ish content styles */
+      .content {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 18px 18px 8px;
+      }
+
+      .content h6 {
+        margin: 26px 0 10px;
+        font-size: 18px;
+        line-height: 1.3;
+      }
+
+      .content p {
+        margin: 10px 0;
+      }
+
+      .content ul, .content ol {
+        padding-left: 22px;
+        margin: 10px 0 14px;
+      }
+
+      .content li {
+        margin: 6px 0;
+      }
+
+      figure {
+        margin: 18px 0;
+        padding: 0;
+      }
+
+      figure img {
+        max-width: 100%;
+        border-radius: 14px;
+        border: 1px solid var(--border);
+        display: block;
+      }
+
+      figure table {
+        width: 100%;
+        border-collapse: collapse;
+        overflow: hidden;
+        border-radius: 14px;
+        border: 1px solid var(--border);
+        display: block;
+      }
+
+      figure table tbody, figure table tr, figure table td, figure table th {
+        border-color: var(--border);
+      }
+
+      figure table th, figure table td {
+        padding: 10px 12px;
+        border-bottom: 1px solid var(--border);
+        vertical-align: top;
+      }
+
+      figure table th {
+        background: rgba(255, 255, 255, 0.03);
+        font-weight: 600;
+      }
+
+      blockquote {
+        margin: 16px 0;
+        padding: 10px 14px;
+        border-left: 3px solid rgba(16, 185, 129, 0.60);
+        background: rgba(16, 185, 129, 0.06);
+        color: rgba(230, 237, 243, 0.92);
+        border-radius: 12px;
+      }
+
+      .cta {
+        margin-top: 18px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .cta a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 18px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, rgba(16, 185, 129, 0.95), rgba(79, 209, 197, 0.95));
+        color: #061018;
+        font-weight: 700;
+        border: 0;
+        text-decoration: none;
+        box-shadow: 0 12px 30px rgba(16, 185, 129, 0.20);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="preview-header">
+      <div class="preview-header-inner">
+        <span class="badge"><span class="badge-dot"></span>Preview Mode</span>
+        <p class="hint">Local preview - simulates Framer rendering.</p>
+      </div>
+    </div>
+
+    <main>
+      <div class="cover">
+        <img src="{{COVER_URL}}" alt="Cover image" />
+      </div>
+
+      <h1>{{TITLE}}</h1>
+      {{SUB_TITLE_BLOCK}}
+
+      <div class="meta">
+        <span class="pill">{{READ_TIME}}</span>
+        <span class="pill">{{DATE}}</span>
+      </div>
+
+      <div class="content">
+        {{ARTICLE_BODY}}
+      </div>
+
+      <div class="cta">
+        <a href="{{CTA_LINK}}" target="_blank" rel="noopener noreferrer">{{CTA_BUTTON}}</a>
+      </div>
+    </main>
+  </body>
+</html>
+

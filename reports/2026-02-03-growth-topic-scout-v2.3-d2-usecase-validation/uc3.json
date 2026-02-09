@@ -1,0 +1,138 @@
+{
+  "use_case_id": "UC3",
+  "zh_prompt": "我想做一个 AI Influencer 的账号，我该怎么准备？用什么工具起步？有没有什么教程能让我快速赚到钱？",
+  "seed": "ai influencer tools (proxy via batch-ai-influencer dataset)",
+  "source_dir": "/Users/H/Documents/AliciBlog/reports/2026-01-27-batch-ai-influencer",
+  "d1": {
+    "directions": [
+      {
+        "id": "UC3-C01",
+        "title": "how to create AI influencer at scale",
+        "primary_keyword": "how to create AI influencer at scale",
+        "theme": "AI Influencer",
+        "intent_type": "how-to",
+        "seo_score": 45.0,
+        "aeo_score": 30.0,
+        "volume": 0.0,
+        "strategy_source": "seed_xpollination",
+        "cluster_id": null
+      },
+      {
+        "id": "UC3-C02",
+        "title": "batch AI influencer tutorial 2026",
+        "primary_keyword": "batch AI influencer tutorial 2026",
+        "theme": "AI Influencer",
+        "intent_type": "use-case",
+        "seo_score": 45.0,
+        "aeo_score": 20.0,
+        "volume": 0.0,
+        "strategy_source": "seed_xpollination",
+        "cluster_id": null
+      }
+    ],
+    "note": "D1 baseline is reconstructed from a small validated keyword set (4 keywords)."
+  },
+  "d2": {
+    "directions": [
+      {
+        "id": "UC3-C01",
+        "title": "how to create AI influencer at scale",
+        "primary_keyword": "how to create AI influencer at scale",
+        "theme": "AI Influencer",
+        "intent_type": "how-to",
+        "seo_score": 45.0,
+        "aeo_score": 30.0,
+        "volume": 0.0,
+        "strategy_source": "seed_xpollination",
+        "cluster_id": "C01"
+      },
+      {
+        "id": "UC3-C02",
+        "title": "batch AI influencer tutorial 2026",
+        "primary_keyword": "batch AI influencer tutorial 2026",
+        "theme": "AI Influencer",
+        "intent_type": "use-case",
+        "seo_score": 45.0,
+        "aeo_score": 20.0,
+        "volume": 0.0,
+        "strategy_source": "seed_xpollination",
+        "cluster_id": "C02"
+      },
+      {
+        "id": "UC3-C03",
+        "title": "AI digital human content creation",
+        "primary_keyword": "AI digital human content creation",
+        "theme": "AI Influencer",
+        "intent_type": "use-case",
+        "seo_score": 45.0,
+        "aeo_score": 10.0,
+        "volume": 0.0,
+        "strategy_source": "seed_xpollination",
+        "cluster_id": "C03"
+      }
+    ],
+    "diversity_report": {
+      "engine_version": "2.3-diversity-offline",
+      "thresholds": {
+        "cluster_threshold": 0.6,
+        "target_avg_similarity": 0.5,
+        "final_pairwise_max": 0.6,
+        "min_final_clusters": 3,
+        "min_intent_types_final": 2
+      },
+      "metrics": {
+        "avg_pairwise_similarity": 0.2187,
+        "max_pairwise_similarity": 0.2667,
+        "cluster_count": 3,
+        "intent_type_count": 2
+      },
+      "strategy_mix": {
+        "counts": {
+          "seed_xpollination": 3
+        }
+      },
+      "gate_passed": true,
+      "rejection_log": [],
+      "similarity_to_other_finals": {
+        "UC3-C01": [
+          {
+            "direction_id": "UC3-C02",
+            "similarity": 0.2365
+          },
+          {
+            "direction_id": "UC3-C03",
+            "similarity": 0.153
+          }
+        ],
+        "UC3-C02": [
+          {
+            "direction_id": "UC3-C01",
+            "similarity": 0.2365
+          },
+          {
+            "direction_id": "UC3-C03",
+            "similarity": 0.2667
+          }
+        ],
+        "UC3-C03": [
+          {
+            "direction_id": "UC3-C01",
+            "similarity": 0.153
+          },
+          {
+            "direction_id": "UC3-C02",
+            "similarity": 0.2667
+          }
+        ]
+      },
+      "notes": [
+        "This diversity report is reconstructed offline using TF-IDF cosine similarity (lexical proxy).",
+        "Strategy sources are heuristic labels derived from intent types; not from an actual D2 runtime."
+      ]
+    }
+  },
+  "notes": [
+    "UC3 dataset is niche/emerging (monthly_search_volume=0 for all validated keywords in saved artifacts).",
+    "Treat value comparisons as direction-quality proxy (SERP features) rather than demand validation."
+  ]
+}

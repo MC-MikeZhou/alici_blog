@@ -1,0 +1,16 @@
+{
+  "meta": {"recommended_generate_max": 5},
+  "featured_image": {
+    "alt": "Mega AI video tools guide cover with category grouping",
+    "size": "1200x630",
+    "priority": "high"
+  },
+  "diagrams": [
+    {"type": "comparison_infographic", "alt": "Category-based comparison infographic for AI video tools", "size": "1200x800", "priority": "high"},
+    {"type": "decision_tree", "alt": "Decision tree for choosing AI video tools by workflow", "size": "1200x800", "priority": "high"}
+  ],
+  "tool_images": [
+    {"tool": "Alici AI", "alt": "Workflow hub interface (illustrative)", "size": "1200x630", "priority": "low"}
+  ]
+}
+

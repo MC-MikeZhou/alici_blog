@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Preview - Sora 2 Prompt Guide: How to Create Viral Videos in 2026</title>
+    <style>
+      :root {
+        --bg: #0b0f14;
+        --card: #0f1720;
+        --text: #e6edf3;
+        --muted: rgba(230, 237, 243, 0.70);
+        --border: rgba(230, 237, 243, 0.12);
+        --green: #10b981;
+        --green2: #4fd1c5;
+        --link: #6ee7b7;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        background: radial-gradient(1000px 600px at 50% 0%, rgba(16, 185, 129, 0.16), transparent 60%),
+                    radial-gradient(900px 520px at 50% 100%, rgba(79, 209, 197, 0.10), transparent 55%),
+                    var(--bg);
+        color: var(--text);
+        line-height: 1.75;
+      }
+
+      .preview-header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        backdrop-filter: blur(10px);
+        background: rgba(11, 15, 20, 0.75);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .preview-header-inner {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 12px 18px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 10px;
+        border: 1px solid rgba(16, 185, 129, 0.35);
+        border-radius: 999px;
+        color: var(--text);
+        background: rgba(16, 185, 129, 0.08);
+        font-size: 12px;
+        letter-spacing: 0.2px;
+        white-space: nowrap;
+      }
+
+      .badge-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: var(--green);
+        box-shadow: 0 0 14px rgba(16, 185, 129, 0.55);
+      }
+
+      .hint {
+        margin: 0;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      main {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 22px 18px 72px;
+      }
+
+      .cover {
+        width: 100%;
+        aspect-ratio: 1200 / 630;
+        border-radius: 18px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      .cover img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      h1 {
+        font-size: 40px;
+        line-height: 1.15;
+        margin: 18px 0 8px;
+        letter-spacing: -0.02em;
+      }
+
+      .article-subtitle {
+        margin: 0 0 14px;
+        color: var(--muted);
+        font-size: 16px;
+      }
+
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 14px;
+        align-items: center;
+        color: var(--muted);
+        font-size: 13px;
+        margin-bottom: 22px;
+      }
+
+      .meta .pill {
+        padding: 4px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      a { color: var(--link); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+
+      /* Framer-ish content styles */
+      .content {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        padding: 18px 18px 8px;
+      }
+
+      .content h6 {
+        margin: 26px 0 10px;
+        font-size: 18px;
+        line-height: 1.3;
+      }
+
+      .content p {
+        margin: 10px 0;
+      }
+
+      .content ul, .content ol {
+        padding-left: 22px;
+        margin: 10px 0 14px;
+      }
+
+      .content li {
+        margin: 6px 0;
+      }
+
+      figure {
+        margin: 18px 0;
+        padding: 0;
+      }
+
+      figure img {
+        max-width: 100%;
+        border-radius: 14px;
+        border: 1px solid var(--border);
+        display: block;
+      }
+
+      figure table {
+        width: 100%;
+        border-collapse: collapse;
+        overflow: hidden;
+        border-radius: 14px;
+        border: 1px solid var(--border);
+        display: block;
+      }
+
+      figure table tbody, figure table tr, figure table td, figure table th {
+        border-color: var(--border);
+      }
+
+      figure table th, figure table td {
+        padding: 10px 12px;
+        border-bottom: 1px solid var(--border);
+        vertical-align: top;
+      }
+
+      figure table th {
+        background: rgba(255, 255, 255, 0.03);
+        font-weight: 600;
+      }
+
+      blockquote {
+        margin: 16px 0;
+        padding: 10px 14px;
+        border-left: 3px solid rgba(16, 185, 129, 0.60);
+        background: rgba(16, 185, 129, 0.06);
+        color: rgba(230, 237, 243, 0.92);
+        border-radius: 12px;
+      }
+
+      .cta {
+        margin-top: 18px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .cta a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 18px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, rgba(16, 185, 129, 0.95), rgba(79, 209, 197, 0.95));
+        color: #061018;
+        font-weight: 700;
+        border: 0;
+        text-decoration: none;
+        box-shadow: 0 12px 30px rgba(16, 185, 129, 0.20);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="preview-header">
+      <div class="preview-header-inner">
+        <span class="badge"><span class="badge-dot"></span>Preview Mode</span>
+        <p class="hint">Local preview - simulates Framer rendering.</p>
+      </div>
+    </div>
+
+    <main>
+      <div class="cover">
+        <img src="placeholder_hero.png" alt="Cover image" />
+      </div>
+
+      <h1>Sora 2 Prompt Guide: How to Create Viral Videos in 2026</h1>
+      <p class="article-subtitle">10 templates + 7-step workflow</p>
+
+      <div class="meta">
+        <span class="pill">12 min</span>
+        <span class="pill">February 06, 2026</span>
+      </div>
+
+      <div class="content">
+        <p><strong>Direct answer (≤ 60 words):</strong> To make viral-ready Sora 2 videos in 2026, start with a familiar short-form format + one clear twist, then specify camera grammar, scene, subject archetype, and a “first-second hook” action. Generate 6 single-variable variants, pick the best clip using a hook/novelty/coherence scorecard, and package it with captions and a loopable ending.</p>
+<p>Sora 2 can produce convincing clips—but “convincing” isn’t the same as “viral.” Virality is a system: <strong>prompt formula → iteration → selection → packaging → distribution → remix.</strong></p>
+<hr />
+<h6><strong>AIDA Opening</strong></h6>
+<p>Short-form platforms are crowded with AI videos that look impressive—and still fail to get traction. The common mistake is treating prompting like creative writing instead of a production workflow. The difference is usually <strong>prompt structure + iteration + packaging for retention and replay</strong>. This guide gives you a copy-paste 9-block formula, <strong>10 viral formats</strong>, and a 7-step workflow.</p>
+<hr />
+<h6><strong>Why Sora 2 Videos Go Viral in 2026</strong></h6>
+<p>Virality usually comes from one (or more) of these three forces:</p>
+<p>1) <strong>Retention leverage:</strong> hyper-realistic, “is-this-real?” clips can stop the scroll and increase watch time.<br />
+2) <strong>Shareability leverage:</strong> a familiar format (CCTV, bodycam, news segment) + one twist creates instant “send this to a friend” energy.<br />
+3) <strong>Speed leverage:</strong> you can generate and test variations faster than the trend decays.</p>
+<blockquote><p>
+<p><strong>📌 Citable (Retention):</strong> Recommendation systems generally reward content that keeps people watching (watch time, session satisfaction, replays). If your first second is unclear, your prompt is already losing. Sources: OpenAI Sora 2 overview (capabilities context) + platform recommendation explainers.<br />
+Sources: https://openai.com/index/sora-2/ • https://blog.youtube/inside-youtube/how-youtube-recommendations-work/ • https://newsroom.tiktok.com/en-us/how-tiktok-recommends-videos-for-you</p>
+</p></blockquote>
+<p>Sora 2 capabilities and availability can vary by plan, region, and policy updates—avoid prompts that depend on unverified specs.</p>
+<hr />
+<h6><strong>The Viral Prompt Formula (Copy-Paste Framework)</strong></h6>
+<p>Think of a Sora 2 prompt as <strong>9 blocks</strong> so you can iterate.</p>
+<p><strong>The 9 blocks</strong></p>
+<p>1) <strong>Format / Platform &amp; length</strong> (short-form intent, vertical/horizontal, pacing)<br />
+2) <strong>Familiar format</strong> (bodycam, CCTV, dashcam, street interview, news, documentary…)<br />
+3) <strong>Unexpected twist</strong> (one clean contrast, not five)<br />
+4) <strong>Camera grammar</strong> (shot type, lens feel, motion, framing)<br />
+5) <strong>Scene &amp; environment</strong> (place, weather, time, texture)<br />
+6) <strong>Subject archetype</strong> (original character, not a real person; no copyrighted characters)<br />
+7) <strong>Motion / first-second hook</strong> (the first visible action)<br />
+8) <strong>Lighting / style tokens</strong> (iphone realism, VHS, cinematic, fluorescent office…)<br />
+9) <strong>Constraints</strong> (no text/logos, consistent outfit, avoid jitter, single subject focus)</p>
+<p><strong>Block table: what to write (with example phrases)</strong></p>
+<figure><table><tbody>
+<thead>
+<tr>
+<th><p>Block</p></th>
+<th><p>What to include</p></th>
+<th><p>Example phrases</p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><p>1. Format</p></td>
+<td><p>platform intent + pacing</p></td>
+<td><p>“Short-form, fast hook, loopable ending, vertical framing.”</p></td>
+</tr>
+<tr>
+<td><p>2. Familiar format</p></td>
+<td><p>instantly recognizable style</p></td>
+<td><p>“Bodycam POV” / “CCTV security footage” / “Breaking news segment.”</p></td>
+</tr>
+<tr>
+<td><p>3. Twist</p></td>
+<td><p>one contrast</p></td>
+<td><p>“But it’s a penguin corporate manager.” / “But gravity glitches for one second.”</p></td>
+</tr>
+<tr>
+<td><p>4. Camera</p></td>
+<td><p>shot + movement</p></td>
+<td><p>“Handheld micro-shake, 24mm wide, quick push-in on reaction.”</p></td>
+</tr>
+<tr>
+<td><p>5. Scene</p></td>
+<td><p>place + details</p></td>
+<td><p>“Rainy neon street, puddles, reflections, late night.”</p></td>
+</tr>
+<tr>
+<td><p>6. Subject</p></td>
+<td><p>archetype + design cues</p></td>
+<td><p>“Original character: middle-aged mechanic, oil-stained jacket, calm eyes.”</p></td>
+</tr>
+<tr>
+<td><p>7. Motion</p></td>
+<td><p>first action</p></td>
+<td><p>“First second: subject snaps head toward camera; sudden silence.”</p></td>
+</tr>
+<tr>
+<td><p>8. Lighting/style</p></td>
+<td><p>mood tokens</p></td>
+<td><p>“Harsh fluorescent, slight green cast” / “iPhone realism.”</p></td>
+</tr>
+<tr>
+<td><p>9. Constraints</p></td>
+<td><p>what NOT to do</p></td>
+<td><p>“No on-screen text, no brand logos, no subtitles baked in.”</p></td>
+</tr>
+</tbody>
+</tbody></table></figure>
+<p><strong>Prompt checklist (first 10 seconds self-check)</strong></p>
+<p>Before you generate, check:</p>
+<ul>
+<li data-preset-tag="p"><p>[ ] Can a stranger understand the format in <strong>1 second</strong>?</p></li>
+<li data-preset-tag="p"><p>[ ] Is there <strong>exactly one twist</strong>?</p></li>
+<li data-preset-tag="p"><p>[ ] Is the camera described (shot + motion + framing)?</p></li>
+<li data-preset-tag="p"><p>[ ] Is the scene specific (time, place, texture)?</p></li>
+<li data-preset-tag="p"><p>[ ] Is the subject an <strong>original archetype</strong> (no real people, no copyrighted characters)?</p></li>
+<li data-preset-tag="p"><p>[ ] Is there a <strong>visible action</strong> in the first second?</p></li>
+<li data-preset-tag="p"><p>[ ] Did you add constraints (no text/logos; consistent outfit; single focus)?</p></li>
+</ul>
+<blockquote><p>
+<p><strong>📌 Citable (Prompt clarity):</strong> If your prompt is vague, the model must guess “what matters,” which often produces generic visuals. The fastest path to better output is a structured prompt that controls camera, scene, and motion.<br />
+Sources: https://openai.com/index/sora-2/ • https://openai.com/policies/creating-images-and-videos-in-line-with-our-policies/</p>
+</p></blockquote>
+<hr />
+<h6><strong>Two Complete Prompt Examples (Short + Long)</strong></h6>
+<p><strong>Short prompt example</strong></p>
+<p>Short example: use the <strong>Workflow Step 3 base prompt</strong>.</p>
+<p><strong>Long prompt example (more control)</strong></p>
+<pre><code class="language-text">Short-form, vertical, loopable ending. Familiar format: street interview (vox pop), handheld camera with natural micro-shake.
+Twist: the interview subject is an original medieval knight wearing modern casual clothes, calmly answering while a tiny cloud hovers above his shoulder.
+Camera: medium two-shot, then quick push-in to a close-up reaction; shallow depth of field.
+Scene: busy city plaza at golden hour, warm sunlight.
+First second action: the microphone pops into frame and the tiny cloud drips once.
+Constraints: no real brands, no on-screen text, no logos, original character only, consistent outfit.
+</code></pre>
+<hr />
+<h6><strong>Viral Formats Library (2026) — 10 Templates</strong></h6>
+<p>Each template below includes a <strong>copy-paste prompt</strong> and a <strong>filled example</strong>. Swap <code>{variables}</code> and keep the 9 blocks intact.</p>
+<p><strong>1) Bodycam POV</strong></p>
+<p><strong>Use for:</strong> tension/humor/“realness”. <strong>Platforms:</strong> TikTok/Reels/Shorts. <strong>Length:</strong> ~5–15s (loopable).</p>
+<p><strong>Template</strong></p>
+<pre><code class="language-text">[1] Short-form, fast hook, loopable ending, vertical framing.
+[2] Bodycam POV footage.
+[3] Twist: {unexpected_twist}.
+[4] Handheld micro-shake, wide lens feel, quick push-in on reaction.
+[5] Scene: {location}, {time_of_day}, {weather}, gritty detail, realistic textures.
+[6] Subject: original {archetype}, {outfit}, {distinct_feature}.
+[7] First second action: {hook_action}.
+[8] Lighting/style: {style_tokens}.
+[9] Constraints: no on-screen text, no logos, single subject focus, consistent outfit.
+</code></pre>
+<p><strong>Filled example</strong></p>
+<pre><code class="language-text">Short-form, fast hook, loopable ending, vertical framing. Bodycam POV footage.
+Twist: a polite robot crossing guard calmly stops a speeding skateboard.
+Handheld micro-shake, wide lens, quick push-in.
+Scene: suburban school crosswalk at dusk, wet asphalt, reflective puddles.
+Subject: original crossing-guard robot, yellow raincoat, blinking amber chest light.
+First second action: robot raises a palm abruptly as wheels screech.
+Lighting/style: iPhone realism, natural dusk light, crisp motion.
+Constraints: no on-screen text, no logos, single subject focus, consistent outfit.
+</code></pre>
+<hr />
+<p><strong>2) Dashcam incident</strong></p>
+<p><strong>Use for:</strong> “caught in the moment”. <strong>Platforms:</strong> TikTok/Reels. <strong>Length:</strong> ~6–12s.</p>
+<p><strong>Template</strong></p>
+<pre><code class="language-text">Short-form, dashcam footage, loopable. Familiar format: car dashcam.
+Twist: {unexpected_twist}. Camera static, slight windshield reflections.
+Scene: {road_type}, {weather}, {time_of_day}. Subject: original {archetype}.
+First second action: {hook_action}. Lighting/style: {style_tokens}.
+Constraints: no text overlays, no plate numbers readable, no logos.
+</code></pre>
+<p><strong>Filled example</strong></p>
+<pre><code class="language-text">Short-form, dashcam footage, loopable. Familiar format: car dashcam.
+Twist: a delivery drone politely “merges” into traffic at a red light.
+Camera static, light windshield reflections. Scene: downtown avenue, fog, early morning.
+Subject: original drone with bright safety lights. First second action: drone drops into frame from above.
+Lighting/style: realistic, muted colors, soft fog glow. Constraints: no text overlays, no readable plates, no logos.
+</code></pre>
+<hr />
+<p><strong>3) CCTV “caught on tape”</strong></p>
+<p><strong>Use for:</strong> curiosity + replays. <strong>Platforms:</strong> TikTok/Shorts. <strong>Length:</strong> ~7–15s.</p>
+<p><strong>Template</strong></p>
+<pre><code class="language-text">Short-form, CCTV security camera footage, timestamp-like aesthetic but NO readable text.
+Twist: {unexpected_twist}. Fixed high corner angle.
+Scene: {location} with mundane details. Subject: original {archetype}.
+First second action: {hook_action}. Lighting: {style_tokens}.
+Constraints: no legible text, no logos, single scene, consistent continuity.
+</code></pre>
+<p><strong>Filled example</strong></p>
+<pre><code class="language-text">Short-form, CCTV security camera footage, timestamp-like aesthetic but NO readable text.
+Twist: a janitor’s mop bucket silently rolls itself into a perfect parking spot.
+Fixed high corner angle. Scene: quiet office hallway, vending machine glow, glossy floor reflections.
+Subject: original janitor in blue coveralls. First second action: bucket glides into frame on its own.
+Lighting: fluorescent office light, slightly desaturated. Constraints: no legible text, no logos, single scene.
+</code></pre>
+<hr />
+<p><strong>4) Street interview / vox pop</strong></p>
+<p><strong>Use for:</strong> humor + shareability. <strong>Platforms:</strong> TikTok/Reels. <strong>Length:</strong> ~8–20s.</p>
+<p><strong>Template</strong></p>
+<pre><code class="language-text">Short-form street interview, handheld camera, quick cuts feel (but continuous shot).
+Twist: interviewer asks {question_hook}; subject is {unexpected_subject}.
+Scene: {busy_location}. First second action: mic enters frame abruptly.
+Lighting/style: {style_tokens}. Constraints: no real brands, no text overlays.
+</code></pre>
+<p><strong>Filled example</strong></p>
+<pre><code class="language-text">Short-form street interview, handheld camera, continuous shot.
+Twist: interviewer asks “What’s the best life advice you ignored?”; subject is an original medieval knight in modern clothes.
+Scene: busy city plaza, pedestrians blurred behind. First second action: mic pops into frame.
+Lighting/style: iPhone realism, natural daylight, quick focus pull. Constraints: no real brands, no text overlays.
+</code></pre>
+<hr />
+<p><strong>5) Breaking news segment</strong></p>
+<p><strong>Use for:</strong> instant context (use ethically). <strong>Platforms:</strong> Shorts/TikTok. <strong>Length:</strong> ~10–20s.</p>
+<p><strong>Template</strong></p>
+<pre><code class="language-text">Short-form breaking news segment style, studio shot + field clip vibe.
+Twist: {unexpected_twist} (clearly fictional). Camera: medium shot on anchor, quick cut to scene.
+Scene: {fictional_event_location}. Lighting/style: {style_tokens}.
+Constraints: clearly fictional tone, no real-world tragedies, no real logos, no misinformation.
+</code></pre>
+<p><strong>Filled example</strong></p>
+<pre><code class="language-text">Short-form breaking news segment style, clearly fictional.
+Twist: “Local library books start whispering compliments to readers.”
+Camera: medium shot on anchor, quick cut to wide shot of library aisle.
+Scene: cozy library, floating dust in warm light. Lighting/style: broadcast studio clean + warm b-roll.
+Constraints: clearly fictional tone, no real tragedies, no real logos, no misinformation.
+</code></pre>
+<hr />
+<p><strong>6) Documentary cold open</strong></p>
+<p><strong>Use for:</strong> authority + intrigue. <strong>Platforms:</strong> Shorts/Reels. <strong>Length:</strong> ~10–25s.</p>
+<p><strong>Template</strong></p>
+<pre><code class="language-text">Short-form documentary cold open, calm narration vibe (visual only).
+Familiar format: documentary b-roll. Twist: {unexpected_twist}.
+Camera: slow dolly, shallow depth of field. Scene: {location}.
+First second action: {hook_action}. Lighting/style: {style_tokens}.
+Constraints: no text, no logos, grounded realism.
+</code></pre>
+<p><strong>Filled example</strong></p>
+<pre><code class="language-text">Short-form documentary cold open. Documentary b-roll.
+Twist: a tiny city built inside an old vending machine.
+Camera: slow dolly-in, macro detail. Scene: dim workshop, warm tungsten lamp.
+First second action: a miniature train light flicks on.
+Lighting/style: cinematic macro, warm highlights, realistic textures. Constraints: no text, no logos, grounded realism.
+</code></pre>
+<hr />
+<p><strong>7) Product “unboxing” but surreal</strong></p>
+<p><strong>Use for:</strong> brands + creators. <strong>Platforms:</strong> TikTok/Reels. <strong>Length:</strong> ~8–18s.</p>
+<p><strong>Template</strong></p>
+<pre><code class="language-text">Short-form unboxing video, top-down desk shot.
+Twist: the product is {surreal_twist} (original, not a real brand).
+Camera: top-down, quick zooms on details. Scene: clean desk, {props}.
+First second action: hands tear open box instantly. Lighting/style: {style_tokens}.
+Constraints: no real brand names, no logos, no text overlays.
+</code></pre>
+<p><strong>Filled example</strong></p>
+<pre><code class="language-text">Short-form unboxing video, top-down desk shot.
+Twist: the “phone” is a transparent crystal slab that shows tiny weather systems inside.
+Camera: top-down, quick zoom on surface details. Scene: clean desk, soft mat, small plant.
+First second action: hands rip the seal and lift the lid fast.
+Lighting/style: bright softbox, crisp reflections, iPhone realism. Constraints: no real brand names, no logos, no text overlays.
+</code></pre>
+<hr />
+<p><strong>8) “Tutorial gone wrong”</strong></p>
+<p><strong>Use for:</strong> comedy + replays. <strong>Platforms:</strong> TikTok/Shorts. <strong>Length:</strong> ~7–15s.</p>
+<p><strong>Template</strong></p>
+<pre><code class="language-text">Short-form tutorial vibe, creator points to an object.
+Twist: {unexpected_failure} happens immediately.
+Camera: tripod medium shot, quick punch-in on reaction.
+Scene: {location}. First second action: creator says “Watch this” gesture (visual).
+Lighting/style: {style_tokens}. Constraints: no text, no real brands, safe and non-violent.
+</code></pre>
+<p><strong>Filled example</strong></p>
+<pre><code class="language-text">Short-form tutorial vibe. Creator points to a coffee mug.
+Twist: the mug gently floats away as if it’s “done with this.”
+Camera: tripod medium shot, quick punch-in on confused reaction.
+Scene: small kitchen, morning light. First second action: finger point + mug begins to wobble.
+Lighting/style: natural light, iPhone realism. Constraints: no text, no real brands, safe and non-violent.
+</code></pre>
+<hr />
+<p><strong>9) Slice-of-life sitcom scene</strong></p>
+<p><strong>Use for:</strong> character series. <strong>Platforms:</strong> Reels/TikTok. <strong>Length:</strong> ~10–25s.</p>
+<p><strong>Template</strong></p>
+<pre><code class="language-text">Short-form sitcom scene, two-shot composition, laugh-track vibe implied (visual only).
+Twist: {unexpected_twist}. Camera: static two-shot, then quick cut to close-up reaction.
+Scene: {location}. Subjects: original characters with consistent outfits.
+First second action: {hook_action}. Lighting/style: {style_tokens}.
+Constraints: no copyrighted characters, no real celebrities, no text overlays.
+</code></pre>
+<p><strong>Filled example</strong></p>
+<pre><code class="language-text">Short-form sitcom scene, two-shot composition.
+Twist: roommates calmly argue about who used all the “cloud storage,” and a literal cloud leaks onto the couch.
+Camera: static two-shot, quick cut to close-up reaction.
+Scene: cozy living room, warm lamp light. Subjects: two original roommates, consistent outfits.
+First second action: drip hits the couch immediately. Lighting/style: sitcom warm, clean image.
+Constraints: no copyrighted characters, no real celebrities, no text overlays.
+</code></pre>
+<hr />
+<p><strong>10) “Before/After transformation” loop</strong></p>
+<p><strong>Use for:</strong> looping replays. <strong>Platforms:</strong> TikTok/Reels/Shorts. <strong>Length:</strong> ~6–12s.</p>
+<p><strong>Template</strong></p>
+<pre><code class="language-text">Short-form before/after transformation, loopable.
+Familiar format: split-second reveal. Twist: {unexpected_transformation}.
+Camera: static framing, center subject. Scene: {location}.
+First second action: {hook_action}. Lighting/style: {style_tokens}.
+Constraints: keep subject consistent, no text overlays, no logos.
+</code></pre>
+<p><strong>Filled example</strong></p>
+<pre><code class="language-text">Short-form before/after transformation, loopable.
+Familiar format: instant reveal. Twist: a plain cardboard box “upgrades” into a tiny luxury apartment.
+Camera: static framing, center subject. Scene: studio floor, soft shadows.
+First second action: box lid flips open instantly. Lighting/style: clean product lighting, crisp details.
+Constraints: keep subject consistent, no text overlays, no logos.
+</code></pre>
+<hr />
+<h6><strong>Step-by-Step Workflow: From Idea → Viral-Ready Post</strong></h6>
+<p><strong>Step 1) Define one goal</strong></p>
+<ul>
+<li data-preset-tag="p"><p><strong>Pick one:</strong> retention (replays), shares (sendability), or click-through (promise match).</p></li>
+<li data-preset-tag="p"><p><strong>Output:</strong> one sentence (“Reels replays with a transformation loop.”)</p></li>
+</ul>
+<p><strong>Step 2) Choose format + one twist</strong></p>
+<ul>
+<li data-preset-tag="p"><p>Write 5 twists, then keep the cleanest one.</p></li>
+<li data-preset-tag="p"><p>Test: can you say the twist in 8–12 words?</p></li>
+</ul>
+<p><strong>Step 3) Write a base prompt (9 blocks)</strong></p>
+<pre><code class="language-text">Short-form, fast hook, loopable, vertical.
+Familiar format: CCTV security footage (fixed high corner angle).
+Twist: a mop bucket rolls itself into a perfect parking space.
+Camera: static, realistic motion.
+Scene: office hallway at night, glossy floor reflections.
+Subject: original janitor archetype, blue coveralls.
+First second action: bucket glides into frame on its own.
+Lighting/style: fluorescent, slightly desaturated.
+Constraints: no legible text, no logos, single scene, consistent continuity.
+</code></pre>
+<p><strong>Step 4) Generate 6 single-variable variants</strong></p>
+<p>Rotate one change at a time: camera, lighting, hook action, scene, subject cues, style token.</p>
+<p><strong>Step 5) Score and pick a winner</strong></p>
+<p>Rate 1–5:</p>
+<figure><table><tbody>
+<thead>
+<tr>
+<th><p>Metric</p></th>
+<th><p>What “5” means</p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><p>Hook clarity</p></td>
+<td><p>format + action is instantly obvious</p></td>
+</tr>
+<tr>
+<td><p>Novelty</p></td>
+<td><p>twist is new but understandable</p></td>
+</tr>
+<tr>
+<td><p>Coherence</p></td>
+<td><p>motion/physics feel consistent</p></td>
+</tr>
+<tr>
+<td><p>Loop potential</p></td>
+<td><p>ending can replay cleanly</p></td>
+</tr>
+<tr>
+<td><p>Safety/IP</p></td>
+<td><p>no impersonation, no copyrighted characters, no deception</p></td>
+</tr>
+</tbody>
+</tbody></table></figure>
+<p><strong>Step 6) Package for the platform</strong></p>
+<ul>
+<li data-preset-tag="p"><p>Caption names <strong>format + twist</strong>.</p></li>
+<li data-preset-tag="p"><p>Cover frame shows the twist.</p></li>
+<li data-preset-tag="p"><p>Trim to loop; avoid text/logos.</p></li>
+</ul>
+<p><strong>Step 7) Post + A/B test one change</strong></p>
+<p>Change only one thing: caption hook <em>or</em> cover frame.</p>
+<hr />
+<h6><strong>Common Mistakes &amp; Fixes (Troubleshooting)</strong></h6>
+<p>Use this table to fix outputs without rewriting everything.</p>
+<figure><table><tbody>
+<thead>
+<tr>
+<th><p>Symptom</p></th>
+<th><p>Likely cause</p></th>
+<th><p>Fix (which block)</p></th>
+<th><p>Example change</p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><p>Looks generic</p></td>
+<td><p>no camera grammar</p></td>
+<td><p>Block 4</p></td>
+<td><p>“quick push-in + handheld micro-shake”</p></td>
+</tr>
+<tr>
+<td><p>Twist unclear</p></td>
+<td><p>twist arrives too late</p></td>
+<td><p>Block 7</p></td>
+<td><p>“first second action: twist appears immediately”</p></td>
+</tr>
+<tr>
+<td><p>Subject changes</p></td>
+<td><p>no identity constraints</p></td>
+<td><p>Block 9</p></td>
+<td><p>“consistent outfit, single subject focus”</p></td>
+</tr>
+<tr>
+<td><p>Weird text/logos</p></td>
+<td><p>model adds UI/text</p></td>
+<td><p>Block 9</p></td>
+<td><p>“no legible text, no logos, no subtitles baked in”</p></td>
+</tr>
+<tr>
+<td><p>Scene is bland</p></td>
+<td><p>scene lacks texture</p></td>
+<td><p>Block 5</p></td>
+<td><p>“wet asphalt, reflections, fog, dust motes”</p></td>
+</tr>
+<tr>
+<td><p>Motion feels wrong</p></td>
+<td><p>too many actions</p></td>
+<td><p>Block 7</p></td>
+<td><p>“one action only; simplify movement”</p></td>
+</tr>
+<tr>
+<td><p>Lighting inconsistent</p></td>
+<td><p>lighting not defined</p></td>
+<td><p>Block 8</p></td>
+<td><p>“overcast soft light” / “warm tungsten lamp”</p></td>
+</tr>
+<tr>
+<td><p>Camera drifts</p></td>
+<td><p>camera not anchored</p></td>
+<td><p>Block 4</p></td>
+<td><p>“static tripod framing; fixed corner angle”</p></td>
+</tr>
+<tr>
+<td><p>Too slow</p></td>
+<td><p>no pacing instruction</p></td>
+<td><p>Block 1</p></td>
+<td><p>“fast hook, short-form pacing, loopable”</p></td>
+</tr>
+<tr>
+<td><p>Ending feels dead</p></td>
+<td><p>no loop intent</p></td>
+<td><p>Block 1</p></td>
+<td><p>“loopable ending; last frame matches first beat”</p></td>
+</tr>
+</tbody>
+</tbody></table></figure>
+<hr />
+<h6><strong>Safety, Ethics, and IP (Must-Read)</strong></h6>
+<p>Short-form is sensitive to policy. Keep your prompts publishable:</p>
+<ul>
+<li data-preset-tag="p"><p><strong>No real-person impersonation</strong> (including public figures). Use <strong>original archetypes</strong> instead.</p></li>
+<li data-preset-tag="p"><p><strong>No copyrighted characters or brand mascots.</strong> Create original designs with unique cues.</p></li>
+<li data-preset-tag="p"><p><strong>No deceptive “breaking news” about real tragedies.</strong> If you use a news format, make it clearly fictional and harmless.</p></li>
+</ul>
+<blockquote><p>
+<p><strong>📌 Citable (Policy):</strong> OpenAI publishes policy guidance for creating images and videos—avoid deception, avoid impersonation, and follow safety rules.<br />
+Source: https://openai.com/policies/creating-images-and-videos-in-line-with-our-policies/</p>
+</p></blockquote>
+<hr />
+<h6><strong>Pro Tips (2026)</strong></h6>
+<p>1) <strong>Write the first-second action</strong> before you write anything else.<br />
+2) <strong>One twist only.</strong> More twists = weaker clarity.<br />
+3) <strong>Camera grammar beats adjectives.</strong> “Dolly-in” &gt; “beautiful.”<br />
+4) <strong>Add texture words</strong> (wet, dusty, reflective, foggy) for realism.<br />
+5) <strong>Keep one subject.</strong> Crowds are harder to keep coherent.<br />
+6) <strong>Batch variants</strong> and compare; don’t “feel your way” one clip at a time.<br />
+7) <strong>Use constraints aggressively</strong> (no text/logos; consistent outfit).<br />
+8) <strong>Design for loops:</strong> end on a beat that can replay cleanly.</p>
+<hr />
+<h6><strong>FAQ</strong></h6>
+<p><strong>1) How do I write prompts for 5–10 second retention?</strong></p>
+<p>Give the format + twist + first-second action immediately. If the hook action isn’t visible by second 1–2, shorten and clarify the motion block.</p>
+<p><strong>2) How do I create a loopable ending?</strong></p>
+<p>Tell the model “loopable ending” (Block 1) and design a final beat that visually returns to the start (door closes → door opens, object returns to start position, etc.).</p>
+<p><strong>3) How do I avoid unwanted text, watermarks, or logos?</strong></p>
+<p>Add constraints: “no on-screen text, no logos, no legible signage.” If it persists, simplify the scene and avoid screens/signs.</p>
+<p><strong>4) Why doesn’t the output match what I imagined?</strong></p>
+<p>Your prompt likely lacks camera grammar (Block 4) or a clear hook action (Block 7). Rewrite as a shot list, not a story paragraph.</p>
+<p><strong>5) Should I use descriptive or directive prompting?</strong></p>
+<p>For viral short-form, <strong>directive</strong> often wins: camera + motion + pacing reduce randomness. Add descriptive tokens only where they clarify the scene.</p>
+<p><strong>6) How do I build a consistent series style?</strong></p>
+<p>Lock your “style tokens” (Block 8) and constraints (Block 9), then only rotate format + twist + scene.</p>
+<p><strong>7) Do I need post-editing?</strong></p>
+<p>Usually yes: captions, cover frame, and loop trim are the difference between “cool clip” and “viral-ready post.”</p>
+<p><strong>8) What content gets limited or removed on platforms?</strong></p>
+<p>Policy varies, but avoid impersonation, copyrighted characters, deception/misinformation (especially news formats), and unsafe content. When in doubt, keep it clearly fictional, harmless, and original.</p>
+<hr />
+<h6><strong>Sources (Official / Public)</strong></h6>
+<ul>
+<li data-preset-tag="p"><p>OpenAI Sora 2 overview: https://openai.com/index/sora-2/</p></li>
+<li data-preset-tag="p"><p>OpenAI policy (images &amp; video): https://openai.com/policies/creating-images-and-videos-in-line-with-our-policies/</p></li>
+<li data-preset-tag="p"><p>How YouTube recommendations work: https://blog.youtube/inside-youtube/how-youtube-recommendations-work/</p></li>
+<li data-preset-tag="p"><p>How TikTok recommends videos (“For You”): https://newsroom.tiktok.com/en-us/how-tiktok-recommends-videos-for-you</p></li>
+</ul>
+      </div>
+
+      <div class="cta">
+        <a href="https://app.alici.ai/pages/videoGen" target="_blank" rel="noopener noreferrer">Try Video Studio</a>
+      </div>
+    </main>
+  </body>
+</html>
+

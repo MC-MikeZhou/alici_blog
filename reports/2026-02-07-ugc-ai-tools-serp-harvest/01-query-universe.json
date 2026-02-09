@@ -1,0 +1,517 @@
+{
+  "generated_at": "2026-02-07T03:31:42Z",
+  "scope": {
+    "location_code": 2840,
+    "language_code": "en"
+  },
+  "limits": {
+    "max_queries": 40,
+    "serp_depth": 100,
+    "keep_rank_max": 20,
+    "keep_rank_soft_max": 50
+  },
+  "modules": {
+    "tools_listicle": [
+      "best ai ugc tools",
+      "best ai ugc tools 2026",
+      "best ugc ai video generators",
+      "best ugc ai video generators 2026",
+      "best ugc ai video generator",
+      "best ugc ai video generator 2026",
+      "best ugc video generator",
+      "best ugc video generator 2026",
+      "ai ugc tools",
+      "ai ugc tools 2026",
+      "ai ugc video generator",
+      "ugc ai video generators"
+    ],
+    "generator_intent": [
+      "ugc ai video generator",
+      "ugc ai video generators",
+      "ai ugc video generator",
+      "ai ugc video generators",
+      "ai ugc ad generator",
+      "ugc video ads ai",
+      "ai ugc video ads",
+      "ai video ad generator ugc"
+    ],
+    "comparison_intent": [
+      "invideo ai ugc tools",
+      "invideo ai ugc tools alternatives",
+      "zeely ugc ai video generators",
+      "opusclip ugc ai video generator",
+      "higgsfield ugc ads ai",
+      "heygen ugc video ads ai",
+      "best ai video ad generator",
+      "ai video ad generator tools"
+    ],
+    "site_inventory": [
+      "site:invideo.io ugc",
+      "site:invideo.io/blog ugc",
+      "site:invideo.io \"ugc\" \"ai\"",
+      "site:invideo.io/blog \"ugc\" \"ai\"",
+      "site:invideo.io \"ugc\" \"video\"",
+      "site:invideo.io/blog \"ugc\" \"video\"",
+      "site:invideo.io \"ai\" \"ugc\" \"tools\"",
+      "site:invideo.io/blog \"ai\" \"ugc\" \"tools\"",
+      "site:invideo.io \"ugc\" \"ai\" \"video generator\"",
+      "site:invideo.io/blog \"ugc\" \"ai\" \"video generator\"",
+      "site:invideo.io \"best\" \"ugc\" \"ai\"",
+      "site:invideo.io/blog \"best\" \"ugc\" \"ai\"",
+      "site:higgsfield.ai ugc",
+      "site:higgsfield.ai/blog ugc",
+      "site:higgsfield.ai \"ugc\" \"ai\"",
+      "site:higgsfield.ai/blog \"ugc\" \"ai\"",
+      "site:higgsfield.ai \"ugc\" \"video\"",
+      "site:higgsfield.ai/blog \"ugc\" \"video\"",
+      "site:higgsfield.ai \"ai\" \"ugc\" \"tools\"",
+      "site:higgsfield.ai/blog \"ai\" \"ugc\" \"tools\"",
+      "site:higgsfield.ai \"ugc\" \"ai\" \"video generator\"",
+      "site:higgsfield.ai/blog \"ugc\" \"ai\" \"video generator\"",
+      "site:higgsfield.ai \"best\" \"ugc\" \"ai\"",
+      "site:higgsfield.ai/blog \"best\" \"ugc\" \"ai\"",
+      "site:opus.pro ugc",
+      "site:opus.pro/blog ugc",
+      "site:opus.pro \"ugc\" \"ai\"",
+      "site:opus.pro/blog \"ugc\" \"ai\"",
+      "site:opus.pro \"ugc\" \"video\"",
+      "site:opus.pro/blog \"ugc\" \"video\"",
+      "site:opus.pro \"ai\" \"ugc\" \"tools\"",
+      "site:opus.pro/blog \"ai\" \"ugc\" \"tools\"",
+      "site:opus.pro \"ugc\" \"ai\" \"video generator\"",
+      "site:opus.pro/blog \"ugc\" \"ai\" \"video generator\"",
+      "site:opus.pro \"best\" \"ugc\" \"ai\"",
+      "site:opus.pro/blog \"best\" \"ugc\" \"ai\"",
+      "site:zeely.ai ugc",
+      "site:zeely.ai/blog ugc",
+      "site:zeely.ai \"ugc\" \"ai\"",
+      "site:zeely.ai/blog \"ugc\" \"ai\"",
+      "site:zeely.ai \"ugc\" \"video\"",
+      "site:zeely.ai/blog \"ugc\" \"video\"",
+      "site:zeely.ai \"ai\" \"ugc\" \"tools\"",
+      "site:zeely.ai/blog \"ai\" \"ugc\" \"tools\"",
+      "site:zeely.ai \"ugc\" \"ai\" \"video generator\"",
+      "site:zeely.ai/blog \"ugc\" \"ai\" \"video generator\"",
+      "site:zeely.ai \"best\" \"ugc\" \"ai\"",
+      "site:zeely.ai/blog \"best\" \"ugc\" \"ai\"",
+      "site:heygen.com ugc",
+      "site:heygen.com/blog ugc",
+      "site:heygen.com \"ugc\" \"ai\"",
+      "site:heygen.com/blog \"ugc\" \"ai\"",
+      "site:heygen.com \"ugc\" \"video\"",
+      "site:heygen.com/blog \"ugc\" \"video\"",
+      "site:heygen.com \"ai\" \"ugc\" \"tools\"",
+      "site:heygen.com/blog \"ai\" \"ugc\" \"tools\"",
+      "site:heygen.com \"ugc\" \"ai\" \"video generator\"",
+      "site:heygen.com/blog \"ugc\" \"ai\" \"video generator\"",
+      "site:heygen.com \"best\" \"ugc\" \"ai\"",
+      "site:heygen.com/blog \"best\" \"ugc\" \"ai\""
+    ]
+  },
+  "queries": [
+    {
+      "query": "best ai ugc tools",
+      "module": "tools_listicle",
+      "metrics": {
+        "search_volume": 0,
+        "cpc": 0.0,
+        "competition": "N/A"
+      },
+      "passes_volume_gate": false
+    },
+    {
+      "query": "best ai ugc tools 2026",
+      "module": "tools_listicle",
+      "metrics": {
+        "search_volume": 0,
+        "cpc": 0.0,
+        "competition": "N/A"
+      },
+      "passes_volume_gate": false
+    },
+    {
+      "query": "best ugc ai video generators",
+      "module": "tools_listicle",
+      "metrics": {
+        "search_volume": 0,
+        "cpc": 0.0,
+        "competition": "N/A"
+      },
+      "passes_volume_gate": false
+    },
+    {
+      "query": "best ugc ai video generators 2026",
+      "module": "tools_listicle",
+      "metrics": {
+        "search_volume": 0,
+        "cpc": 0.0,
+        "competition": "N/A"
+      },
+      "passes_volume_gate": false
+    },
+    {
+      "query": "best ugc ai video generator",
+      "module": "tools_listicle",
+      "metrics": {
+        "search_volume": 10,
+        "cpc": 17.98,
+        "competition": "HIGH"
+      },
+      "passes_volume_gate": true
+    },
+    {
+      "query": "best ugc ai video generator 2026",
+      "module": "tools_listicle",
+      "metrics": {
+        "search_volume": 0,
+        "cpc": 0.0,
+        "competition": "N/A"
+      },
+      "passes_volume_gate": false
+    },
+    {
+      "query": "best ugc video generator",
+      "module": "tools_listicle",
+      "metrics": {
+        "search_volume": 10,
+        "cpc": 38.96,
+        "competition": "HIGH"
+      },
+      "passes_volume_gate": true
+    },
+    {
+      "query": "best ugc video generator 2026",
+      "module": "tools_listicle",
+      "metrics": {
+        "search_volume": 0,
+        "cpc": 0.0,
+        "competition": "N/A"
+      },
+      "passes_volume_gate": false
+    },
+    {
+      "query": "ai ugc tools",
+      "module": "tools_listicle",
+      "metrics": {
+        "search_volume": 90,
+        "cpc": 14.1,
+        "competition": "LOW"
+      },
+      "passes_volume_gate": true
+    },
+    {
+      "query": "ai ugc tools 2026",
+      "module": "tools_listicle",
+      "metrics": {
+        "search_volume": 0,
+        "cpc": 0.0,
+        "competition": "N/A"
+      },
+      "passes_volume_gate": false
+    },
+    {
+      "query": "ai ugc video generator",
+      "module": "tools_listicle",
+      "metrics": {
+        "search_volume": 260,
+        "cpc": 12.88,
+        "competition": "HIGH"
+      },
+      "passes_volume_gate": true
+    },
+    {
+      "query": "ugc ai video generators",
+      "module": "tools_listicle",
+      "metrics": {
+        "search_volume": 0,
+        "cpc": 0.0,
+        "competition": "N/A"
+      },
+      "passes_volume_gate": false
+    },
+    {
+      "query": "ugc ai video generator",
+      "module": "generator_intent",
+      "metrics": {
+        "search_volume": 70,
+        "cpc": 9.42,
+        "competition": "MEDIUM"
+      },
+      "passes_volume_gate": true
+    },
+    {
+      "query": "ai ugc video generators",
+      "module": "generator_intent",
+      "metrics": {
+        "search_volume": 0,
+        "cpc": 0.0,
+        "competition": "N/A"
+      },
+      "passes_volume_gate": false
+    },
+    {
+      "query": "ai ugc ad generator",
+      "module": "generator_intent",
+      "metrics": {
+        "search_volume": 20,
+        "cpc": 11.09,
+        "competition": "HIGH"
+      },
+      "passes_volume_gate": true
+    },
+    {
+      "query": "ugc video ads ai",
+      "module": "generator_intent",
+      "metrics": {
+        "search_volume": 70,
+        "cpc": 0.0,
+        "competition": "LOW"
+      },
+      "passes_volume_gate": true
+    },
+    {
+      "query": "ai ugc video ads",
+      "module": "generator_intent",
+      "metrics": {
+        "search_volume": 20,
+        "cpc": 0.0,
+        "competition": "LOW"
+      },
+      "passes_volume_gate": true
+    },
+    {
+      "query": "ai video ad generator ugc",
+      "module": "generator_intent",
+      "metrics": {
+        "search_volume": 0,
+        "cpc": 0.0,
+        "competition": "N/A"
+      },
+      "passes_volume_gate": false
+    },
+    {
+      "query": "invideo ai ugc tools",
+      "module": "comparison_intent",
+      "metrics": {
+        "search_volume": 0,
+        "cpc": 0.0,
+        "competition": "N/A"
+      },
+      "passes_volume_gate": false
+    },
+    {
+      "query": "invideo ai ugc tools alternatives",
+      "module": "comparison_intent",
+      "metrics": {
+        "search_volume": 0,
+        "cpc": 0.0,
+        "competition": "N/A"
+      },
+      "passes_volume_gate": false
+    },
+    {
+      "query": "zeely ugc ai video generators",
+      "module": "comparison_intent",
+      "metrics": {
+        "search_volume": 0,
+        "cpc": 0.0,
+        "competition": "N/A"
+      },
+      "passes_volume_gate": false
+    },
+    {
+      "query": "opusclip ugc ai video generator",
+      "module": "comparison_intent",
+      "metrics": {
+        "search_volume": 0,
+        "cpc": 0.0,
+        "competition": "N/A"
+      },
+      "passes_volume_gate": false
+    },
+    {
+      "query": "higgsfield ugc ads ai",
+      "module": "comparison_intent",
+      "metrics": {
+        "search_volume": 0,
+        "cpc": 0.0,
+        "competition": "N/A"
+      },
+      "passes_volume_gate": false
+    },
+    {
+      "query": "heygen ugc video ads ai",
+      "module": "comparison_intent",
+      "metrics": {
+        "search_volume": 0,
+        "cpc": 0.0,
+        "competition": "N/A"
+      },
+      "passes_volume_gate": false
+    },
+    {
+      "query": "best ai video ad generator",
+      "module": "comparison_intent",
+      "metrics": {
+        "search_volume": 50,
+        "cpc": 17.84,
+        "competition": "HIGH"
+      },
+      "passes_volume_gate": true
+    },
+    {
+      "query": "ai video ad generator tools",
+      "module": "comparison_intent",
+      "metrics": {
+        "search_volume": 0,
+        "cpc": 0.0,
+        "competition": "N/A"
+      },
+      "passes_volume_gate": false
+    },
+    {
+      "query": "site:invideo.io ugc",
+      "module": "site_inventory",
+      "metrics": {
+        "search_volume": 60500,
+        "cpc": 3.37,
+        "competition": "LOW"
+      },
+      "passes_volume_gate": true
+    },
+    {
+      "query": "site:invideo.io/blog ugc",
+      "module": "site_inventory",
+      "metrics": {
+        "search_volume": 60500,
+        "cpc": 3.37,
+        "competition": "LOW"
+      },
+      "passes_volume_gate": true
+    },
+    {
+      "query": "site:invideo.io \"ugc\" \"ai\"",
+      "module": "site_inventory",
+      "metrics": {
+        "search_volume": 590,
+        "cpc": 11.8,
+        "competition": "LOW"
+      },
+      "passes_volume_gate": true
+    },
+    {
+      "query": "site:invideo.io/blog \"ugc\" \"ai\"",
+      "module": "site_inventory",
+      "metrics": {
+        "search_volume": 590,
+        "cpc": 11.8,
+        "competition": "LOW"
+      },
+      "passes_volume_gate": true
+    },
+    {
+      "query": "site:invideo.io \"ugc\" \"video\"",
+      "module": "site_inventory",
+      "metrics": {
+        "search_volume": 1900,
+        "cpc": 12.78,
+        "competition": "LOW"
+      },
+      "passes_volume_gate": true
+    },
+    {
+      "query": "site:invideo.io/blog \"ugc\" \"video\"",
+      "module": "site_inventory",
+      "metrics": {
+        "search_volume": 1900,
+        "cpc": 12.78,
+        "competition": "LOW"
+      },
+      "passes_volume_gate": true
+    },
+    {
+      "query": "site:invideo.io \"ai\" \"ugc\" \"tools\"",
+      "module": "site_inventory",
+      "metrics": {
+        "search_volume": 90,
+        "cpc": 14.1,
+        "competition": "LOW"
+      },
+      "passes_volume_gate": true
+    },
+    {
+      "query": "site:invideo.io/blog \"ai\" \"ugc\" \"tools\"",
+      "module": "site_inventory",
+      "metrics": {
+        "search_volume": 90,
+        "cpc": 14.1,
+        "competition": "LOW"
+      },
+      "passes_volume_gate": true
+    },
+    {
+      "query": "site:invideo.io \"ugc\" \"ai\" \"video generator\"",
+      "module": "site_inventory",
+      "metrics": {
+        "search_volume": 70,
+        "cpc": 9.42,
+        "competition": "MEDIUM"
+      },
+      "passes_volume_gate": true
+    },
+    {
+      "query": "site:invideo.io/blog \"ugc\" \"ai\" \"video generator\"",
+      "module": "site_inventory",
+      "metrics": {
+        "search_volume": 70,
+        "cpc": 9.42,
+        "competition": "MEDIUM"
+      },
+      "passes_volume_gate": true
+    },
+    {
+      "query": "site:invideo.io \"best\" \"ugc\" \"ai\"",
+      "module": "site_inventory",
+      "metrics": {
+        "search_volume": 10,
+        "cpc": 13.12,
+        "competition": "HIGH"
+      },
+      "passes_volume_gate": true
+    },
+    {
+      "query": "site:invideo.io/blog \"best\" \"ugc\" \"ai\"",
+      "module": "site_inventory",
+      "metrics": {
+        "search_volume": 10,
+        "cpc": 13.12,
+        "competition": "HIGH"
+      },
+      "passes_volume_gate": true
+    },
+    {
+      "query": "site:higgsfield.ai ugc",
+      "module": "site_inventory",
+      "metrics": {
+        "search_volume": 60500,
+        "cpc": 3.37,
+        "competition": "LOW"
+      },
+      "passes_volume_gate": true
+    },
+    {
+      "query": "site:higgsfield.ai/blog ugc",
+      "module": "site_inventory",
+      "metrics": {
+        "search_volume": 60500,
+        "cpc": 3.37,
+        "competition": "LOW"
+      },
+      "passes_volume_gate": true
+    }
+  ],
+  "api_usage": {
+    "keywords_data_calls": 1,
+    "serp_calls": 23
+  }
+}

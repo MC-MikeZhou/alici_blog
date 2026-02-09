@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "profile": "standard",
+  "errors": [],
+  "warnings": [],
+  "files": {
+    "article": "skills/writers/blog-list-writer/testdata/standard/01-article-draft.md"
+  }
+}

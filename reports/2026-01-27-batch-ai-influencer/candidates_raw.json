@@ -1,0 +1,143 @@
+{
+  "search_date": "2026-01-28",
+  "total_candidates": 12,
+  "slots": {
+    "img-2": {
+      "description": "Comparison of three AI influencers: Lil Miquela, Aitana Lopez, and Lu do Magalu",
+      "queries_run": [
+        "Lil Miquela official Instagram photo AI influencer high resolution",
+        "Aitana Lopez AI influencer official photo 2025",
+        "Lu do Magalu virtual influencer Magazine Luiza photo"
+      ],
+      "candidates": [
+        {
+          "filename": "img-2_miquela_01.jpg",
+          "source_url": "https://cdn.prod.website-files.com/5d7e8885cad5174a2fcb98d7/64933f9c0c7c9d517168b331_5eddd9f5af2fbd3c05bffc66_virtual-influencer-lil-miquela.jpeg",
+          "source_site": "virtualhumans.org",
+          "source_type": "editorial",
+          "page_context": "VirtualHumans.org profile page for Lil Miquela",
+          "download_status": "success",
+          "file_size_bytes": 63742
+        },
+        {
+          "filename": "img-2_miquela_02.jpg",
+          "source_url": "https://supercarblondie.com/wp-content/uploads/lil-miquela-AI-influencer.jpg",
+          "source_site": "supercarblondie.com",
+          "source_type": "editorial",
+          "page_context": "Article: AI influencer Lil Miquela charges $10,000 per Instagram post",
+          "download_status": "success",
+          "file_size_bytes": 154132
+        },
+        {
+          "filename": "img-2_miquela_03.jpg",
+          "source_url": "https://supercarblondie.com/wp-content/uploads/AI-influencer-lil-miquela-02-827x1024.jpg",
+          "source_site": "supercarblondie.com",
+          "source_type": "editorial",
+          "page_context": "Portrait of Lil Miquela from editorial article",
+          "download_status": "success",
+          "file_size_bytes": 88567
+        },
+        {
+          "filename": "img-2_miquela_04.jpg",
+          "source_url": "https://supercarblondie.com/wp-content/uploads/AI-influencer-lil-miquela-06.jpg",
+          "source_site": "supercarblondie.com",
+          "source_type": "editorial",
+          "page_context": "Lil Miquela Instagram post image",
+          "download_status": "success",
+          "file_size_bytes": 52625
+        },
+        {
+          "filename": "img-2_aitana_01.jpg",
+          "source_url": "https://static.euronews.com/articles/stories/08/05/91/16/1440x810_cmsv2_df1bbc67-2d7e-5b78-bcdc-4321fd474aad-8059116.jpg",
+          "source_site": "euronews.com",
+          "source_type": "editorial",
+          "page_context": "Euronews article: Meet the first Spanish AI model earning up to €10,000 per month",
+          "download_status": "success",
+          "file_size_bytes": 141742
+        },
+        {
+          "filename": "img-2_lumagalu_01.jpg",
+          "source_url": "https://cdn.prod.website-files.com/5d7e8885cad5174a2fcb98d7/64933f9a7552ee4b034d4f98_5eddd9cac99df98be7b00c8e_virtual-influencer-lu-do-magalu.jpeg",
+          "source_site": "virtualhumans.org",
+          "source_type": "editorial",
+          "page_context": "VirtualHumans.org profile page for Lu do Magalu",
+          "download_status": "success",
+          "file_size_bytes": 47652
+        }
+      ]
+    },
+    "img-1": {
+      "description": "Hero Image: AI influencer batch production dashboard",
+      "queries_run": [
+        "AI influencer creation workflow dashboard batch production 2026",
+        "HeyGen AI video platform dashboard screenshot review 2025"
+      ],
+      "candidates": [
+        {
+          "filename": "img-1_heygen_review_01.webp",
+          "source_url": "https://www.vidmetoo.com/wp-content/uploads/2025/01/heygen-review1200-x-628-px-1.webp",
+          "source_site": "vidmetoo.com",
+          "source_type": "editorial",
+          "page_context": "HeyGen review article header image",
+          "download_status": "success",
+          "file_size_bytes": 39976
+        }
+      ],
+      "notes": "Limited real dashboard screenshots available. This slot is recommended for FAL.ai AI-generated illustration as fallback."
+    },
+    "img-3": {
+      "description": "Side-by-side tool comparison: Kling AI vs HeyGen",
+      "queries_run": [
+        "Kling AI video generation interface screenshot 2025",
+        "HeyGen talking head platform interface screenshot"
+      ],
+      "candidates": [
+        {
+          "filename": "img-3_kling_01.jpg",
+          "source_url": "https://images.anyrecover.com/litmediaen/assets/images/article-video/kling-ai-ov-1.jpg",
+          "source_site": "litmedia.ai",
+          "source_type": "editorial",
+          "page_context": "Kling AI video generator review — website banner screenshot",
+          "download_status": "success",
+          "file_size_bytes": 99212
+        },
+        {
+          "filename": "img-3_kling_02.jpg",
+          "source_url": "https://images.anyrecover.com/litmediaen/assets/images/article-video/kling-image-to-video.jpg",
+          "source_site": "litmedia.ai",
+          "source_type": "editorial",
+          "page_context": "Kling AI image-to-video mode selection interface",
+          "download_status": "success",
+          "file_size_bytes": 44050
+        },
+        {
+          "filename": "img-3_kling_03.jpg",
+          "source_url": "https://images.anyrecover.com/litmediaen/assets/video/article-ai-video/kling-text-to-video.jpg",
+          "source_site": "litmedia.ai",
+          "source_type": "editorial",
+          "page_context": "Kling AI text-to-video prompt interface",
+          "download_status": "success",
+          "file_size_bytes": 45462
+        },
+        {
+          "filename": "img-3_heygen_01.png",
+          "source_url": "https://www.fahimai.com/wp-content/uploads/2024/08/Featured-Image-of-Heygen.png",
+          "source_site": "fahimai.com",
+          "source_type": "editorial",
+          "page_context": "HeyGen review featured image — platform overview",
+          "download_status": "success",
+          "file_size_bytes": 141688
+        },
+        {
+          "filename": "img-3_heygen_02.png",
+          "source_url": "https://fahimai.com/wp-content/uploads/2024/07/Best-section-img-4.png",
+          "source_site": "fahimai.com",
+          "source_type": "editorial",
+          "page_context": "HeyGen review — best features section image",
+          "download_status": "success",
+          "file_size_bytes": 23520
+        }
+      ]
+    }
+  }
+}

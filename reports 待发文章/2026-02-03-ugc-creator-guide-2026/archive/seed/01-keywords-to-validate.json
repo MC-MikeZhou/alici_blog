@@ -1,0 +1,649 @@
+{
+  "seed": "ugc creator",
+  "language_code": "en",
+  "location_code": 2840,
+  "generated_at": "2026-02-03T12:26:15Z",
+  "keywords_to_validate": [
+    {
+      "keyword": "how to become a ugc creator",
+      "pattern_id": "P1",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "how to start as a ugc creator",
+      "pattern_id": "P1",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc creator beginner guide",
+      "pattern_id": "P1",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "how to become a ugc creator in 2026",
+      "pattern_id": "P1",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "how to start ugc as a beginner 2026",
+      "pattern_id": "P1",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "what is a ugc creator",
+      "pattern_id": "P1",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "how to get ugc creator jobs",
+      "pattern_id": "P1",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc creator how to find brands",
+      "pattern_id": "P1",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc portfolio examples",
+      "pattern_id": "P2",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc portfolio template",
+      "pattern_id": "P2",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc creator portfolio",
+      "pattern_id": "P2",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc video portfolio",
+      "pattern_id": "P2",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc portfolio notion template",
+      "pattern_id": "P2",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc portfolio pdf template",
+      "pattern_id": "P2",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc creator portfolio examples",
+      "pattern_id": "P2",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc creator portfolio template",
+      "pattern_id": "P2",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc portfolio website",
+      "pattern_id": "P2",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc creator media kit template",
+      "pattern_id": "P2",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc creator rates",
+      "pattern_id": "P3",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc creator pricing",
+      "pattern_id": "P3",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "how much do ugc creators charge",
+      "pattern_id": "P3",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc usage rights",
+      "pattern_id": "P3",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc usage rights pricing",
+      "pattern_id": "P3",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc creator rate card",
+      "pattern_id": "P3",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc creator contract template",
+      "pattern_id": "P3",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc licensing agreement",
+      "pattern_id": "P3",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc whitelisting meaning",
+      "pattern_id": "P3",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc content licensing",
+      "pattern_id": "P3",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc creator pitch",
+      "pattern_id": "P4",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc creator outreach",
+      "pattern_id": "P4",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc creator email template",
+      "pattern_id": "P4",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc creator dm template",
+      "pattern_id": "P4",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "how to pitch brands as a ugc creator",
+      "pattern_id": "P4",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc creator cold email",
+      "pattern_id": "P4",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc creator outreach template",
+      "pattern_id": "P4",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc creator proposal template",
+      "pattern_id": "P4",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc creator media kit",
+      "pattern_id": "P4",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc brief template",
+      "pattern_id": "P5",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc script template",
+      "pattern_id": "P5",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc shot list template",
+      "pattern_id": "P5",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc deliverables checklist",
+      "pattern_id": "P5",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc content checklist",
+      "pattern_id": "P5",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc creator deliverables",
+      "pattern_id": "P5",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc creator shot list",
+      "pattern_id": "P5",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc creator hook template",
+      "pattern_id": "P5",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc hook framework",
+      "pattern_id": "P5",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc ad script template",
+      "pattern_id": "P5",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc video script template",
+      "pattern_id": "P5",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "how to edit ugc videos",
+      "pattern_id": "P6",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "script_to_video"
+      }
+    },
+    {
+      "keyword": "ugc video editing workflow",
+      "pattern_id": "P6",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "script_to_video"
+      }
+    },
+    {
+      "keyword": "ugc ad editing tips",
+      "pattern_id": "P6",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "script_to_video"
+      }
+    },
+    {
+      "keyword": "short form ugc video editing",
+      "pattern_id": "P6",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "script_to_video"
+      }
+    },
+    {
+      "keyword": "capcut ugc editing",
+      "pattern_id": "P6",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "script_to_video"
+      }
+    },
+    {
+      "keyword": "capcut ugc template",
+      "pattern_id": "P6",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc subtitles template",
+      "pattern_id": "P6",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ftc disclosure ugc",
+      "pattern_id": "P7",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc sponsorship disclosure",
+      "pattern_id": "P7",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "how to disclose sponsored ugc",
+      "pattern_id": "P7",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc usage rights agreement",
+      "pattern_id": "P7",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "paid partnership disclosure instagram ugc",
+      "pattern_id": "P7",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "tiktok branded content ugc disclosure",
+      "pattern_id": "P7",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc creator tiktok",
+      "pattern_id": "P1",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc portfolio tiktok",
+      "pattern_id": "P2",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc brief for tiktok",
+      "pattern_id": "P5",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc video hooks for tiktok",
+      "pattern_id": "P5",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "how to become a ugc creator on tiktok",
+      "pattern_id": "P1",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc creator rates tiktok",
+      "pattern_id": "P3",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc creator instagram reels",
+      "pattern_id": "P1",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc portfolio instagram reels",
+      "pattern_id": "P2",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc brief for instagram reels",
+      "pattern_id": "P5",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc video hooks for instagram reels",
+      "pattern_id": "P5",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "how to become a ugc creator on instagram reels",
+      "pattern_id": "P1",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc creator rates instagram reels",
+      "pattern_id": "P3",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc creator youtube shorts",
+      "pattern_id": "P1",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc portfolio youtube shorts",
+      "pattern_id": "P2",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc brief for youtube shorts",
+      "pattern_id": "P5",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc video hooks for youtube shorts",
+      "pattern_id": "P5",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "how to become a ugc creator on youtube shorts",
+      "pattern_id": "P1",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ugc creator rates youtube shorts",
+      "pattern_id": "P3",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    },
+    {
+      "keyword": "ai tools for ugc creators",
+      "pattern_id": "P5",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt"
+      }
+    }
+  ],
+  "total_keywords": 80
+}

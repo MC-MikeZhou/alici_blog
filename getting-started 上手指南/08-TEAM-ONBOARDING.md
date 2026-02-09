@@ -16,7 +16,7 @@ Level 1: 核心配置文档（所有 Skills 共享依赖）
          ├── /skills/_docs/BRAND_VISUAL_GUIDE.md      ← 绿色视觉规范
          └── /skills/_docs/BLOG_WRITING_PRINCIPLES_v2.md  ← 标题公式、评测方法论
          ↓
-Level 2: /blueprint/                             ← 架构与哲学
+Level 2: /docs 项目文档/                             ← 架构与哲学
          ├── 00-CONTENT-PHILOSOPHY.md            ← 内容策略哲学（Higgsfield 洞察）
          └── 其他 blueprint 文档
          ↓
@@ -67,9 +67,9 @@ Level 3: 各 Skill SKILL.md                       ← 执行规范（引用上�
 /full-workflow https://example.com/blog/ai-video-tools
 ```
 
-观察输出到 `/reports/` 的文件结构：
+观察输出到 `/reports 待发文章/` 的文件结构：
 ```
-/reports/2026-01-15-ai-video-tools/
+/reports 待发文章/2026-01-15-ai-video-tools/
 ├── 00-implementation.md      ← 进度追踪
 ├── 00-topic-scout-report.md  ← 选题分析
 ├── 01-article-draft.md       ← 生成的文章
@@ -134,7 +134,7 @@ Level 3: 各 Skill SKILL.md                       ← 执行规范（引用上�
 
 ```bash
 # 接手后的第一步
-读取 /reports/2026-01-15-ai-video/00-implementation.md
+读取 "/reports 待发文章/2026-01-15-ai-video/00-implementation.md"
 然后运行对应的下一个命令
 ```
 
@@ -167,7 +167,7 @@ Level 3: 各 Skill SKILL.md                       ← 执行规范（引用上�
 ### 场景 3: 会话中断恢复
 
 ```
-1. 进入 /reports/[日期]-[主题]/ 目录
+1. 进入 "/reports 待发文章/[日期]-[主题]/" 目录
 2. 读取 00-implementation.md
 3. 找到当前阶段（Phase X）
 4. 运行对应的斜杠命令继续
@@ -175,7 +175,7 @@ Level 3: 各 Skill SKILL.md                       ← 执行规范（引用上�
 
 ### 场景 4: AEO 分数提不上去
 
-参考 `/blueprint/09-TROUBLESHOOTING.md` 中的检查清单。
+参考 `/docs 项目文档/09-TROUBLESHOOTING.md` 中的检查清单。
 
 ---
 
@@ -197,9 +197,9 @@ Level 3: 各 Skill SKILL.md                       ← 执行规范（引用上�
 | 需求 | 参考文档 |
 |------|----------|
 | 系统总览 | `/CLAUDE.md` |
-| 所有 Skills 详情 | `/blueprint/02-SKILLS.md` |
-| 最佳实践 | `/blueprint/07-BEST-PRACTICES.md` |
-| 故障排除 | `/blueprint/09-TROUBLESHOOTING.md` |
+| 所有 Skills 详情 | `/docs 项目文档/02-SKILLS.md` |
+| 最佳实践 | `/docs 项目文档/07-BEST-PRACTICES.md` |
+| 故障排除 | `/docs 项目文档/09-TROUBLESHOOTING.md` |
 | AEO 评分标准 | `/skills/core/aeo-analyzer/EVALUATION_FRAMEWORK.md` |
 | 内容规范 | `blog_new_sam 11.20.2025/doc/*.md` |
 

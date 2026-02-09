@@ -1086,7 +1086,7 @@ asset_extraction:
 
 ---
 
-## Seed Mode 集成 (v2.1 NEW)
+## Seed Mode 集成 (v2.3)
 
 ### 全自动模式调用 Seed Mode
 
@@ -1096,13 +1096,15 @@ asset_extraction:
 检测逻辑:
 ├── 有 URL? → 标准全自动流程 (洗稿模式)
 └── 只有种子词/主题? → 询问是否使用 Seed Mode
-    ├── 是 → 调用 growth-topic-scout v2.2 Mode D
-    └── 否 → 使用 growth-topic-scout Mode B (关键词矩阵)
+    ├── 否 → 使用 growth-topic-scout Mode B (关键词矩阵)
+    └── 是 → 询问是否需要更发散的选题
+        ├── 否 (Recommended) → growth-topic-scout v2.3 Mode D1 (2 directions)
+        └── 是 → growth-topic-scout v2.3 Mode D2 (3 directions + diversity_report)
 ```
 
 ### Seed Mode 默认配置
 
-全自动模式调用 Seed Mode 时使用的默认 Mission Config:
+全自动模式调用 Seed Mode D1 时使用的默认 Mission Config:
 
 ```json
 {
@@ -1111,7 +1113,9 @@ asset_extraction:
     "competitors": [
       "https://invideo.io/blog",
       "https://higgsfield.ai/blog",
-      "https://freepik.com/blog"
+      "https://freepik.com/blog",
+      "https://blog.fal.ai",
+      "https://wavespeed.ai/blog"
     ]
   },
   "scope": {
@@ -1129,9 +1133,27 @@ asset_extraction:
 }
 ```
 
+全自动模式调用 Seed Mode D2 时，在 Mission Config 中额外启用:
+
+```json
+{
+  "diversity": {
+    "enabled": true,
+    "engine_version": "2.3-diversity",
+    "cluster_threshold": 0.6,
+    "target_avg_similarity": 0.5,
+    "final_pairwise_max": 0.6,
+    "min_final_clusters": 3,
+    "min_intent_types_final": 2,
+    "require_non_competitor_source": true,
+    "strategies": ["seed_xpollination", "persona_rotation", "serp_gap"]
+  }
+}
+```
+
 ### Seed Mode 问卷 (简化版)
 
-全自动模式下，Seed Mode 只问 3 个问题:
+全自动模式下，Seed Mode 只问 3-4 个问题（D2 会多 1 个“是否需要更发散”的开关）:
 
 ```json
 {
@@ -1141,6 +1163,15 @@ asset_extraction:
       "header": "Seed",
       "type": "text_input",
       "placeholder": "例: ai video tools 2026"
+    },
+    {
+      "question": "是否需要更发散的选题？",
+      "header": "Diversity",
+      "multiSelect": false,
+      "options": [
+        {"label": "否 (Recommended)", "description": "使用 D1 竞品锚定漏斗，输出 2 个方向"},
+        {"label": "是", "description": "使用 D2 多样性引擎，输出 3 个方向 + diversity_report"}
+      ]
     },
     {
       "question": "目标受众是？",

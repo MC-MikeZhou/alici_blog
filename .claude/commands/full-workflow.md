@@ -10,11 +10,11 @@ echo "工作流启动: $(date +%Y-%m-%d %H:%M)"
 
 # 检查 MCP 状态
 echo "DataForSEO MCP:"
-cat /Users/H/Documents/AliciBlog/.mcp.json 2>/dev/null | grep -A2 "dataforseo"
+cat .mcp.json 2>/dev/null | grep -A2 "dataforseo"
 
 # 检查 Skills 状态
 echo "已加载 Skills:"
-ls /Users/H/Documents/AliciBlog/skills/*/SKILL.md /Users/H/Documents/AliciBlog/skills/*/*/SKILL.md 2>/dev/null | wc -l
+ls skills/*/SKILL.md skills/*/*/SKILL.md 2>/dev/null | wc -l
 ```
 
 ## 工作流步骤

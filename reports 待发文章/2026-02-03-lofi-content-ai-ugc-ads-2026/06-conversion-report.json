@@ -1,0 +1,16 @@
+{
+  "input": "/Users/H/Documents/AliciBlog/reports 待发文章/2026-02-03-lofi-content-ai-ugc-ads-2026/01-article-edited.md",
+  "output": "/Users/H/Documents/AliciBlog/reports 待发文章/2026-02-03-lofi-content-ai-ugc-ads-2026/06-article-final.json",
+  "fixes": {
+    "meta_title_truncated": true,
+    "meta_description_truncated": false,
+    "read_time_generated": true,
+    "cover_source": "06-cover-metadata.json",
+    "non_https_images_replaced": true
+  },
+  "stats": {
+    "word_count": 2558,
+    "read_time": "13 min",
+    "body_html_chars": 19907
+  }
+}

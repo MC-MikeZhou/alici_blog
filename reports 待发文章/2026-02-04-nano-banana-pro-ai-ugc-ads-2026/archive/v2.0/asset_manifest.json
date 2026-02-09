@@ -1,0 +1,84 @@
+{
+  "images": [
+    {
+      "id": "hero-workflow-overview",
+      "original_prompt": "Clean infographic diagram showing 7-step AI UGC workflow pipeline. Visual flow: numbered steps from 1-7 with arrows connecting each stage. Steps labeled: '1. Angle' → '2. Actor Selfie' → '3. Product Refs' → '4. Product-in-Hand' → '5. Talking Clip' → '6. End Card' → '7. Variations'. Style: modern minimal design, green accent color (#00FF7F), clean typography, professional business diagram. Background: white with subtle texture. Layout: horizontal flow, left to right, each step in rounded rectangle box.",
+      "final_prompt": "Clean infographic diagram showing 7-step AI UGC workflow pipeline. Visual flow: numbered steps from 1-7 with arrows connecting each stage. Steps labeled: '1. Angle' → '2. Actor Selfie' → '3. Product Refs' → '4. Product-in-Hand' → '5. Talking Clip' → '6. End Card' → '7. Variations'. Style: modern minimal design, green accent color (#00FF7F), clean typography, professional business diagram. Background: white with subtle texture. Layout: horizontal flow, left to right, each step in rounded rectangle box.",
+      "file_path": "./gen_images/hero-workflow-overview.png",
+      "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/hero-workflow-overview.png",
+      "generation_model": "fal-ai/nano-banana-pro",
+      "role": "hero",
+      "aspect_ratio": "16:9",
+      "resolution": "2K",
+      "file_size_kb": 4536.4,
+      "status": "success"
+    },
+    {
+      "id": "step2-actor-selfie-example",
+      "original_prompt": "Example output from Nano Banana Pro showing phone selfie actor. Subject: 25-35 year old person, natural skin texture visible, minimal makeup, casual t-shirt. Framing: chest-up vertical phone selfie, both hands visible in natural position, slight handheld feel. Lighting: natural window light from left, realistic shadows, no studio lighting. Setting: simple home background (neutral wall), daytime. Style: realistic photo quality, sharp focus on face and hands, natural color grading. Annotations: small text labels pointing to 'Natural skin texture', 'Visible hands', 'Phone camera feel'.",
+      "final_prompt": "Example output from Nano Banana Pro showing phone selfie actor. Subject: 25-35 year old person, natural skin texture visible, minimal makeup, casual t-shirt. Framing: chest-up vertical phone selfie, both hands visible in natural position, slight handheld feel. Lighting: natural window light from left, realistic shadows, no studio lighting. Setting: simple home background (neutral wall), daytime. Style: realistic photo quality, sharp focus on face and hands, natural color grading. Annotations: small text labels pointing to 'Natural skin texture', 'Visible hands', 'Phone camera feel'.",
+      "file_path": "./gen_images/step2-actor-selfie-example.png",
+      "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/step2-actor-selfie-example.png",
+      "generation_model": "fal-ai/nano-banana-pro",
+      "role": "concept",
+      "aspect_ratio": "16:9",
+      "resolution": "1K",
+      "file_size_kb": 1197.9,
+      "status": "success"
+    },
+    {
+      "id": "step3-product-reference-pack",
+      "original_prompt": "3x3 grid layout showing product from multiple angles. Product: generic skincare bottle or cosmetic tube (neutral example). Views: front center, 45° left, 45° right, side left, side right, back, top view, bottom view, label close-up. Each view in separate grid cell with subtle border. Lighting: consistent neutral studio lighting across all angles. Background: plain light gray. Labels: small text below each cell ('Front', '45° Left', etc.). Style: clean product photography, sharp focus, professional catalog style.",
+      "final_prompt": "3x3 grid layout showing product from multiple angles. Product: generic skincare bottle or cosmetic tube (neutral example). Views: front center, 45° left, 45° right, side left, side right, back, top view, bottom view, label close-up. Each view in separate grid cell with subtle border. Lighting: consistent neutral studio lighting across all angles. Background: plain light gray. Labels: small text below each cell ('Front', '45° Left', etc.). Style: clean product photography, sharp focus, professional catalog style.",
+      "file_path": "./gen_images/step3-product-reference-pack.png",
+      "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/step3-product-reference-pack.png",
+      "generation_model": "fal-ai/nano-banana-pro",
+      "role": "comparison",
+      "aspect_ratio": "16:9",
+      "resolution": "1K",
+      "file_size_kb": 655.4,
+      "status": "success"
+    },
+    {
+      "id": "step4-composite-breakdown",
+      "original_prompt": "Annotated diagram showing product-in-hand composite success criteria. Main image: hand holding product (skincare bottle) in natural phone selfie context. Annotations: 4 callout labels with arrows pointing to key elements: 1. 'Contact Shadow' - arrow to shadow where product touches hand, 2. 'Finger Occlusion' - arrow to fingers overlapping product edge, 3. 'Matched Lighting' - arrow showing light direction matching face lighting, 4. 'Label Clarity' - arrow to readable product label. Style: educational diagram, clean annotations, green accent color for callout lines. Layout: central image with callouts arranged around it, clear visual hierarchy.",
+      "final_prompt": "Annotated diagram showing product-in-hand composite success criteria. Main image: hand holding product (skincare bottle) in natural phone selfie context. Annotations: 4 callout labels with arrows pointing to key elements: 1. 'Contact Shadow' - arrow to shadow where product touches hand, 2. 'Finger Occlusion' - arrow to fingers overlapping product edge, 3. 'Matched Lighting' - arrow showing light direction matching face lighting, 4. 'Label Clarity' - arrow to readable product label. Style: educational diagram, clean annotations, green accent color for callout lines. Layout: central image with callouts arranged around it, clear visual hierarchy.",
+      "file_path": "./gen_images/step4-composite-breakdown.png",
+      "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/step4-composite-breakdown.png",
+      "generation_model": "fal-ai/nano-banana-pro",
+      "role": "concept",
+      "aspect_ratio": "16:9",
+      "resolution": "1K",
+      "file_size_kb": 1084.7,
+      "status": "success"
+    },
+    {
+      "id": "step6-end-card-example",
+      "original_prompt": "Vertical motion end card design example for UGC ad. Layout: vertical 9:16 format, centered content. Elements: Top: Small brand logo/name, Center: Large headline 'Get Studio-Quality UGC Ads' (bold, readable), Middle: Small proof text 'No filming required', Bottom: Clear CTA button 'Try Free' (prominent, clickable style). Background: subtle green gradient (#00FF7F to #00C853), lots of negative space. Style: minimal modern design, clean typography (sans-serif), high contrast text. NOT filmed footage - purely motion design aesthetic.",
+      "final_prompt": "Vertical motion end card design example for UGC ad. Layout: vertical 9:16 format, centered content. Elements: Top: Small brand logo/name, Center: Large headline 'Get Studio-Quality UGC Ads' (bold, readable), Middle: Small proof text 'No filming required', Bottom: Clear CTA button 'Try Free' (prominent, clickable style). Background: subtle green gradient (#00FF7F to #00C853), lots of negative space. Style: minimal modern design, clean typography (sans-serif), high contrast text. NOT filmed footage - purely motion design aesthetic.",
+      "file_path": "./gen_images/step6-end-card-example.png",
+      "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/step6-end-card-example.png",
+      "generation_model": "fal-ai/nano-banana-pro",
+      "role": "concept",
+      "aspect_ratio": "16:9",
+      "resolution": "1K",
+      "file_size_kb": 949.1,
+      "status": "success"
+    }
+  ],
+  "summary": {
+    "total_planned": 5,
+    "total_generated": 5,
+    "success_rate": "100%",
+    "total_size_kb": 8423.5,
+    "generation_date": "2026-02-05",
+    "article_version": "v2.0",
+    "article_file": "01-article-edited.md"
+  },
+  "metadata": {
+    "editor_version": "manual-workflow-v2.9.2",
+    "generator_script": "/Users/H/Documents/AliciBlog/scripts/fal_image_generator.py",
+    "cdn_base_url": "https://ct2.alici.ai/static/image/other/gen_images/",
+    "local_path_base": "./gen_images/"
+  }
+}

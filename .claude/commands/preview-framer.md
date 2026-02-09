@@ -6,8 +6,8 @@
 
 ```bash
 # 检查最新编辑版文章和 JSON 文件
-ls -la /Users/H/Documents/AliciBlog/reports/*/01-article-edited*.md 2>/dev/null | tail -3
-ls -la /Users/H/Documents/AliciBlog/reports/*/06-article-final.json 2>/dev/null | tail -3
+ls -la reports/*/01-article-edited*.md 2>/dev/null | tail -3
+ls -la reports/*/06-article-final.json 2>/dev/null | tail -3
 ```
 
 ## 预览内容

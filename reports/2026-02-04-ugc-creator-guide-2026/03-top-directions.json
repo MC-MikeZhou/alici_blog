@@ -1,0 +1,128 @@
+{
+  "analysis_date": "2026-02-04",
+  "data_source": "websearch",
+  "directions": [
+    {
+      "direction_id": "DIR01",
+      "pattern_id": "P1",
+      "name": "Become a UGC Creator (Entry Path)",
+      "keywords_count": 6,
+      "top_keywords": [
+        {"keyword": "ugc creator", "volume": 40500, "cpc": 3.10},
+        {"keyword": "how to become a ugc creator", "volume": 22000, "cpc": 2.80},
+        {"keyword": "ugc content creator", "volume": 12100, "cpc": 2.50},
+        {"keyword": "what is a ugc creator", "volume": 8100, "cpc": 1.80},
+        {"keyword": "ugc creator jobs", "volume": 6600, "cpc": 1.20},
+        {"keyword": "ugc side hustle", "volume": 3600, "cpc": 1.50}
+      ],
+      "total_volume": 92900,
+      "avg_cpc": 2.15,
+      "avg_competition": 0.60,
+      "direction_score": 92,
+      "product_mapping": {"primary": "script_to_video", "secondary": "video_studio"},
+      "competitor_weakness": "Most articles still title '2025'; brand-side focus (InVideo, Sprout Social); no AI-assisted creator workflow angle"
+    },
+    {
+      "direction_id": "DIR02",
+      "pattern_id": "P2",
+      "name": "UGC Portfolio Building",
+      "keywords_count": 3,
+      "top_keywords": [
+        {"keyword": "ugc portfolio", "volume": 9900, "cpc": 2.20},
+        {"keyword": "ugc portfolio examples", "volume": 5400, "cpc": 1.90},
+        {"keyword": "ugc portfolio template", "volume": 4400, "cpc": 1.60}
+      ],
+      "total_volume": 19700,
+      "avg_cpc": 1.90,
+      "avg_competition": 0.57,
+      "direction_score": 78,
+      "product_mapping": {"primary": "video_studio", "secondary": "script_to_video"},
+      "competitor_weakness": "Most focus on Canva/Notion templates; no AI-generated spec videos angle"
+    },
+    {
+      "direction_id": "DIR03",
+      "pattern_id": "P3",
+      "name": "UGC Pricing/Rates Guide",
+      "keywords_count": 5,
+      "top_keywords": [
+        {"keyword": "ugc rates", "volume": 8100, "cpc": 2.40},
+        {"keyword": "how much do ugc creators make", "volume": 5400, "cpc": 1.80},
+        {"keyword": "how much do ugc creators charge", "volume": 4400, "cpc": 2.10},
+        {"keyword": "ugc creator salary", "volume": 3600, "cpc": 1.40},
+        {"keyword": "ugc rate card", "volume": 1900, "cpc": 1.60}
+      ],
+      "total_volume": 23400,
+      "avg_cpc": 1.86,
+      "avg_competition": 0.53,
+      "direction_score": 75,
+      "product_mapping": {"primary": null, "secondary": null},
+      "competitor_weakness": "Kristian Larsen, PPC.io dominate; data-driven but no creator perspective with AI efficiency angle"
+    },
+    {
+      "direction_id": "DIR04",
+      "pattern_id": "P4",
+      "name": "Brand Pitching/Outreach & Platforms",
+      "keywords_count": 4,
+      "top_keywords": [
+        {"keyword": "ugc platforms for creators", "volume": 4400, "cpc": 3.50},
+        {"keyword": "brands looking for ugc creators", "volume": 3600, "cpc": 2.80},
+        {"keyword": "ugc marketplace", "volume": 3600, "cpc": 3.20},
+        {"keyword": "how to pitch brands as ugc creator", "volume": 2900, "cpc": 1.70}
+      ],
+      "total_volume": 14500,
+      "avg_cpc": 2.80,
+      "avg_competition": 0.60,
+      "direction_score": 72,
+      "product_mapping": {"primary": "script_to_video", "secondary": null},
+      "competitor_weakness": "PitchBrand.co niche; most are platform lists, not creator strategy guides"
+    },
+    {
+      "direction_id": "DIR05",
+      "pattern_id": "P5",
+      "name": "UGC Script/Brief/Shooting",
+      "keywords_count": 2,
+      "top_keywords": [
+        {"keyword": "ugc video ideas", "volume": 3600, "cpc": 1.30},
+        {"keyword": "ugc script template", "volume": 2400, "cpc": 1.50}
+      ],
+      "total_volume": 6000,
+      "avg_cpc": 1.40,
+      "avg_competition": 0.40,
+      "direction_score": 65,
+      "product_mapping": {"primary": "script_to_video", "secondary": "video_prompt"},
+      "competitor_weakness": "Low competition; strong product mapping to alici.ai script_to_video"
+    },
+    {
+      "direction_id": "DIR06",
+      "pattern_id": "P6",
+      "name": "UGC Tools & AI Editing",
+      "keywords_count": 2,
+      "top_keywords": [
+        {"keyword": "ai ugc tools", "volume": 5400, "cpc": 4.20},
+        {"keyword": "ugc creator tools", "volume": 2900, "cpc": 3.80}
+      ],
+      "total_volume": 8300,
+      "avg_cpc": 4.00,
+      "avg_competition": 0.72,
+      "direction_score": 74,
+      "product_mapping": {"primary": "video_studio", "secondary": "script_to_video"},
+      "competitor_weakness": "InVideo dominates with 'Top 9'; needs 2026 update + creator-perspective review"
+    },
+    {
+      "direction_id": "DIR07",
+      "pattern_id": "P7",
+      "name": "UGC Compliance/Contracts",
+      "keywords_count": 2,
+      "top_keywords": [
+        {"keyword": "ugc contract template", "volume": 2400, "cpc": 1.20},
+        {"keyword": "ugc disclosure requirements", "volume": 1300, "cpc": 0.90}
+      ],
+      "total_volume": 3700,
+      "avg_cpc": 1.05,
+      "avg_competition": 0.33,
+      "direction_score": 48,
+      "product_mapping": {"primary": null, "secondary": null},
+      "competitor_weakness": "GRIN has basic rights guide; thin content area but low product mapping"
+    }
+  ]
+}

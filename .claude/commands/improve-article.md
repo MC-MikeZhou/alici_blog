@@ -6,10 +6,10 @@
 
 ```bash
 # 检查最新 AEO 报告
-ls -la /Users/H/Documents/AliciBlog/reports/*/03-aeo-score.md 2>/dev/null | tail -3
+ls -la reports/*/03-aeo-score.md 2>/dev/null | tail -3
 
 # 检查最新文章
-ls -la /Users/H/Documents/AliciBlog/reports/*/01-article-draft.md 2>/dev/null | tail -3
+ls -la reports/*/01-article-draft.md 2>/dev/null | tail -3
 ```
 
 ## 改进策略

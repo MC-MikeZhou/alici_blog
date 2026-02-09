@@ -1,0 +1,45 @@
+{
+  "seed": "ugc ai tools",
+  "scope": {
+    "geo": "US",
+    "language": "en",
+    "location_code": 2840,
+    "language_code": "en"
+  },
+  "competitor_domains": [
+    "invideo.io",
+    "higgsfield.ai",
+    "opus.pro",
+    "zeely.ai",
+    "heygen.com"
+  ],
+  "preferred_domains": [
+    "invideo.io",
+    "higgsfield.ai",
+    "opus.pro",
+    "zeely.ai",
+    "heygen.com"
+  ],
+  "seed_required_urls": [
+    "https://zeely.ai/blog/best-ugc-ai-video-generators/",
+    "https://invideo.io/blog/best-ai-ugc-tools/"
+  ],
+  "query_modules": [
+    "tools_listicle",
+    "generator_intent",
+    "comparison_intent",
+    "site_inventory"
+  ],
+  "limits": {
+    "serp_depth": 100,
+    "keep_rank_max": 20,
+    "keep_rank_soft_max": 50,
+    "max_queries": 40
+  },
+  "notes": {
+    "goal": "Harvest off-site competitor blog URLs for UGC AI tools/generators and validate demand + SERP features via DataForSEO.",
+    "cadence": "biweekly"
+  },
+  "created_at": "2026-02-07"
+}
+

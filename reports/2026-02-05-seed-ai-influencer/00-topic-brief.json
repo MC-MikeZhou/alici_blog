@@ -1,0 +1,763 @@
+{
+  "mode": "seed_funnel",
+  "schema_version": "2.3",
+  "analysis_date": "2026-02-05",
+  "seed": "ai influencer",
+  "engine": "d1",
+  "data_source": "competitor+dataforseo",
+  "mission_config": {
+    "seed": "ai influencer",
+    "anchors": {
+      "competitors": [
+        "https://invideo.io/blog/",
+        "https://higgsfield.ai/blog/",
+        "https://heygen.com/blog"
+      ]
+    },
+    "scope": {
+      "language": "en",
+      "geo": "US",
+      "audience": "marketers",
+      "validation_depth": "standard",
+      "forbidden_zones": [
+        "gambling",
+        "adult"
+      ]
+    },
+    "growth": {
+      "goal": "traffic_and_conversion",
+      "product_relevance": "video_studio"
+    },
+    "metadata": {
+      "created_at": "2026-02-05",
+      "mode": "seed_funnel_top10",
+      "version": "v2.3"
+    }
+  },
+  "funnel_stats": {
+    "competitor_posts_total": 693,
+    "competitor_posts_theme": 12,
+    "total_keywords": 118,
+    "validated_keywords": 118,
+    "final_directions": 10
+  },
+  "final_directions": [
+    {
+      "rank": 1,
+      "direction_id": "D01",
+      "pattern_id": "P1",
+      "theme": "AI influencer definition",
+      "intent_type": "use-case",
+      "locked_title": {
+        "title": "What Is an AI Influencer? (2026) Definition, Examples, and Use Cases",
+        "primary_keyword": "ai influencer",
+        "intent_matched": true,
+        "serp_aligned": true,
+        "year_validated": true,
+        "formula_id": "ai-def-1",
+        "evidence": {
+          "serp_titles": [
+            "Emily Pellegrini | AI Influencer (@emilypellegrini)",
+            "AI Influencer Generator - Create Online Persona ...",
+            "Create Your AI Influencer - Higgsfield"
+          ],
+          "search_volume": 4620,
+          "trend": "stable"
+        }
+      },
+      "seo_score": 66,
+      "aeo_score": 95,
+      "combined_priority": "high_aeo_first",
+      "evidence_chain": {
+        "volume": 4620,
+        "trend": "stable",
+        "cpc_avg": 4.3,
+        "competition_avg": 0.06,
+        "serp_features": {
+          "people_also_ask": true,
+          "ai_overview": true
+        },
+        "serp_titles_top3": [
+          "Emily Pellegrini | AI Influencer (@emilypellegrini)",
+          "AI Influencer Generator - Create Online Persona ...",
+          "Create Your AI Influencer - Higgsfield"
+        ],
+        "below_threshold": false,
+        "competitor_evidence": [
+          {
+            "competitor": "higgsfield.ai",
+            "title": "AI Influencer Studio: How to Create a Viral AI Influencer Content",
+            "url": "https://higgsfield.ai/blog/AI-Influencer-Studio-Guide-Build-AI-Character",
+            "published_at": "2026-01-20T17:55:00.000Z",
+            "lastmod": null
+          },
+          {
+            "competitor": "heygen.com",
+            "title": "How to Create An AI Influencer: A Complete Guide",
+            "url": "https://www.heygen.com/blog/how-to-create-an-ai-influencer",
+            "published_at": null,
+            "lastmod": "2026-02-02T06:19:37.000Z"
+          }
+        ]
+      },
+      "product_mapping": {
+        "primary": "video_prompt",
+        "secondary": "video_studio",
+        "product_angle": "Explain the AI influencer stack + Alici AI workflows."
+      }
+    },
+    {
+      "rank": 2,
+      "direction_id": "D02",
+      "pattern_id": "P12",
+      "theme": "AI influencer vs virtual influencer",
+      "intent_type": "use-case",
+      "locked_title": {
+        "title": "AI Influencer Playbook (2026): Build, Grow, and Monetize a Virtual Creator",
+        "primary_keyword": "synthetic influencer",
+        "intent_matched": true,
+        "serp_aligned": true,
+        "year_validated": true,
+        "formula_id": "ai-playbook-1",
+        "evidence": {
+          "serp_titles": [
+            "The rise of synthetic influencers: Managing PR for AI- ...",
+            "Miquela (@lilmiquela) · Los Angeles, CA",
+            "Synthetic influencer personas are becoming feasible with ..."
+          ],
+          "search_volume": 30,
+          "trend": "stable"
+        }
+      },
+      "seo_score": 39,
+      "aeo_score": 95,
+      "combined_priority": "high_aeo_first",
+      "evidence_chain": {
+        "volume": 30,
+        "trend": "stable",
+        "cpc_avg": 9.8,
+        "competition_avg": 0.05,
+        "serp_features": {
+          "people_also_ask": true,
+          "ai_overview": true
+        },
+        "serp_titles_top3": [
+          "The rise of synthetic influencers: Managing PR for AI- ...",
+          "Miquela (@lilmiquela) · Los Angeles, CA",
+          "Synthetic influencer personas are becoming feasible with ..."
+        ],
+        "below_threshold": true,
+        "competitor_evidence": [
+          {
+            "competitor": "invideo.io",
+            "title": "Best AI Avatar Generator in 2025 for Businesses: Invideo vs Top Alternatives",
+            "url": "https://invideo.io/blog/ai-avatar-invideo-vs-top-alternatives/",
+            "published_at": "2025-10-28T07:18:59.000Z",
+            "lastmod": "2025-10-30"
+          }
+        ]
+      },
+      "product_mapping": {
+        "primary": "video_prompt",
+        "secondary": "video_studio",
+        "product_angle": "Own the definition space with an AEO-first explainer."
+      }
+    },
+    {
+      "rank": 3,
+      "direction_id": "D03",
+      "pattern_id": "P3",
+      "theme": "How to create an AI influencer",
+      "intent_type": "use-case",
+      "locked_title": {
+        "title": "How to Create an AI Influencer in 2026: Step-by-Step Workflow (Tools + Templates)",
+        "primary_keyword": "how to create an ai influencer",
+        "intent_matched": true,
+        "serp_aligned": true,
+        "year_validated": true,
+        "formula_id": "ai-create-1",
+        "evidence": {
+          "serp_titles": [
+            "How are people making these AI influencers??",
+            "AI Influencer Generator - Create Online Persona Using AI",
+            "Free Method To Create Realistic Ai Influencer Videos"
+          ],
+          "search_volume": 390,
+          "trend": "stable"
+        }
+      },
+      "seo_score": 24,
+      "aeo_score": 95,
+      "combined_priority": "high_aeo_first",
+      "evidence_chain": {
+        "volume": 390,
+        "trend": "stable",
+        "cpc_avg": 4.55,
+        "competition_avg": 0.62,
+        "serp_features": {
+          "people_also_ask": true,
+          "ai_overview": true
+        },
+        "serp_titles_top3": [
+          "How are people making these AI influencers??",
+          "AI Influencer Generator - Create Online Persona Using AI",
+          "Free Method To Create Realistic Ai Influencer Videos"
+        ],
+        "below_threshold": true,
+        "competitor_evidence": [
+          {
+            "competitor": "higgsfield.ai",
+            "title": "AI Influencer Studio: How to Create a Viral AI Influencer Content",
+            "url": "https://higgsfield.ai/blog/AI-Influencer-Studio-Guide-Build-AI-Character",
+            "published_at": "2026-01-20T17:55:00.000Z",
+            "lastmod": null
+          },
+          {
+            "competitor": "invideo.io",
+            "title": "How to Create Professional AI Avatars That Give You a Competitive Edge",
+            "url": "https://invideo.io/blog/create-professional-ai-avatars/",
+            "published_at": "2025-09-12T12:56:29.000Z",
+            "lastmod": "2025-08-20"
+          },
+          {
+            "competitor": "heygen.com",
+            "title": "How to Create An AI Influencer: A Complete Guide",
+            "url": "https://www.heygen.com/blog/how-to-create-an-ai-influencer",
+            "published_at": null,
+            "lastmod": "2026-02-02T06:19:37.000Z"
+          }
+        ]
+      },
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "video_prompt",
+        "product_angle": "Create repeatable character videos (scripts + scenes + captions) with Alici AI."
+      }
+    },
+    {
+      "rank": 4,
+      "direction_id": "D04",
+      "pattern_id": "P4",
+      "theme": "AI influencer marketing strategy",
+      "intent_type": "use-case",
+      "locked_title": {
+        "title": "AI Influencer Marketing Strategy (2026): Campaign Playbook + Content Pillars",
+        "primary_keyword": "ai influencer marketing",
+        "intent_matched": true,
+        "serp_aligned": true,
+        "year_validated": true,
+        "formula_id": "ai-marketing-1",
+        "evidence": {
+          "serp_titles": [
+            "AI And Influencer Marketing: How Businesses Can ...",
+            "AI Influencer Marketing: Smarter Social Campaigns ...",
+            "How AI is going to shape influencer marketing next year"
+          ],
+          "search_volume": 330,
+          "trend": "stable"
+        }
+      },
+      "seo_score": 39,
+      "aeo_score": 55,
+      "combined_priority": "low",
+      "evidence_chain": {
+        "volume": 330,
+        "trend": "stable",
+        "cpc_avg": 6.56,
+        "competition_avg": 0.12,
+        "serp_features": {
+          "people_also_ask": false,
+          "ai_overview": false
+        },
+        "serp_titles_top3": [
+          "AI And Influencer Marketing: How Businesses Can ...",
+          "AI Influencer Marketing: Smarter Social Campaigns ...",
+          "How AI is going to shape influencer marketing next year"
+        ],
+        "below_threshold": true,
+        "competitor_evidence": [
+          {
+            "competitor": "heygen.com",
+            "title": "How to Create An AI Influencer: A Complete Guide",
+            "url": "https://www.heygen.com/blog/how-to-create-an-ai-influencer",
+            "published_at": null,
+            "lastmod": "2026-02-02T06:19:37.000Z"
+          },
+          {
+            "competitor": "heygen.com",
+            "title": "Create Hyper-Realistic AI Avatars in Minutes with HeyGen",
+            "url": "https://www.heygen.com/blog/how-to-make-ai-avatars-more-human",
+            "published_at": null,
+            "lastmod": "2026-01-27T22:39:44.000Z"
+          },
+          {
+            "competitor": "heygen.com",
+            "title": "How to Create a Talking AI Avatar for Free",
+            "url": "https://www.heygen.com/blog/create-talking-ai-avatar-free",
+            "published_at": null,
+            "lastmod": "2026-01-27T22:39:33.000Z"
+          }
+        ]
+      },
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_studio",
+        "product_angle": "Turn campaign goals into content pillars + scripts with Alici AI."
+      }
+    },
+    {
+      "rank": 5,
+      "direction_id": "D05",
+      "pattern_id": "P6",
+      "theme": "Disclosure, legal, ethics",
+      "intent_type": "list",
+      "locked_title": {
+        "title": "AI Influencer Disclosure (2026): Legal, Ethical, and Platform Rules (With Templates)",
+        "primary_keyword": "is ai influencer legal",
+        "intent_matched": true,
+        "serp_aligned": true,
+        "year_validated": true,
+        "formula_id": "ai-disclosure-1",
+        "evidence": {
+          "serp_titles": [
+            "Is making AI models and managing their social media ...",
+            "Navigating Copyright Laws in the Age of AI-Generated ...",
+            "The Business of AI Avatars: Key Legal Risks and Best ..."
+          ],
+          "search_volume": 10,
+          "trend": "stable"
+        }
+      },
+      "seo_score": 20,
+      "aeo_score": 95,
+      "combined_priority": "high_aeo_first",
+      "evidence_chain": {
+        "volume": 10,
+        "trend": "stable",
+        "cpc_avg": 0.0,
+        "competition_avg": 0.55,
+        "serp_features": {
+          "people_also_ask": true,
+          "ai_overview": true
+        },
+        "serp_titles_top3": [
+          "Is making AI models and managing their social media ...",
+          "Navigating Copyright Laws in the Age of AI-Generated ...",
+          "The Business of AI Avatars: Key Legal Risks and Best ..."
+        ],
+        "below_threshold": true,
+        "competitor_evidence": [
+          {
+            "competitor": "heygen.com",
+            "title": "How to Create An AI Influencer: A Complete Guide",
+            "url": "https://www.heygen.com/blog/how-to-create-an-ai-influencer",
+            "published_at": null,
+            "lastmod": "2026-02-02T06:19:37.000Z"
+          },
+          {
+            "competitor": "heygen.com",
+            "title": "Create Hyper-Realistic AI Avatars in Minutes with HeyGen",
+            "url": "https://www.heygen.com/blog/how-to-make-ai-avatars-more-human",
+            "published_at": null,
+            "lastmod": "2026-01-27T22:39:44.000Z"
+          },
+          {
+            "competitor": "heygen.com",
+            "title": "How to Create a Talking AI Avatar for Free",
+            "url": "https://www.heygen.com/blog/create-talking-ai-avatar-free",
+            "published_at": null,
+            "lastmod": "2026-01-27T22:39:33.000Z"
+          }
+        ]
+      },
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "script_to_video",
+        "product_angle": "Safe-by-design disclosure templates + compliant scripts."
+      }
+    },
+    {
+      "rank": 6,
+      "direction_id": "D06",
+      "pattern_id": "P8",
+      "theme": "AI avatar vs AI influencer",
+      "intent_type": "use-case",
+      "locked_title": {
+        "title": "AI Influencer Playbook (2026): Build, Grow, and Monetize a Virtual Creator",
+        "primary_keyword": "avatar influencer",
+        "intent_matched": true,
+        "serp_aligned": true,
+        "year_validated": true,
+        "formula_id": "ai-playbook-1",
+        "evidence": {
+          "serp_titles": [
+            "Miquela (@lilmiquela) · Los Angeles, CA",
+            "AI Influencer Generator - Create Online Persona ...",
+            "AI Influencer Generator: Сreate Your Own Character"
+          ],
+          "search_volume": 10,
+          "trend": "stable"
+        }
+      },
+      "seo_score": 17,
+      "aeo_score": 95,
+      "combined_priority": "high_aeo_first",
+      "evidence_chain": {
+        "volume": 10,
+        "trend": "stable",
+        "cpc_avg": 0.0,
+        "competition_avg": 0.13,
+        "serp_features": {
+          "people_also_ask": true,
+          "ai_overview": true
+        },
+        "serp_titles_top3": [
+          "Miquela (@lilmiquela) · Los Angeles, CA",
+          "AI Influencer Generator - Create Online Persona ...",
+          "AI Influencer Generator: Сreate Your Own Character"
+        ],
+        "below_threshold": true,
+        "competitor_evidence": [
+          {
+            "competitor": "invideo.io",
+            "title": "Best AI Avatar Generator in 2025 for Businesses: Invideo vs Top Alternatives",
+            "url": "https://invideo.io/blog/ai-avatar-invideo-vs-top-alternatives/",
+            "published_at": "2025-10-28T07:18:59.000Z",
+            "lastmod": "2025-10-30"
+          },
+          {
+            "competitor": "invideo.io",
+            "title": "Overcoming Creative Limits with AI Avatar Generators",
+            "url": "https://invideo.io/blog/ai-avatar-generators-overcome-creative-limits/",
+            "published_at": "2025-09-30T07:10:50.000Z",
+            "lastmod": "2025-08-22"
+          },
+          {
+            "competitor": "invideo.io",
+            "title": "How to Create Professional AI Avatars That Give You a Competitive Edge",
+            "url": "https://invideo.io/blog/create-professional-ai-avatars/",
+            "published_at": "2025-09-12T12:56:29.000Z",
+            "lastmod": "2025-08-20"
+          }
+        ]
+      },
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "script_to_video",
+        "product_angle": "Clarify positioning via comparison templates + workflows."
+      }
+    },
+    {
+      "rank": 7,
+      "direction_id": "D07",
+      "pattern_id": "P10",
+      "theme": "Monetization & brand deals",
+      "intent_type": "how-to",
+      "locked_title": {
+        "title": "How AI Influencers Make Money (2026): Sponsorships, Affiliate, and Brand Deal Playbook",
+        "primary_keyword": "monetize ai influencer",
+        "intent_matched": true,
+        "serp_aligned": true,
+        "year_validated": true,
+        "formula_id": "ai-monet-1",
+        "evidence": {
+          "serp_titles": [
+            "How I generated and monetized an Ai influencer : r/artificial",
+            "How to Monetize Your AI Influencer on Social Media?",
+            "The New Way To Create AI Influencers For FREE (In 2026)"
+          ],
+          "search_volume": 10,
+          "trend": "stable"
+        }
+      },
+      "seo_score": 15,
+      "aeo_score": 95,
+      "combined_priority": "high_aeo_first",
+      "evidence_chain": {
+        "volume": 10,
+        "trend": "stable",
+        "cpc_avg": 2.36,
+        "competition_avg": 0.57,
+        "serp_features": {
+          "people_also_ask": true,
+          "ai_overview": true
+        },
+        "serp_titles_top3": [
+          "How I generated and monetized an Ai influencer : r/artificial",
+          "How to Monetize Your AI Influencer on Social Media?",
+          "The New Way To Create AI Influencers For FREE (In 2026)"
+        ],
+        "below_threshold": true,
+        "competitor_evidence": [
+          {
+            "competitor": "heygen.com",
+            "title": "How to Create An AI Influencer: A Complete Guide",
+            "url": "https://www.heygen.com/blog/how-to-create-an-ai-influencer",
+            "published_at": null,
+            "lastmod": "2026-02-02T06:19:37.000Z"
+          },
+          {
+            "competitor": "heygen.com",
+            "title": "Create Hyper-Realistic AI Avatars in Minutes with HeyGen",
+            "url": "https://www.heygen.com/blog/how-to-make-ai-avatars-more-human",
+            "published_at": null,
+            "lastmod": "2026-01-27T22:39:44.000Z"
+          },
+          {
+            "competitor": "heygen.com",
+            "title": "How to Create a Talking AI Avatar for Free",
+            "url": "https://www.heygen.com/blog/create-talking-ai-avatar-free",
+            "published_at": null,
+            "lastmod": "2026-01-27T22:39:33.000Z"
+          }
+        ]
+      },
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_studio",
+        "product_angle": "Offer-driven scripts + pitch assets generated with Alici AI."
+      }
+    },
+    {
+      "rank": 8,
+      "direction_id": "D08",
+      "pattern_id": "P9",
+      "theme": "Prompts & content workflow",
+      "intent_type": "how-to",
+      "locked_title": {
+        "title": "AI Influencer Prompts (2026): A 30-Day Content Calendar + Prompt Pack",
+        "primary_keyword": "ai influencer prompts",
+        "intent_matched": true,
+        "serp_aligned": true,
+        "year_validated": true,
+        "formula_id": "ai-prompts-1",
+        "evidence": {
+          "serp_titles": [
+            "Prompts So Good You'll Think Your AI Influencers Are REAL",
+            "How to Create an AI Influencer (Step-by-Step) : r/generativeAI",
+            "AI Influencer Prompts So Realistic They Seem Real"
+          ],
+          "search_volume": 50,
+          "trend": "stable"
+        }
+      },
+      "seo_score": 38,
+      "aeo_score": 55,
+      "combined_priority": "low",
+      "evidence_chain": {
+        "volume": 50,
+        "trend": "stable",
+        "cpc_avg": 7.85,
+        "competition_avg": 0.1,
+        "serp_features": {
+          "people_also_ask": false,
+          "ai_overview": false
+        },
+        "serp_titles_top3": [
+          "Prompts So Good You'll Think Your AI Influencers Are REAL",
+          "How to Create an AI Influencer (Step-by-Step) : r/generativeAI",
+          "AI Influencer Prompts So Realistic They Seem Real"
+        ],
+        "below_threshold": true,
+        "competitor_evidence": [
+          {
+            "competitor": "heygen.com",
+            "title": "How to Create An AI Influencer: A Complete Guide",
+            "url": "https://www.heygen.com/blog/how-to-create-an-ai-influencer",
+            "published_at": null,
+            "lastmod": "2026-02-02T06:19:37.000Z"
+          },
+          {
+            "competitor": "heygen.com",
+            "title": "Create Hyper-Realistic AI Avatars in Minutes with HeyGen",
+            "url": "https://www.heygen.com/blog/how-to-make-ai-avatars-more-human",
+            "published_at": null,
+            "lastmod": "2026-01-27T22:39:44.000Z"
+          },
+          {
+            "competitor": "heygen.com",
+            "title": "How to Create a Talking AI Avatar for Free",
+            "url": "https://www.heygen.com/blog/create-talking-ai-avatar-free",
+            "published_at": null,
+            "lastmod": "2026-01-27T22:39:33.000Z"
+          }
+        ]
+      },
+      "product_mapping": {
+        "primary": "video_prompt",
+        "secondary": "video_studio",
+        "product_angle": "Ship prompt packs + calendars for batch production."
+      }
+    },
+    {
+      "rank": 9,
+      "direction_id": "D09",
+      "pattern_id": "P5",
+      "theme": "Pricing, rates, ROI",
+      "intent_type": "use-case",
+      "locked_title": {
+        "title": "How Much Does an AI Influencer Cost? 2026 Pricing, Rates, and ROI Model",
+        "primary_keyword": "ai influencer rates",
+        "intent_matched": true,
+        "serp_aligned": true,
+        "year_validated": true,
+        "formula_id": "ai-pricing-1",
+        "evidence": {
+          "serp_titles": [
+            "Pricing Plans",
+            "AI Influencer Rate Card",
+            "Influencer Rates 2026: Costs, Benchmarks & Trends"
+          ],
+          "search_volume": 0,
+          "trend": "stable"
+        }
+      },
+      "seo_score": 9,
+      "aeo_score": 95,
+      "combined_priority": "high_aeo_first",
+      "evidence_chain": {
+        "volume": 0,
+        "trend": "stable",
+        "cpc_avg": 0.0,
+        "competition_avg": 0.55,
+        "serp_features": {
+          "people_also_ask": true,
+          "ai_overview": true
+        },
+        "serp_titles_top3": [
+          "Pricing Plans",
+          "AI Influencer Rate Card",
+          "Influencer Rates 2026: Costs, Benchmarks & Trends"
+        ],
+        "below_threshold": true,
+        "competitor_evidence": [
+          {
+            "competitor": "heygen.com",
+            "title": "How to Create An AI Influencer: A Complete Guide",
+            "url": "https://www.heygen.com/blog/how-to-create-an-ai-influencer",
+            "published_at": null,
+            "lastmod": "2026-02-02T06:19:37.000Z"
+          },
+          {
+            "competitor": "heygen.com",
+            "title": "Create Hyper-Realistic AI Avatars in Minutes with HeyGen",
+            "url": "https://www.heygen.com/blog/how-to-make-ai-avatars-more-human",
+            "published_at": null,
+            "lastmod": "2026-01-27T22:39:44.000Z"
+          },
+          {
+            "competitor": "heygen.com",
+            "title": "How to Create a Talking AI Avatar for Free",
+            "url": "https://www.heygen.com/blog/create-talking-ai-avatar-free",
+            "published_at": null,
+            "lastmod": "2026-01-27T22:39:33.000Z"
+          }
+        ]
+      },
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_studio",
+        "product_angle": "Cost-down lever: more content output per campaign budget with Alici AI."
+      }
+    },
+    {
+      "rank": 10,
+      "direction_id": "D10",
+      "pattern_id": "P2",
+      "theme": "AI influencer examples & case studies",
+      "intent_type": "list",
+      "locked_title": {
+        "title": "AI Influencer Examples (2026): 20 Virtual Creators Brands Actually Work With",
+        "primary_keyword": "virtual influencer examples",
+        "intent_matched": true,
+        "serp_aligned": true,
+        "year_validated": true,
+        "formula_id": "ai-examples-1",
+        "evidence": {
+          "serp_titles": [
+            "Top 10 Virtual Influencers in 2025",
+            "Miquela (@lilmiquela) · Los Angeles, CA",
+            "Top 100 Virtual Influencers in 2026"
+          ],
+          "search_volume": 30,
+          "trend": "stable"
+        }
+      },
+      "seo_score": 20,
+      "aeo_score": 75,
+      "combined_priority": "high_aeo_first",
+      "evidence_chain": {
+        "volume": 30,
+        "trend": "stable",
+        "cpc_avg": 0.0,
+        "competition_avg": 0.55,
+        "serp_features": {
+          "people_also_ask": true,
+          "ai_overview": false
+        },
+        "serp_titles_top3": [
+          "Top 10 Virtual Influencers in 2025",
+          "Miquela (@lilmiquela) · Los Angeles, CA",
+          "Top 100 Virtual Influencers in 2026"
+        ],
+        "below_threshold": true,
+        "competitor_evidence": [
+          {
+            "competitor": "heygen.com",
+            "title": "How to Create An AI Influencer: A Complete Guide",
+            "url": "https://www.heygen.com/blog/how-to-create-an-ai-influencer",
+            "published_at": null,
+            "lastmod": "2026-02-02T06:19:37.000Z"
+          },
+          {
+            "competitor": "heygen.com",
+            "title": "Create Hyper-Realistic AI Avatars in Minutes with HeyGen",
+            "url": "https://www.heygen.com/blog/how-to-make-ai-avatars-more-human",
+            "published_at": null,
+            "lastmod": "2026-01-27T22:39:44.000Z"
+          },
+          {
+            "competitor": "heygen.com",
+            "title": "How to Create a Talking AI Avatar for Free",
+            "url": "https://www.heygen.com/blog/create-talking-ai-avatar-free",
+            "published_at": null,
+            "lastmod": "2026-01-27T22:39:33.000Z"
+          }
+        ]
+      },
+      "product_mapping": {
+        "primary": "video_prompt",
+        "secondary": "video_studio",
+        "product_angle": "Build a swipe file + prompt library for consistent character content."
+      }
+    }
+  ],
+  "diversity_report": null,
+  "api_usage": {
+    "dataforseo_keyword_calls": 1,
+    "dataforseo_serp_calls": 11
+  },
+  "competitor_mining": {
+    "cutoff_date": "2025-02-05",
+    "meta": [
+      {
+        "competitor": "invideo.io",
+        "sitemap_urls": 1218,
+        "candidates": 72,
+        "kept": 58
+      },
+      {
+        "competitor": "higgsfield.ai",
+        "sitemap_urls": 0,
+        "candidates": 35,
+        "kept": 35
+      },
+      {
+        "competitor": "heygen.com",
+        "sitemap_urls": 5096,
+        "candidates": 600,
+        "kept": 600
+      }
+    ]
+  }
+}

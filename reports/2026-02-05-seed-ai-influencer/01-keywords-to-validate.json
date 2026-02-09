@@ -1,0 +1,758 @@
+{
+  "seed": "ai influencer",
+  "theme_key": "ai_influencer",
+  "language_code": "en",
+  "location_code": 2840,
+  "generated_at": "2026-02-05T05:47:02Z",
+  "total_keywords": 118,
+  "keywords_to_validate": [
+    {
+      "keyword": "ai influencer",
+      "pattern_id": "P1",
+      "pattern_name": "AI influencer definition",
+      "product_mapping": {
+        "primary": "video_prompt",
+        "secondary": "video_studio",
+        "angle": "Explain the AI influencer stack + Alici AI workflows."
+      }
+    },
+    {
+      "keyword": "what is an ai influencer",
+      "pattern_id": "P1",
+      "pattern_name": "AI influencer definition",
+      "product_mapping": {
+        "primary": "video_prompt",
+        "secondary": "video_studio",
+        "angle": "Explain the AI influencer stack + Alici AI workflows."
+      }
+    },
+    {
+      "keyword": "ai influencer meaning",
+      "pattern_id": "P1",
+      "pattern_name": "AI influencer definition",
+      "product_mapping": {
+        "primary": "video_prompt",
+        "secondary": "video_studio",
+        "angle": "Explain the AI influencer stack + Alici AI workflows."
+      }
+    },
+    {
+      "keyword": "virtual influencer",
+      "pattern_id": "P1",
+      "pattern_name": "AI influencer definition",
+      "product_mapping": {
+        "primary": "video_prompt",
+        "secondary": "video_studio",
+        "angle": "Explain the AI influencer stack + Alici AI workflows."
+      }
+    },
+    {
+      "keyword": "ai influencer tiktok",
+      "pattern_id": "P1"
+    },
+    {
+      "keyword": "what is an ai influencer tiktok",
+      "pattern_id": "P1"
+    },
+    {
+      "keyword": "ai influencer instagram reels",
+      "pattern_id": "P1"
+    },
+    {
+      "keyword": "what is an ai influencer instagram reels",
+      "pattern_id": "P1"
+    },
+    {
+      "keyword": "ai influencer youtube shorts",
+      "pattern_id": "P1"
+    },
+    {
+      "keyword": "what is an ai influencer youtube shorts",
+      "pattern_id": "P1"
+    },
+    {
+      "keyword": "ai influencer examples",
+      "pattern_id": "P2",
+      "pattern_name": "AI influencer examples & case studies",
+      "product_mapping": {
+        "primary": "video_prompt",
+        "secondary": "video_studio",
+        "angle": "Build a swipe file + prompt library for consistent character content."
+      }
+    },
+    {
+      "keyword": "virtual influencer examples",
+      "pattern_id": "P2",
+      "pattern_name": "AI influencer examples & case studies",
+      "product_mapping": {
+        "primary": "video_prompt",
+        "secondary": "video_studio",
+        "angle": "Build a swipe file + prompt library for consistent character content."
+      }
+    },
+    {
+      "keyword": "ai influencer examples 2026",
+      "pattern_id": "P2",
+      "pattern_name": "AI influencer examples & case studies",
+      "product_mapping": {
+        "primary": "video_prompt",
+        "secondary": "video_studio",
+        "angle": "Build a swipe file + prompt library for consistent character content."
+      }
+    },
+    {
+      "keyword": "ai model influencer examples",
+      "pattern_id": "P2",
+      "pattern_name": "AI influencer examples & case studies",
+      "product_mapping": {
+        "primary": "video_prompt",
+        "secondary": "video_studio",
+        "angle": "Build a swipe file + prompt library for consistent character content."
+      }
+    },
+    {
+      "keyword": "ai influencer examples tiktok",
+      "pattern_id": "P2"
+    },
+    {
+      "keyword": "virtual influencer examples tiktok",
+      "pattern_id": "P2"
+    },
+    {
+      "keyword": "ai influencer examples instagram reels",
+      "pattern_id": "P2"
+    },
+    {
+      "keyword": "virtual influencer examples instagram reels",
+      "pattern_id": "P2"
+    },
+    {
+      "keyword": "ai influencer examples youtube shorts",
+      "pattern_id": "P2"
+    },
+    {
+      "keyword": "virtual influencer examples youtube shorts",
+      "pattern_id": "P2"
+    },
+    {
+      "keyword": "how to create an ai influencer",
+      "pattern_id": "P3",
+      "pattern_name": "How to create an AI influencer",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "video_prompt",
+        "angle": "Create repeatable character videos (scripts + scenes + captions) with Alici AI."
+      }
+    },
+    {
+      "keyword": "create a virtual influencer",
+      "pattern_id": "P3",
+      "pattern_name": "How to create an AI influencer",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "video_prompt",
+        "angle": "Create repeatable character videos (scripts + scenes + captions) with Alici AI."
+      }
+    },
+    {
+      "keyword": "make an ai influencer",
+      "pattern_id": "P3",
+      "pattern_name": "How to create an AI influencer",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "video_prompt",
+        "angle": "Create repeatable character videos (scripts + scenes + captions) with Alici AI."
+      }
+    },
+    {
+      "keyword": "build a virtual model",
+      "pattern_id": "P3",
+      "pattern_name": "How to create an AI influencer",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "video_prompt",
+        "angle": "Create repeatable character videos (scripts + scenes + captions) with Alici AI."
+      }
+    },
+    {
+      "keyword": "how to create an ai influencer tiktok",
+      "pattern_id": "P3"
+    },
+    {
+      "keyword": "create a virtual influencer tiktok",
+      "pattern_id": "P3"
+    },
+    {
+      "keyword": "how to create an ai influencer instagram reels",
+      "pattern_id": "P3"
+    },
+    {
+      "keyword": "create a virtual influencer instagram reels",
+      "pattern_id": "P3"
+    },
+    {
+      "keyword": "how to create an ai influencer youtube shorts",
+      "pattern_id": "P3"
+    },
+    {
+      "keyword": "create a virtual influencer youtube shorts",
+      "pattern_id": "P3"
+    },
+    {
+      "keyword": "ai influencer marketing",
+      "pattern_id": "P4",
+      "pattern_name": "AI influencer marketing strategy",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_studio",
+        "angle": "Turn campaign goals into content pillars + scripts with Alici AI."
+      }
+    },
+    {
+      "keyword": "virtual influencer marketing strategy",
+      "pattern_id": "P4",
+      "pattern_name": "AI influencer marketing strategy",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_studio",
+        "angle": "Turn campaign goals into content pillars + scripts with Alici AI."
+      }
+    },
+    {
+      "keyword": "ai influencer brand deals",
+      "pattern_id": "P4",
+      "pattern_name": "AI influencer marketing strategy",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_studio",
+        "angle": "Turn campaign goals into content pillars + scripts with Alici AI."
+      }
+    },
+    {
+      "keyword": "ai influencer campaign",
+      "pattern_id": "P4",
+      "pattern_name": "AI influencer marketing strategy",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_studio",
+        "angle": "Turn campaign goals into content pillars + scripts with Alici AI."
+      }
+    },
+    {
+      "keyword": "ai influencer marketing tiktok",
+      "pattern_id": "P4"
+    },
+    {
+      "keyword": "virtual influencer marketing strategy tiktok",
+      "pattern_id": "P4"
+    },
+    {
+      "keyword": "ai influencer marketing instagram reels",
+      "pattern_id": "P4"
+    },
+    {
+      "keyword": "virtual influencer marketing strategy instagram reels",
+      "pattern_id": "P4"
+    },
+    {
+      "keyword": "ai influencer marketing youtube shorts",
+      "pattern_id": "P4"
+    },
+    {
+      "keyword": "virtual influencer marketing strategy youtube shorts",
+      "pattern_id": "P4"
+    },
+    {
+      "keyword": "ai influencer rates",
+      "pattern_id": "P5",
+      "pattern_name": "Pricing, rates, ROI",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_studio",
+        "angle": "Cost-down lever: more content output per campaign budget with Alici AI."
+      }
+    },
+    {
+      "keyword": "virtual influencer cost",
+      "pattern_id": "P5",
+      "pattern_name": "Pricing, rates, ROI",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_studio",
+        "angle": "Cost-down lever: more content output per campaign budget with Alici AI."
+      }
+    },
+    {
+      "keyword": "ai influencer pricing",
+      "pattern_id": "P5",
+      "pattern_name": "Pricing, rates, ROI",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_studio",
+        "angle": "Cost-down lever: more content output per campaign budget with Alici AI."
+      }
+    },
+    {
+      "keyword": "virtual influencer pricing",
+      "pattern_id": "P5",
+      "pattern_name": "Pricing, rates, ROI",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_studio",
+        "angle": "Cost-down lever: more content output per campaign budget with Alici AI."
+      }
+    },
+    {
+      "keyword": "ai influencer rates tiktok",
+      "pattern_id": "P5"
+    },
+    {
+      "keyword": "virtual influencer cost tiktok",
+      "pattern_id": "P5"
+    },
+    {
+      "keyword": "ai influencer rates instagram reels",
+      "pattern_id": "P5"
+    },
+    {
+      "keyword": "virtual influencer cost instagram reels",
+      "pattern_id": "P5"
+    },
+    {
+      "keyword": "ai influencer rates youtube shorts",
+      "pattern_id": "P5"
+    },
+    {
+      "keyword": "virtual influencer cost youtube shorts",
+      "pattern_id": "P5"
+    },
+    {
+      "keyword": "ai influencer disclosure",
+      "pattern_id": "P6",
+      "pattern_name": "Disclosure, legal, ethics",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "script_to_video",
+        "angle": "Safe-by-design disclosure templates + compliant scripts."
+      }
+    },
+    {
+      "keyword": "virtual influencer disclosure",
+      "pattern_id": "P6",
+      "pattern_name": "Disclosure, legal, ethics",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "script_to_video",
+        "angle": "Safe-by-design disclosure templates + compliant scripts."
+      }
+    },
+    {
+      "keyword": "is ai influencer legal",
+      "pattern_id": "P6",
+      "pattern_name": "Disclosure, legal, ethics",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "script_to_video",
+        "angle": "Safe-by-design disclosure templates + compliant scripts."
+      }
+    },
+    {
+      "keyword": "ai influencer ethics",
+      "pattern_id": "P6",
+      "pattern_name": "Disclosure, legal, ethics",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "script_to_video",
+        "angle": "Safe-by-design disclosure templates + compliant scripts."
+      }
+    },
+    {
+      "keyword": "ai influencer disclosure tiktok",
+      "pattern_id": "P6"
+    },
+    {
+      "keyword": "virtual influencer disclosure tiktok",
+      "pattern_id": "P6"
+    },
+    {
+      "keyword": "ai influencer disclosure instagram reels",
+      "pattern_id": "P6"
+    },
+    {
+      "keyword": "virtual influencer disclosure instagram reels",
+      "pattern_id": "P6"
+    },
+    {
+      "keyword": "ai influencer disclosure youtube shorts",
+      "pattern_id": "P6"
+    },
+    {
+      "keyword": "virtual influencer disclosure youtube shorts",
+      "pattern_id": "P6"
+    },
+    {
+      "keyword": "ai influencer on instagram",
+      "pattern_id": "P7",
+      "pattern_name": "Platforms: Instagram / TikTok",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "video_prompt",
+        "angle": "Generate platform-native formats + cadences with Alici AI."
+      }
+    },
+    {
+      "keyword": "virtual influencer instagram strategy",
+      "pattern_id": "P7",
+      "pattern_name": "Platforms: Instagram / TikTok",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "video_prompt",
+        "angle": "Generate platform-native formats + cadences with Alici AI."
+      }
+    },
+    {
+      "keyword": "virtual influencer tiktok",
+      "pattern_id": "P7",
+      "pattern_name": "Platforms: Instagram / TikTok",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "video_prompt",
+        "angle": "Generate platform-native formats + cadences with Alici AI."
+      }
+    },
+    {
+      "keyword": "ai influencer on instagram tiktok",
+      "pattern_id": "P7"
+    },
+    {
+      "keyword": "virtual influencer instagram strategy tiktok",
+      "pattern_id": "P7"
+    },
+    {
+      "keyword": "ai influencer on instagram instagram reels",
+      "pattern_id": "P7"
+    },
+    {
+      "keyword": "virtual influencer instagram strategy instagram reels",
+      "pattern_id": "P7"
+    },
+    {
+      "keyword": "ai influencer on instagram youtube shorts",
+      "pattern_id": "P7"
+    },
+    {
+      "keyword": "virtual influencer instagram strategy youtube shorts",
+      "pattern_id": "P7"
+    },
+    {
+      "keyword": "ai avatar spokesperson vs ai influencer",
+      "pattern_id": "P8",
+      "pattern_name": "AI avatar vs AI influencer",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "script_to_video",
+        "angle": "Clarify positioning via comparison templates + workflows."
+      }
+    },
+    {
+      "keyword": "ai avatar vs virtual influencer",
+      "pattern_id": "P8",
+      "pattern_name": "AI avatar vs AI influencer",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "script_to_video",
+        "angle": "Clarify positioning via comparison templates + workflows."
+      }
+    },
+    {
+      "keyword": "ai spokesperson avatar",
+      "pattern_id": "P8",
+      "pattern_name": "AI avatar vs AI influencer",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "script_to_video",
+        "angle": "Clarify positioning via comparison templates + workflows."
+      }
+    },
+    {
+      "keyword": "avatar influencer",
+      "pattern_id": "P8",
+      "pattern_name": "AI avatar vs AI influencer",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "script_to_video",
+        "angle": "Clarify positioning via comparison templates + workflows."
+      }
+    },
+    {
+      "keyword": "ai avatar spokesperson vs ai influencer tiktok",
+      "pattern_id": "P8"
+    },
+    {
+      "keyword": "ai avatar vs virtual influencer tiktok",
+      "pattern_id": "P8"
+    },
+    {
+      "keyword": "ai avatar spokesperson vs ai influencer instagram reels",
+      "pattern_id": "P8"
+    },
+    {
+      "keyword": "ai avatar vs virtual influencer instagram reels",
+      "pattern_id": "P8"
+    },
+    {
+      "keyword": "ai avatar spokesperson vs ai influencer youtube shorts",
+      "pattern_id": "P8"
+    },
+    {
+      "keyword": "ai avatar vs virtual influencer youtube shorts",
+      "pattern_id": "P8"
+    },
+    {
+      "keyword": "ai influencer prompts",
+      "pattern_id": "P9",
+      "pattern_name": "Prompts & content workflow",
+      "product_mapping": {
+        "primary": "video_prompt",
+        "secondary": "video_studio",
+        "angle": "Ship prompt packs + calendars for batch production."
+      }
+    },
+    {
+      "keyword": "ai influencer content workflow",
+      "pattern_id": "P9",
+      "pattern_name": "Prompts & content workflow",
+      "product_mapping": {
+        "primary": "video_prompt",
+        "secondary": "video_studio",
+        "angle": "Ship prompt packs + calendars for batch production."
+      }
+    },
+    {
+      "keyword": "ai influencer content calendar",
+      "pattern_id": "P9",
+      "pattern_name": "Prompts & content workflow",
+      "product_mapping": {
+        "primary": "video_prompt",
+        "secondary": "video_studio",
+        "angle": "Ship prompt packs + calendars for batch production."
+      }
+    },
+    {
+      "keyword": "virtual influencer content ideas",
+      "pattern_id": "P9",
+      "pattern_name": "Prompts & content workflow",
+      "product_mapping": {
+        "primary": "video_prompt",
+        "secondary": "video_studio",
+        "angle": "Ship prompt packs + calendars for batch production."
+      }
+    },
+    {
+      "keyword": "ai influencer prompts tiktok",
+      "pattern_id": "P9"
+    },
+    {
+      "keyword": "ai influencer content workflow tiktok",
+      "pattern_id": "P9"
+    },
+    {
+      "keyword": "ai influencer prompts instagram reels",
+      "pattern_id": "P9"
+    },
+    {
+      "keyword": "ai influencer content workflow instagram reels",
+      "pattern_id": "P9"
+    },
+    {
+      "keyword": "ai influencer prompts youtube shorts",
+      "pattern_id": "P9"
+    },
+    {
+      "keyword": "ai influencer content workflow youtube shorts",
+      "pattern_id": "P9"
+    },
+    {
+      "keyword": "monetize ai influencer",
+      "pattern_id": "P10",
+      "pattern_name": "Monetization & brand deals",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_studio",
+        "angle": "Offer-driven scripts + pitch assets generated with Alici AI."
+      }
+    },
+    {
+      "keyword": "virtual influencer sponsorships",
+      "pattern_id": "P10",
+      "pattern_name": "Monetization & brand deals",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_studio",
+        "angle": "Offer-driven scripts + pitch assets generated with Alici AI."
+      }
+    },
+    {
+      "keyword": "ai influencer affiliate",
+      "pattern_id": "P10",
+      "pattern_name": "Monetization & brand deals",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_studio",
+        "angle": "Offer-driven scripts + pitch assets generated with Alici AI."
+      }
+    },
+    {
+      "keyword": "monetize ai influencer tiktok",
+      "pattern_id": "P10"
+    },
+    {
+      "keyword": "ai influencer brand deals tiktok",
+      "pattern_id": "P10"
+    },
+    {
+      "keyword": "monetize ai influencer instagram reels",
+      "pattern_id": "P10"
+    },
+    {
+      "keyword": "ai influencer brand deals instagram reels",
+      "pattern_id": "P10"
+    },
+    {
+      "keyword": "monetize ai influencer youtube shorts",
+      "pattern_id": "P10"
+    },
+    {
+      "keyword": "ai influencer brand deals youtube shorts",
+      "pattern_id": "P10"
+    },
+    {
+      "keyword": "best ai influencer tools",
+      "pattern_id": "P11",
+      "pattern_name": "Tool comparisons",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "video_prompt",
+        "angle": "Tool-showdown content mapped to Alici AI features."
+      }
+    },
+    {
+      "keyword": "virtual influencer tools",
+      "pattern_id": "P11",
+      "pattern_name": "Tool comparisons",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "video_prompt",
+        "angle": "Tool-showdown content mapped to Alici AI features."
+      }
+    },
+    {
+      "keyword": "ai influencer generator tools",
+      "pattern_id": "P11",
+      "pattern_name": "Tool comparisons",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "video_prompt",
+        "angle": "Tool-showdown content mapped to Alici AI features."
+      }
+    },
+    {
+      "keyword": "ai model generator tools",
+      "pattern_id": "P11",
+      "pattern_name": "Tool comparisons",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "video_prompt",
+        "angle": "Tool-showdown content mapped to Alici AI features."
+      }
+    },
+    {
+      "keyword": "best ai influencer tools tiktok",
+      "pattern_id": "P11"
+    },
+    {
+      "keyword": "virtual influencer tools tiktok",
+      "pattern_id": "P11"
+    },
+    {
+      "keyword": "best ai influencer tools instagram reels",
+      "pattern_id": "P11"
+    },
+    {
+      "keyword": "virtual influencer tools instagram reels",
+      "pattern_id": "P11"
+    },
+    {
+      "keyword": "best ai influencer tools youtube shorts",
+      "pattern_id": "P11"
+    },
+    {
+      "keyword": "virtual influencer tools youtube shorts",
+      "pattern_id": "P11"
+    },
+    {
+      "keyword": "ai influencer vs virtual influencer",
+      "pattern_id": "P12",
+      "pattern_name": "AI influencer vs virtual influencer",
+      "product_mapping": {
+        "primary": "video_prompt",
+        "secondary": "video_studio",
+        "angle": "Own the definition space with an AEO-first explainer."
+      }
+    },
+    {
+      "keyword": "virtual influencer vs ai influencer",
+      "pattern_id": "P12",
+      "pattern_name": "AI influencer vs virtual influencer",
+      "product_mapping": {
+        "primary": "video_prompt",
+        "secondary": "video_studio",
+        "angle": "Own the definition space with an AEO-first explainer."
+      }
+    },
+    {
+      "keyword": "synthetic influencer",
+      "pattern_id": "P12",
+      "pattern_name": "AI influencer vs virtual influencer",
+      "product_mapping": {
+        "primary": "video_prompt",
+        "secondary": "video_studio",
+        "angle": "Own the definition space with an AEO-first explainer."
+      }
+    },
+    {
+      "keyword": "digital influencer ai",
+      "pattern_id": "P12",
+      "pattern_name": "AI influencer vs virtual influencer",
+      "product_mapping": {
+        "primary": "video_prompt",
+        "secondary": "video_studio",
+        "angle": "Own the definition space with an AEO-first explainer."
+      }
+    },
+    {
+      "keyword": "ai influencer vs virtual influencer tiktok",
+      "pattern_id": "P12"
+    },
+    {
+      "keyword": "virtual influencer vs ai influencer tiktok",
+      "pattern_id": "P12"
+    },
+    {
+      "keyword": "ai influencer vs virtual influencer instagram reels",
+      "pattern_id": "P12"
+    },
+    {
+      "keyword": "virtual influencer vs ai influencer instagram reels",
+      "pattern_id": "P12"
+    },
+    {
+      "keyword": "ai influencer vs virtual influencer youtube shorts",
+      "pattern_id": "P12"
+    },
+    {
+      "keyword": "virtual influencer vs ai influencer youtube shorts",
+      "pattern_id": "P12"
+    }
+  ]
+}

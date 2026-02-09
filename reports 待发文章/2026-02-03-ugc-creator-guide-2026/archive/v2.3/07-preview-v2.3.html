@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Become a UGC Creator in 2026: Step-by-Step Guide (v2.3 Preview)</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --text-secondary: #555;
+    --accent: #0d9488;
+    --accent-light: #ccfbf1;
+    --border: #e5e7eb;
+    --code-bg: #f3f4f6;
+    --blockquote-bg: #f0fdfa;
+    --blockquote-border: #14b8a6;
+    --table-header: #f9fafb;
+    --cta-bg: #0d9488;
+    --cta-hover: #0f766e;
+    --tag-bg: #e0f2fe;
+    --tag-text: #0369a1;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.7;
+    font-size: 17px;
+  }
+  /* Version badge */
+  .version-bar {
+    background: var(--accent);
+    color: white;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  /* Hero */
+  .hero {
+    position: relative;
+    overflow: hidden;
+  }
+  .hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  /* Article container */
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  /* Author bar */
+  .author-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+  }
+  .author-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .author-info { flex: 1; }
+  .author-name { font-weight: 600; font-size: 15px; }
+  .author-role { font-size: 13px; color: var(--text-secondary); }
+  .author-date { font-size: 12px; color: var(--text-secondary); margin-top: 2px; }
+  /* Disclosure */
+  .disclosure {
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #92400e;
+    margin-bottom: 32px;
+    line-height: 1.5;
+  }
+  /* Tags */
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 28px; }
+  .tag {
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-weight: 500;
+  }
+  /* Typography */
+  h1 {
+    font-size: 2.2em;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 32px 0 16px;
+    letter-spacing: -0.02em;
+  }
+  h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 48px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent);
+    letter-spacing: -0.01em;
+  }
+  h3 {
+    font-size: 1.15em;
+    font-weight: 600;
+    margin: 28px 0 12px;
+    color: var(--text);
+  }
+  p { margin-bottom: 16px; }
+  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; }
+  a:hover { border-bottom-color: var(--accent); }
+  strong { font-weight: 600; }
+  hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+  /* Lists */
+  ul, ol { margin: 0 0 16px 24px; }
+  li { margin-bottom: 6px; }
+  li p { margin-bottom: 4px; }
+  /* Key Takeaways */
+  .key-takeaways {
+    background: var(--accent-light);
+    border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: 20px 24px;
+    margin: 24px 0;
+  }
+  .key-takeaways h2 { border: none; margin: 0 0 12px; padding: 0; font-size: 1.2em; }
+  .key-takeaways ul { margin-bottom: 0; }
+  .key-takeaways li { margin-bottom: 8px; }
+  /* Blockquote */
+  blockquote {
+    background: var(--blockquote-bg);
+    border-left: 4px solid var(--blockquote-border);
+    padding: 16px 20px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.95em;
+  }
+  blockquote p { margin-bottom: 0; }
+  /* Citable blocks */
+  .citable-block {
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: 20px 24px;
+    margin: 20px 0;
+  }
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.92em;
+  }
+  th, td {
+    padding: 10px 14px;
+    text-align: left;
+    border: 1px solid var(--border);
+  }
+  th {
+    background: var(--table-header);
+    font-weight: 600;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  tr:nth-child(even) { background: #fafafa; }
+  /* Code blocks */
+  pre {
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    overflow-x: auto;
+    margin: 16px 0;
+    font-size: 0.88em;
+    line-height: 1.6;
+  }
+  code {
+    font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+    font-size: 0.9em;
+  }
+  /* Video */
+  .video-container {
+    margin: 24px 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .video-container video {
+    width: 100%;
+    display: block;
+  }
+  /* CTAs */
+  .cta-block {
+    display: block;
+    background: var(--cta-bg);
+    color: white !important;
+    text-align: center;
+    padding: 16px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1em;
+    margin: 12px 0;
+    text-decoration: none;
+    border: none;
+    transition: background 0.2s;
+  }
+  .cta-block:hover { background: var(--cta-hover); border: none; }
+  .cta-block small { display: block; font-weight: 400; font-size: 0.82em; margin-top: 4px; opacity: 0.9; }
+  /* Sources */
+  .sources { font-size: 0.85em; color: var(--text-secondary); }
+  .sources a { color: var(--text-secondary); font-size: 0.95em; }
+  .sources li { margin-bottom: 4px; word-break: break-all; }
+  /* Footer */
+  .footer-cta {
+    background: linear-gradient(135deg, #0d9488, #0891b2);
+    color: white;
+    border-radius: 12px;
+    padding: 32px;
+    margin: 40px 0;
+    text-align: center;
+  }
+  .footer-cta h2 { color: white; border: none; margin: 0 0 12px; }
+  .footer-cta p { color: rgba(255,255,255,0.9); margin-bottom: 20px; }
+  .footer-cta .cta-block { background: white; color: var(--accent) !important; }
+  .footer-cta .cta-block:hover { background: #f0fdfa; }
+  /* Mistakes list */
+  .mistakes-list { counter-reset: mistakes; list-style: none; margin-left: 0; }
+  .mistakes-list li {
+    counter-increment: mistakes;
+    padding: 10px 14px 10px 48px;
+    position: relative;
+    border-bottom: 1px solid var(--border);
+  }
+  .mistakes-list li::before {
+    content: counter(mistakes);
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #fee2e2;
+    color: #dc2626;
+    font-weight: 700;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* FAQ */
+  .faq-item { margin-bottom: 24px; }
+  .faq-item h3 { color: var(--accent); margin-bottom: 8px; }
+  /* Responsive */
+  @media (max-width: 640px) {
+    body { font-size: 16px; }
+    h1 { font-size: 1.7em; }
+    .container { padding: 0 16px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="version-bar">PREVIEW &mdash; v2.3 &mdash; 2026-02-04 &mdash; ~3,500 words</div>
+
+<!-- Hero Cover -->
+<div class="hero">
+  <img src="images/Cover%20How%20to%20Become%20a%20UGC%20Creator%20in%202026-Full%20Guide.png" alt="Traditional UGC production ($50K) vs AI-powered UGC creation ($500) &mdash; 95% cost reduction with climbing performance metrics">
+</div>
+
+<div class="container">
+
+<!-- Title -->
+<h1>How to Become a UGC Creator in 2026: Step-by-Step Guide</h1>
+
+<!-- Author -->
+<div class="author-bar">
+  <div class="author-avatar">ER</div>
+  <div class="author-info">
+    <div class="author-name">Elena Rossi</div>
+    <div class="author-role">UGC Creator &amp; AI Workflow Specialist</div>
+    <div class="author-date">Published Feb 3, 2026 &middot; Updated Feb 4, 2026</div>
+  </div>
+</div>
+
+<!-- Tags -->
+<div class="tags">
+  <span class="tag">ugc creator</span>
+  <span class="tag">ugc ads</span>
+  <span class="tag">ai ugc</span>
+  <span class="tag">short-form video</span>
+  <span class="tag">creator economy</span>
+  <span class="tag">spark ads</span>
+  <span class="tag">ai ugc ads</span>
+  <span class="tag">tiktok</span>
+  <span class="tag">instagram reels</span>
+  <span class="tag">compliance</span>
+</div>
+
+<!-- Key Takeaways -->
+<div class="key-takeaways">
+<h2>Key Takeaways</h2>
+<ul>
+  <li><strong>Three creator tracks</strong> in 2026: Phone-First (traditional filming), AI-Assisted (AI scripts + human filming), and Fully AI-Generated (end-to-end AI production)</li>
+  <li>A <strong>5-video starter portfolio</strong> you can build regardless of which track you choose</li>
+  <li>A <strong>starter offer menu</strong> (3 packages with track-specific pricing benchmarks)</li>
+  <li>A <strong>pitch kit</strong> (DM + email templates that position your AI workflow as a strength)</li>
+  <li>A <strong>delivery + iteration system</strong> (brief &rarr; script &rarr; shot list &rarr; variants &rarr; delivery checklist)</li>
+  <li>A <strong>usage-rights checklist</strong> (so you don't give away paid ad licensing for free)</li>
+  <li>A <strong>2026 compliance overview</strong>: FTC, EU AI Act, and platform-specific disclosure rules</li>
+</ul>
+</div>
+
+<!-- Quick Answer -->
+<h2>Quick Answer</h2>
+<p>To become a UGC creator in 2026, pick one of three tracks&mdash;phone-first, AI-assisted, or fully AI-generated&mdash;then build a 5-video portfolio, package 3 starter bundles, and pitch brands with one concept per video. The key shift: AI tools now let creators produce more variants faster, but transparency and compliance separate professionals from amateurs.</p>
+
+<p>I started as a phone-first creator in 2024 filming product demos in my kitchen. Within six months I was using AI tools to script, storyboard, and produce 3x the volume&mdash;without losing the authentic feel brands hired me for. This guide is the exact system I built along the way.</p>
+
+<hr>
+
+<!-- Trust Paradox -->
+<h2>The UGC Trust Paradox: Why 2026 Changes Everything</h2>
+
+<div class="citable-block">
+<p><strong>The UGC Trust Paradox</strong>: AI can now generate the majority of marketing content, yet consumers trust user-generated content more than any other format. The tension&mdash;90% of online content projected to be AI-generated by 2025-2026 (Nina Schick, "Deepfakes"), while <strong>79% of consumers</strong> say UGC highly impacts their purchasing decisions (Stackla, 2021), and deepfake detection tools fail over <strong>50% of the time</strong> (University of London, 2023)&mdash;creates both the biggest opportunity and the biggest risk for UGC creators in 2026.</p>
+</div>
+
+<p>The resolution: <strong>AI is the how, not the what.</strong> Creators who use AI transparently&mdash;disclosing AI involvement where required&mdash;will outcompete those who avoid AI entirely or hide its use.</p>
+
+<!-- Video embed -->
+<div class="video-container">
+  <video controls poster="images/Cover%20How%20to%20Become%20a%20UGC%20Creator%20in%202026-Full%20Guide.png">
+    <source src="images/why-ai-ugc-matters-case-0.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<p>Here's why the shift matters: traditional UGC is expensive to scale. Creator fees, product shipping, coordination overhead, revision rounds, and unusable takes all add up. AI-generated UGC cuts production costs by an estimated <strong>70-90%</strong> (InVideo, 2025) by eliminating most of those bottlenecks. But fully synthetic content triggers the trust loss described above&mdash;viewers can tell, and platforms flag it. That's the paradox in action. The solution is a spectrum: Track 2 (AI-assisted, human on camera) to Track 3 (fully AI-generated at scale). An AI-generated UGC ad looks like a real person reviewing a product&mdash;same talking-head framing, same casual tone&mdash;but produced without scheduling a creator, shipping product, or waiting for revisions. We break down how each track works below.</p>
+
+<p>The numbers confirm the opportunity: search interest for "UGC creator" has grown <strong>8,700%+</strong> since 2021 (Google Trends), the creator economy is projected to reach <strong>$480B by 2027</strong> (Goldman Sachs, 2023), and <strong>84% of marketing teams</strong> now use AI in content creation (HubSpot, 2025).</p>
+
+<blockquote><p><strong>Quick Start</strong>: Already know you want the AI-assisted track? <a href="https://app.alici.ai/chat?agent_id=alici_anyscript2video_zo7ayx">Start generating UGC scripts with Alici's script-to-video workflow &rarr;</a></p></blockquote>
+
+<hr>
+
+<!-- UGC Definition -->
+<h2>What Is a UGC Creator? (UGC vs Influencer in 2026)</h2>
+
+<div class="citable-block">
+<p>A <strong>UGC creator</strong> is a creator hired to produce user-generated-content-style deliverables&mdash;short-form videos, photos, or ad creatives&mdash;for brands. Unlike influencers, UGC creators sell <strong>content assets</strong>, not audience reach. You don't need followers to start. In 2026, the line blurs because AI tools let a single creator produce content that previously required a small team&mdash;but the business model stays the same: you're paid for deliverables, not distribution.</p>
+</div>
+
+<p>This is why UGC creators exist as a standalone category: platforms like TikTok Spark Ads let brands turn creator content directly into paid ads&mdash;keeping the original likes, shares, and comments&mdash;making authentic-feeling video the most valuable ad format.</p>
+
+<table>
+<thead><tr><th>Factor</th><th>UGC Creator</th><th>Influencer</th></tr></thead>
+<tbody>
+<tr><td>What you sell</td><td>Video assets brands can use</td><td>Audience access + posts</td></tr>
+<tr><td>Pricing</td><td>~$150-500/video (Billo)</td><td>$200-1,000+/post (varies)</td></tr>
+<tr><td>Best for</td><td>Conversion creative, A/B testing</td><td>Awareness, launches</td></tr>
+<tr><td>AI impact</td><td>Speeds up scripting + variants</td><td>Helps captions + editing</td></tr>
+</tbody>
+</table>
+
+<hr>
+
+<!-- Three-Track Model -->
+<h2>The Three-Track Model: Choose Your 2026 Creator Path</h2>
+
+<div class="citable-block">
+<p>The <strong>Three-Track Model</strong> defines three UGC creator paths in 2026: <strong>Track 1 (Phone-First)</strong> uses traditional phone filming at $150-300/video; <strong>Track 2 (AI-Assisted)</strong> combines AI-generated scripts and storyboards with human filming at $200-500/video plus faster turnaround; <strong>Track 3 (Fully AI-Generated)</strong> uses end-to-end AI production at $100-250/video but at 5x the volume. Most beginners start on Track 1 or 2 and add tracks as they grow.</p>
+</div>
+
+<h3>Track 1: Phone-First (Traditional)</h3>
+<ul>
+  <li>You film everything on your phone (camera + CapCut or similar)</li>
+  <li>Best for: hands-on, authentic content; <strong>$150-300/video</strong></li>
+  <li>No AI dependency &mdash; this is the credibility foundation</li>
+</ul>
+
+<h3>Track 2: AI-Assisted (Hybrid)</h3>
+<ul>
+  <li>AI generates scripts + shot lists (<a href="https://app.alici.ai/chat?agent_id=alici_anyscript2video_zo7ayx">Alici script-to-video</a>) &mdash; you film yourself</li>
+  <li>Best for: faster production without losing the human element; <strong>$200-500/video</strong></li>
+  <li>Natural AI entry point: you control the creative, AI handles repetitive parts</li>
+</ul>
+
+<h3>Track 3: Fully AI-Generated (Scale Play)</h3>
+<ul>
+  <li>End-to-end AI production: <a href="https://app.alici.ai/chat?agent_id=alici_anyscript2video_zo7ayx">Alici's script-to-video workflow</a> handles the full pipeline&mdash;script, storyboard, multi-scene video&mdash;in one prompt, while <a href="https://app.alici.ai/pages/videoGen">Video Studio</a> gives model-by-model control</li>
+  <li>Best for: volume (6-12 variants per campaign); <strong>$100-250/video at 5x output</strong></li>
+  <li>Requires AI disclosure in most jurisdictions (see Compliance below)</li>
+</ul>
+
+<h3>Which Track to Start With</h3>
+<table>
+<thead><tr><th>If you...</th><th>Start with</th></tr></thead>
+<tbody>
+<tr><td>Have zero experience</td><td>Track 1 (build filming skills first)</td></tr>
+<tr><td>Already make content</td><td>Track 2 (AI scripts speed up your workflow)</td></tr>
+<tr><td>Sell to performance marketers</td><td>Track 2 or 3 (they need volume for A/B testing)</td></tr>
+<tr><td>Want maximum output per hour</td><td>Track 3 (end-to-end AI = 5x more output)</td></tr>
+<tr><td>Aren't sure</td><td>Track 1 &rarr; Track 2 (film 5 manually, then try AI scripts)</td></tr>
+</tbody>
+</table>
+
+<hr>
+
+<!-- Step 1 -->
+<h2>Step 1 &mdash; Build Your Portfolio (Even With Zero Clients)</h2>
+
+<p>Your portfolio is proof you can ship content. Track doesn't matter at this stage&mdash;brands want to see finished work.</p>
+
+<p>When I built my first portfolio, I used products I already had at home&mdash;a skincare routine, a desk lamp, a meal prep kit. None of the brands were paying me yet. But those five videos landed my first two clients within three weeks.</p>
+
+<h3>The 5 Portfolio Videos (copy this list)</h3>
+<p>Build <strong>5 videos</strong> in your first week:</p>
+<ol>
+  <li><strong>Hook + demo</strong> (product): "I didn't expect this to work, but..."</li>
+  <li><strong>Problem &rarr; solution</strong> (product): "If you struggle with ___, try this."</li>
+  <li><strong>Before/after</strong> (product): show a visible change (same lighting)</li>
+  <li><strong>App walkthrough</strong> (service/app): screen record + talking head</li>
+  <li><strong>Comparison</strong> (service/app): option A vs B vs "what I use"</li>
+</ol>
+
+<h3>How Each Track Builds the Portfolio</h3>
+<ul>
+  <li><strong>Track 1</strong>: Film all 5 on your phone. Use products you already own.</li>
+  <li><strong>Track 2</strong>: Use <a href="https://app.alici.ai/chat?agent_id=alici_anyscript2video_zo7ayx">Alici script-to-video</a> to generate scripts + shot lists, then film yourself following them.</li>
+  <li><strong>Track 3</strong>: Generate all 5 as AI video drafts with <a href="https://app.alici.ai/pages/videoGen">Alici Video Studio</a>, then refine the top 3 manually.</li>
+</ul>
+
+<h3>Portfolio Rules</h3>
+<ul>
+  <li><strong>Audio clarity</strong> beats camera quality</li>
+  <li>One clear promise in the first second</li>
+  <li>Captions on every video</li>
+  <li>Consistent setup (same light + background)</li>
+</ul>
+
+<h3>Where to Host It</h3>
+<ul>
+  <li>One-page site (best) / Notion portfolio (fast) / Google Drive folder (acceptable for first clients)</li>
+  <li>Include: 5 videos, your lane statement, deliverables list, contact link</li>
+</ul>
+
+<hr>
+
+<!-- Step 2 -->
+<h2>Step 2 &mdash; Master the UGC Script Formula</h2>
+
+<p>Every UGC video follows the same structure. Once you internalize this, you can produce scripts in minutes&mdash;or let AI generate them and edit for quality.</p>
+
+<h3>6-Block UGC Script Template (copy/paste)</h3>
+<pre><code>1) Hook (0-2s): one clear promise
+2) Problem (2-5s): name the pain
+3) Mechanism (5-10s): what it does / how it works (no fake claims)
+4) Demo (10-20s): show it, don't tell
+5) Proof (20-25s): real detail (feature, routine, constraint)
+6) CTA (last 2-3s): one action</code></pre>
+
+<h3>AI Script Generation (Track 2 &amp; 3)</h3>
+<p>Feed your product brief into <a href="https://app.alici.ai/chat?agent_id=alici_anyscript2video_zo7ayx">Alici's script-to-video workflow</a>: input product name + audience + key benefit &rarr; get back a 6-block script + shot list + storyboard &rarr; edit for voice and accuracy &rarr; film (Track 2) or generate video (Track 3).</p>
+
+<p>Test multiple versions with different hooks or captions, then scale what performs&mdash;this is also TikTok's official creative testing recommendation (TikTok Ad Creative Guide).</p>
+
+<h3>10-Shot List (copy/paste)</h3>
+<pre><code>1) Talking head hook (front camera)
+2) Product close-up (hands)
+3) "Use it" demo (medium shot)
+4) Texture/detail shot
+5) Before/after (same lighting)
+6) Benefit overlay (caption)
+7) Social proof (only if provided)
+8) FAQ answer clip (5s)
+9) CTA clip (product + text)
+10) Alternative hook variant</code></pre>
+
+<h3>UGC Brief Template (copy/paste)</h3>
+<pre><code>UGC BRIEF &mdash; [Brand] &mdash; [Product] &mdash; [Date]
+
+Goal:
+- Primary action (click / signup / purchase / install):
+
+Audience:
+- Who is this for?
+- Pain point / desire:
+
+Offer:
+- Core promise:
+- Proof points (ONLY what's true):
+
+Constraints:
+- Do-not-say claims:
+- Must-include:
+- Brand tone (3 adjectives):
+
+Deliverables:
+- # of videos:
+- Length (15s/30s/45s):
+- Format (TikTok/Reels/Shorts):
+- Captions style:
+
+Usage:
+- Organic only or paid usage? (if paid: duration + platforms)</code></pre>
+
+<hr>
+
+<!-- Step 3 -->
+<h2>Step 3 &mdash; Set Your Rates (2026 Pricing Benchmarks)</h2>
+
+<div class="citable-block">
+<p>UGC creator rates in 2026 range from <strong>$150-500 per video</strong> depending on track and scope. Track 1 (Phone-First) benchmarks at $150-300/video for production. Track 2 (AI-Assisted) commands $200-500/video because you deliver scripts, storyboards, and variants alongside the video. Track 3 (Fully AI-Generated) prices lower per unit ($100-250) but scales to 5x volume. In all cases, <strong>usage rights are quoted separately</strong>&mdash;this is the most important pricing principle for new creators.</p>
+</div>
+
+<p>I learned this the hard way: my first three projects, I quoted a flat rate with no usage-rights line. One brand ran my video as a paid ad for four months. After that, I separated creation fees from usage rights on every quote&mdash;and my effective rate doubled.</p>
+
+<h3>Package A &mdash; Single Video</h3>
+<ul>
+  <li>1x 15-30s UGC video</li>
+  <li>1 hook style (your choice)</li>
+  <li>1 round of revisions (script-level)</li>
+</ul>
+
+<h3>Package B &mdash; 3-Video Bundle (best starter offer)</h3>
+<ul>
+  <li>3x 15-30s UGC videos</li>
+  <li>3 different hooks</li>
+  <li>1 round of revisions per script</li>
+</ul>
+
+<h3>Package C &mdash; 5-Video Bundle (iteration package)</h3>
+<ul>
+  <li>5x 15-30s UGC videos</li>
+  <li>5 hook variants</li>
+  <li>Deliverables pack (script + shot list + captions)</li>
+</ul>
+
+<h3>Track-Specific Pricing</h3>
+<ul>
+  <li><strong>Track 1</strong>: Price based on production time</li>
+  <li><strong>Track 2</strong>: Price higher&mdash;you deliver script + storyboard + video. AI workflow is a value-add, not a discount</li>
+  <li><strong>Track 3</strong>: Price per campaign, not per video. Sell "12 variants in 1 week" instead of "$100/video"</li>
+</ul>
+
+<h3>Usage Rights (beginner-safe line)</h3>
+<blockquote><p>Pricing above covers content creation. Usage rights (ads/whitelisting/extended licensing) are quoted separately.</p></blockquote>
+<p>This single line prevents the most common beginner mistake: accidentally granting unlimited usage for free.</p>
+<blockquote><p>Not legal advice: usage rights language varies by platform and contract. If you're unsure, review with counsel.</p></blockquote>
+
+<h3>Usage-Rights Checklist (copy/paste)</h3>
+<pre><code>USAGE RIGHTS CHECKLIST (not legal advice)
+
+1) Where can the brand use the content?
+- [ ] Organic only (brand socials, email, website)
+- [ ] Paid ads (Meta, TikTok, YouTube, etc.)
+
+2) How long?
+- [ ] 30 days / 90 days / 6 months / 12 months / perpetual
+
+3) What platforms + placements?
+- [ ] TikTok / Reels / Shorts
+- [ ] Feed / Stories / Spark Ads / Partnership ads / Whitelisting (if applicable)
+
+4) Usage scope
+- [ ] Single campaign only
+- [ ] Any future campaigns
+- [ ] Global / specific regions
+
+5) Creator account usage
+- [ ] Allowlisting / whitelisting requested? (yes/no)
+
+6) Exclusivity
+- [ ] Category exclusivity (yes/no) + duration
+
+7) Deliverables + source files
+- [ ] Raw footage included? (yes/no)
+- [ ] Project files included? (yes/no)
+
+8) Revisions
+- [ ] Script revisions: ___ rounds
+- [ ] Edit revisions: ___ rounds
+
+9) Disclosure requirements
+- [ ] Sponsored / paid partnership labeling required (yes/no)</code></pre>
+
+<p style="font-size:0.85em;color:var(--text-secondary);">Sources: <a href="https://billo.app/blog/ugc-rates/">Billo (UGC rates)</a> &middot; <a href="https://billo.app/blog/ugc-usage-rights/">Billo (usage rights)</a></p>
+
+<hr>
+
+<!-- Step 4 -->
+<h2>Step 4 &mdash; Pitch Brands That Pay</h2>
+
+<p>Start conversations, not closes. Track 2/3 creators: lead with "I deliver scripts + video + 6 hook variants per campaign."</p>
+
+<p>My first 30 pitches got two replies. The difference was specificity: once I started sending a concrete hook concept instead of a generic portfolio link, my response rate went from ~7% to over 25%.</p>
+
+<h3>Who to Pitch</h3>
+<ul>
+  <li>Brands already running TikTok/Reels ads (they understand creative testing)</li>
+  <li>Brands with strong products but weak creator content</li>
+  <li>Apps that need walkthrough videos</li>
+</ul>
+
+<h3>Pitch DM Template</h3>
+<blockquote><p>Hey <strong>[name]</strong> &mdash; I'm a UGC creator focused on <strong>[lane]</strong>. I drafted a quick 15-30s concept for <strong>[brand]</strong> (hook + demo). If you're open, I can send the concept + a rough script. Where should I send it?</p></blockquote>
+
+<h3>Pitch Email Template (copy/paste)</h3>
+<p>Subject: UGC concept for <strong>[Brand]</strong> (15-30s)</p>
+<p>Hi <strong>[Name]</strong>,<br>I'm a UGC creator specializing in <strong>[lane]</strong> short-form videos for TikTok/Reels.</p>
+<p>I have 2 content concepts for <strong>[Brand]</strong>:<br>
+1) <strong>[Hook angle]</strong> &mdash; "I didn't expect this to..."<br>
+2) <strong>[Hook angle]</strong> &mdash; "If you struggle with..."</p>
+<p>I can send a 6-block script + a 10-shot list so your team can review quickly.<br>
+Portfolio: <strong>[link]</strong></p>
+<p>Best,<br><strong>[Your name]</strong></p>
+
+<hr>
+
+<!-- Step 5 -->
+<h2>Step 5 &mdash; Deliver, Iterate, Scale</h2>
+
+<h3>Deliverables Checklist (copy/paste)</h3>
+<pre><code>DELIVERABLES &mdash; [Brand] &mdash; [Date]
+
+Video files:
+- [ ] 1x final MP4 (1080x1920)
+- [ ] 1x captioned MP4 (burned-in)
+- [ ] 1x clean MP4 (no captions)
+
+Project notes:
+- [ ] Hook used (angle)
+- [ ] CTA used
+- [ ] Any claims made (confirm approved)
+
+Source files (optional):
+- [ ] captions file (.srt)
+- [ ] thumbnail frame(s)
+
+Licensing:
+- [ ] usage rights confirmed (organic vs paid, duration, platforms)</code></pre>
+
+<h3>The Iteration Loop (Sell Bundles, Not One-Offs)</h3>
+<p>The real money in UGC is iteration. Brands need variants for A/B testing:</p>
+<ol>
+  <li>Pick <strong>one angle</strong> &rarr; write <strong>10 hooks</strong> &rarr; choose the best 2-3</li>
+  <li>Write <strong>2-3 scripts</strong> &rarr; convert to <strong>shot lists</strong></li>
+  <li>Produce <strong>6-12 variants</strong> (hooks &times; edits &times; CTAs)</li>
+  <li>Deliver &rarr; learn from performance data &rarr; iterate</li>
+</ol>
+
+<p>TikTok's ad creative guide recommends refreshing creative every 2-4 weeks&mdash;even small updates like new hooks or captions can revive performance.</p>
+
+<p>On <strong>Track 2</strong>, use <a href="https://app.alici.ai/chat?agent_id=alici_anyscript2video_zo7ayx">Alici script-to-video</a> to generate hook variants in minutes. On <strong>Track 3</strong>, use <a href="https://app.alici.ai/chat?agent_id=alici_anyscript2video_zo7ayx">Alici's script-to-video workflow</a> to go from script to finished video in one prompt, or <a href="https://app.alici.ai/pages/videoGen">Video Studio</a> for model-by-model scene control.</p>
+
+<h3>Copy/Paste Testing Grid</h3>
+<pre><code>TESTING GRID (12 variants)
+- Hooks: A / B / C
+- Edits: Fast / Slow
+- CTAs: CTA1 / CTA2</code></pre>
+
+<hr>
+
+<!-- Compliance -->
+<h2>AI UGC Compliance in 2026: What Creators Must Know</h2>
+
+<div class="citable-block">
+<p>In 2026, UGC creators using AI tools must navigate three regulatory layers: <strong>US FTC rules</strong> (fines up to $51,744 per violation for undisclosed material connections, plus updated endorsement guidelines covering AI-generated content), the <strong>EU AI Act</strong> (requiring disclosure when content is AI-generated, effective August 2025), and <strong>China's CAC regulations</strong> (mandatory labeling of AI-generated or deepfake content since January 2023). Additionally, all major platforms&mdash;TikTok, Meta, and YouTube&mdash;now require AI-generated content labels.</p>
+</div>
+
+<h3>US: FTC Endorsement Guidelines</h3>
+<ul>
+  <li>Fines up to <strong>$51,744 per violation</strong> for undisclosed material connections</li>
+  <li>2023 updated guides explicitly address AI-generated reviews and testimonials</li>
+  <li><strong>Rule</strong>: if AI generated or substantially modified the content, disclose it</li>
+</ul>
+
+<h3>EU: AI Act</h3>
+<ul>
+  <li>Requires AI-generated content to be <strong>clearly labeled</strong> (phased implementation 2024-2026)</li>
+  <li>Applies to content visible to EU audiences, regardless of creator location</li>
+</ul>
+
+<h3>China: CAC Deep Synthesis Regulations</h3>
+<ul>
+  <li>Mandatory <strong>watermarking and labeling</strong> of AI-generated content (effective Jan 2023)</li>
+</ul>
+
+<h3>Platform Policies</h3>
+<table>
+<thead><tr><th>Platform</th><th>AI Disclosure Rule</th></tr></thead>
+<tbody>
+<tr><td><strong>TikTok</strong></td><td>Requires labeling AI-generated content + branded content toggle</td></tr>
+<tr><td><strong>Meta</strong></td><td>AI content labels rolling out; "Paid partnership" for sponsored</td></tr>
+<tr><td><strong>YouTube</strong></td><td>Must disclose "altered or synthetic content" in upload settings</td></tr>
+</tbody>
+</table>
+
+<h3>What This Means by Track</h3>
+<ul>
+  <li><strong>Track 1</strong>: standard sponsorship disclosure&mdash;nothing new</li>
+  <li><strong>Track 2</strong>: disclose AI scripting if platform requires it; always disclose paid partnerships</li>
+  <li><strong>Track 3</strong>: <strong>must disclose AI generation</strong> on all platforms and in most jurisdictions</li>
+</ul>
+
+<p><strong>Bottom line</strong>: transparency is not optional. Creators who disclose build more trust than those who get caught hiding it.</p>
+
+<hr>
+
+<!-- Common Mistakes -->
+<h2>Common Mistakes New UGC Creators Make</h2>
+<ol class="mistakes-list">
+  <li><strong>Prioritizing cinematic over clear</strong> &mdash; lighting + audio + captions matter more</li>
+  <li><strong>Five promises in one video</strong> &rarr; one video = one main promise</li>
+  <li><strong>No brief</strong> &rarr; use the brief template even for small jobs</li>
+  <li><strong>Unlimited usage rights for free</strong> &rarr; separate "creation" vs "usage" in writing</li>
+  <li><strong>No iteration system</strong> &rarr; sell bundles, not singles</li>
+  <li><strong>Hiding AI usage</strong> &rarr; transparency beats concealment. Platforms enforce AI disclosure (see Compliance above)</li>
+</ol>
+
+<hr>
+
+<!-- FAQ -->
+<h2>FAQ</h2>
+
+<div class="faq-item">
+<h3>Do I need followers to be a UGC creator?</h3>
+<p>No. UGC is about producing content brands can use. Some brands prefer a "real customer" vibe over influencer reach. Your portfolio matters more than your follower count.</p>
+</div>
+
+<div class="faq-item">
+<h3>What should I say about disclosures?</h3>
+<p>If content is sponsored, disclosures must be clear and not hidden. In the US, the FTC's endorsement guidance emphasizes clear disclosure when there's a "material connection." Start with "Paid partnership" or "Sponsored."</p>
+</div>
+
+<div class="faq-item">
+<h3>Should I use AI in my workflow?</h3>
+<p>AI can speed up script drafts, hook variants, storyboards, and multi-scene draft videos. Don't use AI to invent performance claims, fake testimonials, or mislead viewers. In 2026, "proof-first" content beats "hype-first" content. Tools range from multi-model platforms where you control each step to <a href="https://app.alici.ai/chat?agent_id=alici_anyscript2video_zo7ayx">script-to-video workflows</a> that handle the full UGC pipeline in one prompt.</p>
+</div>
+
+<div class="faq-item">
+<h3>What are "usage rights" in plain English?</h3>
+<p>It's permission for the brand to use your content beyond initial delivery&mdash;especially for paid ads or extended licensing. Clarify scope (organic vs paid), duration, and platforms.</p>
+</div>
+
+<div class="faq-item citable-block">
+<h3>How much can a UGC creator earn in 2026?</h3>
+<p>Rates vary by track and scope: Phone-First creators typically earn <strong>$150-300 per video</strong>, AI-Assisted creators command <strong>$200-500 per video</strong> (because they deliver scripts + variants alongside footage), and Fully AI-Generated creators price lower per unit ($100-250) but produce at <strong>5x the volume</strong>, earning more per campaign. Usage rights are always quoted separately and can double the base rate. According to Billo's market data, the median short-form UGC asset clusters around <strong>~$200</strong> per deliverable.</p>
+</div>
+
+<div class="faq-item">
+<h3>Is AI-generated UGC legal?</h3>
+<p>Yes, with disclosure. The FTC requires material connection disclosure, the EU AI Act requires labeling AI-generated content, and China's CAC mandates watermarking. Key rule: <strong>always disclose, never fabricate testimonials or false claims.</strong></p>
+</div>
+
+<div class="faq-item">
+<h3>Do brands accept AI-assisted portfolios?</h3>
+<p>Increasingly, yes. Performance teams value creators who deliver script + video + hook variants quickly. Position your AI workflow as a production advantage, not a shortcut.</p>
+</div>
+
+<div class="faq-item">
+<h3>What's the Trust Paradox in UGC?</h3>
+<p>The tension between AI generating most content and consumers trusting UGC most. The resolution: use AI transparently to produce more and better content. AI is the production method&mdash;trust comes from the creator behind it.</p>
+</div>
+
+<hr>
+
+<!-- Sources -->
+<h2>Sources</h2>
+<ul class="sources">
+  <li>Goldman Sachs (creator economy, 2023): <a href="https://www.goldmansachs.com/insights/articles/the-creator-economy-could-approach-half-a-trillion-dollars-by-2027">goldmansachs.com</a></li>
+  <li>HubSpot (State of Marketing 2026): <a href="https://blog.hubspot.com/marketing/hubspot-blog-marketing-industry-trends-report">blog.hubspot.com</a></li>
+  <li>Nielsen (trust, 2021): <a href="https://www.nielsen.com/insights/2021/beyond-martech-building-trust-with-consumers-and-engaging-where-sentiment-is-high/">nielsen.com</a></li>
+  <li>Stackla (UGC impact, 2021): <a href="https://stackla.com/resources/reports/bridging-the-gap-consumer-marketing-perspectives-on-content-in-the-digital-age/">stackla.com</a></li>
+  <li>Nina Schick, "Deepfakes" (AI content projection, 2020)</li>
+  <li>University of London (deepfake detection, 2023): <a href="https://www.city.ac.uk/news-and-events/news/2023/03/deepfake-detection-tools-fail-to-meet-expectations">city.ac.uk</a></li>
+  <li>Billo (UGC creator guide): <a href="https://billo.app/blog/ugc-content-creator/">billo.app</a></li>
+  <li>Billo (UGC rates): <a href="https://billo.app/blog/ugc-rates/">billo.app</a></li>
+  <li>Billo (usage rights): <a href="https://billo.app/blog/ugc-usage-rights/">billo.app</a></li>
+  <li>Shopify (influencer marketing): <a href="https://www.shopify.com/blog/influencer-marketing">shopify.com</a></li>
+  <li>FTC endorsements guidance: <a href="https://www.ftc.gov/business-guidance/advertising-marketing/endorsements-influencers-reviews">ftc.gov</a></li>
+  <li>EU AI Act: <a href="https://artificialintelligenceact.eu/">artificialintelligenceact.eu</a></li>
+  <li>China CAC regulations: <a href="http://www.cac.gov.cn/2022-12/11/c_1672221949354811.htm">cac.gov.cn</a></li>
+  <li>TikTok branded content: <a href="https://support.tiktok.com/en/business-and-creator/creator-and-business-accounts/branded-content-on-tiktok/">support.tiktok.com</a></li>
+  <li>TikTok policy: <a href="https://www.tiktok.com/legal/page/global/bc-policy/en">tiktok.com</a></li>
+  <li>InVideo (reference): <a href="https://invideo.io/blog/ai-ugc-strategy-guide/">invideo.io</a></li>
+  <li>InVideo (AI impact on UGC): <a href="https://invideo.io/blog/impact-of-ai-on-ugc/">invideo.io</a></li>
+  <li>TikTok Spark Ads 101: <a href="https://ads.tiktok.com/business/en-US/blog/spark-ads-101-make-tiktoks-into-ads/">ads.tiktok.com</a></li>
+  <li>TikTok Ad Creative Guide: <a href="https://ads.tiktok.com/business/en/guides/what-is-ad-creative-guide">ads.tiktok.com</a></li>
+  <li>Alici script-to-video workflow: <a href="https://app.alici.ai/chat?agent_id=alici_anyscript2video_zo7ayx">app.alici.ai</a></li>
+  <li>Alici (AI video generators, 2026): <a href="https://alici.ai/blog/best-ai-video-generators-2026/">alici.ai</a></li>
+  <li>Google Trends: "UGC creator" search data</li>
+</ul>
+
+<hr>
+
+<!-- Closing CTA -->
+<div class="footer-cta">
+  <h2>Start Building Your UGC Workflow Today</h2>
+  <p>Pick a track, build your 5-video portfolio this week, and pitch 10 brands.</p>
+  <a href="https://app.alici.ai/chat?agent_id=alici_anyscript2video_zo7ayx" class="cta-block">Generate UGC Scripts with Alici &rarr;<small>Product brief &rarr; 6-block script + shot list + storyboard</small></a>
+  <a href="https://app.alici.ai/pages/videoGen" class="cta-block">Create AI Videos with Video Studio &rarr;<small>Multi-model AI video generation for UGC variants and campaign testing</small></a>
+  <a href="https://app.alici.ai/chat?agent_id=alici_anyscript2video_zo7ayx" class="cta-block">Try the Script-to-Video Workflow &rarr;<small>Product brief &rarr; script &rarr; storyboard &rarr; multi-scene video in one prompt.</small></a>
+</div>
+
+<blockquote><p><strong>Next step</strong>: build your 5-video portfolio, then pitch your first 10 brands this week.</p></blockquote>
+
+<br><br>
+</div>
+
+</body>
+</html>

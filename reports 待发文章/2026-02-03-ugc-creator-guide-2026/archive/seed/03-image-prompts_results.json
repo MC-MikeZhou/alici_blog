@@ -1,0 +1,38 @@
+[
+  {
+    "role": "hero",
+    "local_path": "reports 待发文章/2026-02-03-ugc-creator-guide-2026/images/ugc-creator-guide-hero.png",
+    "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/ugc-creator-guide-hero.png",
+    "config": {
+      "aspect_ratio": "16:9",
+      "resolution": "2K"
+    }
+  },
+  {
+    "role": "concept",
+    "local_path": "reports 待发文章/2026-02-03-ugc-creator-guide-2026/images/ugc-creator-flywheel.png",
+    "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/ugc-creator-flywheel.png",
+    "config": {
+      "aspect_ratio": "16:9",
+      "resolution": "1K"
+    }
+  },
+  {
+    "role": "comparison",
+    "local_path": "reports 待发文章/2026-02-03-ugc-creator-guide-2026/images/ugc-brief-script-shotlist.png",
+    "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/ugc-brief-script-shotlist.png",
+    "config": {
+      "aspect_ratio": "16:9",
+      "resolution": "1K"
+    }
+  },
+  {
+    "role": "cta",
+    "local_path": "reports 待发文章/2026-02-03-ugc-creator-guide-2026/images/ugc-cta-script2video.png",
+    "cdn_url": "https://ct2.alici.ai/static/image/other/gen_images/ugc-cta-script2video.png",
+    "config": {
+      "aspect_ratio": "16:9",
+      "resolution": "1K"
+    }
+  }
+]

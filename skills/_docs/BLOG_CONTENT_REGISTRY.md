@@ -29,6 +29,7 @@
 | video-004 | How to Create Viral Videos with Kling 2.6 Motion Control | /blog/kling-2-6-motion-control-tutorial-2026 | Tutorial | pillar-001 | Published | Kling motion control, motion transfer, dance videos, AI video generation |
 | video-005 | Nano Banana + Motion Control: 病毒视频创作新范式 | /blog/nano-banana-motion-control-2026-01 | Roundup | pillar-001 | Draft | motion control, Kling 2.6, Nano Banana Pro, video generation |
 | video-006 | Kling 2.6 is Here | /blog/kling-2-6-is-here | News | pillar-001 | **Published** | Kling 2.6, motion control, AI video news |
+| video-007 | How to Write Sora 2 Prompts for Beginners (2026): Templates + Checklist + Fixes | /blog/sora-2-prompt-guide-beginners-templates-2026 | Tutorial | pillar-001 | Draft | Sora 2, prompt guide, prompt templates, prompt checklist, beginner, AI video prompts |
 
 ### AI Image Cluster
 

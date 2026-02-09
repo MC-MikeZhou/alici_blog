@@ -130,7 +130,7 @@ claude
 ## 5. 目录说明
 
 ```
-/Users/H/Documents/AliciBlog/
+<PROJECT_ROOT>/
 ├── CLAUDE.md                 # 主配置文件
 ├── HANDOFF-GUIDE.md          # 交接指南
 ├── LOCAL-SETUP.md            # 本文件

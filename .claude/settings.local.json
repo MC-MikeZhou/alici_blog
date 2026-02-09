@@ -11,7 +11,9 @@
       "Bash(curl:*)",
       "Bash(rsync:*)",
       "Bash(ls:*)",
-      "Bash(xargs cat:*)"
+      "Bash(xargs cat:*)",
+      "Skill(analyze-aeo)",
+      "Skill(analyze-aeo:*)"
     ],
     "deny": [],
     "ask": []

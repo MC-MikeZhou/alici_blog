@@ -1,0 +1,24 @@
+{
+  "input": "/Users/H/Documents/AliciBlog/reports 待发文章/2026-02-04-nano-banana-pro-ai-ugc-ads-2026/01-article-edited.md",
+  "output": "/Users/H/Documents/AliciBlog/reports 待发文章/2026-02-04-nano-banana-pro-ai-ugc-ads-2026/06-article-final.json",
+  "generated_at": "2026-02-07T09:57:04",
+  "fixes": {
+    "meta_title_truncated": true,
+    "meta_description_truncated": true,
+    "read_time_generated": true,
+    "cover_source": "frontmatter.featured_image.url",
+    "non_https_images_replaced": false,
+    "cta_mapped": true
+  },
+  "stats": {
+    "word_count": 3945,
+    "read_time": "20 min",
+    "body_html_chars": 34282,
+    "h2_count": 20,
+    "image_count": 6,
+    "debug": {
+      "md_image_count": 6,
+      "html_img_count_pre_export": 6
+    }
+  }
+}

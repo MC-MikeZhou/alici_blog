@@ -4,7 +4,50 @@
 
 ---
 
+## [3.2] - 2026-02-07 - 架构文档整理 + Art Scout 集成
+
+### 新增功能
+
+- **art-scout v1.1**: Agent Team 多角色并行选题研究
+  - 5 Agent 并行 (keyword_scout, content_strategist, market_analyst, tech_specialist, user_persona) → CEO 综合
+  - DataForSEO 集中验证 + Title Lock
+  - 输出 5-8 个 Direction + Decision Brief
+  - 独立触发 + SmartLauncher Route D 集成
+- **SmartLauncher v2.3**: 四轨制架构
+  - 新增 [D] 深度研究 (Agent Team) 模式
+  - art-scout 集成到 Route D
+  - COMBOS.md 新增 deep_research 配置
+- **blog-showdown-writer v1.0**: 独立 Showdown 技能 (从 blog-list-writer 分离)
+  - 11 固定标题 + Showdown Plan + Showdown Validator Gate
+  - P4 Reframe 强制开篇 + L4 Integrator 定位
+- **共享组件层 `/skills/writers/_shared/`**:
+  - CTA_CARD_v2.0, IMAGE_PLACEHOLDER_v2.0, WRITER_COMPONENTS
+
+### 文档整理
+
+- CLAUDE.md Changelog 提取到独立 CHANGELOG.md (根目录)
+- 过时文档归档: AliciBlog-Architecture-v2.2.md, 10-AUTO-PILOT-ARCHITECTURE.md → `_archive 历史归档/docs/`
+- 02-SKILLS.md 更新至 v3.2 (新增 art-scout + showdown-writer)
+- 01-ARCHITECTURE.md 更新至 v3.2 (四轨制架构)
+
+---
+
+## [2.8.1] - 2026-02-03 - Growth Topic Scout v2.3（Seed D2 多样性引擎）
+
+### 新增功能
+
+- **Growth-Topic-Scout v2.3**: Seed Mode D2（Diversity Engine）
+  - 多策略发散（seed_xpollination + persona_rotation + serp_gap；可选 competitor_diverge）
+  - 语义聚类去重 + 多样性门禁（avg_pairwise_similarity < 0.50 等）
+  - DataForSEO 验证后输出 **3 个**可执行方向（含 `diversity_report`）
+- **Schema/模板同步**:
+  - OUTPUT_SCHEMA.json 升级到 v2.3（纳入 seed_funnel / seed_funnel_diversity）
+  - REPORT_TEMPLATE.md 新增 Seed D1/D2 模板与多样性报告章节
+
+---
+
 ## [2.8.0] - 2026-01-25 - SmartLauncher v2.1 三轨制架构
+
 
 ### 新增功能
 

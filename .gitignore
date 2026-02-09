@@ -3,6 +3,7 @@
 .env
 .env.local
 .env.*.local
+.env.basecamp
 
 # macOS
 .DS_Store
@@ -60,3 +61,6 @@ video_resources/
 *.mpeg
 *.3gp
 *.3g2
+
+# Basecamp context dumps (local-only)
+tmp/basecamp-context/

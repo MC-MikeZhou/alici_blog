@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "profile": "mega",
+  "errors": [],
+  "warnings": [],
+  "files": {
+    "article": "skills/writers/blog-list-writer/testdata/mega/01-article-draft.md"
+  }
+}

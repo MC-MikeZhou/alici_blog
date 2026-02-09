@@ -1,8 +1,8 @@
-# Growth Topic Scout Report Templates v2.1
+# Growth Topic Scout Report Templates v2.3
 
-Use these templates to structure the output of competitive topic analysis (Mode A), keyword matrix analysis (Mode B), and AEO validation (Mode C).
+Use these templates to structure the output of competitive topic analysis (Mode A), keyword matrix analysis (Mode B), AEO validation (Mode C), and Seed Modes (D1/D2).
 
-**v2.1 Changes**: Added Mode C (AEO Validation) templates, dual scoring (SEO + AEO), and LLM citation analysis sections.
+**v2.3 Changes**: Added Seed Mode templates (D1 competitor-anchored, D2 diversity engine) + diversity report sections.
 
 ---
 
@@ -12,9 +12,11 @@ Use these templates to structure the output of competitive topic analysis (Mode 
 |------------|------|----------|
 | Competitor URL(s) | Mode A + C | URL Analysis Report + AEO Validation |
 | Seed keyword + trigger words | Mode B + C | Keyword Matrix Report + AEO Validation |
+| "seed mode", "种子模式", "topic funnel", "选题漏斗" | Mode D1 | Seed Funnel Report (D1) |
+| "seed mode v2", "diversity seed", "发散选题", "多样性选题", "cosine", "余弦相似度" | Mode D2 | Seed Funnel Report (D2 + Diversity) |
 | "AEO验证", "AI visibility" | Mode C only | AEO Validation Report |
 
-**Note**: Mode C (AEO Validation) is enabled by default for all analyses in v2.1.
+**Note**: Mode C (AEO Validation) is enabled by default for Mode A/B. For Seed Modes, run Mode C only when `validation_depth=deep`.
 
 ---
 
@@ -791,7 +793,99 @@ Label Translations:
 
 ---
 
+---
+
+# Mode D1: Seed Funnel Report Template (Competitor-Anchored)
+
+```
+===============================================================================
+                         GROWTH TOPIC SCOUT REPORT
+                      Mode D1: Seed Funnel (Anchored)
+===============================================================================
+Analysis Date: [YYYY-MM-DD]
+Seed: [seed keyword]
+Competitor Anchors: [N] (3-5)
+Keywords Validated: [N]
+Final Directions: 2
+===============================================================================
+```
+
+## Funnel Summary
+
+- Mission config summary (audience/goal/geo/language)
+- Competitor intent patterns (5-8)
+- Expansion stats (keywords_to_validate count)
+- Scope pruning log (60 → 10 → 2)
+
+## Final Directions (2)
+
+For each direction include:
+- locked_title + backup_title
+- SEO Score + AEO Score + Combined Priority
+- Evidence chain (volume/trend/CPC/competition/serp gap/competitor weakness)
+- Outline + AEO answer block
+
+---
+
+# Mode D2: Seed Funnel Report Template (Diversity Engine)
+
+```
+===============================================================================
+                         GROWTH TOPIC SCOUT REPORT
+                 Mode D2: Seed Funnel (Diversity Engine)
+===============================================================================
+Analysis Date: [YYYY-MM-DD]
+Seed: [seed keyword]
+Competitor Anchors: [N] (optional)
+Raw Topic Pool: ~45 (3 strategies)
+Validated Pool: 8-15
+Final Directions: 3
+===============================================================================
+```
+
+## Diversity Summary (Required)
+
+Thresholds (standard):
+- cluster_threshold: 0.60
+- target_avg_similarity: < 0.50
+- final_pairwise_max: < 0.60
+
+Report metrics:
+- avg_pairwise_similarity
+- max_pairwise_similarity
+- cluster_count
+- intent_type_count
+- strategy_mix
+- Gate result (PASS/FAIL)
+
+## Cluster Table (Required)
+
+| Cluster | Representative Topic | Strategy | Intent | Notes |
+|--------:|----------------------|----------|--------|-------|
+| C01 | ... | persona_rotation | troubleshooting | ... |
+
+## Rejection Log (Required)
+
+List removed topics with reasons:
+- too similar (>=0.60), low clarity, weak business fit, forbidden zone, etc.
+
+## Final Directions (3) + Portfolio Constraints
+
+For each direction include:
+- cluster_id + strategy_source
+- similarity_to_other_finals (audit trail)
+- diversity_bonus + portfolio_score
+- locked_title + evidence chain + outline
+
+---
+
 ## Version History
+
+### v2.3 (2026-02-03)
+- Added Seed Mode templates:
+  - Mode D1: competitor-anchored seed funnel (2 directions)
+  - Mode D2: diversity engine seed funnel (3 directions)
+- Added Diversity Summary + Cluster Table + Rejection Log sections
 
 ### v2.1 (2026-01-24)
 - **Mode C: AEO Validation Report Template (NEW)**

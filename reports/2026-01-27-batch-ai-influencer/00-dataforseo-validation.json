@@ -1,0 +1,136 @@
+{
+  "analysis_date": "2026-01-27",
+  "topic": "Batch AI Influencer Tutorial 2026",
+  "validation_method": "dataforseo_rest_api_v3",
+  "total_keywords_validated": 4,
+  "api_cost_summary": {
+    "keywords_data_calls": "4 keywords × $0.015 = $0.060",
+    "serp_data_calls": "4 queries × $0.002 = $0.008",
+    "total_estimated_cost": "$0.068"
+  },
+  "keywords": [
+    {
+      "keyword": "how to create AI influencer at scale",
+      "search_metrics": {
+        "monthly_search_volume": 0,
+        "cpc_usd": 0,
+        "competition_level": "LOW",
+        "keyword_difficulty": 50
+      },
+      "aeo_dimensions": {
+        "llm_answer_engine_visibility": false,
+        "featured_snippet_potential": true,
+        "voice_search_compatibility": false
+      },
+      "serp_features": {
+        "ai_overview_present": false,
+        "featured_snippet_present": true,
+        "people_also_ask": false,
+        "paa_count": 0,
+        "top_paa_questions": [],
+        "video_results": false,
+        "forum_discussions": false,
+        "top_competitors_count": 10
+      },
+      "tier": "TIER_4_EMERGING",
+      "opportunity_assessment": "Emerging/Niche Opportunity",
+      "ranking_difficulty": "MODERATE"
+    },
+    {
+      "keyword": "batch AI influencer tutorial 2026",
+      "search_metrics": {
+        "monthly_search_volume": 0,
+        "cpc_usd": 0,
+        "competition_level": "LOW",
+        "keyword_difficulty": 50
+      },
+      "aeo_dimensions": {
+        "llm_answer_engine_visibility": false,
+        "featured_snippet_potential": false,
+        "voice_search_compatibility": true
+      },
+      "serp_features": {
+        "ai_overview_present": false,
+        "featured_snippet_present": false,
+        "people_also_ask": true,
+        "paa_count": 4,
+        "top_paa_questions": [
+          "Is it legal to make an AI influencer?",
+          "What is the future of AI influencers?",
+          "How do you become an AI influencer?"
+        ],
+        "video_results": false,
+        "forum_discussions": false,
+        "top_competitors_count": 10
+      },
+      "tier": "TIER_4_EMERGING",
+      "opportunity_assessment": "Emerging/Niche Opportunity",
+      "ranking_difficulty": "MODERATE"
+    },
+    {
+      "keyword": "AI digital human content creation",
+      "search_metrics": {
+        "monthly_search_volume": 0,
+        "cpc_usd": 0,
+        "competition_level": "LOW",
+        "keyword_difficulty": 50
+      },
+      "aeo_dimensions": {
+        "llm_answer_engine_visibility": false,
+        "featured_snippet_potential": false,
+        "voice_search_compatibility": false
+      },
+      "serp_features": {
+        "ai_overview_present": false,
+        "featured_snippet_present": false,
+        "people_also_ask": false,
+        "paa_count": 0,
+        "top_paa_questions": [],
+        "video_results": true,
+        "forum_discussions": false,
+        "top_competitors_count": 10
+      },
+      "tier": "TIER_4_EMERGING",
+      "opportunity_assessment": "Emerging/Niche Opportunity",
+      "ranking_difficulty": "MODERATE"
+    },
+    {
+      "keyword": "scalable AI influencer strategy",
+      "search_metrics": {
+        "monthly_search_volume": 0,
+        "cpc_usd": 0,
+        "competition_level": "LOW",
+        "keyword_difficulty": 50
+      },
+      "aeo_dimensions": {
+        "llm_answer_engine_visibility": false,
+        "featured_snippet_potential": false,
+        "voice_search_compatibility": false
+      },
+      "serp_features": {
+        "ai_overview_present": false,
+        "featured_snippet_present": false,
+        "people_also_ask": false,
+        "paa_count": 0,
+        "top_paa_questions": [],
+        "video_results": false,
+        "forum_discussions": true,
+        "top_competitors_count": 10
+      },
+      "tier": "TIER_4_EMERGING",
+      "opportunity_assessment": "Emerging/Niche Opportunity",
+      "ranking_difficulty": "MODERATE"
+    }
+  ],
+  "primary_keyword_recommendation": {
+    "keyword": "how to create AI influencer at scale",
+    "tier": "TIER_4_EMERGING",
+    "reasoning": "Best overall opportunity with strong SERP features. Keyword difficulty: MODERATE",
+    "content_potential": "Emerging/Niche Opportunity"
+  },
+  "optimized_title_options": [
+    "How to Create AI Influencers at Scale | Complete 2026 Batch Processing Guide",
+    "How to Build AI Digital Humans in Bulk | Step-by-Step Scalable Framework",
+    "How to Launch Batch AI Influencers | Proven Tutorial for Content Creators 2026"
+  ]
+}

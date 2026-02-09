@@ -10,11 +10,11 @@ echo "批量工作流启动: $(date +%Y-%m-%d %H:%M)"
 
 # 检查 MCP 状态
 echo "DataForSEO MCP:"
-cat /Users/H/Documents/AliciBlog/.mcp.json 2>/dev/null | grep -A2 "dataforseo"
+cat .mcp.json 2>/dev/null | grep -A2 "dataforseo"
 
 # 检查已有批量任务
 echo "已有批量任务:"
-ls -d /Users/H/Documents/AliciBlog/reports/batch-* 2>/dev/null | wc -l
+ls -d reports/batch-* 2>/dev/null | wc -l
 ```
 
 ## 使用方法

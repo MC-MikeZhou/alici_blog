@@ -141,8 +141,8 @@ Claude:
 问题 1/3: 产品关联?
 > alici.ai 的 AI 视频生成功能
 
-问题 2/3: 目标竞品博客 (3个)?
-> higgsfield.ai, invideo.io, runway.com
+问题 2/3: 目标竞品博客 (5 个，默认)?
+> invideo.io, higgsfield.ai, freepik.com, blog.fal.ai, wavespeed.ai
 
 问题 3/3: 偏好内容类型?
 > Listicle 或 Tutorial
@@ -180,7 +180,7 @@ Claude: [执行 blog-list-writer 流程]
 | Phase | 名称 | 输入 | 输出 |
 |-------|------|------|------|
 | 0 | Mission Config | Seed + 3 问题 | 00-mission-config.json |
-| 0.5 | 竞品意图发现 | 3 竞品博客 | 5-8 种意图模式 |
+| 0.5 | 竞品意图发现 | 5 竞品博客（默认） | 5-8 种意图模式 |
 | 1 | 意图扩散 | 意图模式 | 60-80 关键词 |
 | 2 | DataForSEO 验证 | 关键词列表 | 验证数据 (含 3 个 AEO 维度) |
 | 2.5 | Scope 裁剪 | 60 关键词 | 10 方向 |

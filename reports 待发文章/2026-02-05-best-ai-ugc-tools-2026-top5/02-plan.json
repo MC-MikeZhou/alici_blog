@@ -1,0 +1,209 @@
+{
+  "meta": {
+    "version": "3.0",
+    "freshness_date": "2026-02-05",
+    "methodology_level": "research_only",
+    "listicle_profile": "standard",
+    "list_size_target": 5,
+    "primary_keyword": "best ai ugc tools 2026",
+    "search_intent": "best-list",
+    "language": "en",
+    "geo": "US"
+  },
+  "tool_pool": [
+    {
+      "name": "Alici AI",
+      "source_types": ["official"],
+      "notes": "All-in-one AI visual workflow hub (video + image + prompting)."
+    },
+    {
+      "name": "InVideo AI",
+      "source_types": ["official", "competitor"],
+      "notes": "Template-first AI video creation with exports and stock assets."
+    },
+    {
+      "name": "Arcads AI",
+      "source_types": ["official", "serp"],
+      "notes": "AI talking-actor / avatar-led UGC-style ad generation."
+    },
+    {
+      "name": "Pippit AI",
+      "source_types": ["official", "serp"],
+      "notes": "Credit-based content creation suite with avatars and link-to-video workflows."
+    },
+    {
+      "name": "MakeUGC",
+      "source_types": ["official", "serp"],
+      "notes": "AI UGC ads platform with talking actors, batch, b-roll and agent-style workflows."
+    },
+    {
+      "name": "HeyGen",
+      "source_types": ["serp"],
+      "notes": "Avatar video platform; a common comparison point for AI talking-head UGC."
+    },
+    {
+      "name": "CapCut",
+      "source_types": ["serp"],
+      "notes": "Editing-first UGC production; often paired with generation tools."
+    }
+  ],
+  "selected_tools": [
+    {
+      "rank": 1,
+      "name": "Alici AI",
+      "one_line_positioning": "Best overall workflow for AI UGC ads",
+      "official_site_url": "https://alici.ai/",
+      "pricing_url": "https://alici.ai/price",
+      "free_plan_note": "Start for free (credits-based).",
+      "limitations": "Model availability, quotas, and credit value can change over time.",
+      "evidence": {
+        "third_party": ["https://www.scamadviser.com/check-website/alici.ai"]
+      }
+    },
+    {
+      "rank": 2,
+      "name": "InVideo AI",
+      "one_line_positioning": "Best for fast script-to-video UGC variations",
+      "official_site_url": "https://invideo.io/",
+      "pricing_url": "https://invideo.io/pricing",
+      "free_plan_note": "Free plan with weekly quotas and watermark; upgrade removes watermarks.",
+      "limitations": "Free plan limits exports and includes watermarks; quotas reset weekly/monthly depending on plan.",
+      "evidence": {
+        "third_party": ["https://www.g2.com/products/invideo/reviews"]
+      }
+    },
+    {
+      "rank": 3,
+      "name": "Arcads AI",
+      "one_line_positioning": "Best for talking-actor UGC ad creatives",
+      "official_site_url": "https://arcads.ai/",
+      "pricing_url": "https://www.arcads.io/pricing",
+      "free_plan_note": "Pricing varies; see pricing page for current credits and tiers.",
+      "limitations": "Avatar realism and lip-sync quality can vary by actor/voice; credit burn can be higher than expected.",
+      "evidence": {
+        "third_party": ["https://www.trustpilot.com/review/arcads.ai"]
+      }
+    },
+    {
+      "rank": 4,
+      "name": "Pippit AI",
+      "one_line_positioning": "Best for credit-based content + publishing suite",
+      "official_site_url": "https://www.pippit.ai/",
+      "pricing_url": "https://www.pippit.ai/pricing",
+      "free_plan_note": "Free tier with weekly credits; paid plans expand credits and features.",
+      "limitations": "Credit system and feature access can be confusing; operational reliability varies by workflow.",
+      "evidence": {
+        "third_party": ["https://www.trustpilot.com/review/pippit.ai"]
+      }
+    },
+    {
+      "rank": 5,
+      "name": "MakeUGC",
+      "one_line_positioning": "Best for batch AI UGC ads and agents",
+      "official_site_url": "https://www.makeugc.ai/",
+      "pricing_url": "https://www.makeugc.ai/pricing",
+      "free_plan_note": "No free trial mentioned on pricing page; refund policy exists—verify terms.",
+      "limitations": "Quality can be inconsistent; subscription/refund/cancellation policies should be reviewed carefully.",
+      "evidence": {
+        "third_party": ["https://www.trustpilot.com/review/makeugc.ai"]
+      }
+    }
+  ],
+  "grouping": [],
+  "evaluation_framework": {
+    "dimensions": [
+      {
+        "name": "UGC Realism",
+        "weight": 25,
+        "what_it_measures": "Does it look and sound like believable creator content (not overly polished or uncanny)?"
+      },
+      {
+        "name": "Iteration Speed",
+        "weight": 20,
+        "what_it_measures": "How quickly you can ship 10+ variations (hooks, offers, creators, edits)."
+      },
+      {
+        "name": "Control & Editability",
+        "weight": 20,
+        "what_it_measures": "Scene control, caption control, pacing, voice/avatar options, and last-mile edits."
+      },
+      {
+        "name": "Workflow & Scale",
+        "weight": 20,
+        "what_it_measures": "Batch generation, team workflows, asset organization, and reuse of winning templates."
+      },
+      {
+        "name": "Value & Predictability",
+        "weight": 15,
+        "what_it_measures": "Cost per usable ad and how predictable the credit/quota system feels."
+      }
+    ],
+    "scenarios": [
+      "Lo-fi UGC ad (15s): hook + product benefit + CTA",
+      "Product demo (10s): clear product shots + on-screen captions",
+      "Talking-head avatar (20–30s): script + voice + lip-sync",
+      "Batch variations: 10 hooks × 3 creators × 2 CTAs",
+      "Localization: one script translated into 3 languages"
+    ],
+    "scoring_notes": "Weights favor performance marketers who care about shipping many testable ads weekly."
+  },
+  "evidence_links": {
+    "per_tool_official_min": 1,
+    "top5_third_party_min": 1
+  },
+  "aeo_pack": {
+    "quick_answer": "The best AI UGC tool in 2026 depends on whether you need an end-to-end workflow or a specialist. **Alici AI** is the best overall pick if you want one hub to generate and iterate across models, while **InVideo AI** is best for fast script-to-video variations when speed matters most. If your ads rely on talking-head style, **Arcads AI** is a strong dedicated option. **Pippit AI** fits teams who want a credit-based creation + publishing suite, and **MakeUGC** is built for batch UGC ad production and agent-like workflows.",
+    "key_takeaways": [
+      "Alici AI — best overall workflow for AI UGC ads",
+      "InVideo AI — best for fast script-to-video UGC variations",
+      "Arcads AI — best for talking-actor UGC ad creatives",
+      "Pippit AI — best for credit-based content + publishing suite",
+      "MakeUGC — best for batch AI UGC ads and agents",
+      "If you’re new: pick one tool, ship 10 variants, then upgrade your stack"
+    ],
+    "faq": [
+      {"q": "What is the best AI UGC tool in 2026?"},
+      {"q": "Can AI UGC replace real creators?"},
+      {"q": "Which tool is best for talking-head UGC ads?"},
+      {"q": "What should I look for in pricing and free plans?"},
+      {"q": "How do I keep AI UGC compliant and not misleading?"},
+      {"q": "How do I scale UGC variations without losing quality?"}
+    ]
+  },
+  "cta_plan": [
+    {
+      "id": 1,
+      "placement": "quick_answer_end",
+      "copy": "Not sure which tool to pick? Start with one workflow hub, generate 10 ad variants, and learn what actually converts.",
+      "url": "https://app.alici.ai/pages/videoGen"
+    },
+    {
+      "id": 2,
+      "placement": "final_verdict_end",
+      "copy": "Pick one tool, ship weekly tests, and only add specialists after you’ve found a repeatable ad format.",
+      "url": "https://app.alici.ai/pages/videoGen"
+    }
+  ],
+  "tables": {
+    "quick_comparison_columns": ["Tool", "Best For", "Core Positioning", "Price", "Free Plan", "Limitations"],
+    "use_case_columns": ["Use Case", "Recommended Tools", "Why", "Budget"]
+  },
+  "assumptions": [
+    {
+      "field": "listicle_profile",
+      "value": "standard",
+      "reason": "User requested Top 5. Blueprint A is used even though typical size is 10–13."
+    },
+    {
+      "field": "methodology_level",
+      "value": "research_only",
+      "reason": "No hands-on testing details provided; safest trust posture."
+    },
+    {
+      "field": "freshness_date",
+      "value": "2026-02-05",
+      "reason": "Set to today for pricing/features as-of statement."
+    }
+  ]
+}
+

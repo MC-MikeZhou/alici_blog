@@ -1,29 +1,32 @@
 ---
 name: growth-topic-scout
-version: "2.2"
+version: "2.4"
 description: >
-  Topic funnel system: From seed keyword + competitor anchors to 2 ready-to-write directions.
-  V2.2: Seed Mode - Competitor-driven exploration → Intent pattern discovery → Direction expansion → Data validation.
-  Mode A: Input competitor URLs, output growth-oriented topic briefs with SEO/AEO signals. (preserved)
+  Topic funnel system: From seed keyword to ready-to-write directions (D1: competitor-anchored, D2: diversity engine).
+  V2.4: competitive_insights output field for blog-tutorial-writer v2.5 Insight Pack integration.
+  V2.3: Seed Mode D2 (Diversity Engine) - Multi-strategy divergence → semantic clustering → diversity gate → Data validation → Title Lock.
+  Mode A: Input competitor URLs, output growth-oriented topic briefs with SEO/AEO signals + competitive_insights. (enhanced)
   Mode B: Input seed keywords, generate 50-100 keyword matrix with gap analysis. (preserved)
   Mode C: AEO validation layer - AI Keyword Data, LLM Mentions, LLM Responses. (preserved)
-  Mode D (NEW): Seed Mode - Competitor anchors → Intent patterns → Direction expansion → 2 executable directions.
+  Mode D1: Seed Mode - Competitor anchors → Intent patterns → Direction expansion → Data validation → 2 executable directions. (preserved)
+  Mode D2 (NEW): Diversity Seed Mode - Seed decomposition → multi-strategy divergence → clustering/dedup → diversity gate → Data validation → 3 executable directions.
   Triggers on: competitor analysis, topic discovery, content benchmark, topic scout, growth topics,
   keyword matrix, batch keywords, scale SEO, pSEO, programmatic SEO, AEO验证, AI选题验证,
   LLM分析, AI visibility, 生成式搜索优化, seed mode, 种子模式, topic funnel, 选题漏斗,
+  seed mode v2, diversity seed, 发散选题, 多样性选题, cosine, 余弦相似度, Mollick protocol,
   direction expansion, 方向扩展, find topics for, 帮我找选题.
 allowed-tools: WebFetch, WebSearch, Read, Write, Grep, Glob
 mcp-servers: dataforseo
 ---
 
-# Growth Topic Scout v2.2
+# Growth Topic Scout v2.3
 
 You are a Content Growth Strategist specialized in competitive intelligence, topic discovery, and scale SEO content production. Your job is to analyze competitor content, generate keyword matrices for programmatic SEO, validate topics with AI/LLM visibility signals, and run the Seed Mode funnel from seed keyword to executable directions.
 
-## Quad-Mode Architecture (v2.2)
+## Mode Architecture (v2.3)
 
 ```
-Growth Topic Scout v2.2
+Growth Topic Scout v2.3
 ├── Mode A: URL Analysis (preserved)
 │   └── Input URL → Extract topics → DataForSEO validation → Top 10 topics
 │
@@ -37,20 +40,32 @@ Growth Topic Scout v2.2
 │   └── Phase C3: LLM Responses - AI answer content analysis
 │   Output: Dual Scoring (SEO Score 100 + AEO Score 100)
 │
-└── Mode D: Seed Mode (NEW in v2.2) ⭐⭐
-    ├── Phase 0: Mission Config + Competitor Anchors
-    ├── Phase 0.5: Competitor Intent Pattern Discovery
-    ├── Phase 1: Intent Pattern Expansion (60-80 keywords)
-    ├── Phase 2: DataForSEO Data Validation + Three-Level Filtering
-    ├── Phase 2.5: Scope Pruning (60 → 10 directions)
-    └── Phase 3: Title Lock (verified, ready-to-use titles)
+└── Seed Mode (two variants)
+    ├── Mode D1: Competitor-Anchored Seed Funnel (preserved) ⭐⭐
+    │   ├── Phase 0: Mission Config + Competitor Anchors
+    │   ├── Phase 0.5: Competitor Intent Pattern Discovery
+    │   ├── Phase 1: Intent Pattern Expansion (60-80 keywords)
+    │   ├── Phase 2: DataForSEO Data Validation + Three-Level Filtering
+    │   ├── Phase 2.5: Scope Pruning (60 → 10 directions)
+    │   └── Phase 3: Title Lock (verified, ready-to-use titles)
+    │
+    └── Mode D2: Diversity Seed Mode (NEW in v2.3) ⭐⭐⭐
+        ├── Phase 0: Mission Config + Diversity Config (competitor anchors optional)
+        ├── Phase 0.2: Seed Decomposition (5 orthogonal dimensions)
+        ├── Phase 1: Multi-Strategy Divergence (3 strategies, ~45 topics)
+        ├── Phase 2: Diversity Engine (semantic clustering + diversity gate)
+        ├── Phase 3: DataForSEO Validation (8-15 topics → metrics)
+        ├── Phase 4: Portfolio Scoring (SEO + AEO + Diversity Bonus)
+        └── Phase 5: Final 3 Directions + Title Lock
 
-    Output: 2 ready-to-write directions with locked titles + evidence chains
+    Output:
+    - D1: 2 ready-to-write directions with locked titles + evidence chains
+    - D2: 3 ready-to-write directions with locked titles + diversity report + evidence chains
 ```
 
 ---
 
-## Mode D: Seed Mode (NEW in v2.2) ⭐⭐
+## Mode D1: Seed Mode (Competitor-Anchored) ⭐⭐
 
 ### Why Seed Mode?
 
@@ -66,7 +81,7 @@ Seed + Competitor Anchors → Intent Pattern Discovery → Direction Expansion �
 
 **Goal**: Output 2 directions that can be written immediately (reliable titles + high prediction scores + evidence), while minimizing human confirmation effort.
 
-### Mode D Trigger Words
+### Mode D1 Trigger Words
 
 ```yaml
 triggers:
@@ -89,7 +104,7 @@ triggers:
 │                    Seed Mode Funnel (v2.2)                              │
 ├─────────────────────────────────────────────────────────────────────────┤
 │                                                                         │
-│  Seed Keyword + 3 Competitor Blogs                                      │
+│  Seed Keyword + 5 Competitor Blogs (default)                             │
 │           ↓                                                             │
 │  ┌─────────────────────────────────────────────────────────────────┐    │
 │  │ Phase 0: Mission Config                                          │    │
@@ -99,7 +114,7 @@ triggers:
 │           ↓                                                             │
 │  ┌─────────────────────────────────────────────────────────────────┐    │
 │  │ Phase 0.5: Competitor Intent Pattern Discovery                    │    │
-│  │ - Crawl 3 competitor blogs (10-20 articles each)                 │    │
+│  │ - Crawl 5 competitor blogs (default; 10-20 articles each)         │    │
 │  │ - Extract: title, content type, target keywords                   │    │
 │  │ - Output: 5-8 intent patterns                                     │    │
 │  └─────────────────────────────────────────────────────────────────┘    │
@@ -134,7 +149,7 @@ triggers:
 │  └─────────────────────────────────────────────────────────────────┘    │
 │           ↓                                                             │
 │  Final Output: 2 ready-to-write directions                              │
-│  └── 00-topic-brief.json (v2.2 format)                                 │
+│  └── 00-topic-brief.json (v2.3 format)                                 │
 │  └── 00-directions-report.md (human-readable)                          │
 │                                                                         │
 └─────────────────────────────────────────────────────────────────────────┘
@@ -146,7 +161,7 @@ triggers:
 
 **Input**:
 - Seed keyword
-- 3 competitor blog URLs (or use default competitor pool)
+- 3–5 competitor blog URLs (default: 5; or use default competitor pool)
 - 3 simple questions
 
 **Mission Config Structure**:
@@ -157,7 +172,13 @@ See `MISSION_CONFIG_SCHEMA.json` for full schema.
 {
   "seed": "ai video tools 2026",
   "anchors": {
-    "competitors": ["invideo.io/blog", "higgsfield.ai/blog", "freepik.com/blog"],
+    "competitors": [
+      "https://invideo.io/blog",
+      "https://higgsfield.ai/blog",
+      "https://freepik.com/blog",
+      "https://blog.fal.ai",
+      "https://wavespeed.ai/blog"
+    ],
     "competitor_strategy": {}
   },
   "scope": {
@@ -205,8 +226,8 @@ See `MISSION_CONFIG_SCHEMA.json` for full schema.
       "header": "Competitors",
       "multiSelect": false,
       "options": [
-        {"label": "使用默认竞品池 (Recommended)", "description": "invideo.io, higgsfield.ai, freepik.com"},
-        {"label": "自定义竞品", "description": "输入 3 个竞品博客 URL"}
+        {"label": "使用默认竞品池 (Recommended)", "description": "invideo.io, higgsfield.ai, freepik.com, blog.fal.ai, wavespeed.ai"},
+        {"label": "自定义竞品", "description": "输入 3–5 个竞品博客 URL"}
       ]
     }
   ]
@@ -216,9 +237,11 @@ See `MISSION_CONFIG_SCHEMA.json` for full schema.
 **Default Competitor Pool**:
 ```yaml
 default_competitors:
-  - invideo.io/blog      # How-to + pain point solving
-  - higgsfield.ai/blog   # Trends + monetization narrative
-  - freepik.com/blog     # Multi-model platform + freshness
+  - https://invideo.io/blog       # How-to + pain point solving
+  - https://higgsfield.ai/blog    # Trends + monetization narrative
+  - https://freepik.com/blog      # Multi-model platform + freshness
+  - https://blog.fal.ai           # Model/API product updates + launches
+  - https://wavespeed.ai/blog     # AI video / workflow posts + benchmarks
 ```
 
 **Output**: `00-mission-config.json`
@@ -230,7 +253,7 @@ default_competitors:
 **Purpose**: Competitor anchoring is more effective than free exploration
 
 **Execution Steps**:
-1. Crawl 3 competitor blogs (last 10-20 articles each)
+1. Crawl 5 competitor blogs (default; last 10-20 articles each)
 2. Extract from each article: title, content type, target keyword
 3. Summarize 5-8 intent patterns
 
@@ -244,6 +267,13 @@ For each competitor blog:
    - Extract target keyword
 3. Analyze patterns across articles
 ```
+
+**Failure Handling (Required)**:
+- If a competitor blog index or individual articles fail to fetch (rate limit / blocks / broken HTML), continue with remaining competitors.
+- Record failures (URL + reason + how many pages succeeded) in the Phase 0.5 section of `00-directions-report.md`.
+
+**Time Note**:
+- Default runs crawl 5 competitor blogs for better coverage; if you need faster iteration, reduce competitors to 3 in Phase 0.
 
 **Intent Pattern Output Structure**:
 ```json
@@ -491,7 +521,7 @@ Human-readable report:
 ```json
 {
   "mode": "seed_funnel",
-  "schema_version": "2.2",
+  "schema_version": "2.3",
   "seed": "ai video tools 2026",
   "mission_config": {...},
   "funnel_stats": {
@@ -590,13 +620,96 @@ Compared to v2.1's ~$2.59, Seed Mode is more cost-effective (validates represent
 |------------|---------------|--------|
 | URL (http/https) | Mode A + C | URL Analysis + AEO Validation |
 | "keyword matrix", "batch keywords", "scale SEO", "pSEO" | Mode B + C | Keyword Matrix + AEO Validation |
-| Seed keyword without URL | Mode B + C | Keyword Matrix + AEO Validation |
+| "seed mode v2", "diversity seed", "发散选题", "多样性选题", "cosine", "余弦相似度" | **Mode D2** ⭐⭐⭐ | Diversity Seed Funnel (3 directions) |
+| "seed mode", "种子模式", "topic funnel", "选题漏斗" | **Mode D1** ⭐⭐ | Competitor-Anchored Seed Funnel (2 directions) |
+| Seed keyword without URL or explicit seed mode | Mode B + C | Keyword Matrix + AEO Validation |
 | Mixed (URL + "expand keywords") | Mode A + B + C | Sequential execution |
 | "AEO验证", "AI选题验证", "LLM分析", "AI visibility" | Mode C only | AEO Validation layer only |
 
-**Note**: Mode C (AEO Validation) is **enabled by default** for all analyses in v2.1. Every analysis includes AI signals alongside traditional SEO metrics.
+**Note**: Mode C (AEO Validation) is enabled by default for Mode A/B. For Seed Mode, run Mode C only when `validation_depth=deep` to control cost.
 
 ---
+
+## Mode D2: Diversity Seed Mode (Diversity Engine) ⭐⭐⭐
+
+Mode D2 is a seed funnel variant designed to maximize *topic pool diversity* before DataForSEO validation, using LLM-estimated semantic similarity (0–1) as a clustering signal.
+
+### D2 Trigger Words
+
+```
+seed mode v2, diversity seed, 发散选题, 多样性选题, cosine, 余弦相似度, Mollick protocol
+```
+
+### D2 Outputs (Mandatory Files)
+
+```
+/reports/YYYY-MM-DD-{seed-slug}/
+├── 01-seed-dimensions.json
+├── 02-raw-topics.json
+├── 03-diversity-report.json
+├── 00-directions-report.md
+└── 00-topic-brief.json (schema v2.3, mode=seed_funnel_diversity)
+```
+
+### D2 Phases (Implementation Spec)
+
+**Phase 0: Mission Config + Diversity Config**
+- Set `diversity.enabled=true` and `diversity.engine_version="2.3-diversity"`.
+- In D2, `anchors.competitors` is optional (can be empty).
+- Defaults (standard): `cluster_threshold=0.60`, `target_avg_similarity=0.50`, `final_pairwise_max=0.60`,
+  `min_final_clusters=3`, `min_intent_types_final=2`, `strategies=["seed_xpollination","persona_rotation","serp_gap"]`.
+
+**Phase 0.2: Seed Decomposition**
+- Decompose the seed into 5 orthogonal dimensions (user type, content format, competitive angle, temporal angle, business use case).
+- Produce 5–8 variations per dimension + 10 `query_seeds`.
+- Output `01-seed-dimensions.json`.
+
+**Phase 1: Multi-Strategy Divergence (default 3 strategies; avoid pool exhaustion)**
+- Generate ~45 topics total:
+  - `seed_xpollination`: 15 (must cover ≥4/5 dimensions)
+  - `persona_rotation`: 20 (4 personas × 5)
+  - `serp_gap`: 10 (SERP angle gaps from WebSearch on `query_seeds`)
+  - optional `competitor_diverge`: 12–15 (ONLY if competitor URLs provided or explicitly enabled)
+- Output `02-raw-topics.json` with strict fields:
+  `topic_id`, `strategy_source`, `title`, `one_line_angle`, `intent_type`, `audience`, `primary_keyword_guess`, `product_mapping`.
+
+**Phase 2: Diversity Engine (semantic clustering + diversity gate)**
+- Canonicalize each topic: `canonical_signature = intent|audience|object|differentiator|format`.
+- Greedy clustering on LLM-estimated similarity; same cluster if `similarity >= cluster_threshold (0.60)`.
+- Keep 1 representative per cluster using pre-score (no DataForSEO yet): business_fit + aeo_viability + novelty_claim + clarity.
+- Compute diversity metrics on representatives (≤15 topics full pairwise):
+  `avg_pairwise_similarity`, `max_pairwise_similarity`, `cluster_count`, `intent_type_count`, `strategy_mix`.
+- Diversity Gate (standard, must pass):
+  - `avg_pairwise_similarity < 0.50`
+  - `cluster_count >= 3`
+  - `intent_type_count >= 2`
+  - non-competitor share ≥ 40% OR at least 1 topic from `persona_rotation` or `serp_gap`
+- If gate fails, add 6–10补充 topics only for missing dimensions/intent types, then re-run once (max 1 retry).
+- Output `03-diversity-report.json` (include thresholds + pass/fail + rejection log).
+
+**Phase 3: DataForSEO Validation (preserved)**
+- For the 8–15 candidates, refine `primary_keyword` and add `alt_keyword` (same intent).
+- Calls:
+  - `dataforseo.keywords_data` (≤30 keywords batch)
+  - `dataforseo.serp` (standard: Top 5; deep: Top 10)
+- Run Mode C AI modules only if `validation_depth=deep`.
+
+**Phase 4: Portfolio Scoring (D2 only)**
+- Preserve `seo_score` (0–100) + `aeo_score` (0–100).
+- Add `diversity_bonus` (0–15) and `portfolio_score = f(seo_score, aeo_score) + diversity_bonus`.
+- Diversity bonus (standard):
+  - 15 if max similarity to other selected finals < 0.40
+  - 10 if < 0.50
+  - 5 if < 0.60
+  - 0 if any ≥ 0.60 (must re-select)
+
+**Phase 5: Final 3 Directions + Title Lock**
+- Final 3 must satisfy:
+  - pairwise similarity < `final_pairwise_max` (0.60)
+  - cover ≥2 intent types
+  - at least 1 from `persona_rotation` or `serp_gap`
+  - Title Lock PASS (primary keyword hit, intent match, SERP paradigm alignment, year validation)
+- For each final direction add: `cluster_id`, `strategy_source`, `similarity_to_other_finals`, `diversity_bonus`, `portfolio_score`.
 
 ## Mode A: URL Analysis (Existing - Preserved)
 
@@ -720,6 +833,7 @@ For validated topics, generate:
 5. **AEO Answer Block** (40-60 word direct answer draft)
 6. **Differentiation Angle** (how to beat the competitor)
 7. **Product Mapping** (auto-matched from PRODUCT_CATALOG)
+8. **Competitive Insights** (v2.4 NEW - for blog-tutorial-writer v2.5)
 
 #### Recommended Titles Format (v1.2 Enhanced)
 
@@ -782,6 +896,120 @@ Generate 3 title options, each following a different content formula with year v
 | `video prompt`, `prompt engineering` | video_prompt | video_studio |
 | `image prompt` | image_prompt | image_studio |
 | (default - no match) | null | null |
+
+#### Competitive Insights Output (v2.4 NEW)
+
+**Purpose**: Structure competitive analysis data for blog-tutorial-writer v2.5 Insight Pack input.
+
+**When to generate**: Automatically when Mode A analyzes competitor URLs (WebFetch extracts data from competitor articles).
+
+**Output Structure**:
+```json
+{
+  "competitive_insights": {
+    "top_competitors": [
+      {
+        "name": "Higgsfield",
+        "url": "https://higgsfield.ai/blog/ugc-factory",
+        "strength": "SoulID technology for character consistency"
+      },
+      {
+        "name": "HeyGen",
+        "url": "https://heygen.com/blog/avatar-iv",
+        "strength": "170+ language localization"
+      },
+      {
+        "name": "Invideo",
+        "url": "https://invideo.io/blog/ugc-ads",
+        "strength": "4x CTR performance benchmarks"
+      }
+    ],
+    "content_gaps": [
+      "Chinese market strategy (Douyin/XiaoHongShu)",
+      "Specific income ranges for monetization",
+      "0-to-1 launch roadmap for beginners"
+    ],
+    "data_points": [
+      {
+        "metric": "Market size",
+        "value": "$6.06B (2024)",
+        "source": "Invideo"
+      },
+      {
+        "metric": "CTR improvement",
+        "value": "4x vs traditional ads",
+        "source": "HeyGen"
+      },
+      {
+        "metric": "Cost reduction",
+        "value": "70% vs traditional shooting",
+        "source": "HeyGen"
+      }
+    ]
+  }
+}
+```
+
+**Extraction Guidelines**:
+
+1. **top_competitors (3-5 entries)**:
+   - Extract from competitor article citations or references
+   - Identify each competitor's unique strength/differentiation
+   - Capture actual URLs if mentioned in source article
+
+2. **content_gaps (2-5 entries)**:
+   - What topics/angles do competitors NOT cover?
+   - What questions remain unanswered?
+   - What markets/segments are ignored?
+   - Common gaps: specific pricing, local market strategies, beginner roadmaps
+
+3. **data_points (3-10 entries)**:
+   - Extract quantitative data (market size, growth rates, performance metrics)
+   - Must include source attribution
+   - Focus on data that supports market opportunity or product performance
+
+**Integration with blog-tutorial-writer v2.5**:
+
+```
+growth-topic-scout v2.4 outputs competitive_insights
+         ↓
+blog-tutorial-writer v2.5 receives as part of Topic Brief
+         ↓
+Writer auto-converts to Insight Pack structure:
+  - top_competitors → competitive_sources
+  - data_points → market_data.key_metrics
+  - content_gaps → differentiation strategy
+```
+
+**Example Workflow**:
+
+```
+Input: https://invideo.io/blog/ai-influencer-guide
+
+growth-topic-scout analyzes article, outputs:
+{
+  "competitive_insights": {
+    "top_competitors": [
+      {"name": "Higgsfield", "url": "...", "strength": "SoulID tech"},
+      {"name": "HeyGen", "url": "...", "strength": "170+ languages"}
+    ],
+    "content_gaps": ["Chinese platforms", "Income projections"],
+    "data_points": [
+      {"metric": "Market size", "value": "$6.06B", "source": "Invideo"}
+    ]
+  }
+}
+
+blog-tutorial-writer v2.5 uses this to generate:
+  - Market Context section (using data_points)
+  - Chinese market strategy section (addressing content_gaps)
+  - Sources citations (using top_competitors)
+```
+
+**When competitive_insights is empty**:
+- Mode B (Keyword Matrix): No competitor URLs → empty competitive_insights
+- Mode D (Seed Mode): Optional field, empty if no competitor analysis performed
+- Downstream writers use default behavior (no Insight Pack)
 
 ---
 
@@ -1379,6 +1607,14 @@ Before finalizing recommendations (both modes):
 3. **Business Alignment**: Must relate to AI tools, productivity, or tech
 4. **Differentiation**: Must have clear angle to beat competitors
 
+### Additional Quality Gates (D2 only)
+
+Before outputting the final 3 directions:
+1. **Diversity Gate PASS**: `avg_pairwise_similarity < 0.50` and `cluster_count >= 3`
+2. **Portfolio Constraint**: final 3 must be cross-cluster (pairwise similarity < 0.60)
+3. **Strategy Mix Constraint**: at least 1 direction from `persona_rotation` or `serp_gap`
+4. **Intent Mix Constraint**: cover at least 2 intent types
+
 ---
 
 ## Failure & Degradation Strategy
@@ -1498,14 +1734,15 @@ Generate keyword matrix for "ai video generator"
 | Dual Scoring System | Preserved, applied at direction level |
 | Quality Gates | Preserved, integrated into Phase 2.5 |
 
-### Mode Detection (v2.2 Updated)
+### Mode Detection (v2.3 Updated)
 
 | User Input | Detected Mode | Action |
 |------------|---------------|--------|
 | URL (http/https) | Mode A + C | URL Analysis + AEO Validation |
 | "keyword matrix", "batch keywords", "scale SEO", "pSEO" | Mode B + C | Keyword Matrix + AEO Validation |
-| "seed mode", "种子模式", "topic funnel", "选题漏斗" | **Mode D** ⭐ | Seed Mode Funnel |
-| "find topics for [X]", "帮我找 [X] 相关选题" | **Mode D** ⭐ | Seed Mode Funnel |
+| "seed mode v2", "diversity seed", "发散选题", "多样性选题", "cosine", "余弦相似度" | **Mode D2** ⭐⭐⭐ | Diversity Seed Funnel (3 directions) |
+| "seed mode", "种子模式", "topic funnel", "选题漏斗" | **Mode D1** ⭐⭐ | Competitor-Anchored Seed Funnel (2 directions) |
+| "find topics for [X]", "帮我找 [X] 相关选题" | **Mode D1** ⭐⭐ | Competitor-Anchored Seed Funnel (2 directions) |
 | Seed keyword without URL or explicit mode | Mode B + C | Keyword Matrix + AEO Validation |
 | Mixed (URL + "expand keywords") | Mode A + B + C | Sequential execution |
 | "AEO验证", "AI选题验证", "LLM分析", "AI visibility" | Mode C only | AEO Validation layer only |
@@ -1513,6 +1750,28 @@ Generate keyword matrix for "ai video generator"
 ---
 
 ## Version History
+
+### v2.3 (2026-02-03)
+
+**Seed Mode D2: Diversity Engine (NEW)**:
+
+1. **Mode D2: Diversity Seed Mode**:
+   - Phase 0: Mission Config + Diversity Config (competitor anchors optional)
+   - Phase 0.2: Seed Decomposition (5 orthogonal dimensions + query seeds)
+   - Phase 1: Multi-Strategy Divergence (seed_xpollination + persona_rotation + serp_gap; optional competitor_diverge)
+   - Phase 2: Diversity Engine (semantic clustering + diversity gate)
+   - Phase 3: DataForSEO Validation (8–15 candidates)
+   - Phase 4: Portfolio Scoring (SEO + AEO + diversity bonus)
+   - Phase 5: Final 3 Directions + Title Lock
+
+2. **New Outputs**:
+   - `01-seed-dimensions.json`
+   - `02-raw-topics.json`
+   - `03-diversity-report.json`
+
+3. **New Gates**:
+   - Diversity Gate: avg_pairwise_similarity < 0.50; cluster_count >= 3; intent_type_count >= 2
+   - Final portfolio: final 3 pairwise similarity < 0.60, with strategy/intents mix constraints
 
 ### v2.2 (2026-01-25)
 
@@ -1539,7 +1798,7 @@ Generate keyword matrix for "ai video generator"
 4. **New Output Files**:
    - `00-mission-config.json` (Mission Architecture config)
    - `00-directions-report.md` (Human-readable funnel report)
-   - Enhanced `00-topic-brief.json` (v2.2 format with evidence chains)
+   - Enhanced `00-topic-brief.json` (v2.3 format with evidence chains)
 
 5. **Cost Improvement**:
    - Standard mode: ~$0.47 (vs v2.1's ~$2.59)

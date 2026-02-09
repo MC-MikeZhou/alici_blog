@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "standalone-blog-tutorial-writer-v3/self-check.schema.json",
+  "title": "Writer Self-Check (Minimal) — Tutorial Writer v3.0",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["meta", "aeo_pre_check", "tier_compliance", "sections", "images", "ctas", "validation", "warnings"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["version", "tier", "word_count", "generated_at"],
+      "properties": {
+        "version": { "type": "string", "enum": ["3.0"] },
+        "tier": { "type": "integer", "enum": [1, 2, 3] },
+        "word_count": { "type": "integer", "minimum": 100 },
+        "generated_at": { "type": "string", "minLength": 10 }
+      }
+    },
+    "aeo_pre_check": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["citable_blocks", "citable_block_types", "experience_evidence", "faq_count"],
+      "properties": {
+        "estimated_score": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "citable_blocks": { "type": "integer", "minimum": 0 },
+        "citable_block_types": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "experience_evidence": { "type": "string", "enum": ["full", "partial", "none"] },
+        "faq_count": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "tier_compliance": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["tier_detected", "word_count_in_range", "conditional_sections_correct"],
+      "properties": {
+        "tier_detected": { "type": "integer", "enum": [1, 2, 3] },
+        "tier_justification": { "type": "string" },
+        "word_count_in_range": { "type": "boolean" },
+        "conditional_sections_correct": { "type": "boolean" }
+      }
+    },
+    "sections": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["prerequisites", "workflow_selector", "market_context", "monetization_framework", "troubleshooting"],
+      "properties": {
+        "prerequisites": { "type": "boolean" },
+        "workflow_selector": { "type": "boolean" },
+        "market_context": { "type": "boolean" },
+        "monetization_framework": { "type": "boolean" },
+        "troubleshooting": { "type": "boolean" }
+      }
+    },
+    "images": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "ctas": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "warnings": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    }
+  }
+}
+

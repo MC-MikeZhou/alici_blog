@@ -1,41 +1,42 @@
 ---
 name: smart-launcher
-version: "2.2"
+version: "2.3"
 type: skill
 provides: unified-entry-orchestration
 dependencies:
   - mcp: dataforseo
   - skill: competitive-validator
   - skill: growth-topic-scout (v2.2+)
+  - skill: art-scout (v1.1+)
   - capability: output-path-builder
 description: >
-  SmartLauncher v2.2 - 意图前置架构。
+  SmartLauncher v2.3 - 四轨制架构。
   Step 1.5: 素材使用意图 (洗稿/参考) - 用户明确选择使用方式
-  Phase 0: 模式选择（全自动 vs 手动 vs Seed模式）- 根据意图推荐
+  Phase 0: 模式选择（全自动 vs 手动 vs Seed vs 深度研究）- 根据意图推荐
   洗稿模式: 80%+ 保留原内容，禁止新增，品牌换 Alici AI
   参考模式: 作为起点，可以深挖扩展、补充新内容
+  深度研究: art-scout 5 Agent 并行 → CEO 综合 → 8 Direction 输出
 allowed-tools: Read, Write, WebFetch, WebSearch, AskUserQuestion, Bash
 mcp-servers: dataforseo
 metadata:
   author: H
-  updated: 2026-01-26
-  supersedes: [smart-launcher v2.1.1, smart-router v2.0, smart-root v2.2]
+  updated: 2026-02-07
+  supersedes: [smart-launcher v2.2, smart-router v2.0, smart-root v2.2]
 ---
 
-# SmartLauncher v2.2 - 意图前置架构
+# SmartLauncher v2.3 - 四轨制架构
 
 ## Purpose
 
-SmartLauncher v2.2 是 AliciBlog 的统一入口层，采用**意图前置架构**，在用户输入 URL 后首先明确素材使用意图（洗稿/参考），再推荐适合的执行模式。
+SmartLauncher v2.3 是 AliciBlog 的统一入口层，采用**四轨制架构**，提供全自动/手动/Seed/深度研究四种执行模式，并在用户输入 URL 后首先明确素材使用意图（洗稿/参考），再推荐适合的执行模式。
 
-### 为什么升级到 v2.2？
+### 为什么升级到 v2.3？
 
-| v2.1 问题 | v2.2 解决方案 |
+| v2.2 问题 | v2.3 解决方案 |
 |-----------|---------------|
-| 从未问用户"洗稿还是参考？" | Step 1.5 素材使用意图问卷，用户明确选择 |
-| 内容类型判断隐式决定洗稿 | 意图是比内容类型更高层的决策 |
-| 教程可能被洗稿也可能被参考 | 由用户决定这个内容值不值得借鉴 |
-| 参考模式缺少扩展调研 | 参考模式集成 growth-topic-scout + DataForSEO |
+| 缺少深度选题研究能力 | 新增 Route D: art-scout 5 Agent 并行深度研究 |
+| 三轨制只覆盖已有方向 | 深度研究模式可从零发现全新选题方向 |
+| 单人选题视角局限 | 5 专家角色并行探索，CEO 综合去重排名 |
 
 ### 用户定义的两种模式
 
@@ -47,15 +48,13 @@ SmartLauncher v2.2 是 AliciBlog 的统一入口层，采用**意图前置架构
 ### 核心理念
 
 ```
-v2.1: 选择路线 → 按路线执行 (三轨制)
-     ├── 全自动: URL + 1-2 问题 → 一键到 Preview
-     ├── 手动: 标题/方向 → 确认数据 → 选择 Writer → 执行
-     └── Seed模式: 种子词 + 3 问题 → 意图模式 → 2 个可执行方向
+v2.2: 意图前置 → 选择路线 → 按路线执行 (三轨制)
+     URL → 素材使用意图 (洗稿/参考) → 模式推荐 (A/B/C) → 执行
 
-v2.2: 意图前置 → 选择路线 → 按路线执行 (意图前置架构) ⭐
-     URL → 素材使用意图 (洗稿/参考) → 模式推荐 → 执行
+v2.3: 意图前置 → 选择路线 → 按路线执行 (四轨制) ⭐
+     URL → 素材使用意图 (洗稿/参考) → 模式推荐 (A/B/C/D) → 执行
          ↑
-   关键新增: 用户明确选择使用方式
+   关键新增: Route D 深度研究 (art-scout 5 Agent 并行)
 ```
 
 ---
@@ -160,11 +159,12 @@ triggers:
 │          └─────────────┬───────────────┘                                    │
 │                        ↓                                                    │
 │  ┌─────────────────────────────────────────────────────────────────────┐    │
-│  │ Phase 0: 模式选择 (v2.2 Updated)                                      │    │
+│  │ Phase 0: 模式选择 (v2.3 Updated)                                      │    │
 │  │ (根据 intent 自动推荐模式)                                            │    │
 │  │                                                                     │    │
 │  │   洗稿意图 → 推荐 [A] 全自动模式 (无需扩展调研，快速执行)              │    │
 │  │   参考意图 → 推荐 [B] 手动模式 或 [C] Seed模式 (需确认扩展方向)        │    │
+│  │   深度研究 → [D] Agent Team 多角色并行                                │    │
 │  │                                                                     │    │
 │  │   ┌─────────────────────────────────────────────────────────────┐   │    │
 │  │   │ [A] 全自动模式                                               │   │    │
@@ -174,21 +174,24 @@ triggers:
 │  │   │     提供标题/方向 → DataForSEO 确认 → 选择 Writer            │   │    │
 │  │   ├─────────────────────────────────────────────────────────────┤   │    │
 │  │   │ [C] Seed 模式                                                │   │    │
-│  │   │     种子词 + 竞品锚点 → 意图模式发现 → 2 个可执行方向          │   │    │
+│  │   │     种子词 → 选题漏斗（D1=2 / D2=3）→ 可执行方向               │   │    │
+│  │   ├─────────────────────────────────────────────────────────────┤   │    │
+│  │   │ [D] 深度研究 (Agent Team) 🆕                                  │   │    │
+│  │   │     5 专家并行 → 8 方向 → DataForSEO 验证 → Direction         │   │    │
 │  │   └─────────────────────────────────────────────────────────────┘   │    │
 │  └──────────────────────┬──────────────────────────────────────────────┘    │
 │                         │                                                   │
-│         ┌───────────────┼───────────────┐                                   │
-│         ↓               ↓               ↓                                   │
-│  ┌────────────┐  ┌────────────┐  ┌────────────────────┐                     │
-│  │ 🤖 全自动   │  │ ✋ 手动    │  │ 🌱 Seed模式       │                     │
-│  │ Full-Auto  │  │ Manual    │  │ 选题漏斗           │                     │
-│  │            │  │           │  │                    │                     │
-│  │ AUTO_ROUTE │  │ MANUAL_   │  │ growth-topic-scout │                     │
-│  │ .md        │  │ ROUTE.md  │  │ v2.2 Mode D        │                     │
-│  └──────┬─────┘  └─────┬─────┘  └─────────┬──────────┘                     │
-│         │              │                  │                                 │
-│         └──────────────┼──────────────────┘                                 │
+│         ┌───────────┬───┼───────────┬───────────┐                           │
+│         ↓           ↓   ↓           ↓           │                           │
+│  ┌──────────┐ ┌──────────┐ ┌──────────────┐ ┌──────────────┐               │
+│  │🤖 全自动 │ │✋ 手动    │ │🌱 Seed模式   │ │🔬 深度研究   │               │
+│  │Full-Auto │ │Manual    │ │选题漏斗       │ │Agent Team    │               │
+│  │          │ │          │ │              │ │              │               │
+│  │AUTO_ROUTE│ │MANUAL_   │ │growth-topic- │ │art-scout     │               │
+│  │.md       │ │ROUTE.md  │ │scout v2.4    │ │v1.1          │               │
+│  └────┬─────┘ └────┬─────┘ └──────┬───────┘ └──────┬───────┘               │
+│       │            │              │                │                       │
+│       └────────────┴──────────────┴────────────────┘                       │
 │                        ↓                                                    │
 │  ┌─────────────────────────────────────────────────────────────────────┐    │
 │  │ 执行阶段 (共享)                                                       │    │
@@ -301,6 +304,11 @@ triggers:
           "label": "Seed 模式 (选题漏斗)",
           "description": "种子词 + 竞品锚点 → 意图模式发现 → 2 个可执行方向",
           "recommended_when": "intent == '参考' && need_topic_discovery"
+        },
+        {
+          "label": "深度研究 (Agent Team)",
+          "description": "5 专家并行探索 → 8 个方向 → DataForSEO 验证 → Decision Brief",
+          "recommended_when": "need_comprehensive_research || important_topic"
         }
       ]
     }
@@ -310,17 +318,17 @@ triggers:
 
 ### 0.2 模式特点对比
 
-| 特点 | 全自动模式 | 手动模式 | Seed 模式 |
-|------|-----------|----------|-----------|
-| 适合场景 | 有竞品 URL/YouTube 视频 + **洗稿意图** | 已有明确标题/方向 + **参考意图** | 只有种子词，需要发现方向 |
-| 用户输入 | 1 个 URL + 1-2 个问题 | 标题 + 素材 + 多步确认 | 种子词 + 3 个问题 |
-| DataForSEO | 自动验证，不展示 | 展示数据，用户确认 | 验证方向代表词 |
-| Writer 选择 | 自动决策 | 用户选择 | 基于方向自动推荐 |
-| 标题选择 | 自动选择最佳 | 用户从 5+ 选项中选择 | Title Lock 验证后输出 |
-| 输出 | 1 篇文章 | 1 篇文章 | 2 个可执行方向 |
-| 执行过程 | 完全无需干预 | 每步需确认 | 漏斗过程透明展示 |
-| 成本 | ~$1.54 | ~$1.54 | ~$0.47 (standard) |
-| **推荐意图** | **洗稿** | **参考** | **参考 + 需选题** |
+| 特点 | 全自动模式 | 手动模式 | Seed 模式 | 深度研究 🆕 |
+|------|-----------|----------|-----------|-------------|
+| 适合场景 | 有竞品 URL + **洗稿意图** | 已有方向 + **参考意图** | 只有种子词 | 重要选题，需全景视角 |
+| 用户输入 | 1 个 URL + 1-2 问题 | 标题 + 素材 + 多步确认 | 种子词 + 3 问题 | 种子词 + 3 问题 |
+| DataForSEO | 自动验证 | 展示确认 | 验证代表词 | Phase 3 集中验证 |
+| Writer 选择 | 自动决策 | 用户选择 | 基于方向推荐 | 基于 Direction 推荐 |
+| 标题选择 | 自动最佳 | 5+ 选项 | Title Lock | Title Lock |
+| 输出 | 1 篇文章 | 1 篇文章 | 2-3 方向 | 5-8 方向 + Brief |
+| 执行过程 | 完全无干预 | 每步确认 | 漏斗透明 | Agent 并行透明 |
+| 成本 | ~$1.54 | ~$1.54 | ~$0.47 | ~$0.17 |
+| **推荐意图** | **洗稿** | **参考** | **参考 + 需选题** | **全景研究** |
 
 ### 0.3 路线分流
 
@@ -330,7 +338,8 @@ triggers:
 |------|----------|----------|
 | 全自动模式 | → AUTO_ROUTE.md | 简化问卷 + 自动决策 |
 | 手动模式 | → MANUAL_ROUTE.md | 5 步流程 + 强制确认 |
-| Seed 模式 | → growth-topic-scout v2.2 Mode D | 选题漏斗 + Title Lock |
+| Seed 模式 | → growth-topic-scout v2.4 Mode D1/D2 | 选题漏斗（D1=2 / D2=3）+ Title Lock |
+| 深度研究 🆕 | → art-scout v1.1 | 5 Agent 并行 → CEO 综合 → 8 Direction |
 
 ### 0.4 Seed 模式自动触发
 
@@ -339,9 +348,15 @@ triggers:
 ```yaml
 auto_trigger_seed_mode:
   - "seed mode"
+  - "seed mode v2"
   - "种子模式"
   - "topic funnel"
   - "选题漏斗"
+  - "diversity seed"
+  - "发散选题"
+  - "多样性选题"
+  - "cosine"
+  - "余弦相似度"
   - "find topics for [X]"
   - "帮我找 [X] 相关选题"
   - "expand from seed"
@@ -438,7 +453,7 @@ auto_trigger_seed_mode:
 
 ## Seed 模式概要 (v2.1 NEW)
 
-> 详细规范见 `growth-topic-scout/SKILL.md` Mode D
+> 详细规范见 `growth-topic-scout/SKILL.md` Mode D1/D2
 
 ```
 Seed 模式流程:
@@ -449,7 +464,7 @@ Seed 模式流程:
 │ └── 输出: 00-mission-config.json                                 │
 │                      ↓                                          │
 │ Phase 0.5: 竞品意图模式发现                                      │
-│ ├── 抓取 3 个竞品博客 (各 10-20 篇)                              │
+│ ├── 抓取 5 个竞品博客 (默认；各 10-20 篇)                        │
 │ ├── 提取标题、内容类型、目标关键词                               │
 │ └── 归纳 5-8 种意图模式                                          │
 │                      ↓                                          │
@@ -502,7 +517,61 @@ Seed 模式完成后输出：
 
 ---
 
-## 执行阶段 (三条路线共享)
+## 深度研究模式概要 (v2.3 NEW)
+
+> 详细规范见 `art-scout/SKILL.md` v1.1
+
+```
+深度研究模式流程:
+┌─────────────────────────────────────────────────────────────────┐
+│ art-scout Phase 0: Mission Briefing                              │
+│ ├── 3 个问题 (种子词/受众/产品)                                   │
+│ └── 输出: mission-config                                         │
+│                      ↓                                          │
+│ art-scout Phase 1: 5 SubAgent 并行探索                            │
+│ ├── keyword_scout (关键词猎手)                                    │
+│ ├── content_strategist (内容策略师)                                │
+│ ├── market_analyst (市场分析师)                                    │
+│ ├── tech_specialist (技术专家)                                     │
+│ └── user_persona (用户画像师)                                      │
+│     → 各自 WebSearch 产出 5-8 个方向                               │
+│                      ↓                                          │
+│ art-scout Phase 2: CEO 综合                                       │
+│ ├── 去重 + 排名 + 多样性分析                                      │
+│ └── 输出: 8-10 个候选方向                                         │
+│                      ↓                                          │
+│ art-scout Phase 3: DataForSEO 集中验证                             │
+│ ├── 搜索量 + 竞品分析 + AEO 维度                                  │
+│ └── Title Lock                                                   │
+│                      ↓                                          │
+│ art-scout Phase 4: 输出                                           │
+│ ├── 5-8 个 Direction + Decision Brief                             │
+│ └── 输出到 /research 竞品分析/team-research/                      │
+│                      ↓                                          │
+│ 用户选择 1-2 个 Direction                                         │
+│ → 回到 SmartLauncher 共享执行阶段                                  │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### 深度研究 vs 其他模式对比
+
+| 模式 | 研究深度 | 方向数量 | 耗时 | DataForSEO 成本 | 适用场景 |
+|------|---------|---------|------|----------------|---------|
+| 全自动 | 无 (洗稿) | 1 | ~5 min | ~$0 | URL 洗稿、快速产出 |
+| 手动 | 单点验证 | 1 | ~10 min | ~$0.10 | 已有方向，需数据确认 |
+| Seed | 单人漏斗 | 2-3 | ~15 min | ~$0.47 | 需要选题发现 |
+| **深度研究** | **5 专家并行** | **5-8** | **~20 min** | **~$0.17** | **重要选题、需要全景视角** |
+
+### 独立触发
+
+art-scout 仍可通过独立触发词直接调用 (不经 SmartLauncher):
+- "团队研究", "多角色选题", "全景扫描", "agent team", "team scout"
+
+独立调用时输出到 `/research 竞品分析/team-research/YYYY-MM-DD-{seed-slug}/`，不自动进入 Writer 流程。
+
+---
+
+## 执行阶段 (四条路线共享)
 
 ### 执行流程
 
@@ -569,7 +638,7 @@ Step 7: 输出生成
 
 | 写作方向 | Writer | Mode | 输出字数 | 检测信号 |
 |----------|--------|------|----------|----------|
-| Tool Showdown | blog-list-writer | tool_showdown | 2,500-3,500 | vs, 对比, 对决, comparison |
+| Tool Showdown | blog-showdown-writer | - | 2,500-3,500 | vs, 对比, 对决, comparison |
 | Listicle | blog-list-writer | standard | 2,500-3,500 | best, top N, 榜单, 数字开头 |
 | Tutorial | blog-tutorial-writer | - | 1,800-2,500 | how to, 如何, 教程, guide |
 | Case Study | case-roundup-writer | - | 300-600 | 案例, case, roundup, 汇总 |
@@ -715,6 +784,29 @@ dataforseo:
 
 ## Changelog
 
+### v2.3 (2026-02-07)
+
+**四轨制架构: 新增 Route D 深度研究**
+
+1. **Phase 0 新增 [D] 深度研究**:
+   - 调用 art-scout v1.1 (5 Agent 并行探索)
+   - 输出 5-8 个 Direction + Decision Brief
+   - 用户选择 1-2 个 Direction 后进入共享执行阶段
+
+2. **四轨制对比表**:
+   - 全自动 / 手动 / Seed / 深度研究
+   - 研究深度递增，方向数量递增
+
+3. **art-scout 独立触发保留**:
+   - 触发词: 团队研究, 多角色选题, 全景扫描, agent team
+   - 独立调用时输出到 /research 竞品分析/team-research/
+
+4. **版本号更新**:
+   - smart-launcher v2.2 → v2.3
+   - 新增 art-scout v1.1 依赖
+
+---
+
 ### v2.2 (2026-01-26)
 
 **意图前置架构: 素材使用意图问卷**
@@ -813,7 +905,7 @@ dataforseo:
    - 只验证方向代表词，不是全部关键词
 
 5. **依赖升级**:
-   - growth-topic-scout v2.2+ (Mode D: Seed Mode)
+   - growth-topic-scout v2.3+ (Mode D1/D2: Seed Mode)
 
 **预期效果**:
 - 从种子词到可执行方向: 1 seed → 2 directions
@@ -890,4 +982,4 @@ dataforseo:
 
 ---
 
-*SmartLauncher v2.2 - 意图前置架构 × 洗稿/参考模式 × 三轨制执行*
+*SmartLauncher v2.3 - 意图前置架构 × 洗稿/参考模式 × 四轨制执行 (全自动/手动/Seed/深度研究)*

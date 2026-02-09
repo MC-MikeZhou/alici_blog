@@ -1,0 +1,17 @@
+{
+  "meta": {"recommended_generate_max": 5},
+  "featured_image": {
+    "alt": "Cover image showing AI video prompt tools, templates, and workflow steps",
+    "size": "1200x630",
+    "priority": "high"
+  },
+  "diagrams": [
+    {"type": "comparison_infographic", "alt": "Prompt tool comparison infographic", "size": "1200x800", "priority": "high"},
+    {"type": "decision_tree", "alt": "Decision tree for choosing a prompt tool", "size": "1200x800", "priority": "high"}
+  ],
+  "tool_images": [
+    {"tool": "Alici AI", "alt": "Alici AI prompt-to-video workflow (illustrative)", "size": "1200x630", "priority": "low"},
+    {"tool": "PromptKit", "alt": "PromptKit template library (illustrative)", "size": "1200x630", "priority": "low"}
+  ]
+}
+

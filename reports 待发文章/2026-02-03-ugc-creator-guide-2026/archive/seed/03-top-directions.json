@@ -1,0 +1,238 @@
+{
+  "directions_top10": [
+    {
+      "pattern_id": "P1",
+      "theme": "Become a UGC creator (beginner path)",
+      "primary_keyword": "what is a ugc creator",
+      "total_volume": 3720,
+      "avg_cpc": 2.71,
+      "avg_competition_index": 32,
+      "serp_features": {
+        "people_also_ask": true,
+        "ai_overview": false
+      },
+      "serp_titles_top3": [
+        "New to UGC- is it worth it? : r/UGCcreators",
+        "Start Making Money As A UGC Creator In 7 Easy Steps",
+        "UGC Content Creator: Role, Skills, and How to Get Started"
+      ],
+      "seo_score": 67,
+      "aeo_score": 75,
+      "combined_priority": "high_aeo_first"
+    },
+    {
+      "pattern_id": "P2",
+      "theme": "Portfolio / examples",
+      "primary_keyword": "ugc portfolio examples",
+      "total_volume": 1140,
+      "avg_cpc": 1.53,
+      "avg_competition_index": 70,
+      "serp_features": {
+        "people_also_ask": false,
+        "ai_overview": false
+      },
+      "serp_titles_top3": [
+        "13 UGC Portfolio Examples & How to Create ...",
+        "Can i see your portfolio? : r/UGCcreators",
+        "Katie UGC Portfolio"
+      ],
+      "seo_score": 25,
+      "aeo_score": 55,
+      "combined_priority": "low"
+    },
+    {
+      "pattern_id": "P3",
+      "theme": "Rates / pricing / usage rights",
+      "primary_keyword": "ugc usage rights",
+      "total_volume": 80,
+      "avg_cpc": 1.19,
+      "avg_competition_index": 19,
+      "serp_features": {
+        "people_also_ask": true,
+        "ai_overview": true
+      },
+      "serp_titles_top3": [
+        "UGC (User-Generated Content) Usage Rights",
+        "Guide to UGC Usage Rights - Blog",
+        "Red Flag Rundown #1: Unlimited Usage and Content ..."
+      ],
+      "seo_score": 20,
+      "aeo_score": 95,
+      "combined_priority": "high_aeo_first"
+    },
+    {
+      "pattern_id": "P5",
+      "theme": "Brief / script / shot list (deliverables)",
+      "primary_keyword": "ugc brief template",
+      "total_volume": 20,
+      "avg_cpc": 0.0,
+      "avg_competition_index": 26,
+      "serp_features": {
+        "people_also_ask": true,
+        "ai_overview": false
+      },
+      "serp_titles_top3": [
+        "How to make a solid UGC brief : r/UGCcreators",
+        "UGC Brief Template: Step-By-Step Guide with Real ...",
+        "How to effectively brief creators for UGC and Influencer ..."
+      ],
+      "seo_score": 14,
+      "aeo_score": 75,
+      "combined_priority": "high_aeo_first"
+    },
+    {
+      "pattern_id": "P4",
+      "theme": "Outreach / pitching / platforms",
+      "primary_keyword": "ugc creator pitch",
+      "total_volume": 30,
+      "avg_cpc": 0.0,
+      "avg_competition_index": 45,
+      "serp_features": {
+        "people_also_ask": true,
+        "ai_overview": true
+      },
+      "serp_titles_top3": [
+        "What should new UGC creators include in their pitch to ...",
+        "Ugc Email Pitch Example",
+        "UGC Pitch Templates for Content Creators | It'sModernMillie"
+      ],
+      "seo_score": 11,
+      "aeo_score": 95,
+      "combined_priority": "high_aeo_first"
+    },
+    {
+      "pattern_id": "P7",
+      "theme": "Compliance / disclosures (FTC, platform policies)",
+      "primary_keyword": "ftc disclosure ugc",
+      "total_volume": 0,
+      "avg_cpc": 0.0,
+      "avg_competition_index": 50,
+      "serp_features": {
+        "people_also_ask": false,
+        "ai_overview": true
+      },
+      "serp_titles_top3": [
+        "Disclosures 101 for Social Media Influencers",
+        "Endorsements, Influencers, and Reviews",
+        "Influencer and UGC Compliance Guide: Meeting FTC ..."
+      ],
+      "seo_score": 10,
+      "aeo_score": 75,
+      "combined_priority": "high_aeo_first"
+    },
+    {
+      "pattern_id": "P6",
+      "theme": "Editing workflow (short-form)",
+      "primary_keyword": "how to edit ugc videos",
+      "total_volume": 20,
+      "avg_cpc": 0.0,
+      "avg_competition_index": 77,
+      "serp_features": {
+        "people_also_ask": true,
+        "ai_overview": true
+      },
+      "serp_titles_top3": [
+        "How to film and edit UGC videos",
+        "How do you edit your videos? : r/UGCcreators",
+        "Filming & Editing Tutorials - Content Creation"
+      ],
+      "seo_score": 4,
+      "aeo_score": 95,
+      "combined_priority": "high_aeo_first"
+    }
+  ],
+  "final_two": [
+    {
+      "rank": 1,
+      "direction_id": "D01",
+      "theme": "Become a UGC creator (beginner path)",
+      "pattern_id": "P1",
+      "locked_title": {
+        "title": "How to Become a UGC Creator in 2026: A Beginner Video Workflow (Step-by-Step)",
+        "primary_keyword": "what is a ugc creator",
+        "intent_matched": true,
+        "serp_aligned": true,
+        "year_validated": true,
+        "formula_id": "howto-ugc-creator-1",
+        "evidence": {
+          "serp_titles": [
+            "New to UGC- is it worth it? : r/UGCcreators",
+            "Start Making Money As A UGC Creator In 7 Easy Steps",
+            "UGC Content Creator: Role, Skills, and How to Get Started"
+          ],
+          "search_volume": 3720,
+          "trend": "stable"
+        }
+      },
+      "seo_score": 67,
+      "aeo_score": 75,
+      "combined_priority": "high_aeo_first",
+      "evidence_chain": {
+        "volume": 3720,
+        "trend": "stable",
+        "cpc_avg": 2.71,
+        "competition_avg": 0.32,
+        "ai_share": "N/A",
+        "serp_gap": "medium",
+        "competitor_weakness": [
+          "no_faq",
+          "poor_structure"
+        ],
+        "freshness_signal": "medium"
+      },
+      "recommended_skill": "blog-tutorial-writer",
+      "recommended_mode": "standard",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt",
+        "product_angle": "Turn a UGC brief into a shot list + script faster, then iterate variants."
+      }
+    },
+    {
+      "rank": 2,
+      "direction_id": "D02",
+      "theme": "Portfolio / examples",
+      "pattern_id": "P2",
+      "locked_title": {
+        "title": "UGC Creator Portfolio in 2026: Templates, Examples, and What Brands Want",
+        "primary_keyword": "ugc portfolio examples",
+        "intent_matched": true,
+        "serp_aligned": true,
+        "year_validated": true,
+        "formula_id": "howto-portfolio-1",
+        "evidence": {
+          "serp_titles": [
+            "13 UGC Portfolio Examples & How to Create ...",
+            "Can i see your portfolio? : r/UGCcreators",
+            "Katie UGC Portfolio"
+          ],
+          "search_volume": 1140,
+          "trend": "stable"
+        }
+      },
+      "seo_score": 25,
+      "aeo_score": 55,
+      "combined_priority": "low",
+      "evidence_chain": {
+        "volume": 1140,
+        "trend": "stable",
+        "cpc_avg": 1.53,
+        "competition_avg": 0.7,
+        "ai_share": "N/A",
+        "serp_gap": "medium",
+        "competitor_weakness": [
+          "no_faq",
+          "poor_structure"
+        ],
+        "freshness_signal": "medium"
+      },
+      "recommended_skill": "blog-tutorial-writer",
+      "recommended_mode": "standard",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt",
+        "product_angle": "Turn a UGC brief into a shot list + script faster, then iterate variants."
+      }
+    }
+  ]
+}

@@ -6,8 +6,8 @@
 
 ```bash
 # 检查最新文章
-ls -la /Users/H/Documents/AliciBlog/reports/*/01-article-draft.md 2>/dev/null | tail -3
-ls -la /Users/H/Documents/AliciBlog/reports/*/04-article-improved.md 2>/dev/null | tail -3
+ls -la reports/*/01-article-draft.md 2>/dev/null | tail -3
+ls -la reports/*/04-article-improved.md 2>/dev/null | tail -3
 ```
 
 ## 预览内容

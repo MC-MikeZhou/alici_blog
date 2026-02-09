@@ -1,0 +1,768 @@
+{
+  "seed": "ugc ads",
+  "theme_key": "ugc_ads",
+  "language_code": "en",
+  "location_code": 2840,
+  "generated_at": "2026-02-05T05:43:45Z",
+  "total_keywords": 119,
+  "keywords_to_validate": [
+    {
+      "keyword": "ugc ads",
+      "pattern_id": "P1",
+      "pattern_name": "UGC ads definition",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_studio",
+        "angle": "Turn UGC ad briefs into scripts + storyboards with Alici AI."
+      }
+    },
+    {
+      "keyword": "what are ugc ads",
+      "pattern_id": "P1",
+      "pattern_name": "UGC ads definition",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_studio",
+        "angle": "Turn UGC ad briefs into scripts + storyboards with Alici AI."
+      }
+    },
+    {
+      "keyword": "ugc ad meaning",
+      "pattern_id": "P1",
+      "pattern_name": "UGC ads definition",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_studio",
+        "angle": "Turn UGC ad briefs into scripts + storyboards with Alici AI."
+      }
+    },
+    {
+      "keyword": "user generated content ads",
+      "pattern_id": "P1",
+      "pattern_name": "UGC ads definition",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_studio",
+        "angle": "Turn UGC ad briefs into scripts + storyboards with Alici AI."
+      }
+    },
+    {
+      "keyword": "ugc ads tiktok",
+      "pattern_id": "P1"
+    },
+    {
+      "keyword": "what are ugc ads tiktok",
+      "pattern_id": "P1"
+    },
+    {
+      "keyword": "ugc ads instagram reels",
+      "pattern_id": "P1"
+    },
+    {
+      "keyword": "what are ugc ads instagram reels",
+      "pattern_id": "P1"
+    },
+    {
+      "keyword": "ugc ads youtube shorts",
+      "pattern_id": "P1"
+    },
+    {
+      "keyword": "what are ugc ads youtube shorts",
+      "pattern_id": "P1"
+    },
+    {
+      "keyword": "ugc ad script template",
+      "pattern_id": "P2",
+      "pattern_name": "UGC ad scripts & templates",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt",
+        "angle": "Generate hook/script variants and export testable cuts with Alici AI."
+      }
+    },
+    {
+      "keyword": "ugc ad script generator",
+      "pattern_id": "P2",
+      "pattern_name": "UGC ad scripts & templates",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt",
+        "angle": "Generate hook/script variants and export testable cuts with Alici AI."
+      }
+    },
+    {
+      "keyword": "ugc script template",
+      "pattern_id": "P2",
+      "pattern_name": "UGC ad scripts & templates",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt",
+        "angle": "Generate hook/script variants and export testable cuts with Alici AI."
+      }
+    },
+    {
+      "keyword": "testimonial ad script template",
+      "pattern_id": "P2",
+      "pattern_name": "UGC ad scripts & templates",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt",
+        "angle": "Generate hook/script variants and export testable cuts with Alici AI."
+      }
+    },
+    {
+      "keyword": "ugc ad script template tiktok",
+      "pattern_id": "P2"
+    },
+    {
+      "keyword": "ugc ad script generator tiktok",
+      "pattern_id": "P2"
+    },
+    {
+      "keyword": "ugc ad script template instagram reels",
+      "pattern_id": "P2"
+    },
+    {
+      "keyword": "ugc ad script generator instagram reels",
+      "pattern_id": "P2"
+    },
+    {
+      "keyword": "ugc ad script template youtube shorts",
+      "pattern_id": "P2"
+    },
+    {
+      "keyword": "ugc ad script generator youtube shorts",
+      "pattern_id": "P2"
+    },
+    {
+      "keyword": "ugc hooks",
+      "pattern_id": "P3",
+      "pattern_name": "UGC hooks & angles",
+      "product_mapping": {
+        "primary": "video_prompt",
+        "secondary": "script_to_video",
+        "angle": "Generate 30 hook variants and pick winners fast with Alici AI."
+      }
+    },
+    {
+      "keyword": "ugc hook examples",
+      "pattern_id": "P3",
+      "pattern_name": "UGC hooks & angles",
+      "product_mapping": {
+        "primary": "video_prompt",
+        "secondary": "script_to_video",
+        "angle": "Generate 30 hook variants and pick winners fast with Alici AI."
+      }
+    },
+    {
+      "keyword": "ugc ad hooks",
+      "pattern_id": "P3",
+      "pattern_name": "UGC hooks & angles",
+      "product_mapping": {
+        "primary": "video_prompt",
+        "secondary": "script_to_video",
+        "angle": "Generate 30 hook variants and pick winners fast with Alici AI."
+      }
+    },
+    {
+      "keyword": "testimonial ad hooks",
+      "pattern_id": "P3",
+      "pattern_name": "UGC hooks & angles",
+      "product_mapping": {
+        "primary": "video_prompt",
+        "secondary": "script_to_video",
+        "angle": "Generate 30 hook variants and pick winners fast with Alici AI."
+      }
+    },
+    {
+      "keyword": "ugc hooks tiktok",
+      "pattern_id": "P3"
+    },
+    {
+      "keyword": "ugc hook examples tiktok",
+      "pattern_id": "P3"
+    },
+    {
+      "keyword": "ugc hooks instagram reels",
+      "pattern_id": "P3"
+    },
+    {
+      "keyword": "ugc hook examples instagram reels",
+      "pattern_id": "P3"
+    },
+    {
+      "keyword": "ugc hooks youtube shorts",
+      "pattern_id": "P3"
+    },
+    {
+      "keyword": "ugc hook examples youtube shorts",
+      "pattern_id": "P3"
+    },
+    {
+      "keyword": "ugc ad brief template",
+      "pattern_id": "P4",
+      "pattern_name": "Briefs, shot lists, storyboards",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "script_to_video",
+        "angle": "Convert briefs into shot lists + edit plans with Alici AI."
+      }
+    },
+    {
+      "keyword": "ugc shot list",
+      "pattern_id": "P4",
+      "pattern_name": "Briefs, shot lists, storyboards",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "script_to_video",
+        "angle": "Convert briefs into shot lists + edit plans with Alici AI."
+      }
+    },
+    {
+      "keyword": "ugc storyboard template",
+      "pattern_id": "P4",
+      "pattern_name": "Briefs, shot lists, storyboards",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "script_to_video",
+        "angle": "Convert briefs into shot lists + edit plans with Alici AI."
+      }
+    },
+    {
+      "keyword": "ugc deliverables checklist",
+      "pattern_id": "P4",
+      "pattern_name": "Briefs, shot lists, storyboards",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "script_to_video",
+        "angle": "Convert briefs into shot lists + edit plans with Alici AI."
+      }
+    },
+    {
+      "keyword": "ugc ad brief template tiktok",
+      "pattern_id": "P4"
+    },
+    {
+      "keyword": "ugc shot list tiktok",
+      "pattern_id": "P4"
+    },
+    {
+      "keyword": "ugc ad brief template instagram reels",
+      "pattern_id": "P4"
+    },
+    {
+      "keyword": "ugc shot list instagram reels",
+      "pattern_id": "P4"
+    },
+    {
+      "keyword": "ugc ad brief template youtube shorts",
+      "pattern_id": "P4"
+    },
+    {
+      "keyword": "ugc shot list youtube shorts",
+      "pattern_id": "P4"
+    },
+    {
+      "keyword": "ugc ad examples",
+      "pattern_id": "P5",
+      "pattern_name": "UGC ad examples & library",
+      "product_mapping": {
+        "primary": "video_prompt",
+        "secondary": "video_studio",
+        "angle": "Build a swipe file + prompt-to-variant system using Alici AI."
+      }
+    },
+    {
+      "keyword": "best ugc ads",
+      "pattern_id": "P5",
+      "pattern_name": "UGC ad examples & library",
+      "product_mapping": {
+        "primary": "video_prompt",
+        "secondary": "video_studio",
+        "angle": "Build a swipe file + prompt-to-variant system using Alici AI."
+      }
+    },
+    {
+      "keyword": "ugc ad examples 2026",
+      "pattern_id": "P5",
+      "pattern_name": "UGC ad examples & library",
+      "product_mapping": {
+        "primary": "video_prompt",
+        "secondary": "video_studio",
+        "angle": "Build a swipe file + prompt-to-variant system using Alici AI."
+      }
+    },
+    {
+      "keyword": "ugc ad ideas",
+      "pattern_id": "P5",
+      "pattern_name": "UGC ad examples & library",
+      "product_mapping": {
+        "primary": "video_prompt",
+        "secondary": "video_studio",
+        "angle": "Build a swipe file + prompt-to-variant system using Alici AI."
+      }
+    },
+    {
+      "keyword": "ugc ad examples tiktok",
+      "pattern_id": "P5"
+    },
+    {
+      "keyword": "best ugc ads tiktok",
+      "pattern_id": "P5"
+    },
+    {
+      "keyword": "ugc ad examples instagram reels",
+      "pattern_id": "P5"
+    },
+    {
+      "keyword": "best ugc ads instagram reels",
+      "pattern_id": "P5"
+    },
+    {
+      "keyword": "ugc ad examples youtube shorts",
+      "pattern_id": "P5"
+    },
+    {
+      "keyword": "best ugc ads youtube shorts",
+      "pattern_id": "P5"
+    },
+    {
+      "keyword": "spark ads ugc",
+      "pattern_id": "P6",
+      "pattern_name": "TikTok Spark Ads & platform variants",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "script_to_video",
+        "angle": "Create platform-native cuts from one script with Alici AI."
+      }
+    },
+    {
+      "keyword": "tiktok ugc ads",
+      "pattern_id": "P6",
+      "pattern_name": "TikTok Spark Ads & platform variants",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "script_to_video",
+        "angle": "Create platform-native cuts from one script with Alici AI."
+      }
+    },
+    {
+      "keyword": "tiktok spark ads creator",
+      "pattern_id": "P6",
+      "pattern_name": "TikTok Spark Ads & platform variants",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "script_to_video",
+        "angle": "Create platform-native cuts from one script with Alici AI."
+      }
+    },
+    {
+      "keyword": "spark ads ugc tiktok",
+      "pattern_id": "P6"
+    },
+    {
+      "keyword": "tiktok ugc ads tiktok",
+      "pattern_id": "P6"
+    },
+    {
+      "keyword": "spark ads ugc instagram reels",
+      "pattern_id": "P6"
+    },
+    {
+      "keyword": "tiktok ugc ads instagram reels",
+      "pattern_id": "P6"
+    },
+    {
+      "keyword": "spark ads ugc youtube shorts",
+      "pattern_id": "P6"
+    },
+    {
+      "keyword": "tiktok ugc ads youtube shorts",
+      "pattern_id": "P6"
+    },
+    {
+      "keyword": "ugc whitelisting",
+      "pattern_id": "P7",
+      "pattern_name": "Whitelisting, usage rights, licensing",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "script_to_video",
+        "angle": "Ship usage-rights-ready deliverables checklists and variants with Alici AI."
+      }
+    },
+    {
+      "keyword": "ugc usage rights",
+      "pattern_id": "P7",
+      "pattern_name": "Whitelisting, usage rights, licensing",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "script_to_video",
+        "angle": "Ship usage-rights-ready deliverables checklists and variants with Alici AI."
+      }
+    },
+    {
+      "keyword": "ugc licensing agreement",
+      "pattern_id": "P7",
+      "pattern_name": "Whitelisting, usage rights, licensing",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "script_to_video",
+        "angle": "Ship usage-rights-ready deliverables checklists and variants with Alici AI."
+      }
+    },
+    {
+      "keyword": "ugc content licensing",
+      "pattern_id": "P7",
+      "pattern_name": "Whitelisting, usage rights, licensing",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "script_to_video",
+        "angle": "Ship usage-rights-ready deliverables checklists and variants with Alici AI."
+      }
+    },
+    {
+      "keyword": "ugc whitelisting tiktok",
+      "pattern_id": "P7"
+    },
+    {
+      "keyword": "ugc usage rights tiktok",
+      "pattern_id": "P7"
+    },
+    {
+      "keyword": "ugc whitelisting instagram reels",
+      "pattern_id": "P7"
+    },
+    {
+      "keyword": "ugc usage rights instagram reels",
+      "pattern_id": "P7"
+    },
+    {
+      "keyword": "ugc whitelisting youtube shorts",
+      "pattern_id": "P7"
+    },
+    {
+      "keyword": "ugc usage rights youtube shorts",
+      "pattern_id": "P7"
+    },
+    {
+      "keyword": "ugc ad pricing",
+      "pattern_id": "P8",
+      "pattern_name": "Pricing & packages for brands",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_studio",
+        "angle": "More variants per creator fee = better CAC; Alici AI as scale lever."
+      }
+    },
+    {
+      "keyword": "ugc ad cost",
+      "pattern_id": "P8",
+      "pattern_name": "Pricing & packages for brands",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_studio",
+        "angle": "More variants per creator fee = better CAC; Alici AI as scale lever."
+      }
+    },
+    {
+      "keyword": "ugc creator rates for ads",
+      "pattern_id": "P8",
+      "pattern_name": "Pricing & packages for brands",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_studio",
+        "angle": "More variants per creator fee = better CAC; Alici AI as scale lever."
+      }
+    },
+    {
+      "keyword": "ugc ad packages",
+      "pattern_id": "P8",
+      "pattern_name": "Pricing & packages for brands",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_studio",
+        "angle": "More variants per creator fee = better CAC; Alici AI as scale lever."
+      }
+    },
+    {
+      "keyword": "ugc ad pricing tiktok",
+      "pattern_id": "P8"
+    },
+    {
+      "keyword": "ugc ad cost tiktok",
+      "pattern_id": "P8"
+    },
+    {
+      "keyword": "ugc ad pricing instagram reels",
+      "pattern_id": "P8"
+    },
+    {
+      "keyword": "ugc ad cost instagram reels",
+      "pattern_id": "P8"
+    },
+    {
+      "keyword": "ugc ad pricing youtube shorts",
+      "pattern_id": "P8"
+    },
+    {
+      "keyword": "ugc ad cost youtube shorts",
+      "pattern_id": "P8"
+    },
+    {
+      "keyword": "ugc creative testing framework",
+      "pattern_id": "P9",
+      "pattern_name": "Testing & metrics (creative iteration)",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "video_prompt",
+        "angle": "Generate structured A/B test plans and variant batches with Alici AI."
+      }
+    },
+    {
+      "keyword": "ugc creative testing",
+      "pattern_id": "P9",
+      "pattern_name": "Testing & metrics (creative iteration)",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "video_prompt",
+        "angle": "Generate structured A/B test plans and variant batches with Alici AI."
+      }
+    },
+    {
+      "keyword": "ugc ad metrics",
+      "pattern_id": "P9",
+      "pattern_name": "Testing & metrics (creative iteration)",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "video_prompt",
+        "angle": "Generate structured A/B test plans and variant batches with Alici AI."
+      }
+    },
+    {
+      "keyword": "ugc ad iteration",
+      "pattern_id": "P9",
+      "pattern_name": "Testing & metrics (creative iteration)",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "video_prompt",
+        "angle": "Generate structured A/B test plans and variant batches with Alici AI."
+      }
+    },
+    {
+      "keyword": "ugc creative testing framework tiktok",
+      "pattern_id": "P9"
+    },
+    {
+      "keyword": "ugc creative testing tiktok",
+      "pattern_id": "P9"
+    },
+    {
+      "keyword": "ugc creative testing framework instagram reels",
+      "pattern_id": "P9"
+    },
+    {
+      "keyword": "ugc creative testing instagram reels",
+      "pattern_id": "P9"
+    },
+    {
+      "keyword": "ugc creative testing framework youtube shorts",
+      "pattern_id": "P9"
+    },
+    {
+      "keyword": "ugc creative testing youtube shorts",
+      "pattern_id": "P9"
+    },
+    {
+      "keyword": "find ugc creators for ads",
+      "pattern_id": "P10",
+      "pattern_name": "Hiring / sourcing UGC creators",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_studio",
+        "angle": "Standardize briefs + evaluation rubrics for faster creator sourcing with Alici AI."
+      }
+    },
+    {
+      "keyword": "hire ugc creators",
+      "pattern_id": "P10",
+      "pattern_name": "Hiring / sourcing UGC creators",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_studio",
+        "angle": "Standardize briefs + evaluation rubrics for faster creator sourcing with Alici AI."
+      }
+    },
+    {
+      "keyword": "ugc creator marketplace for brands",
+      "pattern_id": "P10",
+      "pattern_name": "Hiring / sourcing UGC creators",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_studio",
+        "angle": "Standardize briefs + evaluation rubrics for faster creator sourcing with Alici AI."
+      }
+    },
+    {
+      "keyword": "ugc creator outreach template",
+      "pattern_id": "P10",
+      "pattern_name": "Hiring / sourcing UGC creators",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_studio",
+        "angle": "Standardize briefs + evaluation rubrics for faster creator sourcing with Alici AI."
+      }
+    },
+    {
+      "keyword": "find ugc creators for ads tiktok",
+      "pattern_id": "P10"
+    },
+    {
+      "keyword": "hire ugc creators tiktok",
+      "pattern_id": "P10"
+    },
+    {
+      "keyword": "find ugc creators for ads instagram reels",
+      "pattern_id": "P10"
+    },
+    {
+      "keyword": "hire ugc creators instagram reels",
+      "pattern_id": "P10"
+    },
+    {
+      "keyword": "find ugc creators for ads youtube shorts",
+      "pattern_id": "P10"
+    },
+    {
+      "keyword": "hire ugc creators youtube shorts",
+      "pattern_id": "P10"
+    },
+    {
+      "keyword": "ftc disclosure ugc ads",
+      "pattern_id": "P11",
+      "pattern_name": "Compliance (FTC + platform disclosure)",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "script_to_video",
+        "angle": "Ship compliant UGC scripts with disclosure options using Alici AI."
+      }
+    },
+    {
+      "keyword": "paid partnership disclosure ugc",
+      "pattern_id": "P11",
+      "pattern_name": "Compliance (FTC + platform disclosure)",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "script_to_video",
+        "angle": "Ship compliant UGC scripts with disclosure options using Alici AI."
+      }
+    },
+    {
+      "keyword": "tiktok branded content ugc disclosure",
+      "pattern_id": "P11",
+      "pattern_name": "Compliance (FTC + platform disclosure)",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "script_to_video",
+        "angle": "Ship compliant UGC scripts with disclosure options using Alici AI."
+      }
+    },
+    {
+      "keyword": "instagram paid partnership ugc disclosure",
+      "pattern_id": "P11",
+      "pattern_name": "Compliance (FTC + platform disclosure)",
+      "product_mapping": {
+        "primary": "video_studio",
+        "secondary": "script_to_video",
+        "angle": "Ship compliant UGC scripts with disclosure options using Alici AI."
+      }
+    },
+    {
+      "keyword": "ftc disclosure ugc ads tiktok",
+      "pattern_id": "P11"
+    },
+    {
+      "keyword": "paid partnership disclosure ugc tiktok",
+      "pattern_id": "P11"
+    },
+    {
+      "keyword": "ftc disclosure ugc ads instagram reels",
+      "pattern_id": "P11"
+    },
+    {
+      "keyword": "paid partnership disclosure ugc instagram reels",
+      "pattern_id": "P11"
+    },
+    {
+      "keyword": "ftc disclosure ugc ads youtube shorts",
+      "pattern_id": "P11"
+    },
+    {
+      "keyword": "paid partnership disclosure ugc youtube shorts",
+      "pattern_id": "P11"
+    },
+    {
+      "keyword": "ai tools for ugc ads",
+      "pattern_id": "P12",
+      "pattern_name": "AI workflow for UGC ads",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt",
+        "angle": "End-to-end workflow: brief → hooks → script → cuts with Alici AI."
+      }
+    },
+    {
+      "keyword": "ai ugc ad script generator",
+      "pattern_id": "P12",
+      "pattern_name": "AI workflow for UGC ads",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt",
+        "angle": "End-to-end workflow: brief → hooks → script → cuts with Alici AI."
+      }
+    },
+    {
+      "keyword": "script to video ugc ad",
+      "pattern_id": "P12",
+      "pattern_name": "AI workflow for UGC ads",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt",
+        "angle": "End-to-end workflow: brief → hooks → script → cuts with Alici AI."
+      }
+    },
+    {
+      "keyword": "ai workflow for ugc ads",
+      "pattern_id": "P12",
+      "pattern_name": "AI workflow for UGC ads",
+      "product_mapping": {
+        "primary": "script_to_video",
+        "secondary": "video_prompt",
+        "angle": "End-to-end workflow: brief → hooks → script → cuts with Alici AI."
+      }
+    },
+    {
+      "keyword": "ai tools for ugc ads tiktok",
+      "pattern_id": "P12"
+    },
+    {
+      "keyword": "ai ugc ad script generator tiktok",
+      "pattern_id": "P12"
+    },
+    {
+      "keyword": "ai tools for ugc ads instagram reels",
+      "pattern_id": "P12"
+    },
+    {
+      "keyword": "ai ugc ad script generator instagram reels",
+      "pattern_id": "P12"
+    },
+    {
+      "keyword": "ai tools for ugc ads youtube shorts",
+      "pattern_id": "P12"
+    },
+    {
+      "keyword": "ai ugc ad script generator youtube shorts",
+      "pattern_id": "P12"
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://alici.ai/schemas/mission-config-v2.2.json",
+  "$id": "https://alici.ai/schemas/mission-config-v2.3.json",
   "title": "Mission Config",
-  "description": "Mission Architecture configuration for Growth Topic Scout v2.2 Seed Mode",
+  "description": "Mission Architecture configuration for Growth Topic Scout v2.3 Seed Mode (D1 competitor-anchored, D2 diversity engine)",
   "type": "object",
   "required": ["seed", "anchors", "scope", "growth"],
   "properties": {
@@ -15,22 +15,23 @@
     },
     "anchors": {
       "type": "object",
-      "description": "Competitor anchoring configuration",
-      "required": ["competitors"],
+      "description": "Anchoring configuration (competitors required for D1; optional for D2 when diversity.enabled=true)",
       "properties": {
         "competitors": {
           "type": "array",
-          "description": "List of competitor blog URLs (3 recommended)",
+          "description": "List of competitor blog URLs (default 5; supports 0-5 for D2, 3-5 for D1)",
           "items": {
             "type": "string",
             "format": "uri"
           },
-          "minItems": 1,
+          "minItems": 0,
           "maxItems": 5,
           "default": [
             "https://invideo.io/blog",
             "https://higgsfield.ai/blog",
-            "https://freepik.com/blog"
+            "https://freepik.com/blog",
+            "https://blog.fal.ai",
+            "https://wavespeed.ai/blog"
           ]
         },
         "competitor_strategy": {
@@ -44,6 +45,65 @@
               "core_strategy": { "type": "string" }
             }
           }
+        }
+      }
+    },
+    "diversity": {
+      "type": "object",
+      "description": "Diversity Engine configuration (Mode D2). When enabled=true, competitors are optional and the funnel outputs 3 directions.",
+      "properties": {
+        "enabled": {
+          "type": "boolean",
+          "default": false
+        },
+        "engine_version": {
+          "type": "string",
+          "const": "2.3-diversity",
+          "description": "Diversity engine version identifier"
+        },
+        "cluster_threshold": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "default": 0.6,
+          "description": "Semantic similarity threshold for clustering (0-1)"
+        },
+        "target_avg_similarity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "default": 0.5,
+          "description": "Target average pairwise similarity for the final validated pool"
+        },
+        "final_pairwise_max": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "default": 0.6,
+          "description": "Max allowed similarity between any two final directions"
+        },
+        "min_final_clusters": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 3
+        },
+        "min_intent_types_final": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 2
+        },
+        "require_non_competitor_source": {
+          "type": "boolean",
+          "default": true
+        },
+        "strategies": {
+          "type": "array",
+          "description": "Default divergence strategies for D2",
+          "items": {
+            "type": "string",
+            "enum": ["seed_xpollination", "persona_rotation", "serp_gap", "competitor_diverge"]
+          },
+          "default": ["seed_xpollination", "persona_rotation", "serp_gap"]
         }
       }
     },
@@ -152,11 +212,46 @@
         },
         "version": {
           "type": "string",
-          "const": "2.2"
+          "const": "2.3"
         }
       }
     }
   },
+  "allOf": [
+    {
+      "if": {
+        "required": ["diversity"],
+        "properties": {
+          "diversity": {
+            "type": "object",
+            "required": ["enabled"],
+            "properties": {
+              "enabled": { "const": true }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "anchors": {
+            "properties": {
+              "competitors": { "minItems": 0 }
+            }
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "anchors": {
+            "required": ["competitors"],
+            "properties": {
+              "competitors": { "minItems": 3 }
+            }
+          }
+        }
+      }
+    }
+  ],
   "examples": [
     {
       "seed": "ai video tools 2026",
@@ -164,7 +259,9 @@
         "competitors": [
           "https://invideo.io/blog",
           "https://higgsfield.ai/blog",
-          "https://freepik.com/blog"
+          "https://freepik.com/blog",
+          "https://blog.fal.ai",
+          "https://wavespeed.ai/blog"
         ],
         "competitor_strategy": {}
       },
@@ -182,7 +279,41 @@
       },
       "metadata": {
         "created_at": "2026-01-25T10:00:00Z",
-        "version": "2.2"
+        "version": "2.3"
+      }
+    },
+    {
+      "seed": "sora prompt guide",
+      "anchors": {
+        "competitors": [],
+        "competitor_strategy": {}
+      },
+      "diversity": {
+        "enabled": true,
+        "engine_version": "2.3-diversity",
+        "cluster_threshold": 0.6,
+        "target_avg_similarity": 0.5,
+        "final_pairwise_max": 0.6,
+        "min_final_clusters": 3,
+        "min_intent_types_final": 2,
+        "require_non_competitor_source": true,
+        "strategies": ["seed_xpollination", "persona_rotation", "serp_gap"]
+      },
+      "scope": {
+        "language": "en",
+        "geo": "US",
+        "audience": "content_creators",
+        "forbidden_zones": ["gambling", "adult"],
+        "validation_depth": "standard"
+      },
+      "growth": {
+        "goal": "traffic_and_conversion",
+        "product_relevance": "video_studio",
+        "conversion_priority": "balanced"
+      },
+      "metadata": {
+        "created_at": "2026-02-03T10:00:00Z",
+        "version": "2.3"
       }
     }
   ]

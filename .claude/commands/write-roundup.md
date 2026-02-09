@@ -12,8 +12,8 @@
 
 ```bash
 # 检查 insights/ 和 case-packs/ 目录
-ls -la /Users/H/Documents/AliciBlog/insights/ 2>/dev/null | tail -3
-ls -la /Users/H/Documents/AliciBlog/case-packs/ 2>/dev/null | tail -3
+ls -la insights/ 2>/dev/null | tail -3
+ls -la case-packs/ 2>/dev/null | tail -3
 
 # 当前日期
 echo "发布日期: $(date +%Y-%m-%d)"
