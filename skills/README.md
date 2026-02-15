@@ -1,6 +1,6 @@
 # AliciBlog Skills
 
-> 22 Skills + 6 共享文档，按功能分组
+> 23 Skills + 6 共享文档，按功能分组
 
 ## 目录结构
 
@@ -10,7 +10,7 @@ skills/
 ├── _docs/                    ← 共享文档 (6 个)
 ├── core/                     ← 核心入口 (6 个 Skills)
 ├── writers/                  ← Writer 组 (4 个 Skills)
-├── utilities/                ← 工具组 (8 个 Skills)
+├── utilities/                ← 工具组 (9 个 Skills)
 └── monitors/                 ← 监控分析组 (5 个 Skills)
 ```
 
@@ -74,6 +74,7 @@ skills/
 | **image-sourcer** | v1.0 | 找配图, source images | Web 真实图片搜索 + 5 维评分 |
 | **image-generator** | - | - | 图片生成 |
 | **image-placeholder-filler** | - | - | 图片占位符填充 |
+| **bc-sync-engine** | v2.1 | basecamp url, bc链接, bc push, bc comment | Basecamp 4 Pull + Push 同步引擎 (6 命令 + 工作流约定) |
 
 ---
 

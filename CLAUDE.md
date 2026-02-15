@@ -2,6 +2,32 @@
 
 > AliciBlog: alici.ai AI 内容工厂，70%+ 自动化博客生产
 
+## Communication
+
+默认使用中文交流。所有报告、摘要和对话回复都应使用中文，除非明确要求使用英文。
+
+## Task Execution
+
+执行多阶段计划时，必须按顺序完成所有阶段。未经用户明确批准，不得因 token/时间预算问题跳过阶段。如果上下文即将耗尽，总结进度并询问是否继续，而不是默默省略步骤。
+
+## Content Editing Rules
+
+编辑内容文件（文章、博客、SKILL.md）时，始终在修改前保留现有内容。在任何重大重写前创建版本化备份或归档副本。不对比前一版本就不要覆盖内容。
+
+## Versioning Workflow
+
+本项目使用版本化工作流。更新任何文件（文章、技能、文档）时，始终：1) 更新 CHANGELOG.md，2) 在所有相关文件中一致地升级版本号，3) 覆盖前归档前一版本。
+
+## File Operations
+
+提出清理、重组或删除计划时，始终从保守方案开始。先展示影响最小的选项。永远不要删除 git 内部文件、运行时二进制文件或隐藏的系统目录。始终列出将要删除的确切内容并在执行前获得确认。
+
+## API & Data Sources
+
+DataForSEO API 凭证通过环境变量或 MCP 提供。始终先尝试真实 API 调用，再退回到模拟/WebSearch 数据。如果 API 失败，明确说明结果是模拟的，不是真实数据。
+
+---
+
 ## 核心架构
 
 重要新增：模式选择除了下面的3种模式，新增一种thumbnail mode ,具体请查看easy_mode.md，然后启动
@@ -128,7 +154,7 @@
 查看/skills/utilities/convert-to-video-framer-json/skill.md
 
 | **image-sourcer** 🆕 | **v1.0** | 找配图, source images, 配图, image research | Web 真实图片搜索 + 5 维评分 + 专家选图 |
-| **basecamp-link-ops** 🆕 | **v1.0** | basecamp url, bc链接, 读取basecamp | OAuth 读写 Basecamp 4 内容 (documents/todolists/vaults) |
+| **bc-sync-engine** 🆕 | **v2.1** | basecamp url, bc链接, bc push, bc comment, bc todo, bc 同步 | Basecamp 4 Pull + Push 同步引擎 (6 个 Push 命令 + Pull) + 工作流约定 |
 
 **调用链 (v2.9 Updated)**:
 ```
@@ -792,6 +818,72 @@ source parser https://invideo.io/blog/kling-vs-runway  # 八维素材分析
 
 ---
 
+## Git Coach 教练模式 🆕
+
+**目的**: 帮助团队通过 git commit 追踪每次改动，解决版本合并困难的问题。
+
+### 主动提醒规则
+
+**触发时机** — 当 Claude 完成以下任务后，主动提醒用户是否需要 commit：
+- 修改/创建 Skill 文件
+- 更新 CLAUDE.md 或其他配置文件
+- 写文章、编辑文章等产生文件变更的任务
+- 修改脚本或代码文件
+
+**不触发** — 以下场景不提醒：
+- 纯对话、研究、分析类任务（不产生文件变更）
+- 用户明确表示暂不提交
+- 仅读取文件未做修改
+
+**提醒格式**:
+```
+📌 刚才的改动建议提交一个 Git commit，方便团队追踪。
+涉及修改：
+  - path/to/file1.md
+  - path/to/file2.md
+
+建议 commit 信息: `<type>(<scope>): 中文描述`
+
+需要我帮你提交吗？
+```
+
+### Commit Message 规范
+
+复用 `CONTRIBUTING.md` 的 conventional commits 格式：
+
+```
+<type>(<scope>): <中文描述>
+```
+
+| Type | 用途 |
+|------|------|
+| `feat` | 新功能 |
+| `fix` | Bug 修复 |
+| `docs` | 文档更新 |
+| `skill` | Skill 相关更改 |
+| `refactor` | 重构 |
+
+- **scope**: 改动的主要模块（skill 名、文件名等）
+- **描述**: 用中文，简洁明了
+
+### 执行流程（用户确认后）
+
+```
+1. git add <具体文件>          ← 只 add 相关文件，不 add 全部
+2. git commit -m "..."         ← 用生成的 message
+3. git push origin hans_master ← push 到当前分支
+```
+
+### 安全规则
+
+- ⛔ **必须用户确认**后才执行 commit/push
+- ⛔ **列出将提交的文件**让用户确认
+- ⛔ **不 add 敏感文件** (.env, API keys, 密码, .mcp.json 等)
+- ⛔ **不 force push**
+- ⛔ **不操作 main/master 分支**（仅 push 到 hans_master 或功能分支）
+
+---
+
 ## 不要做的事
 
 - ❌ 跳过 Plan 模式直接执行复杂任务
@@ -812,20 +904,29 @@ source parser https://invideo.io/blog/kling-vs-runway  # 八维素材分析
 - 持久化: 会话压缩后自动加载，无需手动 export
 - 生成的图片会返回 fal的图片链接，可以直接使用
 
-**图片上传**: 
-- 上传视频，如果用户使用本地的图片，请通过以下方式上传获得云端链接。
-首先要有本地图片的路径
-比如 ：前置目录/${name}.png
-上传使用ssh命令：
-ssh命令：
-rsync -a -r -v -p -e 'ssh -p 22'  --exclude='.DS_Store'  --progress ${完整前置路径}/${name}.png root@45.76.70.215:/var/www/static/static/image/other/gen_images/
-password:  5A_p@cjpX74H(LJM
+**图片上传**:
+- 上传图片/视频到 CDN，文件名**必须追加时间戳**防止同名覆盖。
+- 时间戳格式: `${name}_${YYYYMMDDHHMMSS}.${ext}`
+- 示例: `hero.png` → `hero_20260211143052.png`
+
+上传步骤：
+```bash
+# 1. 生成时间戳文件名
+TIMESTAMP=$(date +%Y%m%d%H%M%S)
+NEW_NAME="${name}_${TIMESTAMP}.${ext}"
+cp ${完整前置路径}/${name}.${ext} /tmp/${NEW_NAME}
+
+# 2. 上传到 CDN
+sshpass -p '5A_p@cjpX74H(LJM' rsync -avz -e 'ssh -p 2222 -o StrictHostKeyChecking=no' /tmp/${NEW_NAME} root@45.76.70.215:/var/www/static/static/image/other/gen_images/
+
+# 3. 清理临时文件
+rm /tmp/${NEW_NAME}
+```
 
 最终获得的链接如下：
-https://ct2.alici.ai/static/image/other/gen_images/${name}.png
+`https://ct2.alici.ai/static/image/other/gen_images/${name}_${时间戳}.${ext}`
 
-请使用命令上传视频，不要让用户自己上传。
-请使用命令上传视频，不要让用户自己上传。
+请使用命令上传，不要让用户自己上传。
 
 
 **MCP**: DataForSEO (SERP + KEYWORDS_DATA)
