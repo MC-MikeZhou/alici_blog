@@ -1,6 +1,6 @@
 ---
 name: smart-launcher
-version: "2.3"
+version: "2.4"
 type: skill
 provides: unified-entry-orchestration
 dependencies:
@@ -8,23 +8,27 @@ dependencies:
   - skill: competitive-validator
   - skill: growth-topic-scout (v2.2+)
   - skill: art-scout (v1.1+)
+  - skill: formula-integrator (v1.0+)
+  - skill: link-architect (v1.0+)
+  - skill: video-understanding (v1.0+)
   - capability: output-path-builder
 description: >
-  SmartLauncher v2.3 - 四轨制架构。
+  SmartLauncher v2.4 - 五轨制架构。
   Step 1.5: 素材使用意图 (洗稿/参考) - 用户明确选择使用方式
-  Phase 0: 模式选择（全自动 vs 手动 vs Seed vs 深度研究）- 根据意图推荐
+  Phase 0: 模式选择（全自动 vs 手动 vs Seed vs 深度研究 vs Formula-Driven）- 根据意图推荐
   洗稿模式: 80%+ 保留原内容，禁止新增，品牌换 Alici AI
   参考模式: 作为起点，可以深挖扩展、补充新内容
   深度研究: art-scout 5 Agent 并行 → CEO 综合 → 8 Direction 输出
+  Formula-Driven: Formulas 生态扫描 → 并行竞品研究 → Lucy 第一人称写作
 allowed-tools: Read, Write, WebFetch, WebSearch, AskUserQuestion, Bash
 mcp-servers: dataforseo
 metadata:
   author: H
-  updated: 2026-02-07
-  supersedes: [smart-launcher v2.2, smart-router v2.0, smart-root v2.2]
+  updated: 2026-03-22
+  supersedes: [smart-launcher v2.3, smart-router v2.0, smart-root v2.2]
 ---
 
-# SmartLauncher v2.3 - 四轨制架构
+# SmartLauncher v2.4 - 五轨制架构
 
 ## Purpose
 
@@ -108,6 +112,13 @@ triggers:
   - "帮我找选题"
   - "expand from seed"
   - "从种子词扩展"
+  # Formula-Driven triggers (v2.4 NEW)
+  - "formula driven"
+  - "formula 驱动"
+  - "从 formula 出发"
+  - "AI influencer"
+  - "用 formulas 写"
+  - "formula pipeline"
   # Video embedding (new utility)
   - "嵌入视频"
   - "插入视频"
@@ -184,6 +195,7 @@ triggers:
 │  │   洗稿意图 → 推荐 [A] 全自动模式 (无需扩展调研，快速执行)              │    │
 │  │   参考意图 → 推荐 [B] 手动模式 或 [C] Seed模式 (需确认扩展方向)        │    │
 │  │   深度研究 → [D] Agent Team 多角色并行                                │    │
+│  │   Formula → [E] Formula-Driven Pipeline 🆕                           │    │
 │  │                                                                     │    │
 │  │   ┌─────────────────────────────────────────────────────────────┐   │    │
 │  │   │ [A] 全自动模式                                               │   │    │
@@ -195,22 +207,25 @@ triggers:
 │  │   │ [C] Seed 模式                                                │   │    │
 │  │   │     种子词 → 选题漏斗（D1=2 / D2=3）→ 可执行方向               │   │    │
 │  │   ├─────────────────────────────────────────────────────────────┤   │    │
-│  │   │ [D] 深度研究 (Agent Team) 🆕                                  │   │    │
+│  │   │ [D] 深度研究 (Agent Team)                                     │   │    │
 │  │   │     5 专家并行 → 8 方向 → DataForSEO 验证 → Direction         │   │    │
+│  │   ├─────────────────────────────────────────────────────────────┤   │    │
+│  │   │ [E] Formula-Driven (Formula Pipeline) 🆕                      │   │    │
+│  │   │     Formulas 生态 → 竞品并行 → Lucy 第一人称 → 内链验证        │   │    │
 │  │   └─────────────────────────────────────────────────────────────┘   │    │
 │  └──────────────────────┬──────────────────────────────────────────────┘    │
 │                         │                                                   │
-│         ┌───────────┬───┼───────────┬───────────┐                           │
-│         ↓           ↓   ↓           ↓           │                           │
-│  ┌──────────┐ ┌──────────┐ ┌──────────────┐ ┌──────────────┐               │
-│  │🤖 全自动 │ │✋ 手动    │ │🌱 Seed模式   │ │🔬 深度研究   │               │
-│  │Full-Auto │ │Manual    │ │选题漏斗       │ │Agent Team    │               │
-│  │          │ │          │ │              │ │              │               │
-│  │AUTO_ROUTE│ │MANUAL_   │ │growth-topic- │ │art-scout     │               │
-│  │.md       │ │ROUTE.md  │ │scout v2.4    │ │v1.1          │               │
-│  └────┬─────┘ └────┬─────┘ └──────┬───────┘ └──────┬───────┘               │
-│       │            │              │                │                       │
-│       └────────────┴──────────────┴────────────────┘                       │
+│       ┌───────────┬─────┼─────────┬───────────┬───────────┐                │
+│       ↓           ↓     ↓         ↓           ↓           │                │
+│  ┌──────────┐ ┌──────────┐ ┌────────────┐ ┌────────────┐ ┌────────────┐   │
+│  │🤖 全自动 │ │✋ 手动    │ │🌱 Seed模式 │ │🔬 深度研究 │ │🧪 Formula  │   │
+│  │Full-Auto │ │Manual    │ │选题漏斗     │ │Agent Team  │ │Driven 🆕   │   │
+│  │          │ │          │ │            │ │            │ │            │   │
+│  │AUTO_ROUTE│ │MANUAL_   │ │growth-topic│ │art-scout   │ │FORMULA_    │   │
+│  │.md       │ │ROUTE.md  │ │scout v2.4  │ │v1.1        │ │ROUTE.md    │   │
+│  └────┬─────┘ └────┬─────┘ └─────┬──────┘ └─────┬──────┘ └─────┬──────┘   │
+│       │            │             │               │              │          │
+│       └────────────┴─────────────┴───────────────┴──────────────┘          │
 │                        ↓                                                    │
 │  ┌─────────────────────────────────────────────────────────────────────┐    │
 │  │ 执行阶段 (共享)                                                       │    │
@@ -291,6 +306,7 @@ triggers:
 以下情况跳过意图问卷，直接进入模式选择：
 - 用户未提供 URL（仅提供标题/方向）
 - 用户使用 Seed Mode 触发词
+- 用户使用 Formula-Driven 触发词
 - 用户使用直通命令 (/)
 
 ---
@@ -328,6 +344,11 @@ triggers:
           "label": "深度研究 (Agent Team)",
           "description": "5 专家并行探索 → 8 个方向 → DataForSEO 验证 → Decision Brief",
           "recommended_when": "need_comprehensive_research || important_topic"
+        },
+        {
+          "label": "Formula-Driven (Formula Pipeline) 🆕",
+          "description": "Formulas 生态扫描 → 并行竞品研究 → Lucy 第一人称写作 → 内链验证",
+          "recommended_when": "has_formula_context || ai_influencer_content || tool_page_url"
         }
       ]
     }
@@ -337,17 +358,17 @@ triggers:
 
 ### 0.2 模式特点对比
 
-| 特点 | 全自动模式 | 手动模式 | Seed 模式 | 深度研究 🆕 |
-|------|-----------|----------|-----------|-------------|
-| 适合场景 | 有竞品 URL + **洗稿意图** | 已有方向 + **参考意图** | 只有种子词 | 重要选题，需全景视角 |
-| 用户输入 | 1 个 URL + 1-2 问题 | 标题 + 素材 + 多步确认 | 种子词 + 3 问题 | 种子词 + 3 问题 |
-| DataForSEO | 自动验证 | 展示确认 | 验证代表词 | Phase 3 集中验证 |
-| Writer 选择 | 自动决策 | 用户选择 | 基于方向推荐 | 基于 Direction 推荐 |
-| 标题选择 | 自动最佳 | 5+ 选项 | Title Lock | Title Lock |
-| 输出 | 1 篇文章 | 1 篇文章 | 2-3 方向 | 5-8 方向 + Brief |
-| 执行过程 | 完全无干预 | 每步确认 | 漏斗透明 | Agent 并行透明 |
-| 成本 | ~$1.54 | ~$1.54 | ~$0.47 | ~$0.17 |
-| **推荐意图** | **洗稿** | **参考** | **参考 + 需选题** | **全景研究** |
+| 特点 | 全自动模式 | 手动模式 | Seed 模式 | 深度研究 | Formula-Driven 🆕 |
+|------|-----------|----------|-----------|----------|-------------------|
+| 适合场景 | 有竞品 URL + **洗稿意图** | 已有方向 + **参考意图** | 只有种子词 | 重要选题，需全景视角 | Formulas 生态 + AI influencer |
+| 用户输入 | 1 个 URL + 1-2 问题 | 标题 + 素材 + 多步确认 | 种子词 + 3 问题 | 种子词 + 3 问题 | 主题 + 工具页 URL |
+| DataForSEO | 自动验证 | 展示确认 | 验证代表词 | Phase 3 集中验证 | Phase 0 并行验证 |
+| Writer 选择 | 自动决策 | 用户选择 | 基于方向推荐 | 基于 Direction 推荐 | 基于内容类型 + Lucy |
+| 标题选择 | 自动最佳 | 5+ 选项 | Title Lock | Title Lock | 基于 Formula 数据 |
+| 输出 | 1 篇文章 | 1 篇文章 | 2-3 方向 | 5-8 方向 + Brief | 1 篇文章 + 内链地图 |
+| 执行过程 | 完全无干预 | 每步确认 | 漏斗透明 | Agent 并行透明 | 4 Phase + 确认点 |
+| 成本 | ~$1.54 | ~$1.54 | ~$0.47 | ~$0.17 | ~$2.00 |
+| **推荐意图** | **洗稿** | **参考** | **参考 + 需选题** | **全景研究** | **Formula 驱动** |
 
 ### 0.3 路线分流
 
@@ -358,7 +379,8 @@ triggers:
 | 全自动模式 | → AUTO_ROUTE.md | 简化问卷 + 自动决策 |
 | 手动模式 | → MANUAL_ROUTE.md | 5 步流程 + 强制确认 |
 | Seed 模式 | → growth-topic-scout v2.4 Mode D1/D2 | 选题漏斗（D1=2 / D2=3）+ Title Lock |
-| 深度研究 🆕 | → art-scout v1.1 | 5 Agent 并行 → CEO 综合 → 8 Direction |
+| 深度研究 | → art-scout v1.1 | 5 Agent 并行 → CEO 综合 → 8 Direction |
+| Formula-Driven 🆕 | → FORMULA_ROUTE.md | Formula 生态 → 竞品并行 → Lucy persona → 内链验证 |
 
 ### 0.4 Seed 模式自动触发
 

@@ -4,6 +4,33 @@
 
 ---
 
+## v3.0 Formula-Driven Writing Pipeline（2026-03-22）⭐⭐
+
+**SmartLauncher v2.3 → v2.4 五轨制: 新增 Route E Formula-Driven Pipeline**
+
+- ✅ **formula-integrator v1.0**: Alici Formulas 生态扫描 (工具页 + guide + charts → templates/creators/prompts/sub-niches)
+- ✅ **link-architect v1.0**: 内链架构规划 (全站扫描 + 出入链规划 + 蚕食检测 + template 链接匹配)
+- ✅ **video-understanding v1.0**: 视频多模态理解 (FFmpeg 抽帧 → Claude 视觉分析 → 第一人称叙事转化)
+- ✅ **FORMULA_ROUTE.md**: Route E 完整 4-Phase pipeline 规范
+- ✅ **LUCY_PERSONA.md**: Lucy 第一人称写作规则 (7 条 Core Rules: Lead with Testing / Quantify Everything / Show Failures / Tables Over Paragraphs / Bottom Line Per Section / Reference Own Work / Video Experience)
+- ✅ **SmartLauncher v2.4**: 四轨制 → 五轨制 (新增 Route E 入口 + 触发词 + 模式选择)
+- ✅ **COMBOS.md v2.4**: 新增 formula_driven 路由配置 + JSON 索引 + 决策逻辑
+- ✅ **CLAUDE.md 更新**: Skills 表 + 调用链 + 自然语言路由 + 文档索引
+
+**核心差异 (vs Route A-D)**:
+| 维度 | Route A-D | Route E |
+|------|----------|---------|
+| 驱动源 | URL / 关键词 | Formulas 生态 |
+| 竞品研究 | 单源分析 | 并行 Sub-agent |
+| 叙事视角 | 团队署名 | Lucy 第一人称 |
+| 内链策略 | 手动 | 写作前规划 |
+| AEO 目标 | ≥75 | ≥85 |
+
+**新增文件**: 5 个新 Skill/组件 + 1 个路由规范
+**修改文件**: SmartLauncher SKILL.md, COMBOS.md, CLAUDE.md, CHANGELOG.md
+
+---
+
 ## v2.9 交接准备 + 文档一致性校准（2026-02-08）
 
 - ✅ **项目瘦身**: 删除视频文件 (~54 MB)、清理 .DS_Store、归档散落文件

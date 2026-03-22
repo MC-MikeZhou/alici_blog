@@ -1,6 +1,6 @@
-# SmartLauncher v2.3 - Writer 路由配置
+# SmartLauncher v2.4 - Writer 路由配置
 
-> v2.3 更新: 5 种核心写作方向 (4 种直接路由 + 1 种深度研究路由)
+> v2.4 更新: 6 种核心写作方向 (4 种直接路由 + 1 种深度研究路由 + 1 种 Formula-Driven 路由)
 
 ---
 
@@ -361,6 +361,91 @@ features:
 
 ---
 
+## 6. Formula-Driven (Formula Pipeline) 🆕
+
+### 配置
+
+```yaml
+id: formula_driven
+name: "Formula-Driven"
+name_en: "Formula-Driven Pipeline"
+
+# 检测信号
+detection_signals:
+  - "formula driven"
+  - "formula 驱动"
+  - "从 formula 出发"
+  - "AI influencer"
+  - "用 formulas 写"
+  - "formula pipeline"
+
+# Pipeline 配置 (非单一 Writer，而是多 Skill 编排)
+pipeline:
+  phase_0:
+    - skill: "formula-integrator"
+      version: "1.0"
+    - skill: "link-architect"
+      version: "1.0"
+    - reuse: "growth-topic-scout (DataForSEO only)"
+  phase_1: "parallel_competitive_agents"
+  phase_2: "optional_video_understanding"
+  phase_3: "writer_with_lucy_persona"
+
+# Writer 路由 (Phase 3 根据内容类型选择)
+post_analysis_routing:
+  - tutorial: "blog-tutorial-writer"
+  - listicle: "blog-list-writer"
+  - showdown: "blog-showdown-writer"
+  - playbook: "blog-tutorial-writer (Tier 3)"
+
+# 特性
+features:
+  - formula_ecosystem_scan: true
+  - internal_link_planning: true
+  - parallel_competitive_research: true
+  - video_multimodal_analysis: true
+  - lucy_first_person: true
+  - formula_citation_validation: true
+
+# Persona
+author_persona: "lucy"
+persona_rules: "/skills/writers/_shared/LUCY_PERSONA.md"
+
+# AEO 目标
+aeo_target: 85
+
+# 输出目录
+output_path: "/reports 待发文章/YYYY-MM-DD-{topic-slug}/"
+```
+
+### Route E 流程
+
+```
+检测到 Formula-Driven 触发词
+  ↓
+Phase 0: Formula 生态扫描 (并行)
+  ├── formula-integrator → templates + creators + prompts
+  ├── link-architect → 内链地图 + 防蚕食
+  └── DataForSEO → 搜索量 + 竞争度
+  ↓ (用户确认方向)
+Phase 1: 竞品并行研究 (3 Sub-agents)
+  ├── 同赛道竞品搜索
+  ├── 写作标杆分析
+  └── 市场数据搜索
+  ↓
+Phase 2: 素材深化 (可选)
+  ├── video-understanding (如有视频)
+  └── bc-sync-engine (如有 Basecamp)
+  ↓
+Phase 3: Writer + Lucy persona
+  ↓
+Phase 4: AEO (≥85) + Formula 引用验证 + 内链完整性 → Framer → Preview
+```
+
+> 详细规范: FORMULA_ROUTE.md
+
+---
+
 ## 路由决策逻辑
 
 ### 手动路线
@@ -373,7 +458,10 @@ features:
 def route_manual(user_input):
     text = user_input.lower()
 
-    # 优先级: Tool Showdown > Listicle > Examples > Tutorial > Case Study
+    # 优先级: Formula-Driven > Tool Showdown > Listicle > Examples > Tutorial > Case Study
+    if any(s in text for s in ["formula driven", "formula 驱动", "从 formula 出发", "ai influencer", "用 formulas 写", "formula pipeline"]):
+        return "formula_driven"
+
     if any(s in text for s in ["vs", "对比", "对决", "comparison"]):
         return "tool_showdown"
 
@@ -455,6 +543,7 @@ def route_auto(content_features, goal):
 | 展示灵感 | Examples | Listicle |
 | 教人做事 | Tutorial | - |
 | 展示发现 | Case Study | - |
+| Formula 驱动内容 | Formula-Driven | Tutorial / Listicle |
 
 ---
 
@@ -506,6 +595,15 @@ def route_auto(content_features, goal):
       "word_count": [300, 600],
       "aeo_target": 70,
       "signals": ["案例", "case", "roundup", "汇总"]
+    },
+    "formula_driven": {
+      "pipeline": "formula-route",
+      "skills": ["formula-integrator", "link-architect", "video-understanding"],
+      "persona": "lucy",
+      "persona_rules": "/skills/writers/_shared/LUCY_PERSONA.md",
+      "aeo_target": 85,
+      "signals": ["formula driven", "formula 驱动", "从 formula 出发", "AI influencer", "用 formulas 写"],
+      "detail": "FORMULA_ROUTE.md"
     }
   }
 }
@@ -583,5 +681,5 @@ def route_auto(content_features, goal):
 
 ---
 
-*SmartLauncher v2.3 COMBOS - 5 种方向 (深度研究 + 4 种写作) × 工具数量检测 × 洗稿约束 × Showdown 独立路由*
+*SmartLauncher v2.4 COMBOS - 6 种方向 (深度研究 + Formula-Driven + 4 种写作) × 工具数量检测 × 洗稿约束 × Showdown 独立路由 × Lucy Persona*
 

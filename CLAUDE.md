@@ -38,7 +38,7 @@ DataForSEO API 凭证通过环境变量或 MCP 提供。始终先尝试真实 AP
 ├─────────────────────────────────────────────────────────────────────────┤
 │  输入层: 自然语言 | /命令 | URL | 批量 URL | Topic Brief | YouTube | Seed │
 │                            ↓                                            │
-│  smart-launcher v2.3 (四轨制架构):                                        │
+│  smart-launcher v2.4 (五轨制架构):                                        │
 │  ┌────────────────────────────────────────────────────────────────┐     │
 │  │ Step 1.5: 素材使用意图 (v2.2) ⭐                                │     │
 │  │   ┌─────────────────────────────────────────────────────────┐  │     │
@@ -117,7 +117,7 @@ DataForSEO API 凭证通过环境变量或 MCP 提供。始终先尝试真实 AP
 
 | Skill | 版本 | 触发词 | 输出 |
 |-------|------|--------|------|
-| **smart-launcher** | **v2.3** ⭐ | 帮我写, 写一篇, vs, 对比, 对决, **YouTube URL**, **seed mode, 种子模式, 选题漏斗, 帮我找选题** | **意图前置架构** + **洗稿/参考模式** + **四轨制** + **5 种 Writer 路由** |
+| **smart-launcher** | **v2.4** ⭐ | 帮我写, 写一篇, vs, 对比, 对决, **YouTube URL**, **seed mode, 种子模式, 选题漏斗, 帮我找选题**, **formula driven, 从 formula 出发, AI influencer** | **意图前置架构** + **洗稿/参考模式** + **五轨制** + **6 种 Writer 路由** + **Route E: Formula-Driven** |
 | **art-scout** | **v1.1** 🆕 | 团队研究, 多角色选题, 全景扫描, agent team | 5 Agent 并行研究 + CEO 综合 + DataForSEO 验证 + 8 Direction 输出 |
 | **batch-processor** | **v1.1** | 批量, 多个, batch | 队列执行 + 进度追踪 + 汇总报告 |
 | **growth-topic-scout** | **v2.4** 🆕 | 竞品分析, 选题发现, **seed mode / seed mode v2** | Top 10/20 选题 + 双评分（SEO+AEO）+ **Seed D1(2)/D2(3)** Direction + diversity_report + **competitive_insights 输出** |
@@ -154,13 +154,17 @@ DataForSEO API 凭证通过环境变量或 MCP 提供。始终先尝试真实 AP
 查看/skills/utilities/convert-to-video-framer-json/skill.md
 
 | **image-sourcer** 🆕 | **v1.0** | 找配图, source images, 配图, image research | Web 真实图片搜索 + 5 维评分 + 专家选图 |
+| **formula-integrator** 🆕 | **v1.0** | formula scan, 扫描 formulas, formula 生态 | Alici Formulas 生态扫描 → templates + creators + prompts + sub-niches |
+| **link-architect** 🆕 | **v1.0** | 内链规划, link map, 防蚕食 | 全站扫描 → 出入链规划 + 蚕食检测 + template 链接匹配 |
+| **video-understanding** 🆕 | **v1.0** | 视频理解, 分析视频, video analysis | FFmpeg 抽帧 → 多模态分析 → 第一人称叙事转化 |
 | **bc-sync-engine** 🆕 | **v2.1** | basecamp url, bc链接, bc push, bc comment, bc todo, bc 同步 | Basecamp 4 Pull + Push 同步引擎 (6 个 Push 命令 + Pull) + 工作流约定 |
 
 **调用链 (v2.9 Updated)**:
 ```
-smart-launcher v2.3 (四轨制) →
+smart-launcher v2.4 (五轨制) →
   Route A-C: growth-topic-scout v2.4 → writer 路由
   Route D: art-scout v1.1 → direction 选择 → writer 路由
+  Route E: formula-integrator + link-architect → 竞品并行 → writer + Lucy persona
 → writer (tutorial v3.1 / list v3.1 / showdown v1.0 / roundup v1.5)
 → validator gate → editor gate → aeo-analyzer ⟷ improver → competitive-validator → framer → preview
 ```
@@ -526,7 +530,8 @@ Step-by-step flowchart showing the AI workflow...
 
 | 你说的话 | Claude 自动执行 |
 |----------|----------------|
-| "帮我写一篇关于 X 的文章" | → `smart-launcher v2.3` → 模式选择 (全自动/手动/Seed/深度研究) |
+| "帮我写一篇关于 X 的文章" | → `smart-launcher v2.4` → 模式选择 (全自动/手动/Seed/深度研究/Formula-Driven) |
+| "从 formula 出发，写一篇 AI cat dance 教程" | → `smart-launcher` Route E: Formula-Driven Pipeline |
 | "https://competitor.com/blog/xxx" (URL) | → `smart-launcher` 全自动模式 (洗稿) |
 | "Sora vs Runway vs Kling 对比" | → `smart-launcher` → `blog-showdown-writer` (独立 Showdown 技能) |
 | "我有一个 YouTube 视频想写成博客" | → `smart-launcher` 全自动模式 |
@@ -947,7 +952,12 @@ rm /tmp/${NEW_NAME}
 | **BRAND_VISUAL_GUIDE.md** | `/skills/_docs/` | 绿色视觉规范、ICSB 框架 | Editor Skill |
 | **BLOG_WRITING_PRINCIPLES_v2.md** | `/skills/_docs/` | 标题公式、评测方法论、Section 10-11 InVideo 原则 | 所有 Writer Skills |
 | **TOOL_SHOWDOWN_TEMPLATE.md** | `/skills/_docs/` → 已迁移到 `/skills/writers/blog-showdown-writer/` | 工具对决 11 Headings 结构 | blog-showdown-writer |
-| **smart-launcher/SKILL.md** | `/skills/core/smart-launcher/` | v2.3 意图前置架构 + 洗稿/参考模式 + 四轨制 | 所有写作流程 |
+| **smart-launcher/SKILL.md** | `/skills/core/smart-launcher/` | v2.4 意图前置架构 + 洗稿/参考模式 + 五轨制 | 所有写作流程 |
+| **smart-launcher/FORMULA_ROUTE.md** 🆕 | `/skills/core/smart-launcher/` | Route E: Formula-Driven Pipeline (4 Phase) | Formula-Driven 写作流程 |
+| **LUCY_PERSONA.md** 🆕 | `/skills/writers/_shared/` | Lucy 第一人称写作规则 (7 条 Core Rules) | Route E + 所有 Writer Skills (当 persona=lucy) |
+| **formula-integrator/SKILL.md** 🆕 | `/skills/preparation/formula-integrator/` | Formulas 生态扫描 + Integration Pack | Route E Phase 0 |
+| **link-architect/SKILL.md** 🆕 | `/skills/preparation/link-architect/` | 内链架构规划 + 蚕食检测 | Route E Phase 0 |
+| **video-understanding/SKILL.md** 🆕 | `/skills/preparation/video-understanding/` | FFmpeg 抽帧 + 多模态分析 + 叙事转化 | Route E Phase 2 |
 | **smart-launcher/AUTO_ROUTE.md** | `/skills/core/smart-launcher/` | 全自动路线: 意图驱动约束 + rewrite_mode/reference_mode | SmartLauncher |
 | **smart-launcher/MANUAL_ROUTE.md** | `/skills/core/smart-launcher/` | 手动路线: 参考模式扩展调研 + 5 步确认 | SmartLauncher |
 | **smart-launcher/COMBOS.md** | `/skills/core/smart-launcher/` | 4 种 Writer 路由配置 | SmartLauncher |
