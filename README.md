@@ -162,7 +162,7 @@ Writer → Editor Gate → AEO 评分 (≥75 分通过) → 竞品验证 → Fra
 
 ## 版本
 
-- 当前版本: v2.9
+- 当前版本: v3.0
 - Skills 数量: 21
 - Capabilities 数量: 2
 

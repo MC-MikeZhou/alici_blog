@@ -44,7 +44,7 @@
 
 ---
 
-## v3.2 架构文档整理 + Art Scout 集成（2026-02-07）
+## v2.8.7 架构文档整理 + Art Scout 集成（2026-02-07）
 
 - ✅ art-scout v1.1 注册到 Skills 表
 - ✅ SmartLauncher v2.2 → v2.3 四轨制 (新增 Route D: 深度研究)
@@ -54,7 +54,7 @@
 
 ---
 
-## v3.1 写作技能架构升级 — Showdown 独立 + 共享层（2026-02-07） ⭐⭐
+## v2.8.6 写作技能架构升级 — Showdown 独立 + 共享层（2026-02-07） ⭐⭐
 
 - ✅ **blog-showdown-writer v1.0**: 从 blog-list-writer tool_showdown 模式独立为完整技能
   - 独立 SKILL.md (~900 行) + SHOWDOWN_TEMPLATE.md + CHANGELOG.md
@@ -83,7 +83,7 @@
 
 ---
 
-## v3.0 blog-tutorial-writer v3.0 + blog-list-writer v3.0 双升级（2026-02-06） ⭐⭐⭐
+## v2.8.5 blog-tutorial-writer v3.0 + blog-list-writer v3.0 双升级（2026-02-06） ⭐⭐⭐
 
 - ✅ **blog-tutorial-writer v2.5 → v3.0**: Three-Tier 系统 + Citable Block Taxonomy v3.0 + Self-Check JSON
   - **Three-Tier 分级系统**: Tier 1 (1,800-2,200 词) / Tier 2 (2,200-2,800 词) / Tier 3 (2,800-3,500 词) 自动匹配复杂度
@@ -113,7 +113,7 @@
 
 ---
 
-## v2.9 blog-tutorial-writer v2.5 + growth-topic-scout v2.4 升级（2026-02-05） ⭐⭐
+## v2.8.4 blog-tutorial-writer v2.5 + growth-topic-scout v2.4 升级（2026-02-05） ⭐⭐
 
 - ✅ **blog-tutorial-writer v2.5**: Insight Pack 输入 + Market Context 章节 + Monetization Framework 章节
   - **Insight Pack 输入机制**: 结构化竞品分析数据（7 个字段）

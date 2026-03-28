@@ -34,7 +34,7 @@ DataForSEO API 凭证通过环境变量或 MCP 提供。始终先尝试真实 AP
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
-│                          AliciBlog v2.9                                    │
+│                          AliciBlog v3.0                                    │
 ├─────────────────────────────────────────────────────────────────────────┤
 │  输入层: 自然语言 | /命令 | URL | 批量 URL | Topic Brief | YouTube | Seed │
 │                            ↓                                            │
@@ -88,7 +88,7 @@ DataForSEO API 凭证通过环境变量或 MCP 提供。始终先尝试真实 AP
 | 层级 | 自动化程度 | 人工参与 |
 |------|-----------|---------|
 | 输入层 | 手动触发/自然语言 | 选择输入源或直接描述需求 |
-| **SmartLauncher v2.3** | **意图前置 + 四轨制** ⭐ | **Step 1.5: 洗稿/参考 → 全自动/手动/Seed/深度研究** |
+| **SmartLauncher v2.4** | **意图前置 + 五轨制** ⭐ | **Step 1.5: 洗稿/参考 → 全自动/手动/Seed/深度研究/Formula-Driven** |
 | 处理层 | Agent 自主 | 仅 3 轮后仍 <75 分时介入 |
 | 输出层 | 手动确认 | 中文预览 + 发布确认 |
 
@@ -144,9 +144,9 @@ DataForSEO API 凭证通过环境变量或 MCP 提供。始终先尝试真实 AP
 | **mission-brief** 🆕 | **v1.0** | mission brief, 创建 brief, 定义需求 | 7 问智能问卷 + **自动推断** + mission-brief.json |
 | **source-parser** 🆕 | **v1.0** | source parser, 解读素材, 分析素材 | **八维分析框架** (5 理解层 + 3 应用层) + 事实核查 |
 
-**调用链 (v2.8.4 Updated)**:
+**调用链 (v3.0 Updated)**:
 - **前置准备流程 (可选)**: `mission-brief → source-parser` → 带着结构化素材进入写作
-- **写作流程**: `smart-launcher v2.2 → growth-topic-scout v2.2 → writer路由 → editor gate → aeo-analyzer ⟷ improver → human-review-checklist → competitive-validator → framer → preview`
+- **写作流程**: `smart-launcher v2.4 → growth-topic-scout v2.4 → writer路由 → editor gate → aeo-analyzer ⟷ improver → human-review-checklist → competitive-validator → framer → preview`
 
 ---
 
@@ -159,7 +159,7 @@ DataForSEO API 凭证通过环境变量或 MCP 提供。始终先尝试真实 AP
 | **video-understanding** 🆕 | **v1.0** | 视频理解, 分析视频, video analysis | FFmpeg 抽帧 → 多模态分析 → 第一人称叙事转化 |
 | **bc-sync-engine** 🆕 | **v2.1** | basecamp url, bc链接, bc push, bc comment, bc todo, bc 同步 | Basecamp 4 Pull + Push 同步引擎 (6 个 Push 命令 + Pull) + 工作流约定 |
 
-**调用链 (v2.9 Updated)**:
+**调用链 (v3.0 Updated)**:
 ```
 smart-launcher v2.4 (五轨制) →
   Route A-C: growth-topic-scout v2.4 → writer 路由
@@ -519,7 +519,7 @@ Step-by-step flowchart showing the AI workflow...
 | Showdown 计划 | 无 Plan Pack | showdown-plan.json | 结构化可验证 |
 | 代码行数 | ~3,527 行重复 | ~3,100 行 (-12%) | 减少重复 |
 
-> 完整版本历史 (v1.0 → v2.9，27 个版本): [CHANGELOG.md](./CHANGELOG.md)
+> 完整版本历史 (v1.0 → v3.0): [CHANGELOG.md](./CHANGELOG.md)
 
 ---
 
@@ -539,14 +539,14 @@ Step-by-step flowchart showing the AI workflow...
 | "帮我分析 higgsfield.ai 的博客内容" | → `/scout-topic` (仅分析，不写作) |
 | "批量处理这 3 个竞品 URL" | → `batch-processor` 批量模式 |
 
-### SmartLauncher v2.3 意图前置 + 四轨制架构 ⭐
+### SmartLauncher v2.4 意图前置 + 五轨制架构 ⭐
 
 写作任务现在首先询问**素材使用意图（洗稿/参考）**，再推荐模式：
 
 ```
 你: "https://www.youtube.com/watch?v=xxx 帮我写一篇文章"
        ↓
-SmartLauncher v2.3:
+SmartLauncher v2.4:
   Step 1.5: 素材使用意图 (v2.2 NEW) ⭐
   ┌─────────────────────────────────────────────────┐
   │ Q: 你想如何使用这个素材？                        │
