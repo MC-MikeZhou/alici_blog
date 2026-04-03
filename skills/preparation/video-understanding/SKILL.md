@@ -33,6 +33,11 @@ metadata:
 - Lucy pipeline: Gemini API 深度分析 (6 维度，需 API key)
 - 本 Skill: Claude 多模态快速理解 + 第一人称叙事转化 (无额外 API)
 
+**与 smart-segmenter 的关系**: 互补。
+- smart-segmenter: 回答 "场景边界在哪？" → segments.json (时间码 + 标签)
+- 本 Skill: 回答 "视频里有什么？" → 内容理解 + 叙事转化
+- 如需场景分段或精确裁剪，请搭配 `smart-segmenter` skill 使用。
+
 ---
 
 ## Trigger Words

@@ -146,6 +146,7 @@ DataForSEO API 凭证通过环境变量或 MCP 提供。始终先尝试真实 AP
 
 **调用链 (v3.0 Updated)**:
 - **前置准备流程 (可选)**: `mission-brief → source-parser` → 带着结构化素材进入写作
+- **视频准备流程 (可选)**: `smart-segmenter` (分段/裁剪) + `video-understanding` (内容理解) → 带着视频分析进入写作
 - **写作流程**: `smart-launcher v2.4 → growth-topic-scout v2.4 → writer路由 → editor gate → aeo-analyzer ⟷ improver → human-review-checklist → competitive-validator → framer → preview`
 
 ---
@@ -157,6 +158,7 @@ DataForSEO API 凭证通过环境变量或 MCP 提供。始终先尝试真实 AP
 | **formula-integrator** 🆕 | **v1.0** | formula scan, 扫描 formulas, formula 生态 | Alici Formulas 生态扫描 → templates + creators + prompts + sub-niches |
 | **link-architect** 🆕 | **v1.0** | 内链规划, link map, 防蚕食 | 全站扫描 → 出入链规划 + 蚕食检测 + template 链接匹配 |
 | **video-understanding** 🆕 | **v1.0** | 视频理解, 分析视频, video analysis | FFmpeg 抽帧 → 多模态分析 → 第一人称叙事转化 |
+| **smart-segmenter** 🆕 | **v1.0** | segment video, 视频分段, cut youtube, YouTube 精确剪切 | PySceneDetect 场景分段 + Gemini 语义分析 + YouTube 精确裁剪流程 |
 | **bc-sync-engine** 🆕 | **v2.1** | basecamp url, bc链接, bc push, bc comment, bc todo, bc 同步 | Basecamp 4 Pull + Push 同步引擎 (6 个 Push 命令 + Pull) + 工作流约定 |
 
 **调用链 (v3.0 Updated)**:

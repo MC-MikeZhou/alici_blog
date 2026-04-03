@@ -1,6 +1,6 @@
 # AliciBlog Skills
 
-> 23 Skills + 6 共享文档，按功能分组
+> 29+ Skills + 6 共享文档，按功能分组
 
 ## 目录结构
 
@@ -10,6 +10,7 @@ skills/
 ├── _docs/                    ← 共享文档 (6 个)
 ├── core/                     ← 核心入口 (6 个 Skills)
 ├── writers/                  ← Writer 组 (4 个 Skills)
+├── preparation/              ← 前置准备组 (6 个 Skills)
 ├── utilities/                ← 工具组 (9 个 Skills)
 └── monitors/                 ← 监控分析组 (5 个 Skills)
 ```
@@ -56,6 +57,21 @@ skills/
 | **blog-list-writer** | v2.4 | write list, vs, showdown | 2,500-3,500 词榜单 + tool_showdown |
 | **case-roundup-writer** | v1.5 | 写小博文, case roundup | 300-600 词案例汇总 |
 | **chinese-previewer** | v1.1 | 中文预览 | 审核摘要 |
+
+---
+
+## preparation/ - 前置准备组
+
+写作前的素材分析和准备工具。
+
+| Skill | 版本 | 触发词 | 用途 |
+|-------|------|--------|------|
+| **smart-segmenter** 🆕 | v1.0 | segment video, 视频分段, cut youtube | PySceneDetect 场景分段 + YouTube 精确裁剪 |
+| **video-understanding** | v1.0 | 视频理解, 分析视频 | FFmpeg 抽帧 → 多模态分析 → 第一人称叙事 |
+| **mission-brief** | v1.0 | mission brief, 创建 brief | 7 问智能问卷 + 自动推断 |
+| **source-parser** | v1.0 | source parser, 解读素材 | 八维分析框架 + 事实核查 |
+| **formula-integrator** | v1.0 | formula scan, 扫描 formulas | Formulas 生态扫描 |
+| **link-architect** | v1.0 | 内链规划, link map | 全站扫描 + 蚕食检测 |
 
 ---
 

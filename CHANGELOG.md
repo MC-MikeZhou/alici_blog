@@ -4,6 +4,18 @@
 
 ---
 
+## v3.0.1 Smart Segmenter 集成（2026-04-03）
+
+- ✅ **smart-segmenter v1.0** 🆕: 从 Lucy 工作区迁入正式 skills (PySceneDetect 场景分段 + Gemini 语义分析 + YouTube 精确裁剪 7 步标准流程)
+- ✅ **video-understanding v1.0 互引**: 添加 smart-segmenter 交叉引用，明确互补关系
+- ✅ **CLAUDE.md 更新**: Skills 表 + 视频准备流程调用链
+- 🎯 **解决 P2 问题**: Seedance 2 复盘标注的 "Smart Segment 模板缺失" 系统问题
+
+**新增文件**: `/skills/preparation/smart-segmenter/` (SKILL.md + scripts/segment.py + prompts/ + requirements.txt)
+**修改文件**: CLAUDE.md, video-understanding/SKILL.md, CHANGELOG.md, AGENTS.md, skills/README.md, 02-SKILLS.md
+
+---
+
 ## v3.0 Formula-Driven Writing Pipeline（2026-03-22）⭐⭐
 
 **SmartLauncher v2.3 → v2.4 五轨制: 新增 Route E Formula-Driven Pipeline**

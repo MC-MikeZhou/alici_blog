@@ -32,6 +32,14 @@ skills/
 │   ├── case-roundup-writer/
 │   └── chinese-previewer/
 │
+├── preparation/          # 前置准备组 (6 个 Skills)
+│   ├── smart-segmenter/      # 🆕 v1.0 视频场景分段 + YouTube 裁剪
+│   ├── video-understanding/
+│   ├── mission-brief/
+│   ├── source-parser/
+│   ├── formula-integrator/
+│   └── link-architect/
+│
 ├── utilities/            # 工具组 (7 个 Skills)
 │   ├── youtube-transcript-fetcher/
 │   ├── markdown-to-framer/
@@ -146,6 +154,38 @@ skills/
 - **定位**: QDF (Query Deserves Freshness) 热点信号检测
 - **输入**: 话题/关键词
 - **输出**: QDF 信号 (HIGH/MEDIUM/LOW/NONE) + 热点优先级 + 内容日历建议
+
+---
+
+## 前置准备 Skills
+
+写作前的素材分析、视频处理和需求定义。
+
+| Skill | 版本 | 用途 | 触发关键词 | 状态 |
+|-------|------|------|------------|------|
+| **smart-segmenter** | v1.0 🆕 | 视频场景分段 + YouTube 精确裁剪 | "segment video", "视频分段", "cut youtube" | ✅ |
+| **video-understanding** | v1.0 | 视频多模态理解 + 第一人称叙事 | "视频理解", "分析视频" | ✅ |
+| **mission-brief** | v1.0 | 7 问智能问卷 + 需求定义 | "mission brief", "创建 brief" | ✅ |
+| **source-parser** | v1.0 | 八维素材分析 + 事实核查 | "source parser", "解读素材" | ✅ |
+| **formula-integrator** | v1.0 | Formulas 生态扫描 | "formula scan", "扫描 formulas" | ✅ |
+| **link-architect** | v1.0 | 内链架构规划 + 蚕食检测 | "内链规划", "link map" | ✅ |
+
+### smart-segmenter v1.0 🆕
+
+- **定位**: 视频场景分段 + YouTube 精确裁剪流程
+- **输入**: 视频文件路径（本地或 YouTube URL）
+- **输出**: segments.json (场景边界 + 情感标签 + 叙事角色)
+- **双模式**: `--fast` (PySceneDetect + 静音检测, $0) / `--deep` (+ Gemini 语义分析)
+- **YouTube 裁剪**: 标准化 7 步流程 (yt-dlp → 扫描 → 定位 → FFmpeg 精确切片 → 验证)
+- **互补关系**: 与 video-understanding 配对 — segmenter 找边界, understanding 分析内容
+
+### video-understanding v1.0
+
+- **定位**: 视频多模态理解 + 第一人称叙事转化
+- **输入**: 视频文件路径
+- **输出**: video-analysis.json + video-analysis.md (角色/场景/技术/叙事)
+- **用途**: Route E Phase 2 素材深化
+- **互补关系**: 与 smart-segmenter 配对使用
 
 ---
 

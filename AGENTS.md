@@ -105,6 +105,8 @@
 | **competitive-validator** 🆕 | **v1.1** | 竞品验证, competitive validation | Top 5 竞品对比 + 快速 AEO 评分 + PASS/FAIL 判定 |
 | **trending-monitor** 🆕 | **v1.1** | 热点监测, QDF 信号 | QDF 信号检测 + 热点优先级 + 内容日历建议 |
 | **blog-cover-generator** 🆕 | **v1.0** | 生成封面, blog cover, 封面图 | 6 种背景类型 + 青绿色品牌规范 + Prompt 模板 |
+| **smart-segmenter** 🆕 | **v1.0** | segment video, 视频分段, cut youtube, YouTube 精确剪切 | PySceneDetect 场景分段 + Gemini 语义分析 + YouTube 精确裁剪流程 |
+| **video-understanding** 🆕 | **v1.0** | 视频理解, 分析视频, video analysis | FFmpeg 抽帧 → 多模态分析 → 第一人称叙事转化 |
 
 **调用链 (v2.8.2 Updated)**: `smart-launcher v2.2 (意图前置 + 模式选择) → growth-topic-scout v2.2 → writer路由 → editor gate → aeo-analyzer ⟷ improver → competitive-validator → framer → preview`
 
@@ -1194,7 +1196,7 @@ Writer → Editor Gate → AEO → Improver → 竞品验证 → Framer → Prev
 比如 ：前置目录/${name}.png
 上传使用ssh命令：
 ssh命令：
-rsync -a -r -v -p -e 'ssh -p 22'  --exclude='.DS_Store'  --progress ${完整前置路径}/${name}.png root@45.76.70.215:/var/www/static/static/image/other/gen_images/
+rsync -a -r -v -p -e 'ssh -p 2222'  --exclude='.DS_Store'  --progress ${完整前置路径}/${name}.png root@45.76.70.215:/var/www/static/static/image/other/gen_images/
 password:  5A_p@cjpX74H(LJM
 
 最终获得的链接如下：
